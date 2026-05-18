@@ -56,7 +56,16 @@ def main():
     all_entries = load_dir("entries")
 
     # mt(home 埋め込み) と それ以外を分離
-    home_sections = [p for p in all_pages if p["blog_path"] == "mt"]
+    home_sections_list = [p for p in all_pages if p["blog_path"] == "mt"]
+    # tag (@top_xxx) をキーとした dict にする
+    # 例: @top_main_img_slider -> page
+    home_sections = {}
+    for p in home_sections_list:
+        for t in p.get("tags", []) or []:
+            if t.startswith("@top_"):
+                key = t.lstrip("@")  # "top_main_img_slider"
+                home_sections[key] = p
+                break
     other_pages = [
         p for p in all_pages
         if p["blog_path"] != "mt"

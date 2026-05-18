@@ -145,6 +145,21 @@ def main():
         json.dumps(assets, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
+    # --- tags / objecttag ---
+    # tag.id -> name
+    tag_name = {}
+    for t in root.findall(tag("tag")):
+        tag_name[t.get("id")] = t.get("name") or ""
+    # (object_datasource, object_id) -> [tag_name, ...]
+    obj_tags = {}
+    for ot in root.findall(tag("objecttag")):
+        ds = ot.get("object_datasource") or ""
+        oid = ot.get("object_id") or ""
+        tid = ot.get("tag_id") or ""
+        name = tag_name.get(tid)
+        if name:
+            obj_tags.setdefault((ds, oid), []).append(name)
+
     # --- pages ---
     pages_dir = OUT / "pages"
     pages_dir.mkdir(exist_ok=True)
@@ -168,6 +183,7 @@ def main():
             "title": title,
             "subtitle": custom_fields.get("pagedatasubtitle", ""),
             "custom_fields": custom_fields,
+            "tags": obj_tags.get(("entry", p.get("id")), []),
             "text": body,
             "text_more": more,
             "excerpt": excerpt,
@@ -209,6 +225,7 @@ def main():
             "basename": basename,
             "title": title,
             "custom_fields": custom_fields,
+            "tags": obj_tags.get(("entry", e.get("id")), []),
             "text": body,
             "text_more": more,
             "excerpt": excerpt,

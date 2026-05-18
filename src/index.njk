@@ -6,14 +6,170 @@ bodyId: index
 permalink: /index.html
 ---
 
+<!-- Slide -->
+<div class="main_img_slider">
+{% if home_sections.top_main_img_slider %}
+{{ home_sections.top_main_img_slider.text | safe }}
+{% endif %}
+</div>
+<!-- /Slide -->
+
+
+<!-- Contents -->
+<div id="contents" class="clearfix">
+
 <!-- Main -->
 <div id="main">
-  <div class="inner_main">
-    <h2>{{ site.title }}</h2>
-    <p class="lead">{{ site.tagline }}</p>
-    <p>{{ site.description }}</p>
-    <p class="note" style="color:#888;font-size:0.9em;">
-      ※ このページは Eleventy 移行のひな型です。各セクション本文は今後 JSON データから挿入していきます。
-    </p>
-  </div>
+
+
+<!-- Starrydata Project -->
+<div id="top-about" class="section_top ptarrydata_project">
+<div class="section_inner">
+{% if home_sections.top_starrydata_project %}
+{{ home_sections.top_starrydata_project.text | safe }}
+{% endif %}
 </div>
+</div>
+<!-- /Starrydata Project -->
+
+
+<!-- History -->
+<div class="section_top history">
+<div class="area_history">
+<div class="section_inner">
+{% if home_sections.top_history %}
+{{ home_sections.top_history.text | safe }}
+{% endif %}
+</div>
+</div>
+</div>
+<!-- /History -->
+
+
+<!-- About Starrydata -->
+<div class="section_top about_starrydata">
+<div class="section_inner">
+{% if home_sections.top_about %}
+{{ home_sections.top_about.text | safe }}
+{% endif %}
+</div>
+</div>
+<!-- /About Starrydata -->
+
+
+<!-- Collaboration -->
+<div class="section_top collaboration">
+<div class="section_inner">
+{% if home_sections.top_collaboration %}
+{{ home_sections.top_collaboration.text | safe }}
+{% endif %}
+</div>
+</div>
+<!-- /Collaboration -->
+
+
+<!-- data -->
+<div class="section_top">
+<div class="section_inner">
+{% if home_sections.top_data %}
+{{ home_sections.top_data.text | safe }}
+{% endif %}
+</div>
+</div>
+<!-- /data -->
+
+
+<!-- Papers -->
+<div class="section_top papers">
+<div class="section_inner">
+
+<!-- Title -->
+<div class="b90 b30_sp">
+  <h2 class="ttl_first">論文紹介</h2>
+</div>
+<!-- /Title -->
+
+<!-- Column -->
+<div class="b30">
+<div class="box_papers">
+<ul class="papers_list">
+{%- for p in papers.papers.slice(0, 3) %}
+  <li class="papers_list_item">
+    <a class="papers_list_item_link" href="{% if p.url %}{{ p.url }}{% else %}/papers/{{ p.slug }}.html{% endif %}"{% if p.url %} target="_blank" rel="noopener"{% endif %}>
+      {% if p.authors %}<p class="papers_list_item_authors">{{ p.authors }}</p>{% endif %}
+      <p class="papers_list_item_title">{{ p.title }}</p>
+      <p class="papers_list_item_info">
+        {% if p.journal %}{{ p.journal }}{% endif %}
+        {% if p.year %}, {{ p.year }}{% endif %}
+        {% if p.doi %}, {{ p.doi }}{% endif %}
+      </p>
+    </a>
+  </li>
+{%- endfor %}
+</ul>
+</div>
+</div>
+<!-- /Column -->
+
+
+<!-- Column -->
+<div class="alignC">
+<a href="/papers/index.html" class="btn_common inline_block">一覧を見る</a>
+</div>
+<!-- /Column -->
+
+</div>
+</div>
+<!-- /Papers -->
+
+
+<!-- Topics -->
+<div class="section_top topics">
+<div class="section_inner">
+
+<!-- Title -->
+<div class="b90 b30_sp">
+  <h2 class="ttl_first">トピックス</h2>
+</div>
+<!-- /Title -->
+
+<!-- Column -->
+<div class="b30">
+<div class="box_topics">
+{%- for t in topics.topics.slice(0, 4) %}
+<div class="box">
+<a href="/topics/{{ t.slug }}.html">
+  <div class="img">
+    <img src="/common/img/img_index_noimg.png" alt="">
+  </div>
+  <div class="txt">
+    <div class="date">{{ t.date | replace("-", "/") }}</div>
+    <div class="ttl">{{ t.title }}</div>
+  </div>
+</a>
+</div>
+{%- endfor %}
+</div>
+</div>
+<!-- /Column -->
+
+
+<!-- Column -->
+<div class="alignC">
+<a href="/topics/index.html" class="btn_common inline_block">一覧を見る</a>
+</div>
+<!-- /Column -->
+
+</div>
+</div>
+<!-- /Topics -->
+
+
+</div>
+<!-- /Main -->
+
+
+<div id="pagetop"><a href="#header"></a></div>
+
+</div>
+<!-- /Contents -->
