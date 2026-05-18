@@ -1,12 +1,35 @@
 ---
 pagination:
-  data: topics
+  data: topics.topics
   size: 1
   alias: t
-permalink: "/topics/{{ t.basename }}.html"
+permalink: "/topics/{{ t.slug }}.html"
 eleventyComputed:
   title: "{{ t.title }}"
-  body: "{{ t.text | safe }}{{ t.text_more | safe }}"
   bodyId: "topics"
-layout: page.njk
+layout: base.njk
 ---
+
+<div id="contents">
+  <div class="inner_contents">
+
+    <article class="topic-article">
+      <header class="topic-header">
+        <h2>{{ t.title }}</h2>
+        <p class="meta">
+          <time datetime="{{ t.datetime }}">{{ t.date }}</time>
+          {% if t.author %}<span class="author">by {{ t.author }}</span>{% endif %}
+        </p>
+      </header>
+
+      <div class="topic-body">
+        {{ t.body_html | safe }}
+      </div>
+
+      <footer class="topic-footer">
+        <p><a href="/topics/index.html">← トピックス一覧へ戻る</a></p>
+      </footer>
+    </article>
+
+  </div>
+</div>
