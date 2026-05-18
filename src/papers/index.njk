@@ -81,34 +81,42 @@ bodyId: papers
         both {{ papers.citing_papers_by_source.both }}
       </p>
 
-      <ul class="papers-list">
-        {%- for p in papers.citing_papers %}
-        <li class="papers-item">
-          <div class="paper-year">{{ p.year }}</div>
-          <div class="paper-content">
-            <p class="paper-title">
-              {%- if p.doi_url %}
-              <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.title }}</a>
-              {%- else %}
-              {{ p.title }}
+      {%- for group in papers.citing_papers_by_year %}
+      <details class="year-group" {% if loop.first %}open{% endif %}>
+        <summary class="year-group-summary">
+          <span class="year-label">{{ group.year or 'Year unknown' }}</span>
+          <span class="year-count">{{ group.count }} papers</span>
+        </summary>
+        <ul class="papers-list">
+          {%- for p in group.papers %}
+          <li class="papers-item">
+            <div class="paper-year">{{ p.year }}</div>
+            <div class="paper-content">
+              <p class="paper-title">
+                {%- if p.doi_url %}
+                <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.title }}</a>
+                {%- else %}
+                {{ p.title }}
+                {%- endif %}
+              </p>
+              {%- if p.authors %}<p class="paper-authors">{{ p.authors }}</p>{% endif %}
+              <p class="paper-meta">
+                {%- if p.journal %}<em class="journal">{{ p.journal }}</em>{% endif %}
+                {%- if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}
+                {%- if p.issue %} [{{ p.issue }}]{% endif %}
+                {%- if p.start_page %}, {{ p.start_page }}{% if p.end_page %}–{{ p.end_page }}{% endif %}{% endif %}
+              </p>
+              {%- if p.doi %}
+              <p class="paper-doi">
+                DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a>
+              </p>
               {%- endif %}
-            </p>
-            {%- if p.authors %}<p class="paper-authors">{{ p.authors }}</p>{% endif %}
-            <p class="paper-meta">
-              {%- if p.journal %}<em class="journal">{{ p.journal }}</em>{% endif %}
-              {%- if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}
-              {%- if p.issue %} [{{ p.issue }}]{% endif %}
-              {%- if p.start_page %}, {{ p.start_page }}{% if p.end_page %}–{{ p.end_page }}{% endif %}{% endif %}
-            </p>
-            {%- if p.doi %}
-            <p class="paper-doi">
-              DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a>
-            </p>
-            {%- endif %}
-          </div>
-        </li>
-        {%- endfor %}
-      </ul>
+            </div>
+          </li>
+          {%- endfor %}
+        </ul>
+      </details>
+      {%- endfor %}
     </section>
 
   </div>

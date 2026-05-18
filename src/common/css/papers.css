@@ -1,0 +1,339 @@
+@charset "UTF-8";
+
+/* =========================================================================
+   論文紹介ページ用スタイル (/papers/index.html)
+   ========================================================================= */
+
+#contents .inner_contents {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.page_title {
+  text-align: center;
+  margin: 0 0 40px;
+  padding: 30px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.page_title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.4em;
+  color: #1a2a4a;
+}
+
+.page_title .subtitle {
+  color: #888;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.papers-source {
+  text-align: right;
+  color: #888;
+  font-size: 0.85rem;
+  margin: 0 0 30px;
+  line-height: 1.6;
+}
+
+.papers-source a {
+  color: #2a6ec0;
+  text-decoration: none;
+}
+
+.papers-source a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Section ---- */
+.papers-section {
+  margin: 0 0 60px;
+}
+
+.papers-section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  padding: 0 0 12px;
+  border-bottom: 3px solid #1a2a4a;
+  color: #1a2a4a;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+}
+
+.papers-section-title .count {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2a6ec0;
+  background: #eaf2fb;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+
+.papers-section-note {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+/* ---- List ---- */
+.papers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.papers-item {
+  display: flex;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid #eee;
+  align-items: flex-start;
+}
+
+.papers-item:last-child {
+  border-bottom: none;
+}
+
+.paper-year {
+  flex: 0 0 70px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #c4c4c4;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  padding-top: 4px;
+  text-align: right;
+}
+
+.paper-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.paper-title {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #1a2a4a;
+}
+
+.paper-title a {
+  color: #1a4b8c;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.paper-title a:hover {
+  color: #2a6ec0;
+  border-bottom-color: #2a6ec0;
+}
+
+.paper-authors {
+  margin: 0 0 6px;
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.paper-meta {
+  margin: 0 0 6px;
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.paper-meta .journal {
+  font-style: italic;
+  color: #444;
+}
+
+.paper-meta strong {
+  font-weight: 700;
+  color: #333;
+}
+
+.paper-doi {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #888;
+  font-family: "Menlo", "Consolas", monospace;
+}
+
+.paper-doi a {
+  color: #888;
+  text-decoration: none;
+}
+
+.paper-doi a:hover {
+  color: #2a6ec0;
+  text-decoration: underline;
+}
+
+.paper-citations {
+  margin: 8px 0 0;
+  font-size: 0.82rem;
+  color: #2a6ec0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.paper-citations .citation-stat {
+  background: #f4f8fd;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border-left: 3px solid #2a6ec0;
+}
+
+.paper-citations .citation-detail {
+  background: transparent;
+  border-left: none;
+  color: #999;
+  padding: 3px 0;
+}
+
+.paper-citations strong {
+  color: #1a2a4a;
+  font-weight: 700;
+}
+
+/* ---- Citing papers section (long list) ---- */
+.citing-papers .papers-item {
+  padding: 16px 0;
+}
+
+.citing-papers .paper-title {
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.citing-papers .paper-authors {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.citing-papers .paper-meta {
+  font-size: 0.83rem;
+}
+
+/* ---- Year group (details/summary) ---- */
+.year-group {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  margin: 0 0 12px;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.year-group[open] {
+  border-color: #2a6ec0;
+  box-shadow: 0 2px 8px rgba(42, 110, 192, 0.06);
+}
+
+.year-group-summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a2a4a;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+.year-group-summary::-webkit-details-marker {
+  display: none;
+}
+
+.year-group-summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.7em;
+  transition: transform 0.2s;
+  color: #2a6ec0;
+}
+
+.year-group[open] .year-group-summary::before {
+  transform: rotate(90deg);
+}
+
+.year-group-summary:hover {
+  background: #f5f8fc;
+}
+
+.year-group .year-label {
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+}
+
+.year-group .year-count {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #666;
+  background: #eaf2fb;
+  padding: 3px 12px;
+  border-radius: 999px;
+}
+
+.year-group .papers-list {
+  padding: 0 20px 8px;
+}
+
+.year-group .papers-item {
+  padding: 16px 0;
+}
+
+.year-group .papers-item:first-child {
+  border-top: 1px solid #eee;
+}
+
+/* citing セクションの中の年バッジは非表示（details の見出しで分かるため） */
+.citing-papers .year-group .paper-year {
+  display: none;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  #contents .inner_contents {
+    padding: 24px 16px 60px;
+  }
+
+  .page_title h2 {
+    font-size: 1.5rem;
+  }
+
+  .papers-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .paper-year {
+    flex: 0;
+    font-size: 1rem;
+    color: #888;
+    text-align: left;
+  }
+
+  .paper-title {
+    font-size: 1rem;
+  }
+
+  .paper-citations {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

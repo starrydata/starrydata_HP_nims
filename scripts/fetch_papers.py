@@ -323,6 +323,19 @@ def main():
     # 新しい順
     citing_papers.sort(key=lambda p: (p.get("year") or 0, p.get("cited_by_count") or 0), reverse=True)
 
+    # 年ごとにグループ化（テンプレートで折りたたみ表示）
+    citing_papers_by_year: list[dict] = []
+    seen_years: dict[int | None, list[dict]] = {}
+    for p in citing_papers:
+        y = p.get("year") or 0
+        seen_years.setdefault(y, []).append(p)
+    for y in sorted(seen_years.keys(), reverse=True):
+        citing_papers_by_year.append({
+            "year": y if y else None,
+            "count": len(seen_years[y]),
+            "papers": seen_years[y],
+        })
+
     jst = timezone(timedelta(hours=9))
     out = {
         "description": "Starrydata プロジェクト関連論文（seed）と、それらを引用している外部論文",
@@ -341,6 +354,7 @@ def main():
         },
         "project_papers": project_papers,
         "citing_papers": citing_papers,
+        "citing_papers_by_year": citing_papers_by_year,
     }
 
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
