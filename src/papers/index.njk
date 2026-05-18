@@ -54,13 +54,11 @@ bodyId: papers
               DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a>
             </p>
             {%- endif %}
-            {%- if p.cited_by_count or p.citation_counts %}
+            {%- if p.cited_by_count %}
             <p class="paper-citations">
-              {%- if p.cited_by_count %}
-              <span class="citation-stat">Total citations (OpenAlex): <strong>{{ p.cited_by_count }}</strong></span>
-              {%- endif %}
-              {%- if p.citation_counts %}
-              <span class="citation-stat">Fetched citing papers — OpenAlex: <strong>{{ p.citation_counts.openalex }}</strong> ／ OpenCitations: <strong>{{ p.citation_counts.opencitations }}</strong> ／ unique: <strong>{{ p.citation_counts.unique }}</strong></span>
+              <span class="citation-stat">Cited by <strong>{{ p.cited_by_count }}</strong>{% if p.cited_by_source == "crossref" %} (Crossref){% endif %}</span>
+              {%- if p.cited_by_count_openalex and p.cited_by_count_openalex != p.cited_by_count %}
+              <span class="citation-stat citation-detail">／ OpenAlex: {{ p.cited_by_count_openalex }}</span>
               {%- endif %}
             </p>
             {%- endif %}

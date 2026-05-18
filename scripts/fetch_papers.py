@@ -139,6 +139,18 @@ def fetch_cited_by_opencitations(doi: str) -> list[str]:
     return dois
 
 
+def fetch_crossref_count(doi: str) -> int | None:
+    """Crossref の is-referenced-by-count を取得（出版社サイトと同じ引用数）"""
+    url = f"{CROSSREF}/works/{urllib.parse.quote(doi, safe='/.')}"
+    try:
+        data = get_json(url, attach_mailto=True)
+    except Exception as e:
+        print(f"WARN: Crossref count miss for {doi}: {e}", file=sys.stderr)
+        return None
+    msg = data.get("message") or {}
+    return msg.get("is-referenced-by-count")
+
+
 def fetch_crossref_meta(doi: str) -> dict | None:
     """Crossref から論文メタデータを取得"""
     url = f"{CROSSREF}/works/{urllib.parse.quote(doi, safe='/.')}"
@@ -194,6 +206,19 @@ def main():
         if wid:
             seed_work_ids.append(wid)
         time.sleep(0.3)
+
+    # --- 各 seed の Crossref 引用数（出版社サイトに表示されるのと同じソース）---
+    for project in project_papers:
+        doi = project.get("doi", "")
+        if not doi:
+            continue
+        cnt = fetch_crossref_count(doi)
+        if cnt is not None:
+            # OpenAlex 由来の cited_by_count を Crossref で上書き
+            project["cited_by_count_openalex"] = project.get("cited_by_count", 0)
+            project["cited_by_count"] = cnt
+            project["cited_by_source"] = "crossref"
+        time.sleep(0.1)
 
     project_papers.sort(key=lambda p: (p.get("year") or 0), reverse=True)
 
