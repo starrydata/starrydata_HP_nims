@@ -1,0 +1,33 @@
+---
+layout: base.njk
+permalink: /papers/index.html
+title: 論文紹介
+bodyId: papers
+---
+
+<div id="contents">
+  <div class="inner_contents">
+
+    <div class="page_title">
+      <h2>論文紹介</h2>
+      <p class="subtitle">Papers</p>
+    </div>
+
+    <ul class="papers-list">
+      {%- for p in papers.papers %}
+      <li class="papers-item">
+        <a href="/papers/{{ p.slug }}.html">
+          <h3>{{ p.title }}</h3>
+          <p class="meta">
+            {% if p.authors %}<span class="authors">{{ p.authors }}</span>{% endif %}
+            {% if p.journal %}<span class="journal">{{ p.journal }}</span>{% endif %}
+            {% if p.year %}<span class="year">{{ p.year }}</span>{% endif %}
+          </p>
+          {% if p.doi %}<p class="doi">DOI: {{ p.doi }}</p>{% endif %}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+
+  </div>
+</div>

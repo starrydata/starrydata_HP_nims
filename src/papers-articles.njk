@@ -1,12 +1,70 @@
 ---
 pagination:
-  data: papers
+  data: papers.papers
   size: 1
   alias: p
-permalink: "/papers/{{ p.basename }}.html"
+permalink: "/papers/{{ p.slug }}.html"
 eleventyComputed:
   title: "{{ p.title }}"
-  body: "{{ p.text | safe }}{{ p.text_more | safe }}"
   bodyId: "papers"
-layout: page.njk
+layout: base.njk
 ---
+
+<div id="contents">
+  <div class="inner_contents">
+
+    <article class="paper-article">
+      <header class="paper-header">
+        <h2>{{ p.title }}</h2>
+      </header>
+
+      {% if p.thumbnail %}
+      <div class="paper-thumbnail">
+        {% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{% endif %}
+        <img src="{{ p.thumbnail }}" alt="{{ p.title }}">
+        {% if p.url %}</a>{% endif %}
+      </div>
+      {% endif %}
+
+      <table class="paper-meta-table" border="1" style="border-collapse:collapse;width:100%;">
+        <tbody>
+          {% if p.title %}
+          <tr>
+            <td><pre>タイトル</pre></td>
+            <td>
+              {% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>
+              {% else %}{{ p.title }}{% endif %}
+            </td>
+          </tr>
+          {% endif %}
+          {% if p.authors %}
+          <tr><td><pre>著者名</pre></td><td>{{ p.authors }}</td></tr>
+          {% endif %}
+          {% if p.year %}
+          <tr><td><pre>出版年</pre></td><td>{{ p.year }}</td></tr>
+          {% endif %}
+          {% if p.journal %}
+          <tr><td><pre>出版物名</pre></td><td>{{ p.journal }}</td></tr>
+          {% endif %}
+          {% if p.doi %}
+          <tr><td><pre>DOI</pre></td><td>{{ p.doi }}</td></tr>
+          {% endif %}
+          {% if p.open_access %}
+          <tr><td><pre>Open Access</pre></td><td>{{ p.open_access }}</td></tr>
+          {% endif %}
+        </tbody>
+      </table>
+
+      {% if p.comment_html %}
+      <div class="paper-comment">
+        {{ p.comment_html | safe }}
+      </div>
+      {% endif %}
+
+      <footer class="paper-footer">
+        <p><a href="/papers/index.html">← 論文一覧へ戻る</a></p>
+      </footer>
+    </article>
+
+  </div>
+</div>

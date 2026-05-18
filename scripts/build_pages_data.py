@@ -68,19 +68,13 @@ def main():
         p["url"] = f"/{p['blog_path']}/{p['basename']}.html"
 
     # entries
-    # topics は構造化版を extract_topics.py で別途生成するため、ここでは出力しない
-    papers = [e for e in all_entries if e["blog_path"] == "papers"]
-    for e in papers:
-        e["url"] = f"/papers/{e['basename']}.html"
+    # topics/papers は構造化版を extract_topics.py / extract_papers.py で別途生成するため、ここでは出力しない
 
     (DATA / "pages_all.json").write_text(
         json.dumps(other_pages, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     (DATA / "home_sections.json").write_text(
         json.dumps(home_sections, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    (DATA / "papers.json").write_text(
-        json.dumps(papers, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
     # blogs / authors もコピー（参考用）
@@ -90,7 +84,6 @@ def main():
 
     print(f"pages_all     : {len(other_pages)}")
     print(f"home_sections : {len(home_sections)}")
-    print(f"papers        : {len(papers)}")
 
 
 if __name__ == "__main__":
