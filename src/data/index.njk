@@ -1,0 +1,41 @@
+---
+layout: base.njk
+permalink: /data/index.html
+title: 進行中のデータ収集プロジェクト
+bodyId: data
+---
+
+<div id="contents">
+  <div class="inner_contents">
+
+    <div class="page_title">
+      <h2>{{ projects.page.title }}</h2>
+    </div>
+
+    {{ projects.page.intro_html | safe }}
+
+    {% if projects.page.list_heading %}
+    <!-- Title -->
+    <div class="b50 b25_sp">
+      <h3 class="ttl_second">{{ projects.page.list_heading }}</h3>
+    </div>
+    <!-- /Title -->
+    {% endif %}
+
+    <!-- Project Cards -->
+    <div class="b60">
+      <div class="box_data">
+        {%- for p in projects.projects %}
+        <div class="box">
+          <a href="/data/{{ p.slug }}.html" class="{{ p.card_class }}">
+            <div class="inner">
+              <div class="ttl">{{ p.card_title }}</div>
+            </div>
+          </a>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,33 @@
+---
+pagination:
+  data: projects.projects
+  size: 1
+  alias: p
+permalink: "/data/{{ p.slug }}.html"
+eleventyComputed:
+  title: "{{ p.full_title }}"
+  bodyId: "data"
+layout: base.njk
+---
+
+<div id="contents">
+  <div class="inner_contents">
+
+    <div class="page_title">
+      <h2>{{ p.full_title }}</h2>
+      {% if p.owner %}<p class="subtitle">{{ p.owner }}</p>{% endif %}
+    </div>
+
+    <div class="page_body">
+      {{ p.body_html | safe }}
+
+      {% if p.figure %}
+      <div class="b60 alignC">
+        <img src="{{ p.figure.image }}" alt="{{ p.card_title }}">
+        {% if p.figure.caption %}<p>{{ p.figure.caption | replace("\n", "<br>") | safe }}</p>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+</div>

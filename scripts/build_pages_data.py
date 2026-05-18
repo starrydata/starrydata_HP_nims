@@ -41,6 +41,13 @@ def load_dir(rel: str):
 # (blog_path, basename) のセット
 STRUCTURED_PAGES = {
     ("project", "members"),
+    ("data", "index"),
+    ("data", "thermoelectric"),
+    ("data", "magnetic"),
+    ("data", "quasicrystal"),
+    ("data", "condensed"),
+    ("data", "battery"),
+    ("data", "piezoelectric"),
 }
 
 
