@@ -32,10 +32,10 @@ def main():
             blog_path[bid] = sp
     blog_path["1"] = ""  # 明示的にルート
 
-    # 既存 src/assets/img をクリーンアップ
-    old_img = DST_ROOT / "assets/img"
-    if old_img.exists():
-        shutil.rmtree(old_img)
+    # 既存 src/assets/img と src/img をクリーンアップ
+    for p in (DST_ROOT / "assets/img", DST_ROOT / "img"):
+        if p.exists():
+            shutil.rmtree(p)
 
     placed = []
     missing = []
@@ -53,8 +53,8 @@ def main():
         if bpath:
             dst = DST_ROOT / bpath / "img" / fname
         else:
-            # ルート（mt）の画像は /assets/img/ へ（汎用）
-            dst = DST_ROOT / "assets/img" / fname
+            # ルート（mt）の画像は /img/ へ（MTオリジナル配置に合わせる）
+            dst = DST_ROOT / "img" / fname
 
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(src, dst)

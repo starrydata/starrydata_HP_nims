@@ -93,14 +93,15 @@ permalink: /index.html
 <div class="b30">
 <div class="box_papers">
 <ul class="papers_list">
-{%- for p in papers.papers.slice(0, 3) %}
+{%- for p in papers.project_papers.slice(0, 3) %}
   <li class="papers_list_item">
-    <a class="papers_list_item_link" href="{% if p.url %}{{ p.url }}{% else %}/papers/{{ p.slug }}.html{% endif %}"{% if p.url %} target="_blank" rel="noopener"{% endif %}>
+    <a class="papers_list_item_link" href="{{ p.doi_url }}" target="_blank" rel="noopener">
       {% if p.authors %}<p class="papers_list_item_authors">{{ p.authors }}</p>{% endif %}
       <p class="papers_list_item_title">{{ p.title }}</p>
       <p class="papers_list_item_info">
         {% if p.journal %}{{ p.journal }}{% endif %}
-        {% if p.year %}, {{ p.year }}{% endif %}
+        {% if p.volume %}, {{ p.volume }}{% endif %}
+        {% if p.year %} ({{ p.year }}){% endif %}
         {% if p.doi %}, {{ p.doi }}{% endif %}
       </p>
     </a>

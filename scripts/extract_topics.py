@@ -29,6 +29,31 @@ AUTHORS = ROOT / "_source/extracted/authors.json"
 DST = ROOT / "src/_data/topics.json"
 
 
+def slugify(s: str, max_len: int = 100) -> str:
+    s = (s or "").lower()
+    s = re.sub(r"[^\w\-]+", "_", s, flags=re.ASCII)
+    s = re.sub(r"_+", "_", s).strip("_-")
+    return s[:max_len] or "untitled"
+
+
+def resolve_slug(basename: str, title: str, id_: str = "") -> str:
+    """generic basename はタイトルから再生成。日本語タイトルで slug が作れない場合は basename + id にフォールバック"""
+    generic = (
+        not basename
+        or basename.isdigit()
+        or re.fullmatch(r"(content|post)(_\d+)?", basename) is not None
+    )
+    if not generic:
+        return basename
+    new_slug = slugify(title)
+    if new_slug == "untitled":
+        # 日本語のみのタイトルなど、ASCIIで slug が作れない場合
+        if basename:
+            return f"{basename}_{id_}" if id_ else basename
+        return f"item_{id_}" if id_ else "untitled"
+    return new_slug
+
+
 def parse_mt_date(s: str) -> tuple[str, str]:
     """20200914172900 -> ('2020-09-14', '2020-09-14T17:29:00+09:00')"""
     if not s or len(s) < 8:
@@ -76,7 +101,8 @@ def main():
 
         out.append({
             "id": d["id"],
-            "slug": d["basename"],
+            "slug": resolve_slug(d["basename"], d["title"], d["id"]),
+            "original_basename": d["basename"],
             "title": d["title"],
             "date": date,
             "datetime": iso,

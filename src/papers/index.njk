@@ -10,24 +10,92 @@ bodyId: papers
 
     <div class="page_title">
       <h2>論文紹介</h2>
-      <p class="subtitle">Papers</p>
+      <p class="subtitle">Publications</p>
     </div>
 
-    <ul class="papers-list">
-      {%- for p in papers.papers %}
-      <li class="papers-item">
-        <a href="/papers/{{ p.slug }}.html">
-          <h3>{{ p.title }}</h3>
-          <p class="meta">
-            {% if p.authors %}<span class="authors">{{ p.authors }}</span>{% endif %}
-            {% if p.journal %}<span class="journal">{{ p.journal }}</span>{% endif %}
-            {% if p.year %}<span class="year">{{ p.year }}</span>{% endif %}
-          </p>
-          {% if p.doi %}<p class="doi">DOI: {{ p.doi }}</p>{% endif %}
-        </a>
-      </li>
-      {%- endfor %}
-    </ul>
+    <p class="papers-source">
+      Data source: <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>
+      ／ Last fetched: <time datetime="{{ papers.fetched_at }}">{{ papers.fetched_at.substring(0, 10) }}</time>
+    </p>
+
+    <!-- ============== Project Papers ============== -->
+    <section class="papers-section project-papers">
+      <h3 class="papers-section-title">
+        Starrydata プロジェクト関連論文
+        <span class="count">({{ papers.project_papers_count }})</span>
+      </h3>
+      <p class="papers-section-note">桂ゆかり氏らによる Starrydata プロジェクトの代表論文</p>
+
+      <ul class="papers-list">
+        {%- for p in papers.project_papers %}
+        <li class="papers-item">
+          <div class="paper-year">{{ p.year }}</div>
+          <div class="paper-content">
+            <p class="paper-title">
+              {%- if p.doi_url %}
+              <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.title }}</a>
+              {%- else %}
+              {{ p.title }}
+              {%- endif %}
+            </p>
+            {%- if p.authors %}<p class="paper-authors">{{ p.authors }}</p>{% endif %}
+            <p class="paper-meta">
+              {%- if p.journal %}<em class="journal">{{ p.journal }}</em>{% endif %}
+              {%- if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}
+              {%- if p.issue %} [{{ p.issue }}]{% endif %}
+              {%- if p.start_page %}, {{ p.start_page }}{% if p.end_page %}–{{ p.end_page }}{% endif %}{% endif %}
+            </p>
+            {%- if p.doi %}
+            <p class="paper-doi">
+              DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a>
+              {%- if p.cited_by_count > 0 %}
+              ／ Cited by {{ p.cited_by_count }}
+              {%- endif %}
+            </p>
+            {%- endif %}
+          </div>
+        </li>
+        {%- endfor %}
+      </ul>
+    </section>
+
+    <!-- ============== Citing Papers ============== -->
+    <section class="papers-section citing-papers">
+      <h3 class="papers-section-title">
+        Starrydata を引用している論文
+        <span class="count">({{ papers.citing_papers_count }})</span>
+      </h3>
+      <p class="papers-section-note">上記プロジェクト論文を引用している他研究者の論文（新しい順）</p>
+
+      <ul class="papers-list">
+        {%- for p in papers.citing_papers %}
+        <li class="papers-item">
+          <div class="paper-year">{{ p.year }}</div>
+          <div class="paper-content">
+            <p class="paper-title">
+              {%- if p.doi_url %}
+              <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.title }}</a>
+              {%- else %}
+              {{ p.title }}
+              {%- endif %}
+            </p>
+            {%- if p.authors %}<p class="paper-authors">{{ p.authors }}</p>{% endif %}
+            <p class="paper-meta">
+              {%- if p.journal %}<em class="journal">{{ p.journal }}</em>{% endif %}
+              {%- if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}
+              {%- if p.issue %} [{{ p.issue }}]{% endif %}
+              {%- if p.start_page %}, {{ p.start_page }}{% if p.end_page %}–{{ p.end_page }}{% endif %}{% endif %}
+            </p>
+            {%- if p.doi %}
+            <p class="paper-doi">
+              DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a>
+            </p>
+            {%- endif %}
+          </div>
+        </li>
+        {%- endfor %}
+      </ul>
+    </section>
 
   </div>
 </div>

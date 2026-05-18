@@ -2,7 +2,8 @@
   "topics": [
     {
       "id": "71",
-      "slug": "content",
+      "slug": "content_71",
+      "original_basename": "content",
       "title": "データセットの仕様を刷新しました",
       "date": "2023-09-05",
       "datetime": "2023-09-05T14:26:21+09:00",
@@ -13,6 +14,7 @@
     {
       "id": "48",
       "slug": "starrydata_2",
+      "original_basename": "starrydata_2",
       "title": "Starrydataのデータ収集プロジェクト一覧",
       "date": "2022-04-20",
       "datetime": "2022-04-20T16:51:00+09:00",
@@ -23,6 +25,7 @@
     {
       "id": "47",
       "slug": "starrydata_1",
+      "original_basename": "starrydata_1",
       "title": "Starrydataプロジェクトとの共同研究",
       "date": "2022-03-17",
       "datetime": "2022-03-17T21:16:00+09:00",
@@ -33,6 +36,7 @@
     {
       "id": "46",
       "slug": "hpy_katsura_phd",
+      "original_basename": "hpy_katsura_phd",
       "title": "研究紹介HPの一覧（Y. Katsura Ph.D.）",
       "date": "2022-01-04",
       "datetime": "2022-01-04T16:07:00+09:00",
@@ -43,6 +47,7 @@
     {
       "id": "45",
       "slug": "starrydata",
+      "original_basename": "starrydata",
       "title": "Starrydataプロジェクトへの思い",
       "date": "2021-12-29",
       "datetime": "2021-12-29T04:23:00+09:00",
@@ -53,6 +58,7 @@
     {
       "id": "44",
       "slug": "optimade",
+      "original_basename": "optimade",
       "title": "世界の材料科学オープンデータベースとOPTIMADEプロジェクト",
       "date": "2021-06-08",
       "datetime": "2021-06-08T11:11:00+09:00",
@@ -63,6 +69,7 @@
     {
       "id": "43",
       "slug": "materials_informatics",
+      "original_basename": "materials_informatics",
       "title": "Materials Informatics向けのオープンデータベース",
       "date": "2020-09-14",
       "datetime": "2020-09-14T17:29:00+09:00",

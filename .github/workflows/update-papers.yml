@@ -1,0 +1,46 @@
+name: Update papers
+
+# 毎月 1 日 0:15 JST = 前日 15:15 UTC に実行
+# 手動実行も可能（GitHub の Actions タブから Run workflow）
+on:
+  schedule:
+    - cron: "15 15 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write   # papers.json を commit & push するため
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch papers from OpenAlex
+        run: python scripts/fetch_papers.py
+
+      - name: Show diff
+        run: |
+          git --no-pager diff --stat src/_data/papers.json || true
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet src/_data/papers.json; then
+            echo "No changes to papers.json"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/_data/papers.json
+          git commit -m "chore(papers): monthly update from OpenAlex
+
+Fetched at: $(date -u +'%Y-%m-%dT%H:%M:%SZ')
+Source: https://openalex.org
+Seeds: src/_data/starrydata_seeds.json"
+          git push
