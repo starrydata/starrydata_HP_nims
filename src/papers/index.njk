@@ -14,8 +14,12 @@ bodyId: papers
     </div>
 
     <p class="papers-source">
-      Data source: <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>
-      ／ Last fetched: <time datetime="{{ papers.fetched_at }}">{{ papers.fetched_at.substring(0, 10) }}</time>
+      Data sources:
+      <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>
+      ／
+      <a href="https://opencitations.net" target="_blank" rel="noopener">OpenCitations</a>
+      (Crossref Open Citations)
+      <br>Last fetched: <time datetime="{{ papers.fetched_at }}">{{ papers.fetched_at.substring(0, 10) }}</time>
     </p>
 
     <!-- ============== Project Papers ============== -->
@@ -65,7 +69,12 @@ bodyId: papers
         Starrydata を引用している論文
         <span class="count">({{ papers.citing_papers_count }})</span>
       </h3>
-      <p class="papers-section-note">上記プロジェクト論文を引用している他研究者の論文（新しい順）</p>
+      <p class="papers-section-note">
+        上記プロジェクト論文を引用している他研究者の論文（新しい順）<br>
+        Sources: OpenAlex only {{ papers.citing_papers_by_source.openalex_only }} ／
+        OpenCitations only {{ papers.citing_papers_by_source.opencitations_only }} ／
+        both {{ papers.citing_papers_by_source.both }}
+      </p>
 
       <ul class="papers-list">
         {%- for p in papers.citing_papers %}

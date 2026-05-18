@@ -1,10 +1,18 @@
 {
   "description": "Starrydata プロジェクト関連論文（seed）と、それらを引用している外部論文",
-  "fetched_at": "2026-05-18T18:12:56+09:00",
-  "data_source": "OpenAlex (https://openalex.org)",
+  "fetched_at": "2026-05-18T18:27:00+09:00",
+  "data_sources": [
+    "OpenAlex (https://openalex.org)",
+    "OpenCitations / Crossref Open Citations (https://opencitations.net)"
+  ],
   "researcher": "Yukari Katsura and the Starrydata team",
   "project_papers_count": 8,
-  "citing_papers_count": 183,
+  "citing_papers_count": 184,
+  "citing_papers_by_source": {
+    "openalex_only": 60,
+    "opencitations_only": 2,
+    "both": 122
+  },
   "project_papers": [
     {
       "openalex_id": "W4409159411",
@@ -133,6 +141,9 @@
       "doi": "10.1002/adma.202521975",
       "doi_url": "https://doi.org/10.1002/adma.202521975",
       "cited_by_count": 5,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -150,6 +161,9 @@
       "doi": "10.1016/j.rser.2026.116937",
       "doi_url": "https://doi.org/10.1016/j.rser.2026.116937",
       "cited_by_count": 2,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -167,25 +181,11 @@
       "doi": "10.1016/j.commatsci.2026.114521",
       "doi_url": "https://doi.org/10.1016/j.commatsci.2026.114521",
       "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W7127037922",
-      "title": "Applicability limits of time-domain impedance spectroscopy for comprehensive thermoelectric characterization under heat leakage conditions",
-      "authors": "Yasuhiro Hasegawa, Kotoko Kodama",
-      "journal": "Scientific Reports",
-      "year": 2026,
-      "volume": "16",
-      "issue": "1",
-      "start_page": "6910",
-      "end_page": "6910",
-      "doi": "10.1038/s41598-026-35799-6",
-      "doi_url": "https://doi.org/10.1038/s41598-026-35799-6",
-      "cited_by_count": 1,
-      "cites_seeds": [
+        "10.1038/s41524-022-00897-2",
         "10.1080/14686996.2019.1603885"
       ]
     },
@@ -202,62 +202,31 @@
       "doi": "10.1039/d5ta08713a",
       "doi_url": "https://doi.org/10.1039/d5ta08713a",
       "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
     },
     {
-      "openalex_id": "W7125128830",
-      "title": "LLM-based AI agents for automated extraction of material properties and structural features",
-      "authors": "Subham Ghosh, Abhishek Tewari",
-      "journal": "Computational Materials Science",
+      "openalex_id": "W7127037922",
+      "title": "Applicability limits of time-domain impedance spectroscopy for comprehensive thermoelectric characterization under heat leakage conditions",
+      "authors": "Yasuhiro Hasegawa, Kotoko Kodama",
+      "journal": "Scientific Reports",
       "year": 2026,
-      "volume": "265",
-      "issue": "",
-      "start_page": "114521",
-      "end_page": "114521",
-      "doi": "10.1016/j.commatsci.2026.114521",
-      "doi_url": "https://doi.org/10.1016/j.commatsci.2026.114521",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W7128795067",
-      "title": "Machine learning discovery of medium-entropy thermoelectric materials with ultralow lattice thermal conductivity",
-      "authors": "Hangyu Zhang, Xianhua Nie, Xinyi Zhang, Ruiqi Wang, Shuai Deng, Li Zhao",
-      "journal": "Journal of Materials Chemistry A",
-      "year": 2026,
-      "volume": "14",
-      "issue": "22",
-      "start_page": "13735",
-      "end_page": "13751",
-      "doi": "10.1039/d5ta09114d",
-      "doi_url": "https://doi.org/10.1039/d5ta09114d",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W7133867162",
-      "title": "Systematically Verified Experimental Thermoelectric Dataset For Data-driven Approaches",
-      "authors": "Leng Ze Tang, Layla Purdy, Trupti Mohanty, Leonard W. T. Ng, Taylor D. Sparks",
-      "journal": "Integrating materials and manufacturing innovation",
-      "year": 2026,
-      "volume": "15",
+      "volume": "16",
       "issue": "1",
-      "start_page": "181",
-      "end_page": "193",
-      "doi": "10.1007/s40192-026-00446-5",
-      "doi_url": "https://doi.org/10.1007/s40192-026-00446-5",
-      "cited_by_count": 0,
+      "start_page": "6910",
+      "end_page": "6910",
+      "doi": "10.1038/s41598-026-35799-6",
+      "doi_url": "https://doi.org/10.1038/s41598-026-35799-6",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -273,26 +242,12 @@
       "doi": "10.1016/j.aichem.2026.100113",
       "doi_url": "https://doi.org/10.1016/j.aichem.2026.100113",
       "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885",
         "10.1080/27660400.2025.2506976"
-      ]
-    },
-    {
-      "openalex_id": "W7138860899",
-      "title": "AI-assisted enhancement of thermoelectric properties in the Yb <sub> 14− <i>x</i> </sub> Ca <sub> <i>x</i> </sub> Mn <sub> 1− <i>y</i> </sub> AlySb <sub>11</sub> Zintl system",
-      "authors": "Junsu Lee, Aziz Ahmed, Tae-Soo You",
-      "journal": "Journal of Materials Chemistry A",
-      "year": 2026,
-      "volume": "14",
-      "issue": "27",
-      "start_page": "17095",
-      "end_page": "17106",
-      "doi": "10.1039/d6ta00722h",
-      "doi_url": "https://doi.org/10.1039/d6ta00722h",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -308,6 +263,9 @@
       "doi": "10.7566/jpsj.95.042001",
       "doi_url": "https://doi.org/10.7566/jpsj.95.042001",
       "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885",
         "10.1080/27660400.2025.2506976"
@@ -326,146 +284,13 @@
       "doi": "10.1088/1361-648x/ae56a9",
       "doi_url": "https://doi.org/10.1088/1361-648x/ae56a9",
       "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
         "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885",
         "10.1080/27660400.2025.2506976"
-      ]
-    },
-    {
-      "openalex_id": "W7154689044",
-      "title": "Magnetoelectric properties of nanostructured extruded samples of solid solution Bi <sub>0.85</sub> Sb <sub>0.15</sub> doped with tellurium",
-      "authors": "M.M. Tagiyev, Kh. F. Aliyeva",
-      "journal": "Molecular Crystals and Liquid Crystals",
-      "year": 2026,
-      "volume": "770",
-      "issue": "7",
-      "start_page": "1199",
-      "end_page": "1213",
-      "doi": "10.1080/15421406.2026.2651923",
-      "doi_url": "https://doi.org/10.1080/15421406.2026.2651923",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W7127993969",
-      "title": "Searching for high-performance thermoelectric materials via an advanced machine learning framework",
-      "authors": "Yuqing Sun, Xiaorui Chen, Jianzhi Gao, Wenliang Zhu, Minghu Pan",
-      "journal": "Cell Reports Physical Science",
-      "year": 2026,
-      "volume": "7",
-      "issue": "2",
-      "start_page": "103093",
-      "end_page": "103093",
-      "doi": "10.1016/j.xcrp.2025.103093",
-      "doi_url": "https://doi.org/10.1016/j.xcrp.2025.103093",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W7130953366",
-      "title": "Machine-learning prediction of thermoelectric properties using high-entropy descriptors",
-      "authors": "Novana Hutasoit",
-      "journal": "Materials Letters",
-      "year": 2026,
-      "volume": "411",
-      "issue": "",
-      "start_page": "140314",
-      "end_page": "140314",
-      "doi": "10.1016/j.matlet.2026.140314",
-      "doi_url": "https://doi.org/10.1016/j.matlet.2026.140314",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W7138956281",
-      "title": "Interpretable machine learning for thermoelectric materials design with Kolmogorov–Arnold networks",
-      "authors": "Marco Fronzi, Michael J. Ford, Kamal Singh Nayal, Olexandr Isayev, Catherine Stampfl",
-      "journal": "Scientific Reports",
-      "year": 2026,
-      "volume": "16",
-      "issue": "1",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1038/s41598-026-44723-x",
-      "doi_url": "https://doi.org/10.1038/s41598-026-44723-x",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W7161378238",
-      "title": "Bridging Machine Learning and Zintl Phase Thermoelectric Materials: The Ca <sub> 9– <i>x</i> </sub> Eu <sub> <i>x</i> </sub> Zn <sub> 4.5– <i>y</i> </sub> Cu <sub> <i>y</i> </sub> Sb <sub>9</sub> System",
-      "authors": "Juwon Lee, Juwon Lee, Aziz Ahmed, Siyeon Kim, Jihyun Lee, Jihyun Lee, Yurij Mozharivskyj, Kang Min Ok, Junsu Lee, Junsu Lee, Tae-Soo You",
-      "journal": "Chemistry of Materials",
-      "year": 2026,
-      "volume": "",
-      "issue": "",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1021/acs.chemmater.6c00656",
-      "doi_url": "https://doi.org/10.1021/acs.chemmater.6c00656",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W7124426482",
-      "title": "The Strategic Role of 2D Nanomaterials in Grid Modernization",
-      "authors": "Matthew Glasscott, James D. Burgess, Peter Byrley, Maria Fernanda Campa, Mark H. Griep, Alexander P. Kirk, Stephanie A. Mack, Birgit Schwenzer, Ryan M. Welch, Elisabeth Mansfield",
-      "journal": "ACS Energy Letters",
-      "year": 2026,
-      "volume": "11",
-      "issue": "2",
-      "start_page": "972",
-      "end_page": "978",
-      "doi": "10.1021/acsenergylett.5c04047",
-      "doi_url": "https://doi.org/10.1021/acsenergylett.5c04047",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1016/j.isci.2023.106494"
-      ]
-    },
-    {
-      "openalex_id": "W7134823542",
-      "title": "Unraveling the Mg Loss Mechanism and Degradation Kinetics in Thermoelectric n‐Type Mg <sub>2</sub> Si‐Mg <sub>2</sub> Sn Solid Solutions",
-      "authors": "Aryan Sankhla, Eckhard Mueller, Johannes de Boor",
-      "journal": "Advanced Functional Materials",
-      "year": 2026,
-      "volume": "36",
-      "issue": "25",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1002/adfm.202518107",
-      "doi_url": "https://doi.org/10.1002/adfm.202518107",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1016/j.isci.2023.106494"
-      ]
-    },
-    {
-      "openalex_id": "W7140220210",
-      "title": "Advancements in thin film thermoelectric: progress and perspective on materials and devices",
-      "authors": "Nurfarhana Ahmad Musri, Angella Th’ng, Izzah Hanim Abd Aziz, Ubaidah Syafiq",
-      "journal": "Frontiers in Electronic Materials",
-      "year": 2026,
-      "volume": "6",
-      "issue": "",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.3389/femat.2026.1769839",
-      "doi_url": "https://doi.org/10.3389/femat.2026.1769839",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1016/j.isci.2023.106494"
       ]
     },
     {
@@ -481,6 +306,9 @@
       "doi": "10.1088/1361-648x/ae56c7",
       "doi_url": "https://doi.org/10.1088/1361-648x/ae56c7",
       "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1038/s41597-024-04043-z"
       ]
@@ -498,8 +326,233 @@
       "doi": "10.1016/j.corsci.2026.113908",
       "doi_url": "https://doi.org/10.1016/j.corsci.2026.113908",
       "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1038/s41597-024-04043-z"
+      ]
+    },
+    {
+      "openalex_id": "W7124426482",
+      "title": "The Strategic Role of 2D Nanomaterials in Grid Modernization",
+      "authors": "Matthew Glasscott, James D. Burgess, Peter Byrley, Maria Fernanda Campa, Mark H. Griep, Alexander P. Kirk, Stephanie A. Mack, Birgit Schwenzer, Ryan M. Welch, Elisabeth Mansfield",
+      "journal": "ACS Energy Letters",
+      "year": 2026,
+      "volume": "11",
+      "issue": "2",
+      "start_page": "972",
+      "end_page": "978",
+      "doi": "10.1021/acsenergylett.5c04047",
+      "doi_url": "https://doi.org/10.1021/acsenergylett.5c04047",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W7134823542",
+      "title": "Unraveling the Mg Loss Mechanism and Degradation Kinetics in Thermoelectric n‐Type Mg <sub>2</sub> Si‐Mg <sub>2</sub> Sn Solid Solutions",
+      "authors": "Aryan Sankhla, Eckhard Mueller, Johannes de Boor",
+      "journal": "Advanced Functional Materials",
+      "year": 2026,
+      "volume": "36",
+      "issue": "25",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1002/adfm.202518107",
+      "doi_url": "https://doi.org/10.1002/adfm.202518107",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W7140220210",
+      "title": "Advancements in thin film thermoelectric: progress and perspective on materials and devices",
+      "authors": "Nurfarhana Ahmad Musri, Angella Th’ng, Izzah Hanim Abd Aziz, Ubaidah Syafiq",
+      "journal": "Frontiers in Electronic Materials",
+      "year": 2026,
+      "volume": "6",
+      "issue": "",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.3389/femat.2026.1769839",
+      "doi_url": "https://doi.org/10.3389/femat.2026.1769839",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W7127993969",
+      "title": "Searching for high-performance thermoelectric materials via an advanced machine learning framework",
+      "authors": "Yuqing Sun, Xiaorui Chen, Jianzhi Gao, Wenliang Zhu, Minghu Pan",
+      "journal": "Cell Reports Physical Science",
+      "year": 2026,
+      "volume": "7",
+      "issue": "2",
+      "start_page": "103093",
+      "end_page": "103093",
+      "doi": "10.1016/j.xcrp.2025.103093",
+      "doi_url": "https://doi.org/10.1016/j.xcrp.2025.103093",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W7128795067",
+      "title": "Machine learning discovery of medium-entropy thermoelectric materials with ultralow lattice thermal conductivity",
+      "authors": "Hangyu Zhang, Xianhua Nie, Xinyi Zhang, Ruiqi Wang, Shuai Deng, Li Zhao",
+      "journal": "Journal of Materials Chemistry A",
+      "year": 2026,
+      "volume": "14",
+      "issue": "22",
+      "start_page": "13735",
+      "end_page": "13751",
+      "doi": "10.1039/d5ta09114d",
+      "doi_url": "https://doi.org/10.1039/d5ta09114d",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W7130953366",
+      "title": "Machine-learning prediction of thermoelectric properties using high-entropy descriptors",
+      "authors": "Novana Hutasoit",
+      "journal": "Materials Letters",
+      "year": 2026,
+      "volume": "411",
+      "issue": "",
+      "start_page": "140314",
+      "end_page": "140314",
+      "doi": "10.1016/j.matlet.2026.140314",
+      "doi_url": "https://doi.org/10.1016/j.matlet.2026.140314",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W7133867162",
+      "title": "Systematically Verified Experimental Thermoelectric Dataset For Data-driven Approaches",
+      "authors": "Leng Ze Tang, Layla Purdy, Trupti Mohanty, Leonard W. T. Ng, Taylor D. Sparks",
+      "journal": "Integrating materials and manufacturing innovation",
+      "year": 2026,
+      "volume": "15",
+      "issue": "1",
+      "start_page": "181",
+      "end_page": "193",
+      "doi": "10.1007/s40192-026-00446-5",
+      "doi_url": "https://doi.org/10.1007/s40192-026-00446-5",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W7138956281",
+      "title": "Interpretable machine learning for thermoelectric materials design with Kolmogorov–Arnold networks",
+      "authors": "Marco Fronzi, Michael J. Ford, Kamal Singh Nayal, Olexandr Isayev, Catherine Stampfl",
+      "journal": "Scientific Reports",
+      "year": 2026,
+      "volume": "16",
+      "issue": "1",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1038/s41598-026-44723-x",
+      "doi_url": "https://doi.org/10.1038/s41598-026-44723-x",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W7161378238",
+      "title": "Bridging Machine Learning and Zintl Phase Thermoelectric Materials: The Ca <sub> 9– <i>x</i> </sub> Eu <sub> <i>x</i> </sub> Zn <sub> 4.5– <i>y</i> </sub> Cu <sub> <i>y</i> </sub> Sb <sub>9</sub> System",
+      "authors": "Juwon Lee, Juwon Lee, Aziz Ahmed, Siyeon Kim, Jihyun Lee, Jihyun Lee, Yurij Mozharivskyj, Kang Min Ok, Junsu Lee, Junsu Lee, Tae-Soo You",
+      "journal": "Chemistry of Materials",
+      "year": 2026,
+      "volume": "",
+      "issue": "",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1021/acs.chemmater.6c00656",
+      "doi_url": "https://doi.org/10.1021/acs.chemmater.6c00656",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W7138860899",
+      "title": "AI-assisted enhancement of thermoelectric properties in the Yb <sub> 14− <i>x</i> </sub> Ca <sub> <i>x</i> </sub> Mn <sub> 1− <i>y</i> </sub> AlySb <sub>11</sub> Zintl system",
+      "authors": "Junsu Lee, Aziz Ahmed, Tae-Soo You",
+      "journal": "Journal of Materials Chemistry A",
+      "year": 2026,
+      "volume": "14",
+      "issue": "27",
+      "start_page": "17095",
+      "end_page": "17106",
+      "doi": "10.1039/d6ta00722h",
+      "doi_url": "https://doi.org/10.1039/d6ta00722h",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W7154689044",
+      "title": "Magnetoelectric properties of nanostructured extruded samples of solid solution Bi <sub>0.85</sub> Sb <sub>0.15</sub> doped with tellurium",
+      "authors": "M.M. Tagiyev, Kh. F. Aliyeva",
+      "journal": "Molecular Crystals and Liquid Crystals",
+      "year": 2026,
+      "volume": "770",
+      "issue": "7",
+      "start_page": "1199",
+      "end_page": "1213",
+      "doi": "10.1080/15421406.2026.2651923",
+      "doi_url": "https://doi.org/10.1080/15421406.2026.2651923",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -515,6 +568,10 @@
       "doi": "10.1002/adma.202505642",
       "doi_url": "https://doi.org/10.1002/adma.202505642",
       "cited_by_count": 20,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -532,6 +589,10 @@
       "doi": "10.1038/s41467-025-57250-6",
       "doi_url": "https://doi.org/10.1038/s41467-025-57250-6",
       "cited_by_count": 19,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -549,6 +610,10 @@
       "doi": "10.1002/adfm.202505719",
       "doi_url": "https://doi.org/10.1002/adfm.202505719",
       "cited_by_count": 17,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -566,6 +631,10 @@
       "doi": "10.3390/cryst15020114",
       "doi_url": "https://doi.org/10.3390/cryst15020114",
       "cited_by_count": 14,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -583,6 +652,10 @@
       "doi": "10.1039/d5ta02713f",
       "doi_url": "https://doi.org/10.1039/d5ta02713f",
       "cited_by_count": 10,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -600,6 +673,10 @@
       "doi": "10.1016/j.mtphys.2025.101845",
       "doi_url": "https://doi.org/10.1016/j.mtphys.2025.101845",
       "cited_by_count": 9,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885",
         "10.1080/27660400.2025.2506976"
@@ -618,25 +695,12 @@
       "doi": "10.1039/d5ee00216h",
       "doi_url": "https://doi.org/10.1039/d5ee00216h",
       "cited_by_count": 9,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4410700820",
-      "title": "Scaling law of Sim2Real transfer learning in expanding computational materials databases for real-world predictions",
-      "authors": "Shunya Minami, Yoshihiro Hayashi, Stephen Wu, Kenji Fukumizu, Hiroki Sugisawa, Masashi Ishii, Isao Kuwajima, Kazuya Shiratori, Ryo Yoshida",
-      "journal": "npj Computational Materials",
-      "year": 2025,
-      "volume": "11",
-      "issue": "1",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1038/s41524-025-01606-5",
-      "doi_url": "https://doi.org/10.1038/s41524-025-01606-5",
-      "cited_by_count": 8,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -652,42 +716,32 @@
       "doi": "10.1016/j.commatsci.2025.113855",
       "doi_url": "https://doi.org/10.1016/j.commatsci.2025.113855",
       "cited_by_count": 8,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
-      "openalex_id": "W4407960750",
-      "title": "Recent strides in artificial intelligence for predicting thermoelectric properties and materials discovery",
-      "authors": "Nikhil K. Barua, Sangjoon Lee, Anton O. Oliynyk, Holger Kleinke",
-      "journal": "Journal of Physics Energy",
+      "openalex_id": "W4410700820",
+      "title": "Scaling law of Sim2Real transfer learning in expanding computational materials databases for real-world predictions",
+      "authors": "Shunya Minami, Yoshihiro Hayashi, Stephen Wu, Kenji Fukumizu, Hiroki Sugisawa, Masashi Ishii, Isao Kuwajima, Kazuya Shiratori, Ryo Yoshida",
+      "journal": "npj Computational Materials",
       "year": 2025,
-      "volume": "7",
-      "issue": "2",
-      "start_page": "021001",
-      "end_page": "021001",
-      "doi": "10.1088/2515-7655/adba87",
-      "doi_url": "https://doi.org/10.1088/2515-7655/adba87",
-      "cited_by_count": 7,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4408848753",
-      "title": "Advances in theory and computational methods for next-generation thermoelectric materials",
-      "authors": "Junsoo Park, Alex M. Ganose, Yi Xia",
-      "journal": "Applied Physics Reviews",
-      "year": 2025,
-      "volume": "12",
+      "volume": "11",
       "issue": "1",
       "start_page": "",
       "end_page": "",
-      "doi": "10.1063/5.0241645",
-      "doi_url": "https://doi.org/10.1063/5.0241645",
-      "cited_by_count": 7,
+      "doi": "10.1038/s41524-025-01606-5",
+      "doi_url": "https://doi.org/10.1038/s41524-025-01606-5",
+      "cited_by_count": 8,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -705,6 +759,10 @@
       "doi": "10.1016/j.jallcom.2025.180661",
       "doi_url": "https://doi.org/10.1016/j.jallcom.2025.180661",
       "cited_by_count": 7,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -722,8 +780,55 @@
       "doi": "10.1016/j.solener.2025.113594",
       "doi_url": "https://doi.org/10.1016/j.solener.2025.113594",
       "cited_by_count": 7,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W4407960750",
+      "title": "Recent strides in artificial intelligence for predicting thermoelectric properties and materials discovery",
+      "authors": "Nikhil K. Barua, Sangjoon Lee, Anton O. Oliynyk, Holger Kleinke",
+      "journal": "Journal of Physics Energy",
+      "year": 2025,
+      "volume": "7",
+      "issue": "2",
+      "start_page": "021001",
+      "end_page": "021001",
+      "doi": "10.1088/2515-7655/adba87",
+      "doi_url": "https://doi.org/10.1088/2515-7655/adba87",
+      "cited_by_count": 7,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4408848753",
+      "title": "Advances in theory and computational methods for next-generation thermoelectric materials",
+      "authors": "Junsoo Park, Alex M. Ganose, Yi Xia",
+      "journal": "Applied Physics Reviews",
+      "year": 2025,
+      "volume": "12",
+      "issue": "1",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1063/5.0241645",
+      "doi_url": "https://doi.org/10.1063/5.0241645",
+      "cited_by_count": 7,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -739,6 +844,9 @@
       "doi": "10.1016/j.apenergy.2025.127182",
       "doi_url": "https://doi.org/10.1016/j.apenergy.2025.127182",
       "cited_by_count": 6,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -756,76 +864,12 @@
       "doi": "10.1002/smll.202412745",
       "doi_url": "https://doi.org/10.1002/smll.202412745",
       "cited_by_count": 6,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4411111661",
-      "title": "SeeBand: a highly efficient, interactive tool for analyzing electronic transport data",
-      "authors": "Michael Parzer, Alexander Riss, Fabian Garmroudi, Johannes de Boor, Takao Mori, E. Bauer",
-      "journal": "npj Computational Materials",
-      "year": 2025,
-      "volume": "11",
-      "issue": "1",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1038/s41524-025-01645-y",
-      "doi_url": "https://doi.org/10.1038/s41524-025-01645-y",
-      "cited_by_count": 5,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4406529046",
-      "title": "Thermoelectric Performance Predictions Combining Experiments with Multi‐Band Modelling",
-      "authors": "Bharti Agrawal, Titas Dasgupta",
-      "journal": "Advanced Theory and Simulations",
-      "year": 2025,
-      "volume": "8",
-      "issue": "5",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1002/adts.202401222",
-      "doi_url": "https://doi.org/10.1002/adts.202401222",
-      "cited_by_count": 5,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4416685042",
-      "title": "Advances in oxide thermoelectric materials: strategies, applications and beyond",
-      "authors": "Qing Wang, Zhifang Zhou, Chang Liu, Yunpeng Zheng, Zongmo Shi, Bin Wei, Wenyu Zhang, Ce‐Wen Nan, Yuanhua Lin",
-      "journal": "Chemical Society Reviews",
-      "year": 2025,
-      "volume": "55",
-      "issue": "1",
-      "start_page": "358",
-      "end_page": "399",
-      "doi": "10.1039/d5cs01078k",
-      "doi_url": "https://doi.org/10.1039/d5cs01078k",
-      "cited_by_count": 5,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4414301187",
-      "title": "Energy-GNoME: A living database of selected materials for energy applications",
-      "authors": "Paolo De Angelis, Giulio Barletta, Giovanni Trezza, Pietro Asinari, Eliodoro Chiavazzo",
-      "journal": "Energy and AI",
-      "year": 2025,
-      "volume": "22",
-      "issue": "",
-      "start_page": "100605",
-      "end_page": "100605",
-      "doi": "10.1016/j.egyai.2025.100605",
-      "doi_url": "https://doi.org/10.1016/j.egyai.2025.100605",
-      "cited_by_count": 5,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
       ]
     },
     {
@@ -841,6 +885,9 @@
       "doi": "10.1002/adfm.202513924",
       "doi_url": "https://doi.org/10.1002/adfm.202513924",
       "cited_by_count": 5,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -858,25 +905,95 @@
       "doi": "10.1063/5.0242991",
       "doi_url": "https://doi.org/10.1063/5.0242991",
       "cited_by_count": 5,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
     },
     {
-      "openalex_id": "W4411582657",
-      "title": "The role of lattice defects for structural, mechanical, and physical properties of HPT processed p-type skutterudite DD0.7Fe3CoSb12",
-      "authors": "Gerda Rogl, Vilma Buršíková, V.V. Romaka, Peter Cengeri, Jiřı́ Buršı́k, Erhard Schafler, M. Zehetbauer, P. Rogl",
-      "journal": "Acta Materialia",
+      "openalex_id": "W4416685042",
+      "title": "Advances in oxide thermoelectric materials: strategies, applications and beyond",
+      "authors": "Qing Wang, Zhifang Zhou, Chang Liu, Yunpeng Zheng, Zongmo Shi, Bin Wei, Wenyu Zhang, Ce‐Wen Nan, Yuanhua Lin",
+      "journal": "Chemical Society Reviews",
       "year": 2025,
-      "volume": "296",
-      "issue": "",
-      "start_page": "121290",
-      "end_page": "121290",
-      "doi": "10.1016/j.actamat.2025.121290",
-      "doi_url": "https://doi.org/10.1016/j.actamat.2025.121290",
-      "cited_by_count": 4,
+      "volume": "55",
+      "issue": "1",
+      "start_page": "358",
+      "end_page": "399",
+      "doi": "10.1039/d5cs01078k",
+      "doi_url": "https://doi.org/10.1039/d5cs01078k",
+      "cited_by_count": 5,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
-        "10.1016/j.isci.2023.106494"
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4414301187",
+      "title": "Energy-GNoME: A living database of selected materials for energy applications",
+      "authors": "Paolo De Angelis, Giulio Barletta, Giovanni Trezza, Pietro Asinari, Eliodoro Chiavazzo",
+      "journal": "Energy and AI",
+      "year": 2025,
+      "volume": "22",
+      "issue": "",
+      "start_page": "100605",
+      "end_page": "100605",
+      "doi": "10.1016/j.egyai.2025.100605",
+      "doi_url": "https://doi.org/10.1016/j.egyai.2025.100605",
+      "cited_by_count": 5,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4411111661",
+      "title": "SeeBand: a highly efficient, interactive tool for analyzing electronic transport data",
+      "authors": "Michael Parzer, Alexander Riss, Fabian Garmroudi, Johannes de Boor, Takao Mori, E. Bauer",
+      "journal": "npj Computational Materials",
+      "year": 2025,
+      "volume": "11",
+      "issue": "1",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1038/s41524-025-01645-y",
+      "doi_url": "https://doi.org/10.1038/s41524-025-01645-y",
+      "cited_by_count": 5,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4406529046",
+      "title": "Thermoelectric Performance Predictions Combining Experiments with Multi‐Band Modelling",
+      "authors": "Bharti Agrawal, Titas Dasgupta",
+      "journal": "Advanced Theory and Simulations",
+      "year": 2025,
+      "volume": "8",
+      "issue": "5",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1002/adts.202401222",
+      "doi_url": "https://doi.org/10.1002/adts.202401222",
+      "cited_by_count": 5,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -892,8 +1009,32 @@
       "doi": "10.1016/j.scriptamat.2025.116730",
       "doi_url": "https://doi.org/10.1016/j.scriptamat.2025.116730",
       "cited_by_count": 4,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41597-024-04043-z"
+      ]
+    },
+    {
+      "openalex_id": "W4411582657",
+      "title": "The role of lattice defects for structural, mechanical, and physical properties of HPT processed p-type skutterudite DD0.7Fe3CoSb12",
+      "authors": "Gerda Rogl, Vilma Buršíková, V.V. Romaka, Peter Cengeri, Jiřı́ Buršı́k, Erhard Schafler, M. Zehetbauer, P. Rogl",
+      "journal": "Acta Materialia",
+      "year": 2025,
+      "volume": "296",
+      "issue": "",
+      "start_page": "121290",
+      "end_page": "121290",
+      "doi": "10.1016/j.actamat.2025.121290",
+      "doi_url": "https://doi.org/10.1016/j.actamat.2025.121290",
+      "cited_by_count": 4,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494"
       ]
     },
     {
@@ -909,42 +1050,12 @@
       "doi": "10.1080/27660400.2024.2444866",
       "doi_url": "https://doi.org/10.1080/27660400.2024.2444866",
       "cited_by_count": 3,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41597-024-04043-z"
-      ]
-    },
-    {
-      "openalex_id": "W4410414984",
-      "title": "Rationally Design Thermoelectric Materials Based on Ingenious Machine Learning Methods",
-      "authors": "Yuqing Sun, Xiaorui Chen, Jianzhi Gao, Wenliang Zhu, Minghu Pan",
-      "journal": "Advanced Electronic Materials",
-      "year": 2025,
-      "volume": "11",
-      "issue": "14",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1002/aelm.202500210",
-      "doi_url": "https://doi.org/10.1002/aelm.202500210",
-      "cited_by_count": 3,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4413215563",
-      "title": "High throughput and machine learning approaches for thermoelectric materials",
-      "authors": "Eric S. Toberer, Andrew C. Novick, Elif Ertekin",
-      "journal": "MRS Bulletin",
-      "year": 2025,
-      "volume": "50",
-      "issue": "8",
-      "start_page": "966",
-      "end_page": "977",
-      "doi": "10.1557/s43577-025-00956-1",
-      "doi_url": "https://doi.org/10.1557/s43577-025-00956-1",
-      "cited_by_count": 3,
-      "cites_seeds": [
+        "10.1038/s41597-024-04043-z",
         "10.1080/14686996.2019.1603885"
       ]
     },
@@ -961,6 +1072,10 @@
       "doi": "10.3390/nano15050351",
       "doi_url": "https://doi.org/10.3390/nano15050351",
       "cited_by_count": 3,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -978,6 +1093,10 @@
       "doi": "10.26599/nr.2025.94907308",
       "doi_url": "https://doi.org/10.26599/nr.2025.94907308",
       "cited_by_count": 3,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -995,43 +1114,74 @@
       "doi": "10.1016/j.applthermaleng.2025.127417",
       "doi_url": "https://doi.org/10.1016/j.applthermaleng.2025.127417",
       "cited_by_count": 3,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
     },
     {
-      "openalex_id": "W4410831850",
-      "title": "Assessing data-driven predictions of band gap and electrical conductivity for transparent conducting materials",
-      "authors": "Federico Ottomano, John Y. Goulermas, Vladimir V. Gusev, Rahul Savani, Michael W. Gaultois, Troy D. Manning, Hai Lin, Teresa Partida Manzanera, Emma Poole, Matthew S. Dyer, John B. Claridge, Jonathan Alaria, Luke M. Daniels, Su Varma, D E Rimmer, Kevin D. Sanderson, Matthew J. Rosseinsky",
-      "journal": "Digital Discovery",
+      "openalex_id": "W4410414984",
+      "title": "Rationally Design Thermoelectric Materials Based on Ingenious Machine Learning Methods",
+      "authors": "Yuqing Sun, Xiaorui Chen, Jianzhi Gao, Wenliang Zhu, Minghu Pan",
+      "journal": "Advanced Electronic Materials",
       "year": 2025,
-      "volume": "4",
-      "issue": "7",
-      "start_page": "1794",
-      "end_page": "1811",
-      "doi": "10.1039/d5dd00010f",
-      "doi_url": "https://doi.org/10.1039/d5dd00010f",
-      "cited_by_count": 2,
+      "volume": "11",
+      "issue": "14",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1002/aelm.202500210",
+      "doi_url": "https://doi.org/10.1002/aelm.202500210",
+      "cited_by_count": 3,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
-      "openalex_id": "W4408649919",
-      "title": "Unsupervised Machine Learning-Based Image Recognition of Raw Infrared Spectra: Toward Chemist-like Chemical Structural Classification and Beyond Numerical Data",
-      "authors": "Kentaro Fuku, Takefumi Yoshida",
-      "journal": "Journal of Chemical Information and Modeling",
+      "openalex_id": "W4413215563",
+      "title": "High throughput and machine learning approaches for thermoelectric materials",
+      "authors": "Eric S. Toberer, Andrew C. Novick, Elif Ertekin",
+      "journal": "MRS Bulletin",
       "year": 2025,
-      "volume": "65",
-      "issue": "7",
-      "start_page": "3176",
-      "end_page": "3185",
-      "doi": "10.1021/acs.jcim.4c01644",
-      "doi_url": "https://doi.org/10.1021/acs.jcim.4c01644",
-      "cited_by_count": 2,
+      "volume": "50",
+      "issue": "8",
+      "start_page": "966",
+      "end_page": "977",
+      "doi": "10.1557/s43577-025-00956-1",
+      "doi_url": "https://doi.org/10.1557/s43577-025-00956-1",
+      "cited_by_count": 3,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4414727061",
+      "title": "Metallography of Quasicrystals in Al-Alloys",
+      "authors": "Tonica Bončina, Franc Zupanič",
+      "journal": "Materials",
+      "year": 2025,
+      "volume": "18",
+      "issue": "19",
+      "start_page": "4575",
+      "end_page": "4575",
+      "doi": "10.3390/ma18194575",
+      "doi_url": "https://doi.org/10.3390/ma18194575",
+      "cited_by_count": 2,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41597-024-04043-z"
       ]
     },
     {
@@ -1047,6 +1197,10 @@
       "doi": "10.1016/j.est.2025.117238",
       "doi_url": "https://doi.org/10.1016/j.est.2025.117238",
       "cited_by_count": 2,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -1064,95 +1218,115 @@
       "doi": "10.1021/acsaem.5c02223",
       "doi_url": "https://doi.org/10.1021/acsaem.5c02223",
       "cited_by_count": 2,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
     },
     {
-      "openalex_id": "W4414727061",
-      "title": "Metallography of Quasicrystals in Al-Alloys",
-      "authors": "Tonica Bončina, Franc Zupanič",
-      "journal": "Materials",
+      "openalex_id": "W4410831850",
+      "title": "Assessing data-driven predictions of band gap and electrical conductivity for transparent conducting materials",
+      "authors": "Federico Ottomano, John Y. Goulermas, Vladimir V. Gusev, Rahul Savani, Michael W. Gaultois, Troy D. Manning, Hai Lin, Teresa Partida Manzanera, Emma Poole, Matthew S. Dyer, John B. Claridge, Jonathan Alaria, Luke M. Daniels, Su Varma, D E Rimmer, Kevin D. Sanderson, Matthew J. Rosseinsky",
+      "journal": "Digital Discovery",
       "year": 2025,
-      "volume": "18",
-      "issue": "19",
-      "start_page": "4575",
-      "end_page": "4575",
-      "doi": "10.3390/ma18194575",
-      "doi_url": "https://doi.org/10.3390/ma18194575",
+      "volume": "4",
+      "issue": "7",
+      "start_page": "1794",
+      "end_page": "1811",
+      "doi": "10.1039/d5dd00010f",
+      "doi_url": "https://doi.org/10.1039/d5dd00010f",
       "cited_by_count": 2,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1038/s41597-024-04043-z"
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
-      "openalex_id": "W4412687408",
-      "title": "A review of machine learning approaches for the discovery of thermoelectric materials",
-      "authors": "Övgü Ceyda Yelgel, Celal Yelgel",
-      "journal": "Advances in Physics X",
+      "openalex_id": "W4408649919",
+      "title": "Unsupervised Machine Learning-Based Image Recognition of Raw Infrared Spectra: Toward Chemist-like Chemical Structural Classification and Beyond Numerical Data",
+      "authors": "Kentaro Fuku, Takefumi Yoshida",
+      "journal": "Journal of Chemical Information and Modeling",
       "year": 2025,
-      "volume": "10",
-      "issue": "1",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1080/23746149.2025.2536269",
-      "doi_url": "https://doi.org/10.1080/23746149.2025.2536269",
-      "cited_by_count": 1,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4412701202",
-      "title": "A materials map integrating experimental and computational data via graph-based machine learning for enhanced materials discovery",
-      "authors": "Yusuke Hashimoto, Xue Jia, Hao Li, Takaaki Tomai",
-      "journal": "APL Machine Learning",
-      "year": 2025,
-      "volume": "3",
-      "issue": "3",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1063/5.0274812",
-      "doi_url": "https://doi.org/10.1063/5.0274812",
-      "cited_by_count": 1,
+      "volume": "65",
+      "issue": "7",
+      "start_page": "3176",
+      "end_page": "3185",
+      "doi": "10.1021/acs.jcim.4c01644",
+      "doi_url": "https://doi.org/10.1021/acs.jcim.4c01644",
+      "cited_by_count": 2,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
     },
     {
-      "openalex_id": "W4414536036",
-      "title": "Explainable Recommendation Engines to Predict Complex Intermetallics: Synthesis and Characterization of Gd<sub>10</sub>RuCd<sub>3</sub>, a Neutron Absorption Material",
-      "authors": "Brook Xhabrahimi, Emil I. Jaffal, Danila Shiryaev, Nikhil K. Barua, Madison Donohoe, Natalia Pozdnyakova, Mariam Ismail, Balaranjan Selvaratnam, Ehsan Niknam, Holger Kleinke, Anton O. Oliynyk",
-      "journal": "Journal of the American Chemical Society",
+      "openalex_id": "",
+      "title": "Mathematical and simulation modeling of photovoltaic systems utilizing thermoelectric modules for effective thermal management",
+      "authors": "Muhammad Sohaib Tahir, Xue Dong, Muhammad Mansoor Khan",
+      "journal": "Results in Engineering",
       "year": 2025,
-      "volume": "147",
-      "issue": "40",
-      "start_page": "36589",
-      "end_page": "36603",
-      "doi": "10.1021/jacs.5c11646",
-      "doi_url": "https://doi.org/10.1021/jacs.5c11646",
-      "cited_by_count": 1,
+      "volume": "27",
+      "issue": "",
+      "start_page": "106344",
+      "end_page": "",
+      "doi": "10.1016/j.rineng.2025.106344",
+      "doi_url": "https://doi.org/10.1016/j.rineng.2025.106344",
+      "cited_by_count": 2,
+      "sources": [
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4414997758",
-      "title": "Active Learning‐Guided Accelerated Discovery of Ultra‐Efficient High‐Entropy Thermoelectrics",
-      "authors": "Hanhwi Jang, Wooseok Lee, Hwa‐Jung Kim, Sohyang Cha, Hosun Shin, Won Bo Lee, Min‐Wook Oh, Yeon Sik Jung, YongJoo Kim",
-      "journal": "Advanced Materials",
-      "year": 2025,
-      "volume": "38",
-      "issue": "10",
-      "start_page": "e15054",
-      "end_page": "e15054",
-      "doi": "10.1002/adma.202515054",
-      "doi_url": "https://doi.org/10.1002/adma.202515054",
-      "cited_by_count": 1,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
         "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "",
+      "title": "Multi-factor design of radioisotope thermoelectric generators: an extensive review",
+      "authors": "Yongjia Wu, Zhaojun Chen, Peng Zhang, Wenqian Liu, Dongcheng Liu, Tingzhen Ming",
+      "journal": "Applied Thermal Engineering",
+      "year": 2025,
+      "volume": "280",
+      "issue": "",
+      "start_page": "128045",
+      "end_page": "",
+      "doi": "10.1016/j.applthermaleng.2025.128045",
+      "doi_url": "https://doi.org/10.1016/j.applthermaleng.2025.128045",
+      "cited_by_count": 2,
+      "sources": [
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4409701938",
+      "title": "A Data-Driven Framework for Accelerated Modeling of Stacking Fault Energy from Density of States Spectra",
+      "authors": "Md Tohidul Islam, Scott Broderick",
+      "journal": "Crystals",
+      "year": 2025,
+      "volume": "15",
+      "issue": "5",
+      "start_page": "390",
+      "end_page": "390",
+      "doi": "10.3390/cryst15050390",
+      "doi_url": "https://doi.org/10.3390/cryst15050390",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/27660400.2025.2485018"
       ]
     },
     {
@@ -1168,94 +1342,12 @@
       "doi": "10.1016/j.mtphys.2025.101948",
       "doi_url": "https://doi.org/10.1016/j.mtphys.2025.101948",
       "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885",
         "10.1080/27660400.2025.2506976"
-      ]
-    },
-    {
-      "openalex_id": "W4413162541",
-      "title": "Innovation in thermoelectric materials: From fundamental physics to practical applications",
-      "authors": "Sepideh Akhbarifar, Mona Zebarjadi",
-      "journal": "MRS Bulletin",
-      "year": 2025,
-      "volume": "50",
-      "issue": "8",
-      "start_page": "894",
-      "end_page": "901",
-      "doi": "10.1557/s43577-025-00949-0",
-      "doi_url": "https://doi.org/10.1557/s43577-025-00949-0",
-      "cited_by_count": 1,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4414173691",
-      "title": "MACHINE LEARNING IN NANOSCALE THERMAL TRANSPORT",
-      "authors": "Yuhan Liu, Sobin Alosious, Jiahang Zhou, Meng Jiang, Tengfei Luo",
-      "journal": "Annual Reviews of Heat Transfer",
-      "year": 2025,
-      "volume": "28",
-      "issue": "1",
-      "start_page": "173",
-      "end_page": "214",
-      "doi": "10.1615/annualrevheattransfer.2025060156",
-      "doi_url": "https://doi.org/10.1615/annualrevheattransfer.2025060156",
-      "cited_by_count": 1,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4411131164",
-      "title": "Combined Machine Learning and Experimental Study for the Zintl Phase Thermoelectric Ba <sub> 1− <i>x</i> </sub> Sr <sub> <i>x</i> </sub> Zn <sub> 2− <i>y</i> </sub> Cd <sub> <i>y</i> </sub> Sb <sub>2</sub> System",
-      "authors": "Junsu Lee, Min Kyoung Kim, Aziz Ahmed, Yurij Mozharivskyj, Tae‐Soo You",
-      "journal": "Zeitschrift für anorganische und allgemeine Chemie",
-      "year": 2025,
-      "volume": "651",
-      "issue": "12",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1002/zaac.202500055",
-      "doi_url": "https://doi.org/10.1002/zaac.202500055",
-      "cited_by_count": 1,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4413091972",
-      "title": "Cross-modality material embedding loss for transferring knowledge between heterogeneous material descriptors",
-      "authors": "Gyoung S. Na",
-      "journal": "npj Computational Materials",
-      "year": 2025,
-      "volume": "11",
-      "issue": "1",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1038/s41524-025-01723-1",
-      "doi_url": "https://doi.org/10.1038/s41524-025-01723-1",
-      "cited_by_count": 1,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4412429666",
-      "title": "Explainable machine learning-guided design of high-performance thermoelectric materials",
-      "authors": "Song Li, Songli Dai, Shiyu Xiao, Zhi Yu, Heng Wang, Zean Tian",
-      "journal": "Journal of Alloys and Compounds",
-      "year": 2025,
-      "volume": "1037",
-      "issue": "",
-      "start_page": "182164",
-      "end_page": "182164",
-      "doi": "10.1016/j.jallcom.2025.182164",
-      "doi_url": "https://doi.org/10.1016/j.jallcom.2025.182164",
-      "cited_by_count": 1,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
       ]
     },
     {
@@ -1271,6 +1363,10 @@
       "doi": "10.1016/j.ceramint.2025.03.066",
       "doi_url": "https://doi.org/10.1016/j.ceramint.2025.03.066",
       "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -1288,6 +1384,10 @@
       "doi": "10.3390/ma18132923",
       "doi_url": "https://doi.org/10.3390/ma18132923",
       "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -1305,8 +1405,32 @@
       "doi": "10.1016/j.physe.2025.116383",
       "doi_url": "https://doi.org/10.1016/j.physe.2025.116383",
       "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W4414997758",
+      "title": "Active Learning‐Guided Accelerated Discovery of Ultra‐Efficient High‐Entropy Thermoelectrics",
+      "authors": "Hanhwi Jang, Wooseok Lee, Hwa‐Jung Kim, Sohyang Cha, Hosun Shin, Won Bo Lee, Min‐Wook Oh, Yeon Sik Jung, YongJoo Kim",
+      "journal": "Advanced Materials",
+      "year": 2025,
+      "volume": "38",
+      "issue": "10",
+      "start_page": "e15054",
+      "end_page": "e15054",
+      "doi": "10.1002/adma.202515054",
+      "doi_url": "https://doi.org/10.1002/adma.202515054",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494",
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -1322,6 +1446,9 @@
       "doi": "10.1038/s41560-025-01908-4",
       "doi_url": "https://doi.org/10.1038/s41560-025-01908-4",
       "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -1339,6 +1466,10 @@
       "doi": "10.1063/5.0247466",
       "doi_url": "https://doi.org/10.1063/5.0247466",
       "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -1356,6 +1487,10 @@
       "doi": "10.20517/energymater.2024.311",
       "doi_url": "https://doi.org/10.20517/energymater.2024.311",
       "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -1373,267 +1508,178 @@
       "doi": "10.1109/jsen.2025.3595487",
       "doi_url": "https://doi.org/10.1109/jsen.2025.3595487",
       "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
     },
     {
-      "openalex_id": "W4409701938",
-      "title": "A Data-Driven Framework for Accelerated Modeling of Stacking Fault Energy from Density of States Spectra",
-      "authors": "Md Tohidul Islam, Scott Broderick",
-      "journal": "Crystals",
+      "openalex_id": "W4414173691",
+      "title": "MACHINE LEARNING IN NANOSCALE THERMAL TRANSPORT",
+      "authors": "Yuhan Liu, Sobin Alosious, Jiahang Zhou, Meng Jiang, Tengfei Luo",
+      "journal": "Annual Reviews of Heat Transfer",
       "year": 2025,
-      "volume": "15",
-      "issue": "5",
-      "start_page": "390",
-      "end_page": "390",
-      "doi": "10.3390/cryst15050390",
-      "doi_url": "https://doi.org/10.3390/cryst15050390",
+      "volume": "28",
+      "issue": "1",
+      "start_page": "173",
+      "end_page": "214",
+      "doi": "10.1615/annualrevheattransfer.2025060156",
+      "doi_url": "https://doi.org/10.1615/annualrevheattransfer.2025060156",
       "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
-        "10.1080/27660400.2025.2485018"
-      ]
-    },
-    {
-      "openalex_id": "W4415374521",
-      "title": "Machine Learning Predictions of Thermopower for Thermoelectric Material Screening",
-      "authors": "Nikhil K. Barua, Holger Kleinke",
-      "journal": "ACS Applied Energy Materials",
-      "year": 2025,
-      "volume": "8",
-      "issue": "21",
-      "start_page": "16110",
-      "end_page": "16121",
-      "doi": "10.1021/acsaem.5c02609",
-      "doi_url": "https://doi.org/10.1021/acsaem.5c02609",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
         "10.1038/s41524-022-00897-2"
       ]
     },
     {
-      "openalex_id": "W4415636081",
-      "title": "Uncertainty analysis of microscopic parameters obtained from the single parabolic band modeling of thermoelectric materials",
-      "authors": "Harshita Naithani, Eckhard Müller, Johannes de Boor",
-      "journal": "Physical Review Applied",
+      "openalex_id": "W4411131164",
+      "title": "Combined Machine Learning and Experimental Study for the Zintl Phase Thermoelectric Ba <sub> 1− <i>x</i> </sub> Sr <sub> <i>x</i> </sub> Zn <sub> 2− <i>y</i> </sub> Cd <sub> <i>y</i> </sub> Sb <sub>2</sub> System",
+      "authors": "Junsu Lee, Min Kyoung Kim, Aziz Ahmed, Yurij Mozharivskyj, Tae‐Soo You",
+      "journal": "Zeitschrift für anorganische und allgemeine Chemie",
       "year": 2025,
-      "volume": "24",
-      "issue": "4",
+      "volume": "651",
+      "issue": "12",
       "start_page": "",
       "end_page": "",
-      "doi": "10.1103/lqtf-rvlm",
-      "doi_url": "https://doi.org/10.1103/lqtf-rvlm",
-      "cited_by_count": 0,
+      "doi": "10.1002/zaac.202500055",
+      "doi_url": "https://doi.org/10.1002/zaac.202500055",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
+        "10.1038/s41524-022-00897-2"
       ]
     },
     {
-      "openalex_id": "W4416076180",
-      "title": "Reference compositions for bismuth telluride thermoelectric materials for low-temperature power generation",
-      "authors": "Nirma Kumari, Jaywan Chung, Seunghyun Oh, Jeongin Jang, Jongho Park, Ji Hui Son, SuDong Park, Byungki Ryu",
-      "journal": "Science and Technology of Advanced Materials Methods",
+      "openalex_id": "W4412687408",
+      "title": "A review of machine learning approaches for the discovery of thermoelectric materials",
+      "authors": "Övgü Ceyda Yelgel, Celal Yelgel",
+      "journal": "Advances in Physics X",
       "year": 2025,
-      "volume": "5",
+      "volume": "10",
       "issue": "1",
       "start_page": "",
       "end_page": "",
-      "doi": "10.1080/27660400.2025.2586299",
-      "doi_url": "https://doi.org/10.1080/27660400.2025.2586299",
-      "cited_by_count": 0,
+      "doi": "10.1080/23746149.2025.2536269",
+      "doi_url": "https://doi.org/10.1080/23746149.2025.2536269",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1016/j.isci.2023.106494",
-        "10.1080/27660400.2025.2506976"
-      ]
-    },
-    {
-      "openalex_id": "W4417187428",
-      "title": "Optimizing data extraction from materials science literature: a study of tools using large language models",
-      "authors": "Wenkai Ning, Musen Li, Jeffrey R. Reimers, Rika Kobayashi",
-      "journal": "Digital Discovery",
-      "year": 2025,
-      "volume": "5",
-      "issue": "2",
-      "start_page": "698",
-      "end_page": "715",
-      "doi": "10.1039/d5dd00482a",
-      "doi_url": "https://doi.org/10.1039/d5dd00482a",
-      "cited_by_count": 0,
-      "cites_seeds": [
+        "10.1038/s41524-022-00897-2",
         "10.1080/14686996.2019.1603885"
       ]
     },
     {
-      "openalex_id": "W7116388158",
-      "title": "Machine learning–driven thermoelectric materials: Review on prediction, optimization, and discovery",
-      "authors": "Xinmei Zhang, Xingxing Wang, Wei Wang, Zhipeng Yuan, Jin Peng, J M Shi, Peng He, Yunfeng Chang",
+      "openalex_id": "W4413091972",
+      "title": "Cross-modality material embedding loss for transferring knowledge between heterogeneous material descriptors",
+      "authors": "Gyoung S. Na",
+      "journal": "npj Computational Materials",
+      "year": 2025,
+      "volume": "11",
+      "issue": "1",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1038/s41524-025-01723-1",
+      "doi_url": "https://doi.org/10.1038/s41524-025-01723-1",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4412429666",
+      "title": "Explainable machine learning-guided design of high-performance thermoelectric materials",
+      "authors": "Song Li, Songli Dai, Shiyu Xiao, Zhi Yu, Heng Wang, Zean Tian",
       "journal": "Journal of Alloys and Compounds",
       "year": 2025,
-      "volume": "1050",
+      "volume": "1037",
       "issue": "",
-      "start_page": "185711",
-      "end_page": "185711",
-      "doi": "10.1016/j.jallcom.2025.185711",
-      "doi_url": "https://doi.org/10.1016/j.jallcom.2025.185711",
-      "cited_by_count": 0,
+      "start_page": "182164",
+      "end_page": "182164",
+      "doi": "10.1016/j.jallcom.2025.182164",
+      "doi_url": "https://doi.org/10.1016/j.jallcom.2025.182164",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
         "10.1038/s41524-022-00897-2"
       ]
     },
     {
-      "openalex_id": "W4406074379",
-      "title": "Few-Shot Learning of Initial Coulombic Efficiency Using Adaptive Combination Kernel Deep Gaussian Process Regression",
-      "authors": "Hai Guo, Hongcheng Zhang, Xiaofeng Lv, Xiaoxu Liu, Tianyi Ji",
-      "journal": "SSRN Electronic Journal",
+      "openalex_id": "W4412701202",
+      "title": "A materials map integrating experimental and computational data via graph-based machine learning for enhanced materials discovery",
+      "authors": "Yusuke Hashimoto, Xue Jia, Hao Li, Takaaki Tomai",
+      "journal": "APL Machine Learning",
       "year": 2025,
-      "volume": "",
-      "issue": "",
+      "volume": "3",
+      "issue": "3",
       "start_page": "",
       "end_page": "",
-      "doi": "10.2139/ssrn.5082038",
-      "doi_url": "https://doi.org/10.2139/ssrn.5082038",
-      "cited_by_count": 0,
+      "doi": "10.1063/5.0274812",
+      "doi_url": "https://doi.org/10.1063/5.0274812",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
-      "openalex_id": "W4408344814",
-      "title": "Ab Initio Electronic and Thermoelectric Calculations of Atomically Thick Nanofilms",
-      "authors": "Rajnarayan De, Swarupananda Pradhan",
-      "journal": "physica status solidi (b)",
+      "openalex_id": "W4414536036",
+      "title": "Explainable Recommendation Engines to Predict Complex Intermetallics: Synthesis and Characterization of Gd<sub>10</sub>RuCd<sub>3</sub>, a Neutron Absorption Material",
+      "authors": "Brook Xhabrahimi, Emil I. Jaffal, Danila Shiryaev, Nikhil K. Barua, Madison Donohoe, Natalia Pozdnyakova, Mariam Ismail, Balaranjan Selvaratnam, Ehsan Niknam, Holger Kleinke, Anton O. Oliynyk",
+      "journal": "Journal of the American Chemical Society",
       "year": 2025,
-      "volume": "262",
-      "issue": "6",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1002/pssb.202400537",
-      "doi_url": "https://doi.org/10.1002/pssb.202400537",
-      "cited_by_count": 0,
+      "volume": "147",
+      "issue": "40",
+      "start_page": "36589",
+      "end_page": "36603",
+      "doi": "10.1021/jacs.5c11646",
+      "doi_url": "https://doi.org/10.1021/jacs.5c11646",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
-      "openalex_id": "W4416377888",
-      "title": "Exploring materials data through collaboration: 2024 KRICT ChemDX Hackathon",
-      "authors": "Su‐Hyun Yoo, Andre K. Y. Low, Jose Recatala‐Gomez, Harikrishna Sahu, Chiho Kim, Joonyoung F. Joung, Hoje Chun, Katerina A. Christofidou, Joshua Berry, Michail Minotakis, Kisung Kang, K. Kim, Gaheun Shin, Hyunwoo Jang, Sanghyuk Lee, Minkyu Park, B. S. Kim, Kihyun Shin, Jungho Shin, Aloysius Soon, Joshua Schrier, Woosun Jang",
-      "journal": "Journal of Materials Informatics",
+      "openalex_id": "W4413162541",
+      "title": "Innovation in thermoelectric materials: From fundamental physics to practical applications",
+      "authors": "Sepideh Akhbarifar, Mona Zebarjadi",
+      "journal": "MRS Bulletin",
       "year": 2025,
-      "volume": "5",
-      "issue": "4",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.20517/jmi.2025.65",
-      "doi_url": "https://doi.org/10.20517/jmi.2025.65",
-      "cited_by_count": 0,
+      "volume": "50",
+      "issue": "8",
+      "start_page": "894",
+      "end_page": "901",
+      "doi": "10.1557/s43577-025-00949-0",
+      "doi_url": "https://doi.org/10.1557/s43577-025-00949-0",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4417032168",
-      "title": "Pyroelectric and thermoelectric biomaterials and nanomedicine",
-      "authors": "Shuangshuang Wang, Xiaoshuang Liu, Wei Feng, Xinyue Dai, Yu Chen",
-      "journal": "Coordination Chemistry Reviews",
-      "year": 2025,
-      "volume": "551",
-      "issue": "",
-      "start_page": "217442",
-      "end_page": "217442",
-      "doi": "10.1016/j.ccr.2025.217442",
-      "doi_url": "https://doi.org/10.1016/j.ccr.2025.217442",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4417527639",
-      "title": "An Interpretable Machine Learning Workflow for Evaluating and Analyzing the Performance of Thermoelectric Materials",
-      "authors": "Mingji Liu, Wenzhao Li",
-      "journal": "Journal of Materials Engineering and Performance",
-      "year": 2025,
-      "volume": "35",
-      "issue": "15",
-      "start_page": "14765",
-      "end_page": "14780",
-      "doi": "10.1007/s11665-025-12690-5",
-      "doi_url": "https://doi.org/10.1007/s11665-025-12690-5",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W7134903843",
-      "title": "Conditional Inverse Design Solvers for Autonomous Manufacturing Systems with System Constraints",
-      "authors": "Gyoung S. Na",
-      "journal": "",
-      "year": 2025,
-      "volume": "",
-      "issue": "",
-      "start_page": "51",
-      "end_page": "58",
-      "doi": "10.1109/aiot66900.2025.00019",
-      "doi_url": "https://doi.org/10.1109/aiot66900.2025.00019",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4413894995",
-      "title": "Excellent Thermoelectric Performance of Monolayer ZrTe <sub>5</sub> and Its Near‐Room Temperature Modulation by Uniaxial Strain",
-      "authors": "Rongman Gao, Liangyu Li, Zhenyu Ding, Zhiwei Wang, Miao Li, Yuqiang Liu, Gang Wu, Xiaoping Yang",
-      "journal": "Advanced Quantum Technologies",
-      "year": 2025,
-      "volume": "8",
-      "issue": "11",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1002/qute.202500187",
-      "doi_url": "https://doi.org/10.1002/qute.202500187",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1016/j.isci.2023.106494"
-      ]
-    },
-    {
-      "openalex_id": "W4415671180",
-      "title": "Study the characterization and thermoelectrical properties of the polyvinyl alcohol / Polyaniline polymer blend thick films",
-      "authors": "M. Morad, Magdy S. Abo Ghazala, M.G. El-Shaarawy, M. E. Gouda, T. Y. Elrasasi",
-      "journal": "Discover Nano",
-      "year": 2025,
-      "volume": "20",
-      "issue": "1",
-      "start_page": "195",
-      "end_page": "195",
-      "doi": "10.1186/s11671-025-04267-x",
-      "doi_url": "https://doi.org/10.1186/s11671-025-04267-x",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1016/j.isci.2023.106494"
-      ]
-    },
-    {
-      "openalex_id": "W4412109439",
-      "title": "Automatic Determination of Quasicrystalline Patterns from Microscopy Images",
-      "authors": "Tano Kim Kender, Marco Corrias, Cesare Franchini",
-      "journal": "Advanced Intelligent Discovery",
-      "year": 2025,
-      "volume": "",
-      "issue": "",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1002/aidi.202500043",
-      "doi_url": "https://doi.org/10.1002/aidi.202500043",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1038/s41597-024-04043-z"
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -1649,6 +1695,9 @@
       "doi": "10.1016/j.ssc.2025.116306",
       "doi_url": "https://doi.org/10.1016/j.ssc.2025.116306",
       "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1080/27660400.2025.2485018"
       ]
@@ -1666,8 +1715,299 @@
       "doi": "10.1007/s12598-025-03617-z",
       "doi_url": "https://doi.org/10.1007/s12598-025-03617-z",
       "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/27660400.2025.2506976"
+      ]
+    },
+    {
+      "openalex_id": "W4416076180",
+      "title": "Reference compositions for bismuth telluride thermoelectric materials for low-temperature power generation",
+      "authors": "Nirma Kumari, Jaywan Chung, Seunghyun Oh, Jeongin Jang, Jongho Park, Ji Hui Son, SuDong Park, Byungki Ryu",
+      "journal": "Science and Technology of Advanced Materials Methods",
+      "year": 2025,
+      "volume": "5",
+      "issue": "1",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1080/27660400.2025.2586299",
+      "doi_url": "https://doi.org/10.1080/27660400.2025.2586299",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494",
+        "10.1080/14686996.2019.1603885",
+        "10.1080/27660400.2025.2506976"
+      ]
+    },
+    {
+      "openalex_id": "W4412109439",
+      "title": "Automatic Determination of Quasicrystalline Patterns from Microscopy Images",
+      "authors": "Tano Kim Kender, Marco Corrias, Cesare Franchini",
+      "journal": "Advanced Intelligent Discovery",
+      "year": 2025,
+      "volume": "",
+      "issue": "",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1002/aidi.202500043",
+      "doi_url": "https://doi.org/10.1002/aidi.202500043",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1038/s41597-024-04043-z"
+      ]
+    },
+    {
+      "openalex_id": "W4413894995",
+      "title": "Excellent Thermoelectric Performance of Monolayer ZrTe <sub>5</sub> and Its Near‐Room Temperature Modulation by Uniaxial Strain",
+      "authors": "Rongman Gao, Liangyu Li, Zhenyu Ding, Zhiwei Wang, Miao Li, Yuqiang Liu, Gang Wu, Xiaoping Yang",
+      "journal": "Advanced Quantum Technologies",
+      "year": 2025,
+      "volume": "8",
+      "issue": "11",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1002/qute.202500187",
+      "doi_url": "https://doi.org/10.1002/qute.202500187",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W4415671180",
+      "title": "Study the characterization and thermoelectrical properties of the polyvinyl alcohol / Polyaniline polymer blend thick films",
+      "authors": "M. Morad, Magdy S. Abo Ghazala, M.G. El-Shaarawy, M. E. Gouda, T. Y. Elrasasi",
+      "journal": "Discover Nano",
+      "year": 2025,
+      "volume": "20",
+      "issue": "1",
+      "start_page": "195",
+      "end_page": "195",
+      "doi": "10.1186/s11671-025-04267-x",
+      "doi_url": "https://doi.org/10.1186/s11671-025-04267-x",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W4406074379",
+      "title": "Few-Shot Learning of Initial Coulombic Efficiency Using Adaptive Combination Kernel Deep Gaussian Process Regression",
+      "authors": "Hai Guo, Hongcheng Zhang, Xiaofeng Lv, Xiaoxu Liu, Tianyi Ji",
+      "journal": "SSRN Electronic Journal",
+      "year": 2025,
+      "volume": "",
+      "issue": "",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.2139/ssrn.5082038",
+      "doi_url": "https://doi.org/10.2139/ssrn.5082038",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4408344814",
+      "title": "Ab Initio Electronic and Thermoelectric Calculations of Atomically Thick Nanofilms",
+      "authors": "Rajnarayan De, Swarupananda Pradhan",
+      "journal": "physica status solidi (b)",
+      "year": 2025,
+      "volume": "262",
+      "issue": "6",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1002/pssb.202400537",
+      "doi_url": "https://doi.org/10.1002/pssb.202400537",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4415374521",
+      "title": "Machine Learning Predictions of Thermopower for Thermoelectric Material Screening",
+      "authors": "Nikhil K. Barua, Holger Kleinke",
+      "journal": "ACS Applied Energy Materials",
+      "year": 2025,
+      "volume": "8",
+      "issue": "21",
+      "start_page": "16110",
+      "end_page": "16121",
+      "doi": "10.1021/acsaem.5c02609",
+      "doi_url": "https://doi.org/10.1021/acsaem.5c02609",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4416377888",
+      "title": "Exploring materials data through collaboration: 2024 KRICT ChemDX Hackathon",
+      "authors": "Su‐Hyun Yoo, Andre K. Y. Low, Jose Recatala‐Gomez, Harikrishna Sahu, Chiho Kim, Joonyoung F. Joung, Hoje Chun, Katerina A. Christofidou, Joshua Berry, Michail Minotakis, Kisung Kang, K. Kim, Gaheun Shin, Hyunwoo Jang, Sanghyuk Lee, Minkyu Park, B. S. Kim, Kihyun Shin, Jungho Shin, Aloysius Soon, Joshua Schrier, Woosun Jang",
+      "journal": "Journal of Materials Informatics",
+      "year": 2025,
+      "volume": "5",
+      "issue": "4",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.20517/jmi.2025.65",
+      "doi_url": "https://doi.org/10.20517/jmi.2025.65",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4417032168",
+      "title": "Pyroelectric and thermoelectric biomaterials and nanomedicine",
+      "authors": "Shuangshuang Wang, Xiaoshuang Liu, Wei Feng, Xinyue Dai, Yu Chen",
+      "journal": "Coordination Chemistry Reviews",
+      "year": 2025,
+      "volume": "551",
+      "issue": "",
+      "start_page": "217442",
+      "end_page": "217442",
+      "doi": "10.1016/j.ccr.2025.217442",
+      "doi_url": "https://doi.org/10.1016/j.ccr.2025.217442",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4417527639",
+      "title": "An Interpretable Machine Learning Workflow for Evaluating and Analyzing the Performance of Thermoelectric Materials",
+      "authors": "Mingji Liu, Wenzhao Li",
+      "journal": "Journal of Materials Engineering and Performance",
+      "year": 2025,
+      "volume": "35",
+      "issue": "15",
+      "start_page": "14765",
+      "end_page": "14780",
+      "doi": "10.1007/s11665-025-12690-5",
+      "doi_url": "https://doi.org/10.1007/s11665-025-12690-5",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W7116388158",
+      "title": "Machine learning–driven thermoelectric materials: Review on prediction, optimization, and discovery",
+      "authors": "Xinmei Zhang, Xingxing Wang, Wei Wang, Zhipeng Yuan, Jin Peng, J M Shi, Peng He, Yunfeng Chang",
+      "journal": "Journal of Alloys and Compounds",
+      "year": 2025,
+      "volume": "1050",
+      "issue": "",
+      "start_page": "185711",
+      "end_page": "185711",
+      "doi": "10.1016/j.jallcom.2025.185711",
+      "doi_url": "https://doi.org/10.1016/j.jallcom.2025.185711",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W7134903843",
+      "title": "Conditional Inverse Design Solvers for Autonomous Manufacturing Systems with System Constraints",
+      "authors": "Gyoung S. Na",
+      "journal": "",
+      "year": 2025,
+      "volume": "",
+      "issue": "",
+      "start_page": "51",
+      "end_page": "58",
+      "doi": "10.1109/aiot66900.2025.00019",
+      "doi_url": "https://doi.org/10.1109/aiot66900.2025.00019",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4415636081",
+      "title": "Uncertainty analysis of microscopic parameters obtained from the single parabolic band modeling of thermoelectric materials",
+      "authors": "Harshita Naithani, Eckhard Müller, Johannes de Boor",
+      "journal": "Physical Review Applied",
+      "year": 2025,
+      "volume": "24",
+      "issue": "4",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1103/lqtf-rvlm",
+      "doi_url": "https://doi.org/10.1103/lqtf-rvlm",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4417187428",
+      "title": "Optimizing data extraction from materials science literature: a study of tools using large language models",
+      "authors": "Wenkai Ning, Musen Li, Jeffrey R. Reimers, Rika Kobayashi",
+      "journal": "Digital Discovery",
+      "year": 2025,
+      "volume": "5",
+      "issue": "2",
+      "start_page": "698",
+      "end_page": "715",
+      "doi": "10.1039/d5dd00482a",
+      "doi_url": "https://doi.org/10.1039/d5dd00482a",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -1683,6 +2023,10 @@
       "doi": "10.1016/j.mset.2024.06.002",
       "doi_url": "https://doi.org/10.1016/j.mset.2024.06.002",
       "cited_by_count": 38,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -1700,6 +2044,10 @@
       "doi": "10.1038/s41524-024-01231-8",
       "doi_url": "https://doi.org/10.1038/s41524-024-01231-8",
       "cited_by_count": 34,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -1717,9 +2065,13 @@
       "doi": "10.1039/d3dd00131h",
       "doi_url": "https://doi.org/10.1039/d3dd00131h",
       "cited_by_count": 31,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -1735,6 +2087,10 @@
       "doi": "10.1039/d4ta06452f",
       "doi_url": "https://doi.org/10.1039/d4ta06452f",
       "cited_by_count": 31,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -1752,9 +2108,13 @@
       "doi": "10.1007/s40843-023-2777-2",
       "doi_url": "https://doi.org/10.1007/s40843-023-2777-2",
       "cited_by_count": 29,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.2497/jjspm.64.467",
-        "10.1080/14686996.2019.1603885"
+        "10.1080/14686996.2019.1603885",
+        "10.2497/jjspm.64.467"
       ]
     },
     {
@@ -1770,9 +2130,13 @@
       "doi": "10.1021/acsami.4c19149",
       "doi_url": "https://doi.org/10.1021/acsami.4c19149",
       "cited_by_count": 26,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -1788,6 +2152,10 @@
       "doi": "10.1039/d3mh01930f",
       "doi_url": "https://doi.org/10.1039/d3mh01930f",
       "cited_by_count": 24,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -1805,6 +2173,31 @@
       "doi": "10.1016/j.jechem.2024.06.013",
       "doi_url": "https://doi.org/10.1016/j.jechem.2024.06.013",
       "cited_by_count": 19,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4396524322",
+      "title": "Machine-learning guided prediction of thermoelectric properties of topological insulator Bi<sub>2</sub>Te<sub>3−<i>x</i></sub>Se<sub><i>x</i></sub>",
+      "authors": "K E Vipin, Prahallad Padhan",
+      "journal": "Journal of Materials Chemistry C",
+      "year": 2024,
+      "volume": "12",
+      "issue": "20",
+      "start_page": "7415",
+      "end_page": "7425",
+      "doi": "10.1039/d4tc01058b",
+      "doi_url": "https://doi.org/10.1039/d4tc01058b",
+      "cited_by_count": 18,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -1822,6 +2215,10 @@
       "doi": "10.1021/acsomega.3c08036",
       "doi_url": "https://doi.org/10.1021/acsomega.3c08036",
       "cited_by_count": 18,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -1839,25 +2236,12 @@
       "doi": "10.1016/j.cjph.2024.01.008",
       "doi_url": "https://doi.org/10.1016/j.cjph.2024.01.008",
       "cited_by_count": 18,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4396524322",
-      "title": "Machine-learning guided prediction of thermoelectric properties of topological insulator Bi<sub>2</sub>Te<sub>3−<i>x</i></sub>Se<sub><i>x</i></sub>",
-      "authors": "K E Vipin, Prahallad Padhan",
-      "journal": "Journal of Materials Chemistry C",
-      "year": 2024,
-      "volume": "12",
-      "issue": "20",
-      "start_page": "7415",
-      "end_page": "7425",
-      "doi": "10.1039/d4tc01058b",
-      "doi_url": "https://doi.org/10.1039/d4tc01058b",
-      "cited_by_count": 18,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
       ]
     },
     {
@@ -1873,9 +2257,13 @@
       "doi": "10.1021/acs.chemmater.4c01696",
       "doi_url": "https://doi.org/10.1021/acs.chemmater.4c01696",
       "cited_by_count": 16,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -1891,6 +2279,10 @@
       "doi": "10.1038/s41427-024-00549-5",
       "doi_url": "https://doi.org/10.1038/s41427-024-00549-5",
       "cited_by_count": 15,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -1908,6 +2300,10 @@
       "doi": "10.1016/j.mtener.2024.101564",
       "doi_url": "https://doi.org/10.1016/j.mtener.2024.101564",
       "cited_by_count": 14,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -1925,6 +2321,10 @@
       "doi": "10.1016/j.porgcoat.2024.108612",
       "doi_url": "https://doi.org/10.1016/j.porgcoat.2024.108612",
       "cited_by_count": 12,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -1942,6 +2342,10 @@
       "doi": "10.1002/anie.202402628",
       "doi_url": "https://doi.org/10.1002/anie.202402628",
       "cited_by_count": 11,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -1959,42 +2363,12 @@
       "doi": "10.1016/j.apenergy.2024.123881",
       "doi_url": "https://doi.org/10.1016/j.apenergy.2024.123881",
       "cited_by_count": 9,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
-      ]
-    },
-    {
-      "openalex_id": "W4405424593",
-      "title": "Integrating machine learning with advanced processing and characterization for polycrystalline materials: a methodology review and application to iron-based superconductors",
-      "authors": "Akiyasu Yamamoto, Akinori Yamanaka, K. Iida, Yusuke Shimada, Satoshi Hata",
-      "journal": "Science and Technology of Advanced Materials",
-      "year": 2024,
-      "volume": "26",
-      "issue": "1",
-      "start_page": "2436347",
-      "end_page": "2436347",
-      "doi": "10.1080/14686996.2024.2436347",
-      "doi_url": "https://doi.org/10.1080/14686996.2024.2436347",
-      "cited_by_count": 8,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4405437285",
-      "title": "Classification-Based Detection and Quantification of Cross-Domain Data Bias in Materials Discovery",
-      "authors": "Giovanni Trezza, Eliodoro Chiavazzo",
-      "journal": "Journal of Chemical Information and Modeling",
-      "year": 2024,
-      "volume": "65",
-      "issue": "4",
-      "start_page": "1747",
-      "end_page": "1761",
-      "doi": "10.1021/acs.jcim.4c01766",
-      "doi_url": "https://doi.org/10.1021/acs.jcim.4c01766",
-      "cited_by_count": 8,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
       ]
     },
     {
@@ -2010,6 +2384,73 @@
       "doi": "10.1016/j.mtnano.2024.100561",
       "doi_url": "https://doi.org/10.1016/j.mtnano.2024.100561",
       "cited_by_count": 8,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W4405437285",
+      "title": "Classification-Based Detection and Quantification of Cross-Domain Data Bias in Materials Discovery",
+      "authors": "Giovanni Trezza, Eliodoro Chiavazzo",
+      "journal": "Journal of Chemical Information and Modeling",
+      "year": 2024,
+      "volume": "65",
+      "issue": "4",
+      "start_page": "1747",
+      "end_page": "1761",
+      "doi": "10.1021/acs.jcim.4c01766",
+      "doi_url": "https://doi.org/10.1021/acs.jcim.4c01766",
+      "cited_by_count": 8,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4405424593",
+      "title": "Integrating machine learning with advanced processing and characterization for polycrystalline materials: a methodology review and application to iron-based superconductors",
+      "authors": "Akiyasu Yamamoto, Akinori Yamanaka, K. Iida, Yusuke Shimada, Satoshi Hata",
+      "journal": "Science and Technology of Advanced Materials",
+      "year": 2024,
+      "volume": "26",
+      "issue": "1",
+      "start_page": "2436347",
+      "end_page": "2436347",
+      "doi": "10.1080/14686996.2024.2436347",
+      "doi_url": "https://doi.org/10.1080/14686996.2024.2436347",
+      "cited_by_count": 8,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4399620580",
+      "title": "Enhancing n-type PbTe thermoelectric performance through Cd alloying and strategic defects management",
+      "authors": "Zhiyu Chen, Mancang Li, Zhang Chen, Yu Wang, Daijie Zhou, Xueliang Huang, Xinhu Zhang, Rui Guo, Xianbo Liu, Zhengshang Wang",
+      "journal": "Journal of Alloys and Compounds",
+      "year": 2024,
+      "volume": "1002",
+      "issue": "",
+      "start_page": "175183",
+      "end_page": "175183",
+      "doi": "10.1016/j.jallcom.2024.175183",
+      "doi_url": "https://doi.org/10.1016/j.jallcom.2024.175183",
+      "cited_by_count": 7,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -2027,25 +2468,12 @@
       "doi": "10.1002/adts.202400308",
       "doi_url": "https://doi.org/10.1002/adts.202400308",
       "cited_by_count": 7,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4391690925",
-      "title": "Clustering method for the construction of machine learning model with high predictive ability",
-      "authors": "Hiromasa Kaneko",
-      "journal": "Chemometrics and Intelligent Laboratory Systems",
-      "year": 2024,
-      "volume": "246",
-      "issue": "",
-      "start_page": "105084",
-      "end_page": "105084",
-      "doi": "10.1016/j.chemolab.2024.105084",
-      "doi_url": "https://doi.org/10.1016/j.chemolab.2024.105084",
-      "cited_by_count": 7,
-      "cites_seeds": [
+        "10.1038/s41524-022-00897-2",
         "10.1080/14686996.2019.1603885"
       ]
     },
@@ -2062,40 +2490,31 @@
       "doi": "10.1016/j.cclet.2024.109749",
       "doi_url": "https://doi.org/10.1016/j.cclet.2024.109749",
       "cited_by_count": 7,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
     },
     {
-      "openalex_id": "W4399620580",
-      "title": "Enhancing n-type PbTe thermoelectric performance through Cd alloying and strategic defects management",
-      "authors": "Zhiyu Chen, Mancang Li, Zhang Chen, Yu Wang, Daijie Zhou, Xueliang Huang, Xinhu Zhang, Rui Guo, Xianbo Liu, Zhengshang Wang",
-      "journal": "Journal of Alloys and Compounds",
+      "openalex_id": "W4391690925",
+      "title": "Clustering method for the construction of machine learning model with high predictive ability",
+      "authors": "Hiromasa Kaneko",
+      "journal": "Chemometrics and Intelligent Laboratory Systems",
       "year": 2024,
-      "volume": "1002",
+      "volume": "246",
       "issue": "",
-      "start_page": "175183",
-      "end_page": "175183",
-      "doi": "10.1016/j.jallcom.2024.175183",
-      "doi_url": "https://doi.org/10.1016/j.jallcom.2024.175183",
+      "start_page": "105084",
+      "end_page": "105084",
+      "doi": "10.1016/j.chemolab.2024.105084",
+      "doi_url": "https://doi.org/10.1016/j.chemolab.2024.105084",
       "cited_by_count": 7,
-      "cites_seeds": [
-        "10.1016/j.isci.2023.106494"
-      ]
-    },
-    {
-      "openalex_id": "W4392184940",
-      "title": "https://2DMat.ChemDX.org: Experimental data platform for 2D materials from synthesis to physical properties",
-      "authors": "Jin‐Hoon Yang, Habin Kang, Hyuk Jin Kim, Taeho Kim, Heonsu Ahn, Tae Gyu Rhee, Yeong Gwang Khim, Byoung Ki Choi, Moon‐Ho Jo, Hyunju Chang, Jonghwan Kim, Young Jun Chang, Yea‐Lee Lee",
-      "journal": "Digital Discovery",
-      "year": 2024,
-      "volume": "3",
-      "issue": "3",
-      "start_page": "573",
-      "end_page": "585",
-      "doi": "10.1039/d3dd00243h",
-      "doi_url": "https://doi.org/10.1039/d3dd00243h",
-      "cited_by_count": 6,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2113,6 +2532,10 @@
       "doi": "10.1016/j.csite.2024.104377",
       "doi_url": "https://doi.org/10.1016/j.csite.2024.104377",
       "cited_by_count": 6,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -2130,6 +2553,10 @@
       "doi": "10.3390/act14010008",
       "doi_url": "https://doi.org/10.3390/act14010008",
       "cited_by_count": 6,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -2147,8 +2574,33 @@
       "doi": "10.1016/j.jallcom.2024.173431",
       "doi_url": "https://doi.org/10.1016/j.jallcom.2024.173431",
       "cited_by_count": 6,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W4392184940",
+      "title": "https://2DMat.ChemDX.org: Experimental data platform for 2D materials from synthesis to physical properties",
+      "authors": "Jin‐Hoon Yang, Habin Kang, Hyuk Jin Kim, Taeho Kim, Heonsu Ahn, Tae Gyu Rhee, Yeong Gwang Khim, Byoung Ki Choi, Moon‐Ho Jo, Hyunju Chang, Jonghwan Kim, Young Jun Chang, Yea‐Lee Lee",
+      "journal": "Digital Discovery",
+      "year": 2024,
+      "volume": "3",
+      "issue": "3",
+      "start_page": "573",
+      "end_page": "585",
+      "doi": "10.1039/d3dd00243h",
+      "doi_url": "https://doi.org/10.1039/d3dd00243h",
+      "cited_by_count": 6,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -2164,8 +2616,33 @@
       "doi": "10.1016/j.commatsci.2024.112791",
       "doi_url": "https://doi.org/10.1016/j.commatsci.2024.112791",
       "cited_by_count": 4,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4405376215",
+      "title": "Preparation and properties of graphite-based “light–heat–electricity” conversion materials",
+      "authors": "Shengzhi Duan, Kaiyue Meng, Xiaowen Wu, Mengyao Yang, Min Zhong, Weihua Ao, Yanbin Yao, Minghao Fang, Zhaohui Huang",
+      "journal": "Applied Physics Letters",
+      "year": 2024,
+      "volume": "125",
+      "issue": "24",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.1063/5.0239344",
+      "doi_url": "https://doi.org/10.1063/5.0239344",
+      "cited_by_count": 3,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494"
       ]
     },
     {
@@ -2181,6 +2658,10 @@
       "doi": "10.1016/j.physb.2024.416299",
       "doi_url": "https://doi.org/10.1016/j.physb.2024.416299",
       "cited_by_count": 3,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2198,6 +2679,10 @@
       "doi": "10.1080/14686996.2024.2428154",
       "doi_url": "https://doi.org/10.1080/14686996.2024.2428154",
       "cited_by_count": 3,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2215,40 +2700,10 @@
       "doi": "10.1039/d4tc03784g",
       "doi_url": "https://doi.org/10.1039/d4tc03784g",
       "cited_by_count": 3,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4405376215",
-      "title": "Preparation and properties of graphite-based “light–heat–electricity” conversion materials",
-      "authors": "Shengzhi Duan, Kaiyue Meng, Xiaowen Wu, Mengyao Yang, Min Zhong, Weihua Ao, Yanbin Yao, Minghao Fang, Zhaohui Huang",
-      "journal": "Applied Physics Letters",
-      "year": 2024,
-      "volume": "125",
-      "issue": "24",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.1063/5.0239344",
-      "doi_url": "https://doi.org/10.1063/5.0239344",
-      "cited_by_count": 3,
-      "cites_seeds": [
-        "10.1016/j.isci.2023.106494"
-      ]
-    },
-    {
-      "openalex_id": "W4392811395",
-      "title": "Developing a New Web Service for Experimental Nuclear Reaction Database (EXFOR) Using RESTful API and JSON",
-      "authors": "Shin Okumura, Georg Schnabel, A. J. Koning",
-      "journal": "EPJ Web of Conferences",
-      "year": 2024,
-      "volume": "292",
-      "issue": "",
-      "start_page": "12003",
-      "end_page": "12003",
-      "doi": "10.1051/epjconf/202429212003",
-      "doi_url": "https://doi.org/10.1051/epjconf/202429212003",
-      "cited_by_count": 2,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2266,6 +2721,72 @@
       "doi": "10.1021/acs.chemmater.4c01343",
       "doi_url": "https://doi.org/10.1021/acs.chemmater.4c01343",
       "cited_by_count": 2,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4392811395",
+      "title": "Developing a New Web Service for Experimental Nuclear Reaction Database (EXFOR) Using RESTful API and JSON",
+      "authors": "Shin Okumura, Georg Schnabel, A. J. Koning",
+      "journal": "EPJ Web of Conferences",
+      "year": 2024,
+      "volume": "292",
+      "issue": "",
+      "start_page": "12003",
+      "end_page": "12003",
+      "doi": "10.1051/epjconf/202429212003",
+      "doi_url": "https://doi.org/10.1051/epjconf/202429212003",
+      "cited_by_count": 2,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4398242097",
+      "title": "Computational Analysis of Transient Solidification Kinetics in Aluminum-Based Multicomponent Alloys for Graphical Lhtes Modelling",
+      "authors": "Ivaldo L. Ferreira, Natalia C. A. Costa, Gueber Elias Mendes Santos Júnior, F.S. Gonzaga, A.L.S. Moreira",
+      "journal": "SSRN Electronic Journal",
+      "year": 2024,
+      "volume": "",
+      "issue": "",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.2139/ssrn.4838688",
+      "doi_url": "https://doi.org/10.2139/ssrn.4838688",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W4392571236",
+      "title": "Revealing large room-temperature Nernst coefficients in 2D materials by first-principles modeling",
+      "authors": "S. Emad Rezaei, Peter Schindler",
+      "journal": "Nanoscale",
+      "year": 2024,
+      "volume": "16",
+      "issue": "12",
+      "start_page": "6142",
+      "end_page": "6150",
+      "doi": "10.1039/d3nr06127b",
+      "doi_url": "https://doi.org/10.1039/d3nr06127b",
+      "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -2283,6 +2804,10 @@
       "doi": "10.1016/j.jnucmat.2024.155048",
       "doi_url": "https://doi.org/10.1016/j.jnucmat.2024.155048",
       "cited_by_count": 1,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2300,91 +2825,10 @@
       "doi": "10.1541/ieejfms.144.350",
       "doi_url": "https://doi.org/10.1541/ieejfms.144.350",
       "cited_by_count": 1,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4392571236",
-      "title": "Revealing large room-temperature Nernst coefficients in 2D materials by first-principles modeling",
-      "authors": "S. Emad Rezaei, Peter Schindler",
-      "journal": "Nanoscale",
-      "year": 2024,
-      "volume": "16",
-      "issue": "12",
-      "start_page": "6142",
-      "end_page": "6150",
-      "doi": "10.1039/d3nr06127b",
-      "doi_url": "https://doi.org/10.1039/d3nr06127b",
-      "cited_by_count": 1,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
-      ]
-    },
-    {
-      "openalex_id": "W4398242097",
-      "title": "Computational Analysis of Transient Solidification Kinetics in Aluminum-Based Multicomponent Alloys for Graphical Lhtes Modelling",
-      "authors": "Ivaldo L. Ferreira, Natalia C. A. Costa, Gueber Elias Mendes Santos Júnior, F.S. Gonzaga, A.L.S. Moreira",
-      "journal": "SSRN Electronic Journal",
-      "year": 2024,
-      "volume": "",
-      "issue": "",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.2139/ssrn.4838688",
-      "doi_url": "https://doi.org/10.2139/ssrn.4838688",
-      "cited_by_count": 1,
-      "cites_seeds": [
-        "10.1016/j.isci.2023.106494"
-      ]
-    },
-    {
-      "openalex_id": "W4399658457",
-      "title": "Thermoelectric Performance of N-Type Bi2s3-Alloyed Bi2te2.7se0.3",
-      "authors": "Raphael Fortulan, Adam Brown, Illia Serhiienko, Takao Mori, Sima Aminorroaya Yamini",
-      "journal": "SSRN Electronic Journal",
-      "year": 2024,
-      "volume": "",
-      "issue": "",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.2139/ssrn.4866033",
-      "doi_url": "https://doi.org/10.2139/ssrn.4866033",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4399658592",
-      "title": "Thermoelectric Performance of N-Type Bi2s3-Alloyed Bi2te2.7se0.3",
-      "authors": "Raphael Fortulan, Adam Brown, Illia Serhiienko, Takao Mori, Sima Aminorroaya Yamini",
-      "journal": "SSRN Electronic Journal",
-      "year": 2024,
-      "volume": "",
-      "issue": "",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.2139/ssrn.4865107",
-      "doi_url": "https://doi.org/10.2139/ssrn.4865107",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4410047891",
-      "title": "AI-driven inorganic materials by design",
-      "authors": "Ruiming Zhu",
-      "journal": "",
-      "year": 2024,
-      "volume": "",
-      "issue": "",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.32657/10356/183779",
-      "doi_url": "https://doi.org/10.32657/10356/183779",
-      "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2402,6 +2846,10 @@
       "doi": "10.1002/ange.202402628",
       "doi_url": "https://doi.org/10.1002/ange.202402628",
       "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -2419,8 +2867,74 @@
       "doi": "10.1016/j.mssp.2024.109148",
       "doi_url": "https://doi.org/10.1016/j.mssp.2024.109148",
       "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W4399658457",
+      "title": "Thermoelectric Performance of N-Type Bi2s3-Alloyed Bi2te2.7se0.3",
+      "authors": "Raphael Fortulan, Adam Brown, Illia Serhiienko, Takao Mori, Sima Aminorroaya Yamini",
+      "journal": "SSRN Electronic Journal",
+      "year": 2024,
+      "volume": "",
+      "issue": "",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.2139/ssrn.4866033",
+      "doi_url": "https://doi.org/10.2139/ssrn.4866033",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4399658592",
+      "title": "Thermoelectric Performance of N-Type Bi2s3-Alloyed Bi2te2.7se0.3",
+      "authors": "Raphael Fortulan, Adam Brown, Illia Serhiienko, Takao Mori, Sima Aminorroaya Yamini",
+      "journal": "SSRN Electronic Journal",
+      "year": 2024,
+      "volume": "",
+      "issue": "",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.2139/ssrn.4865107",
+      "doi_url": "https://doi.org/10.2139/ssrn.4865107",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4410047891",
+      "title": "AI-driven inorganic materials by design",
+      "authors": "Ruiming Zhu",
+      "journal": "",
+      "year": 2024,
+      "volume": "",
+      "issue": "",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.32657/10356/183779",
+      "doi_url": "https://doi.org/10.32657/10356/183779",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -2436,6 +2950,10 @@
       "doi": "10.1038/s41524-023-01000-z",
       "doi_url": "https://doi.org/10.1038/s41524-023-01000-z",
       "cited_by_count": 668,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2453,6 +2971,10 @@
       "doi": "10.1039/d2dd00113f",
       "doi_url": "https://doi.org/10.1039/d2dd00113f",
       "cited_by_count": 39,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2470,6 +2992,10 @@
       "doi": "10.1021/acsomega.3c03722",
       "doi_url": "https://doi.org/10.1021/acsomega.3c03722",
       "cited_by_count": 38,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2487,6 +3013,9 @@
       "doi": "10.1016/j.apenergy.2023.122216",
       "doi_url": "https://doi.org/10.1016/j.apenergy.2023.122216",
       "cited_by_count": 35,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -2504,6 +3033,30 @@
       "doi": "10.1038/s41524-023-01153-x",
       "doi_url": "https://doi.org/10.1038/s41524-023-01153-x",
       "cited_by_count": 33,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4385301497",
+      "title": "Interpretable Machine Learning Workflow for Evaluating and Analyzing the Performance of High-Entropy GeTe-Based Thermoelectric Materials",
+      "authors": "Wenzhao Li, Mingji Liu",
+      "journal": "ACS Applied Electronic Materials",
+      "year": 2023,
+      "volume": "5",
+      "issue": "8",
+      "start_page": "4523",
+      "end_page": "4533",
+      "doi": "10.1021/acsaelm.3c00692",
+      "doi_url": "https://doi.org/10.1021/acsaelm.3c00692",
+      "cited_by_count": 22,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -2521,25 +3074,12 @@
       "doi": "10.1039/d3ta05690b",
       "doi_url": "https://doi.org/10.1039/d3ta05690b",
       "cited_by_count": 22,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4385301497",
-      "title": "Interpretable Machine Learning Workflow for Evaluating and Analyzing the Performance of High-Entropy GeTe-Based Thermoelectric Materials",
-      "authors": "Wenzhao Li, Mingji Liu",
-      "journal": "ACS Applied Electronic Materials",
-      "year": 2023,
-      "volume": "5",
-      "issue": "8",
-      "start_page": "4523",
-      "end_page": "4533",
-      "doi": "10.1021/acsaelm.3c00692",
-      "doi_url": "https://doi.org/10.1021/acsaelm.3c00692",
-      "cited_by_count": 22,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
       ]
     },
     {
@@ -2555,6 +3095,10 @@
       "doi": "10.1016/j.jmst.2022.12.021",
       "doi_url": "https://doi.org/10.1016/j.jmst.2022.12.021",
       "cited_by_count": 20,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2572,6 +3116,10 @@
       "doi": "10.1021/acs.chemmater.3c01834",
       "doi_url": "https://doi.org/10.1021/acs.chemmater.3c01834",
       "cited_by_count": 18,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -2589,9 +3137,13 @@
       "doi": "10.1063/5.0137642",
       "doi_url": "https://doi.org/10.1063/5.0137642",
       "cited_by_count": 13,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
-        "10.1080/14686996.2019.1603885",
-        "10.1038/s41524-022-00897-2"
+        "10.1038/s41524-022-00897-2",
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -2607,6 +3159,10 @@
       "doi": "10.1016/j.energy.2023.129292",
       "doi_url": "https://doi.org/10.1016/j.energy.2023.129292",
       "cited_by_count": 9,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -2624,6 +3180,10 @@
       "doi": "10.1016/j.mtphys.2023.101244",
       "doi_url": "https://doi.org/10.1016/j.mtphys.2023.101244",
       "cited_by_count": 9,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -2641,6 +3201,10 @@
       "doi": "10.1063/5.0159347",
       "doi_url": "https://doi.org/10.1063/5.0159347",
       "cited_by_count": 8,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -2658,6 +3222,9 @@
       "doi": "10.1021/acs.jcim.3c01442",
       "doi_url": "https://doi.org/10.1021/acs.jcim.3c01442",
       "cited_by_count": 7,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1038/s41524-022-00897-2"
       ]
@@ -2675,6 +3242,10 @@
       "doi": "10.1039/d3dd00207a",
       "doi_url": "https://doi.org/10.1039/d3dd00207a",
       "cited_by_count": 6,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2692,6 +3263,10 @@
       "doi": "10.1103/physrevb.107.035118",
       "doi_url": "https://doi.org/10.1103/physrevb.107.035118",
       "cited_by_count": 5,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2709,6 +3284,9 @@
       "doi": "10.1021/acs.chemmater.3c01509",
       "doi_url": "https://doi.org/10.1021/acs.chemmater.3c01509",
       "cited_by_count": 4,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2726,6 +3304,10 @@
       "doi": "10.7566/jpsjnc.20.01",
       "doi_url": "https://doi.org/10.7566/jpsjnc.20.01",
       "cited_by_count": 3,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2743,6 +3325,9 @@
       "doi": "10.5772/intechopen.1003210",
       "doi_url": "https://doi.org/10.5772/intechopen.1003210",
       "cited_by_count": 3,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2760,6 +3345,9 @@
       "doi": "10.26434/chemrxiv-2023-r9n12",
       "doi_url": "https://doi.org/10.26434/chemrxiv-2023-r9n12",
       "cited_by_count": 2,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2777,6 +3365,10 @@
       "doi": "10.1080/00223131.2023.2269974",
       "doi_url": "https://doi.org/10.1080/00223131.2023.2269974",
       "cited_by_count": 2,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2794,6 +3386,9 @@
       "doi": "10.33042/2079-424x.2023.62.2.02",
       "doi_url": "https://doi.org/10.33042/2079-424x.2023.62.2.02",
       "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -2811,42 +3406,11 @@
       "doi": "10.2139/ssrn.4532458",
       "doi_url": "https://doi.org/10.2139/ssrn.4532458",
       "cited_by_count": 1,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
-      ]
-    },
-    {
-      "openalex_id": "W4389490775",
-      "title": "Computational and Data‐Driven Development of Thermoelectric Materials",
-      "authors": "Prashun Gorai, Michael Y. Toriyama",
-      "journal": "",
-      "year": 2023,
-      "volume": "",
-      "issue": "",
-      "start_page": "17",
-      "end_page": "70",
-      "doi": "10.1002/9781394256419.ch2",
-      "doi_url": "https://doi.org/10.1002/9781394256419.ch2",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4381893257",
-      "title": "High-throughput deformation potential and electrical transport calculations",
-      "authors": "Yeqing Jin, Xiangdong Wang, Mingjia Yao, Di Qiu, Jinyang Xi, Lili Xi, Jiong Yang",
-      "journal": "Research Square",
-      "year": 2023,
-      "volume": "",
-      "issue": "",
-      "start_page": "",
-      "end_page": "",
-      "doi": "10.21203/rs.3.rs-2923501/v1",
-      "doi_url": "https://doi.org/10.21203/rs.3.rs-2923501/v1",
-      "cited_by_count": 0,
-      "cites_seeds": [
-        "10.1038/s41524-022-00897-2"
       ]
     },
     {
@@ -2862,6 +3426,9 @@
       "doi": "10.33042/2079-424x.2023.62.1.03",
       "doi_url": "https://doi.org/10.33042/2079-424x.2023.62.1.03",
       "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
       ]
@@ -2879,8 +3446,53 @@
       "doi": "10.3103/s0003701x23600753",
       "doi_url": "https://doi.org/10.3103/s0003701x23600753",
       "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W4381893257",
+      "title": "High-throughput deformation potential and electrical transport calculations",
+      "authors": "Yeqing Jin, Xiangdong Wang, Mingjia Yao, Di Qiu, Jinyang Xi, Lili Xi, Jiong Yang",
+      "journal": "Research Square",
+      "year": 2023,
+      "volume": "",
+      "issue": "",
+      "start_page": "",
+      "end_page": "",
+      "doi": "10.21203/rs.3.rs-2923501/v1",
+      "doi_url": "https://doi.org/10.21203/rs.3.rs-2923501/v1",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1038/s41524-022-00897-2"
+      ]
+    },
+    {
+      "openalex_id": "W4389490775",
+      "title": "Computational and Data‐Driven Development of Thermoelectric Materials",
+      "authors": "Prashun Gorai, Michael Y. Toriyama",
+      "journal": "",
+      "year": 2023,
+      "volume": "",
+      "issue": "",
+      "start_page": "17",
+      "end_page": "70",
+      "doi": "10.1002/9781394256419.ch2",
+      "doi_url": "https://doi.org/10.1002/9781394256419.ch2",
+      "cited_by_count": 0,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -2896,6 +3508,10 @@
       "doi": "10.1002/adfm.202112772",
       "doi_url": "https://doi.org/10.1002/adfm.202112772",
       "cited_by_count": 132,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2913,6 +3529,10 @@
       "doi": "10.1038/s41428-022-00734-9",
       "doi_url": "https://doi.org/10.1038/s41428-022-00734-9",
       "cited_by_count": 32,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2930,40 +3550,10 @@
       "doi": "10.1016/j.matlet.2022.132299",
       "doi_url": "https://doi.org/10.1016/j.matlet.2022.132299",
       "cited_by_count": 23,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4282826463",
-      "title": "Machine Learning Approaches for Accelerating the Discovery of Thermoelectric Materials",
-      "authors": "Luis M. Antunes, Vikram Vikram, José J. Plata, Anthony V. Powell, Keith T. Butler, Ricardo Grau‐Crespo",
-      "journal": "ACS symposium series",
-      "year": 2022,
-      "volume": "",
-      "issue": "",
-      "start_page": "1",
-      "end_page": "32",
-      "doi": "10.1021/bk-2022-1416.ch001",
-      "doi_url": "https://doi.org/10.1021/bk-2022-1416.ch001",
-      "cited_by_count": 14,
-      "cites_seeds": [
-        "10.1080/14686996.2019.1603885"
-      ]
-    },
-    {
-      "openalex_id": "W4297853423",
-      "title": "Y <sub>2</sub> Te <sub>3</sub> : A New n-Type Thermoelectric Material",
-      "authors": "Michael Y. Toriyama, Dean Cheikh, Sabah K. Bux, G. Jeffrey Snyder, Prashun Gorai",
-      "journal": "ACS Applied Materials & Interfaces",
-      "year": 2022,
-      "volume": "14",
-      "issue": "38",
-      "start_page": "43517",
-      "end_page": "43526",
-      "doi": "10.1021/acsami.2c12112",
-      "doi_url": "https://doi.org/10.1021/acsami.2c12112",
-      "cited_by_count": 14,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -2981,8 +3571,52 @@
       "doi": "10.1016/j.measurement.2022.112359",
       "doi_url": "https://doi.org/10.1016/j.measurement.2022.112359",
       "cited_by_count": 14,
+      "sources": [
+        "openalex"
+      ],
       "cites_seeds": [
         "10.1016/j.isci.2023.106494"
+      ]
+    },
+    {
+      "openalex_id": "W4282826463",
+      "title": "Machine Learning Approaches for Accelerating the Discovery of Thermoelectric Materials",
+      "authors": "Luis M. Antunes, Vikram Vikram, José J. Plata, Anthony V. Powell, Keith T. Butler, Ricardo Grau‐Crespo",
+      "journal": "ACS symposium series",
+      "year": 2022,
+      "volume": "",
+      "issue": "",
+      "start_page": "1",
+      "end_page": "32",
+      "doi": "10.1021/bk-2022-1416.ch001",
+      "doi_url": "https://doi.org/10.1021/bk-2022-1416.ch001",
+      "cited_by_count": 14,
+      "sources": [
+        "openalex"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
+      ]
+    },
+    {
+      "openalex_id": "W4297853423",
+      "title": "Y <sub>2</sub> Te <sub>3</sub> : A New n-Type Thermoelectric Material",
+      "authors": "Michael Y. Toriyama, Dean Cheikh, Sabah K. Bux, G. Jeffrey Snyder, Prashun Gorai",
+      "journal": "ACS Applied Materials & Interfaces",
+      "year": 2022,
+      "volume": "14",
+      "issue": "38",
+      "start_page": "43517",
+      "end_page": "43526",
+      "doi": "10.1021/acsami.2c12112",
+      "doi_url": "https://doi.org/10.1021/acsami.2c12112",
+      "cited_by_count": 14,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
+      "cites_seeds": [
+        "10.1080/14686996.2019.1603885"
       ]
     },
     {
@@ -2998,6 +3632,10 @@
       "doi": "10.1080/27660400.2022.2109447",
       "doi_url": "https://doi.org/10.1080/27660400.2022.2109447",
       "cited_by_count": 13,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3015,6 +3653,10 @@
       "doi": "10.1038/s41597-022-01699-3",
       "doi_url": "https://doi.org/10.1038/s41597-022-01699-3",
       "cited_by_count": 12,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3032,6 +3674,10 @@
       "doi": "10.1080/27660400.2021.2024101",
       "doi_url": "https://doi.org/10.1080/27660400.2021.2024101",
       "cited_by_count": 6,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3049,6 +3695,10 @@
       "doi": "10.1016/j.chemolab.2022.104595",
       "doi_url": "https://doi.org/10.1016/j.chemolab.2022.104595",
       "cited_by_count": 2,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3066,6 +3716,10 @@
       "doi": "10.1002/aenm.202101122",
       "doi_url": "https://doi.org/10.1002/aenm.202101122",
       "cited_by_count": 95,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3083,6 +3737,10 @@
       "doi": "10.1038/s43246-021-00209-z",
       "doi_url": "https://doi.org/10.1038/s43246-021-00209-z",
       "cited_by_count": 62,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3100,6 +3758,10 @@
       "doi": "10.1063/5.0054532",
       "doi_url": "https://doi.org/10.1063/5.0054532",
       "cited_by_count": 23,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3117,6 +3779,10 @@
       "doi": "10.1016/j.chemolab.2021.104437",
       "doi_url": "https://doi.org/10.1016/j.chemolab.2021.104437",
       "cited_by_count": 5,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3134,6 +3800,10 @@
       "doi": "10.2497/jjspm.68.317",
       "doi_url": "https://doi.org/10.2497/jjspm.68.317",
       "cited_by_count": 0,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.2497/jjspm.64.467"
       ]
@@ -3151,6 +3821,10 @@
       "doi": "10.1002/adma.202001537",
       "doi_url": "https://doi.org/10.1002/adma.202001537",
       "cited_by_count": 909,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3168,6 +3842,10 @@
       "doi": "10.35848/1347-4065/abbfa0",
       "doi_url": "https://doi.org/10.35848/1347-4065/abbfa0",
       "cited_by_count": 127,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3185,6 +3863,10 @@
       "doi": "10.1016/j.matdes.2020.109168",
       "doi_url": "https://doi.org/10.1016/j.matdes.2020.109168",
       "cited_by_count": 33,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3202,6 +3884,10 @@
       "doi": "10.1021/acsaem.0c01844",
       "doi_url": "https://doi.org/10.1021/acsaem.0c01844",
       "cited_by_count": 24,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3219,6 +3905,10 @@
       "doi": "10.1002/ansa.202000114",
       "doi_url": "https://doi.org/10.1002/ansa.202000114",
       "cited_by_count": 23,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
@@ -3236,6 +3926,10 @@
       "doi": "10.1016/j.rinp.2018.10.034",
       "doi_url": "https://doi.org/10.1016/j.rinp.2018.10.034",
       "cited_by_count": 12,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.2497/jjspm.64.467"
       ]
@@ -3253,6 +3947,10 @@
       "doi": "10.32677/ijch.2014.v01.i01.001",
       "doi_url": "https://doi.org/10.32677/ijch.2014.v01.i01.001",
       "cited_by_count": 2,
+      "sources": [
+        "openalex",
+        "opencitations"
+      ],
       "cites_seeds": [
         "10.1080/14686996.2019.1603885"
       ]
