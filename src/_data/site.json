@@ -1,0 +1,29 @@
+{
+  "title": "Starrydata（スタリーデータ）",
+  "tagline": "無機材料科学実験データのオープンデータベース構築プロジェクト",
+  "description": "無機材料科学の論文から実験データを抽出し、Materials Informatics 研究用のオープンデータベースを構築するプロジェクトです。",
+  "keywords": "",
+  "url": "https://starrydata.org",
+  "search_action": "https://starrydata.org/cms/mt-search.cgi",
+  "logo": "/common/img/logo.png",
+  "logo_footer": "/common/img/logo_footer.png",
+  "external": {
+    "starrydata2": "https://www.starrydata2.org"
+  },
+  "nav": [
+    { "key": "project",       "label": "Starrydataとは",       "href": "/project/index.html" },
+    { "key": "tutorial",      "label": "データを集める・使う", "href": "/tutorial/index.html" },
+    { "key": "collaboration", "label": "共同研究",             "href": "/collaboration/index.html" },
+    { "key": "data",          "label": "進行中のプロジェクト", "href": "/data/index.html" },
+    { "key": "case",          "label": "論文紹介",             "href": "/papers/index.html" },
+    { "key": "case",          "label": "トピックス",           "href": "/topics/index.html" },
+    { "key": "faq",           "label": "FAQ",                  "href": "/faq/index.html" }
+  ],
+  "footer_links": [
+    { "label": "個人情報保護方針",                 "href": "/utility/privacy.html" },
+    { "label": "Starrydata WEBシステム利用ルール", "href": "/utility/terms.html" },
+    { "label": "関連サイト",                       "href": "/utility/link.html" },
+    { "label": "お問い合わせ",                     "href": "/contact/index.html" }
+  ],
+  "copyright": "Copyright © Starrydata. All rights reserved."
+}

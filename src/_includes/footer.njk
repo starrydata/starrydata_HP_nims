@@ -1,0 +1,19 @@
+<div id="footer">
+<div class="inner_footer">
+
+<div class="right">
+<ul class="f_navi">
+{%- for link in site.footer_links %}
+<li><a href="{{ link.href }}">{{ link.label }}</a></li>
+{%- endfor %}
+</ul>
+</div>
+
+<div class="logo"><a href="/index.html"><img src="{{ site.logo_footer }}" alt="{{ site.title }}" width="725" height="124"></a></div>
+
+</div>
+</div>
+
+<div class="logo_foot"><a href="/index.html"><img src="{{ site.logo_footer }}" alt="{{ site.title }}" width="725" height="124"></a></div>
+
+<div class="copy">{{ site.copyright }}</div>

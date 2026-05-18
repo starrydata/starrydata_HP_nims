@@ -1,0 +1,65 @@
+<div id="header">
+
+<!-- Utility Navi -->
+<div id="u_area">
+<div id="u_inner" class="clearfix">
+
+<div class="tagline">{{ site.tagline }}</div>
+
+<div class="u_lang">
+<ul>
+<li class="search">
+<form method="get" action="{{ site.search_action }}">
+<input type="text" id="search" class="ti search_txt" name="search" value="" placeholder="キーワードを入力後、Enterで検索">
+<input id="search_submit" type="submit" accesskey="4" value="&#xf002">
+<input type="hidden" name="IncludeBlogs" value="1,2,3,4,5,6,7,8,9">
+<input type="hidden" name="limit" value="10">
+<input type="submit" accesskey="4" value="&#xf002">
+</form>
+</li>
+</ul>
+</div>
+
+<div class="u_contact">
+<ul>
+<li class="contact"><a href="/contact/index.html">お問い合わせ</a></li>
+<li class="login"><a href="{{ site.external.starrydata2 }}" target="_blank"><i class="fas fa-sign-in-alt"></i>使ってみる</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+<!-- /Utility Navi -->
+
+
+<!-- Logo/Navi -->
+<div id="h_inner">
+
+<div id="logo"><h1><a href="/index.html"><img src="{{ site.logo }}" alt="{{ site.title }}"></a></h1></div>
+
+<!-- Global Navi -->
+<div id="gn">
+<div class="inner_gn menu">
+<ul id="navi">
+{%- for item in site.nav %}
+<li class="{{ item.key }}"><a href="{{ item.href }}">{{ item.label }}</a></li>
+{%- endfor %}
+<li class="login sp"><a href="{{ site.external.starrydata2 }}" target="_blank"><i class="fas fa-sign-in-alt"></i>使ってみる</a></li>
+<li class="search sp">
+<form method="get" action="{{ site.search_action }}">
+<input type="text" id="search" class="ti search_txt" name="search" value="" placeholder="キーワードを入力後、Enterで検索">
+<input id="search_submit" type="submit" accesskey="4" value="&#xf002">
+<input type="hidden" name="IncludeBlogs" value="1,2,3,4,5,6,7,8,9">
+<input type="hidden" name="limit" value="10">
+<input type="submit" accesskey="4" value="&#xf002">
+</form>
+</li>
+</ul>
+</div>
+</div>
+<!-- /Global Navi -->
+
+</div>
+<!-- /Logo/Navi -->
+
+</div>

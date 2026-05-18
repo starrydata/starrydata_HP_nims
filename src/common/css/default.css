@@ -1,0 +1,674 @@
+@charset "UTF-8";
+
+
+
+/*======================================================================================================================
+========================================================================================================================
+
+【default.css】
+
+リセット項目・body初期設定・回り込み解除・リンク色用
+ボックス／マージン／フロート等　各モジュール用
+
+[01] リセット
+[02] bodyデフォルト指定
+[03] リンク色
+[04] フォント指定
+[05] Flexbox　汎用指定
+[06] 左右フロート　汎用指定
+[07] カラム　マージン汎用指定
+[08] ボックス内　左右寄せ指定
+[09] イメージ回り込み指定
+[10] イメージ行揃え
+[11] PC/スマホ 表示・非表示
+
+[fontawesame検索（v5.15.4）] 
+https://fontawesome.com/v5/search
+
+[メディアクエリーについて]
+サイト表示のブレイクポイントは以下の3通り。
+・1200px以上
+・1199〜769px内（@media screen and (max-width: 1199px) and (min-width: 769px)  {}）
+・768px以下（@media screen and (max-width:768px) {}）
+
+[ベースカラー／クラス名]
+【ベースの紺】
+#2a3e90
+40,62,144,1
+
+
+
+========================================================================================================================
+======================================================================================================================*/
+
+
+
+/* [01] リセット
+-------------------------------------------------------------------------------------------------------- */
+html,body,div,h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,address,
+ul,ol,li,dl,dt,dd,
+form,fieldset,input {
+	margin:        0px;
+	padding:       0px;
+}
+img {
+	margin:        0px;
+	padding:       0px;
+	border:        0px;
+	line-height:   0;
+	vertical-align: bottom;
+}
+ul,ol {list-style-type: none;}
+
+table {font-size:     100%;}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+/* [02] bodyデフォルト指定
+-------------------------------------------------------------------------------------------------------- */
+body {
+	color:        #333333;
+	font-size:	14px;
+	font-family:   "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",Meiryo,"メイリオ","ＭＳ Ｐゴシック",Osaka,"MS PGothic",Arial,Verdana,sans-serif;
+	line-height:  1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+/* [03] リンク色
+-------------------------------------------------------------------------------------------------------- */
+a:link {
+	color:            #333;
+	text-decoration:  underline;
+}
+
+a:visited {
+	color:            #333;
+	text-decoration:  underline;
+}
+
+a:hover {
+	color:            #333;
+	text-decoration:  none;
+}
+
+a:active {
+}
+
+/* aタグ画像ホバー */
+a img {
+    transition: 0.3s;
+    color: #333;
+}
+a img:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+
+
+
+
+/* [04] フォント指定　（デフォルト14px）
+-------------------------------------------------------------------------------------------------------- */
+
+/* フォントサイズ */
+.text10 {font-size:  10px;}
+.text11 {font-size:  11px;}
+.text12 {font-size:  12px;}
+.text13 {font-size:  13px;}
+.text14 {font-size:  14px;}
+.text15 {font-size:  15px;}
+.text16 {font-size:  16px;}
+.text17 {font-size:  17px;}
+.text18 {font-size:  18px;}
+.text19 {font-size:  19px;}
+.text20 {font-size:  20px;}
+.text21 {font-size:  21px;}
+.text22 {font-size:  22px;}
+.text23 {font-size:  23px;}
+.text24 {font-size:  24px;}
+.text25 {font-size:  25px;}
+.text26 {font-size:  26px;}
+.text27 {font-size:  27px;}
+.text28 {font-size:  28px;}
+.text29 {font-size:  29px;}
+.text30 {font-size:  30px;}
+
+/* スマホ時のみ適用フォントサイズ */
+@media screen and (max-width:768px) {
+	.text10_sp {font-size:  10px;}
+	.text11_sp {font-size:  11px;}
+	.text12_sp {font-size:  12px;}
+	.text13_sp {font-size:  13px;}
+	.text14_sp {font-size:  14px;}
+	.text15_sp {font-size:  15px;}
+	.text16_sp {font-size:  16px;}
+	.text17_sp {font-size:  17px;}
+	.text18_sp {font-size:  18px;}
+	.text19_sp {font-size:  19px;}
+	.text20_sp {font-size:  20px;}
+	.text21_sp {font-size:  21px;}
+	.text22_sp {font-size:  22px;}
+	.text23_sp {font-size:  23px;}
+	.text24_sp {font-size:  24px;}
+	.text25_sp {font-size:  25px;}
+	.text26_sp {font-size:  26px;}
+	.text27_sp {font-size:  27px;}
+	.text28_sp {font-size:  28px;}
+	.text29_sp {font-size:  29px;}
+	.text30_sp {font-size:  30px;}
+}
+
+.text_smaller {font-size:  smaller;}
+.text_xsmaller {font-size:x-small;}
+
+
+/* フォントノーマル */
+.normal {font-weight:	normal;}
+
+/* フォントイタリック */
+.italic {font-style:     italic;}
+
+/* フォントボールド */
+.bold {font-weight:    bold;}
+
+/* 取消線 */
+.strike {text-decoration: line-through;}
+
+/* 下線（強調線） */
+strong {
+    font-weight: normal; background: linear-gradient(transparent 60%, #dde1f2 50%);
+}
+
+
+/* フォントカラー */
+.blue {color:       #02649c;}
+.red {color:        #E60025;}
+.white {color:      #FFFFFF;}
+.gray {color:       #666666;}
+.green {color:      #009999;}
+.navy {color:       #001146;}
+
+
+
+
+
+/* [05] Flexbox　汎用指定
+-------------------------------------------------------------------------------------------------------- */
+/* 親要素Flexbox化 */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.flex > * { 
+    width: calc((100% - 24px) / 2); /* Flexアイテムが2つの時 */
+}
+.flex.col3 > * {
+    width: calc((100% - 48px) / 3); /* Flexアイテムが3つの時 */
+}
+
+
+/* Flex内そろえ位置 */
+.jc_sb {justify-content: space-between;}
+.jc_c {justify-content: center;}
+.jc_fs {justify-content: flex-start;}
+.align_ic {align-items: center;}
+
+
+
+/* Flex内　改行 */
+.flex_wrap {flex-wrap: wrap;}
+
+
+/* スマホ時　Flex解除 */
+@media screen and (max-width:768px) {
+    .noflex_sp {
+        display: block !important;
+    }
+    .noflex_sp > * {
+        width: auto;
+    }
+}
+
+
+
+
+
+/* [06] 左右フロート　汎用指定
+-------------------------------------------------------------------------------------------------------- */
+.floatL {float:    left;}
+.floatR {float:   right;}
+
+/* スマホ時　コンテンツ内フロート削除 */
+@media screen and (max-width:768px) {
+	#main .floatL,
+	#main .floatR {
+		float: none;
+	}
+}
+
+/* 回り込み解除指定（overflow） */
+.clearof {overflow: hidden;}
+
+/* clearfix */
+.clearfix::after {
+    content: "."; display: block; height: 0; clear: both; visibility: hidden;
+}
+.clearfix {display: inline-block; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+
+
+
+
+/* [07] カラム　マージン汎用指定
+-------------------------------------------------------------------------------------------------------- */
+
+/* 下マージン */
+.b0  {margin:         0px;}
+.b01 {margin-bottom:  1px;}
+.b04 {margin-bottom:  4px;}
+.b05 {margin-bottom:  5px;}
+.b10 {margin-bottom:  10px;}
+.b15 {margin-bottom:  15px;}
+.b20 {margin-bottom:  20px;}
+.b25 {margin-bottom:  25px;}
+.b30 {margin-bottom:  30px;}
+.b35 {margin-bottom:  35px;}
+.b40 {margin-bottom:  40px;}
+.b45 {margin-bottom:  45px;}
+.b50 {margin-bottom:  50px;}
+.b55 {margin-bottom:  55px;}
+.b60 {margin-bottom:  60px;}
+.b70 {margin-bottom:  70px;}
+.b80 {margin-bottom:  80px;}
+.b90 {margin-bottom:  90px;}
+.b100 {margin-bottom:  100px;}
+.b110 {margin-bottom:  110px;}
+.b120 {margin-bottom:  120px;}
+.b130 {margin-bottom:  130px;}
+.b140 {margin-bottom:  140px;}
+.b260 {margin-bottom:  260px;}
+
+/* スマホ表示時のみ、下マージン追加 */
+@media screen and (max-width:768px) {
+	.b0_sp  {margin:         0px;}
+	.b01_sp {margin-bottom:  1px;}
+	.b04_sp {margin-bottom:  4px;}
+	.b05_sp {margin-bottom:  5px;}
+	.b10_sp {margin-bottom:  10px;}
+	.b15_sp {margin-bottom:  15px;}
+	.b20_sp {margin-bottom:  20px;}
+	.b25_sp {margin-bottom:  25px;}
+	.b30_sp {margin-bottom:  30px;}
+	.b35_sp {margin-bottom:  35px;}
+	.b40_sp {margin-bottom:  40px;}
+	.b45_sp {margin-bottom:  45px;}
+	.b50_sp {margin-bottom:  50px;}
+	.b55_sp {margin-bottom:  55px;}
+	.b60_sp {margin-bottom:  60px;}
+}
+
+/* 上マージン指定 */
+.t02 {margin-top:     2px;}
+.t05 {margin-top:     5px;}
+.t10 {margin-top:     10px;}
+.t15 {margin-top:     15px;}
+.t20 {margin-top:     20px;}
+.t30 {margin-top:     30px;}
+.t40 {margin-top:     40px;}
+
+/* スマホ表示時のみ、上マージン追加 */
+@media screen and (max-width: 768px) {
+	.t0_sp {margin-top:     0px;}
+	.t05_sp {margin-top:     5px;}
+	.t10_sp {margin-top:     10px;}
+	.t15_sp {margin-top:     15px;}
+	.t20_sp {margin-top:     20px;}	
+}
+
+/* 左マージン */
+.l02 {margin-left:  2px;}
+.l05 {margin-left:  5px;}
+.l10 {margin-left:  10px;}
+.l15 {margin-left:  15px;}
+.l20 {margin-left:  20px;}
+.l25 {margin-left:  25px;}
+.l30 {margin-left:  30px;}
+.l35 {margin-left:  35px;}
+.l40 {margin-left:  40px;}
+.l45 {margin-left:  45px;}
+.l50 {margin-left:  50px;}
+.l55 {margin-left:  55px;}
+.l60 {margin-left:  60px;}
+.l65 {margin-left:  65px;}
+.l70 {margin-left:  70px;}
+.l75 {margin-left:  75px;}
+.l80 {margin-left:  80px;}
+
+/* スマホ表示時のみ、左マージン追加 */
+@media screen and (max-width: 768px) {
+	.l0_sp {margin-left:  0px;}
+	.l05_sp {margin-left:  5px;}
+	.l10_sp {margin-left:  10px;}
+	.l20_sp {margin-left:  20px;}
+	.l30_sp {margin-left:  30px;}
+}
+
+/* 右マージン */
+.r05 {margin-right:  5px;}
+.r10 {margin-right:  10px;}
+.r15 {margin-right:  15px;}
+.r20 {margin-right:  20px;}
+.r50 {margin-right:  50px;}
+
+/* スマホ表示時のみ、右マージン追加 */
+@media screen and (max-width: 768px) {
+	.r0_sp {margin-right:  0px;}
+	.r05_sp {margin-right:  5px;}
+	.r10_sp {margin-right:  10px;}
+	.r20_sp {margin-right:  20px;}
+	.r30_sp {margin-right:  30px;}
+}
+
+
+/* ボックス　幅指定 */
+.w40 {width:       40px;}
+.w45 {width:       45px;}
+.w50 {width:       50px;}
+.w55 {width:       55px;}
+.w60 {width:       60px;}
+.w65 {width:       65px;}
+.w70 {width:       70px;}
+.w75 {width:       75px;}
+.w80 {width:       80px;}
+.w85 {width:       85px;}
+.w90 {width:       90px;}
+.w95 {width:       95px;}
+.w100 {width:      100px;}
+.w105 {width:      105px;}
+.w110 {width:      110px;}
+.w115 {width:      115px;}
+.w120 {width:      120px;}
+.w125 {width:      125px;}
+.w130 {width:      130px;}
+.w135 {width:      135px;}
+.w140 {width:      140px;}
+.w145 {width:      145px;}
+.w150 {width:      150px;}
+.w155 {width:      155px;}
+.w160 {width:      160px;}
+.w165 {width:      165px;}
+.w170 {width:      170px;}
+.w174 {width:      174px;}
+.w175 {width:      175px;}
+.w180 {width:      180px;}
+.w185 {width:      185px;}
+.w190 {width:      190px;}
+.w195 {width:      195px;}
+.w200 {width:      200px;}
+.w205 {width:      205px;}
+.w209 {width:      209px;}
+.w210 {width:      210px;}
+.w215 {width:      215px;}
+.w216 {width:      216px;}
+.w221 {width:      221px;}
+.w222 {width:      222px;}
+.w220 {width:      220px;}
+.w225 {width:      225px;}
+.w227 {width:      227px;}
+.w228 {width:      228px;}
+.w230 {width:      230px;}
+.w235 {width:      235px;}
+.w240 {width:      240px;}
+.w245 {width:      245px;}
+.w250 {width:      250px;}
+.w255 {width:      255px;}
+.w260 {width:      260px;}
+.w265 {width:      265px;}
+.w270 {width:      270px;}
+.w273 {width:      273px;}
+.w274 {width:      274px;}
+.w275 {width:      275px;}
+.w280 {width:      280px;}
+.w285 {width:      285px;}
+.w290 {width:      290px;}
+.w295 {width:      295px;}
+.w300 {width:      300px;}
+.w305 {width:      305px;}
+.w310 {width:      310px;}
+.w311 {width:      311px;}
+.w315 {width:      315px;}
+.w320 {width:      320px;}
+.w323 {width:      323px;}
+.w325 {width:      325px;}
+.w330 {width:      330px;}
+.w335 {width:      335px;}
+.w338 {width:      338px;}
+.w340 {width:      340px;}
+.w345 {width:      345px;}
+.w350 {width:      350px;}
+.w355 {width:      355px;}
+.w360 {width:      360px;}
+.w365 {width:      365px;}
+.w370 {width:      370px;}
+.w375 {width:      375px;}
+.w380 {width:      380px;}
+.w385 {width:      385px;}
+.w390 {width:      390px;}
+.w395 {width:      395px;}
+.w400 {width:      400px;}
+.w405 {width:      405px;}
+.w410 {width:      410px;}
+.w415 {width:      415px;}
+.w420 {width:      420px;}
+.w425 {width:      425px;}
+.w430 {width:      430px;}
+.w435 {width:      435px;}
+.w440 {width:      440px;}
+.w445 {width:      445px;}
+.w450 {width:      450px;}
+.w455 {width:      455px;}
+.w460 {width:      460px;}
+.w465 {width:      465px;}
+.w470 {width:      470px;}
+.w475 {width:      475px;}
+.w480 {width:      480px;}
+.w485 {width:      485px;}
+.w490 {width:      490px;}
+.w495 {width:      495px;}
+.w500 {width:      500px;}
+.w510 {width:      510px;}
+.w515 {width:      515px;}
+.w520 {width:      520px;}
+.w530 {width:      530px;}
+.w540 {width:      540px;}
+.w550 {width:      550px;}
+.w560 {width:      560px;}
+.w570 {width:      570px;}
+.w580 {width:      580px;}
+.w590 {width:      590px;}
+.w600 {width:      600px;}
+.w610 {width:      610px;}
+.w620 {width:      620px;}
+.w630 {width:      630px;}
+.w640 {width:      640px;}
+.w650 {width:      650px;}
+.w660 {width:      660px;}
+.w670 {width:      670px;}
+.w680 {width:      680px;}
+.w690 {width:      690px;}
+.w700 {width:      700px;}
+.w710 {width:      710px;}
+.w720 {width:      720px;}
+.w730 {width:      730px;}
+.w740 {width:      740px;}
+.w750 {width:      750px;}
+.w760 {width:      760px;}
+.w770 {width:      770px;}
+.w780 {width:      780px;}
+.w790 {width:      790px;}
+.w800 {width:      800px;}
+.w810 {width:      810px;}
+.w820 {width:      820px;}
+.w830 {width:      830px;}
+.w840 {width:      840px;}
+.w850 {width:      850px;}
+.w860 {width:      860px;}
+.w870 {width:      870px;}
+.w880 {width:      880px;}
+.w890 {width:      890px;}
+.w900 {width:      900px;}
+
+/* ボックス　幅%指定 */
+.w02p {width:      2%;}
+.w10p {width:      10%;}
+.w13p {width:      13%;}
+.w15p {width:      15%;}
+.w20p {width:      20%;}
+.w21p {width:      21%;}
+.w22p {width:      22%;}
+.w23p {width:      23%;}
+.w24p {width:      24%;}
+.w25p {width:      25%;}
+.w28p {width:      28%;}
+.w30p {width:      30%;}
+.w32p {width:      32%;}
+.w35p {width:      35%;}
+.w38p {width:      38%;}
+.w40p {width:      40%;}
+.w42p {width:      42%;}
+.w45p {width:      45%;}
+.w46p {width:      46%;}
+.w47p {width:      47%;}
+.w48p {width:      48%;}
+.w50p {width:      50%;}
+.w55p {width:      55%;}
+.w58p {width:      58%;}
+.w60p {width:      60%;}
+.w62p {width:      62%;}
+.w65p {width:      65%;}
+.w68p {width:      68%;}
+.w70p {width:      70%;}
+.w75p {width:      75%;}
+.w78p {width:      78%;}
+.w80p {width:      80%;}
+.w85p {width:      85%;}
+.w88p {width:      88%;}
+.w90p {width:      90%;}
+.w95p {width:      95%;}
+.w100p {width:      100%;}
+
+/* スマホ時のみ幅調整／上記w◯◯のあとに追加 */
+@media screen and (max-width:768px) {
+	.w10p_sp {width: 10%; height: auto;}
+	.w15p_sp {width: 15%; height: auto;}
+	.w20p_sp {width: 20%; height: auto;}
+	.w25p_sp {width: 25%; height: auto;}
+	.w30p_sp {width: 30%; height: auto;}
+	.w32p_sp {width: 32%; height: auto;}
+	.w35p_sp {width: 35%; height: auto;}
+	.w40p_sp {width: 40%; height: auto;}
+	.w48p_sp {width: 48%; height: auto;}
+	.w50p_sp {width: 50%; height: auto;}
+	.w60p_sp {width: 60%; height: auto;}
+	.w70p_sp {width: 70%; height: auto;}
+	.w75p_sp {width: 75%; height: auto;}
+	.w80p_sp {width: 80%; height: auto;}
+	.w90p_sp {width: 90%; height: auto;}
+	.w100p_sp {width: 100%; height: auto;}
+}
+
+
+
+
+
+/* [08] ボックス内　左右寄せ指定
+-------------------------------------------------------------------------------------------------------- */
+.alignC {text-align:  center;}
+.alignR {text-align:  right;}
+.alignL {text-align:  left;}
+
+.inline_block { display: inline-block; }
+
+
+
+
+
+/* [09] イメージ回り込み指定
+-------------------------------------------------------------------------------------------------------- */
+
+/* 右寄せ */
+.imgR {
+	margin:   0px 0px 20px 20px;
+	float:    right;
+}
+
+
+/* 左寄せ */
+.imgL {
+	margin:   0px 20px 20px 0px;
+	float:    left;
+}
+
+
+
+
+
+/* [10] イメージ行揃え
+-------------------------------------------------------------------------------------------------------- */
+
+/* 中央 */
+.valignM {vertical-align:  middle;}
+
+
+/* 下 */
+.valignB {vertical-align:  bottom;}
+
+
+
+
+
+/* [11] PC/スマホ 表示・非表示（要素の出し分け、改行の出し分けなど）
+-------------------------------------------------------------------------------------------------------- */
+
+/* PCでは表示して、スマホでは消す */
+.pc {
+	display: block;
+}
+
+/* PCでは消して、スマホでは表示 */
+.sp {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.pc {
+		display: none;
+	}
+	.sp {
+		display: block;
+	}
+}
