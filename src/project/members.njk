@@ -1,0 +1,53 @@
+---
+layout: base.njk
+permalink: /project/members.html
+title: メンバー
+bodyId: project
+eleventyComputed:
+  description: "Starrydata プロジェクトのメンバー紹介"
+---
+
+<div id="contents">
+  <div class="inner_contents">
+
+    <div class="page_title">
+      <h2>{{ members.page_title }}</h2>
+      {% if members.page_subtitle %}<p class="subtitle">{{ members.page_subtitle }}</p>{% endif %}
+    </div>
+
+    {%- for group in members.groups %}
+      {%- if group.members | length > 0 %}
+      <div class="{{ group.key }}-members">
+        {%- for m in group.members %}
+        <div>
+          <div class="area_members">
+            <div class="members_img">
+              <div class="inner">
+                {% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name_ja }}">{% endif %}
+                <img src="/project/img/img_members_08.png" class="members_img_01" alt="">
+                <img src="/project/img/img_members_09.png" class="members_img_02" alt="">
+              </div>
+            </div>
+            <div class="txt">
+              <h3>{{ m.name_ja }}<span>{{ m.name_en }}</span></h3>
+              <h4>{{ m.role | replace("\n", "<br>") | safe }}</h4>
+              {% if m.affiliation %}
+              <div class="career">{{ m.affiliation | replace("\n", "<br>") | safe }}</div>
+              {% endif %}
+              {% if m.links | length > 0 %}
+              <ul class="link">
+                {%- for l in m.links %}
+                <li><a href="{{ l.href }}" target="_blank" rel="noopener">{{ l.label }}</a></li>
+                {%- endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    {%- endfor %}
+
+  </div>
+</div>

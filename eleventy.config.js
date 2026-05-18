@@ -8,6 +8,8 @@ export default function (eleventyConfig) {
   // 静的アセットはコピーするだけ
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/common": "common" });
+  // 各ブログ配下の img/ ディレクトリ（MovableType の元配置）
+  eleventyConfig.addPassthroughCopy("src/*/img/**");
 
   // Watch
   eleventyConfig.addWatchTarget("src/_data");

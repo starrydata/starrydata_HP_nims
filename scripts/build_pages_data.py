@@ -37,13 +37,24 @@ def load_dir(rel: str):
     return items
 
 
+# 構造化 JSON 専用にして pages_all から除外するページ
+# (blog_path, basename) のセット
+STRUCTURED_PAGES = {
+    ("project", "members"),
+}
+
+
 def main():
     all_pages = load_dir("pages")
     all_entries = load_dir("entries")
 
     # mt(home 埋め込み) と それ以外を分離
     home_sections = [p for p in all_pages if p["blog_path"] == "mt"]
-    other_pages = [p for p in all_pages if p["blog_path"] != "mt"]
+    other_pages = [
+        p for p in all_pages
+        if p["blog_path"] != "mt"
+        and (p["blog_path"], p["basename"]) not in STRUCTURED_PAGES
+    ]
 
     # 通常ページは URL 用にスラッグ計算
     for p in other_pages:

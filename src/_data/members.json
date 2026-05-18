@@ -1,0 +1,116 @@
+{
+  "page_title": "メンバー",
+  "page_subtitle": "Members",
+  "groups": [
+    {
+      "key": "primary",
+      "label": "コアメンバー",
+      "members": [
+        {
+          "name_ja": "桂 ゆかり",
+          "name_en": "Yukari Katsura",
+          "role": "プロジェクトリーダー",
+          "photo": "/project/img/profile_katsura.jpg",
+          "affiliation": "(国研)物質・材料研究機構 主任研究員\n          (国研)理化学研究所 客員研究員\n筑波大学 理工情報生命学術院  准教授",
+          "links": [
+            {
+              "label": "Twitter",
+              "href": "https://twitter.com/nezdenmama"
+            },
+            {
+              "label": "Official Page",
+              "href": "https://researchmap.jp/ykatsura"
+            }
+          ]
+        },
+        {
+          "name_ja": "熊谷 将也",
+          "name_en": "Masaya Kumagai",
+          "role": "Web開発",
+          "photo": "/project/img/profile_kumagai.jpg",
+          "affiliation": "さくらインターネット株式会社 研究員\n          (国研)理化学研究所 客員研究員",
+          "links": [
+            {
+              "label": "Twitter",
+              "href": "https://twitter.com/kumagallium"
+            },
+            {
+              "label": "Official Page",
+              "href": "https://kumagallium.github.io/"
+            }
+          ]
+        },
+        {
+          "name_ja": "間藤 智也",
+          "name_en": "Tomoya Mato",
+          "role": "Web開発",
+          "photo": "/project/img/profile_mato.jpg",
+          "affiliation": "(国研)物質・材料研究機構 エンジニア",
+          "links": []
+        },
+        {
+          "name_ja": "田中 敦美",
+          "name_en": "Atsumi Tanaka",
+          "role": "プロジェクト運営\n（リサーチ・アドミニストレーター）",
+          "photo": "/project/img/img_members_05.png",
+          "affiliation": "(国研)物質・材料研究機構",
+          "links": []
+        }
+      ]
+    },
+    {
+      "key": "secondary",
+      "label": "メンバー",
+      "members": [
+        {
+          "name_ja": "坂本 吉宏",
+          "name_en": "Yoshihiro Sakamoto",
+          "role": "データ収集",
+          "photo": "/project/img/profile_sakamoto.jpg",
+          "affiliation": "(国研)理化学研究所",
+          "links": []
+        },
+        {
+          "name_ja": "デウィ ヤナ",
+          "name_en": "Dewi Yana",
+          "role": "データ収集",
+          "photo": "/project/img/profile_dewi.jpg",
+          "affiliation": "(国研)物質・材料研究機構",
+          "links": []
+        },
+        {
+          "name_ja": "細野 史一",
+          "name_en": "Fumikazu Hosono",
+          "role": "データ収集",
+          "photo": "/project/img/profile_hosono.jpg",
+          "affiliation": "(国研)物質・材料研究機構",
+          "links": []
+        },
+        {
+          "name_ja": "小山 栄二",
+          "name_en": "Eiji Koyama",
+          "role": "データ収集",
+          "photo": "/project/img/profile_koyama.jpg",
+          "affiliation": "(国研)物質・材料研究機構",
+          "links": []
+        },
+        {
+          "name_ja": "斉藤 直人",
+          "name_en": "Naoto Saito",
+          "role": "データ収集",
+          "photo": "/project/img/profile_saito.jpg",
+          "affiliation": "(国研)物質・材料研究機構",
+          "links": []
+        },
+        {
+          "name_ja": "高田　悠",
+          "name_en": "Yu Takada",
+          "role": "Web開発",
+          "photo": "/project/img/profile_takada.jpg",
+          "affiliation": "(国研)物質・材料研究機構",
+          "links": []
+        }
+      ]
+    }
+  ]
+}
