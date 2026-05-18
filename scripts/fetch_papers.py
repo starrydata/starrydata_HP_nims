@@ -223,6 +223,16 @@ def main():
                 existing[k] = v
 
     # --- (1) OpenAlex から取得 ---
+    # 各 seed の citing papers 件数を記録
+    for project in project_papers:
+        project["citation_counts"] = {
+            "openalex": 0,
+            "opencitations": 0,
+            "unique": 0,        # 後で計算（重複排除後）
+        }
+        project["citing_dois_oa"] = set()
+        project["citing_dois_oc"] = set()
+
     for project in project_papers:
         wid = project["openalex_id"]
         if not wid:
@@ -230,11 +240,14 @@ def main():
         print(f"[OpenAlex] cited_by {wid} ({project['doi']}) ...")
         cites = fetch_cited_by_openalex(wid)
         print(f"  -> {len(cites)} citing works")
+        project["citation_counts"]["openalex"] = len(cites)
         for w in cites:
             paper = extract_paper(w)
             doi_l = (paper["doi"] or "").lower()
             if doi_l:
                 merge_paper(doi_l, paper, "openalex", project["doi"])
+                if doi_l not in seed_doi_set:
+                    project["citing_dois_oa"].add(doi_l)
 
     # --- (2) OpenCitations から取得（不足を埋める） ---
     new_dois_from_oc: dict[str, str] = {}  # doi -> seed_doi
@@ -245,15 +258,25 @@ def main():
         print(f"[OpenCitations] citations of {seed_doi} ...")
         oc_dois = fetch_cited_by_opencitations(seed_doi)
         print(f"  -> {len(oc_dois)} citing DOIs")
+        project["citation_counts"]["opencitations"] = len(oc_dois)
         for d in oc_dois:
             if d in seed_doi_set:
                 continue
+            project["citing_dois_oc"].add(d)
             if d in citing_by_doi:
                 citing_by_doi[d]["sources"].add("opencitations")
                 citing_by_doi[d]["cites_seeds"].add(seed_doi)
             else:
                 new_dois_from_oc[d] = seed_doi
         time.sleep(0.2)
+
+    # 各 seed のユニーク件数を確定し、内部用フィールドを削除
+    for project in project_papers:
+        union = project["citing_dois_oa"] | project["citing_dois_oc"]
+        project["citation_counts"]["unique"] = len(union)
+        # 内部一時フィールドを削除
+        del project["citing_dois_oa"]
+        del project["citing_dois_oc"]
 
     # --- (3) OpenCitations のみで見つかった DOI を Crossref で補完 ---
     if new_dois_from_oc:
@@ -300,14 +323,18 @@ def main():
 
     print()
     print(f"project_papers: {len(project_papers)}")
+    print(f"{'YEAR':5}{'DOI':38}{'OA':>5}{'OC':>5}{'UNI':>5}  TITLE")
+    sum_oa = sum_oc = sum_uni = 0
     for p in project_papers:
-        print(f"  {p['year']}  {p['doi']:35}  {p['title'][:60]}")
+        c = p["citation_counts"]
+        sum_oa += c["openalex"]
+        sum_oc += c["opencitations"]
+        sum_uni += c["unique"]
+        print(f"  {p['year'] or '----':4} {p['doi']:38}{c['openalex']:>5}{c['opencitations']:>5}{c['unique']:>5}  {p['title'][:50]}")
+    print(f"  {'':4} {'(sum incl. duplicates)':38}{sum_oa:>5}{sum_oc:>5}{sum_uni:>5}")
+    print(f"  {'':4} {'(unique across all seeds)':38}{'':>5}{'':>5}{len(citing_papers):>5}")
     print()
-    print(f"citing_papers : {len(citing_papers)}")
-    for p in citing_papers[:10]:
-        print(f"  {p['year']}  {p['doi']:35}  {p['title'][:60]}")
-    if len(citing_papers) > 10:
-        print(f"  ... and {len(citing_papers) - 10} more")
+    print(f"citing_papers (unique): {len(citing_papers)}")
 
 
 if __name__ == "__main__":

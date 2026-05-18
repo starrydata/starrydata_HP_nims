@@ -1,6 +1,6 @@
 {
   "description": "Starrydata プロジェクト関連論文（seed）と、それらを引用している外部論文",
-  "fetched_at": "2026-05-18T18:27:00+09:00",
+  "fetched_at": "2026-05-18T18:30:27+09:00",
   "data_sources": [
     "OpenAlex (https://openalex.org)",
     "OpenCitations / Crossref Open Citations (https://opencitations.net)"
@@ -26,7 +26,12 @@
       "end_page": "",
       "doi": "10.1080/27660400.2025.2485018",
       "doi_url": "https://doi.org/10.1080/27660400.2025.2485018",
-      "cited_by_count": 3
+      "cited_by_count": 3,
+      "citation_counts": {
+        "openalex": 3,
+        "opencitations": 1,
+        "unique": 2
+      }
     },
     {
       "openalex_id": "W4410542656",
@@ -40,7 +45,12 @@
       "end_page": "",
       "doi": "10.1080/27660400.2025.2506976",
       "doi_url": "https://doi.org/10.1080/27660400.2025.2506976",
-      "cited_by_count": 7
+      "cited_by_count": 7,
+      "citation_counts": {
+        "openalex": 7,
+        "opencitations": 1,
+        "unique": 7
+      }
     },
     {
       "openalex_id": "W4416401002",
@@ -54,7 +64,12 @@
       "end_page": "",
       "doi": "10.1080/27660400.2025.2590811",
       "doi_url": "https://doi.org/10.1080/27660400.2025.2590811",
-      "cited_by_count": 0
+      "cited_by_count": 0,
+      "citation_counts": {
+        "openalex": 0,
+        "opencitations": 0,
+        "unique": 0
+      }
     },
     {
       "openalex_id": "W4404333419",
@@ -68,7 +83,12 @@
       "end_page": "1211",
       "doi": "10.1038/s41597-024-04043-z",
       "doi_url": "https://doi.org/10.1038/s41597-024-04043-z",
-      "cited_by_count": 9
+      "cited_by_count": 9,
+      "citation_counts": {
+        "openalex": 9,
+        "opencitations": 4,
+        "unique": 6
+      }
     },
     {
       "openalex_id": "W4360998810",
@@ -82,7 +102,12 @@
       "end_page": "106494",
       "doi": "10.1016/j.isci.2023.106494",
       "doi_url": "https://doi.org/10.1016/j.isci.2023.106494",
-      "cited_by_count": 49
+      "cited_by_count": 49,
+      "citation_counts": {
+        "openalex": 46,
+        "opencitations": 30,
+        "unique": 47
+      }
     },
     {
       "openalex_id": "W4303648596",
@@ -96,7 +121,12 @@
       "end_page": "",
       "doi": "10.1038/s41524-022-00897-2",
       "doi_url": "https://doi.org/10.1038/s41524-022-00897-2",
-      "cited_by_count": 54
+      "cited_by_count": 54,
+      "citation_counts": {
+        "openalex": 55,
+        "opencitations": 33,
+        "unique": 53
+      }
     },
     {
       "openalex_id": "W2948233954",
@@ -110,7 +140,12 @@
       "end_page": "520",
       "doi": "10.1080/14686996.2019.1603885",
       "doi_url": "https://doi.org/10.1080/14686996.2019.1603885",
-      "cited_by_count": 98
+      "cited_by_count": 98,
+      "citation_counts": {
+        "openalex": 98,
+        "opencitations": 72,
+        "unique": 92
+      }
     },
     {
       "openalex_id": "W2751047116",
@@ -124,7 +159,12 @@
       "end_page": "470",
       "doi": "10.2497/jjspm.64.467",
       "doi_url": "https://doi.org/10.2497/jjspm.64.467",
-      "cited_by_count": 5
+      "cited_by_count": 5,
+      "citation_counts": {
+        "openalex": 5,
+        "opencitations": 5,
+        "unique": 3
+      }
     }
   ],
   "citing_papers": [

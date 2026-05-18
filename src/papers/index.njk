@@ -52,8 +52,15 @@ bodyId: papers
             {%- if p.doi %}
             <p class="paper-doi">
               DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a>
-              {%- if p.cited_by_count > 0 %}
-              ／ Cited by {{ p.cited_by_count }}
+            </p>
+            {%- endif %}
+            {%- if p.cited_by_count or p.citation_counts %}
+            <p class="paper-citations">
+              {%- if p.cited_by_count %}
+              <span class="citation-stat">Total citations (OpenAlex): <strong>{{ p.cited_by_count }}</strong></span>
+              {%- endif %}
+              {%- if p.citation_counts %}
+              <span class="citation-stat">Fetched citing papers — OpenAlex: <strong>{{ p.citation_counts.openalex }}</strong> ／ OpenCitations: <strong>{{ p.citation_counts.opencitations }}</strong> ／ unique: <strong>{{ p.citation_counts.unique }}</strong></span>
               {%- endif %}
             </p>
             {%- endif %}
