@@ -1,0 +1,13 @@
+---
+pagination:
+  data: pages_all
+  size: 1
+  alias: pg
+permalink: "/{{ pg.blog_path }}/{{ pg.basename }}.html"
+eleventyComputed:
+  title: "{{ pg.title }}"
+  subtitle: "{{ pg.subtitle }}"
+  body: "{{ pg.text | safe }}{{ pg.text_more | safe }}"
+  bodyId: "{{ pg.blog_path }}"
+layout: page.njk
+---

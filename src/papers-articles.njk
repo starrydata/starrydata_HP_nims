@@ -1,0 +1,12 @@
+---
+pagination:
+  data: papers
+  size: 1
+  alias: p
+permalink: "/papers/{{ p.basename }}.html"
+eleventyComputed:
+  title: "{{ p.title }}"
+  body: "{{ p.text | safe }}{{ p.text_more | safe }}"
+  bodyId: "papers"
+layout: page.njk
+---

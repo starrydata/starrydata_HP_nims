@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+<div id="contents">
+  <div class="inner_contents">
+
+    {% if title %}
+    <div class="page_title">
+      <h2>{{ title }}</h2>
+      {% if subtitle %}<p class="subtitle">{{ subtitle }}</p>{% endif %}
+    </div>
+    {% endif %}
+
+    <div class="page_body">
+      {{ body | safe }}
+    </div>
+
+  </div>
+</div>

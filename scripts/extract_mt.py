@@ -152,17 +152,22 @@ def main():
     for p in root.findall(tag("page")):
         bid = p.get("blog_id")
         basename = p.get("basename") or f"page_{p.get('id')}"
-        title = text_of(p, "title")
+        # MTでは title は属性、本文は子要素
+        title = p.get("title") or text_of(p, "title")
         body = text_of(p, "text")
         more = text_of(p, "text_more")
         excerpt = text_of(p, "excerpt")
         keywords = text_of(p, "keywords")
+        # field.* 形式のカスタムフィールド属性を拾う
+        custom_fields = {k.replace("field.", ""): v for k, v in p.attrib.items() if k.startswith("field.")}
         data = {
             "id": p.get("id"),
             "blog_id": bid,
             "blog_path": bid_to_path.get(bid),
             "basename": basename,
             "title": title,
+            "subtitle": custom_fields.get("pagedatasubtitle", ""),
+            "custom_fields": custom_fields,
             "text": body,
             "text_more": more,
             "excerpt": excerpt,
@@ -174,7 +179,8 @@ def main():
         }
         subdir = pages_dir / (bid_to_path.get(bid) or f"blog_{bid}")
         subdir.mkdir(parents=True, exist_ok=True)
-        fname = f"{safe_basename(basename)}.json"
+        # ファイル名に id を含めて basename 重複を回避
+        fname = f"{p.get('id')}__{safe_basename(basename)}.json"
         (subdir / fname).write_text(
             json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
         )
@@ -190,17 +196,19 @@ def main():
     for e in root.findall(tag("entry")):
         bid = e.get("blog_id")
         basename = e.get("basename") or f"entry_{e.get('id')}"
-        title = text_of(e, "title")
+        title = e.get("title") or text_of(e, "title")
         body = text_of(e, "text")
         more = text_of(e, "text_more")
         excerpt = text_of(e, "excerpt")
         keywords = text_of(e, "keywords")
+        custom_fields = {k.replace("field.", ""): v for k, v in e.attrib.items() if k.startswith("field.")}
         data = {
             "id": e.get("id"),
             "blog_id": bid,
             "blog_path": bid_to_path.get(bid),
             "basename": basename,
             "title": title,
+            "custom_fields": custom_fields,
             "text": body,
             "text_more": more,
             "excerpt": excerpt,
@@ -213,7 +221,7 @@ def main():
         }
         subdir = entries_dir / (bid_to_path.get(bid) or f"blog_{bid}")
         subdir.mkdir(parents=True, exist_ok=True)
-        fname = f"{safe_basename(basename)}.json"
+        fname = f"{e.get('id')}__{safe_basename(basename)}.json"
         (subdir / fname).write_text(
             json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
         )
