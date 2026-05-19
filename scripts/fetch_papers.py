@@ -364,81 +364,6 @@ def main():
             "papers": seen_years[y],
         })
 
-    # ===== Dataset を引用している論文を取得 =====
-    # figshare project 155129 から全 dataset DOI を取得 → 各 DOI で被引用検索
-    print()
-    print("===== Dataset citations =====")
-    datasets = fetch_figshare_dataset_dois()
-    print(f"Starrydata datasets on figshare: {len(datasets)}")
-
-    dataset_citing_by_doi: dict[str, dict] = {}
-    dataset_doi_lower_set = {d["doi"].lower() for d in datasets} | {d["doi_canonical"].lower() for d in datasets}
-    cited_datasets_count = 0  # 引用が見つかった dataset の数
-
-    for i, ds in enumerate(datasets):
-        # 進捗表示は10件に1回
-        if i % 25 == 0:
-            print(f"  scanning {i+1}/{len(datasets)} ...")
-        doi = ds["doi"]
-        # canonical 形 (.vN 抜き) でも試す
-        for d in (doi, ds["doi_canonical"]):
-            oc_dois = fetch_cited_by_opencitations(d)
-            if oc_dois:
-                cited_datasets_count += 1
-                # 重複DOI除外
-                for cit_doi in set(oc_dois):
-                    if cit_doi in seed_doi_set or cit_doi in dataset_doi_lower_set:
-                        continue
-                    if cit_doi not in dataset_citing_by_doi:
-                        dataset_citing_by_doi[cit_doi] = {
-                            "doi_lower": cit_doi,
-                            "cited_datasets": [],
-                        }
-                    dataset_citing_by_doi[cit_doi]["cited_datasets"].append(d)
-            time.sleep(0.15)
-
-    print(f"  datasets with citations: {cited_datasets_count}/{len(datasets)}")
-    print(f"  unique citing DOIs: {len(dataset_citing_by_doi)}")
-
-    # 引用元のメタデータを取得（OpenAlex 優先、なければ Crossref）
-    dataset_citing_papers: list[dict] = []
-    for cit_doi, info in dataset_citing_by_doi.items():
-        meta = None
-        # 既に citing_by_doi に入っていれば再利用
-        if cit_doi in citing_by_doi:
-            meta = dict(citing_by_doi[cit_doi]["paper"])
-        else:
-            try:
-                w = get_json(
-                    f"{OPENALEX}/works/https://doi.org/{urllib.parse.quote(cit_doi, safe='/.')}",
-                    attach_mailto=True,
-                )
-                meta = extract_paper(w)
-            except Exception:
-                meta = fetch_crossref_meta(cit_doi)
-        if not meta:
-            continue
-        meta["cited_datasets"] = sorted(set(info["cited_datasets"]))
-        dataset_citing_papers.append(meta)
-        time.sleep(0.1)
-
-    dataset_citing_papers.sort(
-        key=lambda p: (p.get("year") or 0, p.get("cited_by_count") or 0), reverse=True
-    )
-
-    # 年別グループ化
-    dataset_citing_by_year: list[dict] = []
-    seen2: dict[int | None, list[dict]] = {}
-    for p in dataset_citing_papers:
-        y = p.get("year") or 0
-        seen2.setdefault(y, []).append(p)
-    for y in sorted(seen2.keys(), reverse=True):
-        dataset_citing_by_year.append({
-            "year": y if y else None,
-            "count": len(seen2[y]),
-            "papers": seen2[y],
-        })
-
     jst = timezone(timedelta(hours=9))
     out = {
         "description": "Starrydata プロジェクト関連論文（seed）と、それらを引用している外部論文",
@@ -458,11 +383,6 @@ def main():
         "project_papers": project_papers,
         "citing_papers": citing_papers,
         "citing_papers_by_year": citing_papers_by_year,
-        "datasets_count": len(datasets),
-        "datasets_with_citations": cited_datasets_count,
-        "dataset_citing_papers_count": len(dataset_citing_papers),
-        "dataset_citing_papers": dataset_citing_papers,
-        "dataset_citing_papers_by_year": dataset_citing_by_year,
     }
 
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -482,12 +402,6 @@ def main():
     print(f"  {'':4} {'(unique across all seeds)':38}{'':>5}{'':>5}{len(citing_papers):>5}")
     print()
     print(f"citing_papers (unique): {len(citing_papers)}")
-    print()
-    print(f"figshare datasets scanned : {len(datasets)}")
-    print(f"datasets with citations   : {cited_datasets_count}")
-    print(f"dataset_citing_papers     : {len(dataset_citing_papers)}")
-    for p in dataset_citing_papers[:10]:
-        print(f"  {p.get('year')}  {p.get('doi'):35}  {(p.get('title') or '')[:60]}")
 
 
 if __name__ == "__main__":
