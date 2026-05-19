@@ -34,5 +34,38 @@
 
 {% include "modern_footer.njk" %}
 
+<script>
+(function() {
+  // counts.json から最新の Starrydata2 統計を取得
+  // https://starrydata.github.io/json/counts.json （Starrydata 公式集計）
+  const els = document.querySelectorAll('[data-counts]');
+  if (!els.length) return;
+
+  const fmt = n => n.toLocaleString('en-US');
+
+  fetch('https://starrydata.github.io/json/counts.json', { cache: 'no-store' })
+    .then(r => r.json())
+    .then(d => {
+      const fieldsCount = Object.keys(d.projects || {}).filter(k => k !== 'GeneralDB').length || null;
+      const map = {
+        samples: d.samples,
+        curves:  d.curves,
+        papers:  d.papers,
+        figures: d.figures,
+        fields:  fieldsCount,
+      };
+      els.forEach(el => {
+        const key = el.dataset.counts;
+        const v = map[key];
+        if (v == null) return;
+        el.textContent = fmt(v);
+      });
+    })
+    .catch(err => {
+      // フォールバックは HTML 内のハードコード値を維持
+      console.warn('counts.json fetch failed; using fallback values', err);
+    });
+})();
+</script>
 </body>
 </html>

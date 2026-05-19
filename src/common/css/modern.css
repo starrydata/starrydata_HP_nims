@@ -211,7 +211,7 @@ h1, h2, h3, h4 {
 /* ---- Stats ---- */
 .stats {
   background:
-    linear-gradient(rgba(10,25,41,0.20), rgba(10,25,41,0.20)),
+    linear-gradient(rgba(10,25,41,0.55), rgba(10,25,41,0.55)),
     url('/assets/images/hero/milky_way_katsura.jpg') center 65%/cover no-repeat,
     #0a1929;
   color: var(--text-on);
@@ -221,7 +221,7 @@ h1, h2, h3, h4 {
 .stats::before {
   content: "";
   position: absolute; inset: 0;
-  background: radial-gradient(800px 240px at 50% 50%, rgba(10,25,41,0.35), transparent 75%);
+  background: radial-gradient(900px 260px at 50% 50%, rgba(10,25,41,0.30), transparent 75%);
   pointer-events: none;
 }
 .stats .container { position: relative; }
