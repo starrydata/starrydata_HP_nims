@@ -1,11 +1,11 @@
 ---
 layout: modern.njk
-permalink: /index.html
+permalink: /en/index.html
 title:
-lang: ja
+lang: en
 ---
 
-{%- set L = "ja" -%}
+{%- set L = "en" -%}
 
 <!-- =================== HERO =================== -->
 <section class="hero">
@@ -30,22 +30,10 @@ lang: ja
 <!-- =================== STATS =================== -->
 <section class="stats">
   <div class="container">
-    <div class="stat">
-      <div class="num">82,000+</div>
-      <div class="label">{{ i18n.stats.samples[L] }}</div>
-    </div>
-    <div class="stat">
-      <div class="num">194,000+</div>
-      <div class="label">{{ i18n.stats.curves[L] }}</div>
-    </div>
-    <div class="stat">
-      <div class="num">13,000+</div>
-      <div class="label">{{ i18n.stats.papers[L] }}</div>
-    </div>
-    <div class="stat">
-      <div class="num">7</div>
-      <div class="label">{{ i18n.stats.fields[L] }}</div>
-    </div>
+    <div class="stat"><div class="num">82,000+</div><div class="label">{{ i18n.stats.samples[L] }}</div></div>
+    <div class="stat"><div class="num">194,000+</div><div class="label">{{ i18n.stats.curves[L] }}</div></div>
+    <div class="stat"><div class="num">13,000+</div><div class="label">{{ i18n.stats.papers[L] }}</div></div>
+    <div class="stat"><div class="num">7</div><div class="label">{{ i18n.stats.fields[L] }}</div></div>
   </div>
 </section>
 
@@ -81,49 +69,25 @@ lang: ja
   <div class="container">
     <span class="eyebrow">Research</span>
     <h2>{{ i18n.fields.title[L] }}</h2>
-    <p class="lead">7 つの研究領域で、論文からの実験データ収集と Materials Informatics の研究を進めています。</p>
+    <p class="lead">Seven research fields powering data curation and Materials Informatics studies.</p>
 
     <div class="fields-grid">
       <a class="field-card" href="/data/thermoelectric.html">
-        <div class="field-num">01</div>
-        <h3>熱電材料</h3>
-        <div class="en">Thermoelectric</div>
-      </a>
+        <div class="field-num">01</div><h3>Thermoelectric</h3><div class="en">熱電材料</div></a>
       <a class="field-card" href="/data/magnetic.html">
-        <div class="field-num">02</div>
-        <h3>磁性材料</h3>
-        <div class="en">Magnetic</div>
-      </a>
+        <div class="field-num">02</div><h3>Magnetic</h3><div class="en">磁性材料</div></a>
       <a class="field-card" href="/data/quasicrystal.html">
-        <div class="field-num">03</div>
-        <h3>準結晶</h3>
-        <div class="en">Quasicrystal</div>
-      </a>
+        <div class="field-num">03</div><h3>Quasicrystal</h3><div class="en">準結晶</div></a>
       <a class="field-card" href="/data/condensed.html">
-        <div class="field-num">04</div>
-        <h3>固体物性</h3>
-        <div class="en">Condensed Matter</div>
-      </a>
+        <div class="field-num">04</div><h3>Condensed Matter</h3><div class="en">固体物性</div></a>
       <a class="field-card" href="/data/battery.html">
-        <div class="field-num">05</div>
-        <h3>電池材料</h3>
-        <div class="en">Battery</div>
-      </a>
+        <div class="field-num">05</div><h3>Battery</h3><div class="en">電池材料</div></a>
       <a class="field-card" href="/data/piezoelectric.html">
-        <div class="field-num">06</div>
-        <h3>圧電材料</h3>
-        <div class="en">Piezoelectric</div>
-      </a>
+        <div class="field-num">06</div><h3>Piezoelectric</h3><div class="en">圧電材料</div></a>
       <a class="field-card" href="#">
-        <div class="field-num">07</div>
-        <h3>誘電材料</h3>
-        <div class="en">Dielectric</div>
-      </a>
+        <div class="field-num">07</div><h3>Dielectric</h3><div class="en">誘電材料</div></a>
       <a class="field-card" href="#">
-        <div class="field-num">+</div>
-        <h3>More coming</h3>
-        <div class="en">継続拡大中</div>
-      </a>
+        <div class="field-num">+</div><h3>More coming</h3><div class="en">expanding</div></a>
     </div>
   </div>
 </section>
@@ -133,14 +97,12 @@ lang: ja
   <div class="container">
     <span class="eyebrow">Publications</span>
     <h2>{{ i18n.publications.title[L] }}</h2>
-    <p class="lead">Starrydata プロジェクトの代表論文（最新 3 件）。全 8 本のプロジェクト論文と 184 本の引用論文は一覧ページで。</p>
+    <p class="lead">Top 3 of 8 project papers from the Starrydata team. 184 external publications cite our work.</p>
 
     <div class="card-grid">
       {%- for p in papers.project_papers.slice(0, 3) %}
       <article class="mini-card">
-        <div class="meta">
-          <span class="tag">Paper</span>{{ p.year }}
-        </div>
+        <div class="meta"><span class="tag">Paper</span>{{ p.year }}</div>
         <h3><a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.title }}</a></h3>
         <p>{{ p.authors }}</p>
       </article>
@@ -162,9 +124,7 @@ lang: ja
     <div class="card-grid">
       {%- for t in topics.topics.slice(0, 3) %}
       <article class="mini-card">
-        <div class="meta">
-          <span class="tag">News</span>{{ t.date }}
-        </div>
+        <div class="meta"><span class="tag">News</span>{{ t.date }}</div>
         <h3><a href="/topics/{{ t.slug }}.html">{{ t.title }}</a></h3>
         <p>{{ t.summary }}</p>
       </article>
@@ -192,17 +152,13 @@ lang: ja
   <div class="container">
     <span class="eyebrow">Team</span>
     <h2>{{ i18n.team.title[L] }}</h2>
-    <p class="lead">Starrydata は無機材料・データ科学・Web 開発の研究者・エンジニアで構成された専属チームで運営されています。</p>
+    <p class="lead">Starrydata runs as a dedicated team of researchers and engineers in materials science, data science, and web development.</p>
 
     <div class="team-grid">
       {%- for m in members.groups[0].members.slice(0, 5) %}
       <div class="member-card">
-        {% if m.photo %}
-        <img class="photo" src="{{ m.photo }}" alt="{{ m.name_ja }}">
-        {% else %}
-        <div class="photo"></div>
-        {% endif %}
-        <h4>{{ m.name_ja }}</h4>
+        {% if m.photo %}<img class="photo" src="{{ m.photo }}" alt="{{ m.name_en }}">{% else %}<div class="photo"></div>{% endif %}
+        <h4>{{ m.name_en }}</h4>
         <div class="role">{{ m.role }}</div>
       </div>
       {%- endfor %}

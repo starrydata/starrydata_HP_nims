@@ -1,0 +1,26 @@
+{%- set L = lang or 'ja' -%}
+{%- set otherLang = 'en' if L == 'ja' else 'ja' -%}
+{%- set langPath = '/en/' if L == 'en' else '/' -%}
+{%- set otherLangPath = '/en/' if otherLang == 'en' else '/' -%}
+
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="{{ langPath }}">
+      <span>★</span> Starrydata
+    </a>
+
+    <nav class="site-nav" aria-label="Global">
+      <a href="{{ langPath }}#about">{{ i18n.nav.about[L] }}</a>
+      <a href="{{ langPath }}#research">{{ i18n.nav.research[L] }}</a>
+      <a href="{{ langPath }}#team">{{ i18n.nav.team[L] }}</a>
+      <a href="{{ langPath }}#publications">{{ i18n.nav.publications[L] }}</a>
+      <a href="{{ langPath }}#news">{{ i18n.nav.news[L] }}</a>
+      <a href="{{ langPath }}#collaborate">{{ i18n.nav.collaborate[L] }}</a>
+
+      <span class="lang-switch" role="group" aria-label="Language">
+        <a href="/" class="{{ 'is-active' if L == 'ja' else '' }}">JA</a>
+        <a href="/en/" class="{{ 'is-active' if L == 'en' else '' }}">EN</a>
+      </span>
+    </nav>
+  </div>
+</header>

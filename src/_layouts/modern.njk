@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'ja' }}">
+<head prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="FOLLOW,INDEX">
+
+{%- set L = lang or 'ja' -%}
+{%- set siteName = i18n.site.name[L] -%}
+{%- set siteTagline = i18n.site.tagline[L] -%}
+{%- set siteDesc = i18n.site.description[L] -%}
+
+<title>{% if title %}{{ title }} | {% endif %}{{ siteName }} — {{ siteTagline }}</title>
+<meta name="description" content="{{ description or siteDesc }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="/common/css/modern.css" rel="stylesheet">
+
+<meta property="og:title" content="{{ siteName }} — {{ siteTagline }}">
+<meta property="og:type" content="website">
+<meta property="og:description" content="{{ description or siteDesc }}">
+<meta property="og:locale" content="{{ 'ja_JP' if L == 'ja' else 'en_US' }}">
+</head>
+<body>
+
+{% include "modern_header.njk" %}
+
+<main>
+{{ content | safe }}
+</main>
+
+{% include "modern_footer.njk" %}
+
+</body>
+</html>

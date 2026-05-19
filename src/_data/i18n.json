@@ -1,0 +1,113 @@
+{
+  "_note": "サイト全テキストのバイリンガル管理。{key: {ja: ..., en: ...}}",
+  "default_lang": "ja",
+  "site": {
+    "name": {
+      "ja": "Starrydata",
+      "en": "Starrydata"
+    },
+    "tagline": {
+      "ja": "無機材料の実験データを論文からオープンに",
+      "en": "Open experimental data from materials science literature"
+    },
+    "description": {
+      "ja": "Starrydata は、無機材料科学の論文に掲載されたプロット画像から実験データを抽出・共有するオープンデータベース構築プロジェクトです。",
+      "en": "Starrydata is an open database project that extracts and shares experimental data from plot images in published inorganic materials science papers."
+    }
+  },
+  "nav": {
+    "home":          { "ja": "ホーム",         "en": "Home" },
+    "about":         { "ja": "Starrydataとは", "en": "About" },
+    "research":      { "ja": "研究領域",       "en": "Research" },
+    "team":          { "ja": "メンバー",       "en": "Team" },
+    "publications":  { "ja": "論文",           "en": "Publications" },
+    "news":          { "ja": "ニュース",       "en": "News" },
+    "use_data":      { "ja": "データを使う",   "en": "Use Data" },
+    "collaborate":   { "ja": "共同研究",       "en": "Collaborate" },
+    "contact":       { "ja": "お問い合わせ",   "en": "Contact" }
+  },
+  "hero": {
+    "headline_1": {
+      "ja": "論文のグラフから",
+      "en": "From paper plots"
+    },
+    "headline_2": {
+      "ja": "実験データを世界へ",
+      "en": "to open materials data"
+    },
+    "subline": {
+      "ja": "Materials Informatics 研究のための大規模オープンデータベース。82,000を超える試料、194,000を超えるカーブ、13,000を超える論文から、再利用可能な形で公開しています。",
+      "en": "A large-scale open database for Materials Informatics research. 82,000+ samples, 194,000+ curves curated from 13,000+ publications, all reusable."
+    },
+    "cta_primary": {
+      "ja": "Starrydata2 を試す",
+      "en": "Try Starrydata2"
+    },
+    "cta_secondary": {
+      "ja": "共同研究の相談",
+      "en": "Start a Collaboration"
+    }
+  },
+  "stats": {
+    "title":    { "ja": "数字で見る Starrydata",  "en": "Starrydata by the Numbers" },
+    "samples":  { "ja": "試料",                  "en": "Samples" },
+    "curves":   { "ja": "カーブ",                "en": "Curves" },
+    "papers":   { "ja": "論文",                  "en": "Papers" },
+    "fields":   { "ja": "研究領域",              "en": "Research fields" }
+  },
+  "what_is": {
+    "title":     { "ja": "Starrydata とは",     "en": "What is Starrydata" },
+    "lead": {
+      "ja": "実験論文に掲載されたグラフから実験データを構造化し、誰でも再利用できる形で公開するオープンデータプロジェクトです。",
+      "en": "An open data project that structures experimental data from graphs in published papers and shares it for reuse."
+    },
+    "point1_t":  { "ja": "巨大なデータベース",          "en": "Large-scale database" },
+    "point1_d":  { "ja": "13,000本以上の論文から、82,000試料・194,000カーブを公開。",
+                   "en": "82,000 samples and 194,000 curves from 13,000+ papers." },
+    "point2_t":  { "ja": "オープンに利用可能",          "en": "Open access" },
+    "point2_d":  { "ja": "Figshare・APIから無償でダウンロード、API経由で機械学習に直接利用できます。",
+                   "en": "Free download via Figshare and API; directly usable for machine learning." },
+    "point3_t":  { "ja": "毎日更新・拡大中",            "en": "Updated daily" },
+    "point3_d":  { "ja": "熱電・磁性・準結晶・電池など、対象材料を継続的に拡大しています。",
+                   "en": "Continuously expanding: thermoelectric, magnetic, quasicrystal, battery and more." }
+  },
+  "fields": {
+    "title": { "ja": "研究領域", "en": "Research Fields" },
+    "see_all": { "ja": "一覧を見る", "en": "View all" }
+  },
+  "publications": {
+    "title":   { "ja": "主要論文",      "en": "Featured Publications" },
+    "see_all": { "ja": "論文一覧を見る", "en": "View all publications" }
+  },
+  "news": {
+    "title":   { "ja": "ニュース",      "en": "News" },
+    "see_all": { "ja": "ニュース一覧",  "en": "View all news" }
+  },
+  "collaborate": {
+    "title": {
+      "ja": "Starrydata と共同研究しませんか？",
+      "en": "Partner with Starrydata"
+    },
+    "lead": {
+      "ja": "データ提供・共同研究・受託研究・賛助会員を募集しています。Materials Informatics の研究開発を私たちと一緒に進めましょう。",
+      "en": "We welcome data provision, joint research, contract research, and supporting member partnerships. Let's advance Materials Informatics together."
+    },
+    "cta": {
+      "ja": "問い合わせる",
+      "en": "Get in touch"
+    }
+  },
+  "team": {
+    "title":   { "ja": "メンバー",        "en": "Team" },
+    "see_all": { "ja": "メンバー一覧",    "en": "View all members" },
+    "core":    { "ja": "コアメンバー",    "en": "Core Members" },
+    "researchers": { "ja": "メンバー",    "en": "Researchers" }
+  },
+  "funding": {
+    "title": { "ja": "支援機関・パートナー", "en": "Funders and Partners" }
+  },
+  "footer": {
+    "copyright":  { "ja": "© Starrydata. All rights reserved.", "en": "© Starrydata. All rights reserved." },
+    "made_with":  { "ja": "Built with Eleventy", "en": "Built with Eleventy" }
+  }
+}

@@ -1,0 +1,44 @@
+{%- set L = lang or 'ja' -%}
+{%- set langPath = '/en/' if L == 'en' else '/' -%}
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <div class="brand">★ Starrydata</div>
+      <p class="small" style="margin-top:10px; max-width:340px;">
+        {{ i18n.site.tagline[L] }}
+      </p>
+    </div>
+
+    <div>
+      <h5>{{ i18n.nav.about[L] }}</h5>
+      <ul>
+        <li><a href="{{ langPath }}#about">{{ i18n.nav.about[L] }}</a></li>
+        <li><a href="{{ langPath }}#research">{{ i18n.nav.research[L] }}</a></li>
+        <li><a href="{{ langPath }}#team">{{ i18n.nav.team[L] }}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>{{ i18n.nav.use_data[L] }}</h5>
+      <ul>
+        <li><a href="https://www.starrydata2.org" target="_blank" rel="noopener">Starrydata2</a></li>
+        <li><a href="https://figshare.com/projects/Starrydata_datasets/155129" target="_blank" rel="noopener">Figshare</a></li>
+        <li><a href="https://github.com/starrydata/starrydata_datasets" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>{{ i18n.nav.contact[L] }}</h5>
+      <ul>
+        <li><a href="{{ langPath }}#collaborate">{{ i18n.nav.collaborate[L] }}</a></li>
+        <li><a href="{{ langPath }}#contact">{{ i18n.nav.contact[L] }}</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>{{ i18n.footer.copyright[L] }}</span>
+    <span>{{ i18n.footer.made_with[L] }}</span>
+  </div>
+</footer>
