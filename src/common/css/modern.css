@@ -204,20 +204,26 @@ h1, h2, h3, h4 {
 /* ---- Stats ---- */
 .stats {
   background:
-    linear-gradient(rgba(10,25,41,0.45), rgba(10,25,41,0.45)),
+    linear-gradient(rgba(10,25,41,0.20), rgba(10,25,41,0.20)),
     url('/assets/images/hero/milky_way_katsura.jpg') center 65%/cover no-repeat,
     #0a1929;
   color: var(--text-on);
-  padding: 72px 0;
+  padding: 80px 0;
   position: relative;
 }
 .stats::before {
   content: "";
   position: absolute; inset: 0;
-  background: radial-gradient(600px 200px at 50% 50%, rgba(10,25,41,0.35), transparent 70%);
+  background: radial-gradient(800px 240px at 50% 50%, rgba(10,25,41,0.35), transparent 75%);
   pointer-events: none;
 }
 .stats .container { position: relative; }
+.stats .num {
+  text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+}
+.stats .label {
+  text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+}
 .stats .container {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
 }
