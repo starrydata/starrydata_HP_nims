@@ -203,10 +203,21 @@ h1, h2, h3, h4 {
 
 /* ---- Stats ---- */
 .stats {
-  background: #0a1929;
+  background:
+    linear-gradient(rgba(10,25,41,0.45), rgba(10,25,41,0.45)),
+    url('/assets/images/hero/milky_way_katsura.jpg') center 65%/cover no-repeat,
+    #0a1929;
   color: var(--text-on);
   padding: 72px 0;
+  position: relative;
 }
+.stats::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(600px 200px at 50% 50%, rgba(10,25,41,0.35), transparent 70%);
+  pointer-events: none;
+}
+.stats .container { position: relative; }
 .stats .container {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
 }
