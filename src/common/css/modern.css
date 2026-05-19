@@ -98,9 +98,12 @@ h1, h2, h3, h4 {
 
 /* ---- Hero ---- */
 .hero {
-  background: var(--grad-hero);
+  background:
+    linear-gradient(rgba(10,25,41,0.78) 0%, rgba(15,34,64,0.65) 60%, rgba(19,78,138,0.55) 100%),
+    url('/assets/images/hero/milky_way_katsura.jpg') center 30%/cover no-repeat,
+    var(--grad-hero);
   color: var(--text-on);
-  padding: 100px 0 120px;
+  padding: 120px 0 140px;
   position: relative;
   overflow: hidden;
 }
@@ -109,8 +112,8 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(800px 400px at 80% -10%, rgba(0,212,255,0.25), transparent 60%),
-    radial-gradient(600px 300px at 0% 110%, rgba(79,140,255,0.20), transparent 60%);
+    radial-gradient(900px 460px at 80% -10%, rgba(0,212,255,0.22), transparent 60%),
+    radial-gradient(680px 340px at 0% 110%, rgba(79,140,255,0.18), transparent 60%);
   pointer-events: none;
 }
 .hero .container { position: relative; z-index: 1; }
