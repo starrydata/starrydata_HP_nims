@@ -1,6 +1,6 @@
 {
   "description": "Starrydata プロジェクト関連論文（seed）と、それらを引用している外部論文",
-  "fetched_at": "2026-05-18T18:48:06+09:00",
+  "fetched_at": "2026-05-19T14:06:43+09:00",
   "data_sources": [
     "OpenAlex (https://openalex.org)",
     "OpenCitations / Crossref Open Citations (https://opencitations.net)"
@@ -7894,5 +7894,10 @@
         }
       ]
     }
-  ]
+  ],
+  "datasets_count": 342,
+  "datasets_with_citations": 0,
+  "dataset_citing_papers_count": 0,
+  "dataset_citing_papers": [],
+  "dataset_citing_papers_by_year": []
 }
