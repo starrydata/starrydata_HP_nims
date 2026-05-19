@@ -99,7 +99,7 @@ h1, h2, h3, h4 {
 /* ---- Hero ---- */
 .hero {
   background:
-    linear-gradient(rgba(10,25,41,0.78) 0%, rgba(15,34,64,0.65) 60%, rgba(19,78,138,0.55) 100%),
+    linear-gradient(rgba(10,25,41,0.20), rgba(10,25,41,0.20)),
     url('/assets/images/hero/milky_way_katsura.jpg') center 30%/cover no-repeat,
     var(--grad-hero);
   color: var(--text-on);
@@ -112,9 +112,16 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(900px 460px at 80% -10%, rgba(0,212,255,0.22), transparent 60%),
-    radial-gradient(680px 340px at 0% 110%, rgba(79,140,255,0.18), transparent 60%);
+    radial-gradient(900px 460px at 80% -10%, rgba(0,212,255,0.18), transparent 60%),
+    radial-gradient(680px 340px at 0% 110%, rgba(79,140,255,0.14), transparent 60%),
+    radial-gradient(900px 500px at 20% 50%, rgba(10,25,41,0.45), transparent 70%);
   pointer-events: none;
+}
+.hero h1 {
+  text-shadow: 0 2px 18px rgba(0,0,0,0.55);
+}
+.hero .lead, .hero-eyebrow {
+  text-shadow: 0 1px 8px rgba(0,0,0,0.7);
 }
 .hero .container { position: relative; z-index: 1; }
 .hero-eyebrow {
