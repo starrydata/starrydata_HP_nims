@@ -49,16 +49,31 @@ lang: ja
   </div>
 </section>
 
-<!-- =================== LIVE DATA PREVIEW =================== -->
-<section class="section" id="data-preview" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+<!-- =================== HUGE DATABASE =================== -->
+<section class="section" id="huge-database" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="container">
-    <span class="eyebrow">Live Data</span>
-    <h2>温度 × Seebeck 係数</h2>
-    <p class="lead">Starrydata に収録された熱電材料の Seebeck 係数を、温度の関数としてプロットしたもの（毎月自動更新）。点は実際の文献データから抽出された生データです。</p>
-
-    <div class="chart-card">
-      <div id="chart-temp-seebeck" style="width:100%;height:520px;"></div>
-      <p class="chart-meta" id="chart-temp-seebeck-meta">Loading…</p>
+    <div class="grid-2col">
+      <div class="text-col">
+        <span class="eyebrow">Massive Dataset</span>
+        <h2>巨大なデータベース</h2>
+        <p class="lead">
+          13,000本以上の論文から、<strong data-counts="samples">104,823</strong> 試料・<strong data-counts="curves">233,061</strong> カーブを公開。
+          論文中のグラフから手作業で読み取った高品質な数値データを、機械学習・データ解析に直接利用できる形で提供しています。
+        </p>
+        <ul class="kv-list">
+          <li><span class="k">Samples</span><span class="v" data-counts="samples">104,823</span></li>
+          <li><span class="k">Curves</span><span class="v" data-counts="curves">233,061</span></li>
+          <li><span class="k">Papers</span><span class="v" data-counts="papers">17,326</span></li>
+          <li><span class="k">Updated</span><span class="v">毎月更新</span></li>
+        </ul>
+        <div class="hero-ctas" style="margin-top:28px;">
+          <a class="btn btn-primary" href="https://www.starrydata2.org" target="_blank" rel="noopener">Starrydata2 を試す →</a>
+        </div>
+      </div>
+      <div class="chart-col">
+        <div id="chart-temp-seebeck" style="width:100%;height:520px;"></div>
+        <p class="chart-meta" id="chart-temp-seebeck-meta">Loading…</p>
+      </div>
     </div>
   </div>
 </section>

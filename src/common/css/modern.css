@@ -417,20 +417,74 @@ p { margin: 0 0 1em; }
   margin-top: 48px;
 }
 
-/* ---- Live chart card ---- */
-.chart-card {
-  background: #fff;
+/* ---- Two-column showcase (text + chart) ---- */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 0.95fr 1.25fr;
+  gap: 64px;
+  align-items: center;
+}
+.grid-2col .text-col h2 { margin-bottom: 18px; }
+.grid-2col .text-col .lead { max-width: none; margin-bottom: 28px; color: var(--text); }
+.grid-2col .text-col .lead strong {
+  color: var(--accent-2);
+  font-weight: 700;
+  background: linear-gradient(120deg, transparent 0%, transparent 60%, rgba(167,139,250,0.18) 60%, rgba(167,139,250,0.18) 100%);
+  padding: 0 2px;
+}
+
+.kv-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+}
+.kv-list li {
+  display: flex; flex-direction: column;
+  padding: 14px 18px;
+  background: var(--bg-subtle);
   border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.kv-list .k {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  font-weight: 700;
+}
+.kv-list .v {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-top: 4px;
+}
+
+.chart-col {
+  background: linear-gradient(180deg, #0f0c29 0%, #1e1b4b 60%, #302b63 100%);
   border-radius: var(--radius);
-  padding: 24px;
-  box-shadow: var(--shadow-sm);
+  padding: 18px 16px 14px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.chart-col::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(500px 240px at 100% 0%, rgba(167,139,250,0.22), transparent 60%),
+    radial-gradient(400px 180px at 0% 100%, rgba(99,102,241,0.18), transparent 60%);
+  pointer-events: none;
 }
 .chart-meta {
-  margin: 12px 0 0;
-  font-size: 0.82rem;
-  color: var(--text-3);
+  margin: 10px 4px 0;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
   text-align: right;
   letter-spacing: 0.02em;
+  position: relative;
 }
 
 /* ---- Collaborate CTA ---- */
@@ -557,6 +611,7 @@ p { margin: 0 0 1em; }
   .site-footer .container { grid-template-columns: 1fr 1fr; gap: 36px; }
   .cta-band { padding: 56px 28px; margin: 0 16px; }
   .hero .lead { font-size: 1.1rem; }
+  .grid-2col { grid-template-columns: 1fr; gap: 36px; }
 }
 @media (max-width: 600px) {
   html { font-size: 16px; }

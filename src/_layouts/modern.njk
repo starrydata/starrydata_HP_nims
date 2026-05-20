@@ -50,53 +50,90 @@ async function drawTempSeebeck() {
   try {
     const res = await fetch('/data/chart_temp_seebeck.json', { cache: 'no-store' });
     const d = await res.json();
-    const trace = {
-      x: d.data.T,
-      y: d.data.S,
-      text: d.data.comp,
-      mode: 'markers',
-      type: 'scattergl',
-      marker: {
-        size: 4,
-        opacity: 0.55,
-        color: d.data.T,
-        colorscale: 'Plasma',
-        showscale: true,
-        colorbar: {
-          title: { text: 'T (K)', font: { size: 11, color: '#475573' } },
-          thickness: 12, len: 0.7,
-          tickfont: { size: 10, color: '#475573' }
-        }
-      },
-      hovertemplate:
-        '<b>%{text}</b><br>T = %{x:.0f} K<br>S = %{y:.1f} μV/K<extra></extra>',
-    };
+
+    // ---- 組成別にグループ化、上位 N 件をカラフルなトレースに ----
+    const groups = new Map();
+    for (let i = 0; i < d.data.T.length; i++) {
+      const c = d.data.comp[i] || '(unknown)';
+      if (!groups.has(c)) groups.set(c, { T: [], S: [] });
+      const g = groups.get(c);
+      g.T.push(d.data.T[i]);
+      g.S.push(d.data.S[i]);
+    }
+    // 件数の多い順にソート
+    const sorted = [...groups.entries()].sort((a, b) => b[1].T.length - a[1].T.length);
+
+    // Light24 + Bold + Alphabet + Vivid + Pastel から豊富な色
+    const PALETTE = [
+      '#FD3216','#00FE35','#6A76FC','#FED4C4','#FE00CE','#0DF9FF','#F6F926',
+      '#FF9616','#479B55','#EEA6FB','#DC587D','#D626FF','#6E899C','#00B5F7',
+      '#B68E00','#C9FBE5','#FF0092','#22FFA7','#E3EE9E','#86CE00','#BC7196',
+      '#7E7DCD','#FC6955','#E48F72','#FFA8AB','#9C755F','#BAB0AC','#1F77B4',
+      '#FF7F0E','#2CA02C','#D62728','#9467BD','#8C564B','#E377C2','#7F7F7F',
+      '#BCBD22','#17BECF','#AEC7E8','#FFBB78','#98DF8A','#FF9896','#C5B0D5',
+    ];
+
+    const TOP_N = 40;
+    const traces = [];
+
+    // 上位 TOP_N 組成: 個別トレース（カラフル）
+    sorted.slice(0, TOP_N).forEach(([comp, g], idx) => {
+      traces.push({
+        x: g.T, y: g.S,
+        type: 'scattergl', mode: 'markers',
+        name: comp,
+        marker: {
+          size: 5,
+          opacity: 0.78,
+          color: PALETTE[idx % PALETTE.length],
+          line: { width: 0 },
+        },
+        hovertemplate: `<b>${comp}</b><br>T = %{x:.0f} K<br>S = %{y:.1f} μV/K<extra></extra>`,
+      });
+    });
+
+    // それ以外は薄いグレーでまとめる
+    if (sorted.length > TOP_N) {
+      const otherX = [], otherY = [];
+      sorted.slice(TOP_N).forEach(([, g]) => {
+        otherX.push(...g.T); otherY.push(...g.S);
+      });
+      traces.unshift({
+        x: otherX, y: otherY,
+        type: 'scattergl', mode: 'markers',
+        name: `others (${sorted.length - TOP_N} compositions)`,
+        marker: { size: 3, opacity: 0.25, color: '#a5a8c0' },
+        hoverinfo: 'skip',
+      });
+    }
+
     const layout = {
-      margin: { t: 16, r: 12, b: 56, l: 64 },
+      margin: { t: 12, r: 12, b: 52, l: 60 },
       paper_bgcolor: 'rgba(0,0,0,0)',
-      plot_bgcolor: '#fafaff',
+      plot_bgcolor: '#0f0c29',
+      showlegend: false,
       xaxis: {
-        title: { text: d.x_label, font: { size: 13, color: '#1f1f3a' } },
-        gridcolor: '#e6e6f1', zeroline: false,
-        tickfont: { size: 11, color: '#475573' }
+        title: { text: 'Temperature (K)', font: { size: 13, color: '#c4b5fd' } },
+        gridcolor: 'rgba(255,255,255,0.06)', zeroline: false,
+        tickfont: { size: 11, color: '#a5a8c0' }, color: '#a5a8c0',
       },
       yaxis: {
-        title: { text: d.y_label, font: { size: 13, color: '#1f1f3a' } },
-        gridcolor: '#e6e6f1', zeroline: true, zerolinecolor: '#c4b5fd',
-        tickfont: { size: 11, color: '#475573' }
+        title: { text: 'Seebeck coefficient (μV/K)', font: { size: 13, color: '#c4b5fd' } },
+        gridcolor: 'rgba(255,255,255,0.06)', zeroline: true, zerolinecolor: 'rgba(167,139,250,0.4)',
+        tickfont: { size: 11, color: '#a5a8c0' }, color: '#a5a8c0',
       },
       font: { family: 'Inter, "Noto Sans JP", sans-serif' },
     };
     const config = { displaylogo: false, responsive: true,
       modeBarButtonsToRemove: ['lasso2d', 'select2d'] };
-    Plotly.newPlot('chart-temp-seebeck', [trace], layout, config);
+    Plotly.newPlot('chart-temp-seebeck', traces, layout, config);
 
     const meta = document.getElementById('chart-temp-seebeck-meta');
     if (meta) {
       const date = (d.fetched_at || '').substring(0, 10);
       meta.textContent =
         `Source: Starrydata snapshot${d.snapshot ? ' ' + d.snapshot : ''}` +
-        ` ／ ${d.point_count.toLocaleString('en-US')} points (sampled)` +
+        ` ／ ${d.point_count.toLocaleString('en-US')} points, ${sorted.length.toLocaleString('en-US')} compositions` +
         ` ／ Fetched ${date}`;
     }
   } catch (e) {
