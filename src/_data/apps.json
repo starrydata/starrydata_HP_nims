@@ -1,0 +1,104 @@
+{
+  "_note": "Starrydata 関連アプリケーション・システム一覧。各エントリは i18n 対応。",
+  "apps": [
+    {
+      "slug": "starrydata2",
+      "icon": "DB",
+      "name":     { "ja": "Starrydata2",                "en": "Starrydata2" },
+      "subtitle": { "ja": "メインデータベース",         "en": "Main database" },
+      "description": {
+        "ja": "200,000+ カーブを収録した大規模オープンデータベース。検索・ダウンロードに対応。",
+        "en": "Large open database with 200,000+ curves. Searchable and downloadable."
+      },
+      "url": "https://starrydata.nims.go.jp/starrydata2/"
+    },
+    {
+      "slug": "visualizer",
+      "icon": "◇",
+      "name":     { "ja": "Visualizer",                  "en": "Visualizer" },
+      "subtitle": { "ja": "全体像の可視化",              "en": "Big-data overview" },
+      "description": {
+        "ja": "Starrydata の全体像を一望できる可視化グラフ群。",
+        "en": "Overview plots covering the entire Starrydata."
+      },
+      "url": "https://starrydata.nims.go.jp/visualizer/"
+    },
+    {
+      "slug": "explorer",
+      "icon": "⌕",
+      "name":     { "ja": "Sample Explorer",             "en": "Sample Explorer" },
+      "subtitle": { "ja": "組成ベース探索",              "en": "Composition-based search" },
+      "description": {
+        "ja": "化学組成からの探索・フィルタリング。",
+        "en": "Browse and filter samples by chemical composition."
+      },
+      "url": "https://explorer.starrydata.org"
+    },
+    {
+      "slug": "explorer-3d",
+      "icon": "▦",
+      "name":     { "ja": "Explorer 3D",                  "en": "Explorer 3D" },
+      "subtitle": { "ja": "熱電特性の 3D 可視化",          "en": "3D thermoelectric plots" },
+      "description": {
+        "ja": "熱電特性分布を 3D プロットで対話的に表示。",
+        "en": "Interactive 3D plots of thermoelectric property distributions."
+      },
+      "url": "https://explorer-3d.starrydata.org"
+    },
+    {
+      "slug": "digitizer",
+      "icon": "✎",
+      "name":     { "ja": "StarryDigitizer",              "en": "StarryDigitizer" },
+      "subtitle": { "ja": "グラフ画像からデータ抽出",      "en": "Extract data from plot images" },
+      "description": {
+        "ja": "論文のグラフ画像から数値データを抽出するデジタイザ。",
+        "en": "Digitize plot images from published papers into numerical data."
+      },
+      "url": "https://app.digitizer.starrydata.org"
+    },
+    {
+      "slug": "auto-summary",
+      "icon": "▤",
+      "name":     { "ja": "Auto-Summary Viewer",          "en": "Auto-Summary Viewer" },
+      "subtitle": { "ja": "データの自動要約閲覧",          "en": "Automated dataset summaries" },
+      "description": {
+        "ja": "Starrydata の自動要約を閲覧できるシステム。",
+        "en": "View automatically generated summaries of the Starrydata dataset."
+      },
+      "url": "https://auto-summary.starrydata.org"
+    },
+    {
+      "slug": "cssim",
+      "icon": "❖",
+      "name":     { "ja": "Crystal Structure Simulator",   "en": "Crystal Structure Simulator" },
+      "subtitle": { "ja": "結晶構造シミュレータ",          "en": "Crystal structure simulator" },
+      "description": {
+        "ja": "結晶構造を対話的にシミュレート・可視化。",
+        "en": "Interactive simulation and visualization of crystal structures."
+      },
+      "url": "https://cssim.starrydata.org"
+    },
+    {
+      "slug": "erm",
+      "icon": "✦",
+      "name":     { "ja": "Elemental Reactivity Map",      "en": "Elemental Reactivity Map" },
+      "subtitle": { "ja": "元素反応性マップ",              "en": "Map of elemental reactivity" },
+      "description": {
+        "ja": "元素間の反応性をマップとして可視化。",
+        "en": "Visual map of reactivity between elements."
+      },
+      "url": "https://erm.starrydata.org"
+    },
+    {
+      "slug": "dsxrd",
+      "icon": "▥",
+      "name":     { "ja": "Debye-Scherrer XRD",            "en": "Debye-Scherrer XRD" },
+      "subtitle": { "ja": "XRD プロット生成",               "en": "XRD plot generator" },
+      "description": {
+        "ja": "Debye-Scherrer 法による X 線回折プロットの生成・可視化。",
+        "en": "Generate and visualize Debye-Scherrer X-ray diffraction plots."
+      },
+      "url": "https://dsxrd.starrydata.org"
+    }
+  ]
+}

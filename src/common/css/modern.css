@@ -417,6 +417,145 @@ p { margin: 0 0 1em; }
   margin-top: 48px;
 }
 
+/* ---- About prose ---- */
+.container-narrow-prose { max-width: var(--container-narrow); }
+.lead-large {
+  font-size: clamp(1.15rem, 2vw, 1.32rem);
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0 0 24px;
+}
+.lead-large strong {
+  color: var(--accent-2);
+  font-weight: 700;
+  background: linear-gradient(120deg, transparent 0%, transparent 60%, rgba(167,139,250,0.22) 60%, rgba(167,139,250,0.22) 100%);
+  padding: 0 2px;
+}
+.prose {
+  font-size: 1.04rem;
+  line-height: 1.85;
+  color: var(--text-2);
+}
+
+/* ---- Apps grid ---- */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.app-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 26px 22px;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  transition: transform .15s, box-shadow .2s, border-color .2s;
+  text-decoration: none;
+}
+.app-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: #c4b5fd;
+  color: inherit;
+}
+.app-card .app-icon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  background: var(--grad-cta);
+  color: #fff;
+  display: grid; place-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.app-card h3 {
+  font-size: 1.12rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+.app-sub {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--accent-2);
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+.app-desc {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+.app-open {
+  margin-top: auto;
+  font-size: 0.82rem;
+  color: var(--accent-2);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Get involved ---- */
+.involve-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.involve-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+.involve-card.highlight {
+  background: linear-gradient(160deg, #1e1b4b 0%, #312e81 60%, #4c1d95 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--shadow-lg);
+}
+.involve-card.highlight h3 { color: #fff; }
+.involve-card.highlight p  { color: rgba(255,255,255,0.82); }
+.involve-card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+.involve-card p {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+.involve-card .tag {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--accent-2);
+  border: 1px solid var(--line);
+}
+.involve-card.highlight .tag {
+  background: rgba(255,255,255,0.14);
+  color: #ddd6fe;
+  border-color: transparent;
+}
+.involve-card .btn { align-self: flex-start; margin-top: 6px; }
+.involve-card.highlight .btn-primary { color: #fff; }
+
 /* ---- Two-column showcase (text + chart) ---- */
 .grid-2col {
   display: grid;
@@ -612,6 +751,11 @@ p { margin: 0 0 1em; }
   .cta-band { padding: 56px 28px; margin: 0 16px; }
   .hero .lead { font-size: 1.1rem; }
   .grid-2col { grid-template-columns: 1fr; gap: 36px; }
+  .apps-grid { grid-template-columns: repeat(2, 1fr); }
+  .involve-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .apps-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   html { font-size: 16px; }

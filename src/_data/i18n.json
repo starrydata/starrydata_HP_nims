@@ -58,18 +58,46 @@
   "what_is": {
     "title":     { "ja": "Starrydata とは",     "en": "What is Starrydata" },
     "lead": {
-      "ja": "実験論文に掲載されたグラフから実験データを構造化し、誰でも再利用できる形で公開するオープンデータプロジェクトです。",
-      "en": "An open data project that structures experimental data from graphs in published papers and shares it for reuse."
+      "ja": "Starrydata は、無機材料科学の論文に掲載されたグラフから実験データを抽出・構造化し、世界中の研究者が再利用できる形で公開する **オープンデータプロジェクト** です。",
+      "en": "Starrydata is an **open data project** that extracts and structures experimental data from graphs in inorganic materials science papers, making them freely reusable for researchers worldwide."
     },
-    "point1_t":  { "ja": "巨大なデータベース",          "en": "Large-scale database" },
-    "point1_d":  { "ja": "13,000本以上の論文から、82,000試料・194,000カーブを公開。",
-                   "en": "82,000 samples and 194,000 curves from 13,000+ papers." },
-    "point2_t":  { "ja": "オープンに利用可能",          "en": "Open access" },
-    "point2_d":  { "ja": "Figshare・APIから無償でダウンロード、API経由で機械学習に直接利用できます。",
-                   "en": "Free download via Figshare and API; directly usable for machine learning." },
-    "point3_t":  { "ja": "毎日更新・拡大中",            "en": "Updated daily" },
-    "point3_d":  { "ja": "熱電・磁性・準結晶・電池など、対象材料を継続的に拡大しています。",
-                   "en": "Continuously expanding: thermoelectric, magnetic, quasicrystal, battery and more." }
+    "body": {
+      "ja": "2017 年に NIMS で始まり、現在は理化学研究所 AIP・筑波大学などとの連携のもと、専属研究チームが日々データ収集を続けています。Materials Informatics・機械学習・新材料探索に役立つ高品質な実験データを、API・Figshare・GitHub から自由にダウンロード／引用できます。",
+      "en": "Founded at NIMS in 2017, Starrydata is now operated by a dedicated research team in collaboration with RIKEN AIP, the University of Tsukuba and others. High-quality experimental data — useful for Materials Informatics, machine learning, and new-material discovery — are freely available via API, Figshare, and GitHub."
+    }
+  },
+  "huge_db": {
+    "title": { "ja": "巨大なデータベース",            "en": "A large-scale database" },
+    "cta":   { "ja": "Starrydata2 を試す →",           "en": "Try Starrydata2 →" }
+  },
+  "apps": {
+    "title": { "ja": "関連アプリケーション・システム", "en": "Apps and Systems" },
+    "lead": {
+      "ja": "データベースを軸に、組成探索・データ可視化・グラフ画像のデジタイズなど、複数の Web ツールを公開しています。すべて無償で利用できます。",
+      "en": "Beyond the database itself, we publish multiple free web tools for composition search, big-data visualization, plot digitization, and more."
+    },
+    "open": { "ja": "開く",                         "en": "Open" }
+  },
+  "get_involved": {
+    "title": { "ja": "Starrydata に参加する",        "en": "Get involved with Starrydata" },
+    "lead": {
+      "ja": "データ利用・データ提供・共同研究・資金パートナーシップなど、さまざまな形でプロジェクトに関わっていただけます。",
+      "en": "Use the data, contribute data, partner on research, or support the project — there are many ways to get involved."
+    },
+    "card1_t": { "ja": "データを使う",            "en": "Use the data" },
+    "card1_d": { "ja": "Web システムから無償で検索・ダウンロード。機械学習・新材料探索にすぐ活用できます。",
+                 "en": "Free search and download via the web system — instantly usable for ML and materials discovery." },
+    "card1_cta": { "ja": "Starrydata2 を試す →",  "en": "Try Starrydata2 →" },
+
+    "card2_t": { "ja": "データを提供する",        "en": "Contribute data" },
+    "card2_d": { "ja": "あなたの研究グループの実験データを Starrydata 経由で世界に公開。研究の可視性が大きく向上します。",
+                 "en": "Publish your group's experimental data through Starrydata. Boost the visibility and reuse of your research." },
+    "card2_cta": { "ja": "提案する →",             "en": "Get in touch →" },
+
+    "card3_t": { "ja": "共同研究・資金パートナー", "en": "Research & funding partnership" },
+    "card3_d": { "ja": "共同研究・受託研究・賛助会員（資金提供）を歓迎しています。Materials Informatics の研究開発を一緒に進めましょう。",
+                 "en": "We welcome joint research, contract research, and supporting partnerships. Let's advance Materials Informatics together." },
+    "card3_cta": { "ja": "問い合わせる →",         "en": "Contact us →" }
   },
   "fields": {
     "title": { "ja": "研究領域", "en": "Research Fields" },
