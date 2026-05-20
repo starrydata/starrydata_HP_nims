@@ -6,22 +6,25 @@
    ========================================================================= */
 
 :root {
-  /* color */
-  --bg:        #0a1929;
-  --bg-2:      #0f2240;
+  /* color — Materials Project 風の紫系パレット */
+  --bg:        #1e1b4b;   /* indigo-950 */
+  --bg-2:      #312e81;   /* indigo-900 */
   --surface:   #ffffff;
-  --text:      #0f172a;
-  --text-2:    #475569;
-  --text-3:    #94a3b8;
+  --text:      #1f1f3a;
+  --text-2:    #4b5573;
+  --text-3:    #9ca3b8;
   --text-on:   #f8fafc;
-  --line:      #e2e8f0;
-  --accent:    #00d4ff;
-  --accent-2:  #4f8cff;
-  --grad-hero: linear-gradient(135deg, #0a1929 0%, #0f2240 50%, #134e8a 100%);
-  --grad-cta:  linear-gradient(135deg, #00d4ff 0%, #4f8cff 100%);
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04), 0 1px 6px rgba(0,0,0,0.04);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.04), 0 10px 24px rgba(15,34,64,0.08);
-  --shadow-lg: 0 12px 32px rgba(15,34,64,0.14);
+  --line:      #e6e6f1;
+  --accent:    #a78bfa;   /* violet-400 */
+  --accent-2:  #7c3aed;   /* violet-600 */
+  --accent-3:  #6366f1;   /* indigo-500 */
+  --bg-subtle: #f7f7fb;
+  --grad-hero: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 55%, #6d28d9 100%);
+  --grad-cta:  linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+  --grad-accent: linear-gradient(120deg, #a78bfa 0%, #818cf8 100%);
+  --shadow-sm: 0 1px 2px rgba(31,31,58,0.04), 0 1px 6px rgba(31,31,58,0.04);
+  --shadow-md: 0 4px 8px rgba(31,31,58,0.05), 0 12px 28px rgba(76,29,149,0.08);
+  --shadow-lg: 0 16px 36px rgba(76,29,149,0.16);
 
   /* shape */
   --radius:    16px;
@@ -52,12 +55,12 @@ body {
   color: var(--text);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
-  background: #f8fafc;
+  background: var(--bg-subtle);
   font-size: var(--fs-base);
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--accent-2); text-decoration: none; transition: color .15s; }
-a:hover { color: var(--accent); }
+a:hover { color: var(--accent-3); }
 ul, ol { padding-left: 1.25em; }
 h1, h2, h3, h4 {
   line-height: 1.22;
@@ -89,6 +92,7 @@ p { margin: 0 0 1em; }
   letter-spacing: -0.02em;
 }
 .site-logo span { color: var(--accent-2); }
+.site-logo:hover { color: var(--accent-2); }
 .site-nav { display: flex; gap: 4px; align-items: center; }
 .site-nav a {
   padding: 9px 16px;
@@ -97,7 +101,7 @@ p { margin: 0 0 1em; }
   font-size: 0.95rem;
   font-weight: 500;
 }
-.site-nav a:hover { background: #eef2ff; color: var(--text); }
+.site-nav a:hover { background: #f3eefe; color: var(--accent-2); }
 .lang-switch {
   margin-left: 10px;
   display: inline-flex;
@@ -117,7 +121,7 @@ p { margin: 0 0 1em; }
 /* ---- Hero ---- */
 .hero {
   background:
-    linear-gradient(rgba(10,25,41,0.20), rgba(10,25,41,0.20)),
+    linear-gradient(rgba(30,27,75,0.25), rgba(30,27,75,0.25)),
     url('/assets/images/hero/milky_way_katsura.jpg') center 30%/cover no-repeat,
     var(--grad-hero);
   color: var(--text-on);
@@ -130,9 +134,9 @@ p { margin: 0 0 1em; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(900px 460px at 80% -10%, rgba(0,212,255,0.18), transparent 60%),
-    radial-gradient(680px 340px at 0% 110%, rgba(79,140,255,0.14), transparent 60%),
-    radial-gradient(1100px 540px at 20% 50%, rgba(10,25,41,0.42), transparent 70%);
+    radial-gradient(900px 460px at 80% -10%, rgba(167,139,250,0.22), transparent 60%),
+    radial-gradient(680px 340px at 0% 110%, rgba(99,102,241,0.16), transparent 60%),
+    radial-gradient(1100px 540px at 20% 50%, rgba(30,27,75,0.46), transparent 70%);
   pointer-events: none;
 }
 .hero .container { position: relative; z-index: 1; max-width: var(--container-narrow); }
@@ -140,9 +144,9 @@ p { margin: 0 0 1em; }
   display: inline-block;
   padding: 7px 16px;
   border-radius: 999px;
-  background: rgba(0,212,255,0.12);
-  border: 1px solid rgba(0,212,255,0.4);
-  color: #b6f0ff;
+  background: rgba(167,139,250,0.16);
+  border: 1px solid rgba(167,139,250,0.45);
+  color: #ddd6fe;
   font-size: 0.85rem;
   letter-spacing: 0.06em;
   margin-bottom: 28px;
@@ -156,7 +160,7 @@ p { margin: 0 0 1em; }
   text-shadow: 0 2px 20px rgba(0,0,0,0.55);
 }
 .hero h1 .accent {
-  background: linear-gradient(120deg, #00d4ff 0%, #b388ff 60%, #ffffff 100%);
+  background: linear-gradient(120deg, #c4b5fd 0%, #a78bfa 50%, #ffffff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -185,8 +189,8 @@ p { margin: 0 0 1em; }
   transition: transform .12s, box-shadow .15s, background .15s;
   line-height: 1;
 }
-.btn-primary { background: var(--grad-cta); color: #0a1929; }
-.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0,212,255,.35); color: #0a1929; }
+.btn-primary { background: var(--grad-cta); color: #fff; }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 26px rgba(124,58,237,.40); color: #fff; }
 .btn-ghost {
   background: rgba(255,255,255,0.08);
   color: #fff;
@@ -229,9 +233,9 @@ p { margin: 0 0 1em; }
 /* ---- Stats ---- */
 .stats {
   background:
-    linear-gradient(rgba(10,25,41,0.55), rgba(10,25,41,0.55)),
+    linear-gradient(rgba(30,27,75,0.55), rgba(30,27,75,0.55)),
     url('/assets/images/hero/milky_way_katsura.jpg') center 65%/cover no-repeat,
-    #0a1929;
+    var(--bg);
   color: var(--text-on);
   padding: 96px 0;
   position: relative;
@@ -239,7 +243,7 @@ p { margin: 0 0 1em; }
 .stats::before {
   content: "";
   position: absolute; inset: 0;
-  background: radial-gradient(900px 260px at 50% 50%, rgba(10,25,41,0.30), transparent 75%);
+  background: radial-gradient(900px 260px at 50% 50%, rgba(30,27,75,0.30), transparent 75%);
   pointer-events: none;
 }
 .stats .container {
@@ -251,7 +255,7 @@ p { margin: 0 0 1em; }
 .stat .num {
   font-size: clamp(2.8rem, 4.6vw, 3.8rem);
   font-weight: 800;
-  background: linear-gradient(135deg, #00d4ff, #b388ff);
+  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 50%, #ffffff 100%);
   -webkit-background-clip: text; background-clip: text;
   color: transparent;
   letter-spacing: -0.025em;
@@ -282,14 +286,14 @@ p { margin: 0 0 1em; }
 .feature-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: #c7d2fe;
+  border-color: #d1c4ff;
 }
 .feature-card .icon {
   width: 48px; height: 48px;
   border-radius: 12px;
   display: grid; place-items: center;
   background: var(--grad-cta);
-  color: #0a1929;
+  color: #fff;
   font-weight: 800;
   font-size: 0.95rem;
   margin-bottom: 22px;
@@ -334,7 +338,7 @@ p { margin: 0 0 1em; }
 .field-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
-  border-color: #c7d2fe;
+  border-color: #d1c4ff;
   color: inherit;
 }
 .field-card .field-num {
@@ -370,7 +374,7 @@ p { margin: 0 0 1em; }
 .mini-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
-  border-color: #c7d2fe;
+  border-color: #d1c4ff;
 }
 .mini-card .meta {
   font-size: 0.78rem;
@@ -383,7 +387,7 @@ p { margin: 0 0 1em; }
   display: inline-block;
   padding: 2px 10px;
   border-radius: 4px;
-  background: #eef2ff;
+  background: #f3eefe;
   color: var(--accent-2);
   margin-right: 8px;
   font-weight: 700;
@@ -427,10 +431,12 @@ p { margin: 0 0 1em; }
 .cta-band::before {
   content: "";
   position: absolute; inset: 0;
-  background: radial-gradient(700px 300px at 100% 0%, rgba(0,212,255,.18), transparent 60%);
+  background:
+    radial-gradient(700px 300px at 100% 0%, rgba(167,139,250,.24), transparent 60%),
+    radial-gradient(500px 200px at 0% 100%, rgba(99,102,241,.18), transparent 60%);
 }
 .cta-band > * { position: relative; }
-.cta-band .eyebrow { color: #b6f0ff; }
+.cta-band .eyebrow { color: #ddd6fe; }
 .cta-band h2 {
   font-size: clamp(2rem, 3.6vw, 2.8rem);
   margin: 0 0 18px;
