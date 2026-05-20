@@ -417,6 +417,22 @@ p { margin: 0 0 1em; }
   margin-top: 48px;
 }
 
+/* ---- Live chart card ---- */
+.chart-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.chart-meta {
+  margin: 12px 0 0;
+  font-size: 0.82rem;
+  color: var(--text-3);
+  text-align: right;
+  letter-spacing: 0.02em;
+}
+
 /* ---- Collaborate CTA ---- */
 .cta-band {
   background: var(--grad-hero);

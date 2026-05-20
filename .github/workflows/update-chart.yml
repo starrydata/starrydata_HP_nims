@@ -1,0 +1,49 @@
+name: Update temperature × Seebeck chart
+
+# 毎月 2 日 00:30 JST (= 1 日 15:30 UTC)
+# 1 日付近に Figshare に新しい snapshot が公開されるため余裕を持って 2 日に実行
+# 手動実行も可能
+on:
+  schedule:
+    - cron: "30 15 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --no-cache-dir pandas numpy
+
+      - name: Fetch latest snapshot and rebuild chart JSON
+        run: python scripts/fetch_chart_temp_seebeck.py
+
+      - name: Show diff
+        run: |
+          git --no-pager diff --stat src/_data/chart_temp_seebeck.json || true
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet src/_data/chart_temp_seebeck.json; then
+            echo "No changes to chart JSON"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/_data/chart_temp_seebeck.json
+          git commit -m "chore(chart): monthly update from Figshare snapshot
+
+Fetched at: $(date -u +'%Y-%m-%dT%H:%M:%SZ')
+Source: https://figshare.com/projects/Starrydata_datasets/155129"
+          git push
