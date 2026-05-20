@@ -24,7 +24,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install --no-cache-dir pandas numpy
+        run: pip install --no-cache-dir pandas numpy plotly
 
       - name: Fetch latest snapshot and rebuild chart JSON
         run: python scripts/fetch_chart_temp_seebeck.py

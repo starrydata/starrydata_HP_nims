@@ -1,9 +1,17 @@
 """
-Starrydata の curves CSV から Temperature × Seebeck 散布図用 JSON を生成する。
+Starrydata の curves CSV から Temperature × Seebeck 散布図用 Plotly Figure JSON を生成する。
+
+visualize_all.py の (H) 主要物性散布図と同じ Plotly Express スタイル：
+  - color="composition" で組成別カラフル
+  - color_discrete_sequence: Light24 + Bold + Alphabet
+  - template="plotly_dark"
+  - opacity=0.55, marker size=3
+  - showlegend=False
 
 入力:
-  --csv <path>   : starrydata_curves.csv のパス
-                   既定: ~/Desktop/starrydata_dataset/starrydata_dataset_latest/starrydata_curves.csv
+  --csv <path>       starrydata_curves.csv のパス
+                     既定: ~/Desktop/starrydata_dataset/starrydata_dataset_latest/starrydata_curves.csv
+  --snapshot <label> snapshot ラベル（GitHub Actions 用）
 
 出力:
   src/_data/chart_temp_seebeck.json
@@ -20,13 +28,15 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import plotly.express as px
+import plotly.io as pio
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_JSON = ROOT / "src/_data/chart_temp_seebeck.json"
 DEFAULT_CSV = Path.home() / "Desktop/starrydata_dataset/starrydata_dataset_latest/starrydata_curves.csv"
 SNAPSHOT_FILE = DEFAULT_CSV.parent / "db_snapshot.txt"
 
-MAX_POINTS = 12000   # トップに置く軽量チャート向け
+MAX_POINTS = 20000   # visualize_all.py と同じ
 
 
 def parse_array(s):
@@ -43,8 +53,8 @@ def parse_array(s):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--csv", type=Path, default=DEFAULT_CSV, help="starrydata_curves.csv path")
-    ap.add_argument("--snapshot", type=str, default=None, help="snapshot label (e.g. 20260501)")
+    ap.add_argument("--csv", type=Path, default=DEFAULT_CSV)
+    ap.add_argument("--snapshot", type=str, default=None)
     args = ap.parse_args()
 
     csv_path = args.csv
@@ -61,7 +71,6 @@ def main():
     )
     print(f"  rows: {len(curves):,}")
 
-    # Temperature × Seebeck をフィルタ
     mask = (
         curves["prop_x"].str.contains("Temperature", case=False, na=False)
         & (curves["prop_y"] == "Seebeck coefficient")
@@ -70,10 +79,7 @@ def main():
     print(f"  Seebeck (T-x) curves: {len(sub):,}")
 
     # データポイント展開
-    pts_T = []
-    pts_S = []
-    pts_C = []
-    pts_DOI = []
+    pts_T, pts_S, pts_C = [], [], []
     cap = MAX_POINTS * 3
     for _, row in sub.iterrows():
         xs = parse_array(row["x"])
@@ -84,12 +90,11 @@ def main():
             if 50.0 < xv < 2000.0 and np.isfinite(yv):
                 pts_T.append(float(xv))
                 pts_S.append(float(yv))
-                pts_C.append(row["composition"] or "")
-                pts_DOI.append(row["DOI"] or "")
+                pts_C.append(row["composition"] or "(unknown)")
         if len(pts_T) >= cap:
             break
 
-    df = pd.DataFrame({"T": pts_T, "S": pts_S, "comp": pts_C, "doi": pts_DOI})
+    df = pd.DataFrame({"T": pts_T, "S": pts_S, "composition": pts_C})
     print(f"  raw points: {len(df):,}")
 
     # 1-99 percentile で外れ値除去
@@ -99,9 +104,37 @@ def main():
     if len(df) > MAX_POINTS:
         df = df.sample(MAX_POINTS, random_state=42)
     df = df.reset_index(drop=True)
-    print(f"  final points: {len(df):,}")
+    n_pts = len(df)
+    n_comps = df["composition"].nunique()
+    print(f"  final points: {n_pts:,}  / unique compositions: {n_comps:,}")
 
-    # JSON 出力
+    # ----- Plotly Express でダッシュボードと同等の図を生成 -----
+    fig = px.scatter(
+        df, x="T", y="S",
+        color="composition",
+        opacity=0.55,
+        color_discrete_sequence=(
+            px.colors.qualitative.Light24
+            + px.colors.qualitative.Bold
+            + px.colors.qualitative.Alphabet
+        ),
+        hover_data=["composition"],
+    )
+    fig.update_layout(
+        template="plotly_dark",
+        height=520,
+        showlegend=False,
+        xaxis_title="Temperature [K]",
+        yaxis_title="Seebeck coefficient [μV/K]",
+        margin=dict(t=20, r=12, b=56, l=68),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="#0f0c29",
+        font=dict(family='Inter, "Noto Sans JP", sans-serif'),
+    )
+    fig.update_traces(marker=dict(size=3))
+
+    fig_dict = json.loads(pio.to_json(fig))
+
     snapshot = args.snapshot
     if snapshot is None and SNAPSHOT_FILE.exists():
         snapshot = SNAPSHOT_FILE.read_text().strip()
@@ -110,19 +143,14 @@ def main():
         "source": "Starrydata snapshot",
         "snapshot": snapshot or "",
         "fetched_at": datetime.now(jst).isoformat(timespec="seconds"),
-        "x_label": "Temperature (K)",
-        "y_label": "Seebeck coefficient (μV/K)",
-        "point_count": int(len(df)),
-        "data": {
-            "T":    df["T"].round(2).tolist(),
-            "S":    df["S"].round(3).tolist(),
-            "comp": df["comp"].tolist(),
-            "doi":  df["doi"].tolist(),
-        },
+        "point_count": n_pts,
+        "composition_count": n_comps,
+        "figure": fig_dict,   # Plotly newPlot にそのまま渡せる {data, layout}
     }
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
-    print(f"\n✅ Saved: {OUT_JSON}  ({OUT_JSON.stat().st_size / 1024:.1f} KB)")
+    size_kb = OUT_JSON.stat().st_size / 1024
+    print(f"\n✅ Saved: {OUT_JSON}  ({size_kb:.1f} KB)")
 
 
 if __name__ == "__main__":
