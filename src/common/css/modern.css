@@ -122,7 +122,7 @@ p { margin: 0 0 1em; }
 .hero {
   background:
     linear-gradient(rgba(30,27,75,0.25), rgba(30,27,75,0.25)),
-    url('/assets/images/hero/milky_way_katsura.jpg') center 30%/cover no-repeat,
+    url('../../assets/images/hero/milky_way_katsura.jpg') center 30%/cover no-repeat,
     var(--grad-hero);
   color: var(--text-on);
   padding: clamp(96px, 11vw, 144px) 0 clamp(112px, 12vw, 160px);
@@ -248,7 +248,7 @@ p { margin: 0 0 1em; }
 .stats {
   background:
     linear-gradient(rgba(30,27,75,0.55), rgba(30,27,75,0.55)),
-    url('/assets/images/hero/milky_way_katsura.jpg') center 65%/cover no-repeat,
+    url('../../assets/images/hero/milky_way_katsura.jpg') center 65%/cover no-repeat,
     var(--bg);
   color: var(--text-on);
   padding: 96px 0;

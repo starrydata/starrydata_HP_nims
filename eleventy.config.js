@@ -22,16 +22,28 @@ export default function (eleventyConfig) {
   // 散布図用 JSON を /data/ で配信
   eleventyConfig.addPassthroughCopy({ "src/_data/chart_temp_seebeck.json": "data/chart_temp_seebeck.json" });
 
-  // pathPrefix を HTML 内の絶対パスにも適用（href="/..." / src="/..." を書き換え）
+  // pathPrefix を HTML 内の絶対パスにも適用
+  // (href="/..." / src="/..." / fetch('/...') / url('/...') 等を書き換え)
   if (PATH_PREFIX !== "/" && PATH_PREFIX !== "") {
     const trimmed = PATH_PREFIX.replace(/\/$/, "");
     eleventyConfig.addTransform("pathprefix-rewrite", function (content, outputPath) {
       if (!outputPath || !outputPath.endsWith(".html")) return content;
-      // href="/..." と src="/..." を書き換え（"//" や "http(s)://" は除外）
-      return content.replace(
-        /(href|src)="\/(?!\/)([^"]*)"/g,
-        (m, attr, rest) => `${attr}="${trimmed}/${rest}"`
-      );
+      return content
+        // href="/..." / src="/..."
+        .replace(
+          /(href|src)="\/(?!\/)([^"]*)"/g,
+          (m, attr, rest) => `${attr}="${trimmed}/${rest}"`
+        )
+        // inline JS: fetch('/...') / fetch("/...")
+        .replace(
+          /(fetch\(\s*['"`])\/(?!\/)([^'"`]*)/g,
+          (m, p, rest) => `${p}${trimmed}/${rest}`
+        )
+        // inline CSS: url('/...') / url("/...") / url(/...)
+        .replace(
+          /(url\(\s*['"]?)\/(?!\/)([^'")]*)/g,
+          (m, p, rest) => `${p}${trimmed}/${rest}`
+        );
     });
   }
 
