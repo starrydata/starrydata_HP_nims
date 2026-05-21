@@ -729,15 +729,15 @@ p { margin: 0 0 1em; }
 .team-page-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 22px;
+  gap: 18px;
 }
 .team-page-card {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 30px;
+  padding: 24px;
   display: flex;
-  gap: 26px;
+  gap: 22px;
   align-items: flex-start;
   transition: box-shadow .2s, border-color .2s, transform .15s;
 }
@@ -748,8 +748,8 @@ p { margin: 0 0 1em; }
 }
 .team-page-card .photo {
   flex-shrink: 0;
-  width: 144px;
-  height: 144px;
+  width: 110px;
+  height: 110px;
   border-radius: 12px;
   overflow: hidden;
   background: linear-gradient(135deg, #c4b5fd, #818cf8);
@@ -770,30 +770,30 @@ p { margin: 0 0 1em; }
 }
 .team-page-card .info { flex: 1; min-width: 0; }
 .team-page-card .name {
-  font-size: 1.38rem;
-  margin: 0 0 8px;
+  font-size: 1.15rem;
+  margin: 0 0 6px;
   font-weight: 700;
   letter-spacing: -0.005em;
   color: var(--text);
 }
 .team-page-card .name .en {
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   color: var(--text-3);
   font-weight: 500;
   letter-spacing: 0.04em;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 .team-page-card .role {
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   color: var(--accent-2);
   font-weight: 600;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 .team-page-card .aff {
-  font-size: 0.98rem;
+  font-size: 0.88rem;
   color: var(--text-2);
-  line-height: 1.65;
+  line-height: 1.6;
   margin: 0;
 }
 .team-page-card .links {
