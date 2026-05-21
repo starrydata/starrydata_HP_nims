@@ -728,23 +728,23 @@ p { margin: 0 0 1em; }
 
 .team-page-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 56px;
 }
 .team-page-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 24px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   display: flex;
   gap: 22px;
   align-items: flex-start;
-  transition: box-shadow .2s, border-color .2s, transform .15s;
+  transition: none;
 }
 .team-page-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: #d1c4ff;
-  transform: translateY(-2px);
+  box-shadow: none;
+  border-color: transparent;
+  transform: none;
 }
 .team-page-card .photo {
   flex-shrink: 0;
@@ -826,10 +826,13 @@ p { margin: 0 0 1em; }
 .team-group[data-group="alumni"] .team-group-title { border-bottom-color: var(--text-3); }
 .team-group[data-group="alumni"] .team-group-title .count { background: #f0f0f5; color: var(--text-2); }
 
+@media (max-width: 760px) {
+  .team-page-grid { grid-template-columns: 1fr; gap: 32px; }
+}
 @media (max-width: 480px) {
-  .team-page-card { flex-direction: column; gap: 14px; padding: 24px; }
+  .team-page-card { flex-direction: column; gap: 14px; }
   .team-page-card .photo { width: 120px; height: 120px; }
-  .team-page-card .name { font-size: 1.25rem; }
+  .team-page-card .name { font-size: 1.2rem; }
 }
 
 /* ---- Collaborate CTA ---- */
