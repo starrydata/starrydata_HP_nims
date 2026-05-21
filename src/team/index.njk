@@ -10,8 +10,8 @@ lang: ja
 <!-- =================== PAGE HEAD =================== -->
 <section class="page-head">
   <div class="container">
-    <span class="eyebrow">{{ i18n.team.subtitle[L] }}</span>
-    <h1>{{ i18n.team.title[L] }}</h1>
+    <span class="eyebrow">Team</span>
+    <h1>Members</h1>
     <p class="lead">{{ i18n.team.lead[L] }}</p>
   </div>
 </section>
@@ -22,11 +22,13 @@ lang: ja
     {%- for group in members.groups %}
       {%- if group.members | length > 0 %}
       <div class="team-group" data-group="{{ group.key }}">
+        {% if group.label %}
         <h2 class="team-group-title">
           {{ group.label }}
           {% if group.label_en %}<span class="en">{{ group.label_en }}</span>{% endif %}
           <span class="count">{{ group.members | length }}</span>
         </h2>
+        {% endif %}
         <div class="team-page-grid">
           {%- for m in group.members %}
           <article class="team-page-card">

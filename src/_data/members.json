@@ -4,8 +4,8 @@
   "groups": [
     {
       "key": "current",
-      "label": "メンバー",
-      "label_en": "Members",
+      "label": null,
+      "label_en": null,
       "members": [
         {
           "name_ja": "桂 ゆかり",
