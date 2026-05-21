@@ -28,16 +28,16 @@
   },
   "hero": {
     "headline_1": {
-      "ja": "論文のグラフから",
-      "en": "From paper plots"
+      "ja": "<span class=\"accent\">Materials Informatics</span> に",
+      "en": "Everything you need for"
     },
     "headline_2": {
-      "ja": "実験データを世界へ",
-      "en": "to open materials data"
+      "ja": "必要なすべてを。",
+      "en": "<span class=\"accent\">Materials Informatics</span>."
     },
     "subline": {
-      "ja": "Materials Informatics 研究のための大規模オープンデータベース。82,000を超える試料、194,000を超えるカーブ、13,000を超える論文から、再利用可能な形で公開しています。",
-      "en": "A large-scale open database for Materials Informatics research. 82,000+ samples, 194,000+ curves curated from 13,000+ publications, all reusable."
+      "ja": "論文のグラフから抽出した 230,000+ の実験データを中核に、結晶構造シミュレーションや元素反応性マップなど、Materials Informatics 研究を支える多様なオープンデータと Web ツールを公開しています。",
+      "en": "Centered on 230,000+ experimental data points extracted from paper plots — complemented by crystal structure simulators, elemental reactivity maps, and other open tools for Materials Informatics research."
     },
     "cta_primary": {
       "ja": "Starrydata2 を試す",

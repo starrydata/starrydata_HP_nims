@@ -12,8 +12,8 @@ lang: en
   <div class="container">
     <span class="hero-eyebrow">An Open Database for Materials Informatics</span>
     <h1>
-      {{ i18n.hero.headline_1[L] }}<br>
-      <span class="accent">{{ i18n.hero.headline_2[L] }}</span>
+      {{ i18n.hero.headline_1[L] | safe }}<br>
+      {{ i18n.hero.headline_2[L] | safe }}
     </h1>
     <p class="lead">{{ i18n.hero.subline[L] }}</p>
     <div class="hero-ctas">
