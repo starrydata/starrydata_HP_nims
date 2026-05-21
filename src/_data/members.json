@@ -3,9 +3,9 @@
   "page_subtitle": "Members",
   "groups": [
     {
-      "key": "primary",
-      "label": "コアメンバー",
-      "label_en": "Core Members",
+      "key": "current",
+      "label": "メンバー",
+      "label_en": "Members",
       "members": [
         {
           "name_ja": "桂 ゆかり",
@@ -44,14 +44,7 @@
           "photo": "/assets/images/team/tanaka_atsumi.jpg",
           "affiliation": "(国研)物質・材料研究機構",
           "links": []
-        }
-      ]
-    },
-    {
-      "key": "secondary",
-      "label": "メンバー",
-      "label_en": "Members",
-      "members": [
+        },
         {
           "name_ja": "デウィ ヤナ",
           "name_en": "Dewi Yana",
