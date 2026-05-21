@@ -748,12 +748,15 @@ p { margin: 0 0 1em; }
 }
 .team-page-card .photo {
   flex-shrink: 0;
-  width: 110px;
-  height: 110px;
-  border-radius: 12px;
+  width: 120px;
+  height: 160px;
+  border-radius: 0;
   overflow: hidden;
   background: linear-gradient(135deg, #c4b5fd, #818cf8);
   position: relative;
+}
+.team-page-card .photo img {
+  object-position: center top;
 }
 .team-page-card .photo img {
   width: 100%; height: 100%;
@@ -831,7 +834,7 @@ p { margin: 0 0 1em; }
 }
 @media (max-width: 480px) {
   .team-page-card { flex-direction: column; gap: 14px; }
-  .team-page-card .photo { width: 120px; height: 120px; }
+  .team-page-card .photo { width: 140px; height: 186px; }
   .team-page-card .name { font-size: 1.2rem; }
 }
 
