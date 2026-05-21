@@ -165,12 +165,12 @@ p { margin: 0 0 1em; }
   background-clip: text;
   color: transparent;
 }
-.hero h1 .nowrap-grp {
+.nowrap-grp {
   display: inline-block;
   white-space: nowrap;
 }
 @media (max-width: 600px) {
-  .hero h1 .nowrap-grp { white-space: normal; }
+  .nowrap-grp { white-space: normal; }
 }
 .hero .lead {
   font-size: 1.22rem;

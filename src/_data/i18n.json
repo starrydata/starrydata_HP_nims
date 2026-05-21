@@ -95,8 +95,8 @@
     "card2_cta": { "ja": "提案する →",             "en": "Get in touch →" },
 
     "card3_t": { "ja": "共同研究・資金パートナー", "en": "Research & funding partnership" },
-    "card3_d": { "ja": "共同研究・受託研究・賛助会員（資金提供）を歓迎しています。Materials Informatics の研究開発を一緒に進めましょう。",
-                 "en": "We welcome joint research, contract research, and supporting partnerships. Let's advance Materials Informatics together." },
+    "card3_d": { "ja": "共同研究・受託研究を歓迎しています。Materials Informatics の研究開発を一緒に進めましょう。",
+                 "en": "We welcome joint research and contract research. Let's advance Materials Informatics together." },
     "card3_cta": { "ja": "問い合わせる →",         "en": "Contact us →" }
   },
   "fields": {
@@ -113,12 +113,12 @@
   },
   "collaborate": {
     "title": {
-      "ja": "Starrydata と共同研究しませんか？",
+      "ja": "Starrydata と<span class=\"nowrap-grp\">共同研究しませんか？</span>",
       "en": "Partner with Starrydata"
     },
     "lead": {
-      "ja": "データ提供・共同研究・受託研究・賛助会員を募集しています。Materials Informatics の研究開発を私たちと一緒に進めましょう。",
-      "en": "We welcome data provision, joint research, contract research, and supporting member partnerships. Let's advance Materials Informatics together."
+      "ja": "データ提供・共同研究・受託研究を募集しています。Materials Informatics の研究開発を私たちと一緒に進めましょう。",
+      "en": "We welcome data provision, joint research, and contract research. Let's advance Materials Informatics together."
     },
     "cta": {
       "ja": "問い合わせる",
