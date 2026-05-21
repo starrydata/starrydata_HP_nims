@@ -5,22 +5,17 @@
     {
       "key": "primary",
       "label": "コアメンバー",
+      "label_en": "Core Members",
       "members": [
         {
           "name_ja": "桂 ゆかり",
           "name_en": "Yukari Katsura",
           "role": "プロジェクトリーダー",
           "photo": "/project/img/profile_katsura.jpg",
-          "affiliation": "(国研)物質・材料研究機構 主任研究員\n          (国研)理化学研究所 客員研究員\n筑波大学 理工情報生命学術院  准教授",
+          "affiliation": "(国研)物質・材料研究機構 主任研究員\n(国研)理化学研究所 客員研究員\n筑波大学 理工情報生命学術院  准教授",
           "links": [
-            {
-              "label": "Twitter",
-              "href": "https://twitter.com/nezdenmama"
-            },
-            {
-              "label": "Official Page",
-              "href": "https://researchmap.jp/ykatsura"
-            }
+            { "label": "Twitter",       "href": "https://twitter.com/nezdenmama" },
+            { "label": "Official Page", "href": "https://researchmap.jp/ykatsura" }
           ]
         },
         {
@@ -28,16 +23,10 @@
           "name_en": "Masaya Kumagai",
           "role": "Web開発",
           "photo": "/project/img/profile_kumagai.jpg",
-          "affiliation": "さくらインターネット株式会社 研究員\n          (国研)理化学研究所 客員研究員",
+          "affiliation": "さくらインターネット株式会社 研究員\n(国研)理化学研究所 客員研究員",
           "links": [
-            {
-              "label": "Twitter",
-              "href": "https://twitter.com/kumagallium"
-            },
-            {
-              "label": "Official Page",
-              "href": "https://kumagallium.github.io/"
-            }
+            { "label": "Twitter",       "href": "https://twitter.com/kumagallium" },
+            { "label": "Official Page", "href": "https://kumagallium.github.io/" }
           ]
         },
         {
@@ -61,6 +50,30 @@
     {
       "key": "secondary",
       "label": "メンバー",
+      "label_en": "Members",
+      "members": [
+        {
+          "name_ja": "デウィ ヤナ",
+          "name_en": "Dewi Yana",
+          "role": "データ収集",
+          "photo": "/project/img/profile_dewi.jpg",
+          "affiliation": "(国研)物質・材料研究機構",
+          "links": []
+        },
+        {
+          "name_ja": "小山 栄二",
+          "name_en": "Eiji Koyama",
+          "role": "データ収集",
+          "photo": "/project/img/profile_koyama.jpg",
+          "affiliation": "(国研)物質・材料研究機構",
+          "links": []
+        }
+      ]
+    },
+    {
+      "key": "alumni",
+      "label": "以前いたメンバー",
+      "label_en": "Past Members",
       "members": [
         {
           "name_ja": "坂本 吉宏",
@@ -71,26 +84,10 @@
           "links": []
         },
         {
-          "name_ja": "デウィ ヤナ",
-          "name_en": "Dewi Yana",
-          "role": "データ収集",
-          "photo": "/project/img/profile_dewi.jpg",
-          "affiliation": "(国研)物質・材料研究機構",
-          "links": []
-        },
-        {
           "name_ja": "細野 史一",
           "name_en": "Fumikazu Hosono",
           "role": "データ収集",
           "photo": "/project/img/profile_hosono.jpg",
-          "affiliation": "(国研)物質・材料研究機構",
-          "links": []
-        },
-        {
-          "name_ja": "小山 栄二",
-          "name_en": "Eiji Koyama",
-          "role": "データ収集",
-          "photo": "/project/img/profile_koyama.jpg",
           "affiliation": "(国研)物質・材料研究機構",
           "links": []
         },

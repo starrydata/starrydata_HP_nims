@@ -7,6 +7,29 @@ eleventyComputed:
   description: "Starrydata プロジェクトのメンバー紹介"
 ---
 
+<style>
+  .members-group-label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 56px 0 22px;
+    padding: 0 0 12px;
+    border-bottom: 2px solid #2a6ec0;
+    letter-spacing: 0.02em;
+    color: #1a2a4a;
+  }
+  .members-group-label:first-of-type { margin-top: 28px; }
+  .members-group-label .en {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #888;
+    margin-left: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .alumni-members .area_members { opacity: 0.85; }
+</style>
+
 <div id="contents">
   <div class="inner_contents">
 
@@ -17,6 +40,9 @@ eleventyComputed:
 
     {%- for group in members.groups %}
       {%- if group.members | length > 0 %}
+      <h3 class="members-group-label">
+        {{ group.label }}{% if group.label_en %}<span class="en">{{ group.label_en }}</span>{% endif %}
+      </h3>
       <div class="{{ group.key }}-members">
         {%- for m in group.members %}
         <div>
