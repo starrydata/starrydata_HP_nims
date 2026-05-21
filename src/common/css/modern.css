@@ -229,6 +229,20 @@ p { margin: 0 0 1em; }
   max-width: 720px;
   margin: 0 0 56px;
 }
+/* 折り返さず1行に収めたい lead 用（広い画面では1行、狭い画面では自然折り返し） */
+.section .lead.lead-wide {
+  max-width: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 900px) {
+  .section .lead.lead-wide {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
 
 /* ---- Stats ---- */
 .stats {
