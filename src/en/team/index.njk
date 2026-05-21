@@ -27,6 +27,17 @@ lang: en
           <span class="count">{{ group.members | length }}</span>
         </h2>
         {% endif %}
+
+        {% if group.key == "alumni" %}
+        <ul class="alumni-list">
+          {%- for m in group.members %}
+          <li>
+            <span class="name-ja">{{ m.name_en }}</span>
+            <span class="name-en">{{ m.name_ja }}</span>
+          </li>
+          {%- endfor %}
+        </ul>
+        {% else %}
         <div class="team-page-grid">
           {%- for m in group.members %}
           <article class="team-page-card">
@@ -56,6 +67,7 @@ lang: en
           </article>
           {%- endfor %}
         </div>
+        {% endif %}
       </div>
       {%- endif %}
     {%- endfor %}

@@ -829,6 +829,37 @@ p { margin: 0 0 1em; }
 .team-group[data-group="alumni"] .team-group-title { border-bottom-color: var(--text-3); }
 .team-group[data-group="alumni"] .team-group-title .count { background: #f0f0f5; color: var(--text-2); }
 
+/* Alumni リスト（写真なし、名前のみ） */
+.alumni-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 40px;
+}
+.alumni-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  color: var(--text-2);
+}
+.alumni-list .name-ja {
+  font-size: 1.05rem;
+  color: var(--text);
+  font-weight: 600;
+}
+.alumni-list .name-en {
+  font-size: 0.85rem;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+}
+@media (max-width: 600px) {
+  .alumni-list { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 760px) {
   .team-page-grid { grid-template-columns: 1fr; gap: 32px; }
 }
