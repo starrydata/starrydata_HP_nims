@@ -10,12 +10,13 @@
     </a>
 
     {%- set teamPath = '/en/team/' if L == 'en' else '/team/' -%}
+{%- set papersPath = '/en/papers/' if L == 'en' else '/papers/' -%}
 
     <nav class="site-nav" aria-label="Global">
       <a href="{{ langPath }}#about">{{ i18n.nav.about[L] }}</a>
       <a href="{{ langPath }}#research">{{ i18n.nav.research[L] }}</a>
       <a href="{{ teamPath }}">{{ i18n.nav.team[L] }}</a>
-      <a href="{{ langPath }}#publications">{{ i18n.nav.publications[L] }}</a>
+      <a href="{{ papersPath }}">{{ i18n.nav.publications[L] }}</a>
       <a href="{{ langPath }}#news">{{ i18n.nav.news[L] }}</a>
       <a href="{{ langPath }}#collaborate">{{ i18n.nav.collaborate[L] }}</a>
 

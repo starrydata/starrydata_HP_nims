@@ -1,18 +1,17 @@
 ---
 layout: modern.njk
-permalink: /papers/index.html
-title: 論文
-lang: ja
+permalink: /en/papers/index.html
+title: Publications
+lang: en
 ---
 
-{%- set L = "ja" -%}
+{%- set L = "en" -%}
 
-<!-- =================== PAGE HEAD =================== -->
 <section class="page-head">
   <div class="container">
     <span class="eyebrow">Publications</span>
-    <h1>論文</h1>
-    <p class="lead">Starrydata プロジェクトの代表論文と、世界中の研究者による Starrydata の引用論文を掲載しています。OpenAlex + Crossref Open Citations から毎月自動更新。</p>
+    <h1>Publications</h1>
+    <p class="lead">Featured papers by the Starrydata team and external publications citing our work. Auto-refreshed monthly from OpenAlex and Crossref Open Citations.</p>
     <p class="papers-source">
       Sources:
       <a href="https://openalex.org" target="_blank" rel="noopener">OpenAlex</a>
@@ -24,14 +23,13 @@ lang: ja
   </div>
 </section>
 
-<!-- =================== PROJECT PAPERS =================== -->
 <section class="section section-top-tight" id="project-papers">
   <div class="container">
     <h2 class="papers-h2">
-      Starrydata プロジェクト関連論文
+      Project papers
       <span class="count">{{ papers.project_papers_count }}</span>
     </h2>
-    <p class="papers-note">桂ゆかり氏らによる Starrydata プロジェクトの代表論文（DOI seed リストで管理）</p>
+    <p class="papers-note">Representative publications by Yukari Katsura and the Starrydata team (managed via a seed DOI list).</p>
 
     <ol class="paper-list">
       {%- for p in papers.project_papers %}
@@ -53,9 +51,7 @@ lang: ja
             {%- if p.start_page %}, {{ p.start_page }}{% if p.end_page %}–{{ p.end_page }}{% endif %}{% endif %}
           </p>
           {%- if p.doi %}
-          <p class="paper-doi">
-            DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a>
-          </p>
+          <p class="paper-doi">DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a></p>
           {%- endif %}
           {%- if p.cited_by_count %}
           <p class="paper-citations">
@@ -69,15 +65,14 @@ lang: ja
   </div>
 </section>
 
-<!-- =================== CITING PAPERS =================== -->
 <section class="section" id="citing-papers" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="container">
     <h2 class="papers-h2">
-      Starrydata を引用している論文
+      Papers citing Starrydata
       <span class="count">{{ papers.citing_papers_count }}</span>
     </h2>
     <p class="papers-note">
-      上記プロジェクト論文を引用している他研究者の論文（新しい順）。<br>
+      External publications citing the Starrydata project papers above (newest first).<br>
       Sources: OpenAlex only {{ papers.citing_papers_by_source.openalex_only }} ／
       OpenCitations only {{ papers.citing_papers_by_source.opencitations_only }} ／
       both {{ papers.citing_papers_by_source.both }}
@@ -108,9 +103,7 @@ lang: ja
               {%- if p.start_page %}, {{ p.start_page }}{% if p.end_page %}–{{ p.end_page }}{% endif %}{% endif %}
             </p>
             {%- if p.doi %}
-            <p class="paper-doi">
-              DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a>
-            </p>
+            <p class="paper-doi">DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a></p>
             {%- endif %}
           </div>
         </li>

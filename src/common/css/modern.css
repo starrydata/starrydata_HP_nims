@@ -869,6 +869,181 @@ p { margin: 0 0 1em; }
   .team-page-card .name { font-size: 1.2rem; }
 }
 
+/* ---- Papers page ---- */
+.papers-source {
+  font-size: 0.85rem;
+  color: var(--text-3);
+  margin: 16px 0 0;
+}
+.papers-source a {
+  color: var(--accent-2);
+  font-weight: 500;
+}
+.papers-h2 {
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  margin: 0 0 14px;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.papers-h2 .count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  background: #f3eefe;
+  padding: 4px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+.papers-note {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin: 0 0 32px;
+  max-width: 760px;
+}
+
+.paper-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.paper-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 28px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.paper-item:last-child { border-bottom: none; }
+.paper-item-compact {
+  grid-template-columns: 1fr;
+  padding: 18px 0;
+}
+.paper-year-col {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  text-align: right;
+}
+.paper-body { min-width: 0; }
+.paper-title {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text);
+}
+.paper-title a {
+  color: var(--text);
+  border-bottom: 1px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.paper-title a:hover {
+  color: var(--accent-2);
+  border-bottom-color: var(--accent-2);
+}
+.paper-authors {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+.paper-meta {
+  margin: 0 0 4px;
+  font-size: 0.88rem;
+  color: var(--text-2);
+}
+.paper-meta .journal { font-style: italic; color: var(--text); }
+.paper-meta strong { color: var(--text); font-weight: 700; }
+.paper-doi {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-3);
+  font-family: "Menlo", "Consolas", monospace;
+}
+.paper-doi a { color: var(--text-3); }
+.paper-doi a:hover { color: var(--accent-2); }
+.paper-citations { margin: 6px 0 0; }
+.citation-pill {
+  display: inline-block;
+  padding: 2px 12px;
+  background: #f3eefe;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: var(--accent-2);
+}
+.citation-pill strong { color: var(--accent-2); font-weight: 700; }
+
+/* ---- Year group (details/summary for citing papers) ---- */
+.year-group {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: 0 0 14px;
+  background: var(--bg-subtle);
+  transition: border-color .2s;
+}
+.year-group[open] {
+  border-color: var(--accent-2);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.year-summary {
+  cursor: pointer;
+  padding: 16px 22px;
+  font-weight: 700;
+  color: var(--text);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: background .15s;
+}
+.year-summary::-webkit-details-marker { display: none; }
+.year-summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 0.7em;
+  transition: transform 0.2s;
+  color: var(--accent-2);
+}
+.year-group[open] .year-summary::before { transform: rotate(90deg); }
+.year-summary:hover { background: #f3eefe; }
+.year-group[open] .year-summary:hover { background: transparent; }
+.year-label {
+  font-size: 1.18rem;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+.year-count {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-2);
+  background: var(--line);
+  padding: 3px 12px;
+  border-radius: 999px;
+}
+.year-group[open] .year-count {
+  background: #f3eefe;
+  color: var(--accent-2);
+  font-weight: 600;
+}
+.year-group .paper-list { padding: 0 22px 12px; }
+.year-group .paper-item-compact:first-child { border-top: 1px solid var(--line); }
+
+@media (max-width: 600px) {
+  .paper-item { grid-template-columns: 1fr; gap: 8px; }
+  .paper-year-col { text-align: left; font-size: 1.1rem; }
+}
+
 /* ---- Collaborate CTA ---- */
 .cta-band {
   background: var(--grad-hero);
