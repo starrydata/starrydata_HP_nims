@@ -882,11 +882,12 @@ p { margin: 0 0 1em; }
 }
 .member-card .photo {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 12px;
+  aspect-ratio: 3 / 4;
+  border-radius: 0;
   background: linear-gradient(135deg, #cbd5e1, #94a3b8);
   margin: 0 0 16px;
   object-fit: cover;
+  object-position: center top;
   overflow: hidden;
 }
 .member-card h4 {
