@@ -58,8 +58,8 @@
   "what_is": {
     "title":     { "ja": "Starrydata とは",     "en": "What is Starrydata" },
     "lead": {
-      "ja": "Starrydata は、無機材料科学の論文に掲載されたグラフから実験データを抽出・構造化し、世界中の研究者が再利用できる形で公開する **オープンデータプロジェクト** です。",
-      "en": "Starrydata is an **open data project** that extracts and structures experimental data from graphs in inorganic materials science papers, making them freely reusable for researchers worldwide."
+      "ja": "Starrydata は、無機材料科学の論文に掲載されたグラフから実験データを抽出・構造化し、世界中の研究者が再利用できる形で公開する<strong>オープンデータプロジェクト</strong>です。",
+      "en": "Starrydata is an <strong>open data project</strong> that extracts and structures experimental data from graphs in inorganic materials science papers, making them freely reusable for researchers worldwide."
     },
     "body": {
       "ja": "2017 年に NIMS で始まり、現在は理化学研究所 AIP・筑波大学などとの連携のもと、専属研究チームが日々データ収集を続けています。Materials Informatics・機械学習・新材料探索に役立つ高品質な実験データを、API・Figshare・GitHub から自由にダウンロード／引用できます。",

@@ -418,23 +418,48 @@ p { margin: 0 0 1em; }
 }
 
 /* ---- About prose ---- */
-.container-narrow-prose { max-width: var(--container-narrow); }
+.container-narrow-prose { max-width: 820px; }
+.lead-large,
+.prose {
+  /* 日本語：禁則処理を厳密化、Chrome 119+ では文節単位の改行 */
+  line-break: strict;
+  overflow-wrap: break-word;
+  word-break: auto-phrase;
+  text-wrap: pretty;
+}
 .lead-large {
-  font-size: clamp(1.15rem, 2vw, 1.32rem);
-  line-height: 1.7;
+  font-size: clamp(1.12rem, 1.8vw, 1.28rem);
+  line-height: 1.85;
   color: var(--text);
-  margin: 0 0 24px;
+  margin: 0 0 22px;
+  max-width: 64ch;
 }
 .lead-large strong {
   color: var(--accent-2);
   font-weight: 700;
-  background: linear-gradient(120deg, transparent 0%, transparent 60%, rgba(167,139,250,0.22) 60%, rgba(167,139,250,0.22) 100%);
+  background: linear-gradient(120deg, transparent 0%, transparent 50%, rgba(167,139,250,0.22) 50%, rgba(167,139,250,0.22) 100%);
   padding: 0 2px;
 }
 .prose {
-  font-size: 1.04rem;
-  line-height: 1.85;
+  font-size: 1.02rem;
+  line-height: 1.9;
   color: var(--text-2);
+  max-width: 68ch;
+  margin: 0;
+}
+
+/* セクション lead 全般の日本語改行を改善 */
+.section .lead,
+.cta-band p,
+.feature-card p,
+.mini-card p,
+.app-desc,
+.involve-card p,
+.hero .lead {
+  line-break: strict;
+  overflow-wrap: break-word;
+  word-break: auto-phrase;
+  text-wrap: pretty;
 }
 
 /* ---- Apps grid ---- */
