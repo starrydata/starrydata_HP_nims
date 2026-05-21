@@ -12,7 +12,7 @@
           "name_en": "Yukari Katsura",
           "role": "プロジェクトリーダー",
           "photo": "/assets/images/team/katsura_yukari.jpg",
-          "affiliation": "NIMS 主任研究員\n筑波大学 数理物質科学研究群 国際マテリアルズイノベーション学位プログラム 准教授\n(国研)理化学研究所 革新知能統合研究センター 客員研究員",
+          "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ 主任研究員\n筑波大学 数理物質科学研究群 国際マテリアルズイノベーション学位プログラム 准教授\n(国研)理化学研究所 革新知能統合研究センター 客員研究員",
           "links": [
             { "label": "Twitter",       "href": "https://twitter.com/nezdenmama" },
             { "label": "Official Page", "href": "https://researchmap.jp/ykatsura" }
@@ -34,7 +34,7 @@
           "name_en": "Tomoya Mato",
           "role": "Web開発",
           "photo": "/project/img/profile_mato.jpg",
-          "affiliation": "NIMS エンジニア",
+          "affiliation": "NIMS 技術開発・共用部門 エンジニア",
           "links": []
         },
         {
@@ -42,7 +42,7 @@
           "name_en": "Atsumi Tanaka",
           "role": "プロジェクト運営\n（リサーチ・アドミニストレーター）",
           "photo": "/assets/images/team/tanaka_atsumi.jpg",
-          "affiliation": "NIMS",
+          "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ テクニカルスタッフ",
           "links": []
         },
         {
@@ -50,7 +50,7 @@
           "name_en": "Dewi Yana",
           "role": "データ収集",
           "photo": "/assets/images/team/dewi_yana.jpg",
-          "affiliation": "NIMS",
+          "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ テクニカルスタッフ",
           "links": []
         },
         {
@@ -58,7 +58,7 @@
           "name_en": "Eiji Koyama",
           "role": "データ収集",
           "photo": "/project/img/profile_koyama.jpg",
-          "affiliation": "NIMS",
+          "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ",
           "links": []
         }
       ]
