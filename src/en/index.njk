@@ -159,7 +159,7 @@ lang: en
   <div class="container">
     <span class="eyebrow">Publications</span>
     <h2>{{ i18n.publications.title[L] }}</h2>
-    <p class="lead">Top 3 of 8 project papers from the Starrydata team. 184 external publications cite our work.</p>
+    <p class="lead lead-wide">Top 3 of {{ papers.project_papers_count }} project papers from the Starrydata team. {{ papers.citing_papers_count }} external publications cite our work.</p>
 
     <div class="card-grid">
       {%- for p in papers.project_papers.slice(0, 3) %}

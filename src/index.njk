@@ -198,7 +198,7 @@ lang: ja
   <div class="container">
     <span class="eyebrow">Publications</span>
     <h2>{{ i18n.publications.title[L] }}</h2>
-    <p class="lead">Starrydata プロジェクトの代表論文（最新 3 件）。全 8 本のプロジェクト論文と 184 本の引用論文は一覧ページで。</p>
+    <p class="lead lead-wide">Starrydata プロジェクトの代表論文（最新 3 件）。全 {{ papers.project_papers_count }} 本のプロジェクト論文と {{ papers.citing_papers_count }} 本の引用論文は一覧ページで。</p>
 
     <div class="card-grid">
       {%- for p in papers.project_papers.slice(0, 3) %}
