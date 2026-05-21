@@ -1,0 +1,60 @@
+---
+layout: modern.njk
+permalink: /en/team/index.html
+title: Team
+lang: en
+---
+
+{%- set L = "en" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">{{ i18n.team.subtitle[L] }}</span>
+    <h1>{{ i18n.team.title[L] }}</h1>
+    <p class="lead">{{ i18n.team.lead[L] }}</p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container">
+    {%- for group in members.groups %}
+      {%- if group.members | length > 0 %}
+      <div class="team-group" data-group="{{ group.key }}">
+        <h2 class="team-group-title">
+          {{ group.label_en or group.label }}
+          <span class="count">{{ group.members | length }}</span>
+        </h2>
+        <div class="team-page-grid">
+          {%- for m in group.members %}
+          <article class="team-page-card">
+            <div class="photo">
+              {% if m.photo %}
+                <img src="{{ m.photo }}" alt="{{ m.name_en }}" loading="lazy">
+              {% else %}
+                <div class="photo-placeholder">{{ m.name_en | first }}</div>
+              {% endif %}
+            </div>
+            <div class="info">
+              <h3 class="name">{{ m.name_en }}<span class="en">{{ m.name_ja }}</span></h3>
+              {% if m.role %}
+              <p class="role">{{ m.role | replace("\n", "<br>") | safe }}</p>
+              {% endif %}
+              {% if m.affiliation %}
+              <p class="aff">{{ m.affiliation | replace("\n", "<br>") | safe }}</p>
+              {% endif %}
+              {% if m.links | length > 0 %}
+              <ul class="links">
+                {%- for l in m.links %}
+                <li><a href="{{ l.href }}" target="_blank" rel="noopener">{{ l.label }}</a></li>
+                {%- endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </article>
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endif %}
+    {%- endfor %}
+  </div>
+</section>

@@ -127,6 +127,11 @@
   },
   "team": {
     "title":   { "ja": "メンバー",        "en": "Team" },
+    "subtitle":{ "ja": "Members",         "en": "Members" },
+    "lead": {
+      "ja": "Starrydata は無機材料・データ科学・Web 開発の専門家からなる、専属の研究チームによって運営されています。",
+      "en": "Starrydata is operated by a dedicated team of specialists in materials science, data science, and web engineering."
+    },
     "see_all": { "ja": "メンバー一覧",    "en": "View all members" },
     "core":    { "ja": "コアメンバー",    "en": "Core Members" },
     "researchers": { "ja": "メンバー",    "en": "Researchers" }

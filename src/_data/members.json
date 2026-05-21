@@ -11,7 +11,7 @@
           "name_ja": "桂 ゆかり",
           "name_en": "Yukari Katsura",
           "role": "プロジェクトリーダー",
-          "photo": "/project/img/profile_katsura.jpg",
+          "photo": "/assets/images/team/katsura_yukari.jpg",
           "affiliation": "(国研)物質・材料研究機構 主任研究員\n(国研)理化学研究所 客員研究員\n筑波大学 理工情報生命学術院  准教授",
           "links": [
             { "label": "Twitter",       "href": "https://twitter.com/nezdenmama" },
@@ -41,7 +41,7 @@
           "name_ja": "田中 敦美",
           "name_en": "Atsumi Tanaka",
           "role": "プロジェクト運営\n（リサーチ・アドミニストレーター）",
-          "photo": "/project/img/img_members_05.png",
+          "photo": "/assets/images/team/tanaka_atsumi.jpg",
           "affiliation": "(国研)物質・材料研究機構",
           "links": []
         }
@@ -56,7 +56,7 @@
           "name_ja": "デウィ ヤナ",
           "name_en": "Dewi Yana",
           "role": "データ収集",
-          "photo": "/project/img/profile_dewi.jpg",
+          "photo": "/assets/images/team/dewi_yana.jpg",
           "affiliation": "(国研)物質・材料研究機構",
           "links": []
         },
