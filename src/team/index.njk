@@ -25,7 +25,7 @@ lang: ja
         {% if group.label %}
         <h2 class="team-group-title">
           {{ group.label }}
-          {% if group.label_en %}<span class="en">{{ group.label_en }}</span>{% endif %}
+          {% if group.label_en and group.label_en != group.label %}<span class="en">{{ group.label_en }}</span>{% endif %}
           <span class="count">{{ group.members | length }}</span>
         </h2>
         {% endif %}
