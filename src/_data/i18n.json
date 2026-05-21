@@ -28,7 +28,7 @@
   },
   "hero": {
     "headline_1": {
-      "ja": "<span class=\"accent\">Materials Informatics</span> のための",
+      "ja": "<span class=\"nowrap-grp\"><span class=\"accent\">Materials Informatics</span> のための</span>",
       "en": "An open data platform for"
     },
     "headline_2": {
