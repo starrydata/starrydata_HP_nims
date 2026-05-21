@@ -12,7 +12,7 @@
           "name_en": "Yukari Katsura",
           "role": "プロジェクトリーダー",
           "photo": "/assets/images/team/katsura_yukari.jpg",
-          "affiliation": "(国研)物質・材料研究機構 主任研究員\n筑波大学 数理物質科学研究群 国際マテリアルズイノベーション学位プログラム 准教授\n(国研)理化学研究所 革新知能統合研究センター 客員研究員",
+          "affiliation": "NIMS 主任研究員\n筑波大学 数理物質科学研究群 国際マテリアルズイノベーション学位プログラム 准教授\n(国研)理化学研究所 革新知能統合研究センター 客員研究員",
           "links": [
             { "label": "Twitter",       "href": "https://twitter.com/nezdenmama" },
             { "label": "Official Page", "href": "https://researchmap.jp/ykatsura" }
@@ -34,7 +34,7 @@
           "name_en": "Tomoya Mato",
           "role": "Web開発",
           "photo": "/project/img/profile_mato.jpg",
-          "affiliation": "(国研)物質・材料研究機構 エンジニア",
+          "affiliation": "NIMS エンジニア",
           "links": []
         },
         {
@@ -42,7 +42,7 @@
           "name_en": "Atsumi Tanaka",
           "role": "プロジェクト運営\n（リサーチ・アドミニストレーター）",
           "photo": "/assets/images/team/tanaka_atsumi.jpg",
-          "affiliation": "(国研)物質・材料研究機構",
+          "affiliation": "NIMS",
           "links": []
         },
         {
@@ -50,7 +50,7 @@
           "name_en": "Dewi Yana",
           "role": "データ収集",
           "photo": "/assets/images/team/dewi_yana.jpg",
-          "affiliation": "(国研)物質・材料研究機構",
+          "affiliation": "NIMS",
           "links": []
         },
         {
@@ -58,7 +58,7 @@
           "name_en": "Eiji Koyama",
           "role": "データ収集",
           "photo": "/project/img/profile_koyama.jpg",
-          "affiliation": "(国研)物質・材料研究機構",
+          "affiliation": "NIMS",
           "links": []
         }
       ]
@@ -81,7 +81,7 @@
           "name_en": "Fumikazu Hosono",
           "role": "データ収集",
           "photo": "/project/img/profile_hosono.jpg",
-          "affiliation": "(国研)物質・材料研究機構",
+          "affiliation": "NIMS",
           "links": []
         },
         {
@@ -89,7 +89,7 @@
           "name_en": "Naoto Saito",
           "role": "データ収集",
           "photo": "/project/img/profile_saito.jpg",
-          "affiliation": "(国研)物質・材料研究機構",
+          "affiliation": "NIMS",
           "links": []
         },
         {
@@ -97,7 +97,7 @@
           "name_en": "Yu Takada",
           "role": "Web開発",
           "photo": "/project/img/profile_takada.jpg",
-          "affiliation": "(国研)物質・材料研究機構",
+          "affiliation": "NIMS",
           "links": []
         }
       ]
