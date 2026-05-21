@@ -729,15 +729,15 @@ p { margin: 0 0 1em; }
 .team-page-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  gap: 32px;
 }
 .team-page-card {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 30px;
+  padding: 40px;
   display: flex;
-  gap: 26px;
+  gap: 32px;
   align-items: flex-start;
   transition: box-shadow .2s, border-color .2s, transform .15s;
 }
@@ -748,9 +748,9 @@ p { margin: 0 0 1em; }
 }
 .team-page-card .photo {
   flex-shrink: 0;
-  width: 144px;
-  height: 144px;
-  border-radius: 12px;
+  width: 180px;
+  height: 180px;
+  border-radius: 14px;
   overflow: hidden;
   background: linear-gradient(135deg, #c4b5fd, #818cf8);
   position: relative;
@@ -770,30 +770,30 @@ p { margin: 0 0 1em; }
 }
 .team-page-card .info { flex: 1; min-width: 0; }
 .team-page-card .name {
-  font-size: 1.38rem;
-  margin: 0 0 8px;
+  font-size: 1.6rem;
+  margin: 0 0 10px;
   font-weight: 700;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   color: var(--text);
 }
 .team-page-card .name .en {
   display: block;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--text-3);
   font-weight: 500;
   letter-spacing: 0.04em;
   margin-top: 4px;
 }
 .team-page-card .role {
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   color: var(--accent-2);
   font-weight: 600;
-  margin: 0 0 12px;
+  margin: 0 0 14px;
 }
 .team-page-card .aff {
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   color: var(--text-2);
-  line-height: 1.65;
+  line-height: 1.7;
   margin: 0;
 }
 .team-page-card .links {
@@ -830,8 +830,11 @@ p { margin: 0 0 1em; }
   .team-page-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
-  .team-page-card { flex-direction: column; gap: 14px; }
-  .team-page-card .photo { width: 100px; height: 100px; }
+  .team-page-card { flex-direction: column; gap: 18px; padding: 28px; }
+  .team-page-card .photo { width: 140px; height: 140px; }
+  .team-page-card .name { font-size: 1.35rem; }
+  .team-page-card .role { font-size: 1.05rem; }
+  .team-page-card .aff { font-size: 0.95rem; }
 }
 
 /* ---- Collaborate CTA ---- */
