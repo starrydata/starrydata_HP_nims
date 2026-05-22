@@ -537,7 +537,8 @@ p { margin: 0 0 1em; }
 .app-card .app-body {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  padding: 18px 22px 20px;
+  height: 110px;                       /* 全カード統一 */
+  padding: 14px 22px 16px;
   background: rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(10px) saturate(140%);
   -webkit-backdrop-filter: blur(10px) saturate(140%);
@@ -545,8 +546,11 @@ p { margin: 0 0 1em; }
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  justify-content: center;
+  gap: 3px;
   transition: background 0.2s;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .app-card:hover .app-body {
   background: rgba(255, 255, 255, 0.94);
@@ -555,8 +559,8 @@ p { margin: 0 0 1em; }
 /* === image_layout="top": 横長画像用、画像上 / テキスト下 分離 === */
 .app-card[data-image-layout="top"] .app-thumb {
   position: absolute;
-  inset: 0 0 auto 0;        /* 上部のみ */
-  height: 62%;
+  inset: 0 0 110px 0;                   /* テキスト 110px ぶん残す */
+  height: auto;
   background: #fff;
   border-bottom: 1px solid var(--line);
 }
@@ -566,13 +570,10 @@ p { margin: 0 0 1em; }
   padding: 14px;
 }
 .app-card[data-image-layout="top"] .app-body {
-  top: 62%;
-  bottom: 0;
   background: #fff;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-top: 1px solid var(--line);
-  padding: 16px 22px;
 }
 .app-card[data-image-layout="top"]:hover .app-body {
   background: var(--bg-subtle);
