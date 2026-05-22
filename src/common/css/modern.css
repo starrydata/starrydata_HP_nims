@@ -520,6 +520,31 @@ p { margin: 0 0 1em; }
   font-weight: 700;
   letter-spacing: 0;
 }
+.app-card .app-thumb {
+  width: calc(100% + 52px);
+  margin: -26px -26px 18px;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-subtle);
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom: 1px solid var(--line);
+}
+.app-card .app-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.app-card:hover .app-thumb img { transform: scale(1.04); }
+.app-card .app-thumb-placeholder {
+  display: grid;
+  place-items: center;
+  background: var(--grad-cta);
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
 .app-card h3 {
   font-size: 1.12rem;
   margin: 0;

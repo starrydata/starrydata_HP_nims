@@ -98,7 +98,11 @@ lang: ja
     <div class="apps-grid">
       {%- for a in apps.apps %}
       <a class="app-card" href="{{ a.url }}" target="_blank" rel="noopener">
-        <div class="app-icon">{{ a.icon }}</div>
+        {% if a.image %}
+        <div class="app-thumb"><img src="{{ a.image }}" alt="{{ a.name[L] }}" loading="lazy"></div>
+        {% else %}
+        <div class="app-thumb app-thumb-placeholder"><span>{{ a.icon }}</span></div>
+        {% endif %}
         <div class="app-body">
           <h3>{{ a.name[L] }}</h3>
           <p class="app-sub">{{ a.subtitle[L] }}</p>
