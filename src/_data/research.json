@@ -1,8 +1,14 @@
 {
   "_note": "研究領域。stats は毎月 starrydata.github.io/json/counts.json から JS で動的更新。",
   "page": {
-    "title":    { "ja": "Research",     "en": "Research" },
-    "subtitle": { "ja": "Research",     "en": "Research" },
+    "title": {
+      "ja": "Research",
+      "en": "Research"
+    },
+    "subtitle": {
+      "ja": "Research",
+      "en": "Research"
+    },
     "lead": {
       "ja": "Starrydata プロジェクトでは、12 の研究領域でデータ収集を進めています。\n<span class=\"nowrap-grp\">各プロジェクトでは特定の物性に焦点を当て、論文中のグラフから実験データを系統的に抽出しています。</span>",
       "en": "The Starrydata project curates data across 12 research fields.\n<span class=\"nowrap-grp\">Each project focuses on specific material properties and systematically extracts experimental data from published plots.</span>"
@@ -12,7 +18,10 @@
     {
       "slug": "thermoelectric",
       "system_key": "ThermoelectricMaterials",
-      "name":  { "ja": "熱電材料",                       "en": "Thermoelectric Materials" },
+      "name": {
+        "ja": "熱電材料",
+        "en": "Thermoelectric Materials"
+      },
       "description": {
         "ja": "熱と電気を相互に変換する熱電材料の特性データを網羅的に収集。Bi₂Te₃ 系・PbTe 系・SnSe・ハーフホイスラーなど、室温から高温域まで幅広い材料系の温度依存特性を扱います。Starrydata 最大のプロジェクトです。",
         "en": "Comprehensive curation of thermoelectric materials data — covering Bi₂Te₃, PbTe, SnSe, half-Heuslers and more — from room temperature up to high-temperature regimes. The largest project in Starrydata."
@@ -26,68 +35,12 @@
       ]
     },
     {
-      "slug": "battery",
-      "system_key": "BatteryMaterials",
-      "name":  { "ja": "電池材料",                       "en": "Battery Materials" },
-      "description": {
-        "ja": "次世代二次電池材料の電気化学データを収集。充放電曲線・サイクル特性・レート特性を通じて、容量・電圧プロファイル・劣化挙動を体系化しています。",
-        "en": "Electrochemical data of next-generation secondary battery materials. Through charge–discharge curves, cycle stability, and rate capability, we systematize capacity, voltage profile, and degradation behavior."
-      },
-      "data_types": [
-        "Discharge capacity vs Voltage",
-        "Charge capacity vs Voltage",
-        "Cycle number vs Discharge capacity",
-        "C rate vs Discharge capacity",
-        "Time vs Voltage"
-      ]
-    },
-    {
-      "slug": "magnetic",
-      "system_key": "MagneticMaterials",
-      "name":  { "ja": "磁性材料",                       "en": "Magnetic Materials" },
-      "description": {
-        "ja": "永久磁石・軟磁性・希土類磁石などの磁性材料データを収集。磁場依存の磁化（ヒステリシス曲線）と温度依存磁化を中心に、保磁力・残留磁化・キュリー温度などの基本物性を抽出できます。",
-        "en": "Magnetic materials including permanent, soft, and rare-earth magnets. We focus on field-dependent magnetization (hysteresis loops) and temperature-dependent magnetization, enabling extraction of coercivity, remanence, and Curie temperature."
-      },
-      "data_types": [
-        "Magnetic field strength (H) vs Magnetization",
-        "Temperature vs Magnetization",
-        "Temperature vs Magnetic susceptibility"
-      ]
-    },
-    {
-      "slug": "dielectric",
-      "system_key": "DielectricMaterials",
-      "name":  { "ja": "誘電材料",                       "en": "Dielectric Materials" },
-      "description": {
-        "ja": "強誘電体・コンデンサ材料などの誘電特性を収集。誘電率 (ε′) と誘電損失 (tanδ) の温度・周波数依存性を体系化し、相転移・分極挙動の解析に利用できます。",
-        "en": "Dielectric properties of ferroelectrics and capacitor materials. We systematize temperature and frequency dependence of permittivity (ε′) and loss (tanδ), enabling analysis of phase transitions and polarization behavior."
-      },
-      "data_types": [
-        "Temperature vs Dielectric permittivity (ε′)",
-        "Temperature vs Dielectric loss (tanδ)",
-        "Electric field vs Polarization"
-      ]
-    },
-    {
-      "slug": "condensed-matter",
-      "system_key": "CondensedMatter",
-      "name":  { "ja": "固体物性",                       "en": "Condensed Matter" },
-      "description": {
-        "ja": "新規物質の物性探索を目的とした基礎研究データを収集。電気抵抗率・ゼーベック係数・熱伝導率の温度依存性を通じて、超伝導・電荷密度波・近藤効果などの低温物性も含む幅広い物性を扱います。",
-        "en": "Foundational data for exploratory studies of novel materials. Temperature-dependent resistivity, Seebeck coefficient, and thermal conductivity span a broad range — including low-temperature phenomena such as superconductivity, CDW, and Kondo effect."
-      },
-      "data_types": [
-        "Temperature vs Electrical resistivity",
-        "Temperature vs Seebeck coefficient",
-        "Temperature vs Thermal conductivity",
-        "Temperature vs Power factor"
-      ]
-    },
-    {
       "slug": "low-thermal-conductivity",
       "system_key": "LowThermalConductivityMaterials",
-      "name":  { "ja": "低熱伝導率材料",                 "en": "Low Thermal Conductivity Materials" },
+      "name": {
+        "ja": "低熱伝導率材料",
+        "en": "Low Thermal Conductivity Materials"
+      },
       "description": {
         "ja": "断熱材・熱電材料候補として注目される低熱伝導率材料のデータを収集。クラスレート・ゼーベック・スクッテルダイトなど、フォノン散乱の強い系を中心に温度依存特性を整理しています。",
         "en": "Low-thermal-conductivity materials relevant to insulation and thermoelectrics. Focused on systems with strong phonon scattering — clathrates, Zintl phases, skutterudites — and their temperature dependence."
@@ -101,7 +54,10 @@
     {
       "slug": "high-thermal-conductivity",
       "system_key": "HighThermalConductivityMaterials",
-      "name":  { "ja": "高熱伝導率材料",                 "en": "High Thermal Conductivity Materials" },
+      "name": {
+        "ja": "高熱伝導率材料",
+        "en": "High Thermal Conductivity Materials"
+      },
       "description": {
         "ja": "ダイヤモンド・BN・SiC などの放熱材料候補の熱伝導率データを収集。電子素子の冷却や次世代半導体パッケージ向けの材料選定に必要な温度依存熱伝導率を体系化しています。",
         "en": "Heat-dissipation candidates such as diamond, BN, SiC. Temperature-dependent thermal conductivity is systematized for thermal management and next-generation semiconductor packaging."
@@ -113,37 +69,31 @@
       ]
     },
     {
-      "slug": "hypermaterial",
-      "system_key": "Hypermaterial",
-      "name":  { "ja": "ハイパーマテリアル",             "en": "Hypermaterials (Quasicrystals)" },
+      "slug": "battery",
+      "system_key": "BatteryMaterials",
+      "name": {
+        "ja": "電池材料",
+        "en": "Battery Materials"
+      },
       "description": {
-        "ja": "準結晶・近似結晶相など、長距離秩序を持ちながらも周期性のない特殊な物質群（ハイパーマテリアル）の物性データを収集。電気抵抗率・磁化率・ゼーベック係数を中心に低温〜室温域で整理しています。",
-        "en": "Quasicrystals and their approximants — materials with long-range order but no periodicity. We focus on resistivity, susceptibility, and Seebeck coefficient from low to room temperature."
+        "ja": "次世代二次電池材料の電気化学データを収集。充放電曲線・サイクル特性・レート特性を通じて、容量・電圧プロファイル・劣化挙動を体系化しています。",
+        "en": "Electrochemical data of next-generation secondary battery materials. Through charge–discharge curves, cycle stability, and rate capability, we systematize capacity, voltage profile, and degradation behavior."
       },
       "data_types": [
-        "Temperature vs Electrical resistivity",
-        "Temperature vs Magnetic susceptibility",
-        "Temperature vs Seebeck coefficient"
-      ]
-    },
-    {
-      "slug": "piezoelectric",
-      "system_key": "PiezoelectricMaterials",
-      "name":  { "ja": "圧電材料",                       "en": "Piezoelectric Materials" },
-      "description": {
-        "ja": "PZT・KNN 系などの圧電材料データを収集。電界vs分極（PE ループ）・電界vs歪み（バタフライ曲線）に加え、誘電率の温度依存性も含めた多面的なデータを扱います。",
-        "en": "Piezoelectric materials such as PZT and KNN-based systems. We curate polarization–field hysteresis (PE loops), strain–field butterfly curves, and temperature-dependent permittivity."
-      },
-      "data_types": [
-        "Electric field vs Polarization",
-        "Electric field vs Strain",
-        "Temperature vs Dielectric permittivity"
+        "Discharge capacity vs Voltage",
+        "Charge capacity vs Voltage",
+        "Cycle number vs Discharge capacity",
+        "C rate vs Discharge capacity",
+        "Time vs Voltage"
       ]
     },
     {
       "slug": "solid-state-battery",
       "system_key": "SolidStateBatteryMaterials",
-      "name":  { "ja": "全固体電池材料",                 "en": "Solid-State Battery Materials" },
+      "name": {
+        "ja": "全固体電池材料",
+        "en": "Solid-State Battery Materials"
+      },
       "description": {
         "ja": "次世代電池として期待される全固体電池の電気化学データを収集。硫化物・酸化物固体電解質を含む新規材料系の充放電特性・サイクル特性を整理しています。",
         "en": "Next-generation solid-state batteries with sulfide and oxide electrolytes. Charge–discharge profiles and cycling behavior are systematized for emerging material systems."
@@ -157,7 +107,10 @@
     {
       "slug": "air-battery",
       "system_key": "AirBatteryMaterials",
-      "name":  { "ja": "空気電池材料",                   "en": "Air Battery Materials" },
+      "name": {
+        "ja": "空気電池材料",
+        "en": "Air Battery Materials"
+      },
       "description": {
         "ja": "リチウム空気電池・亜鉛空気電池など、高エネルギー密度を目指す空気電池材料のデータを収集。正極・触媒材料の充放電特性を中心に整理しています。",
         "en": "High-energy-density air batteries — Li-air, Zn-air, and beyond. Curating charge–discharge data for cathodes and catalysts."
@@ -169,9 +122,98 @@
       ]
     },
     {
+      "slug": "magnetic",
+      "system_key": "MagneticMaterials",
+      "name": {
+        "ja": "磁性材料",
+        "en": "Magnetic Materials"
+      },
+      "description": {
+        "ja": "永久磁石・軟磁性・希土類磁石などの磁性材料データを収集。磁場依存の磁化（ヒステリシス曲線）と温度依存磁化を中心に、保磁力・残留磁化・キュリー温度などの基本物性を抽出できます。",
+        "en": "Magnetic materials including permanent, soft, and rare-earth magnets. We focus on field-dependent magnetization (hysteresis loops) and temperature-dependent magnetization, enabling extraction of coercivity, remanence, and Curie temperature."
+      },
+      "data_types": [
+        "Magnetic field strength (H) vs Magnetization",
+        "Temperature vs Magnetization",
+        "Temperature vs Magnetic susceptibility"
+      ]
+    },
+    {
+      "slug": "dielectric",
+      "system_key": "DielectricMaterials",
+      "name": {
+        "ja": "誘電材料",
+        "en": "Dielectric Materials"
+      },
+      "description": {
+        "ja": "強誘電体・コンデンサ材料などの誘電特性を収集。誘電率 (ε′) と誘電損失 (tanδ) の温度・周波数依存性を体系化し、相転移・分極挙動の解析に利用できます。",
+        "en": "Dielectric properties of ferroelectrics and capacitor materials. We systematize temperature and frequency dependence of permittivity (ε′) and loss (tanδ), enabling analysis of phase transitions and polarization behavior."
+      },
+      "data_types": [
+        "Temperature vs Dielectric permittivity (ε′)",
+        "Temperature vs Dielectric loss (tanδ)",
+        "Electric field vs Polarization"
+      ]
+    },
+    {
+      "slug": "piezoelectric",
+      "system_key": "PiezoelectricMaterials",
+      "name": {
+        "ja": "圧電材料",
+        "en": "Piezoelectric Materials"
+      },
+      "description": {
+        "ja": "PZT・KNN 系などの圧電材料データを収集。電界vs分極（PE ループ）・電界vs歪み（バタフライ曲線）に加え、誘電率の温度依存性も含めた多面的なデータを扱います。",
+        "en": "Piezoelectric materials such as PZT and KNN-based systems. We curate polarization–field hysteresis (PE loops), strain–field butterfly curves, and temperature-dependent permittivity."
+      },
+      "data_types": [
+        "Electric field vs Polarization",
+        "Electric field vs Strain",
+        "Temperature vs Dielectric permittivity"
+      ]
+    },
+    {
+      "slug": "condensed-matter",
+      "system_key": "CondensedMatter",
+      "name": {
+        "ja": "固体物性",
+        "en": "Condensed Matter"
+      },
+      "description": {
+        "ja": "新規物質の物性探索を目的とした基礎研究データを収集。電気抵抗率・ゼーベック係数・熱伝導率の温度依存性を通じて、超伝導・電荷密度波・近藤効果などの低温物性も含む幅広い物性を扱います。",
+        "en": "Foundational data for exploratory studies of novel materials. Temperature-dependent resistivity, Seebeck coefficient, and thermal conductivity span a broad range — including low-temperature phenomena such as superconductivity, CDW, and Kondo effect."
+      },
+      "data_types": [
+        "Temperature vs Electrical resistivity",
+        "Temperature vs Seebeck coefficient",
+        "Temperature vs Thermal conductivity",
+        "Temperature vs Power factor"
+      ]
+    },
+    {
+      "slug": "hypermaterial",
+      "system_key": "Hypermaterial",
+      "name": {
+        "ja": "ハイパーマテリアル",
+        "en": "Hypermaterials (Quasicrystals)"
+      },
+      "description": {
+        "ja": "準結晶・近似結晶相など、長距離秩序を持ちながらも周期性のない特殊な物質群（ハイパーマテリアル）の物性データを収集。電気抵抗率・磁化率・ゼーベック係数を中心に低温〜室温域で整理しています。",
+        "en": "Quasicrystals and their approximants — materials with long-range order but no periodicity. We focus on resistivity, susceptibility, and Seebeck coefficient from low to room temperature."
+      },
+      "data_types": [
+        "Temperature vs Electrical resistivity",
+        "Temperature vs Magnetic susceptibility",
+        "Temperature vs Seebeck coefficient"
+      ]
+    },
+    {
       "slug": "resistor",
       "system_key": "Resistor",
-      "name":  { "ja": "抵抗材料",                       "en": "Resistor Materials" },
+      "name": {
+        "ja": "抵抗材料",
+        "en": "Resistor Materials"
+      },
       "description": {
         "ja": "電子部品としての抵抗材料データを収集。電気抵抗率の温度依存性に加え、温度抵抗係数（TCR）など回路素子設計に必要な特性を扱います。",
         "en": "Resistor materials for electronic components. We curate temperature-dependent resistivity and temperature coefficient of resistivity (TCR) required for circuit design."
