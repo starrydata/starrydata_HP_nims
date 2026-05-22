@@ -19,7 +19,7 @@
     "home":          { "ja": "ホーム",         "en": "Home" },
     "about":         { "ja": "Starrydataとは", "en": "About" },
     "research":      { "ja": "研究領域",       "en": "Research" },
-    "team":          { "ja": "メンバー",       "en": "Team" },
+    "team":          { "ja": "Members",       "en": "Members" },
     "publications":  { "ja": "論文",           "en": "Publications" },
     "news":          { "ja": "ニュース",       "en": "News" },
     "use_data":      { "ja": "データを使う",   "en": "Use Data" },
