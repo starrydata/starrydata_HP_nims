@@ -442,10 +442,9 @@ p { margin: 0 0 1em; }
 .container-narrow-prose { max-width: 820px; }
 .lead-large,
 .prose {
-  /* 日本語：禁則処理を厳密化、Chrome 119+ では文節単位の改行 */
+  /* 日本語：禁則処理を厳密化 + 末尾バランス改行 */
   line-break: strict;
   overflow-wrap: break-word;
-  word-break: auto-phrase;
   text-wrap: pretty;
 }
 .lead-large {
@@ -479,7 +478,6 @@ p { margin: 0 0 1em; }
 .hero .lead {
   line-break: strict;
   overflow-wrap: break-word;
-  word-break: auto-phrase;
   text-wrap: pretty;
 }
 
@@ -689,7 +687,6 @@ p { margin: 0 0 1em; }
   max-width: 720px;
   margin: 0;
   line-break: strict;
-  word-break: auto-phrase;
   text-wrap: pretty;
 }
 .section-top-tight { padding-top: clamp(48px, 6vw, 72px); }
