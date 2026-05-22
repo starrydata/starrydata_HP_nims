@@ -11,7 +11,7 @@ lang: ja
   <div class="container">
     <span class="eyebrow">{{ research.page.subtitle[L] }}</span>
     <h1>{{ research.page.title[L] }}</h1>
-    <p class="lead">{{ research.page.lead[L] }}</p>
+    <p class="lead">{{ research.page.lead[L] | replace("\n", "<br>") | safe }}</p>
   </div>
 </section>
 

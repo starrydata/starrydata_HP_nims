@@ -4,8 +4,8 @@
     "title":    { "ja": "Research",     "en": "Research" },
     "subtitle": { "ja": "Research",     "en": "Research" },
     "lead": {
-      "ja": "Starrydata は 12 の研究領域でデータ収集を進めています。各プロジェクトでは特定の物性に焦点を当て、論文中のグラフから実験データを系統的に抽出しています。",
-      "en": "Starrydata curates data across 12 research fields. Each project focuses on specific material properties and systematically extracts experimental data from published plots."
+      "ja": "Starrydata プロジェクトでは、12 の研究領域でデータ収集を進めています。\n各プロジェクトでは特定の物性に焦点を当て、論文中のグラフから実験データを系統的に抽出しています。",
+      "en": "The Starrydata project curates data across 12 research fields.\nEach project focuses on specific material properties and systematically extracts experimental data from published plots."
     }
   },
   "projects": [
