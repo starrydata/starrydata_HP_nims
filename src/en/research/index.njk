@@ -29,7 +29,15 @@ lang: en
           </ul>
         </header>
 
-        <p class="research-desc">{{ p.description[L] | replace("\n", "<br>") | safe }}</p>
+        <p class="research-desc">
+          {%- set sep = "。" if L == "ja" else ". " -%}
+          {%- set parts = p.description[L].split(sep) -%}
+          {%- for s in parts -%}
+            {%- if s and s.trim().length > 0 -%}
+              <span class="nowrap-grp">{{ s }}{{ sep | trim }}</span>{% if not loop.last %}<br>{% endif %}
+            {%- endif -%}
+          {%- endfor -%}
+        </p>
 
         <div class="research-data">
           <h3 class="research-data-title">Primary data collected</h3>

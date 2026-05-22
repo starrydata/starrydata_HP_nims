@@ -1113,6 +1113,9 @@ p { margin: 0 0 1em; }
   line-break: strict;
   text-wrap: pretty;
 }
+/* テンプレで余分な <br> が出る場合の末尾を消す */
+.research-desc br:last-child,
+.research-desc br + br { display: none; }
 .research-data {
   background: var(--bg-subtle);
   border-left: 3px solid var(--accent-2);

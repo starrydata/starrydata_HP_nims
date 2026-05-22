@@ -30,8 +30,8 @@
       "system_key": "BatteryMaterials",
       "name":  { "ja": "電池材料",                       "en": "Battery Materials" },
       "description": {
-        "ja": "次世代二次電池材料の電気化学データを収集。\n<span class=\"nowrap-grp\">充放電曲線・サイクル特性・レート特性を通じて、容量・電圧プロファイル・劣化挙動を体系化しています。</span>",
-        "en": "Electrochemical data of next-generation secondary battery materials.\n<span class=\"nowrap-grp\">Through charge–discharge curves, cycle stability, and rate capability, we systematize capacity, voltage profile, and degradation behavior.</span>"
+        "ja": "次世代二次電池材料の電気化学データを収集。充放電曲線・サイクル特性・レート特性を通じて、容量・電圧プロファイル・劣化挙動を体系化しています。",
+        "en": "Electrochemical data of next-generation secondary battery materials. Through charge–discharge curves, cycle stability, and rate capability, we systematize capacity, voltage profile, and degradation behavior."
       },
       "data_types": [
         "Discharge capacity vs Voltage",
