@@ -1,7 +1,7 @@
 {
   "_note": "研究領域。stats は毎月 starrydata.github.io/json/counts.json から JS で動的更新。",
   "page": {
-    "title":    { "ja": "研究領域",      "en": "Research Fields" },
+    "title":    { "ja": "Research",     "en": "Research" },
     "subtitle": { "ja": "Research",     "en": "Research" },
     "lead": {
       "ja": "Starrydata は 12 の研究領域でデータ収集を進めています。各プロジェクトでは特定の物性に焦点を当て、論文中のグラフから実験データを系統的に抽出しています。",

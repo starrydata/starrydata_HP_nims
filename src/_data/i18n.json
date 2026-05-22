@@ -18,7 +18,7 @@
   "nav": {
     "home":          { "ja": "ホーム",         "en": "Home" },
     "about":         { "ja": "Starrydataとは", "en": "About" },
-    "research":      { "ja": "研究領域",       "en": "Research" },
+    "research":      { "ja": "Research",       "en": "Research" },
     "team":          { "ja": "Members",       "en": "Members" },
     "publications":  { "ja": "Publications",   "en": "Publications" },
     "news":          { "ja": "ニュース",       "en": "News" },
@@ -100,7 +100,7 @@
     "card3_cta": { "ja": "問い合わせる →",         "en": "Contact us →" }
   },
   "fields": {
-    "title": { "ja": "研究領域", "en": "Research Fields" },
+    "title": { "ja": "Research", "en": "Research" },
     "see_all": { "ja": "一覧を見る", "en": "View all" }
   },
   "publications": {
