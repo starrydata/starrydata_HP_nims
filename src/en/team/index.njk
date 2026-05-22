@@ -50,11 +50,13 @@ lang: en
             </div>
             <div class="info">
               <h3 class="name">{{ m.name_en }}<span class="en">{{ m.name_ja }}</span></h3>
-              {% if m.role %}
-              <p class="role">{{ m.role | replace("\n", "<br>") | safe }}</p>
+              {% set roleEn = m.role_en or m.role %}
+              {% set affEn  = m.affiliation_en or m.affiliation %}
+              {% if roleEn %}
+              <p class="role">{{ roleEn | replace("\n", "<br>") | safe }}</p>
               {% endif %}
-              {% if m.affiliation %}
-              <p class="aff">{{ m.affiliation | replace("\n", "<br>") | safe }}</p>
+              {% if affEn %}
+              <p class="aff">{{ affEn | replace("\n", "<br>") | safe }}</p>
               {% endif %}
               {% if m.links | length > 0 %}
               <ul class="links">

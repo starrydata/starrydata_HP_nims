@@ -221,7 +221,7 @@ lang: en
       <div class="member-card">
         {% if m.photo %}<img class="photo" src="{{ m.photo }}" alt="{{ m.name_en }}">{% else %}<div class="photo"></div>{% endif %}
         <h4>{{ m.name_en }}</h4>
-        <div class="role">{{ m.role }}</div>
+        <div class="role">{{ (m.role_en or m.role) | replace("\n", " ") | safe }}</div>
       </div>
       {%- endfor %}
     </div>

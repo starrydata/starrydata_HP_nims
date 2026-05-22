@@ -11,8 +11,10 @@
           "name_ja": "桂 ゆかり",
           "name_en": "Yukari Katsura",
           "role": "プロジェクトリーダー",
+          "role_en": "Project Lead",
           "photo": "/assets/images/team/katsura_yukari.jpg",
           "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ 主任研究員\n筑波大学 数理物質科学研究群 国際マテリアルズイノベーション学位プログラム 准教授\n(国研)理化学研究所 革新知能統合研究センター 客員研究員",
+          "affiliation_en": "Senior Researcher, Materials Modeling Group, Center for Basic Research on Materials, NIMS\nAssociate Professor, Degree Program in Materials Innovation, Graduate School of Science and Technology, University of Tsukuba\nVisiting Researcher, Center for Advanced Intelligence Project (AIP), RIKEN",
           "links": [
             { "label": "X",             "href": "https://x.com/Starrydata" },
             { "label": "Official Page", "href": "https://researchmap.jp/ykatsura" }
@@ -22,8 +24,10 @@
           "name_ja": "熊谷 将也",
           "name_en": "Masaya Kumagai",
           "role": "Web開発",
+          "role_en": "Web Development",
           "photo": "/project/img/profile_kumagai.jpg",
           "affiliation": "さくらインターネット株式会社 研究員\n(国研)理化学研究所 客員研究員",
+          "affiliation_en": "Researcher, SAKURA internet Inc.\nVisiting Researcher, RIKEN",
           "links": [
             { "label": "X",             "href": "https://x.com/kumagallium" },
             { "label": "Official Page", "href": "https://kumagallium.github.io/" }
@@ -33,32 +37,40 @@
           "name_ja": "間藤 智也",
           "name_en": "Tomoya Mato",
           "role": "Web開発",
+          "role_en": "Web Development",
           "photo": "/project/img/profile_mato.jpg",
           "affiliation": "NIMS 技術開発・共用部門 エンジニア",
+          "affiliation_en": "Engineer, Technology Development and Sharing Department, NIMS",
           "links": []
         },
         {
           "name_ja": "田中 敦美",
           "name_en": "Atsumi Tanaka",
-          "role": "プロジェクト運営\n（リサーチ・アドミニストレーター）",
+          "role": "プロジェクト運営\n(リサーチ・アドミニストレーター)",
+          "role_en": "Project Operations\n(Research Administrator)",
           "photo": "/assets/images/team/tanaka_atsumi.jpg",
           "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ テクニカルスタッフ",
+          "affiliation_en": "Technical Staff, Materials Modeling Group, Center for Basic Research on Materials, NIMS",
           "links": []
         },
         {
           "name_ja": "デウィ ヤナ",
           "name_en": "Dewi Yana",
           "role": "データアナリスト",
+          "role_en": "Data Analyst",
           "photo": "/assets/images/team/dewi_yana.jpg",
           "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ テクニカルスタッフ",
+          "affiliation_en": "Technical Staff, Materials Modeling Group, Center for Basic Research on Materials, NIMS",
           "links": []
         },
         {
           "name_ja": "小山 栄二",
           "name_en": "Eiji Koyama",
           "role": "データアナリスト",
+          "role_en": "Data Analyst",
           "photo": "/project/img/profile_koyama.jpg",
           "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ",
+          "affiliation_en": "Materials Modeling Group, Center for Basic Research on Materials, NIMS",
           "links": []
         }
       ]
