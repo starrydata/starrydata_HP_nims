@@ -29,7 +29,7 @@ lang: en
           </ul>
         </header>
 
-        <p class="research-desc">{{ p.description[L] }}</p>
+        <p class="research-desc">{{ p.description[L] | replace("\n", "<br>") | safe }}</p>
 
         <div class="research-data">
           <h3 class="research-data-title">Primary data collected</h3>
