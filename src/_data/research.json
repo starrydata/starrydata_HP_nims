@@ -4,8 +4,8 @@
     "title":    { "ja": "Research",     "en": "Research" },
     "subtitle": { "ja": "Research",     "en": "Research" },
     "lead": {
-      "ja": "Starrydata プロジェクトでは、12 の研究領域でデータ収集を進めています。\n各プロジェクトでは特定の物性に焦点を当て、論文中のグラフから実験データを<span class=\"nowrap-grp\">系統的に抽出しています。</span>",
-      "en": "The Starrydata project curates data across 12 research fields.\nEach project focuses on specific material properties and <span class=\"nowrap-grp\">systematically extracts experimental data</span> from published plots."
+      "ja": "Starrydata プロジェクトでは、12 の研究領域でデータ収集を進めています。\n<span class=\"nowrap-grp\">各プロジェクトでは特定の物性に焦点を当て、論文中のグラフから実験データを系統的に抽出しています。</span>",
+      "en": "The Starrydata project curates data across 12 research fields.\n<span class=\"nowrap-grp\">Each project focuses on specific material properties and systematically extracts experimental data from published plots.</span>"
     }
   },
   "projects": [
