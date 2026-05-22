@@ -112,8 +112,8 @@
         "en": "Air Battery Materials"
       },
       "description": {
-        "ja": "リチウム空気電池・亜鉛空気電池など、高エネルギー密度を目指す空気電池材料のデータを収集。正極・触媒材料の充放電特性を中心に整理しています。",
-        "en": "High-energy-density air batteries — Li-air, Zn-air, and beyond. Curating charge–discharge data for cathodes and catalysts."
+        "ja": "高エネルギー密度を目指す空気電池材料のデータを収集。正極・触媒材料の充放電特性を中心に整理しています。",
+        "en": "Air battery materials targeting high energy density. Curating charge–discharge data for cathodes and catalysts."
       },
       "data_types": [
         "Discharge capacity vs Voltage",
