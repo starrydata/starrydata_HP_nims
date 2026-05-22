@@ -1,0 +1,887 @@
+{
+  "ThermoelectricMaterials": {
+    "curves": 155555,
+    "papers": 9476,
+    "compositions": 28036,
+    "top_pairs": [
+      {
+        "pair": "Temperature vs Seebeck coefficient",
+        "n": 35763
+      },
+      {
+        "pair": "Temperature vs Thermal conductivity",
+        "n": 23311
+      },
+      {
+        "pair": "Temperature vs ZT",
+        "n": 20472
+      },
+      {
+        "pair": "Temperature vs Electrical resistivity",
+        "n": 18505
+      },
+      {
+        "pair": "Temperature vs Electrical conductivity",
+        "n": 17670
+      },
+      {
+        "pair": "Temperature vs Power factor",
+        "n": 17128
+      },
+      {
+        "pair": "Temperature vs Lattice thermal conductivity",
+        "n": 6607
+      },
+      {
+        "pair": "Inverse temperature vs Electrical conductivity",
+        "n": 2232
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Seebeck coefficient",
+        "n": 37268
+      },
+      {
+        "prop_y": "Thermal conductivity",
+        "n": 23437
+      },
+      {
+        "prop_y": "ZT",
+        "n": 20660
+      },
+      {
+        "prop_y": "Electrical conductivity",
+        "n": 20126
+      },
+      {
+        "prop_y": "Electrical resistivity",
+        "n": 19309
+      },
+      {
+        "prop_y": "Power factor",
+        "n": 17230
+      },
+      {
+        "prop_y": "Lattice thermal conductivity",
+        "n": 6716
+      },
+      {
+        "prop_y": "Carrier concentration",
+        "n": 2030
+      }
+    ]
+  },
+  "BatteryMaterials": {
+    "curves": 32586,
+    "papers": 1689,
+    "compositions": 18,
+    "top_pairs": [
+      {
+        "pair": "Discharge capacity vs Voltage",
+        "n": 7935
+      },
+      {
+        "pair": "Charge capacity vs Voltage",
+        "n": 7806
+      },
+      {
+        "pair": "Cycle number vs Discharge capacity",
+        "n": 6142
+      },
+      {
+        "pair": "C rate vs Discharge capacity",
+        "n": 2605
+      },
+      {
+        "pair": "Time vs Voltage",
+        "n": 2173
+      },
+      {
+        "pair": "Cycle number vs Voltage",
+        "n": 2136
+      },
+      {
+        "pair": "Cycle number vs Coulombic efficiency",
+        "n": 954
+      },
+      {
+        "pair": "Areal capacity vs Voltage",
+        "n": 906
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Voltage",
+        "n": 21454
+      },
+      {
+        "prop_y": "Discharge capacity",
+        "n": 9470
+      },
+      {
+        "prop_y": "Coulombic efficiency",
+        "n": 958
+      },
+      {
+        "prop_y": "Current density",
+        "n": 402
+      },
+      {
+        "prop_y": "Discharge capacity (based on sulfur weight)",
+        "n": 165
+      },
+      {
+        "prop_y": "Electric current",
+        "n": 72
+      },
+      {
+        "prop_y": "Hysteresis",
+        "n": 59
+      },
+      {
+        "prop_y": "Discharge capacity (based on cathode weight)",
+        "n": 5
+      }
+    ]
+  },
+  "MagneticMaterials": {
+    "curves": 16778,
+    "papers": 2224,
+    "compositions": 4183,
+    "top_pairs": [
+      {
+        "pair": "Magnetic field strength (H) vs magnetization_per_weight",
+        "n": 8263
+      },
+      {
+        "pair": "Magnetic field vs magnetization_per_weight",
+        "n": 4067
+      },
+      {
+        "pair": "Magnetic field strength (H) vs Magnetization",
+        "n": 1306
+      },
+      {
+        "pair": "Magnetic field strength (H) vs magnetization_per_volume",
+        "n": 1228
+      },
+      {
+        "pair": "Temperature vs magnetization_per_weight",
+        "n": 925
+      },
+      {
+        "pair": "Magnetic field vs magnetization_per_volume",
+        "n": 297
+      },
+      {
+        "pair": "Magnetic Field vs magnetization_per_weight",
+        "n": 114
+      },
+      {
+        "pair": "Magnetic field vs Magnetization",
+        "n": 91
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "magnetization_per_weight",
+        "n": 13389
+      },
+      {
+        "prop_y": "magnetization_per_volume",
+        "n": 1564
+      },
+      {
+        "prop_y": "Magnetization",
+        "n": 1511
+      },
+      {
+        "prop_y": "Magnetic Moment",
+        "n": 71
+      },
+      {
+        "prop_y": "Coercivity Field",
+        "n": 54
+      },
+      {
+        "prop_y": "Dielectric permittivity (ε’)",
+        "n": 44
+      },
+      {
+        "prop_y": "magnetization_Wb*m/kg",
+        "n": 42
+      },
+      {
+        "prop_y": "Dielectric loss (tanδ)",
+        "n": 22
+      }
+    ]
+  },
+  "DielectricMaterials": {
+    "curves": 16555,
+    "papers": 2208,
+    "compositions": 7149,
+    "top_pairs": [
+      {
+        "pair": "Temperature vs Dielectric permittivity (ε’)",
+        "n": 9997
+      },
+      {
+        "pair": "Temperature vs Dielectric loss (tanδ)",
+        "n": 5298
+      },
+      {
+        "pair": "Temperature vs Dielectric loss (unknown)",
+        "n": 607
+      },
+      {
+        "pair": "Temperature vs Dielectric loss (ε’’)",
+        "n": 423
+      },
+      {
+        "pair": "Electric field vs polarization",
+        "n": 60
+      },
+      {
+        "pair": "Electric field vs Strain",
+        "n": 48
+      },
+      {
+        "pair": "Magnetic field strength (H) vs magnetization_per_weight",
+        "n": 30
+      },
+      {
+        "pair": "Temperature vs Electrical resistivity",
+        "n": 21
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Dielectric permittivity (ε’)",
+        "n": 9997
+      },
+      {
+        "prop_y": "Dielectric loss (tanδ)",
+        "n": 5298
+      },
+      {
+        "prop_y": "Dielectric loss (unknown)",
+        "n": 607
+      },
+      {
+        "prop_y": "Dielectric loss (ε’’)",
+        "n": 423
+      },
+      {
+        "prop_y": "polarization",
+        "n": 60
+      },
+      {
+        "prop_y": "magnetization_per_weight",
+        "n": 52
+      },
+      {
+        "prop_y": "Strain",
+        "n": 48
+      },
+      {
+        "prop_y": "Electrical resistivity",
+        "n": 30
+      }
+    ]
+  },
+  "GeneralDB": {
+    "curves": 7504,
+    "papers": 294,
+    "compositions": 1259,
+    "top_pairs": [
+      {
+        "pair": "Temperature vs Seebeck coefficient",
+        "n": 1420
+      },
+      {
+        "pair": "Temperature vs ZT",
+        "n": 1192
+      },
+      {
+        "pair": "Temperature vs Thermal conductivity",
+        "n": 1103
+      },
+      {
+        "pair": "Temperature vs Electrical conductivity",
+        "n": 807
+      },
+      {
+        "pair": "Temperature vs Power factor",
+        "n": 600
+      },
+      {
+        "pair": "Temperature vs Electrical resistivity",
+        "n": 567
+      },
+      {
+        "pair": "Temperature vs Lattice thermal conductivity",
+        "n": 435
+      },
+      {
+        "pair": "Temperature vs Carrier concentration",
+        "n": 232
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Seebeck coefficient",
+        "n": 1554
+      },
+      {
+        "prop_y": "ZT",
+        "n": 1254
+      },
+      {
+        "prop_y": "Thermal conductivity",
+        "n": 1133
+      },
+      {
+        "prop_y": "Electrical conductivity",
+        "n": 845
+      },
+      {
+        "prop_y": "Power factor",
+        "n": 619
+      },
+      {
+        "prop_y": "Electrical resistivity",
+        "n": 576
+      },
+      {
+        "prop_y": "Lattice thermal conductivity",
+        "n": 446
+      },
+      {
+        "prop_y": "Carrier concentration",
+        "n": 251
+      }
+    ]
+  },
+  "CondensedMatter": {
+    "curves": 6848,
+    "papers": 808,
+    "compositions": 2163,
+    "top_pairs": [
+      {
+        "pair": "Temperature vs Electrical resistivity",
+        "n": 2702
+      },
+      {
+        "pair": "Temperature vs Seebeck coefficient",
+        "n": 680
+      },
+      {
+        "pair": "Temperature vs Thermal conductivity",
+        "n": 406
+      },
+      {
+        "pair": "Temperature vs Power factor",
+        "n": 364
+      },
+      {
+        "pair": "Temperature vs Electrical conductivity",
+        "n": 323
+      },
+      {
+        "pair": "Temperature vs ZT",
+        "n": 322
+      },
+      {
+        "pair": "Magnetic field vs Electrical resistivity",
+        "n": 257
+      },
+      {
+        "pair": "Inverse temperature vs log(Electrical conductivity)",
+        "n": 209
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Electrical resistivity",
+        "n": 3067
+      },
+      {
+        "prop_y": "Seebeck coefficient",
+        "n": 694
+      },
+      {
+        "prop_y": "Electrical conductivity",
+        "n": 495
+      },
+      {
+        "prop_y": "Thermal conductivity",
+        "n": 411
+      },
+      {
+        "prop_y": "Power factor",
+        "n": 364
+      },
+      {
+        "prop_y": "ZT",
+        "n": 326
+      },
+      {
+        "prop_y": "log(Electrical conductivity)",
+        "n": 320
+      },
+      {
+        "prop_y": "Magnetic susceptibility_per_weight",
+        "n": 190
+      }
+    ]
+  },
+  "Resistor": {
+    "curves": 4597,
+    "papers": 785,
+    "compositions": 1868,
+    "top_pairs": [
+      {
+        "pair": "Temperature vs Electrical resistivity",
+        "n": 2274
+      },
+      {
+        "pair": "Temperature vs Electrical conductivity",
+        "n": 450
+      },
+      {
+        "pair": "Temperature vs Seebeck coefficient",
+        "n": 310
+      },
+      {
+        "pair": "Electrical resistivity vs Temperature Coefficient of Resistivity",
+        "n": 271
+      },
+      {
+        "pair": "Temperature vs Thermal conductivity",
+        "n": 191
+      },
+      {
+        "pair": "Inversed Temperature vs Electrical conductivity",
+        "n": 174
+      },
+      {
+        "pair": "Temperature vs ZT",
+        "n": 172
+      },
+      {
+        "pair": "Temperature vs Power factor",
+        "n": 155
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Electrical resistivity",
+        "n": 2456
+      },
+      {
+        "prop_y": "Electrical conductivity",
+        "n": 644
+      },
+      {
+        "prop_y": "Temperature Coefficient of Resistivity",
+        "n": 319
+      },
+      {
+        "prop_y": "Seebeck coefficient",
+        "n": 314
+      },
+      {
+        "prop_y": "Thermal conductivity",
+        "n": 191
+      },
+      {
+        "prop_y": "ZT",
+        "n": 172
+      },
+      {
+        "prop_y": "Power factor",
+        "n": 155
+      },
+      {
+        "prop_y": "Log(row)",
+        "n": 136
+      }
+    ]
+  },
+  "LowThermalConductivityMaterials": {
+    "curves": 3518,
+    "papers": 273,
+    "compositions": 847,
+    "top_pairs": [
+      {
+        "pair": "Temperature vs Thermal conductivity",
+        "n": 1220
+      },
+      {
+        "pair": "Temperature vs Seebeck coefficient",
+        "n": 474
+      },
+      {
+        "pair": "Temperature vs ZT",
+        "n": 410
+      },
+      {
+        "pair": "Temperature vs Electrical conductivity",
+        "n": 324
+      },
+      {
+        "pair": "Temperature vs Power factor",
+        "n": 321
+      },
+      {
+        "pair": "Temperature vs Lattice thermal conductivity",
+        "n": 216
+      },
+      {
+        "pair": "Temperature vs Electrical resistivity",
+        "n": 194
+      },
+      {
+        "pair": "T vs ZT",
+        "n": 58
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Thermal conductivity",
+        "n": 1247
+      },
+      {
+        "prop_y": "Seebeck coefficient",
+        "n": 500
+      },
+      {
+        "prop_y": "ZT",
+        "n": 468
+      },
+      {
+        "prop_y": "Electrical conductivity",
+        "n": 347
+      },
+      {
+        "prop_y": "Power factor",
+        "n": 321
+      },
+      {
+        "prop_y": "Lattice thermal conductivity",
+        "n": 243
+      },
+      {
+        "prop_y": "Electrical resistivity",
+        "n": 195
+      },
+      {
+        "prop_y": "Electronic thermal conductivity",
+        "n": 45
+      }
+    ]
+  },
+  "HighThermalConductivityMaterials": {
+    "curves": 2631,
+    "papers": 349,
+    "compositions": 982,
+    "top_pairs": [
+      {
+        "pair": "Temperature vs Thermal conductivity",
+        "n": 1660
+      },
+      {
+        "pair": "Temperature vs Seebeck coefficient",
+        "n": 261
+      },
+      {
+        "pair": "Temperature vs ZT",
+        "n": 176
+      },
+      {
+        "pair": "Temperature vs Electrical resistivity",
+        "n": 123
+      },
+      {
+        "pair": "Temperature vs Electrical conductivity",
+        "n": 116
+      },
+      {
+        "pair": "Temperature vs Power factor",
+        "n": 108
+      },
+      {
+        "pair": "Temperature vs Lattice thermal conductivity",
+        "n": 71
+      },
+      {
+        "pair": "Temperature vs Lattice contribution",
+        "n": 25
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Thermal conductivity",
+        "n": 1681
+      },
+      {
+        "prop_y": "Seebeck coefficient",
+        "n": 264
+      },
+      {
+        "prop_y": "ZT",
+        "n": 176
+      },
+      {
+        "prop_y": "Electrical resistivity",
+        "n": 131
+      },
+      {
+        "prop_y": "Electrical conductivity",
+        "n": 131
+      },
+      {
+        "prop_y": "Power factor",
+        "n": 108
+      },
+      {
+        "prop_y": "Lattice thermal conductivity",
+        "n": 76
+      },
+      {
+        "prop_y": "Lattice contribution",
+        "n": 25
+      }
+    ]
+  },
+  "Hypermaterial": {
+    "curves": 2591,
+    "papers": 272,
+    "compositions": 708,
+    "top_pairs": [
+      {
+        "pair": "Temperature vs Electrical resistivity",
+        "n": 323
+      },
+      {
+        "pair": "Temperature vs Electrical conductivity",
+        "n": 294
+      },
+      {
+        "pair": "T vs Electrical resistivity",
+        "n": 262
+      },
+      {
+        "pair": "Temperature vs Magnetic susceptibility_per_weight",
+        "n": 237
+      },
+      {
+        "pair": "Temperature vs Seebeck coefficient",
+        "n": 224
+      },
+      {
+        "pair": "Temperature vs Thermal conductivity",
+        "n": 222
+      },
+      {
+        "pair": "Magnetic Field vs magnetization_per_weight",
+        "n": 119
+      },
+      {
+        "pair": "Temperature vs magnetization_per_weight",
+        "n": 92
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Electrical resistivity",
+        "n": 592
+      },
+      {
+        "prop_y": "Electrical conductivity",
+        "n": 402
+      },
+      {
+        "prop_y": "Seebeck coefficient",
+        "n": 270
+      },
+      {
+        "prop_y": "Magnetic susceptibility_per_weight",
+        "n": 259
+      },
+      {
+        "prop_y": "Thermal conductivity",
+        "n": 255
+      },
+      {
+        "prop_y": "magnetization_per_weight",
+        "n": 244
+      },
+      {
+        "prop_y": "ZT",
+        "n": 84
+      },
+      {
+        "prop_y": "Magnetic susceptibility_per mol",
+        "n": 76
+      }
+    ]
+  },
+  "SolidStateBatteryMaterials": {
+    "curves": 2002,
+    "papers": 109,
+    "compositions": 4,
+    "top_pairs": [
+      {
+        "pair": "Discharge capacity vs Voltage",
+        "n": 828
+      },
+      {
+        "pair": "Charge capacity vs Voltage",
+        "n": 765
+      },
+      {
+        "pair": "Cycle number vs Discharge capacity",
+        "n": 272
+      },
+      {
+        "pair": "C rate vs Discharge capacity",
+        "n": 80
+      },
+      {
+        "pair": "Charge capacity (based on cathode weight) vs Voltage",
+        "n": 23
+      },
+      {
+        "pair": "Discharge capacity (based on cathode weight) vs Voltage",
+        "n": 23
+      },
+      {
+        "pair": "Rate vs Discharge capacity",
+        "n": 6
+      },
+      {
+        "pair": "Cycle number vs Discharge capacity (based on cathode weight)",
+        "n": 5
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Voltage",
+        "n": 1639
+      },
+      {
+        "prop_y": "Discharge capacity",
+        "n": 358
+      },
+      {
+        "prop_y": "Discharge capacity (based on cathode weight)",
+        "n": 5
+      }
+    ]
+  },
+  "PiezoelectricMaterials": {
+    "curves": 1772,
+    "papers": 102,
+    "compositions": 267,
+    "top_pairs": [
+      {
+        "pair": "Electric field vs polarization",
+        "n": 814
+      },
+      {
+        "pair": "Electric field vs Strain",
+        "n": 627
+      },
+      {
+        "pair": "Temperature vs Dielectric permittivity (ε’)",
+        "n": 155
+      },
+      {
+        "pair": "Temperature vs Dielectric loss (tanδ)",
+        "n": 81
+      },
+      {
+        "pair": "Voltage vs Displacement",
+        "n": 77
+      },
+      {
+        "pair": "Electric field vs Displacement",
+        "n": 8
+      },
+      {
+        "pair": "Magnetic field strength (H) vs magnetization_per_weight",
+        "n": 4
+      },
+      {
+        "pair": "Magnetic field vs magnetization_per_weight",
+        "n": 4
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "polarization",
+        "n": 814
+      },
+      {
+        "prop_y": "Strain",
+        "n": 627
+      },
+      {
+        "prop_y": "Dielectric permittivity (ε’)",
+        "n": 155
+      },
+      {
+        "prop_y": "Displacement",
+        "n": 85
+      },
+      {
+        "prop_y": "Dielectric loss (tanδ)",
+        "n": 81
+      },
+      {
+        "prop_y": "magnetization_per_weight",
+        "n": 8
+      },
+      {
+        "prop_y": "magnetization_per_volume",
+        "n": 2
+      }
+    ]
+  },
+  "AirBatteryMaterials": {
+    "curves": 1176,
+    "papers": 45,
+    "compositions": 3,
+    "top_pairs": [
+      {
+        "pair": "Discharge capacity vs Voltage",
+        "n": 603
+      },
+      {
+        "pair": "Charge capacity vs Voltage",
+        "n": 531
+      },
+      {
+        "pair": "Cycle number vs Discharge capacity",
+        "n": 39
+      },
+      {
+        "pair": "Rate vs Discharge capacity",
+        "n": 3
+      }
+    ],
+    "top_props": [
+      {
+        "prop_y": "Voltage",
+        "n": 1134
+      },
+      {
+        "prop_y": "Discharge capacity",
+        "n": 42
+      }
+    ]
+  }
+}

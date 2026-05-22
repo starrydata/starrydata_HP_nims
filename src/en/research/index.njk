@@ -1,0 +1,68 @@
+---
+layout: modern.njk
+permalink: /en/research/index.html
+title: Research
+lang: en
+---
+
+{%- set L = "en" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">{{ research.page.subtitle[L] }}</span>
+    <h1>{{ research.page.title[L] }}</h1>
+    <p class="lead">{{ research.page.lead[L] }}</p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container">
+    <div class="research-list">
+      {%- for p in research.projects %}
+      <article class="research-item" id="{{ p.slug }}" data-key="{{ p.system_key }}">
+        <header class="research-head">
+          <h2 class="research-name">{{ p.name[L] }}<span class="en">{{ p.name.ja }}</span></h2>
+          <ul class="research-stats">
+            <li><span class="k">Curves</span> <span class="v" data-stat="curves">—</span></li>
+            <li><span class="k">Papers</span> <span class="v" data-stat="papers">—</span></li>
+            <li><span class="k">Samples</span> <span class="v" data-stat="samples">—</span></li>
+          </ul>
+        </header>
+
+        <p class="research-desc">{{ p.description[L] }}</p>
+
+        <div class="research-data">
+          <h3 class="research-data-title">Primary data collected</h3>
+          <ul class="research-data-list">
+            {%- for d in p.data_types %}
+            <li>{{ d }}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const items = document.querySelectorAll('.research-item[data-key]');
+  if (!items.length) return;
+  fetch('https://starrydata.github.io/json/counts.json', { cache: 'no-store' })
+    .then(r => r.json())
+    .then(d => {
+      const fmt = n => (typeof n === 'number') ? n.toLocaleString('en-US') : '—';
+      items.forEach(el => {
+        const key = el.dataset.key;
+        const stats = (d.projects || {})[key];
+        if (!stats) return;
+        el.querySelectorAll('[data-stat]').forEach(span => {
+          const k = span.dataset.stat;
+          if (k in stats) span.textContent = fmt(stats[k]);
+        });
+      });
+    })
+    .catch(err => console.warn('counts.json fetch failed', err));
+})();
+</script>

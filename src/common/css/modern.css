@@ -1045,6 +1045,109 @@ p { margin: 0 0 1em; }
   .paper-year-col { text-align: left; font-size: 1.1rem; }
 }
 
+/* ---- Research page ---- */
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.research-item {
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 44px;
+}
+.research-item:last-child { border-bottom: none; padding-bottom: 0; }
+.research-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 0 0 18px;
+  padding: 0 0 12px;
+  border-bottom: 2px solid var(--accent-2);
+}
+.research-name {
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  margin: 0;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+.research-name .en {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-3);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+.research-stats {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  gap: 18px;
+}
+.research-stats li {
+  text-align: right;
+}
+.research-stats .k {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  font-weight: 700;
+}
+.research-stats .v {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  letter-spacing: -0.01em;
+}
+.research-desc {
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: var(--text);
+  max-width: 70ch;
+  margin: 0 0 22px;
+  line-break: strict;
+  text-wrap: pretty;
+}
+.research-data {
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--accent-2);
+  padding: 18px 22px;
+  border-radius: 0 8px 8px 0;
+}
+.research-data-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin: 0 0 12px;
+}
+.research-data-list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.research-data-list li {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  color: var(--text-2);
+}
+@media (max-width: 640px) {
+  .research-head { flex-direction: column; align-items: flex-start; }
+  .research-stats { width: 100%; justify-content: flex-start; gap: 20px; }
+  .research-stats li { text-align: left; }
+}
+
 /* ---- Collaborate CTA ---- */
 .cta-band {
   background: var(--grad-hero);
