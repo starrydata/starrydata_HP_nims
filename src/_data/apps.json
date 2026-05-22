@@ -34,7 +34,8 @@
         "ja": "Starrydata の全体像を一望できる可視化グラフ群。",
         "en": "Overview plots covering the entire Starrydata."
       },
-      "url": "https://starrydata.nims.go.jp/visualizer/"
+      "url": "https://starrydata.nims.go.jp/visualizer/",
+      "image": "/assets/images/apps/visualizer.png"
     },
     {
       "slug": "explorer",
