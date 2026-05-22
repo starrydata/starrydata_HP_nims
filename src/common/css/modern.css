@@ -551,6 +551,32 @@ p { margin: 0 0 1em; }
 .app-card:hover .app-body {
   background: rgba(255, 255, 255, 0.94);
 }
+
+/* === image_layout="top": 横長画像用、画像上 / テキスト下 分離 === */
+.app-card[data-image-layout="top"] .app-thumb {
+  position: absolute;
+  inset: 0 0 auto 0;        /* 上部のみ */
+  height: 62%;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+.app-card[data-image-layout="top"] .app-thumb img {
+  object-fit: contain;
+  object-position: center top;
+  padding: 14px;
+}
+.app-card[data-image-layout="top"] .app-body {
+  top: 62%;
+  bottom: 0;
+  background: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-top: 1px solid var(--line);
+  padding: 16px 22px;
+}
+.app-card[data-image-layout="top"]:hover .app-body {
+  background: var(--bg-subtle);
+}
 .app-card .app-icon { display: none; }
 .app-card .app-open {
   position: absolute;

@@ -17,7 +17,8 @@
         "en": "Large open database with 200,000+ curves. Searchable and downloadable."
       },
       "url": "https://starrydata.nims.go.jp/starrydata2/",
-      "image": "/assets/images/apps/starrydata2.png"
+      "image": "/assets/images/apps/starrydata2.png",
+      "image_layout": "top"
     },
     {
       "slug": "visualizer",
@@ -89,7 +90,8 @@
         "en": "Digitize plot images from published papers into numerical data."
       },
       "url": "https://app.digitizer.starrydata.org",
-      "image": "/assets/images/apps/digitizer.png"
+      "image": "/assets/images/apps/digitizer.png",
+      "image_layout": "top"
     },
     {
       "slug": "auto-summary",

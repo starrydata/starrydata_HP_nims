@@ -97,7 +97,7 @@ lang: ja
 
     <div class="apps-grid">
       {%- for a in apps.apps %}
-      <a class="app-card" href="{{ a.url }}" target="_blank" rel="noopener">
+      <a class="app-card" href="{{ a.url }}" target="_blank" rel="noopener" data-image-layout="{{ a.image_layout or 'default' }}">
         {% if a.image %}
         <div class="app-thumb"><img src="{{ a.image }}" alt="{{ a.name[L] }}" loading="lazy"></div>
         {% else %}
