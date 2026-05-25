@@ -228,16 +228,20 @@ lang: ja
     <span class="eyebrow">News</span>
     <h2>{{ i18n.news.title[L] }}</h2>
 
-    <div class="card-grid">
-      {%- for t in topics.topics.slice(0, 3) %}
-      <article class="mini-card">
-        <div class="meta">
-          <span class="tag">News</span>{{ t.date }}
-        </div>
-        <h3><a href="/topics/{{ t.slug }}.html">{{ t.title }}</a></h3>
-        <p>{{ t.summary }}</p>
-      </article>
-      {%- endfor %}
+    <div class="news-list-box">
+      <ul class="news-list">
+        {%- for t in topics.topics.slice(0, 5) %}
+        <li class="news-item">
+          <a href="/topics/{{ t.slug }}.html">
+            <time class="news-date" datetime="{{ t.datetime }}">{{ t.date | replace("-", "/") }}</time>
+            <div class="news-text">
+              <h3 class="news-title">{{ t.title }}</h3>
+              {% if t.summary %}<p class="news-summary">{{ t.summary }}</p>{% endif %}
+            </div>
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
     </div>
 
     <div class="section-foot">

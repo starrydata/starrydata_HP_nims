@@ -108,7 +108,7 @@
     "see_all": { "ja": "論文一覧を見る", "en": "View all publications" }
   },
   "news": {
-    "title":   { "ja": "ニュース",      "en": "News" },
+    "title":   { "ja": "News",          "en": "News" },
     "see_all": { "ja": "ニュース一覧",  "en": "View all news" }
   },
   "collaborate": {
