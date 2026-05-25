@@ -163,6 +163,8 @@ function normalizeEntry(data, existing) {
     title: title,
     date: date,
     datetime: datetime,
+    category: data.category || "",
+    subcategory: data.subcategory || "",
     author: data.author || "",
     summary: summary,
     body_html: body

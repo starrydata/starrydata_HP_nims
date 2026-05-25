@@ -17,6 +17,7 @@
     --line: #e6e6f1;
     --accent: #7c3aed;
     --accent-2: #6366f1;
+    --accent-soft: #f3eefe;
     --danger: #dc2626;
     --ok: #16a34a;
     --shadow: 0 4px 12px rgba(31,31,58,0.06);
@@ -30,9 +31,12 @@
     font-size: 14px;
     line-height: 1.6;
   }
-  .container { max-width: 980px; margin: 0 auto; padding: 32px 24px 80px; }
-  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
-  header h1 { margin: 0; font-size: 1.4rem; font-weight: 700; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px 24px 80px; }
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--line);
+  }
+  header h1 { margin: 0; font-size: 1.3rem; font-weight: 700; }
   header .actions { display: flex; gap: 10px; }
   button {
     cursor: pointer; font-family: inherit; font-size: 0.92rem; font-weight: 600;
@@ -67,50 +71,95 @@
   #app { display: none; }
   #app.show { display: block; }
 
+  .admin-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  @media (max-width: 980px) {
+    .admin-grid { grid-template-columns: 1fr; }
+  }
+
   .section {
     background: #fff; border: 1px solid var(--line);
-    border-radius: 12px; padding: 24px; margin-bottom: 24px;
+    border-radius: 12px; padding: 20px;
     box-shadow: var(--shadow);
   }
-  .section h2 { margin: 0 0 16px; font-size: 1.05rem; font-weight: 700; }
+  .section h2 {
+    margin: 0 0 12px; font-size: 0.92rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-2);
+    padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  }
 
-  /* Form */
-  form .field { margin-bottom: 16px; }
+  /* ─── Topic list (left) ─── */
+  #list-panel { position: sticky; top: 24px; max-height: calc(100vh - 48px); overflow-y: auto; }
+  #topic-list { list-style: none; padding: 0; margin: 0; }
+  #topic-list li {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    margin-bottom: 6px;
+    transition: background .12s, border-color .12s;
+  }
+  #topic-list li:hover { background: var(--accent-soft); }
+  #topic-list li.active { background: var(--accent-soft); border-color: var(--accent); }
+  #topic-list .date {
+    font-size: 0.78rem; color: var(--text-3); font-weight: 600;
+    display: block; margin-bottom: 4px;
+  }
+  #topic-list .title {
+    font-weight: 600; color: var(--text); font-size: 0.92rem; line-height: 1.4;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  #topic-list .cat {
+    margin-top: 6px; font-size: 0.72rem; color: var(--accent);
+    background: var(--accent-soft); padding: 2px 8px; border-radius: 4px;
+    display: inline-block; font-weight: 600;
+  }
+  #topic-list .row-actions { display: flex; gap: 6px; margin-top: 8px; }
+  #topic-list .row-actions button { padding: 4px 10px; font-size: 0.75rem; }
+
+  /* ─── Form (right) ─── */
+  form .field { margin-bottom: 18px; }
   form label {
     display: block; font-size: 0.82rem; font-weight: 600;
-    color: var(--text-2); margin-bottom: 4px; letter-spacing: 0.02em;
+    color: var(--text-2); margin-bottom: 6px; letter-spacing: 0.02em;
   }
-  form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  form input, form textarea {
-    width: 100%; padding: 8px 12px; font-size: 0.92rem;
+  form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  form input, form textarea, form select {
+    width: 100%; padding: 10px 14px; font-size: 0.95rem;
     border: 1px solid var(--line); border-radius: 8px;
     font-family: inherit; background: #fff;
   }
-  form textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
-  form input:focus, form textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+  form input:focus, form textarea:focus, form select:focus {
+    outline: 2px solid var(--accent); border-color: transparent;
+  }
+  form textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
   form .hint { font-size: 0.78rem; color: var(--text-3); margin-top: 4px; }
   form .actions {
     display: flex; gap: 10px; justify-content: flex-end; margin-top: 12px;
+    padding-top: 16px; border-top: 1px solid var(--line);
   }
 
-  /* Topic list */
-  #topic-list { list-style: none; padding: 0; margin: 0; }
-  #topic-list li {
-    padding: 14px 0; border-top: 1px solid var(--line);
-    display: grid; grid-template-columns: 110px 1fr auto; gap: 18px; align-items: center;
+  /* Date input: 大きく、クリックでカレンダー表示 */
+  .date-field input[type="date"] {
+    cursor: pointer;
+    padding: 16px 18px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.02em;
   }
-  #topic-list li:first-child { border-top: none; }
-  #topic-list .date { font-size: 0.85rem; color: var(--text-3); font-weight: 600; }
-  #topic-list .title { font-weight: 600; color: var(--text); }
-  #topic-list .meta { font-size: 0.78rem; color: var(--text-3); margin-top: 2px; }
-  #topic-list .row-actions { display: flex; gap: 8px; }
-  #topic-list .row-actions button { padding: 6px 12px; font-size: 0.82rem; }
+  .date-field input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer; padding: 0; margin: 0;
+    width: 28px; height: 28px; opacity: 0.7;
+  }
+  .date-field input[type="date"]:hover { background: var(--accent-soft); border-color: var(--accent); }
 
-  .msg {
-    padding: 12px 16px; border-radius: 8px;
-    margin-bottom: 16px; font-size: 0.9rem;
-  }
-  .msg.ok { background: #ecfdf5; color: var(--ok); border: 1px solid #a7f3d0; }
+  .msg { padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 0.9rem; }
+  .msg.ok  { background: #ecfdf5; color: var(--ok); border: 1px solid #a7f3d0; }
   .msg.err { background: #fef2f2; color: var(--danger); border: 1px solid #fecaca; }
   .hidden { display: none; }
 
@@ -119,6 +168,10 @@
     padding: 10px 14px; border-radius: 8px; font-size: 0.85rem; margin-bottom: 20px;
   }
   .config-hint code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; }
+
+  .empty {
+    color: var(--text-3); padding: 24px 12px; text-align: center; font-size: 0.88rem;
+  }
 </style>
 </head>
 <body>
@@ -150,62 +203,83 @@
 
     <div id="msg-area"></div>
 
-    <!-- Form -->
-    <section class="section">
-      <h2 id="form-title">新規投稿</h2>
-      <form id="news-form">
-        <input type="hidden" id="f-index" value="">
-        <input type="hidden" id="f-id" value="">
+    <div class="admin-grid">
 
-        <div class="row">
-          <div class="field">
-            <label for="f-date">日付</label>
-            <input type="date" id="f-date" required>
+      <!-- 左: 投稿一覧 -->
+      <aside id="list-panel" class="section">
+        <h2>投稿一覧 <span id="list-count" style="float:right; color:var(--text-3); font-weight:500;"></span></h2>
+        <button class="btn-secondary" id="new-btn" style="width:100%; margin-bottom:12px;">+ 新規投稿</button>
+        <ul id="topic-list"></ul>
+        <p id="empty" class="empty hidden">投稿はまだありません</p>
+      </aside>
+
+      <!-- 右: フォーム -->
+      <main class="section">
+        <h2 id="form-title">新規投稿</h2>
+        <form id="news-form">
+          <input type="hidden" id="f-index" value="">
+          <input type="hidden" id="f-id" value="">
+
+          <div class="row">
+            <div class="field date-field">
+              <label for="f-date">日付</label>
+              <input type="date" id="f-date" required>
+            </div>
+            <div class="field">
+              <label for="f-slug">スラッグ (URL 末尾)</label>
+              <input type="text" id="f-slug" placeholder="自動生成">
+              <div class="hint">空欄ならタイトルから自動生成</div>
+            </div>
           </div>
-          <div class="field">
-            <label for="f-slug">スラッグ (URL)</label>
-            <input type="text" id="f-slug" placeholder="自動生成">
-            <div class="hint">空欄ならタイトルから自動生成</div>
+
+          <div class="row">
+            <div class="field">
+              <label for="f-category">大カテゴリ</label>
+              <select id="f-category" required>
+                <option value="">— 選択してください —</option>
+                <option value="お知らせ">お知らせ</option>
+                <option value="更新情報">更新情報</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-subcategory">小カテゴリ</label>
+              <select id="f-subcategory" required disabled>
+                <option value="">— まず大カテゴリを選択 —</option>
+              </select>
+            </div>
           </div>
-        </div>
 
-        <div class="field">
-          <label for="f-title">タイトル</label>
-          <input type="text" id="f-title" required>
-        </div>
+          <div class="field">
+            <label for="f-title">タイトル</label>
+            <input type="text" id="f-title" required>
+          </div>
 
-        <div class="field">
-          <label for="f-summary">概要 (1〜2 行)</label>
-          <textarea id="f-summary" rows="2"></textarea>
-        </div>
+          <div class="field">
+            <label for="f-summary">概要 (1〜2 行)</label>
+            <textarea id="f-summary" rows="2" style="min-height:60px;"></textarea>
+          </div>
 
-        <div class="field">
-          <label for="f-body">本文 (HTML)</label>
-          <textarea id="f-body" rows="8" placeholder="<p>本文を HTML で書いてください</p>"></textarea>
-        </div>
+          <div class="field">
+            <label for="f-body">本文 (HTML)</label>
+            <textarea id="f-body" rows="10" placeholder="<p>本文を HTML で書いてください</p>"></textarea>
+          </div>
 
-        <div class="field">
-          <label for="f-author">著者 (任意)</label>
-          <input type="text" id="f-author">
-        </div>
+          <div class="field">
+            <label for="f-author">著者 (任意)</label>
+            <input type="text" id="f-author">
+          </div>
 
-        <div class="actions">
-          <button type="button" class="btn-ghost" id="cancel-btn">キャンセル</button>
-          <button type="submit" class="btn-primary" id="submit-btn">投稿する</button>
-        </div>
-      </form>
-    </section>
+          <div class="actions">
+            <button type="button" class="btn-ghost" id="cancel-btn">キャンセル</button>
+            <button type="submit" class="btn-primary" id="submit-btn">投稿する</button>
+          </div>
+        </form>
+      </main>
 
-    <!-- List -->
-    <section class="section">
-      <h2>投稿一覧</h2>
-      <ul id="topic-list"></ul>
-      <p id="empty" class="hidden" style="color:var(--text-3); padding:12px 0;">投稿はまだありません。</p>
-    </section>
+    </div>
 
     <p style="color:var(--text-3); font-size:0.78rem; text-align:center; margin-top:32px;">
-      編集・削除はサイトの <code>src/_data/topics.json</code> を GitHub 経由で直接更新します。<br>
-      コミットは数秒で main に反映され、サイト再ビルドで公開されます。
+      編集・削除はサイトの <code>src/_data/topics.json</code> を GitHub 経由で直接更新します。
     </p>
   </div>
 
@@ -213,9 +287,15 @@
 
 <script>
 // ============================================================
-// 設定: GAS デプロイ後、ここに URL を貼る
+// 設定: GAS デプロイ URL
 // ============================================================
 const GAS_URL = "https://script.google.com/macros/s/AKfycbwBW1FkgArjhP0c7QTvWCCImCrlAw3ieim6dvMhRkaIEvbgVGd-4NqbrcOP0dvRPdTscg/exec";
+
+// カテゴリ階層
+const CATEGORIES = {
+  "お知らせ": ["学会発表", "論文", "メディア掲載", "プレスリリース", "受賞", "イベント情報"],
+  "更新情報": ["新システムリリース", "アップデート"]
+};
 
 // ============================================================
 const $ = (s) => document.querySelector(s);
@@ -258,11 +338,42 @@ async function callGas(action, payload = {}) {
   return data;
 }
 
+// ───── カテゴリ連動 ─────
+function fillSubcategory(category, currentSubcat = "") {
+  const sub = $("#f-subcategory");
+  sub.innerHTML = "";
+  if (!category || !CATEGORIES[category]) {
+    sub.innerHTML = '<option value="">— まず大カテゴリを選択 —</option>';
+    sub.disabled = true;
+    return;
+  }
+  sub.disabled = false;
+  sub.innerHTML = '<option value="">— 選択してください —</option>';
+  CATEGORIES[category].forEach(s => {
+    const opt = document.createElement("option");
+    opt.value = s; opt.textContent = s;
+    if (s === currentSubcat) opt.selected = true;
+    sub.appendChild(opt);
+  });
+}
+$("#f-category").addEventListener("change", e => fillSubcategory(e.target.value));
+
+// 日付: input 全体クリックでカレンダー表示
+$("#f-date").addEventListener("click", function () {
+  if (this.showPicker) {
+    try { this.showPicker(); } catch (e) { /* iOS Safari 等 */ }
+  }
+});
+
 // ───── ログイン ─────
-$("#li-btn").addEventListener("click", async () => {
+$("#li-btn").addEventListener("click", login);
+$("#li-pw").addEventListener("keydown", e => { if (e.key === "Enter") login(); });
+$("#li-id").addEventListener("keydown", e => { if (e.key === "Enter") $("#li-pw").focus(); });
+
+async function login() {
   const id = $("#li-id").value.trim();
   const pw = $("#li-pw").value;
-  if (!id || !pw) { return; }
+  if (!id || !pw) return;
   const hash = await sha256(`${id}:${pw}`);
   localStorage.setItem(LS_KEY, hash);
   try {
@@ -275,7 +386,8 @@ $("#li-btn").addEventListener("click", async () => {
     err.textContent = "ログインに失敗しました: " + e.message;
     err.classList.remove("hidden");
   }
-});
+}
+
 $("#logout-btn").addEventListener("click", () => {
   localStorage.removeItem(LS_KEY);
   location.reload();
@@ -290,6 +402,7 @@ async function loadList() {
 function renderList() {
   const ul = $("#topic-list");
   ul.innerHTML = "";
+  $("#list-count").textContent = state.topics.length ? `(${state.topics.length})` : "";
   if (!state.topics.length) {
     $("#empty").classList.remove("hidden");
     return;
@@ -297,12 +410,12 @@ function renderList() {
   $("#empty").classList.add("hidden");
   state.topics.forEach((t, i) => {
     const li = document.createElement("li");
+    if (i === state.editingIndex) li.classList.add("active");
+    const cat = [t.category, t.subcategory].filter(Boolean).join(" / ");
     li.innerHTML = `
       <span class="date">${t.date || "—"}</span>
-      <div>
-        <div class="title">${escapeHtml(t.title || "(no title)")}</div>
-        <div class="meta">slug: ${escapeHtml(t.slug || "")}${t.author ? "  ／  " + escapeHtml(t.author) : ""}</div>
-      </div>
+      <div class="title">${escapeHtml(t.title || "(no title)")}</div>
+      ${cat ? `<span class="cat">${escapeHtml(cat)}</span>` : ""}
       <div class="row-actions">
         <button class="btn-secondary edit" data-idx="${i}">編集</button>
         <button class="btn-danger del" data-idx="${i}">削除</button>
@@ -310,10 +423,12 @@ function renderList() {
     ul.appendChild(li);
   });
   $$("#topic-list .edit").forEach(b => b.addEventListener("click", e => {
-    editItem(parseInt(e.target.dataset.idx, 10));
+    e.stopPropagation();
+    editItem(parseInt(e.currentTarget.dataset.idx, 10));
   }));
   $$("#topic-list .del").forEach(b => b.addEventListener("click", e => {
-    deleteItem(parseInt(e.target.dataset.idx, 10));
+    e.stopPropagation();
+    deleteItem(parseInt(e.currentTarget.dataset.idx, 10));
   }));
 }
 
@@ -337,7 +452,10 @@ function editItem(idx) {
   $("#f-summary").value = t.summary || "";
   $("#f-body").value = t.body_html || "";
   $("#f-author").value = t.author || "";
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  $("#f-category").value = t.category || "";
+  fillSubcategory(t.category || "", t.subcategory || "");
+  renderList();
+  $("#form-title").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 function resetForm() {
   state.editingIndex = -1;
@@ -346,8 +464,11 @@ function resetForm() {
   $("#news-form").reset();
   $("#f-index").value = "";
   $("#f-id").value = "";
+  fillSubcategory("");
+  renderList();
 }
 $("#cancel-btn").addEventListener("click", resetForm);
+$("#new-btn").addEventListener("click", resetForm);
 
 // ───── 削除 ─────
 async function deleteItem(idx) {
@@ -356,6 +477,7 @@ async function deleteItem(idx) {
   try {
     await callGas("delete", { index: idx });
     showMsg("削除しました");
+    resetForm();
     await loadList();
   } catch (e) {
     showMsg("削除失敗: " + e.message, "err");
@@ -372,6 +494,8 @@ $("#news-form").addEventListener("submit", async (e) => {
     datetime: $("#f-date").value ? $("#f-date").value + "T00:00:00+09:00" : "",
     slug: $("#f-slug").value.trim() || slugify(title),
     title: title,
+    category: $("#f-category").value,
+    subcategory: $("#f-subcategory").value,
     summary: $("#f-summary").value.trim(),
     body_html: $("#f-body").value,
     author: $("#f-author").value.trim()
