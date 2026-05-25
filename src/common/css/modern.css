@@ -505,6 +505,12 @@ p { margin: 0 0 1em; }
   .news-date { flex: 0; }
 }
 
+/* News ページ専用（一覧ページでは概要を 2 行まで） */
+.news-list-page .news-summary {
+  -webkit-line-clamp: 2;
+}
+.news-list-page .news-item a { padding: 22px 8px; }
+
 /* ---- About prose ---- */
 .container-narrow-prose { max-width: 820px; }
 .lead-large,

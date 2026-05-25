@@ -1,0 +1,36 @@
+---
+layout: modern.njk
+permalink: /en/news/index.html
+title: News
+lang: en
+---
+
+{%- set L = "en" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">News</span>
+    <h1>News</h1>
+    <p class="lead">Announcements, updates, and related topics from the Starrydata project.</p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container">
+    <div class="news-list-box news-list-page">
+      <ul class="news-list">
+        {%- for t in topics.topics %}
+        <li class="news-item">
+          <a href="/topics/{{ t.slug }}.html">
+            <time class="news-date" datetime="{{ t.datetime }}">{{ t.date | replace("-", "/") }}</time>
+            <div class="news-text">
+              <h3 class="news-title">{{ t.title }}</h3>
+              {% if t.summary %}<p class="news-summary">{{ t.summary }}</p>{% endif %}
+            </div>
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
