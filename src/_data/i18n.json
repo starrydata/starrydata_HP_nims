@@ -17,13 +17,13 @@
   },
   "nav": {
     "home":          { "ja": "ホーム",         "en": "Home" },
-    "about":         { "ja": "Starrydataとは", "en": "About" },
+    "about":         { "ja": "About",          "en": "About" },
     "research":      { "ja": "Research",       "en": "Research" },
     "team":          { "ja": "Members",       "en": "Members" },
     "publications":  { "ja": "Publications",   "en": "Publications" },
     "news":          { "ja": "News",           "en": "News" },
     "use_data":      { "ja": "データを使う",   "en": "Use Data" },
-    "collaborate":   { "ja": "共同研究",       "en": "Collaborate" },
+    "collaborate":   { "ja": "Collaborate",    "en": "Collaborate" },
     "contact":       { "ja": "お問い合わせ",   "en": "Contact" }
   },
   "hero": {
