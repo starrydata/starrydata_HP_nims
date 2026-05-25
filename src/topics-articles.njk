@@ -6,30 +6,31 @@ pagination:
 permalink: "/topics/{{ t.slug }}.html"
 eleventyComputed:
   title: "{{ t.title }}"
-  bodyId: "topics"
-layout: base.njk
+layout: modern.njk
+lang: ja
 ---
 
-<div id="contents">
-  <div class="inner_contents">
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">
+      News{% if t.category %} ／ {{ t.category }}{% endif %}{% if t.subcategory %} ／ {{ t.subcategory }}{% endif %}
+    </span>
+    <h1>{{ t.title }}</h1>
+    <p class="article-meta">
+      <time datetime="{{ t.datetime }}">{{ t.date | replace("-", "/") }}</time>
+      {% if t.author %}<span class="author">by {{ t.author }}</span>{% endif %}
+    </p>
+  </div>
+</section>
 
-    <article class="topic-article">
-      <header class="topic-header">
-        <h2>{{ t.title }}</h2>
-        <p class="meta">
-          <time datetime="{{ t.datetime }}">{{ t.date }}</time>
-          {% if t.author %}<span class="author">by {{ t.author }}</span>{% endif %}
-        </p>
-      </header>
-
-      <div class="topic-body">
-        {{ t.body_html | safe }}
-      </div>
-
-      <footer class="topic-footer">
-        <p><a href="/topics/index.html">← トピックス一覧へ戻る</a></p>
-      </footer>
+<section class="section section-top-tight">
+  <div class="container container-narrow-prose">
+    <article class="article-body">
+      {{ t.body_html | safe }}
     </article>
 
+    <div class="article-foot">
+      <a class="btn btn-outline" href="/news/">← News 一覧へ戻る</a>
+    </div>
   </div>
-</div>
+</section>

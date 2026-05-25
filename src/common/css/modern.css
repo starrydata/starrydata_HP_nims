@@ -812,6 +812,100 @@ p { margin: 0 0 1em; }
   position: relative;
 }
 
+/* ---- Article body (news / topics 個別記事) ---- */
+.article-meta {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  margin: 0;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.article-meta time {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: var(--accent-2);
+  letter-spacing: 0.02em;
+}
+.article-meta .author { color: var(--text-3); font-size: 0.88rem; }
+
+.article-body {
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: var(--text);
+  max-width: 70ch;
+  margin: 0 auto;
+}
+.article-body p { margin: 0 0 1.2em; }
+.article-body p:last-child { margin-bottom: 0; }
+.article-body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2em 0 0.6em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--accent-2);
+  color: var(--text);
+}
+.article-body h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1.8em 0 0.5em;
+  color: var(--text);
+}
+.article-body h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 1.5em 0 0.4em;
+  color: var(--text);
+}
+.article-body a {
+  color: var(--accent-2);
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s;
+}
+.article-body a:hover { border-bottom-color: var(--accent-2); }
+.article-body ul, .article-body ol { margin: 0 0 1.2em; padding-left: 1.5em; }
+.article-body li { margin: 0.3em 0; }
+.article-body strong, .article-body b { font-weight: 700; }
+.article-body em, .article-body i { font-style: italic; }
+.article-body img {
+  max-width: 100%; height: auto;
+  border-radius: 8px;
+  margin: 1em 0;
+  display: block;
+}
+.article-body blockquote {
+  border-left: 3px solid var(--accent-2);
+  margin: 1em 0;
+  padding: 0.4em 1em;
+  background: var(--bg-subtle);
+  color: var(--text-2);
+}
+.article-body code {
+  font-family: "Menlo", "Consolas", monospace;
+  background: var(--bg-subtle);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+.article-body table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  width: 100%;
+}
+.article-body th, .article-body td {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+}
+.article-body th { background: var(--bg-subtle); font-weight: 700; }
+.article-foot {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: center;
+}
+
 /* ---- Page head (sub-page hero, lightweight) ---- */
 .page-head {
   background: var(--bg-subtle);
