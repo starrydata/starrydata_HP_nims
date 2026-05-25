@@ -48,12 +48,12 @@
 
 /* Reset & base */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 17px; }
+html { scroll-behavior: smooth; font-size: 16px; }
 body {
   margin: 0;
   font-family: "Inter", "Helvetica Neue", Arial, "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", sans-serif;
   color: var(--text);
-  line-height: 1.75;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   background: var(--bg-subtle);
   font-size: var(--fs-base);
@@ -1498,7 +1498,7 @@ p { margin: 0 0 1em; }
 
 /* ---- Responsive ---- */
 @media (max-width: 980px) {
-  html { font-size: 16.5px; }
+  html { font-size: 15.5px; }
   .site-nav { display: none; }
   .stats .container { grid-template-columns: repeat(2, 1fr); gap: 32px 24px; }
   .feature-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -1516,7 +1516,7 @@ p { margin: 0 0 1em; }
   .apps-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
-  html { font-size: 16px; }
+  html { font-size: 15px; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .fields-grid { grid-template-columns: 1fr; }
   .site-footer .container { grid-template-columns: 1fr; }
