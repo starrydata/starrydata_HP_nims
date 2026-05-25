@@ -260,8 +260,9 @@
           </div>
 
           <div class="field">
-            <label for="f-body">本文 (HTML)</label>
-            <textarea id="f-body" rows="10" placeholder="<p>本文を HTML で書いてください</p>"></textarea>
+            <label for="f-body">本文</label>
+            <textarea id="f-body" rows="10" placeholder="本文をここに入力してください。改行はそのまま反映されます。空行で段落が分かれます。"></textarea>
+            <div class="hint">プレーンテキストで OK。HTML タグも書ける（リンクは &lt;a href="..."&gt;text&lt;/a&gt;）。</div>
           </div>
 
           <div class="field">
@@ -321,6 +322,30 @@ function slugify(s) {
   return (s || "").toLowerCase()
     .replace(/[^\w\-]+/g, "_").replace(/_+/g, "_").replace(/^_+|_+$/g, "")
     .substring(0, 100) || "untitled";
+}
+
+// プレーンテキスト ⇄ HTML 変換
+function textToHtml(text) {
+  if (!text) return "";
+  // 改行で段落を区切り (空行=段落区切り、単一改行=<br>)
+  return text.trim()
+    .split(/\n\s*\n+/)
+    .map(p => "<p>" + p.replace(/\n/g, "<br>") + "</p>")
+    .join("\n");
+}
+function htmlToText(html) {
+  if (!html) return "";
+  return html
+    .replace(/<\s*br\s*\/?\s*>/gi, "\n")
+    .replace(/<\/p>\s*<p[^>]*>/gi, "\n\n")
+    .replace(/<\/?p[^>]*>/gi, "")
+    .replace(/<[^>]+>/g, "")  // その他のタグも除去
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .trim();
 }
 
 async function callGas(action, payload = {}) {
@@ -450,7 +475,7 @@ function editItem(idx) {
   $("#f-slug").value = t.slug || "";
   $("#f-title").value = t.title || "";
   $("#f-summary").value = t.summary || "";
-  $("#f-body").value = t.body_html || "";
+  $("#f-body").value = htmlToText(t.body_html || "");
   $("#f-author").value = t.author || "";
   $("#f-category").value = t.category || "";
   fillSubcategory(t.category || "", t.subcategory || "");
@@ -497,7 +522,7 @@ $("#news-form").addEventListener("submit", async (e) => {
     category: $("#f-category").value,
     subcategory: $("#f-subcategory").value,
     summary: $("#f-summary").value.trim(),
-    body_html: $("#f-body").value,
+    body_html: textToHtml($("#f-body").value),
     author: $("#f-author").value.trim()
   };
   try {
