@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>News Admin — Starrydata</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f7fb;
+    --text: #1f1f3a;
+    --text-2: #4b5573;
+    --text-3: #9ca3b8;
+    --line: #e6e6f1;
+    --accent: #7c3aed;
+    --accent-2: #6366f1;
+    --danger: #dc2626;
+    --ok: #16a34a;
+    --shadow: 0 4px 12px rgba(31,31,58,0.06);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .container { max-width: 980px; margin: 0 auto; padding: 32px 24px 80px; }
+  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+  header h1 { margin: 0; font-size: 1.4rem; font-weight: 700; }
+  header .actions { display: flex; gap: 10px; }
+  button {
+    cursor: pointer; font-family: inherit; font-size: 0.92rem; font-weight: 600;
+    padding: 8px 16px; border-radius: 8px; border: 1px solid transparent;
+    transition: opacity .15s, transform .1s;
+  }
+  button:hover { opacity: 0.9; }
+  button:active { transform: translateY(1px); }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-secondary { background: #fff; color: var(--text); border-color: var(--line); }
+  .btn-danger { background: var(--danger); color: #fff; }
+  .btn-ghost { background: transparent; color: var(--text-2); }
+
+  /* ─── Login ─── */
+  #login {
+    max-width: 380px; margin: 80px auto;
+    background: #fff; border: 1px solid var(--line);
+    border-radius: 14px; padding: 32px; box-shadow: var(--shadow);
+  }
+  #login h2 { margin: 0 0 18px; font-size: 1.2rem; }
+  #login .field { margin-bottom: 14px; }
+  #login label { display: block; font-size: 0.82rem; color: var(--text-2); margin-bottom: 4px; font-weight: 600; }
+  #login input {
+    width: 100%; padding: 10px 12px; font-size: 0.95rem;
+    border: 1px solid var(--line); border-radius: 8px; font-family: inherit;
+  }
+  #login input:focus { outline: 2px solid var(--accent); border-color: transparent; }
+  #login button { width: 100%; margin-top: 8px; padding: 10px; }
+  #login .error { margin-top: 12px; color: var(--danger); font-size: 0.85rem; }
+
+  /* ─── App ─── */
+  #app { display: none; }
+  #app.show { display: block; }
+
+  .section {
+    background: #fff; border: 1px solid var(--line);
+    border-radius: 12px; padding: 24px; margin-bottom: 24px;
+    box-shadow: var(--shadow);
+  }
+  .section h2 { margin: 0 0 16px; font-size: 1.05rem; font-weight: 700; }
+
+  /* Form */
+  form .field { margin-bottom: 16px; }
+  form label {
+    display: block; font-size: 0.82rem; font-weight: 600;
+    color: var(--text-2); margin-bottom: 4px; letter-spacing: 0.02em;
+  }
+  form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  form input, form textarea {
+    width: 100%; padding: 8px 12px; font-size: 0.92rem;
+    border: 1px solid var(--line); border-radius: 8px;
+    font-family: inherit; background: #fff;
+  }
+  form textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
+  form input:focus, form textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+  form .hint { font-size: 0.78rem; color: var(--text-3); margin-top: 4px; }
+  form .actions {
+    display: flex; gap: 10px; justify-content: flex-end; margin-top: 12px;
+  }
+
+  /* Topic list */
+  #topic-list { list-style: none; padding: 0; margin: 0; }
+  #topic-list li {
+    padding: 14px 0; border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: 110px 1fr auto; gap: 18px; align-items: center;
+  }
+  #topic-list li:first-child { border-top: none; }
+  #topic-list .date { font-size: 0.85rem; color: var(--text-3); font-weight: 600; }
+  #topic-list .title { font-weight: 600; color: var(--text); }
+  #topic-list .meta { font-size: 0.78rem; color: var(--text-3); margin-top: 2px; }
+  #topic-list .row-actions { display: flex; gap: 8px; }
+  #topic-list .row-actions button { padding: 6px 12px; font-size: 0.82rem; }
+
+  .msg {
+    padding: 12px 16px; border-radius: 8px;
+    margin-bottom: 16px; font-size: 0.9rem;
+  }
+  .msg.ok { background: #ecfdf5; color: var(--ok); border: 1px solid #a7f3d0; }
+  .msg.err { background: #fef2f2; color: var(--danger); border: 1px solid #fecaca; }
+  .hidden { display: none; }
+
+  .config-hint {
+    background: #fffbeb; border: 1px solid #fde68a; color: #92400e;
+    padding: 10px 14px; border-radius: 8px; font-size: 0.85rem; margin-bottom: 20px;
+  }
+  .config-hint code { background: rgba(0,0,0,0.05); padding: 1px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ============ Login ============ -->
+  <div id="login">
+    <h2>★ Starrydata News Admin</h2>
+    <div class="field"><label for="li-id">ID</label><input type="text" id="li-id" autocomplete="username"></div>
+    <div class="field"><label for="li-pw">Password</label><input type="password" id="li-pw" autocomplete="current-password"></div>
+    <button class="btn-primary" id="li-btn">Login</button>
+    <div class="error hidden" id="li-error"></div>
+  </div>
+
+  <!-- ============ App ============ -->
+  <div id="app">
+    <header>
+      <h1>★ Starrydata News Admin</h1>
+      <div class="actions">
+        <button class="btn-ghost" id="reload-btn">Reload</button>
+        <button class="btn-secondary" id="logout-btn">Logout</button>
+      </div>
+    </header>
+
+    <div id="config-hint" class="config-hint hidden">
+      ⚠ <code>GAS_URL</code> が設定されていません。<code>src/admin/index.html</code> の <code>GAS_URL</code> を編集してください。
+    </div>
+
+    <div id="msg-area"></div>
+
+    <!-- Form -->
+    <section class="section">
+      <h2 id="form-title">新規投稿</h2>
+      <form id="news-form">
+        <input type="hidden" id="f-index" value="">
+        <input type="hidden" id="f-id" value="">
+
+        <div class="row">
+          <div class="field">
+            <label for="f-date">日付</label>
+            <input type="date" id="f-date" required>
+          </div>
+          <div class="field">
+            <label for="f-slug">スラッグ (URL)</label>
+            <input type="text" id="f-slug" placeholder="自動生成">
+            <div class="hint">空欄ならタイトルから自動生成</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-title">タイトル</label>
+          <input type="text" id="f-title" required>
+        </div>
+
+        <div class="field">
+          <label for="f-summary">概要 (1〜2 行)</label>
+          <textarea id="f-summary" rows="2"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="f-body">本文 (HTML)</label>
+          <textarea id="f-body" rows="8" placeholder="<p>本文を HTML で書いてください</p>"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="f-author">著者 (任意)</label>
+          <input type="text" id="f-author">
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn-ghost" id="cancel-btn">キャンセル</button>
+          <button type="submit" class="btn-primary" id="submit-btn">投稿する</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- List -->
+    <section class="section">
+      <h2>投稿一覧</h2>
+      <ul id="topic-list"></ul>
+      <p id="empty" class="hidden" style="color:var(--text-3); padding:12px 0;">投稿はまだありません。</p>
+    </section>
+
+    <p style="color:var(--text-3); font-size:0.78rem; text-align:center; margin-top:32px;">
+      編集・削除はサイトの <code>src/_data/topics.json</code> を GitHub 経由で直接更新します。<br>
+      コミットは数秒で main に反映され、サイト再ビルドで公開されます。
+    </p>
+  </div>
+
+</div>
+
+<script>
+// ============================================================
+// 設定: GAS デプロイ後、ここに URL を貼る
+// ============================================================
+const GAS_URL = "";  // 例: "https://script.google.com/macros/s/AKfycby.../exec"
+
+// ============================================================
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => document.querySelectorAll(s);
+const LS_KEY = "starrydata_admin_auth";
+
+let state = { topics: [], editingIndex: -1 };
+
+// SHA-256
+async function sha256(str) {
+  const buf = new TextEncoder().encode(str);
+  const hash = await crypto.subtle.digest("SHA-256", buf);
+  return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+function showMsg(text, type = "ok") {
+  const area = $("#msg-area");
+  area.innerHTML = `<div class="msg ${type}">${text}</div>`;
+  setTimeout(() => { area.innerHTML = ""; }, 5000);
+}
+
+function slugify(s) {
+  return (s || "").toLowerCase()
+    .replace(/[^\w\-]+/g, "_").replace(/_+/g, "_").replace(/^_+|_+$/g, "")
+    .substring(0, 100) || "untitled";
+}
+
+async function callGas(action, payload = {}) {
+  if (!GAS_URL) {
+    $("#config-hint").classList.remove("hidden");
+    throw new Error("GAS_URL is not configured");
+  }
+  const auth = localStorage.getItem(LS_KEY) || "";
+  const res = await fetch(GAS_URL, {
+    method: "POST",
+    body: JSON.stringify({ action, auth, ...payload }),
+  });
+  const data = await res.json();
+  if (data.status !== "ok") throw new Error(data.message || "API error");
+  return data;
+}
+
+// ───── ログイン ─────
+$("#li-btn").addEventListener("click", async () => {
+  const id = $("#li-id").value.trim();
+  const pw = $("#li-pw").value;
+  if (!id || !pw) { return; }
+  const hash = await sha256(`${id}:${pw}`);
+  localStorage.setItem(LS_KEY, hash);
+  try {
+    await loadList();
+    $("#login").style.display = "none";
+    $("#app").classList.add("show");
+  } catch (e) {
+    localStorage.removeItem(LS_KEY);
+    const err = $("#li-error");
+    err.textContent = "ログインに失敗しました: " + e.message;
+    err.classList.remove("hidden");
+  }
+});
+$("#logout-btn").addEventListener("click", () => {
+  localStorage.removeItem(LS_KEY);
+  location.reload();
+});
+
+// ───── 一覧 ─────
+async function loadList() {
+  const { data } = await callGas("list");
+  state.topics = data.topics || [];
+  renderList();
+}
+function renderList() {
+  const ul = $("#topic-list");
+  ul.innerHTML = "";
+  if (!state.topics.length) {
+    $("#empty").classList.remove("hidden");
+    return;
+  }
+  $("#empty").classList.add("hidden");
+  state.topics.forEach((t, i) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span class="date">${t.date || "—"}</span>
+      <div>
+        <div class="title">${escapeHtml(t.title || "(no title)")}</div>
+        <div class="meta">slug: ${escapeHtml(t.slug || "")}${t.author ? "  ／  " + escapeHtml(t.author) : ""}</div>
+      </div>
+      <div class="row-actions">
+        <button class="btn-secondary edit" data-idx="${i}">編集</button>
+        <button class="btn-danger del" data-idx="${i}">削除</button>
+      </div>`;
+    ul.appendChild(li);
+  });
+  $$("#topic-list .edit").forEach(b => b.addEventListener("click", e => {
+    editItem(parseInt(e.target.dataset.idx, 10));
+  }));
+  $$("#topic-list .del").forEach(b => b.addEventListener("click", e => {
+    deleteItem(parseInt(e.target.dataset.idx, 10));
+  }));
+}
+
+function escapeHtml(s) {
+  return (s || "").toString()
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+// ───── 編集モード ─────
+function editItem(idx) {
+  const t = state.topics[idx];
+  state.editingIndex = idx;
+  $("#form-title").textContent = `編集中: ${t.title || "(no title)"}`;
+  $("#submit-btn").textContent = "更新する";
+  $("#f-index").value = String(idx);
+  $("#f-id").value = t.id || "";
+  $("#f-date").value = t.date || "";
+  $("#f-slug").value = t.slug || "";
+  $("#f-title").value = t.title || "";
+  $("#f-summary").value = t.summary || "";
+  $("#f-body").value = t.body_html || "";
+  $("#f-author").value = t.author || "";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+function resetForm() {
+  state.editingIndex = -1;
+  $("#form-title").textContent = "新規投稿";
+  $("#submit-btn").textContent = "投稿する";
+  $("#news-form").reset();
+  $("#f-index").value = "";
+  $("#f-id").value = "";
+}
+$("#cancel-btn").addEventListener("click", resetForm);
+
+// ───── 削除 ─────
+async function deleteItem(idx) {
+  const t = state.topics[idx];
+  if (!confirm(`削除しますか？\n\n${t.title}`)) return;
+  try {
+    await callGas("delete", { index: idx });
+    showMsg("削除しました");
+    await loadList();
+  } catch (e) {
+    showMsg("削除失敗: " + e.message, "err");
+  }
+}
+
+// ───── 投稿・更新 ─────
+$("#news-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const title = $("#f-title").value.trim();
+  const entry = {
+    id: $("#f-id").value,
+    date: $("#f-date").value,
+    datetime: $("#f-date").value ? $("#f-date").value + "T00:00:00+09:00" : "",
+    slug: $("#f-slug").value.trim() || slugify(title),
+    title: title,
+    summary: $("#f-summary").value.trim(),
+    body_html: $("#f-body").value,
+    author: $("#f-author").value.trim()
+  };
+  try {
+    const action = state.editingIndex >= 0 ? "edit" : "add";
+    await callGas(action, { entry, index: state.editingIndex });
+    showMsg(action === "edit" ? "更新しました" : "投稿しました");
+    resetForm();
+    await loadList();
+  } catch (err) {
+    showMsg("失敗: " + err.message, "err");
+  }
+});
+
+$("#reload-btn").addEventListener("click", async () => {
+  try { await loadList(); showMsg("再読込しました"); }
+  catch (e) { showMsg("再読込失敗: " + e.message, "err"); }
+});
+
+// 自動ログイン
+(async () => {
+  if (!GAS_URL) {
+    $("#config-hint").classList.remove("hidden");
+  }
+  if (localStorage.getItem(LS_KEY)) {
+    try {
+      await loadList();
+      $("#login").style.display = "none";
+      $("#app").classList.add("show");
+    } catch (e) {
+      localStorage.removeItem(LS_KEY);
+    }
+  }
+})();
+</script>
+</body>
+</html>

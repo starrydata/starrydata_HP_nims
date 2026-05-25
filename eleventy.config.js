@@ -21,6 +21,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/*/img/**");
   // 散布図用 JSON を /data/ で配信
   eleventyConfig.addPassthroughCopy({ "src/_data/chart_temp_seebeck.json": "data/chart_temp_seebeck.json" });
+  // News admin (GAS 経由で topics.json を編集する管理画面)
+  eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
 
   // pathPrefix を HTML 内の絶対パスにも適用
   // (href="/..." / src="/..." / fetch('/...') / url('/...') 等を書き換え)
