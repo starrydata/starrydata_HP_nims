@@ -21,7 +21,7 @@
     "research":      { "ja": "Research",       "en": "Research" },
     "team":          { "ja": "Members",       "en": "Members" },
     "publications":  { "ja": "Publications",   "en": "Publications" },
-    "news":          { "ja": "ニュース",       "en": "News" },
+    "news":          { "ja": "News",           "en": "News" },
     "use_data":      { "ja": "データを使う",   "en": "Use Data" },
     "collaborate":   { "ja": "共同研究",       "en": "Collaborate" },
     "contact":       { "ja": "お問い合わせ",   "en": "Contact" }
