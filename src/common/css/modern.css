@@ -53,7 +53,7 @@ body {
   margin: 0;
   font-family: "Inter", "Helvetica Neue", Arial, "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", sans-serif;
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   background: var(--bg-subtle);
   font-size: var(--fs-base);
@@ -174,7 +174,7 @@ p { margin: 0 0 1em; }
 }
 .hero .lead {
   font-size: 1.22rem;
-  line-height: 1.7;
+  line-height: 1.6;
   max-width: 720px;
   color: rgba(248,250,252,0.88);
   margin: 0 0 40px;
@@ -231,7 +231,7 @@ p { margin: 0 0 1em; }
 }
 .section .lead {
   font-size: var(--fs-lead);
-  line-height: 1.75;
+  line-height: 1.6;
   color: var(--text-2);
   max-width: 720px;
   margin: 0 0 56px;
@@ -522,7 +522,7 @@ p { margin: 0 0 1em; }
 }
 .lead-large {
   font-size: clamp(1.12rem, 1.8vw, 1.28rem);
-  line-height: 1.85;
+  line-height: 1.7;
   color: var(--text);
   margin: 0 0 22px;
   max-width: 64ch;
@@ -535,7 +535,7 @@ p { margin: 0 0 1em; }
 }
 .prose {
   font-size: 1.02rem;
-  line-height: 1.9;
+  line-height: 1.75;
   color: var(--text-2);
   max-width: 68ch;
   margin: 0;
@@ -831,7 +831,7 @@ p { margin: 0 0 1em; }
 
 .article-body {
   font-size: 1.02rem;
-  line-height: 1.85;
+  line-height: 1.75;
   color: var(--text);
   max-width: 70ch;
   margin: 0 auto;
@@ -1338,7 +1338,7 @@ p { margin: 0 0 1em; }
 }
 .research-desc {
   font-size: 1.02rem;
-  line-height: 1.85;
+  line-height: 1.7;
   color: var(--text);
   max-width: 70ch;
   margin: 0 0 22px;
