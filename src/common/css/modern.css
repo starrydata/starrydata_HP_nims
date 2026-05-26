@@ -486,6 +486,30 @@ p { margin: 0 0 1em; }
   font-weight: 600;
 }
 .news-text { flex: 1; min-width: 0; }
+.news-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.news-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+.news-tag-cat {
+  background: var(--accent-2);
+  color: #fff;
+}
+.news-tag-sub {
+  background: #f3eefe;
+  color: var(--accent-2);
+  border: 1px solid #e7defb;
+}
 .news-title {
   margin: 0;
   font-size: 1.02rem;

@@ -24,3 +24,7 @@ Thumbs.db
 
 # MovableType エクスポート（原本にメール等の個人情報が含まれるため除外）
 _source/
+
+# Office documents (誤コミット防止)
+*.docx
+~$*

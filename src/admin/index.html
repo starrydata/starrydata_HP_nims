@@ -220,16 +220,9 @@
           <input type="hidden" id="f-index" value="">
           <input type="hidden" id="f-id" value="">
 
-          <div class="row">
-            <div class="field date-field">
-              <label for="f-date">日付</label>
-              <input type="date" id="f-date" required>
-            </div>
-            <div class="field">
-              <label for="f-slug">スラッグ (URL 末尾)</label>
-              <input type="text" id="f-slug" placeholder="自動生成">
-              <div class="hint">空欄ならタイトルから自動生成</div>
-            </div>
+          <div class="field date-field">
+            <label for="f-date">日付</label>
+            <input type="date" id="f-date" required>
           </div>
 
           <div class="row">
@@ -472,7 +465,6 @@ function editItem(idx) {
   $("#f-index").value = String(idx);
   $("#f-id").value = t.id || "";
   $("#f-date").value = t.date || "";
-  $("#f-slug").value = t.slug || "";
   $("#f-title").value = t.title || "";
   $("#f-summary").value = t.summary || "";
   $("#f-body").value = htmlToText(t.body_html || "");
@@ -517,7 +509,6 @@ $("#news-form").addEventListener("submit", async (e) => {
     id: $("#f-id").value,
     date: $("#f-date").value,
     datetime: $("#f-date").value ? $("#f-date").value + "T00:00:00+09:00" : "",
-    slug: $("#f-slug").value.trim() || slugify(title),
     title: title,
     category: $("#f-category").value,
     subcategory: $("#f-subcategory").value,

@@ -23,6 +23,12 @@ lang: en
           <a href="/topics/{{ t.slug }}.html">
             <time class="news-date" datetime="{{ t.datetime }}">{{ t.date | replace("-", "/") }}</time>
             <div class="news-text">
+              {% if t.category or t.subcategory %}
+              <div class="news-tags">
+                {% if t.category %}<span class="news-tag news-tag-cat">{{ t.category }}</span>{% endif %}
+                {% if t.subcategory %}<span class="news-tag news-tag-sub">{{ t.subcategory }}</span>{% endif %}
+              </div>
+              {% endif %}
               <h3 class="news-title">{{ t.title }}</h3>
               {% if t.summary %}<p class="news-summary">{{ t.summary }}</p>{% endif %}
             </div>
