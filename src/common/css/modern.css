@@ -82,7 +82,8 @@ p { margin: 0 0 1em; }
   border-bottom: 1px solid var(--line);
 }
 .site-header .container {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center;
+  gap: 32px;
   height: 72px;
 }
 .site-logo {
@@ -90,6 +91,7 @@ p { margin: 0 0 1em; }
   font-size: 1.2rem;
   color: var(--text);
   letter-spacing: -0.02em;
+  flex-shrink: 0;
 }
 .site-logo span { color: var(--accent-2); }
 .site-logo:hover { color: var(--accent-2); }
@@ -103,7 +105,7 @@ p { margin: 0 0 1em; }
 }
 .site-nav a:hover { background: #f3eefe; color: var(--accent-2); }
 .lang-switch {
-  margin-left: 10px;
+  margin-left: auto;
   display: inline-flex;
   background: var(--line);
   border-radius: 999px;

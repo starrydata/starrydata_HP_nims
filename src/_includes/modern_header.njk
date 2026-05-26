@@ -21,11 +21,11 @@
       <a href="{{ papersPath }}">{{ i18n.nav.publications[L] }}</a>
       <a href="{{ newsPath }}">{{ i18n.nav.news[L] }}</a>
       <a href="{{ langPath }}#collaborate">{{ i18n.nav.collaborate[L] }}</a>
-
-      <span class="lang-switch" role="group" aria-label="Language">
-        <a href="/" class="{{ 'is-active' if L == 'ja' else '' }}">JA</a>
-        <a href="/en/" class="{{ 'is-active' if L == 'en' else '' }}">EN</a>
-      </span>
     </nav>
+
+    <span class="lang-switch" role="group" aria-label="Language">
+      <a href="/" class="{{ 'is-active' if L == 'ja' else '' }}">JA</a>
+      <a href="/en/" class="{{ 'is-active' if L == 'en' else '' }}">EN</a>
+    </span>
   </div>
 </header>
