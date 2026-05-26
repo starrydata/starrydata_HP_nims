@@ -167,7 +167,10 @@ function normalizeEntry(data, existing) {
     subcategory: data.subcategory || "",
     author: data.author || "",
     summary: summary,
-    body_html: body
+    body_html: body,
+    paper_title: (data.paper_title || "").trim(),
+    doi: (data.doi || "").trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i, ""),
+    url: (data.url || "").trim()
   };
 }
 

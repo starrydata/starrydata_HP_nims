@@ -259,6 +259,22 @@
           </div>
 
           <div class="field">
+            <label for="f-paper-title">論文タイトル (任意)</label>
+            <input type="text" id="f-paper-title" placeholder="関連する論文のタイトル">
+          </div>
+
+          <div class="field">
+            <label for="f-doi">DOI (任意)</label>
+            <input type="text" id="f-doi" placeholder="10.xxxx/xxxxx">
+            <div class="hint">DOI を入力すると論文タイトルが <code>doi.org</code> リンクになります。</div>
+          </div>
+
+          <div class="field">
+            <label for="f-url">関連 URL (任意)</label>
+            <input type="url" id="f-url" placeholder="https://...">
+          </div>
+
+          <div class="field">
             <label for="f-author">著者 (任意)</label>
             <input type="text" id="f-author">
           </div>
@@ -468,6 +484,9 @@ function editItem(idx) {
   $("#f-title").value = t.title || "";
   $("#f-summary").value = t.summary || "";
   $("#f-body").value = htmlToText(t.body_html || "");
+  $("#f-paper-title").value = t.paper_title || "";
+  $("#f-doi").value = t.doi || "";
+  $("#f-url").value = t.url || "";
   $("#f-author").value = t.author || "";
   $("#f-category").value = t.category || "";
   fillSubcategory(t.category || "", t.subcategory || "");
@@ -514,6 +533,9 @@ $("#news-form").addEventListener("submit", async (e) => {
     subcategory: $("#f-subcategory").value,
     summary: $("#f-summary").value.trim(),
     body_html: textToHtml($("#f-body").value),
+    paper_title: $("#f-paper-title").value.trim(),
+    doi: $("#f-doi").value.trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i, ""),
+    url: $("#f-url").value.trim(),
     author: $("#f-author").value.trim()
   };
   try {

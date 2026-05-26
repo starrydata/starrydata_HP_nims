@@ -858,6 +858,42 @@ p { margin: 0 0 1em; }
 }
 .article-meta .author { color: var(--text-3); font-size: 0.88rem; }
 
+.article-refs {
+  max-width: 70ch;
+  margin: 0 auto 32px;
+  padding: 18px 22px;
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--accent-2);
+  border-radius: 6px;
+  font-size: 0.94rem;
+}
+.article-ref + .article-ref { margin-top: 10px; }
+.article-ref-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent-2);
+  background: #fff;
+  padding: 2px 9px;
+  border-radius: 999px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.article-ref a {
+  color: var(--accent-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+}
+.article-ref-doi {
+  display: block;
+  margin: 4px 0 0 calc(0.72rem * 2 + 10px);
+  font-size: 0.78rem;
+  color: var(--text-3);
+  font-family: "Menlo", monospace;
+}
+
 .article-body {
   font-size: 1.02rem;
   line-height: 1.75;
