@@ -1,0 +1,83 @@
+<script id="topics-data" type="application/json">{{ topics.topics | dump | replace("</", "<\\/") | safe }}</script>
+
+<div id="news-modal" class="news-modal" hidden aria-hidden="true">
+  <div class="news-modal-backdrop" data-news-close></div>
+  <div class="news-modal-panel" role="dialog" aria-modal="true" aria-labelledby="news-modal-title">
+    <button class="news-modal-close" type="button" data-news-close aria-label="閉じる">×</button>
+    <div class="news-modal-meta">
+      <span id="news-modal-tags"></span>
+      <time id="news-modal-date"></time>
+    </div>
+    <h2 id="news-modal-title"></h2>
+    <div id="news-modal-refs" class="article-refs" hidden></div>
+    <article id="news-modal-body" class="article-body"></article>
+  </div>
+</div>
+
+<script>
+(function(){
+  var dataEl = document.getElementById('topics-data');
+  if (!dataEl) return;
+  var topics = JSON.parse(dataEl.textContent);
+  var modal = document.getElementById('news-modal');
+  var titleEl = document.getElementById('news-modal-title');
+  var dateEl = document.getElementById('news-modal-date');
+  var tagsEl = document.getElementById('news-modal-tags');
+  var bodyEl = document.getElementById('news-modal-body');
+  var refsEl = document.getElementById('news-modal-refs');
+
+  function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function escAttr(s){ return esc(s).replace(/"/g,'&quot;'); }
+
+  function open(idx){
+    var t = topics[idx];
+    if (!t) return;
+    titleEl.textContent = t.title || '';
+    dateEl.textContent = (t.date || '').replace(/-/g, '/');
+    dateEl.setAttribute('datetime', t.datetime || '');
+    var tags = '';
+    if (t.category) tags += '<span class="news-tag news-tag-cat">'+esc(t.category)+'</span>';
+    if (t.subcategory) tags += '<span class="news-tag news-tag-sub">'+esc(t.subcategory)+'</span>';
+    tagsEl.innerHTML = tags;
+    var refs = '';
+    if (t.paper_title) {
+      refs += '<div class="article-ref"><span class="article-ref-label">論文</span>';
+      if (t.doi) {
+        refs += '<a href="https://doi.org/'+escAttr(t.doi)+'" target="_blank" rel="noopener">'+esc(t.paper_title)+'</a>';
+        refs += '<span class="article-ref-doi">DOI: '+esc(t.doi)+'</span>';
+      } else {
+        refs += '<span>'+esc(t.paper_title)+'</span>';
+      }
+      refs += '</div>';
+    }
+    refsEl.innerHTML = refs;
+    refsEl.hidden = !refs;
+    bodyEl.innerHTML = t.body_html || '';
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.news-modal-panel').scrollTop = 0;
+  }
+  function close(){
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-news-idx]');
+    if (trigger) {
+      e.preventDefault();
+      open(parseInt(trigger.getAttribute('data-news-idx'), 10));
+      return;
+    }
+    if (e.target.closest('[data-news-close]')) {
+      e.preventDefault();
+      close();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && !modal.hidden) close();
+  });
+})();
+</script>

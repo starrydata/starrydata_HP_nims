@@ -191,7 +191,11 @@ lang: en
       <ul class="news-list">
         {%- for t in topics.topics.slice(0, 5) %}
         <li class="news-item">
-          <a href="/topics/{{ t.slug }}.html">
+          {% if t.url %}
+          <a href="{{ t.url }}" target="_blank" rel="noopener" class="news-link-external">
+          {% else %}
+          <a href="#" data-news-idx="{{ loop.index0 }}">
+          {% endif %}
             <time class="news-date" datetime="{{ t.datetime }}">{{ t.date | replace("-", "/") }}</time>
             <div class="news-text">
               {% if t.category or t.subcategory %}
@@ -200,7 +204,7 @@ lang: en
                 {% if t.subcategory %}<span class="news-tag news-tag-sub">{{ t.subcategory }}</span>{% endif %}
               </div>
               {% endif %}
-              <h3 class="news-title">{{ t.title }}</h3>
+              <h3 class="news-title">{{ t.title }}{% if t.url %} <span class="news-ext-icon" aria-hidden="true">↗</span>{% endif %}</h3>
               {% if t.summary %}<p class="news-summary">{{ t.summary }}</p>{% endif %}
             </div>
           </a>
@@ -214,6 +218,8 @@ lang: en
     </div>
   </div>
 </section>
+
+{% include "news_modal.njk" %}
 
 <!-- =================== COLLABORATE CTA =================== -->
 <section class="section" id="collaborate">
