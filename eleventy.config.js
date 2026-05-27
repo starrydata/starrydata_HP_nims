@@ -36,6 +36,11 @@ export default function (eleventyConfig) {
           /(href|src)="\/(?!\/)([^"]*)"/g,
           (m, attr, rest) => `${attr}="${trimmed}/${rest}"`
         )
+        // JSON 内のエスケープ済み属性 href=\"/...\" / src=\"/...\" (news_modal などで body_html を埋め込んでいる箇所)
+        .replace(
+          /(href|src)=\\"\/(?!\/)([^\\"]*)\\"/g,
+          (m, attr, rest) => `${attr}=\\"${trimmed}/${rest}\\"`
+        )
         // inline JS: fetch('/...') / fetch("/...")
         .replace(
           /(fetch\(\s*['"`])\/(?!\/)([^'"`]*)/g,
