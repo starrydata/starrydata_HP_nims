@@ -59,6 +59,8 @@ function doPost(e) {
       return json({ status: "ok", result: editTopic(data.index, data.entry) });
     } else if (action === "delete") {
       return json({ status: "ok", result: deleteTopic(data.index) });
+    } else if (action === "upload_image") {
+      return json({ status: "ok", url: uploadImage(data.filename, data.content_b64) });
     } else {
       throw new Error("Unknown action: " + action);
     }
@@ -199,6 +201,28 @@ function editTopic(index, entry) {
   sortByDateDesc(list);
   obj.topics = list;
   return commitTopics(obj, "news: edit '" + (list[index].title || "no title") + "'");
+}
+
+// ── 画像アップロード ──
+// 画像を src/assets/images/news/<timestamp>_<filename> にコミットし、
+// プレビュー用に raw.githubusercontent の URL を返す。
+// 保存時の Markdown 上は admin 側で /assets/... の相対パスに正規化される。
+function uploadImage(filename, contentB64) {
+  if (!filename) throw new Error("filename is required");
+  if (!contentB64) throw new Error("content_b64 is required");
+  var safe = String(filename).replace(/[^a-zA-Z0-9._-]/g, "_");
+  var ts = new Date().toISOString().replace(/[:.]/g, "-").substring(0, 19);
+  var pathInRepo = "src/assets/images/news/" + ts + "_" + safe;
+  var branch = getBranch();
+  ghApi("PUT", "contents/" + pathInRepo, {
+    message: "news: upload image " + safe,
+    content: contentB64,
+    branch: branch
+  });
+  var props = PropertiesService.getScriptProperties();
+  var repo = props.getProperty("GITHUB_REPO");
+  // raw.githubusercontent はコミット直後にアクセス可能 → エディタプレビュー用に返す
+  return "https://raw.githubusercontent.com/" + repo + "/" + branch + "/" + pathInRepo;
 }
 
 // ── 削除 ──

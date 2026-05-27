@@ -11,6 +11,8 @@
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/turndown@7.1.3/dist/turndown.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@joplin/turndown-plugin-gfm@1.0.61/dist/turndown-plugin-gfm.js"></script>
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css">
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
 <style>
   :root {
     --bg: #f7f7fb;
@@ -141,6 +143,17 @@
   }
   form textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
   form .hint { font-size: 0.78rem; color: var(--text-3); margin-top: 4px; }
+  /* Toast UI Editor */
+  #f-body-editor { background: #fff; border-radius: 8px; }
+  #f-body-editor .toastui-editor-defaultUI { border: 1px solid var(--line); border-radius: 8px; }
+  #f-body-editor .toastui-editor-defaultUI-toolbar { border-radius: 8px 8px 0 0; }
+  .editor-uploading {
+    font-size: 0.78rem;
+    color: var(--accent);
+    margin-top: 4px;
+    display: none;
+  }
+  .editor-uploading.is-active { display: block; }
   form .actions {
     display: flex; gap: 10px; justify-content: flex-end; margin-top: 12px;
     padding-top: 16px; border-top: 1px solid var(--line);
@@ -256,31 +269,11 @@
           </div>
 
           <div class="field">
-            <label for="f-body">本文 (Markdown)</label>
-            <textarea id="f-body" rows="14" placeholder="本文を Markdown で入力してください。
-
-## 見出し2
-### 見出し3
-
-普通の段落。**太字** や [リンク](https://example.com) も書けます。
-
-- 箇条書き
-- アイテム
-
-| 項目 | 対策なし | 対策あり |
-|------|----------|----------|
-| 容量 | 1.3GB    | 109MB    |
-
-![画像の説明](https://example.com/image.png)
-
-> 引用ブロック
-
-```
-コードブロック
-```"></textarea>
+            <label for="f-body">本文</label>
+            <div id="f-body-editor"></div>
+            <div id="editor-uploading" class="editor-uploading">画像をアップロード中...</div>
             <div class="hint">
-              Markdown 対応。<strong>表</strong>・<strong>画像</strong>・<strong>見出し</strong>・<strong>リスト</strong>・<strong>リンク</strong>・<strong>引用</strong>などが使えます。
-              画像はリポジトリにコミットして <code>/assets/images/news/foo.png</code> のように参照、または外部 URL を貼り付け。
+              ツールバーから<strong>画像挿入</strong>・<strong>表</strong>・<strong>見出し</strong>・<strong>リスト</strong>・<strong>リンク</strong>を追加できます。画像はドラッグ&amp;ドロップやクリップボード貼り付けも対応。
             </div>
           </div>
 
@@ -366,8 +359,8 @@ if (window.marked) {
 }
 // Turndown: HTML → Markdown (テーブル等の GFM プラグインを有効化)
 const _turndown = window.TurndownService ? new TurndownService({
-  headingStyle: "atx",       // ## H2
-  codeBlockStyle: "fenced",  // ```code```
+  headingStyle: "atx",
+  codeBlockStyle: "fenced",
   bulletListMarker: "-",
   emDelimiter: "*"
 }) : null;
@@ -375,13 +368,73 @@ if (_turndown && window.turndownPluginGfm) {
   _turndown.use(turndownPluginGfm.gfm);
 }
 
+// 画像 URL の正規化: 編集時はプレビューで見えるよう raw.githubusercontent に置換、
+// 保存時はサイト内パスに戻す
+const REPO_RAW = "https://raw.githubusercontent.com/starrydata/starrydata_HP_nims/main/src";
+function rawifyMarkdown(md) {
+  return (md || "").replace(/\]\(\/(assets\/[^\)]+)\)/g, "](" + REPO_RAW + "/$1)");
+}
+function localizeMarkdown(md) {
+  const esc = REPO_RAW.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return (md || "").replace(new RegExp("\\]\\(" + esc + "/", "g"), "](/");
+}
+
 function textToHtml(text) {
   if (!text) return "";
-  return window.marked ? marked.parse(text) : text;
+  return window.marked ? marked.parse(localizeMarkdown(text)) : text;
 }
 function htmlToText(html) {
   if (!html) return "";
-  return _turndown ? _turndown.turndown(html) : html;
+  return _turndown ? rawifyMarkdown(_turndown.turndown(html)) : html;
+}
+
+// ───── Toast UI Editor ─────
+let editor = null;
+function initEditor() {
+  if (!window.toastui || !window.toastui.Editor) return;
+  editor = new toastui.Editor({
+    el: document.querySelector("#f-body-editor"),
+    height: "420px",
+    initialEditType: "wysiwyg",   // WYSIWYG モード (Word風)
+    previewStyle: "vertical",
+    usageStatistics: false,
+    hooks: {
+      addImageBlobHook: async (blob, callback) => {
+        try {
+          $("#editor-uploading").classList.add("is-active");
+          const dataUrl = await new Promise((res, rej) => {
+            const r = new FileReader();
+            r.onload = () => res(r.result);
+            r.onerror = rej;
+            r.readAsDataURL(blob);
+          });
+          // dataUrl = "data:image/png;base64,XXXX"
+          const m = dataUrl.match(/^data:([^;]+);base64,(.+)$/);
+          if (!m) throw new Error("画像形式を認識できません");
+          const mime = m[1];
+          const b64 = m[2];
+          const ext = (mime.split("/")[1] || "png").toLowerCase();
+          const filename = (blob.name || ("image." + ext)).replace(/[^a-zA-Z0-9._-]/g, "_");
+          const resp = await callGas("upload_image", {
+            filename: filename,
+            content_b64: b64,
+            mime: mime
+          });
+          callback(resp.url, filename);
+        } catch (e) {
+          showMsg("画像アップロード失敗: " + e.message, "err");
+        } finally {
+          $("#editor-uploading").classList.remove("is-active");
+        }
+      }
+    }
+  });
+}
+function setEditorMarkdown(md) {
+  if (editor) editor.setMarkdown(md || "");
+}
+function getEditorMarkdown() {
+  return editor ? editor.getMarkdown() : "";
 }
 
 async function callGas(action, payload = {}) {
@@ -441,6 +494,7 @@ async function login() {
     await loadList();
     $("#login").style.display = "none";
     $("#app").classList.add("show");
+    if (!editor) initEditor();
   } catch (e) {
     localStorage.removeItem(LS_KEY);
     const err = $("#li-error");
@@ -510,7 +564,7 @@ function editItem(idx) {
   $("#f-date").value = t.date || "";
   $("#f-title").value = t.title || "";
   $("#f-summary").value = t.summary || "";
-  $("#f-body").value = htmlToText(t.body_html || "");
+  setEditorMarkdown(htmlToText(t.body_html || ""));
   $("#f-paper-title").value = t.paper_title || "";
   $("#f-doi").value = t.doi || "";
   $("#f-url").value = t.url || "";
@@ -527,6 +581,7 @@ function resetForm() {
   $("#news-form").reset();
   $("#f-index").value = "";
   $("#f-id").value = "";
+  setEditorMarkdown("");
   fillSubcategory("");
   renderList();
 }
@@ -559,7 +614,7 @@ $("#news-form").addEventListener("submit", async (e) => {
     category: $("#f-category").value,
     subcategory: $("#f-subcategory").value,
     summary: $("#f-summary").value.trim(),
-    body_html: textToHtml($("#f-body").value),
+    body_html: textToHtml(getEditorMarkdown()),
     paper_title: $("#f-paper-title").value.trim(),
     doi: $("#f-doi").value.trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i, ""),
     url: $("#f-url").value.trim(),
@@ -591,6 +646,7 @@ $("#reload-btn").addEventListener("click", async () => {
       await loadList();
       $("#login").style.display = "none";
       $("#app").classList.add("show");
+      if (!editor) initEditor();
     } catch (e) {
       localStorage.removeItem(LS_KEY);
     }
