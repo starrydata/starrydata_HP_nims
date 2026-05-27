@@ -61,6 +61,8 @@ function doPost(e) {
       return json({ status: "ok", result: deleteTopic(data.index) });
     } else if (action === "upload_image") {
       return json({ status: "ok", url: uploadImage(data.filename, data.content_b64) });
+    } else if (action === "translate") {
+      return json({ status: "ok", translated: translateText(data.text, data.source, data.target) });
     } else {
       throw new Error("Unknown action: " + action);
     }
@@ -163,17 +165,33 @@ function normalizeEntry(data, existing) {
     id: (existing && existing.id) || data.id || "new",
     slug: slug,
     title: title,
+    title_en: (data.title_en || "").trim(),
     date: date,
     datetime: datetime,
     category: data.category || "",
     subcategory: data.subcategory || "",
     author: data.author || "",
     summary: summary,
+    summary_en: (data.summary_en || "").trim(),
     body_html: body,
+    body_html_en: (data.body_html_en || "").trim(),
     paper_title: (data.paper_title || "").trim(),
     doi: (data.doi || "").trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i, ""),
     url: (data.url || "").trim()
   };
+}
+
+// ── 翻訳 (Google Apps Script の組み込み LanguageApp、無料) ──
+function translateText(text, source, target) {
+  if (!text) return "";
+  source = source || "ja";
+  target = target || "en";
+  // 長文も 1 リクエストで送れるが、安定性のため段落単位に分割
+  var parts = String(text).split(/\n{2,}/);
+  return parts.map(function (p) {
+    if (!p.trim()) return p;
+    return LanguageApp.translate(p, source, target);
+  }).join("\n\n");
 }
 
 function sortByDateDesc(topics) {

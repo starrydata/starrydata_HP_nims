@@ -29,10 +29,15 @@
   function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
   function escAttr(s){ return esc(s).replace(/"/g,'&quot;'); }
 
+  var LANG = '{{ lang or "ja" }}';
+  function pick(t, base){
+    if (LANG === 'en') return t[base + '_en'] || t[base] || '';
+    return t[base] || '';
+  }
   function open(idx){
     var t = topics[idx];
     if (!t) return;
-    titleEl.textContent = t.title || '';
+    titleEl.textContent = pick(t, 'title');
     dateEl.textContent = (t.date || '').replace(/-/g, '/');
     dateEl.setAttribute('datetime', t.datetime || '');
     var tags = '';
@@ -41,7 +46,8 @@
     tagsEl.innerHTML = tags;
     var refs = '';
     if (t.paper_title) {
-      refs += '<div class="article-ref"><span class="article-ref-label">論文</span>';
+      var refLabel = LANG === 'en' ? 'Paper' : '論文';
+      refs += '<div class="article-ref"><span class="article-ref-label">'+refLabel+'</span>';
       if (t.doi) {
         refs += '<a href="https://doi.org/'+escAttr(t.doi)+'" target="_blank" rel="noopener">'+esc(t.paper_title)+'</a>';
         refs += '<span class="article-ref-doi">DOI: '+esc(t.doi)+'</span>';
@@ -52,7 +58,7 @@
     }
     refsEl.innerHTML = refs;
     refsEl.hidden = !refs;
-    bodyEl.innerHTML = t.body_html || '';
+    bodyEl.innerHTML = pick(t, 'body_html');
     modal.hidden = false;
     modal.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';

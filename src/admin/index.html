@@ -144,9 +144,28 @@
   form textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
   form .hint { font-size: 0.78rem; color: var(--text-3); margin-top: 4px; }
   /* Toast UI Editor */
-  #f-body-editor { background: #fff; border-radius: 8px; }
-  #f-body-editor .toastui-editor-defaultUI { border: 1px solid var(--line); border-radius: 8px; }
-  #f-body-editor .toastui-editor-defaultUI-toolbar { border-radius: 8px 8px 0 0; }
+  #f-body-editor, #f-body-editor-en { background: #fff; border-radius: 8px; }
+  #f-body-editor .toastui-editor-defaultUI,
+  #f-body-editor-en .toastui-editor-defaultUI { border: 1px solid var(--line); border-radius: 8px; }
+  #f-body-editor .toastui-editor-defaultUI-toolbar,
+  #f-body-editor-en .toastui-editor-defaultUI-toolbar { border-radius: 8px 8px 0 0; }
+  /* JA / EN ペア */
+  .lang-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 880px) { .lang-pair { grid-template-columns: 1fr; } }
+  .label-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+  .label-row label { margin: 0; }
+  .btn-tl {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid #e3d8fa;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .btn-tl:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn-tl:disabled { opacity: 0.5; cursor: wait; }
   .editor-uploading {
     font-size: 0.78rem;
     color: var(--accent);
@@ -258,23 +277,49 @@
             </div>
           </div>
 
-          <div class="field">
-            <label for="f-title">タイトル</label>
-            <input type="text" id="f-title" required>
+          <div class="row lang-pair">
+            <div class="field">
+              <div class="label-row">
+                <label for="f-title">タイトル (日本語)</label>
+                <button type="button" class="btn-tl" data-tl="title">→ EN へ翻訳</button>
+              </div>
+              <input type="text" id="f-title" required>
+            </div>
+            <div class="field">
+              <label for="f-title-en">Title (English)</label>
+              <input type="text" id="f-title-en">
+            </div>
+          </div>
+
+          <div class="row lang-pair">
+            <div class="field">
+              <div class="label-row">
+                <label for="f-summary">概要 (日本語、1〜2 行)</label>
+                <button type="button" class="btn-tl" data-tl="summary">→ EN へ翻訳</button>
+              </div>
+              <textarea id="f-summary" rows="2" style="min-height:60px;"></textarea>
+            </div>
+            <div class="field">
+              <label for="f-summary-en">Summary (English)</label>
+              <textarea id="f-summary-en" rows="2" style="min-height:60px;"></textarea>
+            </div>
           </div>
 
           <div class="field">
-            <label for="f-summary">概要 (1〜2 行)</label>
-            <textarea id="f-summary" rows="2" style="min-height:60px;"></textarea>
-          </div>
-
-          <div class="field">
-            <label for="f-body">本文</label>
+            <div class="label-row">
+              <label>本文 (日本語)</label>
+              <button type="button" class="btn-tl" data-tl="body">→ EN へ翻訳</button>
+            </div>
             <div id="f-body-editor"></div>
             <div id="editor-uploading" class="editor-uploading">画像をアップロード中...</div>
             <div class="hint">
               ツールバーから<strong>画像挿入</strong>・<strong>表</strong>・<strong>見出し</strong>・<strong>リスト</strong>・<strong>リンク</strong>を追加できます。画像はドラッグ&amp;ドロップやクリップボード貼り付けも対応。
             </div>
+          </div>
+
+          <div class="field">
+            <label>Body (English)</label>
+            <div id="f-body-editor-en"></div>
           </div>
 
           <div class="field">
@@ -388,14 +433,15 @@ function htmlToText(html) {
   return _turndown ? rawifyMarkdown(_turndown.turndown(html)) : html;
 }
 
-// ───── Toast UI Editor ─────
-let editor = null;
-function initEditor() {
-  if (!window.toastui || !window.toastui.Editor) return;
-  editor = new toastui.Editor({
-    el: document.querySelector("#f-body-editor"),
-    height: "420px",
-    initialEditType: "wysiwyg",   // WYSIWYG モード (Word風)
+// ───── Toast UI Editor (JA + EN) ─────
+let editorJa = null;
+let editorEn = null;
+
+function makeEditor(elSelector) {
+  return new toastui.Editor({
+    el: document.querySelector(elSelector),
+    height: "380px",
+    initialEditType: "wysiwyg",
     previewStyle: "vertical",
     usageStatistics: false,
     hooks: {
@@ -408,7 +454,6 @@ function initEditor() {
             r.onerror = rej;
             r.readAsDataURL(blob);
           });
-          // dataUrl = "data:image/png;base64,XXXX"
           const m = dataUrl.match(/^data:([^;]+);base64,(.+)$/);
           if (!m) throw new Error("画像形式を認識できません");
           const mime = m[1];
@@ -430,12 +475,40 @@ function initEditor() {
     }
   });
 }
-function setEditorMarkdown(md) {
-  if (editor) editor.setMarkdown(md || "");
+function initEditor() {
+  if (!window.toastui || !window.toastui.Editor) return;
+  if (!editorJa) editorJa = makeEditor("#f-body-editor");
+  if (!editorEn) editorEn = makeEditor("#f-body-editor-en");
 }
-function getEditorMarkdown() {
-  return editor ? editor.getMarkdown() : "";
+function setEditorMarkdown(md, en) { (en ? editorEn : editorJa)?.setMarkdown(md || ""); }
+function getEditorMarkdown(en) { return (en ? editorEn : editorJa)?.getMarkdown() || ""; }
+
+// ───── JA → EN 翻訳 ─────
+async function translateField(kind) {
+  const btn = document.querySelector(`.btn-tl[data-tl="${kind}"]`);
+  if (btn) btn.disabled = true;
+  try {
+    let text = "";
+    if (kind === "title") text = $("#f-title").value;
+    else if (kind === "summary") text = $("#f-summary").value;
+    else if (kind === "body") text = getEditorMarkdown(false);
+    if (!text.trim()) { showMsg("翻訳元が空です", "err"); return; }
+    const resp = await callGas("translate", { text: text, source: "ja", target: "en" });
+    const out = resp.translated || "";
+    if (kind === "title") $("#f-title-en").value = out;
+    else if (kind === "summary") $("#f-summary-en").value = out;
+    else if (kind === "body") setEditorMarkdown(out, true);
+    showMsg("翻訳しました (内容を確認・修正してください)");
+  } catch (e) {
+    showMsg("翻訳失敗: " + e.message, "err");
+  } finally {
+    if (btn) btn.disabled = false;
+  }
 }
+document.addEventListener("click", e => {
+  const btn = e.target.closest(".btn-tl");
+  if (btn) translateField(btn.dataset.tl);
+});
 
 async function callGas(action, payload = {}) {
   if (!GAS_URL) {
@@ -563,8 +636,11 @@ function editItem(idx) {
   $("#f-id").value = t.id || "";
   $("#f-date").value = t.date || "";
   $("#f-title").value = t.title || "";
+  $("#f-title-en").value = t.title_en || "";
   $("#f-summary").value = t.summary || "";
-  setEditorMarkdown(htmlToText(t.body_html || ""));
+  $("#f-summary-en").value = t.summary_en || "";
+  setEditorMarkdown(htmlToText(t.body_html || ""), false);
+  setEditorMarkdown(htmlToText(t.body_html_en || ""), true);
   $("#f-paper-title").value = t.paper_title || "";
   $("#f-doi").value = t.doi || "";
   $("#f-url").value = t.url || "";
@@ -581,7 +657,8 @@ function resetForm() {
   $("#news-form").reset();
   $("#f-index").value = "";
   $("#f-id").value = "";
-  setEditorMarkdown("");
+  setEditorMarkdown("", false);
+  setEditorMarkdown("", true);
   fillSubcategory("");
   renderList();
 }
@@ -611,10 +688,13 @@ $("#news-form").addEventListener("submit", async (e) => {
     date: $("#f-date").value,
     datetime: $("#f-date").value ? $("#f-date").value + "T00:00:00+09:00" : "",
     title: title,
+    title_en: $("#f-title-en").value.trim(),
     category: $("#f-category").value,
     subcategory: $("#f-subcategory").value,
     summary: $("#f-summary").value.trim(),
-    body_html: textToHtml(getEditorMarkdown()),
+    summary_en: $("#f-summary-en").value.trim(),
+    body_html: textToHtml(getEditorMarkdown(false)),
+    body_html_en: textToHtml(getEditorMarkdown(true)),
     paper_title: $("#f-paper-title").value.trim(),
     doi: $("#f-doi").value.trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i, ""),
     url: $("#f-url").value.trim(),
