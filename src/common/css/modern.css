@@ -722,7 +722,7 @@ p { margin: 0 0 1em; }
 .app-card .app-body {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 110px;                       /* 全カード統一 */
+  height: 140px;                       /* 全カード統一 (説明文 2 行が収まる高さ) */
   padding: 14px 22px 16px;
   background: rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(10px) saturate(140%);
@@ -744,7 +744,7 @@ p { margin: 0 0 1em; }
 /* === image_layout="top": 横長画像用、画像上 / テキスト下 分離 === */
 .app-card[data-image-layout="top"] .app-thumb {
   position: absolute;
-  inset: 0 0 110px 0;                   /* テキスト 110px ぶん残す */
+  inset: 0 0 140px 0;                   /* テキスト 140px ぶん残す */
   height: auto;
   background: #fff;
   border-bottom: 1px solid var(--line);
