@@ -32,7 +32,7 @@
       "en": "<span class=\"accent\">Starrydata</span>"
     },
     "headline_2": {
-      "ja": "論文グラフを、研究に使えるデータへ",
+      "ja": "<span class=\"nowrap-grp\">論文グラフを、研究に使えるデータへ</span>",
       "en": "From Published Graphs to Structured Research Data"
     },
     "subline": {
