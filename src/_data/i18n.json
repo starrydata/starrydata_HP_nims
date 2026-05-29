@@ -28,12 +28,12 @@
   },
   "hero": {
     "headline_1": {
-      "ja": "<span class=\"nowrap-grp\"><span class=\"accent\">Materials Informatics</span> のための</span>",
-      "en": "An open data platform for"
+      "ja": "<span class=\"accent\">Starrydata</span>",
+      "en": "<span class=\"accent\">Starrydata</span>"
     },
     "headline_2": {
-      "ja": "オープンデータベース",
-      "en": "<span class=\"accent\">Materials Informatics</span>"
+      "ja": "論文グラフを、研究に使えるデータへ",
+      "en": "From Published Graphs to Structured Research Data"
     },
     "subline": {
       "ja": "論文のグラフから抽出した 230,000+ の実験データを中核に、結晶構造シミュレーションや元素反応性マップなど、Materials Informatics 研究を支える多様なオープンデータと Web ツールを公開しています。",
