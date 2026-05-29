@@ -945,6 +945,54 @@ p { margin: 0 0 1em; }
 }
 .article-meta .author { color: var(--text-3); font-size: 0.88rem; }
 
+/* ---- Contact page ---- */
+.contact-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  box-shadow: var(--shadow-sm);
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.contact-card-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.contact-email {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  margin-bottom: 18px;
+  word-break: break-all;
+}
+.contact-email:hover { color: var(--accent-2); }
+.contact-block { margin: 36px 0; }
+.contact-block h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 14px;
+  letter-spacing: -0.005em;
+}
+.contact-topics {
+  margin: 0;
+  padding-left: 1.4em;
+  color: var(--text-2);
+}
+.contact-topics li { margin: 6px 0; line-height: 1.7; }
+.contact-org {
+  margin: 0;
+  color: var(--text-2);
+  line-height: 1.8;
+}
+
 .article-refs {
   max-width: 70ch;
   margin: 0 auto 32px;

@@ -1,5 +1,6 @@
 {%- set L = lang or 'ja' -%}
 {%- set langPath = '/en/' if L == 'en' else '/' -%}
+{%- set contactPath = '/en/contact/' if L == 'en' else '/contact/' -%}
 
 <footer class="site-footer">
   <div class="container">
@@ -31,8 +32,7 @@
     <div>
       <h5>{{ i18n.nav.contact[L] }}</h5>
       <ul>
-        <li><a href="{{ langPath }}#collaborate">{{ i18n.nav.collaborate[L] }}</a></li>
-        <li><a href="{{ langPath }}#contact">{{ i18n.nav.contact[L] }}</a></li>
+        <li><a href="{{ contactPath }}">{{ i18n.nav.contact[L] }}</a></li>
       </ul>
     </div>
   </div>

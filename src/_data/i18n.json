@@ -24,7 +24,7 @@
     "news":          { "ja": "News",           "en": "News" },
     "use_data":      { "ja": "データを使う",   "en": "Use Data" },
     "collaborate":   { "ja": "Collaborate",    "en": "Collaborate" },
-    "contact":       { "ja": "お問い合わせ",   "en": "Contact" }
+    "contact":       { "ja": "Contact",        "en": "Contact" }
   },
   "hero": {
     "headline_1": {
@@ -123,6 +123,39 @@
     "cta": {
       "ja": "問い合わせる",
       "en": "Get in touch"
+    }
+  },
+  "contact_page": {
+    "eyebrow": { "ja": "Contact",        "en": "Contact" },
+    "title":   { "ja": "お問い合わせ",   "en": "Get in touch" },
+    "lead": {
+      "ja": "共同研究・データ提供・取材・講演依頼などはこちらからお問い合わせください。担当より折り返しご連絡いたします。",
+      "en": "For collaborations, data provision, press, talks, or any other inquiries, please reach out below. We will get back to you shortly."
+    },
+    "email_label":   { "ja": "メール",       "en": "Email" },
+    "email_value":   { "ja": "starrydata1@gmail.com", "en": "starrydata1@gmail.com" },
+    "email_button":  { "ja": "メールを送る", "en": "Send email" },
+    "topics_title":  { "ja": "ご相談いただける主なテーマ", "en": "Topics we welcome" },
+    "topics": {
+      "ja": [
+        "共同研究・受託研究のご相談",
+        "Starrydata データセットの活用相談",
+        "材料データ収集・キュレーションの依頼",
+        "講演・寄稿・取材のご依頼",
+        "その他、Starrydata に関するお問い合わせ"
+      ],
+      "en": [
+        "Joint or contract research",
+        "Use of Starrydata datasets in your project",
+        "Materials data collection and curation requests",
+        "Talks, contributions, and media inquiries",
+        "Anything else related to Starrydata"
+      ]
+    },
+    "org_title": { "ja": "代表・所属", "en": "Lead and Affiliation" },
+    "org_body": {
+      "ja": "桂 ゆかり (プロジェクトリーダー)<br>国立研究開発法人 物質・材料研究機構 (NIMS)<br>マテリアル基盤研究センター 材料モデリンググループ",
+      "en": "Yukari Katsura (Project Leader)<br>National Institute for Materials Science (NIMS)<br>Center for Basic Research on Materials, Materials Modelling Group"
     }
   },
   "team": {

@@ -1,0 +1,44 @@
+---
+layout: modern.njk
+permalink: /contact/index.html
+title: Contact
+lang: ja
+---
+
+{%- set L = "ja" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">{{ i18n.contact_page.eyebrow[L] }}</span>
+    <h1>{{ i18n.contact_page.title[L] }}</h1>
+    <p class="lead lead-wide">{{ i18n.contact_page.lead[L] }}</p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container container-narrow-prose">
+
+    <div class="contact-card">
+      <div class="contact-card-label">{{ i18n.contact_page.email_label[L] }}</div>
+      <a class="contact-email" href="mailto:{{ i18n.contact_page.email_value[L] }}">{{ i18n.contact_page.email_value[L] }}</a>
+      <div class="contact-card-foot">
+        <a class="btn btn-primary" href="mailto:{{ i18n.contact_page.email_value[L] }}">{{ i18n.contact_page.email_button[L] }} →</a>
+      </div>
+    </div>
+
+    <div class="contact-block">
+      <h2>{{ i18n.contact_page.topics_title[L] }}</h2>
+      <ul class="contact-topics">
+        {%- for item in i18n.contact_page.topics[L] %}
+        <li>{{ item }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div class="contact-block">
+      <h2>{{ i18n.contact_page.org_title[L] }}</h2>
+      <p class="contact-org">{{ i18n.contact_page.org_body[L] | safe }}</p>
+    </div>
+
+  </div>
+</section>

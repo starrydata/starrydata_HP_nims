@@ -13,6 +13,7 @@
 {%- set papersPath = '/en/papers/' if L == 'en' else '/papers/' -%}
 {%- set researchPath = '/en/research/' if L == 'en' else '/research/' -%}
 {%- set newsPath = '/en/news/' if L == 'en' else '/news/' -%}
+{%- set contactPath = '/en/contact/' if L == 'en' else '/contact/' -%}
 
     <nav class="site-nav" aria-label="Global">
       <a href="{{ langPath }}#about">{{ i18n.nav.about[L] }}</a>
@@ -20,7 +21,7 @@
       <a href="{{ teamPath }}">{{ i18n.nav.team[L] }}</a>
       <a href="{{ papersPath }}">{{ i18n.nav.publications[L] }}</a>
       <a href="{{ newsPath }}">{{ i18n.nav.news[L] }}</a>
-      <a href="{{ langPath }}#collaborate">{{ i18n.nav.collaborate[L] }}</a>
+      <a href="{{ contactPath }}">{{ i18n.nav.contact[L] }}</a>
     </nav>
 
     <span class="lang-switch" role="group" aria-label="Language">
