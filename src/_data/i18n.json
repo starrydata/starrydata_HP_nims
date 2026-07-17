@@ -99,6 +99,44 @@
                  "en": "We welcome joint research and contract research. Let's advance Materials Informatics together." },
     "card3_cta": { "ja": "問い合わせる →",         "en": "Contact us →" }
   },
+  "lab": {
+    "title": {
+      "ja": "Starrydata Laboratory — 学生の研究プロジェクト",
+      "en": "Starrydata Laboratory — a student research initiative"
+    },
+    "lead": {
+      "ja": "筑波大学連携大学院や NIMS ジュニア／インターンの学生が参加する研究プロジェクトです。学生は 1 人 1 分野を担当し、自動データ収集から入門記事の執筆を経て、データ駆動の論文発表を目指します。将来的には、後輩が担当分野を引き継ぐ形で棲み分けていくことを想定しています。",
+      "en": "A hands-on research program for students from the University of Tsukuba's cooperative graduate school and NIMS junior / intern programs. Each student owns a research field and progresses from automated data curation, through beginner-friendly articles, to data-driven publications — with fields designed to be handed over to junior members over time."
+    },
+    "diagram_alt": {
+      "ja": "Starrydata Laboratory のメンバー構成とワークフロー概念図",
+      "en": "Overview diagram of Starrydata Laboratory members and workflow"
+    },
+    "step1_t": { "ja": "1 人 1 分野を担当",           "en": "Own one research field" },
+    "step1_d": {
+      "ja": "熱電・磁性・電池・誘電など、複数ある研究領域から 1 分野を担当。将来は後輩が引き継ぎ、分野を長期的に育てられる棲み分けを目指します。",
+      "en": "Each student takes charge of a single field — thermoelectric, magnetic, battery, dielectric and more. Fields are designed to be handed down to junior members over time."
+    },
+    "step2_t": { "ja": "自動データ収集",               "en": "Automated data curation" },
+    "step2_d": {
+      "ja": "担当分野の論文グラフを、Starrydata の自動デジタイズ基盤で継続的に収集・キュレーション。研究の土台となるデータセットを自分の手で育てます。",
+      "en": "Continuously curate plots from your field's literature using Starrydata's auto-digitization pipeline, building the dataset that will power your own research."
+    },
+    "step3_t": { "ja": "初心者向け記事を執筆",         "en": "Publish beginner-friendly articles" },
+    "step3_d": {
+      "ja": "収集したデータを題材に、その分野の入門記事を Starrydata サイト上で公開。学んだ内容がそのまま Web 教材として公開実績になります。",
+      "en": "Turn your dataset into introductory articles on the Starrydata site. Your learning becomes a public teaching resource — and a citable track record."
+    },
+    "step4_t": { "ja": "データで論文を書く",           "en": "Publish data-driven papers" },
+    "step4_d": {
+      "ja": "最終的にはデータ解析の結果をまとめ、自分名義でデータ駆動の論文を発表することを目指します。",
+      "en": "Ultimately, students aim to publish their own data-driven papers based on the datasets and analyses they have built."
+    },
+    "cta": {
+      "ja": "学生として参加を相談する →",
+      "en": "Apply as a student →"
+    }
+  },
   "fields": {
     "title": { "ja": "Research", "en": "Research" },
     "see_all": { "ja": "一覧を見る", "en": "View all" }

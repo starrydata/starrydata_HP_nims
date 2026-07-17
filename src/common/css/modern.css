@@ -858,6 +858,63 @@ p { margin: 0 0 1em; }
 .involve-card .btn { align-self: flex-start; margin-top: 6px; }
 .involve-card.highlight .btn-primary { color: #fff; }
 
+/* ---- Starrydata Laboratory ---- */
+.lab-diagram-wrap {
+  margin: 40px auto 44px;
+  max-width: 1100px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.lab-diagram {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.lab-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 8px;
+}
+.lab-step {
+  background: var(--bg-subtle);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.lab-step .step-num {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+.lab-step h3 {
+  font-size: 1.05rem;
+  margin: 0;
+  font-weight: 700;
+  color: var(--text);
+}
+.lab-step p {
+  margin: 0;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+@media (max-width: 960px) {
+  .lab-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .lab-steps { grid-template-columns: 1fr; }
+  .lab-diagram-wrap { padding: 12px; }
+}
+
 /* ---- Two-column showcase (text + chart) ---- */
 .grid-2col {
   display: grid;
