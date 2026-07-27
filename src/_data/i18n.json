@@ -36,7 +36,7 @@
       "en": "From Published Graphs to Structured Research Data"
     },
     "subline": {
-      "ja": "論文のグラフから抽出した 230,000+ の実験データを中核に、結晶構造シミュレーションや元素反応性マップなど、Materials Informatics 研究を支える多様なオープンデータと Web ツールを公開しています。",
+      "ja": "論文のグラフから抽出した 230,000+ の実験データを中核に、結晶構造シミュレーターや元素反応性マップなど、Materials Informatics 研究を支える多様なオープンデータとWebツールを公開しています。",
       "en": "Centered on 230,000+ experimental data points extracted from paper plots — complemented by crystal structure simulators, elemental reactivity maps, and other open tools for Materials Informatics research."
     },
     "cta_primary": {
@@ -62,7 +62,7 @@
       "en": "Starrydata is an <strong>open data project</strong> that extracts and structures experimental data from graphs in inorganic materials science papers, making them freely reusable for researchers worldwide."
     },
     "body": {
-      "ja": "2017 年に NIMS で始まり、現在は理化学研究所 AIP・筑波大学などとの連携のもと、専属研究チームが日々データ収集を続けています。Materials Informatics・機械学習・新材料探索に役立つ高品質な実験データを、API・Figshare・GitHub から自由にダウンロード／引用できます。",
+      "ja": "2017年にNIMSで始まり、現在は理化学研究所AIP・筑波大学などとの連携のもと、専属研究チームが日々データ収集を続けています。Materials Informatics・機械学習・新材料探索に役立つ高品質な実験データを、API・Figshare・GitHub から自由にダウンロード／引用できます。",
       "en": "Founded at NIMS in 2017, Starrydata is now operated by a dedicated research team in collaboration with RIKEN AIP, the University of Tsukuba and others. High-quality experimental data — useful for Materials Informatics, machine learning, and new-material discovery — are freely available via API, Figshare, and GitHub."
     }
   },
@@ -73,7 +73,7 @@
   "apps": {
     "title": { "ja": "関連アプリケーション・システム", "en": "Apps and Systems" },
     "lead": {
-      "ja": "データベースを軸に、組成探索・データ可視化・グラフ画像のデジタイズなど、複数の Web ツールを公開しています。すべて無償で利用できます。",
+      "ja": "データベースを軸に、組成探索・データ可視化・グラフ画像のデジタイズなど、複数のWebツールを公開しています。すべて無償で利用できます。",
       "en": "Beyond the database itself, we publish multiple free web tools for composition search, big-data visualization, plot digitization, and more."
     },
     "open": { "ja": "開く",                         "en": "Open" }
@@ -81,22 +81,22 @@
   "get_involved": {
     "title": { "ja": "Starrydata に参加する",        "en": "Get involved with Starrydata" },
     "lead": {
-      "ja": "データ利用・データ提供・共同研究・資金パートナーシップなど、さまざまな形でプロジェクトに関わっていただけます。",
+      "ja": "データの登録・利用、共同研究・資金パートナーシップなど、さまざまな形でプロジェクトに関わっていただけます。",
       "en": "Use the data, contribute data, partner on research, or support the project — there are many ways to get involved."
     },
-    "card1_t": { "ja": "データを使う",            "en": "Use the data" },
-    "card1_d": { "ja": "Web システムから無償で検索・ダウンロード。機械学習・新材料探索にすぐ活用できます。",
+    "card1_t": { "ja": "データを登録・利用する",            "en": "Use the data" },
+    "card1_d": { "ja": "論文中の実験グラフから登録された実験データをStarrydata Webシステムから無償で検索・閲覧・ダウンロード利用が可能です。",
                  "en": "Free search and download via the web system — instantly usable for ML and materials discovery." },
     "card1_cta": { "ja": "Starrydata2 を試す →",  "en": "Try Starrydata2 →" },
 
-    "card2_t": { "ja": "データを提供する",        "en": "Contribute data" },
-    "card2_d": { "ja": "あなたの研究グループの実験データを Starrydata 経由で世界に公開。研究の可視性が大きく向上します。",
-                 "en": "Publish your group's experimental data through Starrydata. Boost the visibility and reuse of your research." },
-    "card2_cta": { "ja": "提案する →",             "en": "Get in touch →" },
-
-    "card3_t": { "ja": "共同研究・資金パートナー", "en": "Research & funding partnership" },
-    "card3_d": { "ja": "共同研究・受託研究を歓迎しています。Materials Informatics の研究開発を一緒に進めましょう。",
+    "card2_t": { "ja": "共同研究",        "en": "Research & funding partnership" },
+    "card2_d": { "ja": "共同研究・受託研究を歓迎しています。Materials Informaticsの研究開発を一緒に進めましょう。",
                  "en": "We welcome joint research and contract research. Let's advance Materials Informatics together." },
+    "card2_cta": { "ja": "問い合わせる →",             "en": "Contact us →" },
+
+    "card3_t": { "ja": "学生受入", "en": "Research & funding partnership" },
+    "card3_d": { "ja": "インターンシップ制度や筑波大学連携大学院での学生を国内外問わず受け入れています。",
+                 "en": "ーーーーーーー." },
     "card3_cta": { "ja": "問い合わせる →",         "en": "Contact us →" }
   },
   "lab": {
@@ -167,7 +167,7 @@
     "eyebrow": { "ja": "Contact",        "en": "Contact" },
     "title":   { "ja": "お問い合わせ",   "en": "Get in touch" },
     "lead": {
-      "ja": "共同研究・データ提供・取材・講演依頼などはこちらからお問い合わせください。担当より折り返しご連絡いたします。",
+      "ja": "共同研究・取材・講演依頼などはこちらからお問い合わせください。担当より折り返しご連絡いたします。",
       "en": "For collaborations, data provision, press, talks, or any other inquiries, please reach out below. We will get back to you shortly."
     },
     "email_label":   { "ja": "メール",       "en": "Email" },
@@ -178,14 +178,12 @@
       "ja": [
         "共同研究・受託研究のご相談",
         "Starrydata データセットの活用相談",
-        "材料データ収集・キュレーションの依頼",
         "講演・寄稿・取材のご依頼",
         "その他、Starrydata に関するお問い合わせ"
       ],
       "en": [
         "Joint or contract research",
         "Use of Starrydata datasets in your project",
-        "Materials data collection and curation requests",
         "Talks, contributions, and media inquiries",
         "Anything else related to Starrydata"
       ]
