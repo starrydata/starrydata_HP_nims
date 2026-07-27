@@ -11,7 +11,7 @@
       "en": "Open experimental data from materials science literature"
     },
     "description": {
-      "ja": "Starrydata は、無機材料科学の論文に掲載されたプロット画像から実験データを抽出・共有するオープンデータベース構築プロジェクトです。",
+      "ja": "Starrydataは、材料科学分野における膨大な論文に掲載された実験グラフからデータを抽出し、共有する実験データオープンデータベース構築プロジェクトです。",
       "en": "Starrydata is an open database project that extracts and shares experimental data from plot images in published inorganic materials science papers."
     }
   },
