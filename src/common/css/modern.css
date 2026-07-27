@@ -858,6 +858,14 @@ p { margin: 0 0 1em; }
 .involve-card .btn { align-self: flex-start; margin-top: 6px; }
 .involve-card.highlight .btn-primary { color: #fff; }
 
+/* ---- TOP page: 各セクション本文テキストの折り返し幅をコンテナ(1200px)に統一 ---- */
+.page-home .hero .lead,
+.page-home .section .lead,
+.page-home .lead-large,
+.page-home .prose {
+  max-width: none;
+}
+
 /* ---- Starrydata Laboratory ---- */
 .lab-diagram-wrap {
   margin: 40px auto 44px;

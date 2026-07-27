@@ -24,7 +24,7 @@
 <meta property="og:description" content="{{ description or siteDesc }}">
 <meta property="og:locale" content="{{ 'ja_JP' if L == 'ja' else 'en_US' }}">
 </head>
-<body>
+<body class="{% if page.url == '/' or page.url == '/en/' %}page-home{% endif %}">
 
 {% include "modern_header.njk" %}
 
