@@ -56,7 +56,7 @@
     "fields":   { "ja": "研究領域",              "en": "Research fields" }
   },
   "what_is": {
-    "title":     { "ja": "Starrydata とは",     "en": "What is Starrydata" },
+    "title":     { "ja": "What is Starrydata",  "en": "What is Starrydata" },
     "lead": {
       "ja": "Starrydata は、材料科学の論文グラフから実験データを抽出・構造化し、世界中の研究者が自由に使える巨大な<strong>オープンデータベース</strong>として公開する研究プロジェクトです。",
       "en": "Starrydata is an <strong>open data project</strong> that extracts and structures experimental data from graphs in inorganic materials science papers, making them freely reusable for researchers worldwide."
@@ -75,11 +75,11 @@
     }
   },
   "huge_db": {
-    "title": { "ja": "巨大なデータベース",            "en": "A large-scale database" },
+    "title": { "ja": "A Large-Scale Database",       "en": "A Large-Scale Database" },
     "cta":   { "ja": "Starrydata2 を試す →",           "en": "Try Starrydata2 →" }
   },
   "apps": {
-    "title": { "ja": "関連アプリケーション・システム", "en": "Apps and Systems" },
+    "title": { "ja": "Apps & Systems",               "en": "Apps & Systems" },
     "lead": {
       "ja": "データベースを軸に、組成探索・データ可視化・グラフ画像のデジタイズなど、複数のWebツールを公開しています。すべて無償で利用できます。",
       "en": "Beyond the database itself, we publish multiple free web tools for composition search, big-data visualization, plot digitization, and more."
@@ -87,7 +87,7 @@
     "open": { "ja": "開く",                         "en": "Open" }
   },
   "get_involved": {
-    "title": { "ja": "Starrydata に参加する",        "en": "Get involved with Starrydata" },
+    "title": { "ja": "Get Involved",                 "en": "Get Involved" },
     "lead": {
       "ja": "データの登録・利用、共同研究・資金パートナーシップなど、さまざまな形でプロジェクトに関わっていただけます。",
       "en": "Use the data, contribute data, partner on research, or support the project — there are many ways to get involved."
@@ -150,7 +150,7 @@
     "see_all": { "ja": "一覧を見る", "en": "View all" }
   },
   "publications": {
-    "title":   { "ja": "主要論文",      "en": "Featured Publications" },
+    "title":   { "ja": "Featured Publications", "en": "Featured Publications" },
     "see_all": { "ja": "論文一覧を見る", "en": "View all publications" }
   },
   "news": {
@@ -159,7 +159,7 @@
   },
   "collaborate": {
     "title": {
-      "ja": "Starrydata と<span class=\"nowrap-grp\">共同研究しませんか？</span>",
+      "ja": "Partner with Starrydata",
       "en": "Partner with Starrydata"
     },
     "lead": {
@@ -241,7 +241,7 @@
     }
   },
   "team": {
-    "title":   { "ja": "メンバー",        "en": "Team" },
+    "title":   { "ja": "Team",            "en": "Team" },
     "subtitle":{ "ja": "Members",         "en": "Members" },
     "lead": {
       "ja": "Starrydata は無機材料・データ科学・Web 開発の専門家からなる、専属の研究チームによって運営されています。",

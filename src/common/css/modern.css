@@ -1539,14 +1539,48 @@ p { margin: 0 0 1em; }
 
 /* ---- Page head (sub-page hero, lightweight) ---- */
 .page-head {
+  position: relative;
   background: var(--bg-subtle);
   border-bottom: 1px solid var(--line);
   padding: clamp(40px, 5vw, 68px) 0 clamp(28px, 3.5vw, 44px);
+  overflow: hidden;
+}
+.page-head > .container { position: relative; }
+
+/* eyebrow を h1 の背後に大きく被せる装飾 */
+.page-head .eyebrow {
+  position: absolute;
+  top: -0.12em;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: rgba(30, 27, 75, 0.06);
+  text-transform: none;
+  white-space: nowrap;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
 }
 .page-head h1 {
+  position: relative;
+  z-index: 1;
   font-size: var(--fs-h1);
-  margin: 0 0 16px;
+  margin: 20px 0 16px;
   letter-spacing: -0.018em;
+}
+.page-head .lead {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 640px) {
+  .page-head .eyebrow { font-size: clamp(1.8rem, 8vw, 3rem); }
+  .page-head h1 { margin-top: 12px; }
 }
 .page-head .lead {
   font-size: var(--fs-lead);
