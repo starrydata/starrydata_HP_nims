@@ -172,8 +172,8 @@
     }
   },
   "contact_page": {
-    "eyebrow": { "ja": "Contact",        "en": "Contact" },
-    "title":   { "ja": "お問い合わせ",   "en": "Get in touch" },
+    "eyebrow": { "ja": "お問い合わせ",   "en": "Get in touch" },
+    "title":   { "ja": "Contact",        "en": "Contact" },
     "lead": {
       "ja": "共同研究、取材、講演依頼、その他お問い合わせは下記フォームよりお問い合わせください。担当より折り返しご連絡いたします。",
       "en": "For joint research, press, talks, or any other inquiries, please use the form below. We will get back to you shortly."
@@ -217,15 +217,15 @@
     }
   },
   "team_page": {
-    "eyebrow": { "ja": "Team",     "en": "Team" },
+    "eyebrow": { "ja": "メンバー",  "en": "Team" },
     "title":   { "ja": "Members",  "en": "Members" }
   },
   "news_page": {
-    "eyebrow": { "ja": "News",     "en": "News" },
+    "eyebrow": { "ja": "ニュース",  "en": "News" },
     "title":   { "ja": "News",     "en": "News" }
   },
   "papers_page": {
-    "eyebrow": { "ja": "Publications", "en": "Publications" },
+    "eyebrow": { "ja": "論文",         "en": "Publications" },
     "title":   { "ja": "Publications", "en": "Publications" },
     "lead": {
       "ja": "Starrydata プロジェクトの代表論文と、世界中の研究者による Starrydata の引用論文を掲載しています。OpenAlex + Crossref Open Citations から毎月自動更新。",
@@ -233,8 +233,8 @@
     }
   },
   "manual_page": {
-    "eyebrow": { "ja": "User Manual",           "en": "User Manual" },
-    "title":   { "ja": "Starrydata2 マニュアル", "en": "Starrydata2 Manual" },
+    "eyebrow": { "ja": "Starrydata2 マニュアル", "en": "User Manual" },
+    "title":   { "ja": "Manual",                "en": "Starrydata2 Manual" },
     "lead": {
       "ja": "Starrydata2 は、論文に掲載されたプロット画像から実験データを抽出・共有するオープンデータベースです。本マニュアルは、データの閲覧・検索・登録・ダウンロード・API 利用までを 1 ページずつ解説します。",
       "en": "Starrydata2 is an open database that extracts and shares experimental data from plot images published in academic papers. This manual walks through browsing, searching, registration, downloading, and API usage one page at a time."
