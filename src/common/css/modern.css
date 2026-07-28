@@ -33,13 +33,18 @@
   --container-narrow: 920px;
 
   /* typography scale */
-  --fs-h1:     clamp(2.6rem, 5.6vw, 4.4rem);
-  --fs-h2:     clamp(1.95rem, 3.4vw, 2.7rem);
-  --fs-h3:     1.2rem;
-  --fs-lead:   1.13rem;
-  --fs-base:   1rem;
-  --fs-small:  0.92rem;
-  --fs-tiny:   0.82rem;
+  /* Typography scale (unified) */
+  --fs-hero-h1: clamp(2.6rem, 5.6vw, 4.4rem);  /* トップページのヒーロー h1 */
+  --fs-h1:      clamp(2rem, 4vw, 3rem);         /* サブページの h1 (.page-head h1) */
+  --fs-h2:      clamp(1.55rem, 2.6vw, 2.1rem);  /* セクション見出し */
+  --fs-h3:      1.15rem;                        /* カード見出し・サブ見出し */
+  --fs-lead:    1.05rem;                        /* リード文・導入文 */
+  --fs-body:    1rem;                           /* 本文（プロース）*/
+  --fs-small:   0.88rem;                        /* 補助テキスト（ラベル、リンク等）*/
+  --fs-tiny:    0.78rem;                        /* eyebrow / タグ / メタ */
+  --fs-micro:   0.72rem;                        /* キャプション / ヒント / 最小 */
+  /* 旧名エイリアス（既存ルールとの互換のため残す） */
+  --fs-base:    1rem;
 
   /* spacing */
   --gap-section: clamp(48px, 6vw, 80px);
@@ -152,13 +157,13 @@ p { margin: 0 0 1em; }
   background: rgba(167,139,250,0.16);
   border: 1px solid rgba(167,139,250,0.45);
   color: #ddd6fe;
-  font-size: 0.85rem;
+  font-size: var(--fs-small);
   letter-spacing: 0.06em;
   margin-bottom: 28px;
   text-shadow: 0 1px 6px rgba(0,0,0,0.7);
 }
 .hero h1 {
-  font-size: var(--fs-h1);
+  font-size: var(--fs-hero-h1);
   line-height: 1.12;
   margin: 0 0 28px;
   font-weight: 800;
@@ -178,7 +183,7 @@ p { margin: 0 0 1em; }
   .nowrap-grp { white-space: normal; }
 }
 .hero .lead {
-  font-size: 1.02rem;
+  font-size: var(--fs-lead);
   line-height: 1.65;
   max-width: 720px;
   color: rgba(248,250,252,0.88);
@@ -227,7 +232,7 @@ p { margin: 0 0 1em; }
 .section .eyebrow,
 .eyebrow {
   display: inline-block;
-  font-size: 0.78rem;
+  font-size: var(--fs-tiny);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent-2);
@@ -650,7 +655,7 @@ p { margin: 0 0 1em; }
   padding: 0 2px;
 }
 .prose {
-  font-size: 1.02rem;
+  font-size: var(--fs-body);
   line-height: 1.75;
   color: var(--text-2);
   max-width: 68ch;
@@ -1047,13 +1052,14 @@ p { margin: 0 0 1em; }
 }
 .data-intro-body p {
   color: var(--text-2);
+  font-size: var(--fs-body);
   line-height: 1.85;
   margin: 0 0 16px;
 }
 .data-intro-body p:last-child { margin-bottom: 0; }
 
 .data-list-heading {
-  font-size: 1.4rem;
+  font-size: var(--fs-h2);
   font-weight: 700;
   margin: 0 0 24px;
   padding-bottom: 12px;
@@ -1108,21 +1114,21 @@ p { margin: 0 0 1em; }
 }
 .data-card-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; }
 .data-card-title {
-  font-size: 1.05rem;
+  font-size: var(--fs-h3);
   font-weight: 700;
   color: var(--text);
   margin-bottom: 6px;
   letter-spacing: -0.005em;
 }
 .data-card-full {
-  font-size: 0.82rem;
+  font-size: var(--fs-small);
   color: var(--text-2);
   line-height: 1.55;
   margin-bottom: 10px;
   flex: 1;
 }
 .data-card-owner {
-  font-size: 0.72rem;
+  font-size: var(--fs-micro);
   color: var(--text-3);
   letter-spacing: 0.02em;
 }
@@ -1131,6 +1137,7 @@ p { margin: 0 0 1em; }
 .data-project-body { max-width: 68ch; }
 .data-project-body p {
   color: var(--text-2);
+  font-size: var(--fs-body);
   line-height: 1.9;
   margin: 0 0 20px;
 }
@@ -1173,7 +1180,7 @@ p { margin: 0 0 1em; }
   .data-cards { grid-template-columns: 1fr; }
 }
 .contact-block h2 {
-  font-size: 1.15rem;
+  font-size: var(--fs-h3);
   font-weight: 700;
   margin: 0 0 14px;
   letter-spacing: -0.005em;
@@ -1183,10 +1190,11 @@ p { margin: 0 0 1em; }
   padding-left: 1.4em;
   color: var(--text-2);
 }
-.contact-topics li { margin: 6px 0; line-height: 1.7; }
+.contact-topics li { margin: 6px 0; font-size: var(--fs-body); line-height: 1.7; color: var(--text-2); }
 .contact-org {
   margin: 0;
   color: var(--text-2);
+  font-size: var(--fs-body);
   line-height: 1.8;
 }
 
@@ -1202,7 +1210,7 @@ p { margin: 0 0 1em; }
   margin-bottom: 6px;
   color: var(--text);
   font-weight: 600;
-  font-size: 0.86rem;
+  font-size: var(--fs-small);
   letter-spacing: 0.01em;
 }
 .form-field label .req {
@@ -1241,13 +1249,13 @@ p { margin: 0 0 1em; }
 }
 .field-hint {
   color: var(--text-3, #999);
-  font-size: 0.75rem;
+  font-size: var(--fs-micro);
   margin: 4px 0 0;
   line-height: 1.5;
 }
 .field-error {
   color: var(--accent-2);
-  font-size: 0.78rem;
+  font-size: var(--fs-tiny);
   margin: 6px 0 0;
 }
 .form-row {
@@ -1258,7 +1266,7 @@ p { margin: 0 0 1em; }
 .form-row .form-field { margin-bottom: 20px; }
 .form-note {
   color: var(--text-3, #999);
-  font-size: 0.75rem;
+  font-size: var(--fs-micro);
   text-align: center;
   margin: 14px 0 0;
   line-height: 1.5;
@@ -1422,7 +1430,7 @@ p { margin: 0 0 1em; }
   padding: clamp(40px, 5vw, 68px) 0 clamp(28px, 3.5vw, 44px);
 }
 .page-head h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: var(--fs-h1);
   margin: 0 0 16px;
   letter-spacing: -0.018em;
 }
@@ -1613,7 +1621,7 @@ p { margin: 0 0 1em; }
 
 /* ---- Papers page ---- */
 .papers-source {
-  font-size: 0.85rem;
+  font-size: var(--fs-small);
   color: var(--text-3);
   margin: 16px 0 0;
 }
@@ -1846,7 +1854,7 @@ p { margin: 0 0 1em; }
   letter-spacing: -0.01em;
 }
 .research-desc {
-  font-size: 1.02rem;
+  font-size: var(--fs-body);
   line-height: 1.7;
   color: var(--text);
   max-width: 70ch;
