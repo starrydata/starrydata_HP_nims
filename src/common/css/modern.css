@@ -42,8 +42,8 @@
   --fs-tiny:   0.82rem;
 
   /* spacing */
-  --gap-section: clamp(72px, 9vw, 120px);
-  --gap-card:    28px;
+  --gap-section: clamp(48px, 6vw, 80px);
+  --gap-card:    24px;
 }
 
 /* Reset & base */
@@ -130,7 +130,7 @@ p { margin: 0 0 1em; }
     url('../../assets/images/hero/milky_way_katsura.jpg') center 30%/cover no-repeat,
     var(--grad-hero);
   color: var(--text-on);
-  padding: clamp(96px, 11vw, 144px) 0 clamp(112px, 12vw, 160px);
+  padding: clamp(72px, 8vw, 108px) 0 clamp(80px, 9vw, 120px);
   position: relative;
   overflow: hidden;
 }
@@ -218,7 +218,7 @@ p { margin: 0 0 1em; }
 
 /* ---- Sections (rhythm) ---- */
 .section { padding: var(--gap-section) 0; }
-.section-narrow { padding: clamp(56px, 7vw, 88px) 0; }
+.section-narrow { padding: clamp(36px, 4.5vw, 56px) 0; }
 .section h2 {
   font-size: var(--fs-h2);
   margin: 0 0 16px;
@@ -1413,7 +1413,7 @@ p { margin: 0 0 1em; }
 .page-head {
   background: var(--bg-subtle);
   border-bottom: 1px solid var(--line);
-  padding: clamp(56px, 7vw, 96px) 0 clamp(40px, 5vw, 64px);
+  padding: clamp(40px, 5vw, 68px) 0 clamp(28px, 3.5vw, 44px);
 }
 .page-head h1 {
   font-size: clamp(2rem, 4vw, 3rem);
@@ -1891,7 +1891,7 @@ p { margin: 0 0 1em; }
   background: var(--grad-hero);
   color: var(--text-on);
   border-radius: var(--radius);
-  padding: clamp(56px, 8vw, 80px) clamp(36px, 6vw, 64px);
+  padding: clamp(40px, 6vw, 60px) clamp(28px, 5vw, 52px);
   margin: 0 auto;
   max-width: var(--container);
   position: relative;
