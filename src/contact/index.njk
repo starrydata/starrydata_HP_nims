@@ -19,6 +19,15 @@ lang: ja
 <section class="section section-top-tight">
   <div class="container container-narrow-prose">
 
+    <div class="contact-block contact-block-topics">
+      <h2>{{ C.topics_title[L] }}</h2>
+      <ul class="contact-topics">
+        {%- for item in C.topics[L] %}
+        <li>{{ item }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+
     <div class="contact-card" id="contact-form-container"
          data-eu="{{ C.email_user[L] }}"
          data-ed="{{ C.email_domain[L] }}">
@@ -64,15 +73,6 @@ lang: ja
       <h2>{{ C.success_title[L] }}</h2>
       <p>{{ C.success_body[L] }}</p>
       <button class="btn btn-secondary" onclick="window._starrydataContactReset()">{{ C.success_reset[L] }}</button>
-    </div>
-
-    <div class="contact-block">
-      <h2>{{ C.topics_title[L] }}</h2>
-      <ul class="contact-topics">
-        {%- for item in C.topics[L] %}
-        <li>{{ item }}</li>
-        {%- endfor %}
-      </ul>
     </div>
 
     <div class="contact-block">

@@ -1020,6 +1020,7 @@ p { margin: 0 0 1em; }
   margin: 0 auto 40px;
 }
 .contact-block { margin: 36px 0; }
+.contact-block-topics { margin-top: 0; margin-bottom: 28px; }
 .contact-block h2 {
   font-size: 1.15rem;
   font-weight: 700;
