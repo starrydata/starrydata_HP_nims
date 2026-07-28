@@ -662,15 +662,21 @@ p { margin: 0 0 1em; }
   margin: 0;
 }
 
-/* セクション lead 全般の日本語改行を改善 */
+/* セクション lead 全般の日本語改行を改善
+   word-break: keep-all で日本語のフレーズ内での改行を禁止し、
+   空白・句読点のみで改行させる。overflow-wrap で極端に長い場合は fallback */
 .section .lead,
+.page-head .lead,
 .cta-band p,
 .feature-card p,
 .mini-card p,
 .app-desc,
 .involve-card p,
-.hero .lead {
+.hero .lead,
+.lead-large,
+.prose {
   line-break: strict;
+  word-break: keep-all;
   overflow-wrap: break-word;
   text-wrap: pretty;
 }
