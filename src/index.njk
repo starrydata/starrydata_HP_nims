@@ -55,7 +55,9 @@ lang: ja
     <span class="eyebrow">About the Project</span>
     <h2>{{ i18n.what_is.title[L] }}</h2>
     <p class="lead-large">{{ i18n.what_is.lead[L] | safe }}</p>
-    <p class="prose">{{ i18n.what_is.body[L] }}</p>
+    {%- for para in i18n.what_is.body[L] %}
+    <p class="prose">{{ para | safe }}</p>
+    {%- endfor %}
   </div>
 </section>
 
