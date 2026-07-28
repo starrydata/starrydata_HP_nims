@@ -1127,7 +1127,8 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.02em;
 }
 
-/* Individual project page (data/_field) */
+/* Individual project page (data/_field) — 1200px の中で読みやすい幅に制限 */
+.data-project-body { max-width: 68ch; }
 .data-project-body p {
   color: var(--text-2);
   line-height: 1.9;
@@ -1188,6 +1189,11 @@ p { margin: 0 0 1em; }
   color: var(--text-2);
   line-height: 1.8;
 }
+
+/* Contact form: 1200px コンテナの中で読みやすい幅に自制する */
+.contact-card { max-width: 720px; }
+.contact-block { max-width: 720px; }
+.contact-topics { max-width: 720px; }
 
 /* Contact form */
 .form-field { margin-bottom: 20px; }
