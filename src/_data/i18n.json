@@ -208,6 +208,30 @@
       "en": "Yukari Katsura (Project Leader)<br>National Institute for Materials Science (NIMS)<br>Center for Basic Research on Materials, Materials Modelling Group"
     }
   },
+  "team_page": {
+    "eyebrow": { "ja": "Team",     "en": "Team" },
+    "title":   { "ja": "Members",  "en": "Members" }
+  },
+  "news_page": {
+    "eyebrow": { "ja": "News",     "en": "News" },
+    "title":   { "ja": "News",     "en": "News" }
+  },
+  "papers_page": {
+    "eyebrow": { "ja": "Publications", "en": "Publications" },
+    "title":   { "ja": "Publications", "en": "Publications" },
+    "lead": {
+      "ja": "Starrydata プロジェクトの代表論文と、世界中の研究者による Starrydata の引用論文を掲載しています。OpenAlex + Crossref Open Citations から毎月自動更新。",
+      "en": "Featured papers by the Starrydata team and external publications citing our work. Auto-refreshed monthly from OpenAlex and Crossref Open Citations."
+    }
+  },
+  "manual_page": {
+    "eyebrow": { "ja": "User Manual",           "en": "User Manual" },
+    "title":   { "ja": "Starrydata2 マニュアル", "en": "Starrydata2 Manual" },
+    "lead": {
+      "ja": "Starrydata2 は、論文に掲載されたプロット画像から実験データを抽出・共有するオープンデータベースです。本マニュアルは、データの閲覧・検索・登録・ダウンロード・API 利用までを 1 ページずつ解説します。",
+      "en": "Starrydata2 is an open database that extracts and shares experimental data from plot images published in academic papers. This manual walks through browsing, searching, registration, downloading, and API usage one page at a time."
+    }
+  },
   "team": {
     "title":   { "ja": "メンバー",        "en": "Team" },
     "subtitle":{ "ja": "Members",         "en": "Members" },

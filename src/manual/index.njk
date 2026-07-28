@@ -1,0 +1,104 @@
+---
+layout: modern.njk
+permalink: /manual/index.html
+title: Starrydata2 マニュアル
+lang: ja
+bodyId: manual
+---
+
+{%- set L = "ja" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">{{ i18n.manual_page.eyebrow[L] }}</span>
+    <h1>{{ i18n.manual_page.title[L] }}</h1>
+    <p class="lead">{{ i18n.manual_page.lead[L] }}</p>
+    <p>
+      公式サイト:
+      <a href="https://starrydata.nims.go.jp/starrydata2/" target="_blank" rel="noopener">
+        https://starrydata.nims.go.jp/starrydata2/
+      </a>
+    </p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container container-narrow-prose">
+    <span class="eyebrow">Overview</span>
+    <h2>はじめに</h2>
+    <p class="prose">
+      Starrydata2 は無機材料の実験データ（特に熱電・磁性などの物性データ）を、
+      論文中のグラフ画像からカーブとして抽出し、組成・作製プロセスといった
+      試料情報とともに構造化して蓄積する Web システムです。2026 年現在、
+      <strong>194,000 本以上のカーブ</strong>、<strong>82,000 試料以上</strong>、
+      <strong>13,000 論文以上</strong>のデータが蓄積されています
+      （実際の最新数値はトップページの統計表示を参照）。
+    </p>
+    <p class="prose">
+      データは <strong>商用・非商用を問わず無償で利用</strong>でき、
+      Web からの CSV/JSON ダウンロードや REST API 経由で取得できます。
+      登録（curation）は、ユーザー登録した研究者なら誰でも参加できます。
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Contents</span>
+    <h2>マニュアル目次</h2>
+    <div class="box_data" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px; margin-top:24px;">
+
+      <a href="/manual/account/" class="box" style="display:block; padding:24px; border:1px solid var(--line); border-radius:12px; background:#fff; text-decoration:none; color:inherit;">
+        <div style="font-size:13px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Chapter 1</div>
+        <div style="font-size:20px; font-weight:700; margin-top:6px;">アカウント登録 / ログイン</div>
+        <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+          サインアップ、ログイン、ユーザー名の決め方、パスワード再発行までの手順。
+        </p>
+      </a>
+
+      <a href="/manual/search/" class="box" style="display:block; padding:24px; border:1px solid var(--line); border-radius:12px; background:#fff; text-decoration:none; color:inherit;">
+        <div style="font-size:13px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Chapter 2</div>
+        <div style="font-size:20px; font-weight:700; margin-top:6px;">検索 / 閲覧</div>
+        <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+          論文検索、組成検索、フィルタ、サンプル詳細ページとプロット表示の見方。
+        </p>
+      </a>
+
+      <a href="/manual/register/" class="box" style="display:block; padding:24px; border:1px solid var(--line); border-radius:12px; background:#fff; text-decoration:none; color:inherit;">
+        <div style="font-size:13px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Chapter 3</div>
+        <div style="font-size:20px; font-weight:700; margin-top:6px;">データ登録</div>
+        <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+          論文の取り込み、WebPlotDigitizer による曲線抽出、サンプル情報入力、
+          Auto-Suggestion (GPT)、編集ルール。
+        </p>
+      </a>
+
+      <a href="/manual/download/" class="box" style="display:block; padding:24px; border:1px solid var(--line); border-radius:12px; background:#fff; text-decoration:none; color:inherit;">
+        <div style="font-size:13px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Chapter 4</div>
+        <div style="font-size:20px; font-weight:700; margin-top:6px;">ダウンロード / API</div>
+        <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+          CSV / JSON のダウンロード、REST API、Python での読み込みコード例、引用方法。
+        </p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#f7f9ff; border-top:1px solid var(--line);">
+  <div class="container container-narrow-prose">
+    <h2>本マニュアルの対象読者</h2>
+    <ul class="prose">
+      <li><strong>外部の一般研究者・学生</strong>: Starrydata2 を初めて使う方。アカウント登録 → 検索 → ダウンロードまでを順に読むとスムーズです。</li>
+      <li><strong>データ登録者（curator）</strong>: 自分の論文や所属グループの論文を登録したい方。Chapter 3 を中心に読んでください。</li>
+      <li><strong>API / プログラム利用者</strong>: 機械学習用にバルクデータを扱いたい方。Chapter 4 を中心に読んでください。</li>
+    </ul>
+    <h2 style="margin-top:32px;">関連リソース</h2>
+    <ul class="prose">
+      <li><a href="https://starrydata.wordpress.com/category/tutorial/" target="_blank" rel="noopener">公式チュートリアル (Starrydata blog)</a> — オリジナル英語版チュートリアルとスクリーンショット。</li>
+      <li><a href="https://doi.org/10.1080/27660400.2025.2506976" target="_blank" rel="noopener">Starrydata: from published plots to shared materials data (STAM:M, 2025)</a> — システム全体を解説した査読付き論文。</li>
+      <li><a href="https://explorer-3d.starrydata.org/" target="_blank" rel="noopener">Starrydata 3D Thermoelectric Materials Explorer</a> — 熱電性能の 3D 可視化ツール。</li>
+      <li><a href="https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=en" target="_blank" rel="noopener">NIMS MDR スナップショット</a> — 引用可能な凍結データセット。</li>
+    </ul>
+  </div>
+</section>
