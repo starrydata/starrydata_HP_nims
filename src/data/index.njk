@@ -1,41 +1,61 @@
 ---
-layout: base.njk
+layout: modern.njk
 permalink: /data/index.html
-title: 進行中のデータ収集プロジェクト
-bodyId: data
+title: データ収集プロジェクト
+lang: ja
 ---
 
-<div id="contents">
-  <div class="inner_contents">
+{%- set L = "ja" -%}
 
-    <div class="page_title">
-      <h2>{{ projects.page.title }}</h2>
-    </div>
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Data</span>
+    <h1>{{ projects.page.title }}</h1>
+    <p class="lead">論文グラフから抽出している実験データを、研究分野ごとに紹介します。</p>
+  </div>
+</section>
 
-    {{ projects.page.intro_html | safe }}
+<section class="section section-top-tight">
+  <div class="container container-narrow-prose">
 
-    {% if projects.page.list_heading %}
-    <!-- Title -->
-    <div class="b50 b25_sp">
-      <h3 class="ttl_second">{{ projects.page.list_heading }}</h3>
-    </div>
-    <!-- /Title -->
-    {% endif %}
-
-    <!-- Project Cards -->
-    <div class="b60">
-      <div class="box_data">
-        {%- for p in projects.projects %}
-        <div class="box">
-          <a href="/data/{{ p.slug }}.html" class="{{ p.card_class }}">
-            <div class="inner">
-              <div class="ttl">{{ p.card_title }}</div>
-            </div>
-          </a>
-        </div>
-        {%- endfor %}
+    <div class="data-intro">
+      <figure class="data-intro-figure">
+        <img src="/data/img/img_index_01.png" alt="Starrydata2 データベース一覧画面">
+        <figcaption>Starrydata2 webシステム内のデータ収集プロジェクトの例（2022年4月現在）</figcaption>
+      </figure>
+      <div class="data-intro-body">
+        <p>Starrydataプロジェクトでは、論文中のグラフから実験データを抽出して公開しています。このとき、論文の中のすべてのグラフを集めようとすると膨大な時間がかかってしまうので、研究プロジェクトの目的に合わせて、データ収集対象のグラフの種類を絞っています。</p>
+        <p>Starrydataのトップページにアクセスしたあと、ユーザーが自分のアカウントでログインすると、上記のDatabases画面が現れます。一番上にあるのがすべての登録データにアクセスできるGeneralデータベースです。そして、その下に並ぶのが個々の研究プロジェクトです。</p>
+        <p>本ページでは、これらの研究プロジェクトでどんなデータを集めているのかについて紹介します。</p>
       </div>
     </div>
 
+    {% if projects.page.list_heading %}
+    <h2 class="data-list-heading">{{ projects.page.list_heading }}</h2>
+    {% endif %}
+
+    <div class="data-cards">
+      {%- for p in projects.projects %}
+      <a href="/data/{{ p.slug }}.html" class="data-card">
+        {%- if p.figure and p.figure.image %}
+        <div class="data-card-thumb">
+          <img src="{{ p.figure.image }}" alt="" loading="lazy">
+        </div>
+        {%- else %}
+        <div class="data-card-thumb data-card-thumb-placeholder" aria-hidden="true">
+          <span>{{ p.card_title }}</span>
+        </div>
+        {%- endif %}
+        <div class="data-card-body">
+          <div class="data-card-title">{{ p.card_title }}</div>
+          <div class="data-card-full">{{ p.full_title }}</div>
+          {%- if p.owner %}
+          <div class="data-card-owner">{{ p.owner }}</div>
+          {%- endif %}
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+
   </div>
-</div>
+</section>

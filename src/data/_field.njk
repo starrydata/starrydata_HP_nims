@@ -6,28 +6,41 @@ pagination:
 permalink: "/data/{{ p.slug }}.html"
 eleventyComputed:
   title: "{{ p.full_title }}"
-  bodyId: "data"
-layout: base.njk
+layout: modern.njk
+lang: ja
 ---
 
-<div id="contents">
-  <div class="inner_contents">
+{%- set L = "ja" -%}
 
-    <div class="page_title">
-      <h2>{{ p.full_title }}</h2>
-      {% if p.owner %}<p class="subtitle">{{ p.owner }}</p>{% endif %}
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">
+      <a href="/data/" style="color:inherit; text-decoration:none;">Data</a> / {{ p.card_title }}
+    </span>
+    <h1>{{ p.full_title }}</h1>
+    {% if p.owner %}<p class="lead data-owner-line">{{ p.owner }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container container-narrow-prose">
+
+    <div class="data-project-body">
+      {{ p.body_html | safe }}
     </div>
 
-    <div class="page_body">
-      {{ p.body_html | safe }}
-
-      {% if p.figure %}
-      <div class="b60 alignC">
-        <img src="{{ p.figure.image }}" alt="{{ p.card_title }}">
-        {% if p.figure.caption %}<p>{{ p.figure.caption | replace("\n", "<br>") | safe }}</p>{% endif %}
-      </div>
+    {% if p.figure %}
+    <figure class="data-project-figure">
+      <img src="{{ p.figure.image }}" alt="{{ p.card_title }}">
+      {% if p.figure.caption %}
+      <figcaption>{{ p.figure.caption | replace("\n", "<br>") | safe }}</figcaption>
       {% endif %}
+    </figure>
+    {% endif %}
+
+    <div class="data-project-back">
+      <a href="/data/">← データ収集プロジェクト一覧に戻る</a>
     </div>
 
   </div>
-</div>
+</section>
