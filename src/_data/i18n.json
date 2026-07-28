@@ -49,11 +49,11 @@
     }
   },
   "stats": {
-    "title":    { "ja": "数字で見る Starrydata",  "en": "Starrydata by the Numbers" },
-    "samples":  { "ja": "試料",                  "en": "Samples" },
-    "curves":   { "ja": "カーブ",                "en": "Curves" },
-    "papers":   { "ja": "論文",                  "en": "Papers" },
-    "fields":   { "ja": "研究領域",              "en": "Research fields" }
+    "title":    { "ja": "Starrydata by the Numbers", "en": "Starrydata by the Numbers" },
+    "samples":  { "ja": "Samples",         "en": "Samples" },
+    "curves":   { "ja": "Curves",          "en": "Curves" },
+    "papers":   { "ja": "Papers",          "en": "Papers" },
+    "fields":   { "ja": "Research Fields", "en": "Research Fields" }
   },
   "what_is": {
     "title":     { "ja": "What is Starrydata",  "en": "What is Starrydata" },
