@@ -1054,16 +1054,17 @@ p { margin: 0 0 1em; }
   border-radius: 2px;
 }
 
-/* Contact: 相談テーマ（1 行に並べて中央揃え、各項目は改行させない）*/
+/* Contact: 相談テーマ（2 列 × 2 行、各項目左揃え、全体をウィンドウ中央に）*/
 .contact-block-topics {
   max-width: none;
   text-align: center;
 }
 .contact-topics-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 12px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;   /* グリッド全体をウィンドウ中央に */
+  justify-items: start;      /* セル内は左揃え（同じ列で左端が揃う）*/
+  gap: 10px 24px;
 }
 .contact-topic {
   display: inline-flex;
@@ -1427,7 +1428,7 @@ p { margin: 0 0 1em; }
 @media (max-width: 640px) {
   .contact-card { padding: 22px 20px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
-  .contact-topics-grid { gap: 8px; }
+  .contact-topics-grid { grid-template-columns: auto; gap: 8px; }
   .contact-topic { white-space: normal; padding: 8px 14px; }
 }
 
