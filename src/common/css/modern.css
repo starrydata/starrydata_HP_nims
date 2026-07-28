@@ -1297,9 +1297,9 @@ p { margin: 0 0 1em; }
   line-height: 1.8;
 }
 
-/* Contact form: 1200px コンテナの中で読みやすい幅に自制する */
-.contact-card { max-width: 720px; }
-.contact-block { max-width: 720px; }
+/* Contact form: 1200px コンテナの中で読みやすい幅に自制する
+   （.contact-block-topics は 2x2 グリッドを中央に置くため幅制限しない）*/
+.contact-card { max-width: 720px; margin-left: auto; margin-right: auto; }
 .contact-topics { max-width: 720px; }
 
 /* Contact form */
