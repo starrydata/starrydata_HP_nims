@@ -64,13 +64,11 @@
     "body": {
       "ja": [
         "Starrydata は単一の研究プロジェクトではなく、実験データ MI という共通項を持つ多数の研究プロジェクトの複合体です。各プロジェクトが論文から集めたデータを 1 つの共通データベースに保存し、他のユーザーも利用できるようにすることで、誰でも使える巨大なオープンデータベースを構築しています。",
-        "データ収集者が DOI のリストを入力するだけで、論文の書誌情報を自動取得し、出版社サイトへのリンクやデータ入力ページを自動生成します。独自のデータ点検出アプリ StarryDigitizer では、色や点の大きさに基づくグラフトレースが可能。データの単位は登録時に SI 単位系に変換されるため、同じ物理量のデータは常に同じ単位で表示されます。データ収集の自動化に向けて、外部 AI を用いた効率化も進めています。",
-        "2017 年に NIMS で始まり、現在は理化学研究所 AIP・筑波大学などとの連携のもと、専属研究チームが日々データ収集を続けています。Materials Informatics・機械学習・新材料探索に役立つ高品質な実験データを、API・Figshare・GitHub から自由にダウンロード／引用できます。"
+        "データ収集者が DOI のリストを入力するだけで、論文の書誌情報を自動取得し、出版社サイトへのリンクやデータ入力ページを自動生成します。独自のデータ点検出アプリ StarryDigitizer では、色や点の大きさに基づくグラフトレースが可能。データの単位は登録時に SI 単位系に変換されるため、同じ物理量のデータは常に同じ単位で表示されます。データ収集の自動化に向けて、外部 AI を用いた効率化も進めています。"
       ],
       "en": [
         "Starrydata is a federation of research projects that share a single database. Each project curates experimental data from its field's literature into a common repository, together forming a large open dataset that anyone can reuse.",
-        "Curators only need to enter DOIs — bibliographic metadata, publisher links, and data-entry pages are generated automatically. Our own plot digitizer, <strong>StarryDigitizer</strong>, traces curves based on colors and marker sizes. Units are normalized to SI at ingest, so identical physical quantities are always shown in the same units. We are also introducing external AI to further streamline curation.",
-        "Founded at NIMS in 2017, Starrydata is now operated by a dedicated research team in collaboration with RIKEN AIP, the University of Tsukuba and others. High-quality experimental data — useful for Materials Informatics, machine learning, and new-material discovery — are freely available via API, Figshare, and GitHub."
+        "Curators only need to enter DOIs — bibliographic metadata, publisher links, and data-entry pages are generated automatically. Our own plot digitizer, <strong>StarryDigitizer</strong>, traces curves based on colors and marker sizes. Units are normalized to SI at ingest, so identical physical quantities are always shown in the same units. We are also introducing external AI to further streamline curation."
       ]
     }
   },
