@@ -6,39 +6,143 @@ lang: ja
 ---
 
 {%- set L = "ja" -%}
+{%- set C = i18n.contact_page -%}
 
 <section class="page-head">
   <div class="container">
-    <span class="eyebrow">{{ i18n.contact_page.eyebrow[L] }}</span>
-    <h1>{{ i18n.contact_page.title[L] }}</h1>
-    <p class="lead lead-wide">{{ i18n.contact_page.lead[L] }}</p>
+    <span class="eyebrow">{{ C.eyebrow[L] }}</span>
+    <h1>{{ C.title[L] }}</h1>
+    <p class="lead lead-wide">{{ C.lead[L] }}</p>
   </div>
 </section>
 
 <section class="section section-top-tight">
   <div class="container container-narrow-prose">
 
-    <div class="contact-card">
-      <div class="contact-card-label">{{ i18n.contact_page.email_label[L] }}</div>
-      <a class="contact-email" href="mailto:{{ i18n.contact_page.email_value[L] }}">{{ i18n.contact_page.email_value[L] }}</a>
-      <div class="contact-card-foot">
-        <a class="btn btn-primary" href="mailto:{{ i18n.contact_page.email_value[L] }}">{{ i18n.contact_page.email_button[L] }} →</a>
+    <div class="contact-card" id="contact-form-container"
+         data-eu="{{ C.email_user[L] }}"
+         data-ed="{{ C.email_domain[L] }}">
+      <form id="contact-form" onsubmit="return window._starrydataContactSubmit(event)" novalidate>
+        <div class="form-field">
+          <label for="cf-subject">{{ C.field_subject[L] }} <span class="req">{{ C.field_required_mark[L] }}</span></label>
+          <input type="text" id="cf-subject" name="subject" autocomplete="off" required>
+          <p class="field-error hidden" id="cf-subject-error">{{ C.error_subject[L] }}</p>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cf-name">{{ C.field_name[L] }} <span class="req">{{ C.field_required_mark[L] }}</span></label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required>
+            <p class="field-error hidden" id="cf-name-error">{{ C.error_name[L] }}</p>
+          </div>
+
+          <div class="form-field">
+            <label for="cf-contact">{{ C.field_contact[L] }} <span class="req">{{ C.field_required_mark[L] }}</span></label>
+            <input type="text" id="cf-contact" name="contact" autocomplete="email" required>
+            <p class="field-hint">{{ C.field_contact_hint[L] }}</p>
+            <p class="field-error hidden" id="cf-contact-error">{{ C.error_contact[L] }}</p>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="cf-message">{{ C.field_message[L] }} <span class="req">{{ C.field_required_mark[L] }}</span></label>
+          <textarea id="cf-message" name="message" rows="7" required></textarea>
+          <p class="field-error hidden" id="cf-message-error">{{ C.error_message[L] }}</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">{{ C.submit[L] }} →</button>
+        <p class="form-note">{{ C.form_note[L] }}</p>
+      </form>
+    </div>
+
+    <div class="contact-card contact-card-success hidden" id="contact-form-success">
+      <div class="success-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
       </div>
+      <h2>{{ C.success_title[L] }}</h2>
+      <p>{{ C.success_body[L] }}</p>
+      <button class="btn btn-secondary" onclick="window._starrydataContactReset()">{{ C.success_reset[L] }}</button>
     </div>
 
     <div class="contact-block">
-      <h2>{{ i18n.contact_page.topics_title[L] }}</h2>
+      <h2>{{ C.topics_title[L] }}</h2>
       <ul class="contact-topics">
-        {%- for item in i18n.contact_page.topics[L] %}
+        {%- for item in C.topics[L] %}
         <li>{{ item }}</li>
         {%- endfor %}
       </ul>
     </div>
 
     <div class="contact-block">
-      <h2>{{ i18n.contact_page.org_title[L] }}</h2>
-      <p class="contact-org">{{ i18n.contact_page.org_body[L] | safe }}</p>
+      <h2>{{ C.org_title[L] }}</h2>
+      <p class="contact-org">{{ C.org_body[L] | safe }}</p>
     </div>
 
   </div>
 </section>
+
+<script>
+(function () {
+  var LANG = "{{ L }}";
+  var LABELS = {
+    name:    LANG === 'en' ? 'Name'    : 'お名前',
+    contact: LANG === 'en' ? 'Contact' : 'ご連絡先'
+  };
+  var FIELDS = ['subject', 'name', 'contact', 'message'];
+
+  function $(id) { return document.getElementById('cf-' + id); }
+  function $err(id) { return document.getElementById('cf-' + id + '-error'); }
+
+  function setError(id, show) {
+    var input = $(id), err = $err(id);
+    if (!input || !err) return;
+    if (show) { input.classList.add('has-error'); err.classList.remove('hidden'); }
+    else      { input.classList.remove('has-error'); err.classList.add('hidden'); }
+  }
+
+  window._starrydataContactSubmit = function (event) {
+    event.preventDefault();
+    var v = {};
+    FIELDS.forEach(function (k) { v[k] = ($(k).value || '').trim(); });
+
+    var ok = true;
+    ['subject', 'name', 'contact'].forEach(function (k) {
+      var pass = v[k].length > 0;
+      setError(k, !pass);
+      if (!pass) ok = false;
+    });
+    var msgOk = v.message.length >= 10;
+    setError('message', !msgOk);
+    if (!msgOk) ok = false;
+    if (!ok) return false;
+
+    var container = document.getElementById('contact-form-container');
+    var eu = container.getAttribute('data-eu');
+    var ed = container.getAttribute('data-ed');
+    var to = eu + '@' + ed;
+
+    var body =
+      LABELS.name + ': ' + v.name + '\n' +
+      LABELS.contact + ': ' + v.contact + '\n\n' +
+      v.message;
+
+    var mailto = 'mailto:' + to +
+      '?subject=' + encodeURIComponent(v.subject) +
+      '&body=' + encodeURIComponent(body);
+    window.location.href = mailto;
+
+    container.classList.add('hidden');
+    document.getElementById('contact-form-success').classList.remove('hidden');
+    return false;
+  };
+
+  window._starrydataContactReset = function () {
+    document.getElementById('contact-form').reset();
+    document.getElementById('contact-form-container').classList.remove('hidden');
+    document.getElementById('contact-form-success').classList.add('hidden');
+    FIELDS.forEach(function (k) { setError(k, false); });
+  };
+})();
+</script>
