@@ -1017,15 +1017,107 @@ p { margin: 0 0 1em; }
 
 /* ---- Contact page ---- */
 .contact-card {
+  position: relative;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 32px 36px;
-  box-shadow: var(--shadow-sm);
-  margin: 0 auto 40px;
+  padding: 36px 40px 32px;
+  box-shadow: var(--shadow-md);
+  margin: 0 auto 32px;
+  overflow: hidden;
+}
+/* violet アクセントの上帯 */
+.contact-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--grad-cta);
 }
 .contact-block { margin: 36px 0; }
 .contact-block-topics { margin-top: 0; margin-bottom: 28px; }
+
+/* Contact: 見出し */
+.contact-h2 {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin: 0 0 18px;
+  letter-spacing: -0.005em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-h2::before {
+  content: "";
+  width: 22px; height: 2px;
+  background: var(--accent-2);
+  border-radius: 2px;
+}
+
+/* Contact: 相談テーマグリッド */
+.contact-topics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+}
+.contact-topic {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(167, 139, 250, 0.06);
+  transition: background 0.2s, transform 0.2s;
+}
+.contact-topic:hover {
+  background: rgba(167, 139, 250, 0.12);
+  transform: translateX(2px);
+}
+.contact-topic-check {
+  flex: 0 0 auto;
+  width: 20px; height: 20px;
+  border-radius: 999px;
+  background: var(--grad-cta);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.28);
+}
+.contact-topic-check svg {
+  width: 12px;
+  height: 12px;
+}
+.contact-topic-text {
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--text);
+}
+
+/* Contact: 署名（代表・所属） */
+.contact-signature {
+  max-width: 720px;
+  margin: 36px auto 0;
+  padding: 20px 24px;
+  border-left: 3px solid var(--accent-2);
+  background: var(--bg-subtle);
+  border-radius: 0 8px 8px 0;
+}
+.contact-signature-label {
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 6px;
+}
+.contact-signature-body {
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--text-2);
+}
 
 /* ---- Data page ---- */
 .data-intro {
@@ -1236,7 +1328,7 @@ p { margin: 0 0 1em; }
   outline: none;
   border-color: var(--accent-2);
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(200, 60, 45, 0.10);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.14);
 }
 .form-field textarea {
   resize: vertical;
@@ -1273,17 +1365,38 @@ p { margin: 0 0 1em; }
 }
 .contact-card .btn-primary {
   width: 100%;
-  margin-top: 6px;
+  margin-top: 8px;
+  padding: 14px 20px;
+  font-size: var(--fs-body);
+  border-radius: 8px;
+  background: var(--grad-cta);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.28);
+}
+.contact-card .btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.35);
+}
+.contact-card .btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
 }
 
 .contact-card-success {
   text-align: center;
-  padding: 40px 32px;
+  padding: 44px 32px 40px;
 }
 .contact-card-success h2 {
-  font-size: 1.2rem;
+  font-size: var(--fs-h3);
   font-weight: 700;
   margin: 0 0 10px;
+  letter-spacing: -0.005em;
 }
 .contact-card-success p {
   color: var(--text-2);
@@ -1308,6 +1421,7 @@ p { margin: 0 0 1em; }
 @media (max-width: 640px) {
   .contact-card { padding: 22px 20px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
+  .contact-topics-grid { grid-template-columns: 1fr; gap: 8px; }
 }
 
 .article-refs {

@@ -20,12 +20,19 @@ lang: en
   <div class="container">
 
     <div class="contact-block contact-block-topics">
-      <h2>{{ C.topics_title[L] }}</h2>
-      <ul class="contact-topics">
+      <h2 class="contact-h2">{{ C.topics_title[L] }}</h2>
+      <div class="contact-topics-grid">
         {%- for item in C.topics[L] %}
-        <li>{{ item }}</li>
+        <div class="contact-topic">
+          <span class="contact-topic-check" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 10 8.5 14.5 16 6"></polyline>
+            </svg>
+          </span>
+          <span class="contact-topic-text">{{ item }}</span>
+        </div>
         {%- endfor %}
-      </ul>
+      </div>
     </div>
 
     <div class="contact-card" id="contact-form-container"
@@ -75,9 +82,9 @@ lang: en
       <button class="btn btn-secondary" onclick="window._starrydataContactReset()">{{ C.success_reset[L] }}</button>
     </div>
 
-    <div class="contact-block">
-      <h2>{{ C.org_title[L] }}</h2>
-      <p class="contact-org">{{ C.org_body[L] | safe }}</p>
+    <div class="contact-signature">
+      <div class="contact-signature-label">{{ C.org_title[L] }}</div>
+      <p class="contact-signature-body">{{ C.org_body[L] | safe }}</p>
     </div>
 
   </div>
