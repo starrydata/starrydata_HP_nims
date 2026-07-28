@@ -228,8 +228,8 @@
     "eyebrow": { "ja": "論文",         "en": "Publications" },
     "title":   { "ja": "Publications", "en": "Publications" },
     "lead": {
-      "ja": "Starrydata プロジェクトの代表論文と、世界中の研究者による Starrydata の引用論文を掲載しています。OpenAlex + Crossref Open Citations から毎月自動更新。",
-      "en": "Featured papers by the Starrydata team and external publications citing our work. Auto-refreshed monthly from OpenAlex and Crossref Open Citations."
+      "ja": "<span class=\"nowrap-grp\">Starrydata プロジェクトの代表論文と、世界中の研究者による Starrydata の引用論文を掲載しています。</span><br><span class=\"nowrap-grp\">OpenAlex + Crossref Open Citations から毎月自動更新。</span>",
+      "en": "<span class=\"nowrap-grp\">Featured papers by the Starrydata team and external publications citing our work.</span><br><span class=\"nowrap-grp\">Auto-refreshed monthly from OpenAlex and Crossref Open Citations.</span>"
     }
   },
   "manual_page": {
