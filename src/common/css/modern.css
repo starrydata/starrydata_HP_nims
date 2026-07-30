@@ -229,6 +229,33 @@ p { margin: 0 0 1em; }
   margin: 0 0 16px;
   letter-spacing: -0.018em;
 }
+
+/* Top ページ: セクション h2 の背後に日本語名を大きく薄グレーで配置 */
+.section h2[data-jp] {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;    /* z-index: -1 の ::before を h2 内に閉じ込める */
+  padding-top: 0.4em;    /* 上に日本語テキストが顔を出すスペース */
+}
+.section h2[data-jp]::before {
+  content: attr(data-jp);
+  position: absolute;
+  top: -0.35em;
+  left: 0;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 900;
+  color: rgba(30, 27, 75, 0.06);
+  letter-spacing: -0.02em;
+  text-transform: none;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+}
+@media (max-width: 640px) {
+  .section h2[data-jp]::before { font-size: clamp(1.6rem, 8vw, 2.6rem); }
+}
 .section .eyebrow,
 .eyebrow {
   display: inline-block;
