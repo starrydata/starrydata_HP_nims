@@ -1053,44 +1053,73 @@ p { margin: 0 0 1em; }
 }
 .article-meta .author { color: var(--text-3); font-size: 0.88rem; }
 
-/* ---- Use Data page ---- */
+/* ---- Use Data page (画像背景 + 下部テキストオーバーレイ、TOP の app-card 準拠) ---- */
 .use-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .use-card {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 28px 28px 24px;
+  position: relative;
+  display: block;
+  height: 340px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  position: relative;
-  overflow: hidden;
-}
-.use-card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--grad-cta);
-  opacity: 0;
-  transition: opacity 0.2s;
+  transition: transform 0.15s, box-shadow 0.2s, border-color 0.2s;
 }
 .use-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
-  border-color: var(--accent-2);
+  border-color: #c4b5fd;
+  color: inherit;
 }
-.use-card:hover::before { opacity: 1; }
+.use-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-subtle);
+  z-index: 0;
+}
+.use-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #fff;
+  transition: transform 0.4s ease;
+}
+.use-card:hover .use-thumb img { transform: scale(1.03); }
+.use-thumb-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--grad-cta);
+  color: #fff;
+  font-size: 4.5rem;
+}
+.use-body {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 16px 22px 18px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  border-top: 1px solid rgba(167, 139, 250, 0.18);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: background 0.2s;
+}
+.use-card:hover .use-body { background: rgba(255, 255, 255, 0.98); }
 .use-card-eyebrow {
   font-size: var(--fs-tiny);
   font-weight: 700;
@@ -1101,26 +1130,33 @@ p { margin: 0 0 1em; }
 .use-card-title {
   font-size: var(--fs-h3);
   font-weight: 700;
-  margin: 4px 0 6px;
+  margin: 2px 0 4px;
   letter-spacing: -0.005em;
   color: var(--text);
 }
 .use-card-desc {
   font-size: var(--fs-small);
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--text-2);
   margin: 0;
-  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-.use-card-cta {
-  margin-top: 14px;
-  font-size: var(--fs-small);
-  font-weight: 600;
+.use-open {
+  position: absolute;
+  top: 14px; right: 14px;
+  z-index: 2;
+  font-size: var(--fs-tiny);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 4px 10px;
+  border-radius: 999px;
   color: var(--accent-2);
-  align-self: flex-start;
-  transition: transform 0.2s;
+  font-weight: 600;
 }
-.use-card:hover .use-card-cta { transform: translateX(3px); }
 
 .use-cite {
   max-width: 900px;

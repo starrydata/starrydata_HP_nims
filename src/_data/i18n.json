@@ -251,6 +251,8 @@
           "desc":    "ブラウザ上で試料検索・グラフ閲覧・CSV ダウンロードができるインタラクティブな Web システム。アカウント登録は無料です。",
           "cta":     "Starrydata2 を開く",
           "url":     "https://www.starrydata2.org",
+          "image":   "/assets/images/apps/starrydata2.png",
+          "icon":    "★",
           "external": true
         },
         {
@@ -259,14 +261,18 @@
           "desc":    "アカウント登録、データの検索・閲覧、登録（Curation）、ダウンロード・API 利用まで、Starrydata2 の使い方を 1 ページずつ解説しています。",
           "cta":     "マニュアルを読む",
           "url":     "/manual/",
+          "image":   null,
+          "icon":    "📖",
           "external": false
         },
         {
           "eyebrow": "SNAPSHOT",
-          "title":   "Figshare データセット",
-          "desc":    "月次で更新される Starrydata の全データスナップショットを Figshare で公開。引用可能な DOI 付きで、機械学習向けに一括ダウンロードできます。",
+          "title":   "Figshare スナップショット",
+          "desc":    "論文引用用の凍結スナップショットを Figshare で公開。時点を固定して DOI で引用できるので、投稿論文の再現性確保に向いています。",
           "cta":     "Figshare を開く",
           "url":     "https://figshare.com/projects/Starrydata_datasets/155129",
+          "image":   null,
+          "icon":    "🔖",
           "external": true
         },
         {
@@ -275,6 +281,8 @@
           "desc":    "熱電・磁性・電池など、分野ごとに整形されたデータセットをダウンロードできる公式配布ページ。Starrydata2 のグローバルナビ「Dataset」からもアクセスできます。",
           "cta":     "データセット一覧を開く",
           "url":     "https://starrydata.github.io/starrydata_datasets/",
+          "image":   null,
+          "icon":    "📦",
           "external": true
         },
         {
@@ -283,6 +291,8 @@
           "desc":    "Starrydata プロジェクトが公開している全ツール（3D Explorer, StarryDigitizer 等）・関連論文・チュートリアル・外部連携先へのリンクを 1 ページにまとめています。",
           "cta":     "リンク集を開く",
           "url":     "https://starrydata.github.io/links/",
+          "image":   null,
+          "icon":    "🔗",
           "external": true
         }
       ],
@@ -293,6 +303,8 @@
           "desc":    "Interactive web system for sample search, plot browsing, and CSV download in the browser. Free account registration.",
           "cta":     "Open Starrydata2",
           "url":     "https://www.starrydata2.org",
+          "image":   "/assets/images/apps/starrydata2.png",
+          "icon":    "★",
           "external": true
         },
         {
@@ -301,14 +313,18 @@
           "desc":    "Step-by-step guide for account setup, browsing, curation, download and API usage of Starrydata2.",
           "cta":     "Read the manual",
           "url":     "/manual/",
+          "image":   null,
+          "icon":    "📖",
           "external": false
         },
         {
           "eyebrow": "SNAPSHOT",
-          "title":   "Figshare Datasets",
-          "desc":    "Monthly snapshots of the full Starrydata dataset with citable DOIs, ready for bulk download and ML workflows.",
+          "title":   "Figshare Snapshot",
+          "desc":    "Frozen snapshots on Figshare with citable DOIs — ideal for reproducibility of published papers.",
           "cta":     "Open on Figshare",
           "url":     "https://figshare.com/projects/Starrydata_datasets/155129",
+          "image":   null,
+          "icon":    "🔖",
           "external": true
         },
         {
@@ -317,6 +333,8 @@
           "desc":    "Official distribution page with per-field (thermoelectric, magnetic, battery, etc.) datasets ready for download. Also linked from the Starrydata2 global nav.",
           "cta":     "Open dataset list",
           "url":     "https://starrydata.github.io/starrydata_datasets/",
+          "image":   null,
+          "icon":    "📦",
           "external": true
         },
         {
@@ -325,6 +343,8 @@
           "desc":    "A one-page directory of every Starrydata tool (3D Explorer, StarryDigitizer, etc.), related papers, tutorials, and external resources.",
           "cta":     "Open the link hub",
           "url":     "https://starrydata.github.io/links/",
+          "image":   null,
+          "icon":    "🔗",
           "external": true
         }
       ]
