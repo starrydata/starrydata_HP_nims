@@ -555,8 +555,12 @@
       ]
     },
     "cite_title": {
+      "ja": "How to Cite",
+      "en": "How to Cite"
+    },
+    "cite_title_jp": {
       "ja": "引用について",
-      "en": "How to cite"
+      "en": "How to Cite"
     },
     "cite_body": {
       "ja": "Starrydata のデータを研究で利用された際は、以下の論文をご引用ください。",
