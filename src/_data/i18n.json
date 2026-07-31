@@ -16,15 +16,42 @@
     }
   },
   "nav": {
-    "home":          { "ja": "Home",          "en": "Home" },
-    "about":         { "ja": "About",         "en": "About" },
-    "research":      { "ja": "Research",      "en": "Research" },
-    "team":          { "ja": "Members",       "en": "Members" },
-    "publications":  { "ja": "Publications",  "en": "Publications" },
-    "news":          { "ja": "News",          "en": "News" },
-    "use_data":      { "ja": "Use Data",      "en": "Use Data" },
-    "collaborate":   { "ja": "Collaborate",   "en": "Collaborate" },
-    "contact":       { "ja": "Contact",       "en": "Contact" }
+    "home": {
+      "ja": "Home",
+      "en": "Home"
+    },
+    "about": {
+      "ja": "About",
+      "en": "About"
+    },
+    "research": {
+      "ja": "Research",
+      "en": "Research"
+    },
+    "team": {
+      "ja": "Members",
+      "en": "Members"
+    },
+    "publications": {
+      "ja": "Publications",
+      "en": "Publications"
+    },
+    "news": {
+      "ja": "News",
+      "en": "News"
+    },
+    "use_data": {
+      "ja": "Use Data",
+      "en": "Use Data"
+    },
+    "collaborate": {
+      "ja": "Collaborate",
+      "en": "Collaborate"
+    },
+    "contact": {
+      "ja": "Contact",
+      "en": "Contact"
+    }
   },
   "hero": {
     "headline_1": {
@@ -49,14 +76,32 @@
     }
   },
   "stats": {
-    "title":    { "ja": "Starrydata by the Numbers", "en": "Starrydata by the Numbers" },
-    "samples":  { "ja": "Samples",         "en": "Samples" },
-    "curves":   { "ja": "Curves",          "en": "Curves" },
-    "papers":   { "ja": "Papers",          "en": "Papers" },
-    "fields":   { "ja": "Research Fields", "en": "Research Fields" }
+    "title": {
+      "ja": "Starrydata by the Numbers",
+      "en": "Starrydata by the Numbers"
+    },
+    "samples": {
+      "ja": "Samples",
+      "en": "Samples"
+    },
+    "curves": {
+      "ja": "Curves",
+      "en": "Curves"
+    },
+    "papers": {
+      "ja": "Papers",
+      "en": "Papers"
+    },
+    "fields": {
+      "ja": "Research Fields",
+      "en": "Research Fields"
+    }
   },
   "what_is": {
-    "title":     { "ja": "What is Starrydata",  "en": "What is Starrydata" },
+    "title": {
+      "ja": "What is Starrydata",
+      "en": "What is Starrydata"
+    },
     "lead": {
       "ja": "Starrydata は、材料科学の論文グラフから実験データを抽出・構造化し、世界中の研究者が自由に使える巨大な<strong>オープンデータベース</strong>として公開する研究プロジェクトです。",
       "en": "Starrydata is an <strong>open data project</strong> that extracts and structures experimental data from graphs in inorganic materials science papers, making them freely reusable for researchers worldwide."
@@ -71,37 +116,74 @@
     }
   },
   "huge_db": {
-    "title": { "ja": "A Large-Scale Database",       "en": "A Large-Scale Database" },
-    "cta":   { "ja": "Starrydata2 を試す →",           "en": "Try Starrydata2 →" }
+    "title": {
+      "ja": "A Large-Scale Database",
+      "en": "A Large-Scale Database"
+    },
+    "cta": {
+      "ja": "Starrydata2 を試す →",
+      "en": "Try Starrydata2 →"
+    }
   },
   "apps": {
-    "title": { "ja": "Apps & Systems",               "en": "Apps & Systems" },
+    "title": {
+      "ja": "Apps & Systems",
+      "en": "Apps & Systems"
+    },
     "lead": {
       "ja": "データベースを軸に、組成探索・データ可視化・グラフ画像のデジタイズなど、複数のWebツールを公開しています。すべて無償で利用できます。",
       "en": "Beyond the database itself, we publish multiple free web tools for composition search, big-data visualization, plot digitization, and more."
     },
-    "open": { "ja": "開く",                         "en": "Open" }
+    "open": {
+      "ja": "開く",
+      "en": "Open"
+    }
   },
   "get_involved": {
-    "title": { "ja": "Get Involved",                 "en": "Get Involved" },
+    "title": {
+      "ja": "Get Involved",
+      "en": "Get Involved"
+    },
     "lead": {
       "ja": "データの登録・利用、共同研究・資金パートナーシップなど、さまざまな形でプロジェクトに関わっていただけます。",
       "en": "Use the data, contribute data, partner on research, or support the project — there are many ways to get involved."
     },
-    "card1_t": { "ja": "データを登録・利用する",            "en": "Use the data" },
-    "card1_d": { "ja": "Web システム・マニュアル・Figshare・GitHub など、Starrydata のデータを利用する方法をひとまとめに紹介しています。",
-                 "en": "Everything you need to use Starrydata — web system, manual, Figshare snapshots and GitHub datasets, in one place." },
-    "card1_cta": { "ja": "データを使う →",  "en": "Use the data →" },
-
-    "card2_t": { "ja": "共同研究",        "en": "Research & funding partnership" },
-    "card2_d": { "ja": "共同研究のご相談を歓迎しています。Materials Informatics の研究開発を、ぜひ一緒に進めましょう。",
-                 "en": "We welcome inquiries for joint research. Let's advance Materials Informatics together." },
-    "card2_cta": { "ja": "問い合わせる →",             "en": "Contact us →" },
-
-    "card3_t": { "ja": "学生受入", "en": "Research & funding partnership" },
-    "card3_d": { "ja": "インターンシップ制度や筑波大学連携大学院での学生を国内外問わず受け入れています。",
-                 "en": "ーーーーーーー." },
-    "card3_cta": { "ja": "問い合わせる →",         "en": "Contact us →" }
+    "card1_t": {
+      "ja": "データを登録・利用する",
+      "en": "Use the data"
+    },
+    "card1_d": {
+      "ja": "Web システム・マニュアル・Figshare・GitHub など、Starrydata のデータを利用する方法をひとまとめに紹介しています。",
+      "en": "Everything you need to use Starrydata — web system, manual, Figshare snapshots and GitHub datasets, in one place."
+    },
+    "card1_cta": {
+      "ja": "データを使う →",
+      "en": "Use the data →"
+    },
+    "card2_t": {
+      "ja": "共同研究",
+      "en": "Research & funding partnership"
+    },
+    "card2_d": {
+      "ja": "共同研究のご相談を歓迎しています。Materials Informatics の研究開発を、ぜひ一緒に進めましょう。",
+      "en": "We welcome inquiries for joint research. Let's advance Materials Informatics together."
+    },
+    "card2_cta": {
+      "ja": "問い合わせる →",
+      "en": "Contact us →"
+    },
+    "card3_t": {
+      "ja": "学生受入",
+      "en": "Research & funding partnership"
+    },
+    "card3_d": {
+      "ja": "インターンシップ制度や筑波大学連携大学院での学生を国内外問わず受け入れています。",
+      "en": "ーーーーーーー."
+    },
+    "card3_cta": {
+      "ja": "問い合わせる →",
+      "en": "Contact us →"
+    }
   },
   "lab": {
     "title": {
@@ -116,22 +198,34 @@
       "ja": "Starrydata Laboratory のメンバー構成とワークフロー概念図",
       "en": "Overview diagram of Starrydata Laboratory members and workflow"
     },
-    "step1_t": { "ja": "1 人 1 分野を担当",           "en": "Own one research field" },
+    "step1_t": {
+      "ja": "1 人 1 分野を担当",
+      "en": "Own one research field"
+    },
     "step1_d": {
       "ja": "熱電・磁性・電池・誘電など、複数ある研究領域から 1 分野を担当。将来は後輩が引き継ぎ、分野を長期的に育てられる棲み分けを目指します。",
       "en": "Each student takes charge of a single field — thermoelectric, magnetic, battery, dielectric and more. Fields are designed to be handed down to junior members over time."
     },
-    "step2_t": { "ja": "自動データ収集",               "en": "Automated data curation" },
+    "step2_t": {
+      "ja": "自動データ収集",
+      "en": "Automated data curation"
+    },
     "step2_d": {
       "ja": "担当分野の論文グラフを、Starrydata の自動デジタイズ基盤で継続的に収集・キュレーション。研究の土台となるデータセットを自分の手で育てます。",
       "en": "Continuously curate plots from your field's literature using Starrydata's auto-digitization pipeline, building the dataset that will power your own research."
     },
-    "step3_t": { "ja": "初心者向け記事を執筆",         "en": "Publish beginner-friendly articles" },
+    "step3_t": {
+      "ja": "初心者向け記事を執筆",
+      "en": "Publish beginner-friendly articles"
+    },
     "step3_d": {
       "ja": "収集したデータを題材に、その分野の入門記事を Starrydata サイト上で公開。学んだ内容がそのまま Web 教材として公開実績になります。",
       "en": "Turn your dataset into introductory articles on the Starrydata site. Your learning becomes a public teaching resource — and a citable track record."
     },
-    "step4_t": { "ja": "データで論文を書く",           "en": "Publish data-driven papers" },
+    "step4_t": {
+      "ja": "データで論文を書く",
+      "en": "Publish data-driven papers"
+    },
     "step4_d": {
       "ja": "最終的にはデータ解析の結果をまとめ、自分名義でデータ駆動の論文を発表することを目指します。",
       "en": "Ultimately, students aim to publish their own data-driven papers based on the datasets and analyses they have built."
@@ -142,16 +236,34 @@
     }
   },
   "fields": {
-    "title": { "ja": "Research", "en": "Research" },
-    "see_all": { "ja": "一覧を見る", "en": "View all" }
+    "title": {
+      "ja": "Research",
+      "en": "Research"
+    },
+    "see_all": {
+      "ja": "一覧を見る",
+      "en": "View all"
+    }
   },
   "publications": {
-    "title":   { "ja": "Featured Publications", "en": "Featured Publications" },
-    "see_all": { "ja": "論文一覧を見る", "en": "View all publications" }
+    "title": {
+      "ja": "Featured Publications",
+      "en": "Featured Publications"
+    },
+    "see_all": {
+      "ja": "論文一覧を見る",
+      "en": "View all publications"
+    }
   },
   "news": {
-    "title":   { "ja": "News",          "en": "News" },
-    "see_all": { "ja": "ニュース一覧",  "en": "View all news" }
+    "title": {
+      "ja": "News",
+      "en": "News"
+    },
+    "see_all": {
+      "ja": "ニュース一覧",
+      "en": "View all news"
+    }
   },
   "collaborate": {
     "title": {
@@ -168,30 +280,90 @@
     }
   },
   "contact_page": {
-    "eyebrow": { "ja": "お問い合わせ",   "en": "Get in touch" },
-    "title":   { "ja": "Contact",        "en": "Contact" },
+    "eyebrow": {
+      "ja": "お問い合わせ",
+      "en": "Get in touch"
+    },
+    "title": {
+      "ja": "Contact",
+      "en": "Contact"
+    },
     "lead": {
       "ja": "共同研究、取材、講演依頼、その他お問い合わせは下記フォームよりお問い合わせください。担当より折り返しご連絡いたします。",
       "en": "For joint research, press, talks, or any other inquiries, please use the form below. We will get back to you shortly."
     },
-    "email_user":    { "ja": "starrydata1", "en": "starrydata1" },
-    "email_domain":  { "ja": "gmail.com",   "en": "gmail.com" },
-    "field_subject":       { "ja": "件名",        "en": "Subject" },
-    "field_name":          { "ja": "お名前",      "en": "Name" },
-    "field_contact":       { "ja": "ご連絡先",    "en": "Contact" },
-    "field_contact_hint":  { "ja": "メールアドレス または お電話番号", "en": "Email address or phone number" },
-    "field_message":       { "ja": "お問い合わせ内容", "en": "Message" },
-    "field_required_mark": { "ja": "*", "en": "*" },
-    "error_subject":       { "ja": "件名を入力してください", "en": "Please enter a subject" },
-    "error_name":          { "ja": "お名前を入力してください", "en": "Please enter your name" },
-    "error_contact":       { "ja": "ご連絡先を入力してください", "en": "Please enter your contact information" },
-    "error_message":       { "ja": "お問い合わせ内容を10文字以上で入力してください", "en": "Please enter a message with at least 10 characters" },
-    "submit":              { "ja": "送信する",    "en": "Send" },
-    "form_note":           { "ja": "送信ボタンを押すと、お使いのメールソフトが起動して内容が送信されます。", "en": "Clicking send will open your email client with the message pre-filled." },
-    "success_title":       { "ja": "お問い合わせありがとうございます", "en": "Thank you for your inquiry" },
-    "success_body":        { "ja": "メールソフトを起動しました。内容をご確認のうえ送信してください。", "en": "Your email client should have opened. Please review the message and send it." },
-    "success_reset":       { "ja": "新しいお問い合わせ", "en": "New inquiry" },
-    "topics_title":  { "ja": "ご相談いただける主なテーマ", "en": "Topics we welcome" },
+    "email_user": {
+      "ja": "starrydata1",
+      "en": "starrydata1"
+    },
+    "email_domain": {
+      "ja": "gmail.com",
+      "en": "gmail.com"
+    },
+    "field_subject": {
+      "ja": "件名",
+      "en": "Subject"
+    },
+    "field_name": {
+      "ja": "お名前",
+      "en": "Name"
+    },
+    "field_contact": {
+      "ja": "ご連絡先",
+      "en": "Contact"
+    },
+    "field_contact_hint": {
+      "ja": "メールアドレス または お電話番号",
+      "en": "Email address or phone number"
+    },
+    "field_message": {
+      "ja": "お問い合わせ内容",
+      "en": "Message"
+    },
+    "field_required_mark": {
+      "ja": "*",
+      "en": "*"
+    },
+    "error_subject": {
+      "ja": "件名を入力してください",
+      "en": "Please enter a subject"
+    },
+    "error_name": {
+      "ja": "お名前を入力してください",
+      "en": "Please enter your name"
+    },
+    "error_contact": {
+      "ja": "ご連絡先を入力してください",
+      "en": "Please enter your contact information"
+    },
+    "error_message": {
+      "ja": "お問い合わせ内容を10文字以上で入力してください",
+      "en": "Please enter a message with at least 10 characters"
+    },
+    "submit": {
+      "ja": "送信する",
+      "en": "Send"
+    },
+    "form_note": {
+      "ja": "送信ボタンを押すと、お使いのメールソフトが起動して内容が送信されます。",
+      "en": "Clicking send will open your email client with the message pre-filled."
+    },
+    "success_title": {
+      "ja": "お問い合わせありがとうございます",
+      "en": "Thank you for your inquiry"
+    },
+    "success_body": {
+      "ja": "メールソフトを起動しました。内容をご確認のうえ送信してください。",
+      "en": "Your email client should have opened. Please review the message and send it."
+    },
+    "success_reset": {
+      "ja": "新しいお問い合わせ",
+      "en": "New inquiry"
+    },
+    "topics_title": {
+      "ja": "ご相談いただける主なテーマ",
+      "en": "Topics we welcome"
+    },
     "topics": {
       "ja": [
         "共同研究・受託研究のご相談",
@@ -206,39 +378,72 @@
         "Anything else related to Starrydata"
       ]
     },
-    "org_title": { "ja": "代表・所属", "en": "Lead and Affiliation" },
+    "org_title": {
+      "ja": "代表・所属",
+      "en": "Lead and Affiliation"
+    },
     "org_body": {
       "ja": "桂 ゆかり (プロジェクトリーダー)<br>国立研究開発法人 物質・材料研究機構 (NIMS)<br>マテリアル基盤研究センター 材料モデリンググループ",
       "en": "Yukari Katsura (Project Leader)<br>National Institute for Materials Science (NIMS)<br>Center for Basic Research on Materials, Materials Modelling Group"
     }
   },
   "team_page": {
-    "eyebrow": { "ja": "メンバー",  "en": "Team" },
-    "title":   { "ja": "Members",  "en": "Members" }
+    "eyebrow": {
+      "ja": "メンバー",
+      "en": "Team"
+    },
+    "title": {
+      "ja": "Members",
+      "en": "Members"
+    }
   },
   "news_page": {
-    "eyebrow": { "ja": "ニュース",  "en": "News" },
-    "title":   { "ja": "News",     "en": "News" }
+    "eyebrow": {
+      "ja": "ニュース",
+      "en": "News"
+    },
+    "title": {
+      "ja": "News",
+      "en": "News"
+    }
   },
   "papers_page": {
-    "eyebrow": { "ja": "論文",         "en": "Publications" },
-    "title":   { "ja": "Publications", "en": "Publications" },
+    "eyebrow": {
+      "ja": "論文",
+      "en": "Publications"
+    },
+    "title": {
+      "ja": "Publications",
+      "en": "Publications"
+    },
     "lead": {
       "ja": "<span class=\"nowrap-grp\">Starrydata プロジェクトの代表論文と、世界中の研究者による Starrydata の引用論文を掲載しています。</span><br><span class=\"nowrap-grp\">OpenAlex + Crossref Open Citations から毎月自動更新。</span>",
       "en": "<span class=\"nowrap-grp\">Featured papers by the Starrydata team and external publications citing our work.</span><br><span class=\"nowrap-grp\">Auto-refreshed monthly from OpenAlex and Crossref Open Citations.</span>"
     }
   },
   "manual_page": {
-    "eyebrow": { "ja": "Starrydata2 マニュアル", "en": "User Manual" },
-    "title":   { "ja": "Manual",                "en": "Starrydata2 Manual" },
+    "eyebrow": {
+      "ja": "Starrydata2 マニュアル",
+      "en": "User Manual"
+    },
+    "title": {
+      "ja": "Manual",
+      "en": "Starrydata2 Manual"
+    },
     "lead": {
       "ja": "Starrydata2 は、論文に掲載されたプロット画像から実験データを抽出・共有するオープンデータベースです。本マニュアルは、データの閲覧・検索・登録・ダウンロード・API 利用までを 1 ページずつ解説します。",
       "en": "Starrydata2 is an open database that extracts and shares experimental data from plot images published in academic papers. This manual walks through browsing, searching, registration, downloading, and API usage one page at a time."
     }
   },
   "use_page": {
-    "eyebrow": { "ja": "データを使う", "en": "Use Data" },
-    "title":   { "ja": "Use Data",     "en": "Use Data" },
+    "eyebrow": {
+      "ja": "データを使う",
+      "en": "Use Data"
+    },
+    "title": {
+      "ja": "Use Data",
+      "en": "Use Data"
+    },
     "lead": {
       "ja": "Starrydata のデータを、Web システム・API・データセットスナップショットの 3 通りでご利用いただけます。",
       "en": "Access Starrydata via three routes: the interactive web system, the REST API, or downloadable dataset snapshots."
@@ -247,109 +452,112 @@
       "ja": [
         {
           "eyebrow": "WEB SYSTEM",
-          "title":   "Starrydata2 を試す",
-          "desc":    "ブラウザ上で試料検索・グラフ閲覧・CSV ダウンロードができるインタラクティブな Web システム。アカウント登録は無料です。",
-          "cta":     "Starrydata2 を開く",
-          "url":     "https://www.starrydata2.org",
-          "image":   "/assets/images/apps/starrydata2.png",
-          "icon":    "★",
+          "title": "Starrydata2 を試す",
+          "desc": "ブラウザ上で試料検索・グラフ閲覧・CSV ダウンロードができるインタラクティブな Web システム。アカウント登録は無料です。",
+          "cta": "Starrydata2 を開く",
+          "url": "https://www.starrydata2.org",
+          "image": "/assets/images/use/starrydata2.png",
+          "icon": "★",
           "external": true
         },
         {
           "eyebrow": "MANUAL",
-          "title":   "使い方マニュアル",
-          "desc":    "アカウント登録、データの検索・閲覧、登録（Curation）、ダウンロード・API 利用まで、Starrydata2 の使い方を 1 ページずつ解説しています。",
-          "cta":     "マニュアルを読む",
-          "url":     "/manual/",
-          "image":   null,
-          "icon":    "📖",
+          "title": "使い方マニュアル",
+          "desc": "アカウント登録、データの検索・閲覧、登録（Curation）、ダウンロード・API 利用まで、Starrydata2 の使い方を 1 ページずつ解説しています。",
+          "cta": "マニュアルを読む",
+          "url": "/manual/",
+          "image": "/assets/images/use/manual.png",
+          "icon": "📖",
           "external": false
         },
         {
           "eyebrow": "SNAPSHOT",
-          "title":   "Figshare スナップショット",
-          "desc":    "論文引用用の凍結スナップショットを Figshare で公開。時点を固定して DOI で引用できるので、投稿論文の再現性確保に向いています。",
-          "cta":     "Figshare を開く",
-          "url":     "https://figshare.com/projects/Starrydata_datasets/155129",
-          "image":   null,
-          "icon":    "🔖",
+          "title": "Figshare スナップショット",
+          "desc": "論文引用用の凍結スナップショットを Figshare で公開。時点を固定して DOI で引用できるので、投稿論文の再現性確保に向いています。",
+          "cta": "Figshare を開く",
+          "url": "https://figshare.com/projects/Starrydata_datasets/155129",
+          "image": null,
+          "icon": "🔖",
           "external": true
         },
         {
           "eyebrow": "DATASETS",
-          "title":   "分野別データセット",
-          "desc":    "熱電・磁性・電池など、分野ごとに整形されたデータセットをダウンロードできる公式配布ページ。Starrydata2 のグローバルナビ「Dataset」からもアクセスできます。",
-          "cta":     "データセット一覧を開く",
-          "url":     "https://starrydata.github.io/starrydata_datasets/",
-          "image":   null,
-          "icon":    "📦",
+          "title": "分野別データセット",
+          "desc": "熱電・磁性・電池など、分野ごとに整形されたデータセットをダウンロードできる公式配布ページ。Starrydata2 のグローバルナビ「Dataset」からもアクセスできます。",
+          "cta": "データセット一覧を開く",
+          "url": "https://starrydata.github.io/starrydata_datasets/",
+          "image": "/assets/images/use/datasets.png",
+          "icon": "📦",
           "external": true
         },
         {
           "eyebrow": "LINKS",
-          "title":   "関連リンク集",
-          "desc":    "Starrydata プロジェクトが公開している全ツール（3D Explorer, StarryDigitizer 等）・関連論文・チュートリアル・外部連携先へのリンクを 1 ページにまとめています。",
-          "cta":     "リンク集を開く",
-          "url":     "https://starrydata.github.io/links/",
-          "image":   null,
-          "icon":    "🔗",
+          "title": "関連リンク集",
+          "desc": "Starrydata のメインシステムと、Visualizer / Explorer 3D / StarryDigitizer / Crystal Structure Simulator / Elemental Reactivity Map など関連アプリケーションへのリンクを 1 ページにまとめています。",
+          "cta": "リンク集を開く",
+          "url": "https://starrydata.github.io/links/",
+          "image": "/assets/images/use/links.png",
+          "icon": "🔗",
           "external": true
         }
       ],
       "en": [
         {
           "eyebrow": "WEB SYSTEM",
-          "title":   "Try Starrydata2",
-          "desc":    "Interactive web system for sample search, plot browsing, and CSV download in the browser. Free account registration.",
-          "cta":     "Open Starrydata2",
-          "url":     "https://www.starrydata2.org",
-          "image":   "/assets/images/apps/starrydata2.png",
-          "icon":    "★",
+          "title": "Try Starrydata2",
+          "desc": "Interactive web system for sample search, plot browsing, and CSV download in the browser. Free account registration.",
+          "cta": "Open Starrydata2",
+          "url": "https://www.starrydata2.org",
+          "image": "/assets/images/use/starrydata2.png",
+          "icon": "★",
           "external": true
         },
         {
           "eyebrow": "MANUAL",
-          "title":   "User Manual",
-          "desc":    "Step-by-step guide for account setup, browsing, curation, download and API usage of Starrydata2.",
-          "cta":     "Read the manual",
-          "url":     "/manual/",
-          "image":   null,
-          "icon":    "📖",
+          "title": "User Manual",
+          "desc": "Step-by-step guide for account setup, browsing, curation, download and API usage of Starrydata2.",
+          "cta": "Read the manual",
+          "url": "/manual/",
+          "image": "/assets/images/use/manual.png",
+          "icon": "📖",
           "external": false
         },
         {
           "eyebrow": "SNAPSHOT",
-          "title":   "Figshare Snapshot",
-          "desc":    "Frozen snapshots on Figshare with citable DOIs — ideal for reproducibility of published papers.",
-          "cta":     "Open on Figshare",
-          "url":     "https://figshare.com/projects/Starrydata_datasets/155129",
-          "image":   null,
-          "icon":    "🔖",
+          "title": "Figshare Snapshot",
+          "desc": "Frozen snapshots on Figshare with citable DOIs — ideal for reproducibility of published papers.",
+          "cta": "Open on Figshare",
+          "url": "https://figshare.com/projects/Starrydata_datasets/155129",
+          "image": null,
+          "icon": "🔖",
           "external": true
         },
         {
           "eyebrow": "DATASETS",
-          "title":   "Per-Field Datasets",
-          "desc":    "Official distribution page with per-field (thermoelectric, magnetic, battery, etc.) datasets ready for download. Also linked from the Starrydata2 global nav.",
-          "cta":     "Open dataset list",
-          "url":     "https://starrydata.github.io/starrydata_datasets/",
-          "image":   null,
-          "icon":    "📦",
+          "title": "Per-Field Datasets",
+          "desc": "Official distribution page with per-field (thermoelectric, magnetic, battery, etc.) datasets ready for download. Also linked from the Starrydata2 global nav.",
+          "cta": "Open dataset list",
+          "url": "https://starrydata.github.io/starrydata_datasets/",
+          "image": "/assets/images/use/datasets.png",
+          "icon": "📦",
           "external": true
         },
         {
           "eyebrow": "LINKS",
-          "title":   "Related Links",
-          "desc":    "A one-page directory of every Starrydata tool (3D Explorer, StarryDigitizer, etc.), related papers, tutorials, and external resources.",
-          "cta":     "Open the link hub",
-          "url":     "https://starrydata.github.io/links/",
-          "image":   null,
-          "icon":    "🔗",
+          "title": "Related Links",
+          "desc": "A one-page directory of the Starrydata main system and related applications: Visualizer, Explorer 3D, StarryDigitizer, Crystal Structure Simulator, Elemental Reactivity Map, and more.",
+          "cta": "Open the link hub",
+          "url": "https://starrydata.github.io/links/",
+          "image": "/assets/images/use/links.png",
+          "icon": "🔗",
           "external": true
         }
       ]
     },
-    "cite_title": { "ja": "引用について", "en": "How to cite" },
+    "cite_title": {
+      "ja": "引用について",
+      "en": "How to cite"
+    },
     "cite_body": {
       "ja": "Starrydata のデータを研究で利用された際は、以下の論文をご引用ください。",
       "en": "When you use Starrydata data in your research, please cite the following paper."
@@ -360,21 +568,45 @@
     }
   },
   "team": {
-    "title":   { "ja": "Team",            "en": "Team" },
-    "subtitle":{ "ja": "Members",         "en": "Members" },
+    "title": {
+      "ja": "Team",
+      "en": "Team"
+    },
+    "subtitle": {
+      "ja": "Members",
+      "en": "Members"
+    },
     "lead": {
       "ja": "Starrydata は無機材料・データ科学・Web 開発の専門家からなる、専属の研究チームによって運営されています。",
       "en": "Starrydata is operated by a dedicated team of specialists in materials science, data science, and web engineering."
     },
-    "see_all": { "ja": "メンバー一覧",    "en": "View all members" },
-    "core":    { "ja": "コアメンバー",    "en": "Core Members" },
-    "researchers": { "ja": "メンバー",    "en": "Researchers" }
+    "see_all": {
+      "ja": "メンバー一覧",
+      "en": "View all members"
+    },
+    "core": {
+      "ja": "コアメンバー",
+      "en": "Core Members"
+    },
+    "researchers": {
+      "ja": "メンバー",
+      "en": "Researchers"
+    }
   },
   "funding": {
-    "title": { "ja": "支援機関・パートナー", "en": "Funders and Partners" }
+    "title": {
+      "ja": "支援機関・パートナー",
+      "en": "Funders and Partners"
+    }
   },
   "footer": {
-    "copyright":  { "ja": "© Starrydata. All rights reserved.", "en": "© Starrydata. All rights reserved." },
-    "made_with":  { "ja": "Built with Eleventy", "en": "Built with Eleventy" }
+    "copyright": {
+      "ja": "© Starrydata. All rights reserved.",
+      "en": "© Starrydata. All rights reserved."
+    },
+    "made_with": {
+      "ja": "Built with Eleventy",
+      "en": "Built with Eleventy"
+    }
   }
 }
