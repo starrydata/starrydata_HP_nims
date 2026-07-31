@@ -1053,6 +1053,110 @@ p { margin: 0 0 1em; }
 }
 .article-meta .author { color: var(--text-3); font-size: 0.88rem; }
 
+/* ---- Use Data page ---- */
+.use-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.use-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 28px 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.use-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--grad-cta);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.use-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-2);
+}
+.use-card:hover::before { opacity: 1; }
+.use-card-eyebrow {
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent-2);
+  text-transform: uppercase;
+}
+.use-card-title {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin: 4px 0 6px;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+.use-card-desc {
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--text-2);
+  margin: 0;
+  flex: 1;
+}
+.use-card-cta {
+  margin-top: 14px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--accent-2);
+  align-self: flex-start;
+  transition: transform 0.2s;
+}
+.use-card:hover .use-card-cta { transform: translateX(3px); }
+
+.use-cite {
+  max-width: 900px;
+  margin: 48px auto 0;
+  padding: 24px 28px;
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--accent-2);
+  border-radius: 0 8px 8px 0;
+}
+.use-cite-title {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin: 0 0 8px;
+  letter-spacing: -0.005em;
+}
+.use-cite-body {
+  font-size: var(--fs-small);
+  color: var(--text-2);
+  margin: 0 0 10px;
+  line-height: 1.7;
+}
+.use-cite-ref {
+  font-size: var(--fs-small);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.75;
+}
+.use-cite-ref a {
+  color: var(--accent-2);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .use-cards { grid-template-columns: 1fr; }
+}
+
 /* ---- Contact page ---- */
 .contact-card {
   position: relative;

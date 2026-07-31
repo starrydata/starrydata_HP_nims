@@ -1,6 +1,7 @@
 {%- set L = lang or 'ja' -%}
 {%- set langPath = '/en/' if L == 'en' else '/' -%}
 {%- set contactPath = '/en/contact/' if L == 'en' else '/contact/' -%}
+{%- set usePath = '/en/use/' if L == 'en' else '/use/' -%}
 
 <footer class="site-footer">
   <div class="container">
@@ -21,7 +22,7 @@
     </div>
 
     <div>
-      <h5>{{ i18n.nav.use_data[L] }}</h5>
+      <h5><a href="{{ usePath }}">{{ i18n.nav.use_data[L] }}</a></h5>
       <ul>
         <li><a href="https://www.starrydata2.org" target="_blank" rel="noopener">Starrydata2</a></li>
         <li><a href="https://figshare.com/projects/Starrydata_datasets/155129" target="_blank" rel="noopener">Figshare</a></li>

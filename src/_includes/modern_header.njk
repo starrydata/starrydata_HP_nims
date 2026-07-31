@@ -14,9 +14,11 @@
 {%- set researchPath = '/en/research/' if L == 'en' else '/research/' -%}
 {%- set newsPath = '/en/news/' if L == 'en' else '/news/' -%}
 {%- set contactPath = '/en/contact/' if L == 'en' else '/contact/' -%}
+{%- set usePath = '/en/use/' if L == 'en' else '/use/' -%}
 
     <nav class="site-nav" aria-label="Global">
       <a href="{{ langPath }}#about">{{ i18n.nav.about[L] }}</a>
+      <a href="{{ usePath }}">{{ i18n.nav.use_data[L] }}</a>
       <a href="{{ researchPath }}">{{ i18n.nav.research[L] }}</a>
       <a href="{{ teamPath }}">{{ i18n.nav.team[L] }}</a>
       <a href="{{ papersPath }}">{{ i18n.nav.publications[L] }}</a>

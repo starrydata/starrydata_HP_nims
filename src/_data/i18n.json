@@ -89,9 +89,9 @@
       "en": "Use the data, contribute data, partner on research, or support the project — there are many ways to get involved."
     },
     "card1_t": { "ja": "データを登録・利用する",            "en": "Use the data" },
-    "card1_d": { "ja": "論文中の実験グラフから登録された実験データをStarrydata Webシステムから無償で検索・閲覧・ダウンロード利用が可能です。",
-                 "en": "Free search and download via the web system — instantly usable for ML and materials discovery." },
-    "card1_cta": { "ja": "Starrydata2 を試す →",  "en": "Try Starrydata2 →" },
+    "card1_d": { "ja": "Web システム・マニュアル・Figshare・GitHub など、Starrydata のデータを利用する方法をひとまとめに紹介しています。",
+                 "en": "Everything you need to use Starrydata — web system, manual, Figshare snapshots and GitHub datasets, in one place." },
+    "card1_cta": { "ja": "データを使う →",  "en": "Use the data →" },
 
     "card2_t": { "ja": "共同研究",        "en": "Research & funding partnership" },
     "card2_d": { "ja": "共同研究のご相談を歓迎しています。Materials Informatics の研究開発を、ぜひ一緒に進めましょう。",
@@ -234,6 +234,93 @@
     "lead": {
       "ja": "Starrydata2 は、論文に掲載されたプロット画像から実験データを抽出・共有するオープンデータベースです。本マニュアルは、データの閲覧・検索・登録・ダウンロード・API 利用までを 1 ページずつ解説します。",
       "en": "Starrydata2 is an open database that extracts and shares experimental data from plot images published in academic papers. This manual walks through browsing, searching, registration, downloading, and API usage one page at a time."
+    }
+  },
+  "use_page": {
+    "eyebrow": { "ja": "データを使う", "en": "Use Data" },
+    "title":   { "ja": "Use Data",     "en": "Use Data" },
+    "lead": {
+      "ja": "Starrydata のデータを、Web システム・API・データセットスナップショットの 3 通りでご利用いただけます。",
+      "en": "Access Starrydata via three routes: the interactive web system, the REST API, or downloadable dataset snapshots."
+    },
+    "cards": {
+      "ja": [
+        {
+          "eyebrow": "WEB SYSTEM",
+          "title":   "Starrydata2 を試す",
+          "desc":    "ブラウザ上で試料検索・グラフ閲覧・CSV ダウンロードができるインタラクティブな Web システム。アカウント登録は無料です。",
+          "cta":     "Starrydata2 を開く",
+          "url":     "https://www.starrydata2.org",
+          "external": true
+        },
+        {
+          "eyebrow": "MANUAL",
+          "title":   "使い方マニュアル",
+          "desc":    "アカウント登録、データの検索・閲覧、登録（Curation）、ダウンロード・API 利用まで、Starrydata2 の使い方を 1 ページずつ解説しています。",
+          "cta":     "マニュアルを読む",
+          "url":     "/manual/",
+          "external": false
+        },
+        {
+          "eyebrow": "SNAPSHOT",
+          "title":   "Figshare データセット",
+          "desc":    "月次で更新される Starrydata の全データスナップショットを Figshare で公開。引用可能な DOI 付きで、機械学習向けに一括ダウンロードできます。",
+          "cta":     "Figshare を開く",
+          "url":     "https://figshare.com/projects/Starrydata_datasets/155129",
+          "external": true
+        },
+        {
+          "eyebrow": "GITHUB",
+          "title":   "GitHub Datasets",
+          "desc":    "整形済み・分野別のデータセットを GitHub リポジトリで公開しています。Python / Jupyter で直接読み込むサンプルコードも同梱。",
+          "cta":     "GitHub を開く",
+          "url":     "https://github.com/starrydata/starrydata_datasets",
+          "external": true
+        }
+      ],
+      "en": [
+        {
+          "eyebrow": "WEB SYSTEM",
+          "title":   "Try Starrydata2",
+          "desc":    "Interactive web system for sample search, plot browsing, and CSV download in the browser. Free account registration.",
+          "cta":     "Open Starrydata2",
+          "url":     "https://www.starrydata2.org",
+          "external": true
+        },
+        {
+          "eyebrow": "MANUAL",
+          "title":   "User Manual",
+          "desc":    "Step-by-step guide for account setup, browsing, curation, download and API usage of Starrydata2.",
+          "cta":     "Read the manual",
+          "url":     "/manual/",
+          "external": false
+        },
+        {
+          "eyebrow": "SNAPSHOT",
+          "title":   "Figshare Datasets",
+          "desc":    "Monthly snapshots of the full Starrydata dataset with citable DOIs, ready for bulk download and ML workflows.",
+          "cta":     "Open on Figshare",
+          "url":     "https://figshare.com/projects/Starrydata_datasets/155129",
+          "external": true
+        },
+        {
+          "eyebrow": "GITHUB",
+          "title":   "GitHub Datasets",
+          "desc":    "Curated per-field datasets published on GitHub, with Python / Jupyter examples for direct loading.",
+          "cta":     "Open on GitHub",
+          "url":     "https://github.com/starrydata/starrydata_datasets",
+          "external": true
+        }
+      ]
+    },
+    "cite_title": { "ja": "引用について", "en": "How to cite" },
+    "cite_body": {
+      "ja": "Starrydata のデータを研究で利用された際は、以下の論文をご引用ください。",
+      "en": "When you use Starrydata data in your research, please cite the following paper."
+    },
+    "cite_ref": {
+      "ja": "Y. Katsura, M. Kumagai, T. Kodani, M. Kaburagi, K. Kubo, S. Adachi, T. Fujita, R. Yamada, R. Tamura, H. Adachi, and K. Takagi, <em>Starrydata: from published plots to shared materials data</em>, Sci. Technol. Adv. Mater. 26 (2025) 2470145. <a href=\"https://doi.org/10.1080/27660400.2025.2506976\" target=\"_blank\" rel=\"noopener\">DOI: 10.1080/27660400.2025.2506976</a>",
+      "en": "Y. Katsura, M. Kumagai, T. Kodani, M. Kaburagi, K. Kubo, S. Adachi, T. Fujita, R. Yamada, R. Tamura, H. Adachi, and K. Takagi, <em>Starrydata: from published plots to shared materials data</em>, Sci. Technol. Adv. Mater. 26 (2025) 2470145. <a href=\"https://doi.org/10.1080/27660400.2025.2506976\" target=\"_blank\" rel=\"noopener\">DOI: 10.1080/27660400.2025.2506976</a>"
     }
   },
   "team": {
