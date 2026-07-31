@@ -276,6 +276,14 @@
           "cta":     "データセット一覧を開く",
           "url":     "https://starrydata.github.io/starrydata_datasets/",
           "external": true
+        },
+        {
+          "eyebrow": "LINKS",
+          "title":   "関連リンク集",
+          "desc":    "Starrydata プロジェクトが公開している全ツール（3D Explorer, StarryDigitizer 等）・関連論文・チュートリアル・外部連携先へのリンクを 1 ページにまとめています。",
+          "cta":     "リンク集を開く",
+          "url":     "https://starrydata.github.io/links/",
+          "external": true
         }
       ],
       "en": [
@@ -309,6 +317,14 @@
           "desc":    "Official distribution page with per-field (thermoelectric, magnetic, battery, etc.) datasets ready for download. Also linked from the Starrydata2 global nav.",
           "cta":     "Open dataset list",
           "url":     "https://starrydata.github.io/starrydata_datasets/",
+          "external": true
+        },
+        {
+          "eyebrow": "LINKS",
+          "title":   "Related Links",
+          "desc":    "A one-page directory of every Starrydata tool (3D Explorer, StarryDigitizer, etc.), related papers, tutorials, and external resources.",
+          "cta":     "Open the link hub",
+          "url":     "https://starrydata.github.io/links/",
           "external": true
         }
       ]
