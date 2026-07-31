@@ -270,11 +270,11 @@
           "external": true
         },
         {
-          "eyebrow": "GITHUB",
-          "title":   "GitHub Datasets",
-          "desc":    "整形済み・分野別のデータセットを GitHub リポジトリで公開しています。Python / Jupyter で直接読み込むサンプルコードも同梱。",
-          "cta":     "GitHub を開く",
-          "url":     "https://github.com/starrydata/starrydata_datasets",
+          "eyebrow": "DATASETS",
+          "title":   "分野別データセット",
+          "desc":    "熱電・磁性・電池など、分野ごとに整形されたデータセットをダウンロードできる公式配布ページ。Starrydata2 のグローバルナビ「Dataset」からもアクセスできます。",
+          "cta":     "データセット一覧を開く",
+          "url":     "https://starrydata.github.io/starrydata_datasets/",
           "external": true
         }
       ],
@@ -304,11 +304,11 @@
           "external": true
         },
         {
-          "eyebrow": "GITHUB",
-          "title":   "GitHub Datasets",
-          "desc":    "Curated per-field datasets published on GitHub, with Python / Jupyter examples for direct loading.",
-          "cta":     "Open on GitHub",
-          "url":     "https://github.com/starrydata/starrydata_datasets",
+          "eyebrow": "DATASETS",
+          "title":   "Per-Field Datasets",
+          "desc":    "Official distribution page with per-field (thermoelectric, magnetic, battery, etc.) datasets ready for download. Also linked from the Starrydata2 global nav.",
+          "cta":     "Open dataset list",
+          "url":     "https://starrydata.github.io/starrydata_datasets/",
           "external": true
         }
       ]
