@@ -18,29 +18,32 @@ lang: ja
 
 <section class="section section-top-tight">
   <div class="container">
-    <div class="use-cards">
+    <ul class="use-list">
       {%- for c in U.cards[L] %}
-      <a class="use-card"
-         href="{{ c.url }}"
-         {% if c.external %}target="_blank" rel="noopener"{% endif %}>
-        <div class="use-thumb">
-          {% if c.image %}
-          <img src="{{ c.image }}" alt="" loading="lazy">
-          {% else %}
-          <div class="use-thumb-placeholder"><span>{{ c.icon }}</span></div>
-          {% endif %}
-        </div>
-        <div class="use-body">
-          <span class="use-card-eyebrow">{{ c.eyebrow }}</span>
-          <h2 class="use-card-title">{{ c.title }}</h2>
-          <p class="use-card-desc">{{ c.desc }}</p>
-        </div>
-        <span class="use-open">
-          {% if c.external %}↗{% else %}→{% endif %}
-        </span>
-      </a>
+      <li>
+        <a class="use-row"
+           href="{{ c.url }}"
+           {% if c.external %}target="_blank" rel="noopener"{% endif %}>
+          <div class="use-row-thumb">
+            {% if c.image %}
+            <img src="{{ c.image }}" alt="" loading="lazy">
+            {% else %}
+            <div class="use-row-thumb-placeholder"><span>{{ c.icon }}</span></div>
+            {% endif %}
+          </div>
+          <div class="use-row-body">
+            <span class="use-row-eyebrow">{{ c.eyebrow }}</span>
+            <h2 class="use-row-title">{{ c.title }}</h2>
+            <p class="use-row-desc">{{ c.desc }}</p>
+            <span class="use-row-cta">
+              {{ c.cta }}
+              {% if c.external %}↗{% else %}→{% endif %}
+            </span>
+          </div>
+        </a>
+      </li>
       {%- endfor %}
-    </div>
+    </ul>
 
     <div class="use-cite">
       <h2 class="use-cite-title">{{ U.cite_title[L] }}</h2>
