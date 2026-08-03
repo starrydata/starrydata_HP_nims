@@ -361,6 +361,11 @@ p { margin: 0 0 1em; }
   margin-top: 0;
   color: rgba(248,250,252,0.9);
 }
+.stats-cta {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
 .stats-donuts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
