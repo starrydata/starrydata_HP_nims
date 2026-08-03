@@ -99,7 +99,7 @@
   },
   "what_is": {
     "title": {
-      "ja": "What is Starrydata",
+      "ja": "Starrydata とは",
       "en": "What is Starrydata"
     },
     "lead": {
@@ -117,7 +117,7 @@
   },
   "huge_db": {
     "title": {
-      "ja": "A Large-Scale Database",
+      "ja": "大規模データベース",
       "en": "A Large-Scale Database"
     },
     "cta": {
@@ -127,7 +127,7 @@
   },
   "apps": {
     "title": {
-      "ja": "Apps & Systems",
+      "ja": "関連アプリケーション",
       "en": "Apps & Systems"
     },
     "lead": {
@@ -141,7 +141,7 @@
   },
   "get_involved": {
     "title": {
-      "ja": "Get Involved",
+      "ja": "プロジェクトに参加する",
       "en": "Get Involved"
     },
     "lead": {
@@ -237,7 +237,7 @@
   },
   "fields": {
     "title": {
-      "ja": "Research",
+      "ja": "研究テーマ",
       "en": "Research"
     },
     "see_all": {
@@ -247,7 +247,7 @@
   },
   "publications": {
     "title": {
-      "ja": "Featured Publications",
+      "ja": "主要論文",
       "en": "Featured Publications"
     },
     "see_all": {
@@ -257,7 +257,7 @@
   },
   "news": {
     "title": {
-      "ja": "News",
+      "ja": "ニュース",
       "en": "News"
     },
     "see_all": {
@@ -280,12 +280,8 @@
     }
   },
   "contact_page": {
-    "eyebrow": {
-      "ja": "お問い合わせ",
-      "en": "Get in touch"
-    },
     "title": {
-      "ja": "Contact",
+      "ja": "お問い合わせ",
       "en": "Contact"
     },
     "lead": {
@@ -388,32 +384,20 @@
     }
   },
   "team_page": {
-    "eyebrow": {
-      "ja": "メンバー",
-      "en": "Team"
-    },
     "title": {
-      "ja": "Members",
+      "ja": "メンバー",
       "en": "Members"
     }
   },
   "news_page": {
-    "eyebrow": {
-      "ja": "ニュース",
-      "en": "News"
-    },
     "title": {
-      "ja": "News",
+      "ja": "ニュース",
       "en": "News"
     }
   },
   "papers_page": {
-    "eyebrow": {
-      "ja": "論文",
-      "en": "Publications"
-    },
     "title": {
-      "ja": "Publications",
+      "ja": "論文",
       "en": "Publications"
     },
     "lead": {
@@ -422,12 +406,8 @@
     }
   },
   "manual_page": {
-    "eyebrow": {
-      "ja": "Starrydata2 マニュアル",
-      "en": "User Manual"
-    },
     "title": {
-      "ja": "Manual",
+      "ja": "マニュアル",
       "en": "Starrydata2 Manual"
     },
     "lead": {
@@ -436,12 +416,8 @@
     }
   },
   "use_page": {
-    "eyebrow": {
-      "ja": "データを使う",
-      "en": "Use Data"
-    },
     "title": {
-      "ja": "Use Data",
+      "ja": "データを使う",
       "en": "Use Data"
     },
     "lead": {
@@ -573,7 +549,7 @@
   },
   "team": {
     "title": {
-      "ja": "Team",
+      "ja": "メンバー",
       "en": "Team"
     },
     "subtitle": {

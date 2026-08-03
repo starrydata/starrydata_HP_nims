@@ -72,7 +72,7 @@ lang: ja
 <!-- =================== WHAT IS =================== -->
 <section class="section" id="about">
   <div class="container">
-    <h2 data-jp="Starrydataとは">{{ i18n.what_is.title[L] }}</h2>
+    <h2 data-echo="{{ i18n.what_is.title[L] }}">{{ i18n.what_is.title[L] }}</h2>
     <p class="lead-large">{{ i18n.what_is.lead[L] | safe }}</p>
     {%- for para in i18n.what_is.body[L] %}
     <p class="prose">{{ para | safe }}</p>
@@ -85,7 +85,7 @@ lang: ja
   <div class="container">
     <div class="grid-2col">
       <div class="text-col">
-        <h2 data-jp="巨大なデータベース">{{ i18n.huge_db.title[L] }}</h2>
+        <h2 data-echo="{{ i18n.huge_db.title[L] }}">{{ i18n.huge_db.title[L] }}</h2>
         <p class="lead">
           13,000本以上の論文から、<strong data-counts="samples">104,823</strong> samples・<strong data-counts="curves">233,061</strong> curves を公開。
           論文中のグラフから手作業で読み取った高品質な数値データを、機械学習・データ解析に直接利用できる形で提供しています。
@@ -111,7 +111,7 @@ lang: ja
 <!-- =================== APPS / SYSTEMS =================== -->
 <section class="section" id="apps">
   <div class="container">
-    <h2 data-jp="アプリケーション">{{ i18n.apps.title[L] }}</h2>
+    <h2 data-echo="{{ i18n.apps.title[L] }}">{{ i18n.apps.title[L] }}</h2>
     <p class="lead">{{ i18n.apps.lead[L] }}</p>
 
     <div class="apps-grid">
@@ -137,7 +137,7 @@ lang: ja
 <!-- =================== GET INVOLVED =================== -->
 <section class="section" id="get-involved" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="container">
-    <h2 data-jp="参加する">{{ i18n.get_involved.title[L] }}</h2>
+    <h2 data-echo="{{ i18n.get_involved.title[L] }}">{{ i18n.get_involved.title[L] }}</h2>
     <p class="lead">{{ i18n.get_involved.lead[L] }}</p>
 
     <div class="involve-grid">
@@ -166,7 +166,7 @@ lang: ja
 <!-- =================== RESEARCH FIELDS =================== -->
 <section class="section" id="research" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="container">
-    <h2 data-jp="研究テーマ">{{ i18n.fields.title[L] }}</h2>
+    <h2 data-echo="{{ i18n.fields.title[L] }}">{{ i18n.fields.title[L] }}</h2>
     <p class="lead lead-wide">7 つの研究領域で、論文からの実験データ収集と Materials Informatics の研究を進めています。</p>
 
     <div class="fields-grid">
@@ -217,7 +217,7 @@ lang: ja
 <!-- =================== PUBLICATIONS =================== -->
 <section class="section" id="publications">
   <div class="container">
-    <h2 data-jp="主要論文">{{ i18n.publications.title[L] }}</h2>
+    <h2 data-echo="{{ i18n.publications.title[L] }}">{{ i18n.publications.title[L] }}</h2>
     <p class="lead lead-wide">Starrydata プロジェクトの代表論文（最新 3 件）。全 {{ papers.project_papers_count }} 本のプロジェクト論文と {{ papers.citing_papers_count }} 本の引用論文は一覧ページで。</p>
 
     <div class="card-grid">
@@ -241,7 +241,7 @@ lang: ja
 <!-- =================== NEWS =================== -->
 <section class="section" id="news" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="container">
-    <h2 data-jp="ニュース">{{ i18n.news.title[L] }}</h2>
+    <h2 data-echo="{{ i18n.news.title[L] }}">{{ i18n.news.title[L] }}</h2>
 
     <div class="news-list-box">
       <ul class="news-list">
@@ -280,7 +280,7 @@ lang: ja
 <!-- =================== TEAM =================== -->
 <section class="section" id="team">
   <div class="container">
-    <h2 data-jp="メンバー">{{ i18n.team.title[L] }}</h2>
+    <h2 data-echo="{{ i18n.team.title[L] }}">{{ i18n.team.title[L] }}</h2>
     <p class="lead">Starrydata は無機材料・データ科学・Web 開発の研究者・エンジニアで構成された専属チームで運営されています。</p>
 
     <div class="team-grid">

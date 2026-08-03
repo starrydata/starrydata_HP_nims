@@ -1,0 +1,147 @@
+---
+layout: modern.njk
+permalink: /manual/search/index.html
+title: 検索・閲覧
+lang: ja
+bodyId: manual
+---
+
+{%- set L = "ja" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Manual / Chapter 2</span>
+    <h1>検索・閲覧</h1>
+    <p class="lead">
+      ログイン後は、領域別の Project（データベース）を選び → 論文一覧で
+      検索・絞り込み → 個別論文の Data ページを開く、という流れで閲覧します。
+    </p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container">
+
+    <h2>2.1 Databases（Project）一覧</h2>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_03_databases.png" alt="Databases 一覧ページ">
+      <figcaption>図 2-1: ログイン直後の <strong>Databases</strong> ページ。GeneralDB（全件）と 4 つの領域別プロジェクト（Thermoelectric / Magnetic / Dielectric / Battery）が並ぶ。右側に Changelog（システム更新履歴）。</figcaption>
+    </figure>
+
+    <p class="prose">
+      各プロジェクトのカードには次の件数が表示されます（数字は更新時点）。
+    </p>
+    <ul class="prose">
+      <li><strong>Bibliographic information</strong>: 書誌情報を登録した論文数</li>
+      <li><strong>Papers with data</strong>: 抽出済みデータを保有する論文数</li>
+      <li><strong>Figures</strong>: 抽出済み図の数</li>
+      <li><strong>Samples</strong>: 抽出済み試料の数</li>
+      <li><strong>Mylists</strong>: そのデータベース内に作ったあなたの My List 数</li>
+    </ul>
+
+    <div class="prose" style="background:#e8f5e9; border-left:4px solid #43a047; padding:14px 18px; border-radius:6px; margin:18px 0;">
+      <strong>使い分けの目安:</strong> 領域横断で探したい場合は <code>GeneralDB</code>。
+      機械学習や統計解析で特定領域に絞りたい場合は対応する領域別プロジェクトを選ぶと、
+      論文の単位・物性のテンプレートが領域専用のものになります。
+    </div>
+
+    <h2>2.2 データの階層構造</h2>
+    <p class="prose">
+      Starrydata2 のデータは以下の 3 階層 + 図参照で整理されています。公式データセット（→ <a href="/manual/download/">Chapter 4</a>）の 3 つの CSV ファイル（papers / samples / curves）もこの構造に対応します。
+    </p>
+    <table class="prose" style="width:100%; border-collapse:collapse; margin:14px 0;">
+      <thead>
+        <tr style="background:#eef2ff;">
+          <th style="text-align:left; padding:10px; border:1px solid var(--line);">階層</th>
+          <th style="text-align:left; padding:10px; border:1px solid var(--line);">意味</th>
+          <th style="text-align:left; padding:10px; border:1px solid var(--line);">識別子</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:10px; border:1px solid var(--line);">Paper</td><td style="padding:10px; border:1px solid var(--line);">論文（書誌情報）。<strong>SID</strong>（Starrydata ID）は DOI を DB に Add した時点で論文ごとに一意に付与される。</td><td style="padding:10px; border:1px solid var(--line);"><strong><code>SID</code></strong></td></tr>
+        <tr><td style="padding:10px; border:1px solid var(--line);">Sample</td><td style="padding:10px; border:1px solid var(--line);">試料（組成・作製プロセスのまとまり）。1 論文に複数。</td><td style="padding:10px; border:1px solid var(--line);"><code>sample_id</code></td></tr>
+        <tr><td style="padding:10px; border:1px solid var(--line);">Figure</td><td style="padding:10px; border:1px solid var(--line);">論文中の図番号（例 Fig 5a）。Curve 行の <code>figure_name</code> で参照。</td><td style="padding:10px; border:1px solid var(--line);"><code>figure_id</code></td></tr>
+        <tr><td style="padding:10px; border:1px solid var(--line);">Curve</td><td style="padding:10px; border:1px solid var(--line);">1 つの Figure × 1 Sample × 1 物性ペア(x,y) のカーブ。x / y は配列。</td><td style="padding:10px; border:1px solid var(--line);">—</td></tr>
+      </tbody>
+    </table>
+    <div class="prose" style="background:#e8f5e9; border-left:4px solid #43a047; padding:14px 18px; border-radius:6px; margin:18px 0;">
+      <strong>SID と sample_id の違い:</strong> <strong>SID</strong> = 論文の ID（DOI を Add すると 1 件付く）。<code>sample_id</code> = 試料の ID（1 論文の中で多数発生）。検索フィールドの「SID」は前者を指します。
+    </div>
+
+    <h2 id="paper-list">2.3 論文一覧ページ</h2>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_04_paper_list.png" alt="ThermoelectricMaterials の論文一覧ページ">
+      <figcaption>図 2-2: 論文一覧ページ（ThermoelectricMaterials の例）。左に検索パネル・My Lists・DOI 一括追加、右に論文カードのリスト、上部に Sort by Date。</figcaption>
+    </figure>
+
+    <p class="prose">
+      Databases から Project を選ぶと、その Project の論文一覧ページに入ります。論文カードには SID / DOI / 図数 / 試料数 / 年 / Editor 名 と、書誌情報・Data・Print・csv・json などのアクションリンクが並びます。
+    </p>
+
+    <h2 id="search-papers">2.4 論文の検索</h2>
+    <p class="prose">
+      左サイドバー上部の <strong>Search papers within list</strong> で、以下のフィールドから検索できます。
+    </p>
+    <ul class="prose">
+      <li><strong>DOI</strong>: DOI 完全/部分一致</li>
+      <li><strong>SID</strong>: <strong>Starrydata ID</strong>（論文ごとの一意 ID、DOI を DB に Add した時点で付与される）。Sample の <code>sampleid</code> とは別物。</li>
+      <li><strong>Title</strong>: タイトル中の文字列</li>
+      <li><strong>Author</strong>: 著者名</li>
+      <li><strong>Journal</strong>: 誌名</li>
+      <li><strong>Editor</strong>: その論文の Curator（登録/編集者）の Username</li>
+    </ul>
+
+    <p class="prose">
+      下のラジオで <strong>all / with data / without data</strong> を切り替え、データ抽出済みのものだけ・未抽出のものだけに絞り込めます。「Search」ボタンで実行。検索結果は上部の <strong>Sort by Date</strong>（昇順/降順）で並び替え可能です。
+    </p>
+
+    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+      <strong>注意:</strong> 複数キーワードの AND 検索には未対応です。入力したスペースもキーワードの一部として扱われるため、検索語は 1 つに絞ってください（例: <code>thermoelectric</code> / <code>Bi2Te3</code>）。AND/OR の組成検索は <a href="/manual/download/#api">API</a> 経由でのみ可能です。
+    </div>
+
+    <h2>2.5 1 ページあたりの件数とページ送り</h2>
+    <p class="prose">
+      結果はデフォルトで <strong>25 件/ページ</strong>。下部のセレクタで件数を増やせますが、500 件以上だと描画に数秒かかります。ページ右下のページ送りで前後の結果に移動できます。
+    </p>
+
+    <h2 id="sample-detail">2.6 個別論文 / Data ページの見方</h2>
+    <p class="prose">
+      論文カードのタイトル、または「Data」リンクをクリックすると詳細ページに遷移します。<strong>「Data」をクリックすると Data ページが開き、Figure / Sample のテーブルと、登録済みの軸・値・可視化プロットを一覧できます</strong>（→ <a href="/manual/register/">Chapter 3</a>）。
+    </p>
+    <ul class="prose">
+      <li><strong>書誌情報</strong>: タイトル、著者、ジャーナル、年、DOI（出版社サイトへリンク）</li>
+      <li><strong>Editors</strong>: 登録/編集を行った Curator の Username</li>
+      <li><strong>Figures テーブル</strong>: Figure ID / Figure name / Property(x), (y) / Unit(x), (y)</li>
+      <li><strong>Samples テーブル</strong>: Sample ID / Sample name / Composition</li>
+      <li><strong>Plot</strong>: 右側に登録済みカーブを Plotly で可視化（凡例で系列の表示/非表示を切替可能）</li>
+    </ul>
+
+    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+      <strong>PDF 本文について:</strong> Starrydata2 は<strong>論文の全文 PDF を保持していません</strong>。DOI リンク先の出版社サイトへ移動して取得してください。アクセス権限は所属機関の購読契約に依存します。
+    </div>
+
+    <h2>2.7 関連可視化ツール</h2>
+    <p class="prose">
+      個別データの閲覧に加え、グローバルナビから以下の俯瞰ツールにアクセスできます。
+    </p>
+    <ul class="prose">
+      <li><strong>Visualizer</strong> — 物性値の散布図ブラウザ</li>
+      <li><strong>Explorer / Explorer3D</strong> — 元素組成・温度を絡めた 2D/3D の組成探索</li>
+      <li><strong>Datasets</strong> — 凍結スナップショット（→ <a href="/manual/download/#mdr">Chapter 4.5</a>）</li>
+      <li><strong>Request</strong> — 新規データ・機能のリクエスト窓口</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="section" style="background:#f7f9ff; border-top:1px solid var(--line);">
+  <div class="container">
+    <h2>次のステップ</h2>
+    <ul class="prose">
+      <li>気になるデータが見つかった → <a href="/manual/download/">Chapter 4: ダウンロード・API</a> で取得</li>
+      <li>自分でデータを追加したい → <a href="/manual/register/">Chapter 3: データ登録</a></li>
+    </ul>
+  </div>
+</section>

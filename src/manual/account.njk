@@ -1,0 +1,115 @@
+---
+layout: modern.njk
+permalink: /manual/account/index.html
+title: アカウント登録・ログイン
+lang: ja
+bodyId: manual
+---
+
+{%- set L = "ja" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Manual / Chapter 1</span>
+    <h1>アカウント登録・ログイン</h1>
+    <p class="lead">
+      Starrydata2 の<strong>データベースを閲覧・検索するにはサインインが必須</strong>です。
+      初めての方はまず Signup でアカウントを作成し、登録メールに届く認証コードで
+      2 段階認証を完了してください。
+    </p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container">
+
+    <h2>1.1 トップページ</h2>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_01_top_login.png" alt="Starrydata2 トップページと Login ダイアログ">
+      <figcaption>図 1-1: Starrydata2 トップページ。右上に <strong>Login</strong> / <strong>Signup</strong> ボタン、中央右に Login ダイアログ（Username / Password）。左ブロックではプロジェクト概要と引用すべき出典論文が示される。</figcaption>
+    </figure>
+
+    <p class="prose">
+      右上のグローバルナビには <strong>Visualizer / Explorer / Explorer3D / Datasets / Request / Login / Signup</strong> の各メニューがあります。ログイン後は Login/Signup が
+      <strong>Databases / Library / Settings / Logout</strong> に置き換わります。
+    </p>
+
+    <h2>1.2 Signup（アカウント作成）</h2>
+    <ol class="prose">
+      <li>右上の「<strong>Signup</strong>」をクリック。</li>
+      <li>登録フォームで <strong>Username</strong>、<strong>Email</strong>、<strong>Password</strong> を入力します。
+        <ul>
+          <li>Username はあなたが登録・編集したデータセットに表示されるため、他のユーザーから識別可能な名前（実名 or 研究者 ID）を推奨。</li>
+          <li>Email は<strong>サインアップ確定と毎回のログイン時の認証コード送信先</strong>として必須。確実に受信できるアドレスを登録してください。</li>
+        </ul>
+      </li>
+      <li>「Sign up」を押すと、登録 Email 宛に確認コードが送信されます。</li>
+      <li>届いたコードを入力して登録完了。完了と同時にログイン状態になります。</li>
+    </ol>
+
+    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+      <strong>注意:</strong> 登録 Email は<strong>ログインのたびに 2 段階認証コードを受け取る</strong>場所です。
+      個人の Gmail など長期的に利用可能なアドレスを推奨します。所属組織のアドレスを使う場合、退職・異動でアクセスできなくなると 2 段階認証を通過できず、アカウント回復に管理者対応が必要になります。
+    </div>
+
+    <h2>1.3 Login（2 段階認証）</h2>
+    <p class="prose">
+      ログインは <strong>① Username / Password 入力</strong> → <strong>② メール認証コード入力</strong>の 2 ステップです。
+    </p>
+    <ol class="prose">
+      <li>右上の「<strong>Login</strong>」をクリックすると、トップに Login ダイアログが表示されます（図 1-1 右）。Username と Password を入力し「Login」を押す。</li>
+      <li>登録 Email 宛に Starrydata2 から<strong>6 桁の認証コード</strong>が送信されます。</li>
+      <li>「Two-Factor Authentication」画面で、届いた 6 桁コードを入力し「<strong>Verify</strong>」をクリック（図 1-2）。</li>
+    </ol>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_02_2fa.png" alt="Two-Factor Authentication 画面で 6 桁コードを入力">
+      <figcaption>図 1-2: <strong>Two-Factor Authentication</strong> 画面。「A verification code has been sent to ＜Email＞. Please enter the code below.」と表示され、6-digit code 入力欄と「Verify」ボタンが現れる。</figcaption>
+    </figure>
+
+    <ol class="prose" start="4">
+      <li>認証に成功するとデータベース一覧ページ（→ <a href="/manual/search/">Chapter 2</a>）に遷移し、右上に Logout / Settings / Library / Databases メニューが表示されます。</li>
+      <li>共用 PC で作業した場合は、終了時に必ず「<strong>Logout</strong>」をクリックしてください。</li>
+    </ol>
+
+    <div class="prose" style="background:#e8f5e9; border-left:4px solid #43a047; padding:14px 18px; border-radius:6px; margin:18px 0;">
+      <strong>認証コードの有効期限:</strong> コードには短い有効期限があります。期限切れの場合は、もう一度 Login をやり直すと新しいコードが送信されます。同じセッション内で複数回コードを発行した場合は、<strong>最後に届いたコード</strong>のみ有効です。
+    </div>
+
+    <h2>1.4 認証コードが届かないとき</h2>
+    <ul class="prose">
+      <li><strong>迷惑メールフォルダ</strong>を確認する（Starrydata2 / NIMS 由来のメールがフィルタされていないか）。</li>
+      <li>メールアドレスのタイプミスがないか、Signup 時に登録したアドレスと一致しているか確認する。</li>
+      <li>所属機関のメールサーバが外部メールを遮断していないか確認する。</li>
+      <li>それでも届かない場合は、<a href="/contact/">Contact ページ</a>から Username を明記の上、管理者に問い合わせてください。</li>
+    </ul>
+
+    <h2>1.5 パスワードを忘れた場合</h2>
+    <p class="prose">
+      パスワードの再発行は Starrydata2 管理者への問い合わせが必要です。Username と登録 Email を明記の上、<a href="/contact/">Contact ページ</a>のフォームから連絡してください。復元できない場合は、新しいユーザー名で再登録することも可能ですが、過去の curation 履歴は旧アカウントに紐付いたまま残ります。
+    </p>
+
+    <h2>1.6 マイリスト（My Lists）の使い方</h2>
+    <p class="prose">
+      ログイン後、各データベースの論文一覧ページの左サイドバーに「<strong>My Lists</strong>」セクションが現れます（→ <a href="/manual/search/">Chapter 2</a>）。ここで個人の論文リストを作成し、対象論文をグループ化して管理できます。
+    </p>
+    <ol class="prose">
+      <li>「+ New list」でリストを新規作成（例: <code>2026_BiTe_review</code>）。</li>
+      <li>論文を検索し、リスト名をクリックして対象論文を追加。</li>
+      <li>DOI を貼り付けて一括追加することも可能（→ <a href="/manual/register/#doi-list">Chapter 3.2</a>）。</li>
+    </ol>
+
+  </div>
+</section>
+
+<section class="section" style="background:#f7f9ff; border-top:1px solid var(--line);">
+  <div class="container">
+    <h2>次のステップ</h2>
+    <ul class="prose">
+      <li>データを<strong>見るだけ</strong>でよい方 → <a href="/manual/search/">Chapter 2: 検索・閲覧</a></li>
+      <li>データを<strong>登録</strong>したい方 → <a href="/manual/register/">Chapter 3: データ登録</a></li>
+      <li>データを<strong>大量に取り込み</strong>たい方 → <a href="/manual/download/">Chapter 4: ダウンロード・API</a></li>
+    </ul>
+  </div>
+</section>

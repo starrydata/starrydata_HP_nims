@@ -34,7 +34,7 @@
 
   /* typography scale */
   /* Typography scale (unified) */
-  --fs-hero-h1: clamp(2.6rem, 5.6vw, 4.4rem);  /* トップページのヒーロー h1 */
+  --fs-hero-h1: clamp(1.9rem, 4.2vw, 3.3rem);  /* トップページのヒーロー h1 */
   --fs-h1:      clamp(2rem, 4vw, 3rem);         /* サブページの h1 (.page-head h1) */
   --fs-h2:      clamp(1.55rem, 2.6vw, 2.1rem);  /* セクション見出し */
   --fs-h3:      1.15rem;                        /* カード見出し・サブ見出し */
@@ -230,31 +230,28 @@ p { margin: 0 0 1em; }
   letter-spacing: -0.018em;
 }
 
-/* Top ページ: セクション h2 の背後に日本語名を大きく薄グレーで配置 */
-.section h2[data-jp] {
+/* セクション h2 の右上に、同じ文字を小さめ薄グレーで shadow-style に置く */
+.section h2[data-echo] {
   position: relative;
   display: inline-block;
-  isolation: isolate;    /* z-index: -1 の ::before を h2 内に閉じ込める */
-  padding-top: 0.4em;    /* 上に日本語テキストが顔を出すスペース */
+  isolation: isolate;
 }
-.section h2[data-jp]::before {
-  content: attr(data-jp);
+.section h2[data-echo]::before {
+  content: attr(data-echo);
   position: absolute;
   top: -0.35em;
-  left: 0;
-  font-size: clamp(2.2rem, 5.5vw, 4rem);
-  font-weight: 900;
-  color: rgba(30, 27, 75, 0.06);
-  letter-spacing: -0.02em;
-  text-transform: none;
-  line-height: 1;
+  left: 0.4em;
+  font-size: 0.55em;
+  font-weight: 800;
+  color: rgba(30, 27, 75, 0.11);
+  letter-spacing: -0.005em;
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
   z-index: -1;
 }
 @media (max-width: 640px) {
-  .section h2[data-jp]::before { font-size: clamp(1.6rem, 8vw, 2.6rem); }
+  .section h2[data-echo]::before { font-size: 0.5em; top: -0.3em; left: 0.3em; }
 }
 .section .eyebrow,
 .eyebrow {
@@ -1825,40 +1822,38 @@ p { margin: 0 0 1em; }
 }
 .page-head > .container { position: relative; }
 
-/* eyebrow を h1 の背後に大きく被せる装飾 */
-.page-head .eyebrow {
-  position: absolute;
-  top: -0.12em;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  font-size: clamp(2.8rem, 8vw, 6rem);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: rgba(30, 27, 75, 0.06);
-  text-transform: none;
-  white-space: nowrap;
-  overflow: hidden;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-}
+/* h1: 現在言語のメインタイトル */
 .page-head h1 {
   position: relative;
-  z-index: 1;
+  display: inline-block;
   font-size: var(--fs-h1);
-  margin: 20px 0 16px;
+  margin: 0 0 16px;
   letter-spacing: -0.018em;
+  isolation: isolate;
+}
+
+/* data-echo: 同じ文字を薄グレーで少し右上にずらした shadow-style エコー */
+.page-head h1[data-echo]::before {
+  content: attr(data-echo);
+  position: absolute;
+  top: -0.35em;
+  left: 0.4em;
+  font-size: 0.55em;
+  font-weight: 800;
+  color: rgba(30, 27, 75, 0.11);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+  letter-spacing: -0.005em;
 }
 .page-head .lead {
   position: relative;
   z-index: 1;
 }
 @media (max-width: 640px) {
-  .page-head .eyebrow { font-size: clamp(1.8rem, 8vw, 3rem); }
-  .page-head h1 { margin-top: 12px; }
+  .page-head h1 { margin-top: 4px; }
+  .page-head h1[data-echo]::before { font-size: 0.5em; top: -0.3em; left: 0.3em; }
 }
 .page-head .lead {
   font-size: var(--fs-lead);

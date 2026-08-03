@@ -10,8 +10,7 @@ lang: ja
 
 <section class="page-head">
   <div class="container">
-    <span class="eyebrow">{{ U.eyebrow[L] }}</span>
-    <h1>{{ U.title[L] }}</h1>
+    <h1 data-echo="{{ U.title[L] }}">{{ U.title[L] }}</h1>
     <p class="lead">{{ U.lead[L] }}</p>
   </div>
 </section>
@@ -46,7 +45,7 @@ lang: ja
     </ul>
 
     <div class="use-cite">
-      <h2 class="use-cite-title" data-jp="{{ U.cite_title_jp[L] }}">{{ U.cite_title[L] }}</h2>
+      <h2 class="use-cite-title" data-echo="{{ U.cite_title[L] }}">{{ U.cite_title[L] }}</h2>
       <p class="use-cite-body">{{ U.cite_body[L] }}</p>
       <p class="use-cite-ref">{{ U.cite_ref[L] | safe }}</p>
     </div>

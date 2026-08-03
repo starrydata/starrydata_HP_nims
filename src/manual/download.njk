@@ -1,0 +1,179 @@
+---
+layout: modern.njk
+permalink: /manual/download/index.html
+title: ダウンロード・API
+lang: ja
+bodyId: manual
+---
+
+{%- set L = "ja" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Manual / Chapter 4</span>
+    <h1>ダウンロード・API</h1>
+    <p class="lead">
+      Starrydata2 のデータは、(1) 個別 Sample / Figure 単位の Web ダウンロード、
+      (2) 公式 <strong>Datasets スナップショット</strong>（3 つの CSV ファイル）、
+      (3) REST API、の 3 経路で取得できます。商用・非商用ともに無償です。
+    </p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container">
+
+    <h2>4.1 Web からの個別ダウンロード</h2>
+    <p class="prose">
+      論文一覧の各論文カードに <strong>csv</strong> / <strong>json</strong> リンクが並んでいます。クリックするとその論文に紐付くカーブデータがダウンロードできます。Data ページ内の「Get Data」「Copy to Clipboard」も同様に少量データ取得に便利です。
+    </p>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/img_01_20.png" alt="Acquired Data ダイアログの Copy to Clipboard / Download .CSV">
+      <figcaption>図 4-1: StarryDigitizer / WebPlotDigitizer の Acquired Data ダイアログ。「Copy to Clipboard」「Download .CSV」「Graph in Plotly」を選べる。Format で桁数や区切り文字も調整可能。</figcaption>
+    </figure>
+
+    <h2 id="dataset">4.2 公式 Datasets スナップショット（推奨）</h2>
+    <p class="prose">
+      機械学習や統計解析で <strong>全件データ</strong>を扱う場合は、グローバルナビの <strong>Datasets</strong> から公開されるスナップショットを使うのが最も効率的です。フォルダには 3 つの CSV と <code>README.md</code>、スナップショット時刻 (<code>db_snapshot.txt</code>) が同梱されます。
+    </p>
+
+    <table class="prose" style="width:100%; border-collapse:collapse; margin:14px 0;">
+      <thead>
+        <tr style="background:#eef2ff;">
+          <th style="text-align:left; padding:10px; border:1px solid var(--line);">ファイル</th>
+          <th style="text-align:left; padding:10px; border:1px solid var(--line);">主なカラム</th>
+          <th style="text-align:left; padding:10px; border:1px solid var(--line);">役割</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px; border:1px solid var(--line);"><code>starrydata_papers.csv</code></td>
+          <td style="padding:10px; border:1px solid var(--line);"><code>SID</code>, <code>DOI</code>, <code>URL</code>, <code>issued</code>, <code>author</code>, <code>title</code>, <code>container_title</code>, <code>volume</code>, <code>issue</code>, <code>page</code>, <code>ISSN</code>, <code>publisher</code>, <code>project_names</code>, <code>created_at</code></td>
+          <td style="padding:10px; border:1px solid var(--line);">論文の書誌情報（1 行 = 1 論文）</td>
+        </tr>
+        <tr>
+          <td style="padding:10px; border:1px solid var(--line);"><code>starrydata_samples.csv</code></td>
+          <td style="padding:10px; border:1px solid var(--line);"><code>sample_name</code>, <code>sample_id</code>, <code>composition</code>, <code>composition_details</code>, <code>SID</code>, <code>DOI</code>, <code>sample_info</code>(JSON), <code>created_at</code>, <code>updated_at</code></td>
+          <td style="padding:10px; border:1px solid var(--line);">試料情報（1 行 = 1 試料）。<code>sample_info</code> は JSON で領域別の属性を含む。</td>
+        </tr>
+        <tr>
+          <td style="padding:10px; border:1px solid var(--line);"><code>starrydata_curves.csv</code></td>
+          <td style="padding:10px; border:1px solid var(--line);"><code>SID</code>, <code>DOI</code>, <code>composition</code>, <code>sample_id</code>, <code>figure_id</code>, <code>figure_name</code>, <code>prop_x</code>, <code>prop_y</code>, <code>unit_x</code>, <code>unit_y</code>, <code>x</code>(JSON 配列), <code>y</code>(JSON 配列), <code>project_names</code>, <code>comments</code>, <code>created_at</code>, <code>updated_at</code></td>
+          <td style="padding:10px; border:1px solid var(--line);">カーブデータ（1 行 = 1 カーブ）。<code>x</code> / <code>y</code> は同長の JSON 配列文字列。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="prose" style="background:#e8f5e9; border-left:4px solid #43a047; padding:14px 18px; border-radius:6px; margin:18px 0;">
+      <strong>結合キー:</strong> 3 ファイルの結合は <strong><code>SID</code></strong>（papers ⇔ samples ⇔ curves）と <strong><code>sample_id</code></strong>（samples ⇔ curves）が基本キー。<code>figure_id</code> は同じ図に属する複数 Curve をまとめるのに使える（Figure 単独のテーブルは無い）。
+    </div>
+
+    <h3>sample_info の構造</h3>
+    <p class="prose">
+      <code>sample_info</code> は <code>{descriptor: {category: "", comment: "", extracted: ""}}</code> 形式の JSON 文字列。領域ごとの descriptor 例:
+    </p>
+    <ul class="prose">
+      <li><strong>熱電 (ThermoelectricMaterials)</strong>: <code>MaterialFamily</code>, <code>DataType</code>, <code>Form</code>, <code>FabricationProcess</code>, <code>ElectricalMeasurement</code>, <code>ThermalMeasurement</code>, <code>Purity</code>, <code>RelativeDensity</code>, <code>GrainSize</code> ほか</li>
+      <li><strong>磁性 (MagneticMaterials)</strong>: <code>DataType</code>, <code>Form</code>, <code>FabricationProcess</code>, <code>MagneticMeasurement</code>, <code>saturation magnetization</code>, <code>coercivity</code>, <code>remanence magnetion</code>, <code>magnetic field</code>, <code>Measurement temperature</code> ほか</li>
+      <li><strong>電池 (BatteryMaterials)</strong>: <code>Cathode active material</code>, <code>Anode active material</code>, <code>Solvent 1/2/3</code>, <code>Solute 1/2/3</code>, <code>Electrolyte Additive 1/2/3</code>, <code>Current density</code>, <code>Upper/Lower voltage limit</code>, <code>Cell type</code> ほか</li>
+    </ul>
+
+    <h2 id="features">4.3 領域別の主要物性</h2>
+    <p class="prose"><strong>熱電</strong>: Temperature / Z-Seebeck coefficient / Electrical resistivity / Electrical conductivity / Thermal conductivity / Power factor / ZT / Carrier mobility / Hall coefficient</p>
+    <p class="prose"><strong>磁性</strong>: Temperature / Magnetic field / Magnetic field strength (H) / Magnetization / Magnetization per weight / Magnetization per volume / Magnetization (Bohr)</p>
+    <p class="prose"><strong>電池</strong>: C rate / Cycle number / Voltage / Discharge capacity / Charge capacity</p>
+
+    <h2 id="python">4.4 Python での読み込み例</h2>
+
+    <p class="prose">CSV 3 ファイルを pandas で結合して扱う基本形:</p>
+    <pre style="background:#0d1b3e; color:#e2e8f0; padding:18px; border-radius:8px; overflow:auto; font-size:13px; line-height:1.6;"><code>import json
+import pandas as pd
+
+# 3 つの CSV を読む
+papers  = pd.read_csv("starrydata_papers.csv")
+samples = pd.read_csv("starrydata_samples.csv")
+curves  = pd.read_csv("starrydata_curves.csv")
+
+# x / y は JSON 配列文字列 → list へ
+curves["x"] = curves["x"].map(json.loads)
+curves["y"] = curves["y"].map(json.loads)
+
+# 試料情報 + 論文情報を Curve に結合（SID と sample_id を使う）
+df = (
+    curves
+    .merge(samples[["sample_id", "sample_name", "sample_info"]], on="sample_id", how="left")
+    .merge(papers[["SID", "title", "issued"]],                   on="SID",       how="left")
+)
+
+# 熱電プロジェクトの Seebeck 係数だけ抽出
+seebeck = df[
+    df["project_names"].str.contains("ThermoelectricMaterials", na=False) &
+    (df["prop_y"] == "Seebeck coefficient")
+]
+print(seebeck[["SID", "composition", "prop_x", "unit_x", "unit_y"]].head())
+</code></pre>
+
+    <p class="prose">展開して長い形式（1 点 = 1 行）にしたい場合:</p>
+    <pre style="background:#0d1b3e; color:#e2e8f0; padding:18px; border-radius:8px; overflow:auto; font-size:13px; line-height:1.6;"><code>long = seebeck.explode(["x", "y"]).rename(columns={"x": "x_value", "y": "y_value"})
+long.to_csv("seebeck_long.csv", index=False)
+</code></pre>
+
+    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+      <strong>単位:</strong> <code>unit_x</code> / <code>unit_y</code> は SI 基本単位の積形式（例 <code>V*K^(-1)</code>）。表示用に整形したい場合は自前で正規表現か <code>sympy</code> を使う。
+    </div>
+
+    <h2 id="api">4.5 REST API</h2>
+    <p class="prose">
+      個別 Sample / Figure / Paper をプログラムから取得する場合は REST API も使えます。認証不要、レスポンスは JSON。
+    </p>
+    <pre style="background:#0d1b3e; color:#e2e8f0; padding:18px; border-radius:8px; overflow:auto; font-size:13px; line-height:1.6;"><code># 個別オブジェクト
+GET https://starrydata.nims.go.jp/starrydata2/api/paper/{SID}
+GET https://starrydata.nims.go.jp/starrydata2/api/sample/{sample_id}
+
+# 属性を絞った取得
+GET https://starrydata.nims.go.jp/starrydata2/api/paper/{SID}/title
+GET https://starrydata.nims.go.jp/starrydata2/api/sample/{sample_id}/composition
+
+# 組成（原子）で検索（AND がデフォルト、OR にしたい場合は末尾 ,or）
+GET https://starrydata.nims.go.jp/starrydata2/api/paper/search?atom=Bi,Te
+GET https://starrydata.nims.go.jp/starrydata2/api/sample/search?atom=Bi,Te
+GET https://starrydata.nims.go.jp/starrydata2/api/sample/search?atom=Bi,Te,or
+</code></pre>
+
+    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+      <strong>レート制限:</strong> 公開された明確な上限はありませんが、機械学習向けの大量取得は<strong>公式 Datasets スナップショット</strong>（4.2）の利用を強く推奨します。短時間に大量リクエストを送ると一時的にブロックされる場合があります。
+    </div>
+
+    <h2 id="mdr">4.6 NIMS MDR スナップショット（引用用途）</h2>
+    <p class="prose">
+      引用可能な凍結スナップショットが NIMS Materials Data Repository (MDR) でも公開されています。バージョン番号と取得日が永続的に紐付くため、研究の再現性のために MDR スナップショットの利用を推奨します。
+    </p>
+    <ul class="prose">
+      <li>Dataset: <a href="https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=en" target="_blank" rel="noopener">Starrydata: from published plots to shared materials data (MDR)</a></li>
+      <li>論文: <a href="https://doi.org/10.1080/27660400.2025.2506976" target="_blank" rel="noopener">STAM:Methods (2025)</a></li>
+    </ul>
+
+    <h2>4.7 ライセンスと引用</h2>
+    <p class="prose">
+      Starrydata2 のデータは商用・非商用を問わず無償で利用できます。論文や報告書で利用する場合は、以下のいずれかを引用してください。
+    </p>
+    <ul class="prose">
+      <li>Y. Katsura et al., <em>Sci. Technol. Adv. Mater.: Methods</em> (2025), DOI: <a href="https://doi.org/10.1080/27660400.2025.2506976" target="_blank" rel="noopener">10.1080/27660400.2025.2506976</a></li>
+      <li>NIMS MDR スナップショット（バージョン番号と取得日を明記）</li>
+      <li>個別データの場合は <strong>元論文 (CrossRef DOI)</strong> も併せて引用</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="section" style="background:#f7f9ff; border-top:1px solid var(--line);">
+  <div class="container">
+    <h2>関連</h2>
+    <ul class="prose">
+      <li><a href="/manual/">マニュアル目次に戻る</a></li>
+      <li><a href="/manual/register/">Chapter 3: データ登録</a></li>
+      <li><a href="https://starrydata.org/tutorial/01.html" target="_blank" rel="noopener">公式チュートリアル</a></li>
+    </ul>
+  </div>
+</section>
