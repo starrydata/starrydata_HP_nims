@@ -131,8 +131,8 @@ p { margin: 0 0 1em; }
 /* ---- Hero ---- */
 .hero {
   background:
-    linear-gradient(rgba(30,27,75,0.25), rgba(30,27,75,0.25)),
-    url('../../assets/images/hero/milky_way_katsura.jpg') center 30%/cover no-repeat,
+    linear-gradient(rgba(30,27,75,0.40), rgba(30,27,75,0.40)),
+    url('../../assets/images/hero/milky_way_katsura.jpg') center center/cover no-repeat fixed,
     var(--grad-hero);
   color: var(--text-on);
   padding: clamp(60px, 7vw, 92px) 0 clamp(44px, 5vw, 64px);
@@ -144,9 +144,8 @@ p { margin: 0 0 1em; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(900px 460px at 80% -10%, rgba(167,139,250,0.22), transparent 60%),
-    radial-gradient(680px 340px at 0% 110%, rgba(99,102,241,0.16), transparent 60%),
-    radial-gradient(1100px 540px at 20% 50%, rgba(30,27,75,0.46), transparent 70%);
+    radial-gradient(900px 460px at 80% -10%, rgba(167,139,250,0.18), transparent 60%),
+    radial-gradient(680px 340px at 0% 110%, rgba(99,102,241,0.14), transparent 60%);
   pointer-events: none;
 }
 .hero .container { position: relative; z-index: 1; max-width: var(--container); }
@@ -304,18 +303,33 @@ p { margin: 0 0 1em; }
 /* ---- Stats ---- */
 .stats {
   background:
-    linear-gradient(rgba(30,27,75,0.55), rgba(30,27,75,0.55)),
-    url('../../assets/images/hero/milky_way_katsura.jpg') center 65%/cover no-repeat,
+    linear-gradient(rgba(30,27,75,0.40), rgba(30,27,75,0.40)),
+    url('../../assets/images/hero/milky_way_katsura.jpg') center center/cover no-repeat fixed,
     var(--bg);
   color: var(--text-on);
-  padding: 96px 0;
+  padding: 32px 0 96px;
   position: relative;
 }
 .stats::before {
   content: "";
   position: absolute; inset: 0;
-  background: radial-gradient(900px 260px at 50% 50%, rgba(30,27,75,0.30), transparent 75%);
+  background: radial-gradient(900px 260px at 50% 50%, rgba(30,27,75,0.18), transparent 75%);
   pointer-events: none;
+}
+/* iOS Safari は background-attachment:fixed を無視するため、
+   モバイルでは stats 側は画像を出さず単色にして「継ぎ目」を消す */
+@media (max-width: 900px) {
+  .hero {
+    background:
+      linear-gradient(rgba(30,27,75,0.40), rgba(30,27,75,0.40)),
+      url('../../assets/images/hero/milky_way_katsura.jpg') center center/cover no-repeat,
+      var(--grad-hero);
+  }
+  .stats {
+    background:
+      linear-gradient(rgba(30,27,75,0.55), rgba(30,27,75,0.55)),
+      #141031;
+  }
 }
 .stats .container { position: relative; }
 .stats-row {
@@ -344,7 +358,7 @@ p { margin: 0 0 1em; }
 
 /* ---- Stats detail: ドーナツ + プロジェクト別テーブル ---- */
 .stats-detail {
-  margin-top: 56px;
+  margin-top: 0;
   color: rgba(248,250,252,0.9);
 }
 .stats-donuts {
