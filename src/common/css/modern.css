@@ -366,6 +366,18 @@ p { margin: 0 0 1em; }
   display: flex;
   justify-content: center;
 }
+.stats-cta .btn {
+  background: #475569;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: none;
+}
+.stats-cta .btn:hover {
+  background: #334155;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
 .stats-donuts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
