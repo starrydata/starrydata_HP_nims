@@ -115,5 +115,153 @@ async function drawTempSeebeck() {
     });
 })();
 </script>
+
+<script>
+// Stats detail: ドーナツ + プロジェクト別テーブル
+// トップページの stats-donuts / stats-project-tbody 要素があるときのみ動作。
+// データソースは /links/ と同じ manifest.json (分野別カウント込み)。
+(function () {
+  var donutsEl = document.getElementById('stats-donuts');
+  var tbodyEl  = document.getElementById('stats-project-tbody');
+  var updatedEl = document.getElementById('stats-updated');
+  if (!donutsEl || !tbodyEl) return;
+
+  var PIE_COLORS = [
+    '#a78bfa', '#818cf8', '#60a5fa', '#22d3ee', '#34d399',
+    '#facc15', '#fb923c', '#f472b6', '#c084fc', '#38bdf8', '#4ade80',
+    '#e879f9', '#fbbf24'
+  ];
+
+  // "PascalCase" → "Words" (GeneralDB → General DB)
+  var prettyName = function (name) {
+    return name.replace(/([a-z])([A-Z])/g, '$1 $2');
+  };
+
+  function drawDonut(canvas, entries, total) {
+    var ctx = canvas.getContext('2d');
+    var parent = canvas.parentElement;
+    var size = Math.min(180, parent.clientWidth - 8);
+    var dpr = window.devicePixelRatio || 1;
+    canvas.width = size * dpr;
+    canvas.height = size * dpr;
+    canvas.style.width = size + 'px';
+    canvas.style.height = size + 'px';
+    ctx.scale(dpr, dpr);
+
+    var cx = size / 2, cy = size / 2, r = size / 2 - 4;
+    var startAngle = -Math.PI / 2;
+
+    for (var i = 0; i < entries.length; i++) {
+      var slice = (entries[i].value / total) * Math.PI * 2;
+      if (slice <= 0) continue;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.arc(cx, cy, r, startAngle, startAngle + slice);
+      ctx.closePath();
+      ctx.fillStyle = PIE_COLORS[i % PIE_COLORS.length];
+      ctx.fill();
+      startAngle += slice;
+    }
+    // 中央くり抜き（Hero 背景色に近い濃紺）
+    ctx.beginPath();
+    ctx.arc(cx, cy, r * 0.58, 0, Math.PI * 2);
+    ctx.fillStyle = '#141031';
+    ctx.fill();
+    // 中央に total
+    ctx.fillStyle = '#e2e8f0';
+    ctx.font = 'bold ' + Math.max(11, size * 0.12) + 'px -apple-system, "Inter", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(total.toLocaleString('en-US'), cx, cy);
+  }
+
+  function sortedProjectEntries(projects) {
+    var entries = Object.entries(projects);
+    var isBattery = function (n) { return /Battery/.test(n); };
+    var batCurves = entries.filter(function (e) { return isBattery(e[0]); })
+                           .map(function (e) { return e[1].curves || 0; });
+    var anchor = batCurves.length ? Math.max.apply(null, batCurves) : -Infinity;
+    var keyOf = function (e) { return isBattery(e[0]) ? anchor : (e[1].curves || 0); };
+    return entries.sort(function (a, b) {
+      var d = keyOf(b) - keyOf(a);
+      return d !== 0 ? d : (b[1].curves || 0) - (a[1].curves || 0);
+    });
+  }
+
+  function renderDonuts(entries, totals) {
+    var metrics = [
+      { key: 'papers',  title: 'Papers',  total: totals.papers  || 0 },
+      { key: 'figures', title: 'Figures', total: totals.figures || 0 },
+      { key: 'samples', title: 'Samples', total: totals.samples || 0 },
+      { key: 'curves',  title: 'Curves',  total: totals.curves  || 0 }
+    ];
+    var html = '';
+    metrics.forEach(function (m) {
+      html += '<div class="stats-donut-card"><h4>' + m.title + '</h4>' +
+              '<canvas id="stats-donut-' + m.key + '"></canvas></div>';
+    });
+    donutsEl.innerHTML = html;
+    metrics.forEach(function (m) {
+      var data = entries.map(function (e) {
+        return { label: prettyName(e[0]), value: e[1][m.key] || 0 };
+      }).filter(function (d) { return d.value > 0; });
+      drawDonut(document.getElementById('stats-donut-' + m.key), data, m.total);
+    });
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+    });
+  }
+
+  function renderTable(entries, totals) {
+    var html = '';
+    for (var i = 0; i < entries.length; i++) {
+      var name = entries[i][0], v = entries[i][1];
+      var color = PIE_COLORS[i % PIE_COLORS.length];
+      html += '<tr>' +
+        '<td><div class="project-cell"><span class="project-dot" style="background:' + color + ';color:' + color + '"></span>' + esc(prettyName(name)) + '</div></td>' +
+        '<td class="num">' + (v.papers  || 0).toLocaleString('en-US') + '</td>' +
+        '<td class="num">' + (v.figures || 0).toLocaleString('en-US') + '</td>' +
+        '<td class="num">' + (v.samples || 0).toLocaleString('en-US') + '</td>' +
+        '<td class="num">' + (v.curves  || 0).toLocaleString('en-US') + '</td>' +
+      '</tr>';
+    }
+    html += '<tr class="total-row">' +
+      '<td>Total</td>' +
+      '<td class="num">' + (totals.papers  || 0).toLocaleString('en-US') + '</td>' +
+      '<td class="num">' + (totals.figures || 0).toLocaleString('en-US') + '</td>' +
+      '<td class="num">' + (totals.samples || 0).toLocaleString('en-US') + '</td>' +
+      '<td class="num">' + (totals.curves  || 0).toLocaleString('en-US') + '</td>' +
+    '</tr>';
+    tbodyEl.innerHTML = html;
+  }
+
+  fetch('https://starrydata.github.io/starrydata_datasets/manifest.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (manifest) {
+      var totals = manifest.totals || {};
+      var projects = {};
+      Object.entries(manifest.projects || {}).forEach(function (e) {
+        projects[e[0]] = (e[1] && e[1].counts) || {};
+      });
+      var entries = sortedProjectEntries(projects);
+      renderDonuts(entries, totals);
+      renderTable(entries, totals);
+
+      // db_snapshot: "2026-07-17 16:58:34 UTC+0900 (JST)"
+      if (updatedEl && manifest.db_snapshot) {
+        var m = String(manifest.db_snapshot).match(/(\d{4})-(\d{2})-(\d{2})/);
+        if (m) updatedEl.textContent = 'Dataset: ' + m[1] + '/' + m[2] + '/' + m[3] + ' update';
+      }
+    })
+    .catch(function (err) {
+      console.warn('manifest.json fetch failed', err);
+      donutsEl.innerHTML = '';
+      tbodyEl.innerHTML = '<tr><td colspan="5" class="stats-loading">Could not load data</td></tr>';
+    });
+})();
+</script>
 </body>
 </html>

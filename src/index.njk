@@ -27,21 +27,44 @@ lang: ja
 <!-- =================== STATS =================== -->
 <section class="stats">
   <div class="container">
-    <div class="stat">
-      <div class="num" data-counts="samples">104,823</div>
-      <div class="label">{{ i18n.stats.samples[L] }}</div>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="num" data-counts="samples">104,823</div>
+        <div class="label">{{ i18n.stats.samples[L] }}</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-counts="curves">233,061</div>
+        <div class="label">{{ i18n.stats.curves[L] }}</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-counts="papers">17,326</div>
+        <div class="label">{{ i18n.stats.papers[L] }}</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-counts="fields">12</div>
+        <div class="label">{{ i18n.stats.fields[L] }}</div>
+      </div>
     </div>
-    <div class="stat">
-      <div class="num" data-counts="curves">233,061</div>
-      <div class="label">{{ i18n.stats.curves[L] }}</div>
-    </div>
-    <div class="stat">
-      <div class="num" data-counts="papers">17,326</div>
-      <div class="label">{{ i18n.stats.papers[L] }}</div>
-    </div>
-    <div class="stat">
-      <div class="num" data-counts="fields">12</div>
-      <div class="label">{{ i18n.stats.fields[L] }}</div>
+
+    <div class="stats-detail">
+      <div class="stats-donuts" id="stats-donuts"></div>
+      <div class="stats-updated" id="stats-updated"></div>
+      <div class="stats-table-wrap">
+        <table class="stats-table">
+          <thead>
+            <tr>
+              <th class="col-project">Research Field</th>
+              <th class="num">Papers</th>
+              <th class="num">Figures</th>
+              <th class="num">Samples</th>
+              <th class="num">Curves</th>
+            </tr>
+          </thead>
+          <tbody id="stats-project-tbody">
+            <tr><td colspan="5" class="stats-loading">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
