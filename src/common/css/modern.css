@@ -1032,11 +1032,14 @@ p { margin: 0 0 1em; }
 .involve-card .btn { align-self: flex-start; margin-top: 6px; }
 .involve-card.highlight .btn-primary { color: #fff; }
 
-/* ---- TOP page: 各セクション本文テキストの折り返し幅をコンテナ(1200px)に統一 ---- */
+/* ---- TOP / Manual page: 各セクション本文テキストの折り返し幅をコンテナ(1200px)に統一 ---- */
 .page-home .hero .lead,
 .page-home .section .lead,
 .page-home .lead-large,
-.page-home .prose {
+.page-home .prose,
+.page-manual .section .lead,
+.page-manual .lead-large,
+.page-manual .prose {
   max-width: none;
 }
 
