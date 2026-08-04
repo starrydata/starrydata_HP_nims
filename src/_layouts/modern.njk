@@ -238,7 +238,17 @@ async function drawTempSeebeck() {
     tbodyEl.innerHTML = html;
   }
 
-  fetch('https://starrydata.github.io/starrydata_datasets/manifest.json', { cache: 'no-store' })
+  // 12 秒でタイムアウトさせて Loading… のまま固まるのを防ぐ
+  function fetchWithTimeout(url, opts, ms) {
+    return Promise.race([
+      fetch(url, opts),
+      new Promise(function (_, reject) {
+        setTimeout(function () { reject(new Error('timeout')); }, ms);
+      })
+    ]);
+  }
+
+  fetchWithTimeout('https://starrydata.github.io/starrydata_datasets/manifest.json', { cache: 'no-store' }, 12000)
     .then(function (r) { return r.json(); })
     .then(function (manifest) {
       var totals = manifest.totals || {};
@@ -258,8 +268,9 @@ async function drawTempSeebeck() {
     })
     .catch(function (err) {
       console.warn('manifest.json fetch failed', err);
-      donutsEl.innerHTML = '';
-      tbodyEl.innerHTML = '<tr><td colspan="5" class="stats-loading">Could not load data</td></tr>';
+      donutsEl.innerHTML = '<p class="stats-loading">Statistics are temporarily unavailable. Open the database for current records.</p>';
+      tbodyEl.innerHTML = '<tr><td colspan="5" class="stats-loading">Statistics are temporarily unavailable.</td></tr>';
+      if (updatedEl) updatedEl.textContent = '';
     });
 })();
 </script>

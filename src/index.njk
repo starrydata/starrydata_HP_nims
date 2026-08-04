@@ -52,6 +52,22 @@ lang: ja
   </div>
 </section>
 
+<!-- =================== TASK NAV =================== -->
+<section class="section task-nav-section" id="tasks">
+  <div class="container">
+    <h2>{{ i18n.task_nav.title[L] }}</h2>
+    <div class="task-nav-grid">
+      {%- for c in i18n.task_nav.cards[L] %}
+      <a class="task-nav-card" href="{{ c.url }}" target="_blank" rel="noopener">
+        <div class="task-nav-icon">{{ c.icon }}</div>
+        <h3>{{ c.title }}</h3>
+        <p>{{ c.desc }}</p>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
 <!-- =================== WHAT IS =================== -->
 <section class="section" id="about">
   <div class="container">

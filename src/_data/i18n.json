@@ -265,6 +265,26 @@
       "en": "View all news"
     }
   },
+  "task_nav": {
+    "title": {
+      "ja": "何をしたいですか?",
+      "en": "What do you want to do?"
+    },
+    "cards": {
+      "ja": [
+        { "icon": "🔍", "title": "データを検索する",         "desc": "試料・論文・物性カーブを検索",       "url": "https://starrydata.nims.go.jp/starrydata2/" },
+        { "icon": "📦", "title": "データセットを取得する", "desc": "CSV・分野別データを取得",              "url": "https://starrydata.github.io/starrydata_datasets/" },
+        { "icon": "📊", "title": "データを可視化する",     "desc": "組成・物性分布を探索",                   "url": "https://starrydata.nims.go.jp/visualizer/" },
+        { "icon": "✏️", "title": "グラフから数値化する",   "desc": "論文画像からデータを抽出",             "url": "https://app.digitizer.starrydata.org" }
+      ],
+      "en": [
+        { "icon": "🔍", "title": "Search data",       "desc": "Search samples, papers and property curves", "url": "https://starrydata.nims.go.jp/starrydata2/" },
+        { "icon": "📦", "title": "Get datasets",       "desc": "Download CSV and per-field datasets",       "url": "https://starrydata.github.io/starrydata_datasets/" },
+        { "icon": "📊", "title": "Visualize data",     "desc": "Explore composition and property spaces",  "url": "https://starrydata.nims.go.jp/visualizer/" },
+        { "icon": "✏️", "title": "Digitize a plot",     "desc": "Extract data from published plot images",  "url": "https://app.digitizer.starrydata.org" }
+      ]
+    }
+  },
   "collaborate": {
     "title": {
       "ja": "Partner with Starrydata",
