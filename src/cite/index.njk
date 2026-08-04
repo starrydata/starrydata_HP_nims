@@ -1,0 +1,63 @@
+---
+layout: modern.njk
+permalink: /cite/index.html
+title: 引用について
+lang: ja
+bodyId: cite
+---
+
+{%- set L = "ja" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Documentation</span>
+    <h1 data-echo="{{ i18n.cite_page.title[L] }}">{{ i18n.cite_page.title[L] }}</h1>
+    <p class="lead">{{ i18n.cite_page.lead[L] }}</p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container">
+
+    <ol class="cite-list">
+      <li class="cite-item">
+        <div class="cite-num">[1]</div>
+        <div class="cite-body">
+          <h2 class="cite-title">
+            <a href="https://doi.org/10.1080/27660400.2025.2506976" target="_blank" rel="noopener">Starrydata: from published plots to shared materials data</a>
+            <span class="cite-year">(2025)</span>
+          </h2>
+          <p class="cite-authors">Yukari Katsura, Masaya Kumagai, Tomoya Mato, Yu Takada, Yuki Ando, Erina Fujita, Fumikazu Hosono, Eiji Koyama, Farhan Mudasar, Ton Nu Thanh Phuong, Naoto Saito, Yoshihiro Sakamoto, Atsumi Tanaka, Dewi Yana, Kaoru Kimura, Koji Tsuda, Masahiko Demura</p>
+          <p class="cite-journal"><em>Science and Technology of Advanced Materials: Methods</em> <strong>5</strong>, 1 (2025) 2506976.</p>
+          <p class="cite-doi">DOI: <a href="https://doi.org/10.1080/27660400.2025.2506976" target="_blank" rel="noopener">10.1080/27660400.2025.2506976</a></p>
+        </div>
+      </li>
+
+      <li class="cite-item">
+        <div class="cite-num">[2]</div>
+        <div class="cite-body">
+          <h2 class="cite-title">
+            <a href="https://doi.org/10.1080/14686996.2019.1603885" target="_blank" rel="noopener">Data-driven analysis of electron relaxation times in PbTe-type thermoelectric materials</a>
+            <span class="cite-year">(2019)</span>
+          </h2>
+          <p class="cite-authors">Yukari Katsura, Masaya Kumagai, Takushi Kodani, Mitsunori Kaneshige, Yuki Ando, Sakiko Gunji, Yoji Imai, Hideyasu Ouchi, Kazuki Tobita, Kaoru Kimura, Koji Tsuda</p>
+          <p class="cite-journal"><em>Science and Technology of Advanced Materials</em> <strong>20</strong> (2019) 511-520.</p>
+          <p class="cite-doi">DOI: <a href="https://doi.org/10.1080/14686996.2019.1603885" target="_blank" rel="noopener">10.1080/14686996.2019.1603885</a></p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="cite-notes">
+      <h3>個別データを引用する場合</h3>
+      <p>Starrydata のデータは元の論文からグラフ画像を経由して抽出したものです。個別の Sample / Curve を論文中で参照する場合は、<strong>元論文 (CrossRef DOI)</strong> も併せて引用してください。各カーブの元論文情報は、Web システムまたはデータセット CSV の <code>DOI</code> 列から取得できます。</p>
+
+      <h3>データセットのバージョンを固定したい場合</h3>
+      <p>研究の再現性を確保したい場合は、Figshare または NIMS MDR で公開されている <strong>バージョン固定のスナップショット</strong>を利用してください。それぞれ DOI が付与されており、取得日を明記することで永続的に引用可能です。</p>
+      <ul class="cite-links">
+        <li><a href="https://figshare.com/projects/Starrydata_datasets/155129" target="_blank" rel="noopener">Figshare — Starrydata datasets</a></li>
+        <li><a href="https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=ja" target="_blank" rel="noopener">NIMS MDR — Starrydata</a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>

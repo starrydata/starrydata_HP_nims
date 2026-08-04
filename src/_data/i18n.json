@@ -425,6 +425,16 @@
       "en": "<span class=\"nowrap-grp\">Featured papers by the Starrydata team and external publications citing our work.</span><br><span class=\"nowrap-grp\">Auto-refreshed monthly from OpenAlex and Crossref Open Citations.</span>"
     }
   },
+  "cite_page": {
+    "title": {
+      "ja": "引用について",
+      "en": "How to cite"
+    },
+    "lead": {
+      "ja": "Starrydata2 の Web システムやデータセットを研究にご利用いただく場合は、以下のいずれかの論文を引用してください。個別のカーブデータを利用した場合は、必要に応じて元論文(CrossRef DOI)も併記してください。",
+      "en": "To use the Starrydata2 web system and datasets, please cite one of the following papers and, if necessary, cite the original source papers."
+    }
+  },
   "manual_page": {
     "title": {
       "ja": "マニュアル",

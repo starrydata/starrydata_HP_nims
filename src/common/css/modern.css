@@ -2571,6 +2571,117 @@ p { margin: 0 0 1em; }
 }
 
 /* ==========================================================================
+   Cite page (/cite/)
+   ========================================================================== */
+.page-cite .section .container { max-width: 900px; }
+
+.cite-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cite-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+.cite-num {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0;
+  padding-top: 2px;
+}
+.cite-body { min-width: 0; }
+.cite-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 10px;
+  letter-spacing: -0.005em;
+}
+.cite-title a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .12s, color .12s;
+}
+.cite-title a:hover {
+  color: var(--accent);
+  border-bottom-color: currentColor;
+}
+.cite-year {
+  color: var(--muted);
+  font-weight: 500;
+  margin-left: 4px;
+}
+.cite-authors {
+  font-size: 14px;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin: 0 0 8px;
+}
+.cite-journal {
+  font-size: 14.5px;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+.cite-doi {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+}
+.cite-doi a { color: inherit; }
+
+.cite-notes {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.cite-notes h3 {
+  font-size: 1.05rem;
+  margin: 24px 0 10px;
+  color: var(--text);
+}
+.cite-notes h3:first-child { margin-top: 0; }
+.cite-notes p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-2);
+  margin: 0 0 12px;
+}
+.cite-notes code {
+  background: #eef2ff;
+  color: #1e293b;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+.cite-links {
+  list-style: disc;
+  padding-left: 1.4em;
+  margin: 12px 0 0;
+}
+.cite-links li { margin: 4px 0; }
+.cite-links a { color: var(--accent); }
+
+@media (max-width: 600px) {
+  .cite-item {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .cite-num { padding-top: 0; }
+}
+
+/* ==========================================================================
    Manual pages
    ========================================================================== */
 
