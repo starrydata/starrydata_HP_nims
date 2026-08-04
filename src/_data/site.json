@@ -8,7 +8,7 @@
   "logo": "/common/img/logo.png",
   "logo_footer": "/common/img/logo_footer.png",
   "external": {
-    "starrydata2": "https://www.starrydata2.org"
+    "starrydata2": "https://starrydata.nims.go.jp/starrydata2/"
   },
   "nav": [
     { "key": "project",       "label": "Starrydataとは",       "href": "/project/index.html" },

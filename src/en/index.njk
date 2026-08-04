@@ -14,13 +14,13 @@ lang: en
       {{ i18n.hero.headline_1[L] | safe }}
       <span class="hero-subtitle">{{ i18n.hero.headline_2[L] | safe }}</span>
     </h1>
-    <p class="lead">{{ i18n.hero.subline[L] }}</p>
+    <p class="lead">{{ i18n.hero.subline[L] | safe }}</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="https://www.starrydata2.org" target="_blank" rel="noopener">
+      <a class="btn btn-primary" href="{{ site.external.starrydata2 }}" target="_blank" rel="noopener">
         {{ i18n.hero.cta_primary[L] }} →
       </a>
       <a class="btn btn-primary" href="https://starrydata.github.io/starrydata_datasets/" target="_blank" rel="noopener">
-        Download datasets →
+        Get datasets →
       </a>
     </div>
   </div>
@@ -75,7 +75,7 @@ lang: en
           Performance distributions across material families, composition–property correlations, outliers and unexplored composition space, and training / benchmark datasets for machine learning — these are the analyses that only a large-scale database makes possible.
         </p>
         <div class="hero-ctas" style="margin-top:28px;">
-          <a class="btn btn-primary" href="https://www.starrydata2.org" target="_blank" rel="noopener">{{ i18n.huge_db.cta[L] }}</a>
+          <a class="btn btn-primary" href="{{ site.external.starrydata2 }}" target="_blank" rel="noopener">{{ i18n.huge_db.cta[L] }}</a>
         </div>
       </div>
       <div class="chart-col">
@@ -102,7 +102,7 @@ lang: en
         <div class="app-body">
           <h3>{{ a.name[L] }}</h3>
           <p class="app-sub">{{ a.subtitle[L] }}</p>
-          <p class="app-desc">{{ a.description[L] }}</p>
+          <p class="app-desc">{{ a.description[L] | safe }}</p>
         </div>
         <span class="app-open">{{ i18n.apps.open[L] }} ↗</span>
       </a>

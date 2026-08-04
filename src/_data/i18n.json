@@ -63,12 +63,12 @@
       "en": "From Published Graphs to Structured Research Data"
     },
     "subline": {
-      "ja": "論文のグラフから抽出した 230,000+ の実験データを中核に、結晶構造シミュレーターや元素反応性マップなど、Materials Informatics 研究を支える多様なオープンデータとWebツールを公開しています。",
-      "en": "Centered on 230,000+ experimental data points extracted from paper plots — complemented by crystal structure simulators, elemental reactivity maps, and other open tools for Materials Informatics research."
+      "ja": "論文のグラフから抽出した <span data-counts=\"curves\">230,000</span>+ の実験データを中核に、結晶構造シミュレーターや元素反応性マップなど、Materials Informatics 研究を支える多様なオープンデータとWebツールを公開しています。",
+      "en": "Centered on <span data-counts=\"curves\">230,000</span>+ experimental data points extracted from paper plots — complemented by crystal structure simulators, elemental reactivity maps, and other open tools for Materials Informatics research."
     },
     "cta_primary": {
-      "ja": "Starrydata Web システムへ",
-      "en": "Go to Starrydata Web System"
+      "ja": "データを検索する",
+      "en": "Search data"
     },
     "cta_secondary": {
       "ja": "共同研究の相談",
@@ -431,7 +431,7 @@
           "title": "Starrydata2 を試す",
           "desc": "ブラウザ上で試料検索・グラフ閲覧・CSV ダウンロードができるインタラクティブな Web システム。アカウント登録は無料です。",
           "cta": "Starrydata2 を開く",
-          "url": "https://www.starrydata2.org",
+          "url": "https://starrydata.nims.go.jp/starrydata2/",
           "image": "/assets/images/use/starrydata2.png",
           "icon": "★",
           "external": true
@@ -483,7 +483,7 @@
           "title": "Try Starrydata2",
           "desc": "Interactive web system for sample search, plot browsing, and CSV download in the browser. Free account registration.",
           "cta": "Open Starrydata2",
-          "url": "https://www.starrydata2.org",
+          "url": "https://starrydata.nims.go.jp/starrydata2/",
           "image": "/assets/images/use/starrydata2.png",
           "icon": "★",
           "external": true

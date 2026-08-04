@@ -13,8 +13,8 @@
         "en": "Main database"
       },
       "description": {
-        "ja": "200,000+ カーブを収録した大規模オープンデータベース。検索・ダウンロードに対応。",
-        "en": "Large open database with 200,000+ curves. Searchable and downloadable."
+        "ja": "<span data-counts=\"curves\">200,000</span>+ カーブを収録した大規模オープンデータベース。検索・ダウンロードに対応。",
+        "en": "Large open database with <span data-counts=\"curves\">200,000</span>+ curves. Searchable and downloadable."
       },
       "url": "https://starrydata.nims.go.jp/starrydata2/",
       "image": "/assets/images/apps/starrydata2.png",
