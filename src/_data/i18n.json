@@ -44,6 +44,14 @@
       "ja": "Use Data",
       "en": "Use Data"
     },
+    "data": {
+      "ja": "Data",
+      "en": "Data"
+    },
+    "systems": {
+      "ja": "Systems",
+      "en": "Systems"
+    },
     "collaborate": {
       "ja": "Collaborate",
       "en": "Collaborate"
@@ -263,6 +271,66 @@
     "see_all": {
       "ja": "ニュース一覧",
       "en": "View all news"
+    }
+  },
+  "data_mega": {
+    "columns": {
+      "ja": [
+        {
+          "title": "Explore",
+          "items": [
+            { "icon": "search",   "title": "データを検索",         "desc": "試料・論文検索 (Starrydata)",   "url": "https://starrydata.nims.go.jp/starrydata2/", "external": true },
+            { "icon": "chart",    "title": "Visualizer",           "desc": "物性値の散布図ブラウザ",         "url": "https://starrydata.nims.go.jp/visualizer/",  "external": true },
+            { "icon": "grid",     "title": "Sample Explorer",      "desc": "組成・元素条件で試料検索",       "url": "https://explorer.starrydata.org",            "external": true },
+            { "icon": "globe",    "title": "Explorer 3D",          "desc": "3D で熱電物性を眺める",           "url": "https://explorer-3d.starrydata.org",         "external": true }
+          ]
+        },
+        {
+          "title": "Download",
+          "items": [
+            { "icon": "package",  "title": "Latest CSV",           "desc": "毎日更新の分野別データセット",   "url": "https://starrydata.github.io/starrydata_datasets/", "external": true },
+            { "icon": "bookmark", "title": "Figshare",             "desc": "DOI 付き凍結スナップショット",   "url": "https://figshare.com/projects/Starrydata_datasets/155129", "external": true },
+            { "icon": "book",     "title": "NIMS MDR",             "desc": "引用可能な永続版データセット",   "url": "https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=ja", "external": true },
+            { "icon": "quote",    "title": "引用について",         "desc": "引用すべき論文一覧",              "url": "/cite/",                                     "external": false }
+          ]
+        },
+        {
+          "title": "Documentation",
+          "items": [
+            { "icon": "book-open","title": "Manual",               "desc": "検索・登録・ダウンロード手順",   "url": "/manual/",                                    "external": false },
+            { "icon": "code",     "title": "REST API",             "desc": "API エンドポイントと使用例",     "url": "/manual/download/#api",                       "external": false },
+            { "icon": "layers",   "title": "Data schema",          "desc": "papers / samples / curves 仕様", "url": "/manual/download/#dataset",                   "external": false }
+          ]
+        }
+      ],
+      "en": [
+        {
+          "title": "Explore",
+          "items": [
+            { "icon": "search",   "title": "Search data",          "desc": "Search samples & papers (Starrydata)", "url": "https://starrydata.nims.go.jp/starrydata2/", "external": true },
+            { "icon": "chart",    "title": "Visualizer",           "desc": "Scatter-plot browser",           "url": "https://starrydata.nims.go.jp/visualizer/",  "external": true },
+            { "icon": "grid",     "title": "Sample Explorer",      "desc": "Filter samples by composition",  "url": "https://explorer.starrydata.org",            "external": true },
+            { "icon": "globe",    "title": "Explorer 3D",          "desc": "3D thermoelectric plots",         "url": "https://explorer-3d.starrydata.org",         "external": true }
+          ]
+        },
+        {
+          "title": "Download",
+          "items": [
+            { "icon": "package",  "title": "Latest CSV",           "desc": "Daily per-field CSV",             "url": "https://starrydata.github.io/starrydata_datasets/", "external": true },
+            { "icon": "bookmark", "title": "Figshare",             "desc": "DOI-fixed snapshots",             "url": "https://figshare.com/projects/Starrydata_datasets/155129", "external": true },
+            { "icon": "book",     "title": "NIMS MDR",             "desc": "Citable frozen snapshots",        "url": "https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=en", "external": true },
+            { "icon": "quote",    "title": "How to cite",          "desc": "Papers to cite",                  "url": "/en/cite/",                                   "external": false }
+          ]
+        },
+        {
+          "title": "Documentation",
+          "items": [
+            { "icon": "book-open","title": "Manual",               "desc": "Search, curation, download",      "url": "/manual/",                                    "external": false },
+            { "icon": "code",     "title": "REST API",             "desc": "API endpoints & examples",        "url": "/manual/download/#api",                       "external": false },
+            { "icon": "layers",   "title": "Data schema",          "desc": "papers / samples / curves spec",  "url": "/manual/download/#dataset",                   "external": false }
+          ]
+        }
+      ]
     }
   },
   "task_nav": {

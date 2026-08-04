@@ -3,26 +3,48 @@
 {%- set langPath = '/en/' if L == 'en' else '/' -%}
 {%- set otherLangPath = '/en/' if otherLang == 'en' else '/' -%}
 
+{%- set researchPath = '/en/research/' if L == 'en' else '/research/' -%}
+{%- set papersPath = '/en/papers/' if L == 'en' else '/papers/' -%}
+{%- set contactPath = '/en/contact/' if L == 'en' else '/contact/' -%}
+{%- set teamPath = '/en/team/' if L == 'en' else '/team/' -%}
+{%- set newsPath = '/en/news/' if L == 'en' else '/news/' -%}
+{%- set usePath = '/en/use/' if L == 'en' else '/use/' -%}
+
+<!-- Nav icon sprite (used by the Data mega-menu) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mm-icon-search"    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+    <symbol id="mm-icon-chart"     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="18" y1="20" x2="18" y2="4"/></symbol>
+    <symbol id="mm-icon-grid"      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="mm-icon-globe"     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+    <symbol id="mm-icon-package"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></symbol>
+    <symbol id="mm-icon-bookmark"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="mm-icon-book"      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+    <symbol id="mm-icon-quote"     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></symbol>
+    <symbol id="mm-icon-book-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="mm-icon-code"      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="mm-icon-layers"    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+  </defs>
+</svg>
+
 <header class="site-header">
   <div class="container">
     <a class="site-logo" href="{{ langPath }}" aria-label="Starrydata">
       <img src="/assets/images/logo/starrydata_logo_wide.png" alt="Starrydata — National Institute for Materials Science" />
     </a>
 
-    {%- set teamPath = '/en/team/' if L == 'en' else '/team/' -%}
-{%- set papersPath = '/en/papers/' if L == 'en' else '/papers/' -%}
-{%- set researchPath = '/en/research/' if L == 'en' else '/research/' -%}
-{%- set newsPath = '/en/news/' if L == 'en' else '/news/' -%}
-{%- set contactPath = '/en/contact/' if L == 'en' else '/contact/' -%}
-{%- set usePath = '/en/use/' if L == 'en' else '/use/' -%}
-
     <nav class="site-nav" aria-label="Global">
       <a href="{{ langPath }}#about">{{ i18n.nav.about[L] }}</a>
-      <a href="{{ usePath }}">{{ i18n.nav.use_data[L] }}</a>
+
+      <div class="site-nav-item has-mega" data-mega-parent>
+        <button class="site-nav-btn" type="button" aria-expanded="false" aria-controls="mega-data" aria-haspopup="true">
+          {{ i18n.nav.data[L] }}
+          <svg class="site-nav-caret" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
       <a href="{{ researchPath }}">{{ i18n.nav.research[L] }}</a>
-      <a href="{{ teamPath }}">{{ i18n.nav.team[L] }}</a>
       <a href="{{ papersPath }}">{{ i18n.nav.publications[L] }}</a>
-      <a href="{{ newsPath }}">{{ i18n.nav.news[L] }}</a>
       <a href="{{ contactPath }}">{{ i18n.nav.contact[L] }}</a>
     </nav>
 
@@ -31,4 +53,79 @@
       <a href="/en/" class="{{ 'is-active' if L == 'en' else '' }}">EN</a>
     </span>
   </div>
+
+  <!-- Data mega-menu panel (positioned below header, full page width) -->
+  <div id="mega-data" class="mega-menu" hidden data-mega-panel>
+    <div class="mega-menu-inner">
+      {%- for col in i18n.data_mega.columns[L] %}
+      <div class="mega-menu-col">
+        <div class="mega-menu-col-title">{{ col.title }}</div>
+        <ul class="mega-menu-list">
+          {%- for item in col.items %}
+          <li>
+            <a class="mega-menu-link" href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>
+              <span class="mega-menu-icon">
+                <svg width="20" height="20" aria-hidden="true"><use href="#mm-icon-{{ item.icon }}"/></svg>
+              </span>
+              <span class="mega-menu-text">
+                <span class="mega-menu-title">
+                  {{ item.title }}{% if item.external %} <span class="mega-menu-ext" aria-hidden="true">↗</span>{% endif %}
+                </span>
+                <span class="mega-menu-desc">{{ item.desc }}</span>
+              </span>
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
 </header>
+
+<script>
+(function () {
+  // Data メガメニューの開閉制御
+  var parent = document.querySelector('[data-mega-parent]');
+  var panel  = document.querySelector('[data-mega-panel]');
+  if (!parent || !panel) return;
+  var trigger = parent.querySelector('.site-nav-btn');
+  var closeTimer = null;
+
+  function open() {
+    if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+    panel.hidden = false;
+    parent.classList.add('is-open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+  function close() {
+    panel.hidden = true;
+    parent.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+  }
+  function scheduleClose() {
+    if (closeTimer) clearTimeout(closeTimer);
+    closeTimer = setTimeout(close, 180);
+  }
+
+  parent.addEventListener('mouseenter', open);
+  parent.addEventListener('mouseleave', scheduleClose);
+  panel.addEventListener('mouseenter', function () { if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; } });
+  panel.addEventListener('mouseleave', scheduleClose);
+
+  trigger.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (panel.hidden) open(); else close();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !panel.hidden) { close(); trigger.focus(); }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (panel.hidden) return;
+    if (parent.contains(e.target) || panel.contains(e.target)) return;
+    close();
+  });
+})();
+</script>
