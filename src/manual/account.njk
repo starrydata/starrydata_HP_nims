@@ -23,7 +23,7 @@ bodyId: manual
 <section class="section section-top-tight">
   <div class="container">
 
-    <h2>1.1 トップページ</h2>
+    <h2 id="top-page">1.1 トップページ</h2>
 
     <figure class="manual-figure">
       <img src="/manual/img/new_01_top_login.png" alt="Starrydata2 トップページと Login ダイアログ">
@@ -35,7 +35,7 @@ bodyId: manual
       <strong>Databases / Library / Settings / Logout</strong> に置き換わります。
     </p>
 
-    <h2>1.2 Signup（アカウント作成）</h2>
+    <h2 id="signup">1.2 Signup（アカウント作成）</h2>
     <ol class="prose">
       <li>右上の「<strong>Signup</strong>」をクリック。</li>
       <li>登録フォームで <strong>Username</strong>、<strong>Email</strong>、<strong>Password</strong> を入力します。
@@ -48,12 +48,12 @@ bodyId: manual
       <li>届いたコードを入力して登録完了。完了と同時にログイン状態になります。</li>
     </ol>
 
-    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout warn">
       <strong>注意:</strong> 登録 Email は<strong>ログインのたびに 2 段階認証コードを受け取る</strong>場所です。
       個人の Gmail など長期的に利用可能なアドレスを推奨します。所属組織のアドレスを使う場合、退職・異動でアクセスできなくなると 2 段階認証を通過できず、アカウント回復に管理者対応が必要になります。
     </div>
 
-    <h2>1.3 Login（2 段階認証）</h2>
+    <h2 id="login">1.3 Login（2 段階認証）</h2>
     <p class="prose">
       ログインは <strong>① Username / Password 入力</strong> → <strong>② メール認証コード入力</strong>の 2 ステップです。
     </p>
@@ -73,11 +73,11 @@ bodyId: manual
       <li>共用 PC で作業した場合は、終了時に必ず「<strong>Logout</strong>」をクリックしてください。</li>
     </ol>
 
-    <div class="prose" style="background:#e8f5e9; border-left:4px solid #43a047; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout note">
       <strong>認証コードの有効期限:</strong> コードには短い有効期限があります。期限切れの場合は、もう一度 Login をやり直すと新しいコードが送信されます。同じセッション内で複数回コードを発行した場合は、<strong>最後に届いたコード</strong>のみ有効です。
     </div>
 
-    <h2>1.4 認証コードが届かないとき</h2>
+    <h2 id="no-code">1.4 認証コードが届かないとき</h2>
     <ul class="prose">
       <li><strong>迷惑メールフォルダ</strong>を確認する（Starrydata2 / NIMS 由来のメールがフィルタされていないか）。</li>
       <li>メールアドレスのタイプミスがないか、Signup 時に登録したアドレスと一致しているか確認する。</li>
@@ -85,12 +85,12 @@ bodyId: manual
       <li>それでも届かない場合は、<a href="/contact/">Contact ページ</a>から Username を明記の上、管理者に問い合わせてください。</li>
     </ul>
 
-    <h2>1.5 パスワードを忘れた場合</h2>
+    <h2 id="reset-password">1.5 パスワードを忘れた場合</h2>
     <p class="prose">
       パスワードの再発行は Starrydata2 管理者への問い合わせが必要です。Username と登録 Email を明記の上、<a href="/contact/">Contact ページ</a>のフォームから連絡してください。復元できない場合は、新しいユーザー名で再登録することも可能ですが、過去の curation 履歴は旧アカウントに紐付いたまま残ります。
     </p>
 
-    <h2>1.6 マイリスト（My Lists）の使い方</h2>
+    <h2 id="mylists">1.6 マイリスト（My Lists）の使い方</h2>
     <p class="prose">
       ログイン後、各データベースの論文一覧ページの左サイドバーに「<strong>My Lists</strong>」セクションが現れます（→ <a href="/manual/search/">Chapter 2</a>）。ここで個人の論文リストを作成し、対象論文をグループ化して管理できます。
     </p>
@@ -103,7 +103,7 @@ bodyId: manual
   </div>
 </section>
 
-<section class="section" style="background:#f7f9ff; border-top:1px solid var(--line);">
+<section class="section manual-next">
   <div class="container">
     <h2>次のステップ</h2>
     <ul class="prose">

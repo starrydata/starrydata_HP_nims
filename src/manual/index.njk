@@ -29,8 +29,7 @@ bodyId: manual
       Starrydata2 は無機材料の実験データ（特に熱電・磁性などの物性データ）を、
       論文中のグラフ画像からカーブとして抽出し、組成・作製プロセスといった
       試料情報とともに構造化して蓄積する Web システムです。2026 年現在、
-      <strong>194,000 本以上のカーブ</strong>、<strong>82,000 試料以上</strong>、
-      <strong>13,000 論文以上</strong>のデータが蓄積されています
+      <strong>194,000&nbsp;本以上のカーブ</strong>、<strong>82,000&nbsp;試料以上</strong>、<strong>13,000&nbsp;論文以上</strong>のデータが蓄積されています
       （実際の最新数値はトップページの統計表示を参照）。
     </p>
     <p class="prose">
@@ -45,46 +44,44 @@ bodyId: manual
   <div class="container">
     <span class="eyebrow">Contents</span>
     <h2>マニュアル目次</h2>
-    <div class="box_data" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px; margin-top:24px;">
 
-      <a href="/manual/account/" class="box" style="display:block; padding:24px; border:1px solid var(--line); border-radius:12px; background:#fff; text-decoration:none; color:inherit;">
-        <div style="font-size:13px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Chapter 1</div>
-        <div style="font-size:20px; font-weight:700; margin-top:6px;">アカウント登録 / ログイン</div>
-        <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+    <div class="manual-cards">
+      <a href="/manual/account/" class="manual-card">
+        <div class="manual-card-eyebrow">Chapter 1</div>
+        <div class="manual-card-title">アカウント登録 / ログイン</div>
+        <p class="manual-card-desc">
           サインアップ、ログイン、ユーザー名の決め方、パスワード再発行までの手順。
         </p>
       </a>
 
-      <a href="/manual/search/" class="box" style="display:block; padding:24px; border:1px solid var(--line); border-radius:12px; background:#fff; text-decoration:none; color:inherit;">
-        <div style="font-size:13px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Chapter 2</div>
-        <div style="font-size:20px; font-weight:700; margin-top:6px;">検索 / 閲覧</div>
-        <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+      <a href="/manual/search/" class="manual-card">
+        <div class="manual-card-eyebrow">Chapter 2</div>
+        <div class="manual-card-title">検索 / 閲覧</div>
+        <p class="manual-card-desc">
           論文検索、組成検索、フィルタ、サンプル詳細ページとプロット表示の見方。
         </p>
       </a>
 
-      <a href="/manual/register/" class="box" style="display:block; padding:24px; border:1px solid var(--line); border-radius:12px; background:#fff; text-decoration:none; color:inherit;">
-        <div style="font-size:13px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Chapter 3</div>
-        <div style="font-size:20px; font-weight:700; margin-top:6px;">データ登録</div>
-        <p style="margin-top:10px; color:var(--muted); font-size:14px;">
-          論文の取り込み、WebPlotDigitizer による曲線抽出、サンプル情報入力、
-          Auto-Suggestion (GPT)、編集ルール。
+      <a href="/manual/register/" class="manual-card">
+        <div class="manual-card-eyebrow">Chapter 3</div>
+        <div class="manual-card-title">データ登録</div>
+        <p class="manual-card-desc">
+          論文の取り込み、StarryDigitizer による曲線抽出、サンプル情報入力、編集ルール。
         </p>
       </a>
 
-      <a href="/manual/download/" class="box" style="display:block; padding:24px; border:1px solid var(--line); border-radius:12px; background:#fff; text-decoration:none; color:inherit;">
-        <div style="font-size:13px; color:var(--muted); letter-spacing:0.05em; text-transform:uppercase;">Chapter 4</div>
-        <div style="font-size:20px; font-weight:700; margin-top:6px;">ダウンロード / API</div>
-        <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+      <a href="/manual/download/" class="manual-card">
+        <div class="manual-card-eyebrow">Chapter 4</div>
+        <div class="manual-card-title">ダウンロード / API</div>
+        <p class="manual-card-desc">
           CSV / JSON のダウンロード、REST API、Python での読み込みコード例、引用方法。
         </p>
       </a>
-
     </div>
   </div>
 </section>
 
-<section class="section" style="background:#f7f9ff; border-top:1px solid var(--line);">
+<section class="section manual-next">
   <div class="container">
     <h2>本マニュアルの対象読者</h2>
     <ul class="prose">
@@ -92,6 +89,7 @@ bodyId: manual
       <li><strong>データ登録者（curator）</strong>: 自分の論文や所属グループの論文を登録したい方。Chapter 3 を中心に読んでください。</li>
       <li><strong>API / プログラム利用者</strong>: 機械学習用にバルクデータを扱いたい方。Chapter 4 を中心に読んでください。</li>
     </ul>
+
     <h2 style="margin-top:32px;">関連リソース</h2>
     <ul class="prose">
       <li><a href="https://starrydata.wordpress.com/category/tutorial/" target="_blank" rel="noopener">公式チュートリアル (Starrydata blog)</a> — オリジナル英語版チュートリアルとスクリーンショット。</li>

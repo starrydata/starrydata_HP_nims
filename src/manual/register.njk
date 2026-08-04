@@ -23,7 +23,7 @@ bodyId: manual
 <section class="section section-top-tight">
   <div class="container">
 
-    <h2>3.1 登録のフロー全体像</h2>
+    <h2 id="flow">3.1 登録のフロー全体像</h2>
     <p class="prose">登録は以下の 6 ステップで進めます。</p>
     <ol class="prose">
       <li>論文を Database / My List に追加（個別 or DOI 一括）</li>
@@ -55,7 +55,7 @@ bodyId: manual
       <li>「<strong>Add Papers</strong>」をクリック。既存 DOI は My List に追加されるだけ、新規 DOI は CrossRef から書誌取得 + 新規登録 + 新しい <strong>SID</strong> 付与が行われます。</li>
     </ol>
 
-    <div class="prose" style="background:#e8f5e9; border-left:4px solid #43a047; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout note">
       <strong>SID と sample_id の違い:</strong> <strong>SID</strong> は <em>論文</em> ごとの一意 ID（DOI を Add した時点で 1 件付く）。一方、<code>sample_id</code> は<em>試料</em>ごとの ID で、1 論文の中に多数発生します。検索フィールドの「SID」は前者を指します。
     </div>
 
@@ -91,7 +91,7 @@ bodyId: manual
       <li><strong>Unit(x), Unit(y)</strong>: 単位を SI ベース＋接頭辞・指数（例 <code>10^0</code> × <code>°C</code>、<code>10^0</code> × <code>VK^-1</code>）で指定。</li>
     </ol>
 
-    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout warn">
       <strong>注意:</strong> Property / Unit は<strong>領域別 Project（ThermoelectricMaterials など）のテンプレートに従う</strong>のが安全です。GeneralDB では候補が広く出るため、解析のしやすさを考えると領域別 DB での登録を推奨します。
     </div>
 
@@ -159,7 +159,7 @@ bodyId: manual
       <figcaption>図 3-5: 編集モードのフォーム。Caption に図説明、Composition に組成、Property(x)/(y) に物性、Unit(x)/(y) に単位を入れ、Measurement conditions（Temperature / Pressure / Other / Magnetic Field / Orientation）を必要に応じて記入。右のプロットで論文の図と一致するかを確認してから Save。</figcaption>
     </figure>
 
-    <div class="prose" style="background:#e8f5e9; border-left:4px solid #43a047; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout note">
       <strong>SI 単位への自動換算:</strong> Save 時にすべての値が SI 単位（K, V/K など）に自動変換されます。直後に一時的に表示スケールが乱れて見えることがありますが、ページを再読み込みすれば正しいスケールで表示されます。
     </div>
 
@@ -173,7 +173,7 @@ bodyId: manual
       <li>「Save」で確定。<strong>Editors</strong> テーブルにあなたの Username が追記されます。</li>
     </ol>
 
-    <h2>3.8 登録時のベストプラクティス</h2>
+    <h2 id="best-practices">3.8 登録時のベストプラクティス</h2>
     <ul class="prose">
       <li><strong>Figure name は論文の表記に厳密に従う</strong>（例 <code>Fig 5a</code>、<code>4(a)</code>、<code>S3</code>）。</li>
       <li><strong>Sample name は論文中の凡例</strong>そのまま使う（例 <code>y=10%</code>、<code>1h BM-SPS</code>）。後で組成式から復元できなくなる事故を防げる。</li>
@@ -185,13 +185,14 @@ bodyId: manual
   </div>
 </section>
 
-<section class="section" style="background:#f7f9ff; border-top:1px solid var(--line);">
+<section class="section manual-next">
   <div class="container">
     <h2>次のステップ</h2>
     <ul class="prose">
       <li>登録したデータの確認 → <a href="/manual/search/">Chapter 2: 検索・閲覧</a></li>
       <li>登録済みデータを取り出して解析 → <a href="/manual/download/">Chapter 4: ダウンロード・API</a></li>
     </ul>
+
     <h2 style="margin-top:24px;">参考</h2>
     <ul class="prose">
       <li>公式チュートリアル: <a href="https://starrydata.org/tutorial/01.html" target="_blank" rel="noopener">https://starrydata.org/tutorial/01.html</a>（熱電材料を例にした完全手順）</li>

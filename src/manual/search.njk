@@ -22,7 +22,7 @@ bodyId: manual
 <section class="section section-top-tight">
   <div class="container">
 
-    <h2>2.1 Databases（Project）一覧</h2>
+    <h2 id="databases">2.1 Databases（Project）一覧</h2>
 
     <figure class="manual-figure">
       <img src="/manual/img/new_03_databases.png" alt="Databases 一覧ページ">
@@ -40,32 +40,50 @@ bodyId: manual
       <li><strong>Mylists</strong>: そのデータベース内に作ったあなたの My List 数</li>
     </ul>
 
-    <div class="prose" style="background:#e8f5e9; border-left:4px solid #43a047; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout note">
       <strong>使い分けの目安:</strong> 領域横断で探したい場合は <code>GeneralDB</code>。
       機械学習や統計解析で特定領域に絞りたい場合は対応する領域別プロジェクトを選ぶと、
       論文の単位・物性のテンプレートが領域専用のものになります。
     </div>
 
-    <h2>2.2 データの階層構造</h2>
+    <h2 id="data-hierarchy">2.2 データの階層構造</h2>
     <p class="prose">
       Starrydata2 のデータは以下の 3 階層 + 図参照で整理されています。公式データセット（→ <a href="/manual/download/">Chapter 4</a>）の 3 つの CSV ファイル（papers / samples / curves）もこの構造に対応します。
     </p>
-    <table class="prose" style="width:100%; border-collapse:collapse; margin:14px 0;">
+
+    <table class="manual-table">
       <thead>
-        <tr style="background:#eef2ff;">
-          <th style="text-align:left; padding:10px; border:1px solid var(--line);">階層</th>
-          <th style="text-align:left; padding:10px; border:1px solid var(--line);">意味</th>
-          <th style="text-align:left; padding:10px; border:1px solid var(--line);">識別子</th>
+        <tr>
+          <th>階層</th>
+          <th>意味</th>
+          <th>識別子</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td style="padding:10px; border:1px solid var(--line);">Paper</td><td style="padding:10px; border:1px solid var(--line);">論文（書誌情報）。<strong>SID</strong>（Starrydata ID）は DOI を DB に Add した時点で論文ごとに一意に付与される。</td><td style="padding:10px; border:1px solid var(--line);"><strong><code>SID</code></strong></td></tr>
-        <tr><td style="padding:10px; border:1px solid var(--line);">Sample</td><td style="padding:10px; border:1px solid var(--line);">試料（組成・作製プロセスのまとまり）。1 論文に複数。</td><td style="padding:10px; border:1px solid var(--line);"><code>sample_id</code></td></tr>
-        <tr><td style="padding:10px; border:1px solid var(--line);">Figure</td><td style="padding:10px; border:1px solid var(--line);">論文中の図番号（例 Fig 5a）。Curve 行の <code>figure_name</code> で参照。</td><td style="padding:10px; border:1px solid var(--line);"><code>figure_id</code></td></tr>
-        <tr><td style="padding:10px; border:1px solid var(--line);">Curve</td><td style="padding:10px; border:1px solid var(--line);">1 つの Figure × 1 Sample × 1 物性ペア(x,y) のカーブ。x / y は配列。</td><td style="padding:10px; border:1px solid var(--line);">—</td></tr>
+        <tr>
+          <td>Paper</td>
+          <td>論文（書誌情報）。<strong>SID</strong>（Starrydata ID）は DOI を DB に Add した時点で論文ごとに一意に付与される。</td>
+          <td><strong><code>SID</code></strong></td>
+        </tr>
+        <tr>
+          <td>Sample</td>
+          <td>試料（組成・作製プロセスのまとまり）。1 論文に複数。</td>
+          <td><code>sample_id</code></td>
+        </tr>
+        <tr>
+          <td>Figure</td>
+          <td>論文中の図番号（例 Fig 5a）。Curve 行の <code>figure_name</code> で参照。</td>
+          <td><code>figure_id</code></td>
+        </tr>
+        <tr>
+          <td>Curve</td>
+          <td>1 つの Figure × 1 Sample × 1 物性ペア(x,y) のカーブ。x / y は配列。</td>
+          <td>—</td>
+        </tr>
       </tbody>
     </table>
-    <div class="prose" style="background:#e8f5e9; border-left:4px solid #43a047; padding:14px 18px; border-radius:6px; margin:18px 0;">
+
+    <div class="manual-callout note">
       <strong>SID と sample_id の違い:</strong> <strong>SID</strong> = 論文の ID（DOI を Add すると 1 件付く）。<code>sample_id</code> = 試料の ID（1 論文の中で多数発生）。検索フィールドの「SID」は前者を指します。
     </div>
 
@@ -97,11 +115,11 @@ bodyId: manual
       下のラジオで <strong>all / with data / without data</strong> を切り替え、データ抽出済みのものだけ・未抽出のものだけに絞り込めます。「Search」ボタンで実行。検索結果は上部の <strong>Sort by Date</strong>（昇順/降順）で並び替え可能です。
     </p>
 
-    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout warn">
       <strong>注意:</strong> 複数キーワードの AND 検索には未対応です。入力したスペースもキーワードの一部として扱われるため、検索語は 1 つに絞ってください（例: <code>thermoelectric</code> / <code>Bi2Te3</code>）。AND/OR の組成検索は <a href="/manual/download/#api">API</a> 経由でのみ可能です。
     </div>
 
-    <h2>2.5 1 ページあたりの件数とページ送り</h2>
+    <h2 id="pagination">2.5 1 ページあたりの件数とページ送り</h2>
     <p class="prose">
       結果はデフォルトで <strong>25 件/ページ</strong>。下部のセレクタで件数を増やせますが、500 件以上だと描画に数秒かかります。ページ右下のページ送りで前後の結果に移動できます。
     </p>
@@ -118,11 +136,11 @@ bodyId: manual
       <li><strong>Plot</strong>: 右側に登録済みカーブを Plotly で可視化（凡例で系列の表示/非表示を切替可能）</li>
     </ul>
 
-    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout warn">
       <strong>PDF 本文について:</strong> Starrydata2 は<strong>論文の全文 PDF を保持していません</strong>。DOI リンク先の出版社サイトへ移動して取得してください。アクセス権限は所属機関の購読契約に依存します。
     </div>
 
-    <h2>2.7 関連可視化ツール</h2>
+    <h2 id="viz-tools">2.7 関連可視化ツール</h2>
     <p class="prose">
       個別データの閲覧に加え、グローバルナビから以下の俯瞰ツールにアクセスできます。
     </p>
@@ -136,7 +154,7 @@ bodyId: manual
   </div>
 </section>
 
-<section class="section" style="background:#f7f9ff; border-top:1px solid var(--line);">
+<section class="section manual-next">
   <div class="container">
     <h2>次のステップ</h2>
     <ul class="prose">

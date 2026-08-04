@@ -23,7 +23,7 @@ bodyId: manual
 <section class="section section-top-tight">
   <div class="container">
 
-    <h2>4.1 Web からの個別ダウンロード</h2>
+    <h2 id="web-download">4.1 Web からの個別ダウンロード</h2>
     <p class="prose">
       論文一覧の各論文カードに <strong>csv</strong> / <strong>json</strong> リンクが並んでいます。クリックするとその論文に紐付くカーブデータがダウンロードできます。Data ページ内の「Get Data」「Copy to Clipboard」も同様に少量データ取得に便利です。
     </p>
@@ -38,34 +38,34 @@ bodyId: manual
       機械学習や統計解析で <strong>全件データ</strong>を扱う場合は、グローバルナビの <strong>Datasets</strong> から公開されるスナップショットを使うのが最も効率的です。フォルダには 3 つの CSV と <code>README.md</code>、スナップショット時刻 (<code>db_snapshot.txt</code>) が同梱されます。
     </p>
 
-    <table class="prose" style="width:100%; border-collapse:collapse; margin:14px 0;">
+    <table class="manual-table">
       <thead>
-        <tr style="background:#eef2ff;">
-          <th style="text-align:left; padding:10px; border:1px solid var(--line);">ファイル</th>
-          <th style="text-align:left; padding:10px; border:1px solid var(--line);">主なカラム</th>
-          <th style="text-align:left; padding:10px; border:1px solid var(--line);">役割</th>
+        <tr>
+          <th>ファイル</th>
+          <th>主なカラム</th>
+          <th>役割</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style="padding:10px; border:1px solid var(--line);"><code>starrydata_papers.csv</code></td>
-          <td style="padding:10px; border:1px solid var(--line);"><code>SID</code>, <code>DOI</code>, <code>URL</code>, <code>issued</code>, <code>author</code>, <code>title</code>, <code>container_title</code>, <code>volume</code>, <code>issue</code>, <code>page</code>, <code>ISSN</code>, <code>publisher</code>, <code>project_names</code>, <code>created_at</code></td>
-          <td style="padding:10px; border:1px solid var(--line);">論文の書誌情報（1 行 = 1 論文）</td>
+          <td><code>starrydata_papers.csv</code></td>
+          <td><code>SID</code>, <code>DOI</code>, <code>URL</code>, <code>issued</code>, <code>author</code>, <code>title</code>, <code>container_title</code>, <code>volume</code>, <code>issue</code>, <code>page</code>, <code>ISSN</code>, <code>publisher</code>, <code>project_names</code>, <code>created_at</code></td>
+          <td>論文の書誌情報（1 行 = 1 論文）</td>
         </tr>
         <tr>
-          <td style="padding:10px; border:1px solid var(--line);"><code>starrydata_samples.csv</code></td>
-          <td style="padding:10px; border:1px solid var(--line);"><code>sample_name</code>, <code>sample_id</code>, <code>composition</code>, <code>composition_details</code>, <code>SID</code>, <code>DOI</code>, <code>sample_info</code>(JSON), <code>created_at</code>, <code>updated_at</code></td>
-          <td style="padding:10px; border:1px solid var(--line);">試料情報（1 行 = 1 試料）。<code>sample_info</code> は JSON で領域別の属性を含む。</td>
+          <td><code>starrydata_samples.csv</code></td>
+          <td><code>sample_name</code>, <code>sample_id</code>, <code>composition</code>, <code>composition_details</code>, <code>SID</code>, <code>DOI</code>, <code>sample_info</code>(JSON), <code>created_at</code>, <code>updated_at</code></td>
+          <td>試料情報（1 行 = 1 試料）。<code>sample_info</code> は JSON で領域別の属性を含む。</td>
         </tr>
         <tr>
-          <td style="padding:10px; border:1px solid var(--line);"><code>starrydata_curves.csv</code></td>
-          <td style="padding:10px; border:1px solid var(--line);"><code>SID</code>, <code>DOI</code>, <code>composition</code>, <code>sample_id</code>, <code>figure_id</code>, <code>figure_name</code>, <code>prop_x</code>, <code>prop_y</code>, <code>unit_x</code>, <code>unit_y</code>, <code>x</code>(JSON 配列), <code>y</code>(JSON 配列), <code>project_names</code>, <code>comments</code>, <code>created_at</code>, <code>updated_at</code></td>
-          <td style="padding:10px; border:1px solid var(--line);">カーブデータ（1 行 = 1 カーブ）。<code>x</code> / <code>y</code> は同長の JSON 配列文字列。</td>
+          <td><code>starrydata_curves.csv</code></td>
+          <td><code>SID</code>, <code>DOI</code>, <code>composition</code>, <code>sample_id</code>, <code>figure_id</code>, <code>figure_name</code>, <code>prop_x</code>, <code>prop_y</code>, <code>unit_x</code>, <code>unit_y</code>, <code>x</code>(JSON 配列), <code>y</code>(JSON 配列), <code>project_names</code>, <code>comments</code>, <code>created_at</code>, <code>updated_at</code></td>
+          <td>カーブデータ（1 行 = 1 カーブ）。<code>x</code> / <code>y</code> は同長の JSON 配列文字列。</td>
         </tr>
       </tbody>
     </table>
 
-    <div class="prose" style="background:#e8f5e9; border-left:4px solid #43a047; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout note">
       <strong>結合キー:</strong> 3 ファイルの結合は <strong><code>SID</code></strong>（papers ⇔ samples ⇔ curves）と <strong><code>sample_id</code></strong>（samples ⇔ curves）が基本キー。<code>figure_id</code> は同じ図に属する複数 Curve をまとめるのに使える（Figure 単独のテーブルは無い）。
     </div>
 
@@ -87,7 +87,7 @@ bodyId: manual
     <h2 id="python">4.4 Python での読み込み例</h2>
 
     <p class="prose">CSV 3 ファイルを pandas で結合して扱う基本形:</p>
-    <pre style="background:#0d1b3e; color:#e2e8f0; padding:18px; border-radius:8px; overflow:auto; font-size:13px; line-height:1.6;"><code>import json
+<pre class="manual-code"><code>import json
 import pandas as pd
 
 # 3 つの CSV を読む
@@ -115,11 +115,11 @@ print(seebeck[["SID", "composition", "prop_x", "unit_x", "unit_y"]].head())
 </code></pre>
 
     <p class="prose">展開して長い形式（1 点 = 1 行）にしたい場合:</p>
-    <pre style="background:#0d1b3e; color:#e2e8f0; padding:18px; border-radius:8px; overflow:auto; font-size:13px; line-height:1.6;"><code>long = seebeck.explode(["x", "y"]).rename(columns={"x": "x_value", "y": "y_value"})
+<pre class="manual-code"><code>long = seebeck.explode(["x", "y"]).rename(columns={"x": "x_value", "y": "y_value"})
 long.to_csv("seebeck_long.csv", index=False)
 </code></pre>
 
-    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout warn">
       <strong>単位:</strong> <code>unit_x</code> / <code>unit_y</code> は SI 基本単位の積形式（例 <code>V*K^(-1)</code>）。表示用に整形したい場合は自前で正規表現か <code>sympy</code> を使う。
     </div>
 
@@ -127,7 +127,7 @@ long.to_csv("seebeck_long.csv", index=False)
     <p class="prose">
       個別 Sample / Figure / Paper をプログラムから取得する場合は REST API も使えます。認証不要、レスポンスは JSON。
     </p>
-    <pre style="background:#0d1b3e; color:#e2e8f0; padding:18px; border-radius:8px; overflow:auto; font-size:13px; line-height:1.6;"><code># 個別オブジェクト
+<pre class="manual-code"><code># 個別オブジェクト
 GET https://starrydata.nims.go.jp/starrydata2/api/paper/{SID}
 GET https://starrydata.nims.go.jp/starrydata2/api/sample/{sample_id}
 
@@ -141,7 +141,7 @@ GET https://starrydata.nims.go.jp/starrydata2/api/sample/search?atom=Bi,Te
 GET https://starrydata.nims.go.jp/starrydata2/api/sample/search?atom=Bi,Te,or
 </code></pre>
 
-    <div class="prose" style="background:#fff7e6; border-left:4px solid #f0b429; padding:14px 18px; border-radius:6px; margin:18px 0;">
+    <div class="manual-callout warn">
       <strong>レート制限:</strong> 公開された明確な上限はありませんが、機械学習向けの大量取得は<strong>公式 Datasets スナップショット</strong>（4.2）の利用を強く推奨します。短時間に大量リクエストを送ると一時的にブロックされる場合があります。
     </div>
 
@@ -154,7 +154,7 @@ GET https://starrydata.nims.go.jp/starrydata2/api/sample/search?atom=Bi,Te,or
       <li>論文: <a href="https://doi.org/10.1080/27660400.2025.2506976" target="_blank" rel="noopener">STAM:Methods (2025)</a></li>
     </ul>
 
-    <h2>4.7 ライセンスと引用</h2>
+    <h2 id="license">4.7 ライセンスと引用</h2>
     <p class="prose">
       Starrydata2 のデータは商用・非商用を問わず無償で利用できます。論文や報告書で利用する場合は、以下のいずれかを引用してください。
     </p>
@@ -167,7 +167,7 @@ GET https://starrydata.nims.go.jp/starrydata2/api/sample/search?atom=Bi,Te,or
   </div>
 </section>
 
-<section class="section" style="background:#f7f9ff; border-top:1px solid var(--line);">
+<section class="section manual-next">
   <div class="container">
     <h2>関連</h2>
     <ul class="prose">
