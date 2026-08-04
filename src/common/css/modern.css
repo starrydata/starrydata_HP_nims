@@ -2513,14 +2513,14 @@ p { margin: 0 0 1em; }
 .task-nav-card {
   display: flex;
   flex-direction: column;
-  padding: 22px 20px;
+  padding: 22px 22px 20px;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: #fff;
   text-decoration: none;
   color: inherit;
   transition: transform .12s, box-shadow .15s, border-color .15s;
-  min-height: 140px;
+  min-height: 160px;
 }
 .task-nav-card:hover {
   transform: translateY(-2px);
@@ -2529,9 +2529,24 @@ p { margin: 0 0 1em; }
   color: inherit;
 }
 .task-nav-icon {
-  font-size: 24px;
-  line-height: 1;
-  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  color: #4f46e5;
+  margin-bottom: 14px;
+}
+.task-nav-icon svg { display: block; }
+.task-nav-system {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
 }
 .task-nav-card h3 {
   font-size: 1rem;
@@ -2539,6 +2554,7 @@ p { margin: 0 0 1em; }
   margin: 0 0 6px;
   color: var(--text);
   letter-spacing: -0.005em;
+  line-height: 1.4;
 }
 .task-nav-card p {
   font-size: 13.5px;
