@@ -133,8 +133,8 @@
       "en": "A Large-Scale Database"
     },
     "cta": {
-      "ja": "Starrydata Web システムへ →",
-      "en": "Go to Starrydata Web System →"
+      "ja": "Starrydata2 Web System へ →",
+      "en": "Go to Starrydata2 Web System →"
     }
   },
   "apps": {
@@ -307,7 +307,7 @@
         {
           "title": "Explore",
           "items": [
-            { "icon": "search",   "image": "/manual/img/new_01_top_login.png",     "title": "Starrydata",           "desc": "<span data-counts=\"curves\">200,000</span>+ カーブを収録した大規模オープンデータベース。検索・ダウンロードに対応。", "url": "https://starrydata.nims.go.jp/starrydata2/", "external": true, "featured": true, "badge": "メインシステム" },
+            { "icon": "search",   "image": "/manual/img/new_01_top_login.png",     "title": "Starrydata2 Web System",           "desc": "<span data-counts=\"curves\">200,000</span>+ カーブを収録した大規模オープンデータベース。データの登録・検索・ダウンロードに対応。", "url": "https://starrydata.nims.go.jp/starrydata2/", "external": true, "featured": true, "badge": "メインシステム" },
             { "icon": "grid",     "image": "/assets/images/apps/sample-explorer.png","title": "Sample Explorer",      "desc": "化学組成からの探索・フィルタリング。", "url": "https://explorer.starrydata.org",            "external": true },
             { "icon": "chart",    "image": "/assets/images/apps/visualizer.png",   "title": "Visualizer",           "desc": "Starrydata の全体像を一望できる可視化グラフ群。", "url": "https://starrydata.nims.go.jp/visualizer/",  "external": true },
             { "icon": "globe",    "image": "/assets/images/apps/explorer-3d.png",  "title": "Explorer 3D",          "desc": "熱電特性分布を 3D プロットで対話的に表示。", "url": "https://explorer-3d.starrydata.org",         "external": true },
@@ -337,7 +337,7 @@
         {
           "title": "Explore",
           "items": [
-            { "icon": "search",   "image": "/manual/img/new_01_top_login.png",     "title": "Starrydata",           "desc": "Large open database with <span data-counts=\"curves\">200,000</span>+ curves. Searchable and downloadable.", "url": "https://starrydata.nims.go.jp/starrydata2/", "external": true, "featured": true, "badge": "Main system" },
+            { "icon": "search",   "image": "/manual/img/new_01_top_login.png",     "title": "Starrydata2 Web System",           "desc": "Large open database with <span data-counts=\"curves\">200,000</span>+ curves. Register, search, and download data.", "url": "https://starrydata.nims.go.jp/starrydata2/", "external": true, "featured": true, "badge": "Main system" },
             { "icon": "grid",     "image": "/assets/images/apps/sample-explorer.png","title": "Sample Explorer",      "desc": "Browse and filter samples by chemical composition.", "url": "https://explorer.starrydata.org",            "external": true },
             { "icon": "chart",    "image": "/assets/images/apps/visualizer.png",   "title": "Visualizer",           "desc": "Overview plots covering the entire Starrydata.", "url": "https://starrydata.nims.go.jp/visualizer/",  "external": true },
             { "icon": "globe",    "image": "/assets/images/apps/explorer-3d.png",  "title": "Explorer 3D",          "desc": "Interactive 3D plots of thermoelectric property distributions.", "url": "https://explorer-3d.starrydata.org",         "external": true },
@@ -372,13 +372,13 @@
     },
     "cards": {
       "ja": [
-        { "icon_key": "search",   "system": "Starrydata",      "title": "データを検索する",       "desc": "試料・論文・物性カーブを検索",     "url": "https://starrydata.nims.go.jp/starrydata2/" },
+        { "icon_key": "search",   "system": "Starrydata2 Web System",      "title": "データを検索する",       "desc": "試料・論文・物性カーブを検索",     "url": "https://starrydata.nims.go.jp/starrydata2/" },
         { "icon_key": "download", "system": "Datasets",        "title": "データセットを取得する", "desc": "CSV・分野別データを取得",          "url": "https://starrydata.github.io/starrydata_datasets/" },
         { "icon_key": "chart",    "system": "Visualizer",      "title": "データを可視化する",     "desc": "組成・物性分布を探索",             "url": "https://starrydata.nims.go.jp/visualizer/" },
         { "icon_key": "grid",     "system": "Sample Explorer", "title": "組成から試料を探す",     "desc": "化学組成や元素条件から絞り込み",   "url": "https://explorer.starrydata.org" }
       ],
       "en": [
-        { "icon_key": "search",   "system": "Starrydata",      "title": "Search data",           "desc": "Search samples, papers and property curves", "url": "https://starrydata.nims.go.jp/starrydata2/" },
+        { "icon_key": "search",   "system": "Starrydata2 Web System",      "title": "Search data",           "desc": "Search samples, papers and property curves", "url": "https://starrydata.nims.go.jp/starrydata2/" },
         { "icon_key": "download", "system": "Datasets",        "title": "Get datasets",           "desc": "Download CSV and per-field datasets",       "url": "https://starrydata.github.io/starrydata_datasets/" },
         { "icon_key": "chart",    "system": "Visualizer",      "title": "Visualize data",         "desc": "Explore composition and property spaces",  "url": "https://starrydata.nims.go.jp/visualizer/" },
         { "icon_key": "grid",     "system": "Sample Explorer", "title": "Explore by composition", "desc": "Filter samples by chemical composition",   "url": "https://explorer.starrydata.org" }

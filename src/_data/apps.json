@@ -5,16 +5,16 @@
       "slug": "starrydata2",
       "icon": "DB",
       "name": {
-        "ja": "Starrydata2",
-        "en": "Starrydata2"
+        "ja": "Starrydata2 Web System",
+        "en": "Starrydata2 Web System"
       },
       "subtitle": {
         "ja": "メインデータベース",
         "en": "Main database"
       },
       "description": {
-        "ja": "<span data-counts=\"curves\">200,000</span>+ カーブを収録した大規模オープンデータベース。検索・ダウンロードに対応。",
-        "en": "Large open database with <span data-counts=\"curves\">200,000</span>+ curves. Searchable and downloadable."
+        "ja": "<span data-counts=\"curves\">200,000</span>+ カーブを収録した大規模オープンデータベース。データの登録・検索・ダウンロードに対応。",
+        "en": "Large open database with <span data-counts=\"curves\">200,000</span>+ curves. Register, search, and download data."
       },
       "url": "https://starrydata.nims.go.jp/starrydata2/",
       "image": "/manual/img/new_01_top_login.png",
