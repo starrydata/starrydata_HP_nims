@@ -24,12 +24,36 @@ bodyId: resources
       <h2>{{ S[key].title }}</h2>
       <p class="resources-section-desc">{{ S[key].desc }}</p>
     </div>
-    <div class="resources-grid">
-      {%- for item in col.items %}
-      <a class="resources-card" href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>
+
+    {%- for item in col.items %}{% if item.featured %}
+    <a class="resources-featured-card" href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>
+      {% if item.image %}
+      <div class="resources-featured-thumb">
+        <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
+      </div>
+      {% endif %}
+      <div class="resources-featured-body">
+        {% if item.badge %}<span class="resources-featured-badge">{{ item.badge }}</span>{% endif %}
+        <h3 class="resources-featured-title">
+          {{ item.title }}{% if item.external %} <span class="resources-card-ext" aria-hidden="true">↗</span>{% endif %}
+        </h3>
+        <p class="resources-featured-desc">{{ item.desc }}</p>
+      </div>
+    </a>
+    {% endif %}{%- endfor %}
+
+    <div class="resources-grid{% if key == 'explore' %} has-thumbs{% endif %}">
+      {%- for item in col.items %}{% if not item.featured %}
+      <a class="resources-card{% if item.image %} has-thumb{% endif %}" href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>
+        {% if item.image %}
+        <div class="resources-card-thumb">
+          <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
+        </div>
+        {% else %}
         <div class="resources-card-icon">
           <svg width="24" height="24" aria-hidden="true"><use href="#mm-icon-{{ item.icon }}"/></svg>
         </div>
+        {% endif %}
         <div class="resources-card-body">
           <h3 class="resources-card-title">
             {{ item.title }}{% if item.external %} <span class="resources-card-ext" aria-hidden="true">↗</span>{% endif %}
@@ -37,7 +61,7 @@ bodyId: resources
           <p class="resources-card-desc">{{ item.desc }}</p>
         </div>
       </a>
-      {%- endfor %}
+      {% endif %}{%- endfor %}
     </div>
   </div>
 </section>

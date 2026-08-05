@@ -288,16 +288,16 @@
     },
     "sections": {
       "ja": {
-        "explore":    { "title": "Explore",       "desc": "データを対話的に触るツール" },
-        "download":   { "title": "Download",      "desc": "バルクデータの取得経路と引用" },
-        "docs":       { "title": "Documentation", "desc": "使い方・仕様の参照文書" },
-        "related":    { "title": "関連ページ",    "desc": "収集プロジェクト詳細と MI ツール群" }
+        "explore":    { "title": "Explore",       "desc": "ブラウザ上で試料・論文を検索し、物性データを閲覧・可視化するツール群(論文グラフからのデータ化ツールも含む)" },
+        "download":   { "title": "Download",      "desc": "機械学習・統計解析用にデータセットを一括ダウンロードする経路と、論文で引用する際の情報" },
+        "docs":       { "title": "Documentation", "desc": "Starrydata2 の使い方マニュアル、REST API の仕様、ダウンロードした CSV のカラム定義" },
+        "related":    { "title": "関連ページ",    "desc": "収集プロジェクトの分野別詳細と、その他のマテリアルズインフォマティクスツール" }
       },
       "en": {
-        "explore":    { "title": "Explore",       "desc": "Interactive tools for the data" },
-        "download":   { "title": "Download",      "desc": "Bulk data access and citation" },
-        "docs":       { "title": "Documentation", "desc": "Manuals and specifications" },
-        "related":    { "title": "Related",       "desc": "Collection projects and other MI tools" }
+        "explore":    { "title": "Explore",       "desc": "Browser-based tools to search samples/papers and visualize property data — includes a plot digitizer" },
+        "download":   { "title": "Download",      "desc": "Bulk dataset downloads for machine-learning or statistical analysis, and citation guidance" },
+        "docs":       { "title": "Documentation", "desc": "User manual for the web system, REST API reference, and column definitions of the CSV files" },
+        "related":    { "title": "Related",       "desc": "Details of the ongoing collection projects and other materials informatics tools" }
       }
     }
   },
@@ -307,12 +307,12 @@
         {
           "title": "Explore",
           "items": [
-            { "icon": "search",   "title": "Starrydata",           "desc": "試料・論文検索",                   "url": "https://starrydata.nims.go.jp/starrydata2/", "external": true },
-            { "icon": "grid",     "title": "Sample Explorer",      "desc": "組成・元素条件で試料検索",         "url": "https://explorer.starrydata.org",            "external": true },
-            { "icon": "chart",    "title": "Visualizer",           "desc": "物性値の散布図ブラウザ",           "url": "https://starrydata.nims.go.jp/visualizer/",  "external": true },
-            { "icon": "globe",    "title": "Explorer 3D",          "desc": "3D で熱電物性を眺める",             "url": "https://explorer-3d.starrydata.org",         "external": true },
-            { "icon": "file-text","title": "Auto-Summary Viewer",  "desc": "自動生成のデータ要約",             "url": "https://auto-summary.starrydata.org",        "external": true },
-            { "icon": "edit",     "title": "StarryDigitizer",      "desc": "論文グラフから数値抽出",           "url": "https://app.digitizer.starrydata.org",       "external": true }
+            { "icon": "search",   "image": "/manual/img/new_01_top_login.png",     "title": "Starrydata",           "desc": "無機材料の実験データを論文グラフから抽出・構造化したメインの Web データベース。試料・論文・物性カーブの検索、閲覧、CSV/JSON ダウンロードができる。", "url": "https://starrydata.nims.go.jp/starrydata2/", "external": true, "featured": true, "badge": "メインシステム" },
+            { "icon": "grid",     "image": "/assets/images/apps/sample-explorer.png","title": "Sample Explorer",      "desc": "組成・元素条件で試料検索",         "url": "https://explorer.starrydata.org",            "external": true },
+            { "icon": "chart",    "image": "/assets/images/apps/visualizer.png",   "title": "Visualizer",           "desc": "物性値の散布図ブラウザ",           "url": "https://starrydata.nims.go.jp/visualizer/",  "external": true },
+            { "icon": "globe",    "image": "/assets/images/apps/explorer-3d.png",  "title": "Explorer 3D",          "desc": "3D で熱電物性を眺める",             "url": "https://explorer-3d.starrydata.org",         "external": true },
+            { "icon": "file-text","image": "/assets/images/apps/auto-summary.png", "title": "Auto-Summary Viewer",  "desc": "自動生成のデータ要約",             "url": "https://auto-summary.starrydata.org",        "external": true },
+            { "icon": "edit",     "image": "/assets/images/apps/digitizer.png",    "title": "StarryDigitizer",      "desc": "論文グラフから数値抽出",           "url": "https://app.digitizer.starrydata.org",       "external": true }
           ]
         },
         {
@@ -337,12 +337,12 @@
         {
           "title": "Explore",
           "items": [
-            { "icon": "search",   "title": "Starrydata",           "desc": "Search samples & papers",           "url": "https://starrydata.nims.go.jp/starrydata2/", "external": true },
-            { "icon": "grid",     "title": "Sample Explorer",      "desc": "Filter samples by composition",     "url": "https://explorer.starrydata.org",            "external": true },
-            { "icon": "chart",    "title": "Visualizer",           "desc": "Scatter-plot browser",              "url": "https://starrydata.nims.go.jp/visualizer/",  "external": true },
-            { "icon": "globe",    "title": "Explorer 3D",          "desc": "3D thermoelectric plots",            "url": "https://explorer-3d.starrydata.org",         "external": true },
-            { "icon": "file-text","title": "Auto-Summary Viewer",  "desc": "Auto-generated dataset summaries",  "url": "https://auto-summary.starrydata.org",        "external": true },
-            { "icon": "edit",     "title": "StarryDigitizer",      "desc": "Extract data from plot images",     "url": "https://app.digitizer.starrydata.org",       "external": true }
+            { "icon": "search",   "image": "/manual/img/new_01_top_login.png",     "title": "Starrydata",           "desc": "The main web database of inorganic materials data extracted from published plots. Search samples, papers, and property curves; browse plots; download CSV/JSON.", "url": "https://starrydata.nims.go.jp/starrydata2/", "external": true, "featured": true, "badge": "Main system" },
+            { "icon": "grid",     "image": "/assets/images/apps/sample-explorer.png","title": "Sample Explorer",      "desc": "Filter samples by composition",     "url": "https://explorer.starrydata.org",            "external": true },
+            { "icon": "chart",    "image": "/assets/images/apps/visualizer.png",   "title": "Visualizer",           "desc": "Scatter-plot browser",              "url": "https://starrydata.nims.go.jp/visualizer/",  "external": true },
+            { "icon": "globe",    "image": "/assets/images/apps/explorer-3d.png",  "title": "Explorer 3D",          "desc": "3D thermoelectric plots",            "url": "https://explorer-3d.starrydata.org",         "external": true },
+            { "icon": "file-text","image": "/assets/images/apps/auto-summary.png", "title": "Auto-Summary Viewer",  "desc": "Auto-generated dataset summaries",  "url": "https://auto-summary.starrydata.org",        "external": true },
+            { "icon": "edit",     "image": "/assets/images/apps/digitizer.png",    "title": "StarryDigitizer",      "desc": "Extract data from plot images",     "url": "https://app.digitizer.starrydata.org",       "external": true }
           ]
         },
         {
