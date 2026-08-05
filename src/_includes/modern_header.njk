@@ -75,7 +75,7 @@
                 <span class="mega-menu-title">
                   {{ item.title }}{% if item.external %} <span class="mega-menu-ext" aria-hidden="true">↗</span>{% endif %}
                 </span>
-                <span class="mega-menu-desc">{{ item.desc }}</span>
+                <span class="mega-menu-desc">{{ item.desc | safe }}</span>
               </span>
             </a>
           </li>
