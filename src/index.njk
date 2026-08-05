@@ -52,33 +52,6 @@ lang: ja
   </div>
 </section>
 
-<!-- =================== TASK NAV =================== -->
-<section class="section task-nav-section" id="tasks">
-  <div class="container">
-    <h2>{{ i18n.task_nav.title[L] }}</h2>
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-      <defs>
-        <symbol id="tnav-icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
-        <symbol id="tnav-icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
-        <symbol id="tnav-icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="18" y1="20" x2="18" y2="4"/></symbol>
-        <symbol id="tnav-icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
-      </defs>
-    </svg>
-    <div class="task-nav-grid">
-      {%- for c in i18n.task_nav.cards[L] %}
-      <a class="task-nav-card" href="{{ c.url }}" target="_blank" rel="noopener">
-        <div class="task-nav-icon">
-          <svg width="26" height="26" aria-hidden="true"><use href="#tnav-icon-{{ c.icon_key }}"/></svg>
-        </div>
-        <div class="task-nav-system">{{ c.system }}</div>
-        <h3>{{ c.title }}</h3>
-        <p>{{ c.desc }}</p>
-      </a>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- =================== WHAT IS =================== -->
 <section class="section" id="about">
   <div class="container">
@@ -114,29 +87,43 @@ lang: ja
   </div>
 </section>
 
-<!-- =================== APPS / SYSTEMS =================== -->
-<section class="section" id="apps">
+<!-- =================== データ利用ガイド (Resources) =================== -->
+<section class="section" id="resources">
   <div class="container">
-    <h2 data-echo="{{ i18n.apps.title[L] }}">{{ i18n.apps.title[L] }}</h2>
-    <p class="lead">{{ i18n.apps.lead[L] }}</p>
+    <h2 data-echo="{{ i18n.resources_page.title[L] }}">{{ i18n.resources_page.title[L] }}</h2>
+    <p class="lead">目的に応じてツールを選んで、Starrydata のデータを活用してください。</p>
 
-    <div class="apps-grid">
-      {%- for a in apps.apps %}
-      <a class="app-card" href="{{ a.url }}" target="_blank" rel="noopener" data-image-layout="{{ a.image_layout or 'default' }}">
-        {% if a.image %}
-        <div class="app-thumb"><img src="{{ a.image }}" alt="{{ a.name[L] }}" loading="lazy"></div>
-        {% else %}
-        <div class="app-thumb app-thumb-placeholder"><span>{{ a.icon }}</span></div>
-        {% endif %}
-        <div class="app-body">
-          <h3>{{ a.name[L] }}</h3>
-          <p class="app-sub">{{ a.subtitle[L] }}</p>
-          <p class="app-desc">{{ a.description[L] | safe }}</p>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <symbol id="tnav-icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+        <symbol id="tnav-icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+        <symbol id="tnav-icon-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="18" y1="20" x2="18" y2="4"/></symbol>
+        <symbol id="tnav-icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+      </defs>
+    </svg>
+
+    <h3 class="home-resources-sub">{{ i18n.task_nav.title[L] }}</h3>
+    <div class="task-nav-grid">
+      {%- for c in i18n.task_nav.cards[L] %}
+      <a class="task-nav-card" href="{{ c.url }}" target="_blank" rel="noopener">
+        <div class="task-nav-icon">
+          <svg width="26" height="26" aria-hidden="true"><use href="#tnav-icon-{{ c.icon_key }}"/></svg>
         </div>
-        <span class="app-open">{{ i18n.apps.open[L] }} ↗</span>
+        <div class="task-nav-system">{{ c.system }}</div>
+        <h4>{{ c.title }}</h4>
+        <p>{{ c.desc }}</p>
       </a>
       {%- endfor %}
     </div>
+
+    <a class="home-resources-cta" href="/resources/">
+      <div class="home-resources-cta-body">
+        <div class="home-resources-cta-eyebrow">Resources</div>
+        <h3>すべてのツールとドキュメントを見る</h3>
+        <p>Starrydata2 の検索、Visualizer / Sample Explorer / Explorer 3D などの可視化ツール、Latest CSV / Figshare / NIMS MDR のダウンロード経路、Manual・REST API・引用方法までを目的別にまとめています。</p>
+      </div>
+      <div class="home-resources-cta-arrow" aria-hidden="true">→</div>
+    </a>
   </div>
 </section>
 

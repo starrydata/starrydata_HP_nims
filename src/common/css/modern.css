@@ -2495,16 +2495,76 @@ p { margin: 0 0 1em; }
 }
 
 /* ==========================================================================
-   Task Navigation section (トップページ「何をしたいですか?」)
+   Home Resources section — Task Navigation + CTA to /resources/
    ========================================================================== */
-.task-nav-section { padding: 56px 0 40px; }
-.task-nav-section .container { max-width: 1100px; }
-.task-nav-section h2 {
-  text-align: center;
-  font-size: clamp(1.35rem, 2vw, 1.6rem);
-  margin: 0 0 28px;
+.home-resources-sub {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 20px 0 20px;
   letter-spacing: -0.005em;
 }
+.home-resources-cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 32px;
+  margin-top: 32px;
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f3ff 100%);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .12s, box-shadow .15s;
+}
+.home-resources-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.15);
+  color: inherit;
+}
+.home-resources-cta-body { flex: 1; min-width: 0; }
+.home-resources-cta-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 6px;
+}
+.home-resources-cta h3 {
+  font-size: 1.25rem;
+  margin: 0 0 8px;
+  color: var(--text);
+  letter-spacing: -0.005em;
+  line-height: 1.35;
+}
+.home-resources-cta p {
+  font-size: 14px;
+  color: var(--text-2);
+  margin: 0;
+  line-height: 1.7;
+}
+.home-resources-cta-arrow {
+  font-size: 2rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform .18s;
+  font-weight: 300;
+  line-height: 1;
+}
+.home-resources-cta:hover .home-resources-cta-arrow {
+  transform: translateX(4px);
+}
+@media (max-width: 640px) {
+  .home-resources-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+  .home-resources-cta-arrow { align-self: flex-end; }
+}
+
+/* Task Navigation grid (used inside home-resources section) */
 .task-nav-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2548,7 +2608,8 @@ p { margin: 0 0 1em; }
   color: var(--muted);
   margin-bottom: 4px;
 }
-.task-nav-card h3 {
+.task-nav-card h3,
+.task-nav-card h4 {
   font-size: 1rem;
   font-weight: 700;
   margin: 0 0 6px;
@@ -2806,11 +2867,11 @@ p { margin: 0 0 1em; }
   gap: 16px;
 }
 
-/* Explore セクション: サムネイル付きカード (top ページの app-card 相当) */
+/* Explore セクション: サムネイル付きカード (top ページの app-card と同じ寸法) */
 .resources-grid.has-thumbs .resources-card {
   display: block;
   padding: 0;
-  height: 280px;
+  height: 340px;
   position: relative;
   overflow: hidden;
 }
@@ -2827,19 +2888,17 @@ p { margin: 0 0 1em; }
   height: 100%;
   object-fit: contain;
   display: block;
-  padding: 16px 16px 108px;
-  box-sizing: border-box;
-  transition: transform .3s ease;
+  transition: transform .4s ease;
   background: #fff;
 }
 .resources-grid.has-thumbs .resources-card:hover .resources-card-thumb img {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 .resources-grid.has-thumbs .resources-card-body {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 96px;
-  padding: 12px 18px;
+  height: 140px;
+  padding: 14px 22px 16px;
   background: rgba(255, 255, 255, 0.86);
   backdrop-filter: blur(10px) saturate(140%);
   -webkit-backdrop-filter: blur(10px) saturate(140%);
@@ -2862,14 +2921,9 @@ p { margin: 0 0 1em; }
   line-height: 1.35;
 }
 .resources-grid.has-thumbs .resources-card-desc {
-  font-size: 12.5px;
+  font-size: 13px;
   margin: 0;
-  line-height: 1.5;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  line-height: 1.55;
 }
 .resources-card {
   display: grid;
