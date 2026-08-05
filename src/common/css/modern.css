@@ -2887,6 +2887,9 @@ p { margin: 0 0 1em; }
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center top;
+  padding: 14px 14px 0;
+  box-sizing: border-box;
   display: block;
   transition: transform .4s ease;
   background: #fff;
