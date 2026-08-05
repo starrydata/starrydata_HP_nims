@@ -331,6 +331,14 @@
             { "icon": "code",     "title": "REST API",             "desc": "API エンドポイントと使用例",       "url": "/manual/download/#api",                       "external": false },
             { "icon": "layers",   "title": "Data schema",          "desc": "papers / samples / curves 仕様",   "url": "/manual/download/#dataset",                   "external": false }
           ]
+        },
+        {
+          "title": "その他 MI ツール",
+          "items": [
+            { "icon": "hexagon",  "title": "Crystal Structure Simulator", "desc": "結晶構造をシミュレート・可視化",   "url": "https://cssim.starrydata.org",  "external": true },
+            { "icon": "map",      "title": "Elemental Reactivity Map",    "desc": "元素間の反応性マップ",             "url": "https://erm.starrydata.org",    "external": true },
+            { "icon": "activity", "title": "Debye-Scherrer XRD",          "desc": "X 線回折プロットの生成",            "url": "https://dsxrd.starrydata.org",  "external": true }
+          ]
         }
       ],
       "en": [
@@ -360,6 +368,14 @@
             { "icon": "book-open","title": "Manual",               "desc": "Search, curation, download",        "url": "/manual/",                                    "external": false },
             { "icon": "code",     "title": "REST API",             "desc": "API endpoints & examples",          "url": "/manual/download/#api",                       "external": false },
             { "icon": "layers",   "title": "Data schema",          "desc": "papers / samples / curves spec",    "url": "/manual/download/#dataset",                   "external": false }
+          ]
+        },
+        {
+          "title": "Other MI Tools",
+          "items": [
+            { "icon": "hexagon",  "title": "Crystal Structure Simulator", "desc": "Simulate and visualize crystal structures", "url": "https://cssim.starrydata.org",  "external": true },
+            { "icon": "map",      "title": "Elemental Reactivity Map",    "desc": "Map of reactivity between elements",         "url": "https://erm.starrydata.org",    "external": true },
+            { "icon": "activity", "title": "Debye-Scherrer XRD",          "desc": "Generate X-ray diffraction plots",           "url": "https://dsxrd.starrydata.org",  "external": true }
           ]
         }
       ]

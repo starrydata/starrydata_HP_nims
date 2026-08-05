@@ -2684,8 +2684,11 @@ p { margin: 0 0 1em; }
   margin: 0 auto;
   padding: 28px 28px 24px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1100px) {
+  .mega-menu-inner { grid-template-columns: repeat(2, 1fr); }
 }
 
 .mega-menu-col-title {
