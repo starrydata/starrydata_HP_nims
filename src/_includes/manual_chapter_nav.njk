@@ -1,0 +1,22 @@
+{%- set cc = currentChapter or 0 -%}
+<nav class="manual-chapter-nav" aria-label="Manual chapters">
+  <div class="manual-chapter-nav-inner">
+    <ul>
+      <li{% if cc == 0 %} class="is-current"{% endif %}>
+        <a href="/manual/">目次</a>
+      </li>
+      <li{% if cc == 1 %} class="is-current"{% endif %}>
+        <a href="/manual/account/"><span class="ch">Ch.1</span> アカウント</a>
+      </li>
+      <li{% if cc == 2 %} class="is-current"{% endif %}>
+        <a href="/manual/search/"><span class="ch">Ch.2</span> 検索・閲覧</a>
+      </li>
+      <li{% if cc == 3 %} class="is-current"{% endif %}>
+        <a href="/manual/register/"><span class="ch">Ch.3</span> データ登録</a>
+      </li>
+      <li{% if cc == 4 %} class="is-current"{% endif %}>
+        <a href="/manual/download/"><span class="ch">Ch.4</span> ダウンロード</a>
+      </li>
+    </ul>
+  </div>
+</nav>

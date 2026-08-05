@@ -2996,6 +2996,57 @@ p { margin: 0 0 1em; }
 .page-manual .section ol.prose ul { margin: 6px 0 6px; }
 .page-manual .section p.prose { margin: 12px 0 18px; }
 
+/* Chapter navigation tab bar (page-head 直下) */
+.manual-chapter-nav {
+  background: #fafbff;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.manual-chapter-nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+.manual-chapter-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.manual-chapter-nav li { flex-shrink: 0; }
+.manual-chapter-nav li a {
+  display: block;
+  padding: 12px 14px;
+  color: var(--muted);
+  font-size: 13.5px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color .12s, border-color .12s, background .12s;
+}
+.manual-chapter-nav li a:hover {
+  color: var(--text);
+  background: rgba(167, 139, 250, 0.06);
+}
+.manual-chapter-nav li.is-current a {
+  color: var(--accent-2);
+  border-bottom-color: var(--accent-2);
+  font-weight: 700;
+}
+.manual-chapter-nav .ch {
+  font-weight: 700;
+  margin-right: 4px;
+  color: var(--muted);
+}
+.manual-chapter-nav li.is-current .ch { color: var(--accent-2); }
+@media (max-width: 600px) {
+  .manual-chapter-nav-inner { padding: 0 16px; }
+  .manual-chapter-nav li a { padding: 10px 12px; font-size: 13px; }
+}
+
 /* Figure（スクリーンショット + キャプション） */
 .manual-figure {
   margin: 24px 0 28px;
@@ -3090,16 +3141,16 @@ p { margin: 0 0 1em; }
   font-size: inherit;
 }
 
-/* Chapter 一覧カード（マニュアル index） */
+/* Chapter 一覧カード（マニュアル index） — 縦 1 列 × 4 行 */
 .manual-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   margin-top: 24px;
 }
 .manual-card {
   display: block;
-  padding: 24px;
+  padding: 20px 24px;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: #fff;
@@ -3123,12 +3174,12 @@ p { margin: 0 0 1em; }
 .manual-card-title {
   font-size: 1.15rem;
   font-weight: 700;
-  margin-top: 6px;
+  margin-top: 4px;
   color: var(--text);
   line-height: 1.4;
 }
 .manual-card-desc {
-  margin-top: 10px;
+  margin-top: 6px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.65;
