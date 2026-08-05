@@ -73,37 +73,34 @@ bodyId: resources
       <h2>{{ S.related.title }}</h2>
       <p class="resources-section-desc">{{ S.related.desc }}</p>
     </div>
-    <ul class="resources-related-list">
-      <li>
-        <a href="/data/">
-          <strong>進行中のデータ収集プロジェクト</strong>
-          <span>ThermoelectricMaterials / Magnetic / Battery など、分野ごとの収集内容と担当者 →</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://cssim.starrydata.org" target="_blank" rel="noopener">
-          <strong>Crystal Structure Simulator ↗</strong>
-          <span>結晶構造を対話的にシミュレート・可視化する MI ツール</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://erm.starrydata.org" target="_blank" rel="noopener">
-          <strong>Elemental Reactivity Map ↗</strong>
-          <span>元素間の反応性をマップとして可視化</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://dsxrd.starrydata.org" target="_blank" rel="noopener">
-          <strong>Debye-Scherrer XRD ↗</strong>
-          <span>Debye-Scherrer 法による X 線回折プロットの生成</span>
-        </a>
-      </li>
-      <li>
-        <a href="/contact/">
-          <strong>質問・要望</strong>
-          <span>データや機能のリクエストは Contact ページから →</span>
-        </a>
-      </li>
-    </ul>
+    <div class="resources-grid has-thumbs">
+      <a class="resources-card" href="https://cssim.starrydata.org" target="_blank" rel="noopener">
+        <div class="resources-card-thumb">
+          <img src="/assets/images/apps/cssim.png" alt="Crystal Structure Simulator" loading="lazy">
+        </div>
+        <div class="resources-card-body">
+          <h3 class="resources-card-title">Crystal Structure Simulator <span class="resources-card-ext" aria-hidden="true">↗</span></h3>
+          <p class="resources-card-desc">結晶構造を対話的にシミュレート・可視化。</p>
+        </div>
+      </a>
+      <a class="resources-card" href="https://erm.starrydata.org" target="_blank" rel="noopener">
+        <div class="resources-card-thumb">
+          <img src="/assets/images/apps/erm.png" alt="Elemental Reactivity Map" loading="lazy">
+        </div>
+        <div class="resources-card-body">
+          <h3 class="resources-card-title">Elemental Reactivity Map <span class="resources-card-ext" aria-hidden="true">↗</span></h3>
+          <p class="resources-card-desc">元素間の反応性をマップとして可視化。</p>
+        </div>
+      </a>
+      <a class="resources-card" href="https://dsxrd.starrydata.org" target="_blank" rel="noopener">
+        <div class="resources-card-thumb">
+          <img src="/assets/images/apps/dsxrd.png" alt="Debye-Scherrer XRD" loading="lazy">
+        </div>
+        <div class="resources-card-body">
+          <h3 class="resources-card-title">Debye-Scherrer XRD <span class="resources-card-ext" aria-hidden="true">↗</span></h3>
+          <p class="resources-card-desc">Debye-Scherrer 法による X 線回折プロットの生成・可視化。</p>
+        </div>
+      </a>
+    </div>
   </div>
 </section>

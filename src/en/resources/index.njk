@@ -73,37 +73,34 @@ bodyId: resources
       <h2>{{ S.related.title }}</h2>
       <p class="resources-section-desc">{{ S.related.desc }}</p>
     </div>
-    <ul class="resources-related-list">
-      <li>
-        <a href="/data/">
-          <strong>Data collection projects in progress</strong>
-          <span>ThermoelectricMaterials / Magnetic / Battery, etc. — see what each project curates →</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://cssim.starrydata.org" target="_blank" rel="noopener">
-          <strong>Crystal Structure Simulator ↗</strong>
-          <span>Interactive simulation and visualization of crystal structures</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://erm.starrydata.org" target="_blank" rel="noopener">
-          <strong>Elemental Reactivity Map ↗</strong>
-          <span>Visual map of reactivity between elements</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://dsxrd.starrydata.org" target="_blank" rel="noopener">
-          <strong>Debye-Scherrer XRD ↗</strong>
-          <span>Generate and visualize Debye-Scherrer X-ray diffraction plots</span>
-        </a>
-      </li>
-      <li>
-        <a href="/en/contact/">
-          <strong>Questions and requests</strong>
-          <span>Contact us about data or features you would like to see →</span>
-        </a>
-      </li>
-    </ul>
+    <div class="resources-grid has-thumbs">
+      <a class="resources-card" href="https://cssim.starrydata.org" target="_blank" rel="noopener">
+        <div class="resources-card-thumb">
+          <img src="/assets/images/apps/cssim.png" alt="Crystal Structure Simulator" loading="lazy">
+        </div>
+        <div class="resources-card-body">
+          <h3 class="resources-card-title">Crystal Structure Simulator <span class="resources-card-ext" aria-hidden="true">↗</span></h3>
+          <p class="resources-card-desc">Interactive simulation and visualization of crystal structures.</p>
+        </div>
+      </a>
+      <a class="resources-card" href="https://erm.starrydata.org" target="_blank" rel="noopener">
+        <div class="resources-card-thumb">
+          <img src="/assets/images/apps/erm.png" alt="Elemental Reactivity Map" loading="lazy">
+        </div>
+        <div class="resources-card-body">
+          <h3 class="resources-card-title">Elemental Reactivity Map <span class="resources-card-ext" aria-hidden="true">↗</span></h3>
+          <p class="resources-card-desc">Visual map of reactivity between elements.</p>
+        </div>
+      </a>
+      <a class="resources-card" href="https://dsxrd.starrydata.org" target="_blank" rel="noopener">
+        <div class="resources-card-thumb">
+          <img src="/assets/images/apps/dsxrd.png" alt="Debye-Scherrer XRD" loading="lazy">
+        </div>
+        <div class="resources-card-body">
+          <h3 class="resources-card-title">Debye-Scherrer XRD <span class="resources-card-ext" aria-hidden="true">↗</span></h3>
+          <p class="resources-card-desc">Generate and visualize Debye-Scherrer X-ray diffraction plots.</p>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
