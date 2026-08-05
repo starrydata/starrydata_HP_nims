@@ -1,53 +1,20 @@
 ---
-layout: modern.njk
 permalink: /use/index.html
-title: Use Data
-lang: ja
+title: Redirecting…
+eleventyExcludeFromCollections: true
 ---
-
-{%- set L = "ja" -%}
-{%- set U = i18n.use_page -%}
-
-<section class="page-head">
-  <div class="container">
-    <h1 data-echo="{{ U.title[L] }}">{{ U.title[L] }}</h1>
-    <p class="lead">{{ U.lead[L] }}</p>
-  </div>
-</section>
-
-<section class="section section-top-tight">
-  <div class="container">
-    <ul class="use-list">
-      {%- for c in U.cards[L] %}
-      <li>
-        <a class="use-row"
-           href="{{ c.url }}"
-           {% if c.external %}target="_blank" rel="noopener"{% endif %}>
-          <div class="use-row-thumb">
-            {% if c.image %}
-            <img src="{{ c.image }}" alt="" loading="lazy">
-            {% else %}
-            <div class="use-row-thumb-placeholder"><span>{{ c.icon }}</span></div>
-            {% endif %}
-          </div>
-          <div class="use-row-body">
-            <span class="use-row-eyebrow">{{ c.eyebrow }}</span>
-            <h2 class="use-row-title">{{ c.title }}</h2>
-            <p class="use-row-desc">{{ c.desc }}</p>
-            <span class="use-row-cta">
-              {{ c.cta }}
-              {% if c.external %}↗{% else %}→{% endif %}
-            </span>
-          </div>
-        </a>
-      </li>
-      {%- endfor %}
-    </ul>
-
-    <div class="use-cite">
-      <h2 class="use-cite-title" data-echo="{{ U.cite_title[L] }}">{{ U.cite_title[L] }}</h2>
-      <p class="use-cite-body">{{ U.cite_body[L] }}</p>
-      <p class="use-cite-ref">{{ U.cite_ref[L] | safe }}</p>
-    </div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Redirecting to /resources/</title>
+<meta http-equiv="refresh" content="0; url=/resources/">
+<link rel="canonical" href="/resources/">
+<meta name="robots" content="noindex">
+<style>body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:40px;color:#334}</style>
+</head>
+<body>
+<p>このページは <a href="/resources/">/resources/</a> に移動しました。</p>
+<script>location.replace('/resources/');</script>
+</body>
+</html>

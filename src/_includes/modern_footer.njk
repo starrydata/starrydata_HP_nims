@@ -1,7 +1,19 @@
 {%- set L = lang or 'ja' -%}
 {%- set langPath = '/en/' if L == 'en' else '/' -%}
 {%- set contactPath = '/en/contact/' if L == 'en' else '/contact/' -%}
-{%- set usePath = '/en/use/' if L == 'en' else '/use/' -%}
+{%- set researchPath = '/en/research/' if L == 'en' else '/research/' -%}
+{%- set papersPath = '/en/papers/' if L == 'en' else '/papers/' -%}
+{%- set teamPath = '/en/team/' if L == 'en' else '/team/' -%}
+{%- set newsPath = '/en/news/' if L == 'en' else '/news/' -%}
+{%- set resourcesPath = '/en/resources/' if L == 'en' else '/resources/' -%}
+{%- set manualPath = '/manual/' -%}
+{%- set citePath = '/en/cite/' if L == 'en' else '/cite/' -%}
+{%- set involveLabel = 'Get involved' if L == 'en' else 'Get Involved' -%}
+{%- set getInvolvedHref = langPath + '#get-involved' -%}
+{%- set fieldsLabel = 'Research fields' if L == 'en' else '研究分野' -%}
+{%- set searchLabel = 'Search' if L == 'en' else '検索' -%}
+{%- set datasetsLabel = 'Datasets' if L == 'en' else 'Datasets' -%}
+{%- set citeLabel = 'How to cite' if L == 'en' else '引用について' -%}
 
 <footer class="site-footer">
   <div class="container">
@@ -16,18 +28,26 @@
       <h5>{{ i18n.nav.about[L] }}</h5>
       <ul>
         <li><a href="{{ langPath }}#about">{{ i18n.nav.about[L] }}</a></li>
-        <li><a href="{{ langPath }}#research">{{ i18n.nav.research[L] }}</a></li>
-        <li><a href="{{ langPath }}#team">{{ i18n.nav.team[L] }}</a></li>
+        <li><a href="{{ teamPath }}">{{ i18n.nav.team[L] }}</a></li>
+        <li><a href="{{ newsPath }}">{{ i18n.nav.news[L] }}</a></li>
       </ul>
     </div>
 
     <div>
-      <h5><a href="{{ usePath }}">{{ i18n.nav.use_data[L] }}</a></h5>
+      <h5><a href="{{ resourcesPath }}">{{ i18n.nav.resources[L] }}</a></h5>
       <ul>
-        <li><a href="{{ site.external.starrydata2 }}" target="_blank" rel="noopener">Starrydata2</a></li>
-        <li><a href="https://starrydata.github.io/starrydata_datasets/" target="_blank" rel="noopener">Datasets</a></li>
-        <li><a href="https://figshare.com/projects/Starrydata_datasets/155129" target="_blank" rel="noopener">Figshare</a></li>
-        <li><a href="https://starrydata.github.io/links/" target="_blank" rel="noopener">Related Links</a></li>
+        <li><a href="{{ site.external.starrydata2 }}" target="_blank" rel="noopener">{{ searchLabel }} (Starrydata) ↗</a></li>
+        <li><a href="https://starrydata.github.io/starrydata_datasets/" target="_blank" rel="noopener">{{ datasetsLabel }} ↗</a></li>
+        <li><a href="{{ manualPath }}">Manual</a></li>
+        <li><a href="{{ citePath }}">{{ citeLabel }}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>{{ i18n.nav.research[L] }}</h5>
+      <ul>
+        <li><a href="{{ papersPath }}">{{ i18n.nav.publications[L] }}</a></li>
+        <li><a href="{{ researchPath }}">{{ fieldsLabel }}</a></li>
       </ul>
     </div>
 
@@ -35,12 +55,18 @@
       <h5>{{ i18n.nav.contact[L] }}</h5>
       <ul>
         <li><a href="{{ contactPath }}">{{ i18n.nav.contact[L] }}</a></li>
+        <li><a href="{{ getInvolvedHref }}">{{ involveLabel }}</a></li>
       </ul>
     </div>
   </div>
 
   <div class="container footer-bottom">
     <span>{{ i18n.footer.copyright[L] }}</span>
-    <span>{{ i18n.footer.made_with[L] }}</span>
+    <span class="footer-externals">
+      <a href="https://github.com/starrydata" target="_blank" rel="noopener" aria-label="Starrydata on GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.57.1.78-.25.78-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.74 1.27 3.4.97.1-.76.4-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.17a11.06 11.06 0 0 1 5.79 0c2.2-1.48 3.17-1.17 3.17-1.17.63 1.58.23 2.75.12 3.04.73.8 1.18 1.82 1.18 3.07 0 4.41-2.69 5.39-5.25 5.68.41.35.78 1.05.78 2.13v3.16c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+      </a>
+      <span>{{ i18n.footer.made_with[L] }}</span>
+    </span>
   </div>
 </footer>

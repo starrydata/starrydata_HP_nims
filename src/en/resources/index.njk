@@ -1,0 +1,74 @@
+---
+layout: modern.njk
+permalink: /en/resources/index.html
+title: Resources
+lang: en
+bodyId: resources
+---
+
+{%- set L = "en" -%}
+{%- set S = i18n.resources_page.sections[L] -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Resources</span>
+    <h1 data-echo="{{ i18n.resources_page.title[L] }}">{{ i18n.resources_page.title[L] }}</h1>
+    <p class="lead">{{ i18n.resources_page.lead[L] }}</p>
+  </div>
+</section>
+
+{%- for col in i18n.resources_mega.columns[L] %}
+{%- set key = ('explore' if loop.index0 == 0 else ('download' if loop.index0 == 1 else 'docs')) -%}
+<section class="section {{ 'section-top-tight' if loop.first else '' }} resources-section" id="{{ key }}">
+  <div class="container">
+    <div class="resources-section-head">
+      <h2>{{ S[key].title }}</h2>
+      <p class="resources-section-desc">{{ S[key].desc }}</p>
+    </div>
+    <div class="resources-grid">
+      {%- for item in col.items %}
+      <a class="resources-card" href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>
+        <div class="resources-card-icon">
+          <svg width="24" height="24" aria-hidden="true"><use href="#mm-icon-{{ item.icon }}"/></svg>
+        </div>
+        <div class="resources-card-body">
+          <h3 class="resources-card-title">
+            {{ item.title }}{% if item.external %} <span class="resources-card-ext" aria-hidden="true">↗</span>{% endif %}
+          </h3>
+          <p class="resources-card-desc">{{ item.desc }}</p>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endfor %}
+
+<section class="section resources-section" id="related" style="background:#f7f9ff; border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="resources-section-head">
+      <h2>{{ S.related.title }}</h2>
+      <p class="resources-section-desc">{{ S.related.desc }}</p>
+    </div>
+    <ul class="resources-related-list">
+      <li>
+        <a href="/data/">
+          <strong>Data collection projects in progress</strong>
+          <span>ThermoelectricMaterials / Magnetic / Battery, etc. — see what each project curates →</span>
+        </a>
+      </li>
+      <li>
+        <a href="/en/#apps">
+          <strong>Other Materials Informatics tools</strong>
+          <span>Crystal Structure Simulator / Elemental Reactivity Map / Debye-Scherrer XRD (see Apps &amp; Systems) →</span>
+        </a>
+      </li>
+      <li>
+        <a href="/en/contact/">
+          <strong>Questions and requests</strong>
+          <span>Contact us about data or features you would like to see →</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
