@@ -37,7 +37,7 @@ bodyId: resources
         <h3 class="resources-featured-title">
           {{ item.title }}{% if item.external %} <span class="resources-card-ext" aria-hidden="true">↗</span>{% endif %}
         </h3>
-        <p class="resources-featured-desc">{{ item.desc }}</p>
+        <p class="resources-featured-desc">{{ item.desc | safe }}</p>
       </div>
     </a>
     {% endif %}{%- endfor %}
@@ -58,7 +58,7 @@ bodyId: resources
           <h3 class="resources-card-title">
             {{ item.title }}{% if item.external %} <span class="resources-card-ext" aria-hidden="true">↗</span>{% endif %}
           </h3>
-          <p class="resources-card-desc">{{ item.desc }}</p>
+          <p class="resources-card-desc">{{ item.desc | safe }}</p>
         </div>
       </a>
       {% endif %}{%- endfor %}
