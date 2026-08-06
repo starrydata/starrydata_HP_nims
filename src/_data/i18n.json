@@ -290,13 +290,13 @@
       "ja": {
         "explore":    { "title": "Explore",       "desc": "ブラウザ上で試料・論文を検索し、物性データを閲覧・可視化するツール群(論文グラフからのデータ化ツールも含む)" },
         "download":   { "title": "Download",      "desc": "機械学習・統計解析用にデータセットを一括ダウンロードする経路と、論文で引用する際の情報" },
-        "docs":       { "title": "Documentation", "desc": "Starrydata2 の使い方マニュアル、REST API の仕様、ダウンロードした CSV のカラム定義" },
+        "docs":       { "title": "Documentation", "desc": "Starrydata2 の使い方マニュアル、ダウンロードした CSV のカラム定義" },
         "related":    { "title": "その他、マテリアルズインフォマティクスツール",    "desc": "Starrydata データを直接扱わない、単体で使える MI 系ツール" }
       },
       "en": {
         "explore":    { "title": "Explore",       "desc": "Browser-based tools to search samples/papers and visualize property data — includes a plot digitizer" },
         "download":   { "title": "Download",      "desc": "Bulk dataset downloads for machine-learning or statistical analysis, and citation guidance" },
-        "docs":       { "title": "Documentation", "desc": "User manual for the web system, REST API reference, and column definitions of the CSV files" },
+        "docs":       { "title": "Documentation", "desc": "User manual for the web system and column definitions of the CSV files" },
         "related":    { "title": "Other Materials Informatics Tools",       "desc": "Standalone MI tools that don't use Starrydata data directly" }
       }
     }
@@ -372,7 +372,6 @@
           "title": "Documentation",
           "items": [
             { "icon": "book-open","title": "Manual",               "desc": "検索・登録・ダウンロード手順",     "url": "/manual/",                                    "external": false },
-            { "icon": "code",     "title": "REST API",             "desc": "API エンドポイントと使用例",       "url": "/manual/download/#api",                       "external": false },
             { "icon": "layers",   "title": "Data schema",          "desc": "papers / samples / curves 仕様",   "url": "/manual/download/#dataset",                   "external": false }
           ]
         },
@@ -410,7 +409,6 @@
           "title": "Documentation",
           "items": [
             { "icon": "book-open","title": "Manual",               "desc": "Search, curation, download",        "url": "/manual/",                                    "external": false },
-            { "icon": "code",     "title": "REST API",             "desc": "API endpoints & examples",          "url": "/manual/download/#api",                       "external": false },
             { "icon": "layers",   "title": "Data schema",          "desc": "papers / samples / curves spec",    "url": "/manual/download/#dataset",                   "external": false }
           ]
         },

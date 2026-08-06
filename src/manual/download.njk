@@ -12,11 +12,10 @@ bodyId: manual
 <section class="page-head">
   <div class="container">
     <span class="eyebrow">Manual / Chapter 4</span>
-    <h1>ダウンロード・API</h1>
+    <h1>ダウンロード</h1>
     <p class="lead">
       Starrydata2 のデータは、(1) 個別 Sample / Figure 単位の Web ダウンロード、
-      (2) 公式 <strong>Datasets スナップショット</strong>（3 つの CSV ファイル）、
-      (3) REST API、の 3 経路で取得できます。商用・非商用ともに無償です。
+      (2) 公式 <strong>Datasets スナップショット</strong>（3 つの CSV ファイル）の 2 経路で取得できます。商用・非商用ともに無償です。
     </p>
   </div>
 </section>
@@ -126,29 +125,7 @@ long.to_csv("seebeck_long.csv", index=False)
       <strong>単位:</strong> <code>unit_x</code> / <code>unit_y</code> は SI 基本単位の積形式（例 <code>V*K^(-1)</code>）。表示用に整形したい場合は自前で正規表現か <code>sympy</code> を使う。
     </div>
 
-    <h2 id="api">4.5 REST API</h2>
-    <p class="prose">
-      個別 Sample / Figure / Paper をプログラムから取得する場合は REST API も使えます。認証不要、レスポンスは JSON。
-    </p>
-<pre class="manual-code"><code># 個別オブジェクト
-GET https://starrydata.nims.go.jp/starrydata2/api/paper/{SID}
-GET https://starrydata.nims.go.jp/starrydata2/api/sample/{sample_id}
-
-# 属性を絞った取得
-GET https://starrydata.nims.go.jp/starrydata2/api/paper/{SID}/title
-GET https://starrydata.nims.go.jp/starrydata2/api/sample/{sample_id}/composition
-
-# 組成（原子）で検索（AND がデフォルト、OR にしたい場合は末尾 ,or）
-GET https://starrydata.nims.go.jp/starrydata2/api/paper/search?atom=Bi,Te
-GET https://starrydata.nims.go.jp/starrydata2/api/sample/search?atom=Bi,Te
-GET https://starrydata.nims.go.jp/starrydata2/api/sample/search?atom=Bi,Te,or
-</code></pre>
-
-    <div class="manual-callout warn">
-      <strong>レート制限:</strong> 公開された明確な上限はありませんが、機械学習向けの大量取得は<strong>公式 Datasets スナップショット</strong>（4.2）の利用を強く推奨します。短時間に大量リクエストを送ると一時的にブロックされる場合があります。
-    </div>
-
-    <h2 id="mdr">4.6 NIMS MDR スナップショット（引用用途）</h2>
+    <h2 id="mdr">4.5 NIMS MDR スナップショット（引用用途）</h2>
     <p class="prose">
       引用可能な凍結スナップショットが NIMS Materials Data Repository (MDR) でも公開されています。バージョン番号と取得日が永続的に紐付くため、研究の再現性のために MDR スナップショットの利用を推奨します。
     </p>
@@ -157,7 +134,7 @@ GET https://starrydata.nims.go.jp/starrydata2/api/sample/search?atom=Bi,Te,or
       <li>論文: <a href="https://doi.org/10.1080/27660400.2025.2506976" target="_blank" rel="noopener">STAM:Methods (2025)</a></li>
     </ul>
 
-    <h2 id="license">4.7 ライセンスと引用</h2>
+    <h2 id="license">4.6 ライセンスと引用</h2>
     <p class="prose">
       Starrydata2 のデータは商用・非商用を問わず無償で利用できます。論文や報告書で利用する場合は、引用すべき論文の一覧を <a href="/cite/">「引用について」ページ</a>にまとめています。
     </p>
