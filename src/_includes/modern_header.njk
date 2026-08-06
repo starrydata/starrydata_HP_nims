@@ -3,6 +3,28 @@
 {%- set langPath = '/en/' if L == 'en' else '/' -%}
 {%- set otherLangPath = '/en/' if otherLang == 'en' else '/' -%}
 
+{# 言語切替リンクの URL 計算: 現在のページの対応言語版へ飛ばす #}
+{# EN 版が存在しないレガシー系のパスは /en/ にフォールバック #}
+{%- set jaOnlyPrefixes = ['/manual/', '/data/', '/collaboration/', '/tutorial/', '/faq/', '/topics/', '/utility/', '/project/', '/pages/'] -%}
+{%- set isJaOnly = false -%}
+{%- for prefix in jaOnlyPrefixes -%}
+  {%- if page.url.indexOf(prefix) == 0 -%}{%- set isJaOnly = true -%}{%- endif -%}
+{%- endfor -%}
+
+{%- if L == 'en' -%}
+  {%- set jaUrl = page.url | replace('/en/', '/') -%}
+  {%- set enUrl = page.url -%}
+{%- else -%}
+  {%- set jaUrl = page.url -%}
+  {%- if page.url == '/' -%}
+    {%- set enUrl = '/en/' -%}
+  {%- elif isJaOnly -%}
+    {%- set enUrl = '/en/' -%}
+  {%- else -%}
+    {%- set enUrl = '/en' + page.url -%}
+  {%- endif -%}
+{%- endif -%}
+
 {%- set researchPath = '/en/research/' if L == 'en' else '/research/' -%}
 {%- set papersPath = '/en/papers/' if L == 'en' else '/papers/' -%}
 {%- set contactPath = '/en/contact/' if L == 'en' else '/contact/' -%}
@@ -53,8 +75,8 @@
     </nav>
 
     <span class="lang-switch" role="group" aria-label="Language">
-      <a href="/" class="{{ 'is-active' if L == 'ja' else '' }}">JA</a>
-      <a href="/en/" class="{{ 'is-active' if L == 'en' else '' }}">EN</a>
+      <a href="{{ jaUrl }}" class="{{ 'is-active' if L == 'ja' else '' }}">JA</a>
+      <a href="{{ enUrl }}" class="{{ 'is-active' if L == 'en' else '' }}">EN</a>
     </span>
   </div>
 
