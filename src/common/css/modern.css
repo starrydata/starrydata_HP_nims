@@ -2652,7 +2652,40 @@ p { margin: 0 0 1em; }
 /* site-header は sticky ではないので mega は absolute で足下に流れる */
 .site-header { position: relative; }
 
-.site-nav-item.has-mega { position: relative; }
+.site-nav-item.has-mega,
+.site-nav-item.has-dropdown { position: relative; }
+
+/* About 用の狭幅ドロップダウン (site-nav-item の内側) */
+.site-nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  z-index: 90;
+  animation: mega-fade-in .14s ease-out;
+}
+.site-nav-dropdown[hidden] { display: none; }
+.site-nav-dropdown a {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: background .12s, color .12s;
+}
+.site-nav-dropdown a:hover {
+  background: #f3eefe;
+  color: var(--accent-2);
+}
+@media (max-width: 980px) {
+  .site-nav-dropdown { display: none !important; }
+}
 .site-nav-btn {
   display: inline-flex;
   align-items: center;

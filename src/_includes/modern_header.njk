@@ -29,6 +29,10 @@
 {%- set papersPath = '/en/papers/' if L == 'en' else '/papers/' -%}
 {%- set contactPath = '/en/contact/' if L == 'en' else '/contact/' -%}
 {%- set resourcesPath = '/en/resources/' if L == 'en' else '/resources/' -%}
+{%- set teamPath = '/en/team/' if L == 'en' else '/team/' -%}
+{%- set newsPath = '/en/news/' if L == 'en' else '/news/' -%}
+{%- set aboutPath = langPath + '#about' -%}
+{%- set aboutLabel = 'About the project' if L == 'en' else 'プロジェクト概要' -%}
 {%- set seeAllLabel = 'View all Resources' if L == 'en' else 'Resources 全体を見る' -%}
 
 <!-- Nav icon sprite (used by the Resources mega-menu) -->
@@ -60,7 +64,17 @@
     </a>
 
     <nav class="site-nav" aria-label="Global">
-      <a href="{{ langPath }}#about">{{ i18n.nav.about[L] }}</a>
+      <div class="site-nav-item has-dropdown" data-dropdown-parent>
+        <a class="site-nav-btn" href="{{ aboutPath }}" aria-expanded="false" aria-controls="dropdown-about" aria-haspopup="true">
+          {{ i18n.nav.about[L] }}
+          <svg class="site-nav-caret" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div id="dropdown-about" class="site-nav-dropdown" hidden data-dropdown-panel>
+          <a href="{{ aboutPath }}">{{ aboutLabel }}</a>
+          <a href="{{ teamPath }}">{{ i18n.nav.team[L] }}</a>
+          <a href="{{ newsPath }}">{{ i18n.nav.news[L] }}</a>
+        </div>
+      </div>
 
       <div class="site-nav-item has-mega" data-mega-parent>
         <a class="site-nav-btn" href="{{ resourcesPath }}" aria-expanded="false" aria-controls="mega-resources" aria-haspopup="true">
@@ -114,45 +128,61 @@
 
 <script>
 (function () {
-  // Resources メガメニューの開閉制御
-  var parent = document.querySelector('[data-mega-parent]');
-  var panel  = document.querySelector('[data-mega-panel]');
-  if (!parent || !panel) return;
-  var trigger = parent.querySelector('.site-nav-btn');
-  var closeTimer = null;
+  // 汎用ヘッダーメニュー開閉 (Resources メガメニュー + About ドロップダウン)
+  var menus = [];
 
-  function open() {
-    if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-    panel.hidden = false;
-    parent.classList.add('is-open');
-    trigger.setAttribute('aria-expanded', 'true');
-  }
-  function close() {
-    panel.hidden = true;
-    parent.classList.remove('is-open');
-    trigger.setAttribute('aria-expanded', 'false');
-  }
-  function scheduleClose() {
-    if (closeTimer) clearTimeout(closeTimer);
-    closeTimer = setTimeout(close, 180);
+  function setupMenu(parent, panel) {
+    if (!parent || !panel) return;
+    var trigger = parent.querySelector('.site-nav-btn');
+    var closeTimer = null;
+
+    function open() {
+      if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+      panel.hidden = false;
+      parent.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+    function close() {
+      panel.hidden = true;
+      parent.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    function scheduleClose() {
+      if (closeTimer) clearTimeout(closeTimer);
+      closeTimer = setTimeout(close, 180);
+    }
+
+    parent.addEventListener('mouseenter', open);
+    parent.addEventListener('mouseleave', scheduleClose);
+    panel.addEventListener('mouseenter', function () { if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; } });
+    panel.addEventListener('mouseleave', scheduleClose);
+
+    menus.push({ parent: parent, panel: panel, trigger: trigger, close: close });
   }
 
-  parent.addEventListener('mouseenter', open);
-  parent.addEventListener('mouseleave', scheduleClose);
-  panel.addEventListener('mouseenter', function () { if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; } });
-  panel.addEventListener('mouseleave', scheduleClose);
-
-  // クリックはブラウザデフォルトの遷移を許可 (link に置き換えたため)。
-  // ただしメニューが開いている場合の追加クリックは、link を辿らせるだけで OK。
+  // Resources メガメニュー: パネルはヘッダー配下 (site-nav-item の外)
+  setupMenu(
+    document.querySelector('[data-mega-parent]'),
+    document.querySelector('[data-mega-panel]')
+  );
+  // About ドロップダウン: パネルは site-nav-item の内部
+  document.querySelectorAll('[data-dropdown-parent]').forEach(function (parent) {
+    setupMenu(parent, parent.querySelector('[data-dropdown-panel]'));
+  });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !panel.hidden) { close(); trigger.focus(); }
+    if (e.key !== 'Escape') return;
+    menus.forEach(function (m) {
+      if (!m.panel.hidden) { m.close(); m.trigger.focus(); }
+    });
   });
 
   document.addEventListener('click', function (e) {
-    if (panel.hidden) return;
-    if (parent.contains(e.target) || panel.contains(e.target)) return;
-    close();
+    menus.forEach(function (m) {
+      if (m.panel.hidden) return;
+      if (m.parent.contains(e.target) || m.panel.contains(e.target)) return;
+      m.close();
+    });
   });
 })();
 </script>
