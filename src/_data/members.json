@@ -13,8 +13,8 @@
           "role": "プロジェクトリーダー",
           "role_en": "Project Leader",
           "photo": "/assets/images/team/katsura_yukari.jpg",
-          "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ 主任研究員\n筑波大学 数理物質科学研究群 国際マテリアルズイノベーション学位プログラム 准教授\n(国研)理化学研究所 革新知能統合研究センター 客員研究員",
-          "affiliation_en": "Senior Researcher, Materials Modeling Group, Center for Basic Research on Materials, NIMS\nAssociate Professor, Degree Program in Materials Innovation, Graduate School of Science and Technology, University of Tsukuba\nVisiting Researcher, Center for Advanced Intelligence Project (AIP), RIKEN",
+          "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ\n主任研究員\n\n筑波大学 数理物質科学研究群 国際マテリアルズイノベーション学位プログラム\n准教授\n\n(国研)理化学研究所 革新知能統合研究センター\n客員研究員",
+          "affiliation_en": "Materials Modeling Group, Center for Basic Research on Materials, NIMS\nSenior Researcher\n\nDegree Program in Materials Innovation, Graduate School of Science and Technology, University of Tsukuba\nAssociate Professor\n\nCenter for Advanced Intelligence Project (AIP), RIKEN\nVisiting Researcher",
           "links": [
             { "label": "X",             "href": "https://x.com/Starrydata" },
             { "label": "Official Page", "href": "https://researchmap.jp/ykatsura" }
@@ -26,8 +26,8 @@
           "role": "Web開発",
           "role_en": "Web Development",
           "photo": "/project/img/profile_kumagai.jpg",
-          "affiliation": "さくらインターネット株式会社 研究員\n(国研)理化学研究所 客員研究員",
-          "affiliation_en": "Researcher, SAKURA internet Inc.\nVisiting Researcher, RIKEN",
+          "affiliation": "さくらインターネット株式会社\n研究員\n\n(国研)理化学研究所\n客員研究員",
+          "affiliation_en": "SAKURA internet Inc.\nResearcher\n\nRIKEN\nVisiting Researcher",
           "links": [
             { "label": "X",             "href": "https://x.com/kumagallium" },
             { "label": "Official Page", "href": "https://kumagallium.github.io/" }
@@ -39,8 +39,8 @@
           "role": "Web開発",
           "role_en": "Web Development",
           "photo": "/project/img/profile_mato.jpg",
-          "affiliation": "NIMS 技術開発・共用部門 エンジニア",
-          "affiliation_en": "Engineer, Technology Development and Sharing Department, NIMS",
+          "affiliation": "NIMS 技術開発・共用部門/データ基盤ユニット\n特任エンジニア",
+          "affiliation_en": "Advanced Engineering and Services Division/Data Infrastructure Unit, NIMS\nProject Engineer (Indefinite Term Employee)",
           "links": []
         },
         {
@@ -49,8 +49,8 @@
           "role": "プロジェクト運営\n(リサーチ・アドミニストレーター)",
           "role_en": "Project Operations\n(Research Administrator)",
           "photo": "/assets/images/team/tanaka_atsumi.jpg",
-          "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ テクニカルスタッフ",
-          "affiliation_en": "Technical Staff, Materials Modeling Group, Center for Basic Research on Materials, NIMS",
+          "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ\nテクニカルスタッフ",
+          "affiliation_en": "Materials Modeling Group, Center for Basic Research on Materials, NIMS\nTechnical Staff",
           "links": []
         },
         {
@@ -59,8 +59,8 @@
           "role": "データアナリスト",
           "role_en": "Data Analyst",
           "photo": "/assets/images/team/dewi_yana.jpg",
-          "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ テクニカルスタッフ",
-          "affiliation_en": "Technical Staff, Materials Modeling Group, Center for Basic Research on Materials, NIMS",
+          "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ\nテクニカルスタッフ",
+          "affiliation_en": "Materials Modeling Group, Center for Basic Research on Materials, NIMS\nTechnical Staff",
           "links": []
         },
         {
