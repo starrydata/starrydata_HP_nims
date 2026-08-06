@@ -301,6 +301,50 @@
       }
     }
   },
+  "about_mega": {
+    "columns": {
+      "ja": [
+        {
+          "title": "Project",
+          "items": [
+            { "icon": "info",  "title": "About the project", "desc": "プロジェクトの目的・特徴・運営体制",         "url": "/#about",  "external": false }
+          ]
+        },
+        {
+          "title": "People",
+          "items": [
+            { "icon": "users", "title": "Members",           "desc": "プロジェクトメンバーと過去のメンバー(Alumni)", "url": "/team/",   "external": false }
+          ]
+        },
+        {
+          "title": "Updates",
+          "items": [
+            { "icon": "bell",  "title": "News",              "desc": "プロジェクトの最新情報・お知らせ",           "url": "/news/",   "external": false }
+          ]
+        }
+      ],
+      "en": [
+        {
+          "title": "Project",
+          "items": [
+            { "icon": "info",  "title": "About the project", "desc": "Purpose, features, and organization of the project", "url": "/en/#about",   "external": false }
+          ]
+        },
+        {
+          "title": "People",
+          "items": [
+            { "icon": "users", "title": "Members",           "desc": "Current project members and alumni",                 "url": "/en/team/",    "external": false }
+          ]
+        },
+        {
+          "title": "Updates",
+          "items": [
+            { "icon": "bell",  "title": "News",              "desc": "Project updates and announcements",                   "url": "/en/news/",    "external": false }
+          ]
+        }
+      ]
+    }
+  },
   "resources_mega": {
     "columns": {
       "ja": [

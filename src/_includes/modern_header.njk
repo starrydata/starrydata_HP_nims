@@ -54,6 +54,9 @@
     <symbol id="mm-icon-hexagon"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="21 16 21 8 12 3 3 8 3 16 12 21 21 16"/></symbol>
     <symbol id="mm-icon-map"       viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></symbol>
     <symbol id="mm-icon-activity"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></symbol>
+    <symbol id="mm-icon-info"      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></symbol>
+    <symbol id="mm-icon-users"     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="mm-icon-bell"      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></symbol>
   </defs>
 </svg>
 
@@ -64,19 +67,14 @@
     </a>
 
     <nav class="site-nav" aria-label="Global">
-      <div class="site-nav-item has-dropdown" data-dropdown-parent>
-        <a class="site-nav-btn" href="{{ aboutPath }}" aria-expanded="false" aria-controls="dropdown-about" aria-haspopup="true">
+      <div class="site-nav-item has-mega" data-mega-parent data-mega-target="mega-about">
+        <a class="site-nav-btn" href="{{ aboutPath }}" aria-expanded="false" aria-controls="mega-about" aria-haspopup="true">
           {{ i18n.nav.about[L] }}
           <svg class="site-nav-caret" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <div id="dropdown-about" class="site-nav-dropdown" hidden data-dropdown-panel>
-          <a href="{{ aboutPath }}">{{ aboutLabel }}</a>
-          <a href="{{ teamPath }}">{{ i18n.nav.team[L] }}</a>
-          <a href="{{ newsPath }}">{{ i18n.nav.news[L] }}</a>
-        </div>
       </div>
 
-      <div class="site-nav-item has-mega" data-mega-parent>
+      <div class="site-nav-item has-mega" data-mega-parent data-mega-target="mega-resources">
         <a class="site-nav-btn" href="{{ resourcesPath }}" aria-expanded="false" aria-controls="mega-resources" aria-haspopup="true">
           {{ i18n.nav.resources[L] }}
           <svg class="site-nav-caret" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -92,6 +90,34 @@
       <a href="{{ jaUrl }}" class="{{ 'is-active' if L == 'ja' else '' }}">JA</a>
       <a href="{{ enUrl }}" class="{{ 'is-active' if L == 'en' else '' }}">EN</a>
     </span>
+  </div>
+
+  <!-- About mega-menu panel -->
+  <div id="mega-about" class="mega-menu" hidden data-mega-panel>
+    <div class="mega-menu-inner">
+      {%- for col in i18n.about_mega.columns[L] %}
+      <div class="mega-menu-col">
+        <div class="mega-menu-col-title">{{ col.title }}</div>
+        <ul class="mega-menu-list">
+          {%- for item in col.items %}
+          <li>
+            <a class="mega-menu-link" href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>
+              <span class="mega-menu-icon">
+                <svg width="20" height="20" aria-hidden="true"><use href="#mm-icon-{{ item.icon }}"/></svg>
+              </span>
+              <span class="mega-menu-text">
+                <span class="mega-menu-title">
+                  {{ item.title }}{% if item.external %} <span class="mega-menu-ext" aria-hidden="true">↗</span>{% endif %}
+                </span>
+                <span class="mega-menu-desc">{{ item.desc | safe }}</span>
+              </span>
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
   </div>
 
   <!-- Resources mega-menu panel (positioned below header, full page width) -->
@@ -160,14 +186,11 @@
     menus.push({ parent: parent, panel: panel, trigger: trigger, close: close });
   }
 
-  // Resources メガメニュー: パネルはヘッダー配下 (site-nav-item の外)
-  setupMenu(
-    document.querySelector('[data-mega-parent]'),
-    document.querySelector('[data-mega-panel]')
-  );
-  // About ドロップダウン: パネルは site-nav-item の内部
-  document.querySelectorAll('[data-dropdown-parent]').forEach(function (parent) {
-    setupMenu(parent, parent.querySelector('[data-dropdown-panel]'));
+  // 各 site-nav-item の data-mega-target 属性で対応するパネルを紐付け
+  document.querySelectorAll('[data-mega-parent]').forEach(function (parent) {
+    var targetId = parent.dataset.megaTarget;
+    var panel = targetId ? document.getElementById(targetId) : null;
+    if (panel) setupMenu(parent, panel);
   });
 
   document.addEventListener('keydown', function (e) {
