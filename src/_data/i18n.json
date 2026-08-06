@@ -364,7 +364,7 @@
           "items": [
             { "icon": "package",  "title": "Latest CSV",           "desc": "毎日更新の分野別データセット",     "url": "https://starrydata.github.io/starrydata_datasets/", "external": true },
             { "icon": "bookmark", "title": "Figshare",             "desc": "DOI 付き凍結スナップショット",     "url": "https://figshare.com/projects/Starrydata_datasets/155129", "external": true },
-            { "icon": "book",     "title": "NIMS MDR",             "desc": "引用可能な永続版データセット",     "url": "https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=ja", "external": true },
+            { "icon": "book",     "title": "NIMS MDR",             "desc": "論文の永続 URL アーカイブ",             "url": "https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=ja", "external": true },
             { "icon": "quote",    "title": "How to cite",          "desc": "引用すべき論文一覧",                "url": "/cite/",                                     "external": false }
           ]
         },
@@ -401,7 +401,7 @@
           "items": [
             { "icon": "package",  "title": "Latest CSV",           "desc": "Daily per-field CSV",               "url": "https://starrydata.github.io/starrydata_datasets/", "external": true },
             { "icon": "bookmark", "title": "Figshare",             "desc": "DOI-fixed snapshots",               "url": "https://figshare.com/projects/Starrydata_datasets/155129", "external": true },
-            { "icon": "book",     "title": "NIMS MDR",             "desc": "Citable frozen snapshots",          "url": "https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=en", "external": true },
+            { "icon": "book",     "title": "NIMS MDR",             "desc": "Permanent URL archive of the paper", "url": "https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=en", "external": true },
             { "icon": "quote",    "title": "How to cite",          "desc": "Papers to cite",                    "url": "/en/cite/",                                   "external": false }
           ]
         },
