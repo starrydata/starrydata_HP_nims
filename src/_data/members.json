@@ -89,11 +89,21 @@
           "links": []
         },
         {
+          "name_ja": "髙田 悠",
+          "name_en": "Yu Takada",
+          "role": "Web開発",
+          "photo": "/project/img/profile_takada.jpg",
+          "affiliation": "NIMS",
+          "period": "2021.12.01 - 2025.03.31",
+          "links": []
+        },
+        {
           "name_ja": "細野 史一",
           "name_en": "Fumikazu Hosono",
           "role": "データ収集",
           "photo": "/project/img/profile_hosono.jpg",
           "affiliation": "NIMS",
+          "period": "2022.02.21 - 2025.03.31",
           "links": []
         },
         {
@@ -102,14 +112,42 @@
           "role": "データ収集",
           "photo": "/project/img/profile_saito.jpg",
           "affiliation": "NIMS",
+          "period": "2022.12.01 - 2025.03.31",
           "links": []
         },
         {
-          "name_ja": "高田　悠",
-          "name_en": "Yu Takada",
-          "role": "Web開発",
-          "photo": "/project/img/profile_takada.jpg",
+          "name_ja": "郡 俊二",
+          "name_en": "Shunji Koori",
           "affiliation": "NIMS",
+          "period": "2022.07.13 - 2024.03.31",
+          "links": []
+        },
+        {
+          "name_ja": "トン ヌ フン タン",
+          "name_en": "Ton Nu Phuong Thanh",
+          "affiliation": "NIMS",
+          "period": "2022.12.01 - 2024.03.31",
+          "links": []
+        },
+        {
+          "name_ja": "藤本 雅之",
+          "name_en": "Masayuki Fujimoto",
+          "affiliation": "NIMS",
+          "period": "2021.09.01 - 2023.12.31",
+          "links": []
+        },
+        {
+          "name_ja": "片柳 渡",
+          "name_en": "Wataru Katayanagi",
+          "affiliation": "NIMS",
+          "period": "2021.09.13 - 2022.04.30",
+          "links": []
+        },
+        {
+          "name_ja": "安藤 有希",
+          "name_en": "Yuki Ando",
+          "affiliation": "NIMS",
+          "period": "2018.04.01 - 2020.03.31\n2021.04.01 - 2021.09.30",
           "links": []
         }
       ]

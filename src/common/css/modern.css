@@ -2058,8 +2058,22 @@ p { margin: 0 0 1em; }
   color: var(--text-3);
   letter-spacing: 0.04em;
 }
+.alumni-list .period {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
 @media (max-width: 600px) {
   .alumni-list { grid-template-columns: 1fr; }
+  .alumni-list li { flex-wrap: wrap; }
+  .alumni-list .period {
+    margin-left: 0;
+    width: 100%;
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 760px) {

@@ -36,6 +36,7 @@ lang: ja
           <li>
             <span class="name-ja">{{ m.name_ja }}</span>
             <span class="name-en">{{ m.name_en }}</span>
+            {% if m.period %}<span class="period">{{ m.period | replace("\n", " / ") }}</span>{% endif %}
           </li>
           {%- endfor %}
         </ul>
