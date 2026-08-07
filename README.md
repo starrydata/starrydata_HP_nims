@@ -149,8 +149,19 @@ npm run build
 - 同期先: `starrydata/starrydata.github.io` の `links/` サブディレクトリ (Actions が別リポに commit + push)
 - 公開先: https://starrydata.nims.go.jp/ (NIMS プロキシ経由)
 - 必要な設定: リポジトリ Secrets に `PAGES_SYNC_TOKEN` を登録
-  - fine-grained PAT: `starrydata/starrydata.github.io` の Contents Read/Write のみ (推奨)
-  - または Classic PAT `repo` scope
+  - **推奨: fine-grained PAT**
+    - Resource owner: `starrydata`
+    - Repository access: `starrydata/starrydata.github.io` のみ
+    - Permissions → Contents: **Read and write**
+    - `starrydata` org は「Require administrator approval」ポリシーを設定済のため、PAT 発行後は org admin (`kumagallium` / `t29mato`) の承認が必要
+    - 承認画面: https://github.com/organizations/starrydata/settings/personal-access-tokens/pending_requests
+  - 代替: Classic PAT `repo` scope (即発行可、ただし権限が広いので非推奨)
+
+**PAT 期限切れ時の更新手順**
+1. 新しい fine-grained PAT を再発行 (期限 1 年推奨)
+2. admin に承認依頼
+3. https://github.com/starrydata/starrydata_HP_nims/settings/secrets/actions で `PAGES_SYNC_TOKEN` を **Update**
+4. Actions タブから `sync-to-links.yml` を手動実行して動作確認
 
 ### 手動同期 (workflow が失敗した時の緊急用)
 
