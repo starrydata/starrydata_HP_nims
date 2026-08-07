@@ -106,17 +106,17 @@ main ブランチに push すると 2 つの GitHub Actions が並列で動く:
 
 ### 2. links/ 同期 (公式窓口)
 - Workflow: `.github/workflows/sync-to-links.yml`
-- ビルド設定: `PATHPREFIX="/links/"`
+- ビルド設定: `PATHPREFIX="/"` (NIMS プロキシが /links/ プレフィックスを吸収するため、生成 HTML 内のリンクはルート相対)
 - 同期先: `starrydata/starrydata.github.io` の `links/` サブディレクトリ
 - 公開先: https://starrydata.nims.go.jp/ (NIMS プロキシ経由)
 - 用途: **公式窓口**
-- 必要な設定: リポジトリ Secrets に `PAGES_SYNC_TOKEN` (fine-grained PAT、`starrydata/starrydata.github.io` の Contents Read/Write) を登録
+- 必要な設定: リポジトリ Secrets に `PAGES_SYNC_TOKEN` (Classic PAT `repo` scope または fine-grained PAT: `starrydata/starrydata.github.io` の Contents Read/Write) を登録
 
 ### 手動同期 (workflow が失敗した時の緊急用)
 
 ```bash
 cd /path/to/starrydata_HP_nims
-PATHPREFIX=/links/ npx @11ty/eleventy
+PATHPREFIX=/ npx @11ty/eleventy
 # _site/ を starrydata.github.io の links/ に反映
 cd /path/to/starrydata.github.io   # gh repo clone starrydata/starrydata.github.io
 rm -rf links/*
