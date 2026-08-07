@@ -1,39 +1,78 @@
 # Starrydata HP (NIMS edition)
 
-Starrydata プロジェクトの公式ホームページ。
+Starrydata プロジェクトの公式ホームページ (NIMS 版)。
 
-🌐 **Main URL (公式窓口)**: https://starrydata.nims.go.jp/
-🌐 **GitHub Pages 直リンク**: https://starrydata.github.io/starrydata_HP_nims/
+## 公開 URL
 
-## 公開構成
+| URL | 役割 |
+|-----|------|
+| https://starrydata.nims.go.jp/ | **公式窓口 (一般公開)**。URL バーは NIMS のまま、中身は `links/` を NIMS プロキシで配信 |
+| https://starrydata.github.io/links/ | 上記の実体。ここに置かれた HTML がプロキシ経由で公式窓口に出る |
+| https://starrydata.github.io/starrydata_HP_nims/ | GitHub Pages 直配信 (プレビュー・直リンク用) |
 
-本サイトは **2 箇所** に同じ内容がデプロイされる:
-
-| URL | 用途 | 中身 |
-|-----|------|------|
-| `https://starrydata.nims.go.jp/` | **公式窓口(推奨)** | NIMS 側のプロキシで `starrydata.github.io/links/` の内容を配信、URL バーは NIMS のまま |
-| `https://starrydata.github.io/links/` | 上記のプロキシ実体 | `starrydata_HP_nims` のビルド出力 (PATHPREFIX=/links/) を格納 |
-| `https://starrydata.github.io/starrydata_HP_nims/` | GitHub Pages 直配信 | 開発確認・プレビュー用 |
+## 構成と役割
 
 ```
-[利用者]
-   │
-   ▼
-starrydata.nims.go.jp/     ← 公式窓口 (URL バーはここのまま)
-   │  (NIMS プロキシ)
-   ▼
-starrydata.github.io/links/               ← 実コンテンツ配信
-   │  (GitHub Actions: sync-to-links.yml)
-   ▼
-starrydata/starrydata_HP_nims             ← ソース (本リポジトリ)
+[一般利用者]
+     │
+     ▼
+starrydata.nims.go.jp/                    ← 公式窓口 (URL バーはここ)
+     │  NIMS プロキシ (パス /links/ を吸収)
+     ▼
+starrydata/starrydata.github.io           ← 配信用リポジトリ (触らない)
+   ├── links/                             ← 公式窓口の実体 (自動生成)
+   ├── links_archive/                     ← 旧 Systems ページ (バックアップ)
+   └── starrydata_HP_nims/                ← プレビュー用 (自動生成)
+                                                 ▲
+                                                 │ 自動同期 (GitHub Actions)
+                                                 │
+starrydata/starrydata_HP_nims  ← 【編集はここだけ】 ソースリポジトリ (本リポ)
+     (ローカル: /Users/atsumitanaka/Documents/starrydata_HP/)
 ```
 
-デプロイパイプライン:
-- **main への push** → 2 つの workflow が並列で動く:
-  - `deploy.yml`: `PATHPREFIX="/starrydata_HP_nims/"` でビルド → GitHub Pages に配信 (`starrydata.github.io/starrydata_HP_nims/`)
-  - `sync-to-links.yml`: `PATHPREFIX="/links/"` でビルド → `starrydata/starrydata.github.io` の `links/` サブディレクトリに commit + push
+| コンポーネント | 種類 | 役割 | 編集 |
+|---|---|---|---|
+| `starrydata_HP_nims` (本リポ) | ソース | Eleventy テンプレート・データ・画像の原本 | **編集する (唯一の編集対象)** |
+| `starrydata.github.io/links/` | 成果物 | 公式窓口が配信する HTML/JSON | 触らない (次回同期で上書きされる) |
+| `starrydata.github.io/starrydata_HP_nims/` | 成果物 | プレビュー用 GitHub Pages | 触らない (自動生成) |
+| `starrydata.github.io/links_archive/` | バックアップ | 旧 Systems ページ (2026-08-07 以前の `links/`) | 触らない |
+| NIMS プロキシ | インフラ | `starrydata.nims.go.jp/` で `links/` を配信 | NIMS 情シス管理 (触らない) |
 
-旧 Systems ページ (2026-08-07 以前の `links/` 内容) は `starrydata.github.io/links_archive/` に退避してある (バックアップ)。
+## 編集ワークフロー
+
+**編集するのは常に本リポジトリ `starrydata_HP_nims` のみ。**
+`starrydata.github.io` 側の `links/` や `starrydata_HP_nims/` を直接編集してはいけない (次の自動同期で上書きされて消える)。
+
+一般的な流れ:
+
+```bash
+# 1. 編集
+#    src/_data/*.json  (テキスト・メンバー・トピック等)
+#    src/**/*.njk      (テンプレート)
+#    src/assets/images/  (画像)
+
+# 2. ローカル確認
+npm install          # 初回のみ
+npm run serve        # http://localhost:8080/ でプレビュー
+
+# 3. push → 自動デプロイ (下記「リリース」参照)
+git add -A && git commit -m "..." && git push origin main
+```
+
+編集ファイルの詳細は下記 [メンバー・研究領域・ニュース等の更新](#メンバー研究領域ニュース等の更新) を参照。
+
+## リリース (自動デプロイ)
+
+**`main` ブランチに push すると 2 つの GitHub Actions workflow が同時に走り、両方に自動反映される。**
+
+| Workflow | PATHPREFIX | 反映先 | 用途 |
+|---|---|---|---|
+| `deploy.yml` | `/starrydata_HP_nims/` | https://starrydata.github.io/starrydata_HP_nims/ | プレビュー・直リンク |
+| `sync-to-links.yml` | `/` (NIMS プロキシが `/links/` を吸収) | `starrydata.github.io/links/` → **https://starrydata.nims.go.jp/** | **公式窓口** |
+
+**注意: プレビューと本番が同時に更新される。** 「プレビューで確認してから本番に出す」というワンクッションはないため、push 前に必ずローカル (`npm run serve`) で動作確認すること。壊れた変更はそのまま公式窓口に反映される。
+
+preview → production を分けたい場合 (例: `develop` push でプレビューだけ更新、`main` merge で公式窓口反映) は workflow の書き換えが必要 (現状未対応)。
 
 ## リポジトリ構成
 
@@ -94,23 +133,24 @@ npm run build
 # → _site/ に出力
 ```
 
-## デプロイ
+## デプロイ詳細 (workflow 設定)
 
-main ブランチに push すると 2 つの GitHub Actions が並列で動く:
+上記「[リリース (自動デプロイ)](#リリース-自動デプロイ)」の内部仕様。
 
-### 1. GitHub Pages (直配信)
-- Workflow: `.github/workflows/deploy.yml`
-- ビルド設定: `PATHPREFIX="/starrydata_HP_nims/"`
+### 1. `deploy.yml` (プレビュー)
+- ファイル: `.github/workflows/deploy.yml`
+- ビルド: `PATHPREFIX="/starrydata_HP_nims/"`
 - 公開先: https://starrydata.github.io/starrydata_HP_nims/
-- 用途: 開発プレビュー、直リンク
+- 権限: GitHub Pages 標準 (`permissions: pages: write, id-token: write`)
 
-### 2. links/ 同期 (公式窓口)
-- Workflow: `.github/workflows/sync-to-links.yml`
-- ビルド設定: `PATHPREFIX="/"` (NIMS プロキシが /links/ プレフィックスを吸収するため、生成 HTML 内のリンクはルート相対)
-- 同期先: `starrydata/starrydata.github.io` の `links/` サブディレクトリ
+### 2. `sync-to-links.yml` (公式窓口)
+- ファイル: `.github/workflows/sync-to-links.yml`
+- ビルド: `PATHPREFIX="/"` (NIMS プロキシが `/links/` プレフィックスを吸収するため、生成 HTML 内のリンクはルート相対)
+- 同期先: `starrydata/starrydata.github.io` の `links/` サブディレクトリ (Actions が別リポに commit + push)
 - 公開先: https://starrydata.nims.go.jp/ (NIMS プロキシ経由)
-- 用途: **公式窓口**
-- 必要な設定: リポジトリ Secrets に `PAGES_SYNC_TOKEN` (Classic PAT `repo` scope または fine-grained PAT: `starrydata/starrydata.github.io` の Contents Read/Write) を登録
+- 必要な設定: リポジトリ Secrets に `PAGES_SYNC_TOKEN` を登録
+  - fine-grained PAT: `starrydata/starrydata.github.io` の Contents Read/Write のみ (推奨)
+  - または Classic PAT `repo` scope
 
 ### 手動同期 (workflow が失敗した時の緊急用)
 
