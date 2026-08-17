@@ -68,7 +68,7 @@ git add -A && git commit -m "..." && git push origin main
 | Workflow | PATHPREFIX | 反映先 | 用途 |
 |---|---|---|---|
 | `deploy.yml` | `/starrydata_HP_nims/` | https://starrydata.github.io/starrydata_HP_nims/ | プレビュー・直リンク |
-| `sync-to-links.yml` | `/` (NIMS プロキシが `/links/` を吸収) | `starrydata.github.io/links/` → **https://starrydata.nims.go.jp/** | **公式窓口** |
+| `sync-to-links.yml` | `/links/` (NIMS プロキシが `/links/` 配下しかルーティングしないため) | `starrydata.github.io/links/` → **https://starrydata.nims.go.jp/** | **公式窓口** |
 
 **注意: プレビューと本番が同時に更新される。** 「プレビューで確認してから本番に出す」というワンクッションはないため、push 前に必ずローカル (`npm run serve`) で動作確認すること。壊れた変更はそのまま公式窓口に反映される。
 
@@ -145,7 +145,7 @@ npm run build
 
 ### 2. `sync-to-links.yml` (公式窓口)
 - ファイル: `.github/workflows/sync-to-links.yml`
-- ビルド: `PATHPREFIX="/"` (NIMS プロキシが `/links/` プレフィックスを吸収するため、生成 HTML 内のリンクはルート相対)
+- ビルド: `PATHPREFIX="/links/"` (NIMS プロキシは `/links/` 配下のみを github.io/links/ にルーティング、それ以外のパスは github.io ルートに素通しするため、HTML 内の絶対パスも `/links/` プレフィックス必須。URL バーには `/links/foo` の形式で表示される)
 - 同期先: `starrydata/starrydata.github.io` の `links/` サブディレクトリ (Actions が別リポに commit + push)
 - 公開先: https://starrydata.nims.go.jp/ (NIMS プロキシ経由)
 - 必要な設定: リポジトリ Secrets に `PAGES_SYNC_TOKEN` を登録
@@ -167,7 +167,7 @@ npm run build
 
 ```bash
 cd /path/to/starrydata_HP_nims
-PATHPREFIX=/ npx @11ty/eleventy
+PATHPREFIX=/links/ npx @11ty/eleventy
 # _site/ を starrydata.github.io の links/ に反映
 cd /path/to/starrydata.github.io   # gh repo clone starrydata/starrydata.github.io
 rm -rf links/*

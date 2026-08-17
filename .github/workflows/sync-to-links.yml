@@ -36,9 +36,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build with root prefix (NIMS プロキシが /links/ を吸収するのでリンクはルート相対)
+      - name: Build with /links/ prefix (NIMS プロキシは /links/ 以下しかルーティングしないため、HTML の絶対パスも /links/ プレフィックス必須)
         env:
-          PATHPREFIX: "/"
+          PATHPREFIX: "/links/"
         run: npx eleventy
 
       - name: Checkout target (starrydata.github.io)
