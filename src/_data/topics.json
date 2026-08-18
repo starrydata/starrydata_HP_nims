@@ -1,6 +1,24 @@
 {
   "topics": [
     {
+      "id": "72",
+      "slug": "starrydata",
+      "title": "Starrydataプロジェクトサイト刷新",
+      "title_en": "Starrydata project site redesigned",
+      "date": "2026-08-10",
+      "datetime": "2026-08-10T00:00:00+09:00",
+      "category": "更新情報",
+      "subcategory": "アップデート",
+      "author": "",
+      "summary": "",
+      "summary_en": "",
+      "body_html": "",
+      "body_html_en": "",
+      "paper_title": "",
+      "doi": "",
+      "url": ""
+    },
+    {
       "id": "71",
       "slug": "content_71",
       "title": "データセットの仕様を刷新しました",
