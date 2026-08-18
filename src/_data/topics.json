@@ -87,17 +87,6 @@
       "author": "MTstarrydata",
       "summary": "OPTIMADEは、フランスのGian-Marco Rignanese先生が中心となって進めてきた、世界の材料データベースを共通のコマンド体系(API）でつなぐプロジェクトです。 私はStarryda…",
       "body_html": "<p name=\"bwW6Y\">OPTIMADEは、フランスのGian-Marco Rignanese先生が中心となって進めてきた、世界の材料データベースを共通のコマンド体系(API）でつなぐプロジェクトです。</p>\n<p name=\"Gm8wP\">私は<a href=\"https://starrydataproject.wordpress.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Starrydata</a>という実験データのオープンデータベースを立ち上げて運営しているのですが、それがオープン志向でAPIを搭載した実験系データベースであったところから、2019年の国際学会でGian-Marco先生の目に止まり、OPTIMADEの会議への招待状をいただきました。</p>\n<p name=\"wTmun\"><a href=\"https://www.cecam.org/workshop-details/52\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">こちらの会議</a>に参加しているのですが、世界の錚々たるデータベースの代表者さんたちと直接ディスカッションできる機会をいただけて、とてもありがたいです。（スイスに招待していただいて１週間議論するはずだったのですが、コロナでこの２年はオンライン開催になってしまい、明け方の自室の会議が眠すぎて私が早期脱落しがちなことが課題です。）</p>\n<p name=\"46Js3\">そこで本記事では、OPTIMADEの紹介と、OPTIMADE APIをすでに搭載している材料科学のオープンデータベースを紹介してみたいと思います。</p>\n<p name=\"46Js3\"></p>\n<p name=\"46Js3\"><a href=\"https://note.com/yukarikatsura/n/nde28ac5ca585\" target=\"_blank\" rel=\"noopener\">https://note.com/yukarikatsura/n/nde28ac5ca585</a></p>"
-    },
-    {
-      "id": "43",
-      "slug": "materials_informatics",
-      "original_basename": "materials_informatics",
-      "title": "Materials Informatics向けのオープンデータベース",
-      "date": "2020-09-14",
-      "datetime": "2020-09-14T17:29:00+09:00",
-      "author": "MTstarrydata",
-      "summary": "こちらのレビュー論文を参考にして、Materials Informatics (MI)に利用できるオープンアクセスのデータベースをまとめてみました。 Data-Driven Materials Sci…",
-      "body_html": "<p name=\"c12c7\">こちらのレビュー論文を参考にして、Materials Informatics (MI)に利用できるオープンアクセスのデータベースをまとめてみました。</p>\n<p name=\"mShNm\">Data-Driven Materials Science: Status, Challenges, and Perspectives<br />Lauri Himanen, Amber Geurts, Adam Stuart Foster, and Patrick Rink,<br />Adv. Sci. 6 (2019) 1900808<br /><a href=\"https://onlinelibrary.wiley.com/doi/full/10.1002/advs.201900808\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://onlinelibrary.wiley.com/doi/full/10.1002/advs.201900808</a></p>\n<p name=\"rquMy\">実験系データベースと第一原理計算データベースに分けてnoteに紹介記事を投稿しました。</p>\n<p name=\"rquMy\"></p>\n<p name=\"rquMy\"></p>\n<p name=\"rquMy\"><a href=\"https://note.com/yukarikatsura/n/nd11ed7fdca84\" target=\"_blank\" rel=\"noopener\">https://note.com/yukarikatsura/n/nd11ed7fdca84</a></p>"
     }
   ]
 }
