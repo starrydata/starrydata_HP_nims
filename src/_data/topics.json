@@ -19,17 +19,6 @@
       "url": ""
     },
     {
-      "id": "48",
-      "slug": "starrydata_2",
-      "original_basename": "starrydata_2",
-      "title": "Starrydataのデータ収集プロジェクト一覧",
-      "date": "2022-04-20",
-      "datetime": "2022-04-20T16:51:00+09:00",
-      "author": "MTstarrydata",
-      "summary": "Starrydataプロジェクトでは、論文中のグラフから実験データを抽出して公開しています。このとき、論文の中のすべてのグラフを集めようとすると膨大な時間がかかってしまうので、研究プロジェクトの目的に…",
-      "body_html": "<p name=\"6a16196d-f656-4eed-918c-eba93bb69932\" id=\"6a16196d-f656-4eed-918c-eba93bb69932\">Starrydataプロジェクトでは、論文中のグラフから実験データを抽出して公開しています。このとき、論文の中のすべてのグラフを集めようとすると膨大な時間がかかってしまうので、研究プロジェクトの目的に合わせて、データ収集対象のグラフの種類を絞っています。</p>\n<p name=\"5b6ebba4-408f-49ce-b634-29237ee367ea\" id=\"5b6ebba4-408f-49ce-b634-29237ee367ea\">Starrydataのトップページにアクセスしたあと、ユーザーが自分のアカウントでログインすると、以下のDatabases画面が現れます。一番上にあるのがすべての登録データにアクセスできるGeneralデータベースです。そして、その下に並ぶのが個々の研究プロジェクトです。本ページでは、これらの研究プロジェクトでどんなデータを集めているのかについて紹介します。</p>\n<p name=\"5b6ebba4-408f-49ce-b634-29237ee367ea\"></p>\n<p name=\"5b6ebba4-408f-49ce-b634-29237ee367ea\"><a href=\"https://note.com/yukarikatsura/n/n00b1528277b0\" target=\"_blank\" rel=\"noopener\">https://note.com/yukarikatsura/n/n00b1528277b0</a></p>"
-    },
-    {
       "id": "46",
       "slug": "hpy_katsura_phd",
       "original_basename": "hpy_katsura_phd",
