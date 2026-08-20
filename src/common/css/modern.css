@@ -2472,9 +2472,24 @@ p { margin: 0 0 1em; }
 .footer-logo { height: 40px; width: auto; display: block; opacity: 0.85; transition: opacity 0.2s; filter: brightness(0) invert(1); }
 .footer-logo-link:hover .footer-logo { opacity: 1; }
 .site-footer .small { font-size: 0.88rem; color: rgba(248,250,252,.5); line-height: 1.7; }
-.footer-bottom {
+.footer-partners {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 44px;
+  padding-top: 28px;
   border-top: 1px solid rgba(248,250,252,.08);
-  margin-top: 44px; padding-top: 22px;
+}
+.footer-partner-logo {
+  height: 36px;
+  width: auto;
+  opacity: 0.7;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s;
+}
+.footer-partner-logo:hover { opacity: 1; }
+.footer-bottom {
+  margin-top: 20px; padding-top: 22px;
   display: flex; justify-content: space-between;
   font-size: 0.85rem;
   color: rgba(248,250,252,.5);
