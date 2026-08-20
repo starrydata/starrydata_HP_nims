@@ -2457,10 +2457,10 @@ p { margin: 0 0 1em; }
 }
 .site-footer h5 {
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 0 0 16px;
   letter-spacing: 0.04em;
-  font-weight: 600;
+  font-weight: 700;
 }
 .site-footer ul {
   list-style: none;
@@ -2469,7 +2469,7 @@ p { margin: 0 0 1em; }
 .site-footer li { margin: 8px 0; font-size: 0.95rem; }
 .site-footer a { color: rgba(248,250,252,.7); }
 .site-footer a:hover { color: #fff; }
-.footer-logo { height: 28px; width: auto; display: block; opacity: 0.85; transition: opacity 0.2s; filter: brightness(0) invert(1); }
+.footer-logo { height: 40px; width: auto; display: block; opacity: 0.85; transition: opacity 0.2s; filter: brightness(0) invert(1); }
 .footer-logo-link:hover .footer-logo { opacity: 1; }
 .site-footer .small { font-size: 0.88rem; color: rgba(248,250,252,.5); line-height: 1.7; }
 .footer-bottom {
