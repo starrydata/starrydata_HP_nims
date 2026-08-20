@@ -18,7 +18,9 @@
 <footer class="site-footer">
   <div class="container">
     <div>
-      <div class="brand">★ Starrydata</div>
+      <a href="{{ langPath }}" aria-label="Starrydata" class="footer-logo-link">
+        <img src="/assets/images/logo/starrydata_logo_wide.png" alt="Starrydata" class="footer-logo">
+      </a>
       <p class="small" style="margin-top:10px; max-width:340px;">
         {{ i18n.site.tagline[L] }}
       </p>
@@ -44,10 +46,16 @@
     </div>
 
     <div>
-      <h5>{{ i18n.nav.research[L] }}</h5>
+      <h5><a href="{{ researchPath }}">{{ i18n.nav.research[L] }}</a></h5>
+      <ul>
+        <li><a href="{{ researchPath }}">{{ fieldsLabel }}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5><a href="{{ papersPath }}">{{ i18n.nav.publications[L] }}</a></h5>
       <ul>
         <li><a href="{{ papersPath }}">{{ i18n.nav.publications[L] }}</a></li>
-        <li><a href="{{ researchPath }}">{{ fieldsLabel }}</a></li>
       </ul>
     </div>
 

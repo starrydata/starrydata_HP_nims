@@ -2452,8 +2452,8 @@ p { margin: 0 0 1em; }
 }
 .site-footer .container {
   display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
-  gap: 48px;
+  grid-template-columns: 2fr repeat(5, 1fr);
+  gap: 40px;
 }
 .site-footer h5 {
   color: #fff;
@@ -2469,7 +2469,8 @@ p { margin: 0 0 1em; }
 .site-footer li { margin: 8px 0; font-size: 0.95rem; }
 .site-footer a { color: rgba(248,250,252,.7); }
 .site-footer a:hover { color: #fff; }
-.site-footer .brand { font-weight: 800; color: #fff; font-size: 1.15rem; }
+.footer-logo { height: 28px; width: auto; display: block; opacity: 0.85; transition: opacity 0.2s; }
+.footer-logo-link:hover .footer-logo { opacity: 1; }
 .site-footer .small { font-size: 0.88rem; color: rgba(248,250,252,.5); line-height: 1.7; }
 .footer-bottom {
   border-top: 1px solid rgba(248,250,252,.08);
@@ -2488,7 +2489,7 @@ p { margin: 0 0 1em; }
   .fields-grid  { grid-template-columns: repeat(2, 1fr); }
   .card-grid    { grid-template-columns: 1fr; }
   .team-grid    { grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .site-footer .container { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .site-footer .container { grid-template-columns: repeat(3, 1fr); gap: 36px; }
   .cta-band { padding: 56px 28px; margin: 0 16px; }
   .hero .lead { font-size: 0.98rem; }
   .grid-2col { grid-template-columns: 1fr; gap: 36px; }
