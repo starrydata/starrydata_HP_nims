@@ -769,8 +769,8 @@
   },
   "footer": {
     "copyright": {
-      "ja": "© Starrydata. All rights reserved.",
-      "en": "© Starrydata. All rights reserved."
+      "ja": "© 2026 Starrydata. National Institute for Materials Science (NIMS). All rights reserved.",
+      "en": "© 2026 Starrydata. National Institute for Materials Science (NIMS). All rights reserved."
     },
     "made_with": {
       "ja": "Built with Eleventy",
