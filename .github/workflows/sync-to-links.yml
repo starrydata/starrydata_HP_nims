@@ -1,11 +1,10 @@
-name: Sync to starrydata.github.io/links/
+name: Sync to starrydata.github.io/links/ and /hp/
 
 # starrydata.nims.go.jp/ (NIMS プロキシ) が指している
-# starrydata.github.io/links/ を新 HP の内容と自動同期する。
+# starrydata.github.io/links/ と starrydata.github.io/hp/ を同時に同期する。
 #
-# 通常の GitHub Pages デプロイ (deploy.yml, /starrydata_HP_nims/ プレフィックス) は
-# そのまま継続。本 workflow は追加で /links/ プレフィックスでビルドして
-# 別 repo (starrydata/starrydata.github.io) の links/ サブディレクトリに push する。
+# /links/ … 旧URL (starrydata.nims.go.jp/links/research/ 等) を維持
+# /hp/    … 新URL (starrydata.nims.go.jp/hp/research/ 等) を並走させる
 #
 # 必要な設定:
 #   - Secrets → Actions → PAGES_SYNC_TOKEN
@@ -36,10 +35,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build with /links/ prefix (NIMS プロキシは /links/ 以下しかルーティングしないため、HTML の絶対パスも /links/ プレフィックス必須)
+      - name: Build with /links/ prefix (旧URL維持)
         env:
           PATHPREFIX: "/links/"
-        run: npx eleventy
+        run: npx eleventy --output=_site_links
+
+      - name: Build with /hp/ prefix (新URL)
+        env:
+          PATHPREFIX: "/hp/"
+        run: npx eleventy --output=_site_hp
 
       - name: Checkout target (starrydata.github.io)
         uses: actions/checkout@v4
@@ -48,22 +52,25 @@ jobs:
           token: ${{ secrets.PAGES_SYNC_TOKEN }}
           path: target
 
-      - name: Replace links/ contents (links_archive/ は温存)
+      - name: Replace links/ and hp/ contents
         run: |
           rm -rf target/links
           mkdir -p target/links
-          cp -R _site/. target/links/
+          cp -R _site_links/. target/links/
+          rm -rf target/hp
+          mkdir -p target/hp
+          cp -R _site_hp/. target/hp/
 
       - name: Commit & push if changed
         run: |
           cd target
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add links
+          git add links hp
           if git diff --cached --quiet; then
             echo "No changes to sync."
             exit 0
           fi
           SRC_SHA="${GITHUB_SHA::7}"
-          git commit -m "Sync links/ from starrydata_HP_nims @ ${SRC_SHA}"
+          git commit -m "Sync links/ and hp/ from starrydata_HP_nims @ ${SRC_SHA}"
           git push origin main
