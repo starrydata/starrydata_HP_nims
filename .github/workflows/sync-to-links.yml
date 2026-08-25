@@ -1,10 +1,7 @@
-name: Sync to starrydata.github.io/links/ and /hp/
+name: Sync to starrydata.github.io/hp/
 
-# starrydata.nims.go.jp/ (NIMS プロキシ) が指している
-# starrydata.github.io/links/ と starrydata.github.io/hp/ を同時に同期する。
-#
-# /links/ … 旧URL (starrydata.nims.go.jp/links/research/ 等) を維持
-# /hp/    … 新URL (starrydata.nims.go.jp/hp/research/ 等) を並走させる
+# starrydata.nims.go.jp/hp/* (NIMS プロキシ) が指している
+# starrydata.github.io/hp/ を自動同期する。
 #
 # 必要な設定:
 #   - Secrets → Actions → PAGES_SYNC_TOKEN
@@ -35,12 +32,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build with /links/ prefix (旧URL維持)
-        env:
-          PATHPREFIX: "/links/"
-        run: npx eleventy --output=_site_links
-
-      - name: Build with /hp/ prefix (新URL)
+      - name: Build with /hp/ prefix
         env:
           PATHPREFIX: "/hp/"
         run: npx eleventy --output=_site_hp
@@ -52,11 +44,9 @@ jobs:
           token: ${{ secrets.PAGES_SYNC_TOKEN }}
           path: target
 
-      - name: Replace links/ and hp/ contents
+      - name: Replace hp/ contents / remove links/
         run: |
           rm -rf target/links
-          mkdir -p target/links
-          cp -R _site_links/. target/links/
           rm -rf target/hp
           mkdir -p target/hp
           cp -R _site_hp/. target/hp/
@@ -66,11 +56,11 @@ jobs:
           cd target
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add links hp
+          git add -A
           if git diff --cached --quiet; then
             echo "No changes to sync."
             exit 0
           fi
           SRC_SHA="${GITHUB_SHA::7}"
-          git commit -m "Sync links/ and hp/ from starrydata_HP_nims @ ${SRC_SHA}"
+          git commit -m "Sync hp/ from starrydata_HP_nims @ ${SRC_SHA}"
           git push origin main
