@@ -1,5 +1,7 @@
 # build
 _site/
+_site_hp/
+_site_preview/
 .cache/
 
 # node

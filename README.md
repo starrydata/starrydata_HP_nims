@@ -41,7 +41,7 @@ starrydata/starrydata_HP_nims  ← 【編集はここだけ】 ソースリポ�
 ## 編集ワークフロー
 
 **編集するのは常に本リポジトリ `starrydata_HP_nims` のみ。**
-`starrydata.github.io` 側の `links/` や `starrydata_HP_nims/` を直接編集してはいけない (次の自動同期で上書きされて消える)。
+`starrydata.github.io` 側の `hp/` や `starrydata_HP_nims/` を直接編集してはいけない (次の自動同期で上書きされて消える)。
 
 一般的な流れ:
 
@@ -108,7 +108,7 @@ starrydata_HP_nims/
 │   └── fetch_papers.py      OpenAlex + Crossref から論文情報取得 (月次)
 ├── .github/workflows/
 │   ├── deploy.yml           main push → GitHub Pages 公開 (/starrydata_HP_nims/)
-│   ├── sync-to-links.yml    main push → starrydata.github.io/links/ に自動同期
+│   ├── sync-to-links.yml    main push → starrydata.github.io/hp/ に自動同期
 │   ├── update-papers.yml    毎月1日 papers.json を自動更新
 │   └── update-chart.yml     チャート用 JSON の定期更新
 ├── eleventy.config.js       Eleventy 設定 (pathPrefix 対応)

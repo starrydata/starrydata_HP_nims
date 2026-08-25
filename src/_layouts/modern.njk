@@ -23,6 +23,12 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="{{ description or siteDesc }}">
 <meta property="og:locale" content="{{ 'ja_JP' if L == 'ja' else 'en_US' }}">
+{%- if pathPrefix == '/hp/' -%}
+{%- set canonicalPath = '/' if page.url == '/' else ('/hp' + page.url) -%}
+<link rel="canonical" href="https://starrydata.nims.go.jp{{ canonicalPath }}">
+{%- elif pathPrefix == '/starrydata_HP_nims/' -%}
+<meta name="robots" content="noindex, follow">
+{%- endif -%}
 </head>
 <body class="{% if page.url == '/' or page.url == '/en/' %}page-home{% endif %}{% if bodyId %} page-{{ bodyId }}{% endif %}">
 

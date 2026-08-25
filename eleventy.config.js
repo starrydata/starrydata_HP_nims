@@ -54,6 +54,9 @@ export default function (eleventyConfig) {
     });
   }
 
+  // pathPrefix をテンプレートから参照できるようにする (canonical 判定に使用)
+  eleventyConfig.addGlobalData("pathPrefix", PATH_PREFIX);
+
   // Watch
   eleventyConfig.addWatchTarget("src/_data");
   eleventyConfig.addWatchTarget("src/assets");
