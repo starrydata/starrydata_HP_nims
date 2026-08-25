@@ -313,7 +313,7 @@
         {
           "title": "People",
           "items": [
-            { "icon": "users", "title": "Members",           "desc": "プロジェクトメンバーと過去のメンバー(Alumni)", "url": "/team/",   "external": false }
+            { "icon": "users", "title": "Members",           "desc": "プロジェクトメンバーと過去のメンバー(Alumni)", "url": "/members/",   "external": false }
           ]
         },
         {
@@ -333,7 +333,7 @@
         {
           "title": "People",
           "items": [
-            { "icon": "users", "title": "Members",           "desc": "Current project members and alumni",                 "url": "/en/team/",    "external": false }
+            { "icon": "users", "title": "Members",           "desc": "Current project members and alumni",                 "url": "/en/members/",    "external": false }
           ]
         },
         {
