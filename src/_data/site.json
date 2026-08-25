@@ -15,7 +15,7 @@
     { "key": "tutorial",      "label": "データを集める・使う", "href": "/tutorial/index.html" },
     { "key": "collaboration", "label": "共同研究",             "href": "/collaboration/index.html" },
     { "key": "data",          "label": "進行中のプロジェクト", "href": "/data/index.html" },
-    { "key": "case",          "label": "論文紹介",             "href": "/papers/index.html" },
+    { "key": "case",          "label": "論文紹介",             "href": "/publications/index.html" },
     { "key": "case",          "label": "トピックス",           "href": "/topics/index.html" },
     { "key": "faq",           "label": "FAQ",                  "href": "/faq/index.html" }
   ],
