@@ -11,7 +11,8 @@
 {%- set siteTagline = i18n.site.tagline[L] -%}
 {%- set siteDesc = i18n.site.description[L] -%}
 
-<title>{% if title %}{{ title }} | {% endif %}{{ siteName }} — {{ siteTagline }}</title>
+{%- set pageTitle = (siteName + ' — ' + title) if title else (siteName + ' — ' + siteTagline) -%}
+<title>{{ pageTitle }}</title>
 <meta name="description" content="{{ description or siteDesc }}">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link href="/common/css/modern.css" rel="stylesheet">
 
-<meta property="og:title" content="{{ siteName }} — {{ siteTagline }}">
+<meta property="og:title" content="{{ pageTitle }}">
 <meta property="og:type" content="website">
 <meta property="og:description" content="{{ description or siteDesc }}">
 <meta property="og:locale" content="{{ 'ja_JP' if L == 'ja' else 'en_US' }}">
