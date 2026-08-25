@@ -7,11 +7,11 @@
       "en": "Starrydata"
     },
     "tagline": {
-      "ja": "無機材料の実験データを論文からオープンに",
+      "ja": "論文グラフを、研究に使えるデータへ",
       "en": "Open experimental data from materials science literature"
     },
     "description": {
-      "ja": "論文のグラフから抽出した 230,000+ の実験データを中核に、結晶構造シミュレーターや元素反応性マップなど、Materials Informatics研究を支える多様なオープンデータとWebツールを公開しています。",
+      "ja": "論文のグラフから抽出した 234,150+ の実験データを中核に、結晶構造シミュレーターや元素反応性マップなど、Materials Informatics 研究を支える多様なオープンデータとWebツールを公開しています。",
       "en": "Starrydata is an open database project that extracts and shares experimental data from plot images in published inorganic materials science papers."
     }
   },
