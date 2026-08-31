@@ -58,9 +58,10 @@ lang: en
               {% if affEn %}
               <p class="aff">{{ affEn | replace("\n", "<br>") | safe }}</p>
               {% endif %}
-              {% if m.links | length > 0 %}
+              {%- set displayLinks = m.links_en if m.links_en else m.links -%}
+              {% if displayLinks | length > 0 %}
               <ul class="links">
-                {%- for l in m.links %}
+                {%- for l in displayLinks %}
                 <li><a href="{{ l.href }}" target="_blank" rel="noopener">{{ l.label }}</a></li>
                 {%- endfor %}
               </ul>

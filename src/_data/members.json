@@ -18,6 +18,10 @@
           "links": [
             { "label": "X",             "href": "https://x.com/Starrydata" },
             { "label": "Official Page", "href": "https://researchmap.jp/ykatsura" }
+          ],
+          "links_en": [
+            { "label": "X",             "href": "https://x.com/Starrydata" },
+            { "label": "Official Page", "href": "https://researchmap.jp/ykatsura?lang=en" }
           ]
         },
         {
