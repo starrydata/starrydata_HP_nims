@@ -115,16 +115,12 @@
       "en": "What is Starrydata"
     },
     "lead": {
-      "ja": "Starrydata は、材料科学の論文グラフから実験データを抽出・構造化し、世界中の研究者が自由に使える巨大な<strong>オープンデータベース</strong>として公開する研究プロジェクトです。",
-      "en": "Starrydata is an <strong>open data project</strong> that extracts and structures experimental data from graphs in inorganic materials science papers, making them freely reusable for researchers worldwide."
+      "ja": "Starrydata&nbsp;は、材料科学の論文中のグラフ画像から実験データを数値データとして抽出・登録し、Materials&nbsp;Informatics&nbsp;(MI) 研究に活用できる大規模な<strong>オープンデータベース</strong>を構築する研究プロジェクトです。登録されたデータはすべて公開されており、誰でも自由に無償で利用できます。",
+      "en": "Starrydata is an <strong>open data project</strong> that extracts and structures experimental data from graphs in inorganic materials science papers, making them freely reusable by researchers worldwide. Rather than a single project, it is a federation of research teams — each contributing curated data to a shared repository and together building a large open dataset that anyone can use."
     },
     "body": {
-      "ja": [
-        "Starrydata は単一の研究プロジェクトではなく、実験データ MI という共通項を持つ多数の研究プロジェクトの複合体です。各プロジェクトが論文から集めたデータを 1 つの共通データベースに保存し、他のユーザーも利用できるようにすることで、誰でも使える巨大なオープンデータベースを構築しています。"
-      ],
-      "en": [
-        "Starrydata is a federation of research projects that share a single database. Each project curates experimental data from its field's literature into a common repository, together forming a large open dataset that anyone can reuse."
-      ]
+      "ja": [],
+      "en": []
     }
   },
   "huge_db": {
@@ -307,19 +303,19 @@
         {
           "title": "Project",
           "items": [
-            { "icon": "info",  "title": "About the project", "desc": "プロジェクトの目的・特徴・運営体制",         "url": "/#about",  "external": false }
+            { "icon": "info",  "title": "About the project", "desc": "プロジェクトの目的・特徴・運営体制",         "url": "/ja/#about",  "external": false }
           ]
         },
         {
           "title": "People",
           "items": [
-            { "icon": "users", "title": "Members",           "desc": "プロジェクトメンバーと過去のメンバー(Alumni)", "url": "/members/",   "external": false }
+            { "icon": "users", "title": "Members",           "desc": "プロジェクトメンバーと過去のメンバー(Alumni)", "url": "/ja/members/",   "external": false }
           ]
         },
         {
           "title": "Updates",
           "items": [
-            { "icon": "bell",  "title": "News",              "desc": "プロジェクトの最新情報・お知らせ",           "url": "/news/",   "external": false }
+            { "icon": "bell",  "title": "News",              "desc": "プロジェクトの最新情報・お知らせ",           "url": "/ja/news/",   "external": false }
           ]
         }
       ],
@@ -327,19 +323,19 @@
         {
           "title": "Project",
           "items": [
-            { "icon": "info",  "title": "About the project", "desc": "Purpose, features, and organization of the project", "url": "/en/#about",   "external": false }
+            { "icon": "info",  "title": "About the project", "desc": "Purpose, features, and organization of the project", "url": "/#about",   "external": false }
           ]
         },
         {
           "title": "People",
           "items": [
-            { "icon": "users", "title": "Members",           "desc": "Current project members and alumni",                 "url": "/en/members/",    "external": false }
+            { "icon": "users", "title": "Members",           "desc": "Current project members and alumni",                 "url": "/members/",    "external": false }
           ]
         },
         {
           "title": "Updates",
           "items": [
-            { "icon": "bell",  "title": "News",              "desc": "Project updates and announcements",                   "url": "/en/news/",    "external": false }
+            { "icon": "bell",  "title": "News",              "desc": "Project updates and announcements",                   "url": "/news/",    "external": false }
           ]
         }
       ]
@@ -365,7 +361,7 @@
             { "icon": "package",  "title": "Latest CSV",           "desc": "毎日更新の分野別データセット",     "url": "https://starrydata.github.io/starrydata_datasets/", "external": true },
             { "icon": "bookmark", "title": "Figshare",             "desc": "DOI 付き凍結スナップショット",     "url": "https://figshare.com/projects/Starrydata_datasets/155129", "external": true },
             { "icon": "book",     "title": "NIMS MDR",             "desc": "論文の永続 URL アーカイブ",             "url": "https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=ja", "external": true },
-            { "icon": "quote",    "title": "How to cite",          "desc": "引用すべき論文一覧",                "url": "/cite/",                                     "external": false }
+            { "icon": "quote",    "title": "How to cite",          "desc": "引用すべき論文一覧",                "url": "/ja/cite/",                                  "external": false }
           ]
         },
         {
@@ -402,7 +398,7 @@
             { "icon": "package",  "title": "Latest CSV",           "desc": "Daily per-field CSV",               "url": "https://starrydata.github.io/starrydata_datasets/", "external": true },
             { "icon": "bookmark", "title": "Figshare",             "desc": "DOI-fixed snapshots",               "url": "https://figshare.com/projects/Starrydata_datasets/155129", "external": true },
             { "icon": "book",     "title": "NIMS MDR",             "desc": "Permanent URL archive of the paper", "url": "https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=en", "external": true },
-            { "icon": "quote",    "title": "How to cite",          "desc": "Papers to cite",                    "url": "/en/cite/",                                   "external": false }
+            { "icon": "quote",    "title": "How to cite",          "desc": "Papers to cite",                    "url": "/cite/",                                      "external": false }
           ]
         },
         {

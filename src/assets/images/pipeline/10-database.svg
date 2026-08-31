@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" width="1280" height="800" fill="none" stroke="#e9e9ed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+
+  <!-- 紫の接続ライン（背面） -->
+  <path d="M58 40L28 22M58 56L28 72" stroke="#9184d9" stroke-width="1.3" opacity=".85"/>
+  <path d="M102 37L132 16M102 49L132 46M102 58L132 78" stroke="#9184d9" stroke-width="1.3" opacity=".85"/>
+
+  <!-- 中央の大DBシリンダー -->
+  <ellipse cx="80" cy="28" rx="22" ry="8"/>
+  <path d="M58 28v38M102 28v38"/>
+  <path d="M58 42c0 8 44 8 44 0" stroke-width="1.4"/>
+  <path d="M58 55c0 8 44 8 44 0" stroke-width="1.4"/>
+  <path d="M58 66c0 8 44 8 44 0" stroke-width="1.4"/>
+  <path d="M64 24.5c2 .8 5.5 1.5 8 1.8" stroke-width="1" opacity=".4"/>
+
+  <!-- 左上の小DBシリンダー -->
+  <ellipse cx="17" cy="14" rx="11" ry="4" stroke-width="1.4"/>
+  <path d="M6 14v18M28 14v18" stroke-width="1.4"/>
+  <path d="M6 20c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M6 26c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M6 32c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M9 11.5c1.5.6 3.5 1 5 1.2" stroke-width=".9" opacity=".4"/>
+
+  <!-- 左下の小DBシリンダー -->
+  <ellipse cx="17" cy="63" rx="11" ry="4" stroke-width="1.4"/>
+  <path d="M6 63v18M28 63v18" stroke-width="1.4"/>
+  <path d="M6 69c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M6 75c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M6 81c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M9 60.5c1.5.6 3.5 1 5 1.2" stroke-width=".9" opacity=".4"/>
+
+  <!-- 右上の小DBシリンダー -->
+  <ellipse cx="143" cy="10" rx="11" ry="4" stroke-width="1.4"/>
+  <path d="M132 10v18M154 10v18" stroke-width="1.4"/>
+  <path d="M132 16c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M132 22c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M132 28c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M135 7.5c1.5.6 3.5 1 5 1.2" stroke-width=".9" opacity=".4"/>
+
+  <!-- 右中の小DBシリンダー -->
+  <ellipse cx="143" cy="42" rx="11" ry="4" stroke-width="1.4"/>
+  <path d="M132 42v18M154 42v18" stroke-width="1.4"/>
+  <path d="M132 48c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M132 54c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M132 60c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M135 39.5c1.5.6 3.5 1 5 1.2" stroke-width=".9" opacity=".4"/>
+
+  <!-- 右下の小DBシリンダー -->
+  <ellipse cx="143" cy="74" rx="11" ry="4" stroke-width="1.4"/>
+  <path d="M132 74v16M154 74v16" stroke-width="1.4"/>
+  <path d="M132 80c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M132 86c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M132 90c0 4 22 4 22 0" stroke-width="1.3"/>
+  <path d="M135 71.5c1.5.6 3.5 1 5 1.2" stroke-width=".9" opacity=".4"/>
+
+</svg>

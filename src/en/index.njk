@@ -1,6 +1,6 @@
 ---
 layout: modern.njk
-permalink: /en/index.html
+permalink: /index.html
 title:
 lang: en
 ---
@@ -53,15 +53,173 @@ lang: en
 </section>
 
 <!-- =================== WHAT IS =================== -->
-<section class="section" id="about">
+<section class="section section-narrow" id="about">
   <div class="container">
     <h2 data-echo="{{ i18n.what_is.title[L] }}">{{ i18n.what_is.title[L] }}</h2>
-    <p class="lead-large">{{ i18n.what_is.lead[L] | safe }}</p>
+    <p class="prose">{{ i18n.what_is.lead[L] | safe }}</p>
     {%- for para in i18n.what_is.body[L] %}
     <p class="prose">{{ para | safe }}</p>
     {%- endfor %}
   </div>
 </section>
+
+<!-- =================== PIPELINE DIAGRAM =================== -->
+<section class="pipeline-section">
+  <div class="container">
+    <p class="pipeline-eyebrow">How it works</p>
+    <h2 class="pipeline-heading">
+      Collect<span class="pipe-arrow-char">→</span>Accumulate<span class="pipe-arrow-char">→</span>Utilize
+    </h2>
+    <p class="pipeline-desc">
+      Experimental graphs from published papers are manually digitized and stored together with sample metadata in a single database. The resulting structured data is ready for visualization, download, and machine learning.
+    </p>
+
+    <!-- Labels row (outside grid) -->
+    <div class="pipeline-col-headers">
+      <div class="pipeline-col-label">Data Collection</div>
+      <div></div>
+      <div></div>
+      <div class="pipeline-col-label">Data Utilization</div>
+    </div>
+
+    <div class="pipeline-grid">
+
+      <!-- ─── Left: Data Collection ─── -->
+      <div class="pipeline-col">
+        <div class="pipeline-col-label pipeline-col-label--mobile">Data Collection</div>
+
+        <div class="pipe-card pipe-card-in">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/06-papers-stack.svg" alt="Paper Selection" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">Paper Selection</div>
+            <div class="pipe-card-desc">Identify papers, graphs, and plots as data collection targets</div>
+          </div>
+        </div>
+
+        <div class="pipe-down-arrow" aria-hidden="true">
+          <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v16M1 11l6 8 6-8" stroke="var(--accent-2)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3"/></svg>
+        </div>
+
+        <div class="pipe-card pipe-card-in">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/01-pen-tablet-curve-selection.svg" alt="Graph Digitization" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">Graph Digitization</div>
+            <div class="pipe-card-desc">Trace curves in StarryDigitizer and convert graph data points to numerical values</div>
+          </div>
+        </div>
+
+        <div class="pipe-down-arrow" aria-hidden="true">
+          <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v16M1 11l6 8 6-8" stroke="var(--accent-2)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3"/></svg>
+        </div>
+
+        <div class="pipe-card pipe-card-in">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/02-curator-descriptor-input.svg" alt="Sample Descriptor" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">Sample Descriptor Entry</div>
+            <div class="pipe-card-desc">Record composition, synthesis method, and measurement conditions from the paper</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── Center: DB ─── -->
+      <div class="pipeline-center">
+        <div class="db-node-wrap">
+          <span class="db-open-badge">Open Database</span>
+          <img class="db-cluster-svg" src="/assets/images/pipeline/10-database.svg" alt="Starrydata DB">
+          <div class="db-node-name">Starrydata DB</div>
+          <div class="db-node-sub">Stores curves, sample metadata,<br>and paper information</div>
+        </div>
+      </div>
+
+      <!-- ─── DB→Right spacer column ─── -->
+      <div class="pipeline-col-arrows" aria-hidden="true"></div>
+
+      <!-- ─── Right: Data Utilization ─── -->
+      <div class="pipeline-col">
+        <div class="pipeline-col-label pipeline-col-label--mobile">Data Utilization</div>
+
+        <div class="pipe-card pipe-card-out">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/05-explorer-3d.png" alt="Visualization &amp; Exploration" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">Visualization &amp; Exploration</div>
+            <div class="pipe-card-desc">Explore trends with Visualizer / Sample Explorer</div>
+          </div>
+        </div>
+
+        <div class="pipe-row-spacer" aria-hidden="true"></div>
+
+        <div class="pipe-card pipe-card-out">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/09-pc.svg" alt="Data Download" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">Data Download</div>
+            <div class="pipe-card-desc">Freely download as CSV / JSON</div>
+          </div>
+        </div>
+
+        <div class="pipe-row-spacer" aria-hidden="true"></div>
+
+        <div class="pipe-card pipe-card-out">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/starrydata-ml-mi.svg" alt="ML &amp; MI Research" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">ML &amp; MI Research</div>
+            <div class="pipe-card-desc">Use structured data for model training and benchmarking</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DB→Right card arrows SVG (overlays full grid) -->
+      <svg class="pipe-arrows-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+
+    </div><!-- /.pipeline-grid -->
+  </div>
+</section>
+<script>
+(function(){
+  function drawPipeArrows(){
+    var grid = document.querySelector('.pipeline-grid');
+    if(!grid) return;
+    var svg = grid.querySelector('.pipe-arrows-svg');
+    var db  = document.querySelector('.db-node-wrap');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.pipe-card-out'));
+    if(!svg||!db||!cards.length) return;
+    var gR = grid.getBoundingClientRect();
+    var dbR = db.getBoundingClientRect();
+    var dbY = dbR.top + dbR.height/2 - gR.top;
+    var forkX = dbR.right - gR.left;
+    var clr = '#9184d9';
+    var lAttr = 'fill="none" stroke="'+clr+'" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3"';
+    var sAttr = 'fill="none" stroke="'+clr+'" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"';
+    var inner = '';
+    for(var i=0;i<cards.length;i++){
+      var r = cards[i].getBoundingClientRect();
+      var cy = r.top + r.height/2 - gR.top;
+      var cx = r.left - gR.left;
+      inner += '<line x1="'+forkX.toFixed(1)+'" y1="'+dbY.toFixed(1)+'" x2="'+cx.toFixed(1)+'" y2="'+cy.toFixed(1)+'" '+lAttr+'/>';
+      var dx = cx-forkX, dy = cy-dbY, len = Math.sqrt(dx*dx+dy*dy);
+      var ux = dx/len, uy = dy/len;
+      var ax = cx-7*ux, ay = cy-7*uy;
+      inner += '<path d="M'+(ax-4*uy).toFixed(1)+','+(ay+4*ux).toFixed(1)+' L'+cx.toFixed(1)+','+cy.toFixed(1)+' L'+(ax+4*uy).toFixed(1)+','+(ay-4*ux).toFixed(1)+'" '+sAttr+'/>';
+    }
+    svg.setAttribute('width', gR.width);
+    svg.setAttribute('height', gR.height);
+    svg.innerHTML = inner;
+  }
+  window.addEventListener('load', drawPipeArrows);
+  window.addEventListener('resize', drawPipeArrows);
+})();
+</script>
 
 <section class="section" id="huge-database" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="container">
@@ -161,21 +319,21 @@ lang: en
     <p class="lead lead-wide">Seven research fields powering data curation and Materials Informatics studies.</p>
 
     <div class="fields-grid">
-      <a class="field-card" href="/en/research/#thermoelectric">
+      <a class="field-card" href="/research/#thermoelectric">
         <div class="field-num">01</div><h3>Thermoelectric</h3><div class="en">熱電材料</div></a>
-      <a class="field-card" href="/en/research/#battery">
+      <a class="field-card" href="/research/#battery">
         <div class="field-num">02</div><h3>Battery</h3><div class="en">電池材料</div></a>
-      <a class="field-card" href="/en/research/#magnetic">
+      <a class="field-card" href="/research/#magnetic">
         <div class="field-num">03</div><h3>Magnetic</h3><div class="en">磁性材料</div></a>
-      <a class="field-card" href="/en/research/#dielectric">
+      <a class="field-card" href="/research/#dielectric">
         <div class="field-num">04</div><h3>Dielectric</h3><div class="en">誘電材料</div></a>
-      <a class="field-card" href="/en/research/#condensed-matter">
+      <a class="field-card" href="/research/#condensed-matter">
         <div class="field-num">05</div><h3>Condensed Matter</h3><div class="en">固体物性</div></a>
-      <a class="field-card" href="/en/research/#piezoelectric">
+      <a class="field-card" href="/research/#piezoelectric">
         <div class="field-num">06</div><h3>Piezoelectric</h3><div class="en">圧電材料</div></a>
-      <a class="field-card" href="/en/research/#hypermaterial">
+      <a class="field-card" href="/research/#hypermaterial">
         <div class="field-num">07</div><h3>Hypermaterial</h3><div class="en">準結晶</div></a>
-      <a class="field-card" href="/en/research/">
+      <a class="field-card" href="/research/">
         <div class="field-num">+</div><h3>View all</h3><div class="en">12 fields</div></a>
     </div>
   </div>

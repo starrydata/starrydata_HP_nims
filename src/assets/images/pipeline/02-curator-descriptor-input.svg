@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" width="1280" height="800" fill="none" stroke="#e9e9ed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+
+  <!-- 後ろの論文カード（グラフあり、半透明） -->
+  <rect x="2" y="4" width="42" height="54" rx="2" style="fill: rgb(22,24,38)" opacity=".55"/>
+  <rect x="5" y="8" width="32" height="21" rx="1.5" opacity=".45"/>
+  <path d="M9 27V12M9 27h26" opacity=".5" stroke-width="1.2"/>
+  <path d="M10 25c4-4 8-10 13-13s8-3 12-2" stroke="#9184d9" stroke-width="1.5"/>
+  <circle cx="10" cy="25" r="1.3" fill="rgb(22,24,38)" stroke="#9184d9" stroke-width="1.2"/>
+  <circle cx="23" cy="13" r="1.3" fill="rgb(22,24,38)" stroke="#9184d9" stroke-width="1.2"/>
+
+  <!-- 前の論文カード（テキスト + 紫選択枠） -->
+  <rect x="10" y="18" width="42" height="57" rx="2" style="fill: rgb(22,24,38)"/>
+  <path d="M14 24h20" opacity=".85" stroke-width="1.3"/>
+  <path d="M14 29h11" opacity=".5" stroke-width="1"/>
+  <path d="M14 34h22M38 34h11" opacity=".4" stroke-width="1"/>
+  <path d="M14 39h17M34 39h16" opacity=".4" stroke-width="1"/>
+  <!-- 紫ダッシュ選択枠 -->
+  <rect x="12" y="43" width="38" height="16" rx="1.2" stroke="#9184d9" stroke-width="1" stroke-dasharray="2.5 2" opacity=".9"/>
+  <path d="M15 48h17" stroke="#9184d9" stroke-width="1.1" opacity=".9"/>
+  <path d="M15 54h22" stroke="#9184d9" stroke-width="1.1" opacity=".9"/>
+  <path d="M14 63h16M33 63h17" opacity=".4" stroke-width="1"/>
+  <path d="M14 68h18" opacity=".3" stroke-width="1"/>
+
+  <!-- 紫ダッシュ矢印 -->
+  <path d="M56 38h17" stroke="#9184d9" stroke-width="1.3" stroke-dasharray="3 2.5" opacity=".85"/>
+  <path d="M71 35l4 3-4 3" stroke="#9184d9" stroke-width="1.3" opacity=".85"/>
+
+  <!-- 人物アイコン（中央下） -->
+  <circle cx="67" cy="70" r="8" opacity=".55"/>
+  <path d="M64 72c1 2 6 2 7 0" opacity=".55" stroke-width="1.2"/>
+  <circle cx="64.5" cy="68.5" r=".9" fill="#e9e9ed" stroke="none" opacity=".55"/>
+  <circle cx="69.5" cy="68.5" r=".9" fill="#e9e9ed" stroke="none" opacity=".55"/>
+  <path d="M59 87c0-9 16-9 16 0" opacity=".4"/>
+
+  <!-- 右：フォームテーブル -->
+  <rect x="82" y="5" width="76" height="74" rx="2"/>
+  <!-- ヘッダー -->
+  <path d="M82 13h76" stroke-width=".8" opacity=".4"/>
+  <path d="M85 9.5h18" stroke-width="1.2" opacity=".8"/>
+  <path d="M105 10.5h8M145 10.5h11" stroke-width="1" opacity=".5"/>
+  <!-- 縦列区切り線 -->
+  <path d="M104 13v54M143 13v54" stroke-width=".7" opacity=".22"/>
+  <!-- 横行区切り線 -->
+  <path d="M82 21h76M82 29h76M82 37h76M82 45h76M82 53h76M82 61h76" stroke-width=".7" opacity=".2"/>
+  <!-- 行ラベル（左列） -->
+  <path d="M85 17.5h10M85 25.5h13M85 33.5h9M85 41.5h15M85 49.5h10M85 57.5h12M85 65.5h11" stroke-width="1" opacity=".45"/>
+  <!-- セル枠 -->
+  <g stroke-width=".7" opacity=".35">
+    <rect x="105" y="14" width="36" height="6" rx=".8"/>
+    <rect x="105" y="22" width="36" height="6" rx=".8"/>
+    <rect x="105" y="30" width="36" height="6" rx=".8"/>
+    <rect x="105" y="38" width="36" height="6" rx=".8"/>
+    <rect x="105" y="46" width="36" height="6" rx=".8"/>
+    <rect x="105" y="54" width="36" height="6" rx=".8"/>
+    <rect x="105" y="62" width="36" height="6" rx=".8"/>
+    <rect x="144" y="14" width="12" height="6" rx=".8"/>
+    <rect x="144" y="22" width="12" height="6" rx=".8"/>
+    <rect x="144" y="30" width="12" height="6" rx=".8"/>
+    <rect x="144" y="38" width="12" height="6" rx=".8"/>
+    <rect x="144" y="46" width="12" height="6" rx=".8"/>
+    <rect x="144" y="54" width="12" height="6" rx=".8"/>
+    <rect x="144" y="62" width="12" height="6" rx=".8"/>
+  </g>
+  <!-- 紫のデータ行（入力済み） -->
+  <path d="M107 17.5h29" stroke="#9184d9" stroke-width="1.1" opacity=".95"/>
+  <path d="M107 25.5h21" stroke="#9184d9" stroke-width="1.1" opacity=".95"/>
+  <path d="M107 41.5h18" stroke="#9184d9" stroke-width="1.1" opacity=".95"/>
+  <!-- ドロップダウン矢印 -->
+  <path d="M135.5 25.3l1.3 1.4 1.3-1.4M135.5 33.3l1.3 1.4 1.3-1.4M135.5 41.3l1.3 1.4 1.3-1.4M135.5 49.3l1.3 1.4 1.3-1.4M135.5 57.3l1.3 1.4 1.3-1.4M135.5 65.3l1.3 1.4 1.3-1.4" stroke-width=".8" opacity=".5"/>
+
+</svg>

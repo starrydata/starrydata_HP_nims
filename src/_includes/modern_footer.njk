@@ -1,13 +1,13 @@
 {%- set L = lang or 'ja' -%}
-{%- set langPath = '/en/' if L == 'en' else '/' -%}
-{%- set contactPath = '/en/contact/' if L == 'en' else '/contact/' -%}
-{%- set researchPath = '/en/research/' if L == 'en' else '/research/' -%}
-{%- set papersPath = '/en/publications/' if L == 'en' else '/publications/' -%}
-{%- set teamPath = '/en/members/' if L == 'en' else '/members/' -%}
-{%- set newsPath = '/en/news/' if L == 'en' else '/news/' -%}
-{%- set resourcesPath = '/en/resources/' if L == 'en' else '/resources/' -%}
+{%- set langPath = '/' if L == 'en' else '/ja/' -%}
+{%- set contactPath = '/contact/' if L == 'en' else '/ja/contact/' -%}
+{%- set researchPath = '/research/' if L == 'en' else '/ja/research/' -%}
+{%- set papersPath = '/publications/' if L == 'en' else '/ja/publications/' -%}
+{%- set teamPath = '/members/' if L == 'en' else '/ja/members/' -%}
+{%- set newsPath = '/news/' if L == 'en' else '/ja/news/' -%}
+{%- set resourcesPath = '/resources/' if L == 'en' else '/ja/resources/' -%}
 {%- set manualPath = '/manual/' -%}
-{%- set citePath = '/en/cite/' if L == 'en' else '/cite/' -%}
+{%- set citePath = '/cite/' if L == 'en' else '/ja/cite/' -%}
 {%- set involveLabel = 'Get involved' if L == 'en' else 'Get Involved' -%}
 {%- set getInvolvedHref = langPath + '#get-involved' -%}
 {%- set fieldsLabel = 'Research fields' if L == 'en' else '研究分野' -%}

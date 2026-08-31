@@ -1,6 +1,6 @@
 ---
 layout: modern.njk
-permalink: /index.html
+permalink: /ja/index.html
 title:
 lang: ja
 ---
@@ -53,15 +53,173 @@ lang: ja
 </section>
 
 <!-- =================== WHAT IS =================== -->
-<section class="section" id="about">
+<section class="section section-narrow" id="about">
   <div class="container">
     <h2 data-echo="{{ i18n.what_is.title[L] }}">{{ i18n.what_is.title[L] }}</h2>
-    <p class="lead-large">{{ i18n.what_is.lead[L] | safe }}</p>
+    <p class="prose">{{ i18n.what_is.lead[L] | safe }}</p>
     {%- for para in i18n.what_is.body[L] %}
     <p class="prose">{{ para | safe }}</p>
     {%- endfor %}
   </div>
 </section>
+
+<!-- =================== PIPELINE DIAGRAM =================== -->
+<section class="pipeline-section">
+  <div class="container">
+    <p class="pipeline-eyebrow">How it works</p>
+    <h2 class="pipeline-heading">
+      収集<span class="pipe-arrow-char">→</span>蓄積<span class="pipe-arrow-char">→</span>活用
+    </h2>
+    <p class="pipeline-desc">
+      論文の実験グラフを人手でデジタイズし、試料情報とともに登録・蓄積。<br>集まった構造化データは可視化・ダウンロード・機械学習にそのまま使える。
+    </p>
+
+    <!-- ラベル行（グリッド外） -->
+    <div class="pipeline-col-headers">
+      <div class="pipeline-col-label">データ収集・登録</div>
+      <div></div>
+      <div></div>
+      <div class="pipeline-col-label">データ活用</div>
+    </div>
+
+    <div class="pipeline-grid">
+
+      <!-- ─── 左：データ収集・登録 ─── -->
+      <div class="pipeline-col">
+        <div class="pipeline-col-label pipeline-col-label--mobile">データ収集・登録</div>
+
+        <div class="pipe-card pipe-card-in">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/06-papers-stack.svg" alt="論文選定" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">論文選定</div>
+            <div class="pipe-card-desc">データ収集対象となる論文・グラフ・プロットを特定</div>
+          </div>
+        </div>
+
+        <div class="pipe-down-arrow" aria-hidden="true">
+          <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v16M1 11l6 8 6-8" stroke="var(--accent-2)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3"/></svg>
+        </div>
+
+        <div class="pipe-card pipe-card-in">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/01-pen-tablet-curve-selection.svg" alt="実験グラフを数値化" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">実験グラフを数値化</div>
+            <div class="pipe-card-desc">StarryDigitizer でグラフのカーブをプロットし数値データ化</div>
+          </div>
+        </div>
+
+        <div class="pipe-down-arrow" aria-hidden="true">
+          <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v16M1 11l6 8 6-8" stroke="var(--accent-2)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3"/></svg>
+        </div>
+
+        <div class="pipe-card pipe-card-in">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/02-curator-descriptor-input.svg" alt="Sample Descriptor" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">Sample Descriptor 登録</div>
+            <div class="pipe-card-desc">組成・合成方法・測定条件を論文本文から記述</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── 中央：DB ─── -->
+      <div class="pipeline-center">
+        <div class="db-node-wrap">
+          <span class="db-open-badge">Open Database</span>
+          <img class="db-cluster-svg" src="/assets/images/pipeline/10-database.svg" alt="Starrydata DB">
+          <div class="db-node-name">Starrydata DB</div>
+          <div class="db-node-sub">カーブ・試料情報・論文情報を保存</div>
+        </div>
+      </div>
+
+      <!-- ─── DB→右 スペーサー列 ─── -->
+      <div class="pipeline-col-arrows" aria-hidden="true"></div>
+
+      <!-- ─── 右：データ活用 ─── -->
+      <div class="pipeline-col">
+        <div class="pipeline-col-label pipeline-col-label--mobile">データ活用</div>
+
+        <div class="pipe-card pipe-card-out">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/05-explorer-3d.png" alt="可視化・探索" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">可視化・探索</div>
+            <div class="pipe-card-desc">Visualizer / Sample Explorer で傾向を把握</div>
+          </div>
+        </div>
+
+        <div class="pipe-row-spacer" aria-hidden="true"></div>
+
+        <div class="pipe-card pipe-card-out">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/09-pc.svg" alt="データダウンロード" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">データダウンロード</div>
+            <div class="pipe-card-desc">CSV / JSON で自由に取得・利用可能</div>
+          </div>
+        </div>
+
+        <div class="pipe-row-spacer" aria-hidden="true"></div>
+
+        <div class="pipe-card pipe-card-out">
+          <div class="pipe-card-thumb">
+            <img src="/assets/images/pipeline/starrydata-ml-mi.svg" alt="機械学習・MI研究" loading="lazy">
+          </div>
+          <div class="pipe-card-body">
+            <div class="pipe-card-name">機械学習・MI 研究</div>
+            <div class="pipe-card-desc">構造化データを学習・ベンチマークに活用</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DB→右カード矢印SVG（グリッド全体に重ねる） -->
+      <svg class="pipe-arrows-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+
+    </div><!-- /.pipeline-grid -->
+  </div>
+</section>
+<script>
+(function(){
+  function drawPipeArrows(){
+    var grid = document.querySelector('.pipeline-grid');
+    if(!grid) return;
+    var svg = grid.querySelector('.pipe-arrows-svg');
+    var db  = document.querySelector('.db-node-wrap');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.pipe-card-out'));
+    if(!svg||!db||!cards.length) return;
+    var gR = grid.getBoundingClientRect();
+    var dbR = db.getBoundingClientRect();
+    var dbY = dbR.top + dbR.height/2 - gR.top;
+    var forkX = dbR.right - gR.left;
+    var clr = '#9184d9';
+    var lAttr = 'fill="none" stroke="'+clr+'" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3"';
+    var sAttr = 'fill="none" stroke="'+clr+'" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"';
+    var inner = '';
+    for(var i=0;i<cards.length;i++){
+      var r = cards[i].getBoundingClientRect();
+      var cy = r.top + r.height/2 - gR.top;
+      var cx = r.left - gR.left;
+      inner += '<line x1="'+forkX.toFixed(1)+'" y1="'+dbY.toFixed(1)+'" x2="'+cx.toFixed(1)+'" y2="'+cy.toFixed(1)+'" '+lAttr+'/>';
+      var dx = cx-forkX, dy = cy-dbY, len = Math.sqrt(dx*dx+dy*dy);
+      var ux = dx/len, uy = dy/len;
+      var ax = cx-7*ux, ay = cy-7*uy;
+      inner += '<path d="M'+(ax-4*uy).toFixed(1)+','+(ay+4*ux).toFixed(1)+' L'+cx.toFixed(1)+','+cy.toFixed(1)+' L'+(ax+4*uy).toFixed(1)+','+(ay-4*ux).toFixed(1)+'" '+sAttr+'/>';
+    }
+    svg.setAttribute('width', gR.width);
+    svg.setAttribute('height', gR.height);
+    svg.innerHTML = inner;
+  }
+  window.addEventListener('load', drawPipeArrows);
+  window.addEventListener('resize', drawPipeArrows);
+})();
+</script>
 
 <!-- =================== HUGE DATABASE =================== -->
 <section class="section" id="huge-database" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
