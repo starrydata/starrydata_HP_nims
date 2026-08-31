@@ -24,10 +24,11 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="{{ description or siteDesc }}">
 <meta property="og:locale" content="{{ 'ja_JP' if L == 'ja' else 'en_US' }}">
-{%- if pathPrefix == '/hp/' -%}
+{%- if pathPrefix == '/hp/' or pathPrefix == '/starrydata_HP_nims/' -%}
 {%- set canonicalPath = '/' if page.url == '/' else ('/hp' + page.url) -%}
 <link rel="canonical" href="https://starrydata.nims.go.jp{{ canonicalPath }}">
-{%- elif pathPrefix == '/starrydata_HP_nims/' -%}
+{%- endif -%}
+{%- if pathPrefix == '/starrydata_HP_nims/' -%}
 <meta name="robots" content="noindex, follow">
 {%- endif -%}
 </head>
