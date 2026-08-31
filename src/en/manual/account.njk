@@ -1,0 +1,118 @@
+---
+layout: modern.njk
+permalink: /en/manual/account/index.html
+title: Account Registration & Login
+lang: en
+bodyId: manual
+---
+
+{%- set L = "en" -%}
+{%- set currentChapter = 1 -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Manual / Chapter 1</span>
+    <h1>Account Registration &amp; Login</h1>
+    <p class="lead">
+      <strong>Signing in is required to browse and search the Starrydata2 database.</strong>
+      New users should first create an account via Signup, then complete two-factor authentication
+      using the verification code sent to their registered email address.
+    </p>
+  </div>
+</section>
+
+{% include "manual_chapter_nav.njk" %}
+
+<section class="section section-top-tight">
+  <div class="container">
+
+    <h2 id="top-page">1.1 Top page</h2>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_01_top_login.png" alt="Starrydata2 top page and Login dialog">
+      <figcaption>Fig. 1-1: The Starrydata2 top page. The <strong>Login</strong> / <strong>Signup</strong> buttons appear in the upper right; the Login dialog (Username / Password) is displayed in the center-right. The left panel shows a project overview and the papers to cite.</figcaption>
+    </figure>
+
+    <p class="prose">
+      The global navigation at the top right includes <strong>Visualizer / Explorer / Explorer3D / Datasets / Request / Login / Signup</strong>. After logging in, Login/Signup are replaced by
+      <strong>Databases / Library / Settings / Logout</strong>.
+    </p>
+
+    <h2 id="signup">1.2 Signup (creating an account)</h2>
+    <ol class="prose">
+      <li>Click <strong>Signup</strong> in the upper right.</li>
+      <li>Enter your <strong>Username</strong>, <strong>Email</strong>, and <strong>Password</strong> in the registration form.
+        <ul>
+          <li>Your Username will appear on any datasets you register or edit, so we recommend using a recognizable name such as your real name or researcher ID.</li>
+          <li>Your Email address is <strong>required for account confirmation and for receiving a verification code every time you log in</strong>. Use an address you can reliably receive mail at.</li>
+        </ul>
+      </li>
+      <li>Click <strong>Sign up</strong> to receive a confirmation code at your registered email address.</li>
+      <li>Enter the code to complete registration. You will be logged in immediately upon completion.</li>
+    </ol>
+
+    <div class="manual-callout warn">
+      <strong>Important:</strong> Your registered email address is where you receive a <strong>two-factor authentication code every time you log in</strong>.
+      We recommend using a personal Gmail or similar address that you will have long-term access to. If you use an institutional address and lose access to it due to resignation or transfer, you will be unable to complete two-factor authentication and will need administrator assistance to recover your account.
+    </div>
+
+    <h2 id="login">1.3 Login (two-factor authentication)</h2>
+    <p class="prose">
+      Login is a two-step process: <strong>① Enter Username / Password</strong> → <strong>② Enter the email verification code</strong>.
+    </p>
+    <ol class="prose">
+      <li>Click <strong>Login</strong> in the upper right. A Login dialog will appear at the top of the page (Fig. 1-1, right). Enter your Username and Password and click <strong>Login</strong>.</li>
+      <li>A <strong>6-digit verification code</strong> will be sent from Starrydata2 to your registered email address.</li>
+      <li>On the <strong>Two-Factor Authentication</strong> screen, enter the 6-digit code you received and click <strong>Verify</strong> (Fig. 1-2).</li>
+    </ol>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_02_2fa.png" alt="Two-Factor Authentication screen with 6-digit code entry">
+      <figcaption>Fig. 1-2: The <strong>Two-Factor Authentication</strong> screen. It displays "A verification code has been sent to &lt;Email&gt;. Please enter the code below." with a 6-digit code input field and a <strong>Verify</strong> button.</figcaption>
+    </figure>
+
+    <ol class="prose" start="4">
+      <li>After successful authentication you will be taken to the database list page (→ <a href="/en/manual/search/">Chapter 2</a>), and Logout / Settings / Library / Databases will appear in the upper right.</li>
+      <li>If you are working on a shared computer, always click <strong>Logout</strong> when you finish.</li>
+    </ol>
+
+    <div class="manual-callout note">
+      <strong>Verification code expiry:</strong> Codes expire after a short time. If a code expires, restart the Login process to receive a new code. If you request multiple codes in the same session, only the <strong>most recent code</strong> is valid.
+    </div>
+
+    <h2 id="no-code">1.4 If you do not receive a verification code</h2>
+    <ul class="prose">
+      <li>Check your <strong>spam / junk mail folder</strong> (emails from Starrydata2 / NIMS may be filtered).</li>
+      <li>Verify that you are using the same email address you registered with and that there are no typos.</li>
+      <li>Check whether your institution's mail server is blocking external emails.</li>
+      <li>If the problem persists, contact the administrator via the <a href="/contact/">Contact page</a>, stating your Username.</li>
+    </ul>
+
+    <h2 id="reset-password">1.5 Forgotten password</h2>
+    <p class="prose">
+      Resetting a password requires contacting a Starrydata2 administrator. Please use the form on the <a href="/contact/">Contact page</a> and include your Username and registered email address. If recovery is not possible, you may re-register with a new username; however, your previous curation history will remain tied to the old account.
+    </p>
+
+    <h2 id="mylists">1.6 Using My Lists</h2>
+    <p class="prose">
+      After logging in, a <strong>My Lists</strong> section appears in the left sidebar of each database's paper list page (→ <a href="/en/manual/search/">Chapter 2</a>). Here you can create personal paper lists and group target papers for management.
+    </p>
+    <ol class="prose">
+      <li>Click <strong>+ New list</strong> to create a new list (e.g., <code>2026_BiTe_review</code>).</li>
+      <li>Search for papers and click a list name to add papers to it.</li>
+      <li>You can also paste DOIs to add papers in bulk (→ <a href="/en/manual/register/#doi-list">Chapter 3.2</a>).</li>
+    </ol>
+
+  </div>
+</section>
+
+<section class="section manual-next">
+  <div class="container">
+    <h2>Next steps</h2>
+    <ul class="prose">
+      <li>Just want to <strong>browse data</strong> → <a href="/en/manual/search/">Chapter 2: Search &amp; Browse</a></li>
+      <li>Want to <strong>register data</strong> → <a href="/en/manual/register/">Chapter 3: Data Registration</a></li>
+      <li>Want to <strong>download data in bulk</strong> → <a href="/en/manual/download/">Chapter 4: Download</a></li>
+    </ul>
+  </div>
+</section>

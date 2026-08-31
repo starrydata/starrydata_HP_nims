@@ -15,13 +15,19 @@
   {%- set enUrl = page.url -%}
   {%- if page.url == '/' -%}
     {%- set jaUrl = '/ja/' -%}
+  {%- elif page.url.indexOf('/en/') == 0 -%}
+    {%- set jaUrl = page.url | replace('/en/', '/') -%}
   {%- else -%}
     {%- set jaUrl = '/ja' + page.url -%}
   {%- endif -%}
 {%- else -%}
   {%- set jaUrl = page.url -%}
   {%- if isJaOnly -%}
-    {%- set enUrl = '/' -%}
+    {%- if page.url.indexOf('/manual/') == 0 -%}
+      {%- set enUrl = '/en' + page.url -%}
+    {%- else -%}
+      {%- set enUrl = '/' -%}
+    {%- endif -%}
   {%- else -%}
     {%- set enUrl = page.url | replace('/ja/', '/') -%}
   {%- endif -%}

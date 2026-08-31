@@ -404,8 +404,8 @@
         {
           "title": "Documentation",
           "items": [
-            { "icon": "book-open","title": "Manual",               "desc": "Search, curation, download",        "url": "/manual/",                                    "external": false },
-            { "icon": "layers",   "title": "Data schema",          "desc": "papers / samples / curves spec",    "url": "/manual/download/#dataset",                   "external": false }
+            { "icon": "book-open","title": "Manual",               "desc": "Search, curation, download",        "url": "/en/manual/",                                 "external": false },
+            { "icon": "layers",   "title": "Data schema",          "desc": "papers / samples / curves spec",    "url": "/en/manual/download/#dataset",                "external": false }
           ]
         },
         {

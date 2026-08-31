@@ -1,0 +1,100 @@
+---
+layout: modern.njk
+permalink: /en/manual/index.html
+title: Starrydata2 Manual
+lang: en
+bodyId: manual
+---
+
+{%- set L = "en" -%}
+{%- set currentChapter = 0 -%}
+
+<section class="page-head">
+  <div class="container">
+    <h1>Starrydata2 Manual</h1>
+    <p class="lead">A guide to searching, browsing, curating, and downloading data in Starrydata2.</p>
+    <p>
+      Official site:
+      <a href="https://starrydata.nims.go.jp/starrydata2/" target="_blank" rel="noopener">
+        https://starrydata.nims.go.jp/starrydata2/
+      </a>
+    </p>
+  </div>
+</section>
+
+{% include "manual_chapter_nav.njk" %}
+
+<section class="section section-top-tight">
+  <div class="container">
+    <span class="eyebrow">Overview</span>
+    <h2>Introduction</h2>
+    <p class="prose">
+      Starrydata2 is a web system that extracts experimental data from figures in published papers on inorganic materials (primarily thermoelectric, magnetic, and other physical properties), converts them into structured curves, and stores them alongside sample information such as composition and fabrication process. As of 2026, the database contains more than <strong><span data-counts="curves">194,000</span>&nbsp;curves</strong>, <strong><span data-counts="samples">82,000</span>&nbsp;samples</strong>, and <strong><span data-counts="papers">13,000</span>&nbsp;papers</strong>
+      (see the homepage statistics for the latest numbers).
+    </p>
+    <p class="prose">
+      All data are available <strong>free of charge for both commercial and non-commercial use</strong>,
+      and can be downloaded as CSV or JSON files from the web.
+      Any registered researcher can participate in data registration (curation).
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Contents</span>
+    <h2>Manual chapters</h2>
+
+    <div class="manual-cards">
+      <a href="/en/manual/account/" class="manual-card">
+        <div class="manual-card-eyebrow">Chapter 1</div>
+        <div class="manual-card-title">Account Registration &amp; Login</div>
+        <p class="manual-card-desc">
+          Sign up, log in, choosing a username, and resetting your password.
+        </p>
+      </a>
+
+      <a href="/en/manual/search/" class="manual-card">
+        <div class="manual-card-eyebrow">Chapter 2</div>
+        <div class="manual-card-title">Search &amp; Browse</div>
+        <p class="manual-card-desc">
+          Paper search, composition search, filters, sample detail pages, and how to read plot views.
+        </p>
+      </a>
+
+      <a href="/en/manual/register/" class="manual-card">
+        <div class="manual-card-eyebrow">Chapter 3</div>
+        <div class="manual-card-title">Data Registration (Curation)</div>
+        <p class="manual-card-desc">
+          Importing papers, extracting curves with StarryDigitizer, entering sample information, and editing guidelines.
+        </p>
+      </a>
+
+      <a href="/en/manual/download/" class="manual-card">
+        <div class="manual-card-eyebrow">Chapter 4</div>
+        <div class="manual-card-title">Download</div>
+        <p class="manual-card-desc">
+          Downloading CSV / JSON, Python code examples for loading data, and how to cite.
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section manual-next">
+  <div class="container">
+    <h2>Who this manual is for</h2>
+    <ul class="prose">
+      <li><strong>External researchers and students</strong>: New users of Starrydata2. We recommend reading chapters in order: Account Registration → Search → Download.</li>
+      <li><strong>Data curators</strong>: Researchers who want to register data from their own papers or their group's papers. Focus on Chapter 3.</li>
+      <li><strong>API / programmatic users</strong>: Researchers who want to handle bulk data for machine learning. Focus on Chapter 4.</li>
+    </ul>
+
+    <h2 style="margin-top:32px;">Related resources</h2>
+    <ul class="prose">
+      <li><a href="https://doi.org/10.1080/27660400.2025.2506976" target="_blank" rel="noopener">Starrydata: from published plots to shared materials data (STAM:M, 2025)</a> — Peer-reviewed paper describing the entire system.</li>
+      <li><a href="https://explorer-3d.starrydata.org/" target="_blank" rel="noopener">Starrydata 3D Thermoelectric Materials Explorer</a> — 3D visualization tool for thermoelectric performance.</li>
+      <li><a href="https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=en" target="_blank" rel="noopener">NIMS MDR — Starrydata</a> — Permanent URL archive of the project paper.</li>
+    </ul>
+  </div>
+</section>

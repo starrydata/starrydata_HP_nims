@@ -1,0 +1,167 @@
+---
+layout: modern.njk
+permalink: /en/manual/search/index.html
+title: Search & Browse
+lang: en
+bodyId: manual
+---
+
+{%- set L = "en" -%}
+{%- set currentChapter = 2 -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Manual / Chapter 2</span>
+    <h1>Search &amp; Browse</h1>
+    <p class="lead">
+      After logging in, select a domain-specific Project (database), search and filter papers in the paper list,
+      then open individual papers' Data pages to browse.
+    </p>
+  </div>
+</section>
+
+{% include "manual_chapter_nav.njk" %}
+
+<section class="section section-top-tight">
+  <div class="container">
+
+    <h2 id="databases">2.1 Databases (Projects)</h2>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_03_databases.png" alt="Databases list page">
+      <figcaption>Fig. 2-1: The <strong>Databases</strong> page immediately after login. GeneralDB (all records) and four domain-specific projects (Thermoelectric / Magnetic / Dielectric / Battery) are listed. A Changelog (system update history) appears on the right.</figcaption>
+    </figure>
+
+    <p class="prose">
+      Each project card shows the following counts (numbers are as of the last update):
+    </p>
+    <ul class="prose">
+      <li><strong>Bibliographic information</strong>: Number of papers with registered bibliographic information</li>
+      <li><strong>Papers with data</strong>: Number of papers that have extracted data</li>
+      <li><strong>Figures</strong>: Number of extracted figures</li>
+      <li><strong>Samples</strong>: Number of extracted samples</li>
+      <li><strong>Mylists</strong>: Number of My Lists you have created in that database</li>
+    </ul>
+
+    <div class="manual-callout note">
+      <strong>Which database to use:</strong> Use <code>GeneralDB</code> for cross-domain searches.
+      For machine learning or statistical analysis focused on a specific domain, choose the corresponding domain-specific project — it provides domain-specific property templates and paper categories.
+    </div>
+
+    <h2 id="data-hierarchy">2.2 Data hierarchy</h2>
+    <p class="prose">
+      Starrydata2 data is organized into three levels plus figure references. The three CSV files (papers / samples / curves) in the official dataset (→ <a href="/en/manual/download/">Chapter 4</a>) correspond to this structure.
+    </p>
+
+    <table class="manual-table">
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Meaning</th>
+          <th>Identifier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paper</td>
+          <td>A published paper (bibliographic information). A unique <strong>SID</strong> (Starrydata ID) is assigned to each paper when its DOI is added to the database.</td>
+          <td><strong><code>SID</code></strong></td>
+        </tr>
+        <tr>
+          <td>Sample</td>
+          <td>A sample (a set of composition and fabrication process). Multiple samples per paper.</td>
+          <td><code>sample_id</code></td>
+        </tr>
+        <tr>
+          <td>Figure</td>
+          <td>A figure number in the paper (e.g., Fig 5a). Referenced by the <code>figure_name</code> field of Curve rows.</td>
+          <td><code>figure_id</code></td>
+        </tr>
+        <tr>
+          <td>Curve</td>
+          <td>One curve representing a single Figure × Sample × property pair (x, y). x and y are arrays.</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="manual-callout note">
+      <strong>SID vs. sample_id:</strong> <strong>SID</strong> = paper ID (one assigned per paper when a DOI is added). <code>sample_id</code> = sample ID (many per paper). The "SID" search field refers to the former.
+    </div>
+
+    <h2 id="paper-list">2.3 Paper list page</h2>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_04_paper_list.png" alt="Paper list page for ThermoelectricMaterials">
+      <figcaption>Fig. 2-2: The paper list page (ThermoelectricMaterials example). The left panel shows the search panel, My Lists, and bulk DOI input; the right panel lists paper cards; the top has Sort by Date.</figcaption>
+    </figure>
+
+    <p class="prose">
+      Selecting a Project from Databases takes you to that Project's paper list. Each paper card shows SID / DOI / number of figures / number of samples / year / Editor name, and action links including Bibliographic information, Data, Print, csv, and json.
+    </p>
+
+    <h2 id="search-papers">2.4 Searching for papers</h2>
+    <p class="prose">
+      The <strong>Search papers within list</strong> section in the top of the left sidebar lets you search by the following fields:
+    </p>
+    <ul class="prose">
+      <li><strong>DOI</strong>: Full or partial DOI match</li>
+      <li><strong>SID</strong>: <strong>Starrydata ID</strong> (a unique ID per paper, assigned when a DOI is added to the database). Distinct from the sample's <code>sampleid</code>.</li>
+      <li><strong>Title</strong>: String within the title</li>
+      <li><strong>Author</strong>: Author name</li>
+      <li><strong>Journal</strong>: Journal name</li>
+      <li><strong>Editor</strong>: Username of the Curator who registered/edited the paper</li>
+    </ul>
+
+    <p class="prose">
+      Use the radio buttons below to toggle between <strong>all / with data / without data</strong> to filter to papers with or without extracted data. Click <strong>Search</strong> to run. Results can be sorted with the <strong>Sort by Date</strong> toggle (ascending/descending) at the top.
+    </p>
+
+    <div class="manual-callout warn">
+      <strong>Note:</strong> AND search with multiple keywords is not supported. Spaces are treated as part of the keyword, so limit your search to one term (e.g., <code>thermoelectric</code> or <code>Bi2Te3</code>). For AND/OR composition searches, we recommend <a href="https://explorer.starrydata.org" target="_blank" rel="noopener">Sample Explorer ↗</a>.
+    </div>
+
+    <h2 id="pagination">2.5 Results per page and pagination</h2>
+    <p class="prose">
+      Results default to <strong>25 per page</strong>. You can increase this with the selector at the bottom, but rendering may take a few seconds for 500+ results. Use the pagination controls at the bottom right to navigate pages.
+    </p>
+
+    <h2 id="sample-detail">2.6 Reading individual paper / Data pages</h2>
+    <p class="prose">
+      Click a paper card's title or the <strong>Data</strong> link to go to the detail page. <strong>Clicking "Data" opens the Data page, where you can see tables of Figures and Samples along with registered axes, values, and visualization plots</strong> (→ <a href="/en/manual/register/">Chapter 3</a>).
+    </p>
+    <ul class="prose">
+      <li><strong>Bibliographic information</strong>: Title, authors, journal, year, DOI (links to publisher's site)</li>
+      <li><strong>Editors</strong>: Usernames of the Curators who registered/edited this paper</li>
+      <li><strong>Figures table</strong>: Figure ID / Figure name / Property(x), (y) / Unit(x), (y)</li>
+      <li><strong>Samples table</strong>: Sample ID / Sample name / Composition</li>
+      <li><strong>Plot</strong>: Registered curves visualized with Plotly on the right (toggle series visibility in the legend)</li>
+    </ul>
+
+    <div class="manual-callout warn">
+      <strong>About full-text PDFs:</strong> Starrydata2 <strong>does not store full-text PDFs</strong> of papers. Follow the DOI link to the publisher's site to access the paper. Access depends on your institution's subscription.
+    </div>
+
+    <h2 id="viz-tools">2.7 Related visualization tools</h2>
+    <p class="prose">
+      In addition to browsing individual data, the following overview tools are accessible from the global navigation:
+    </p>
+    <ul class="prose">
+      <li><strong>Visualizer</strong> — Scatter plot browser of property values</li>
+      <li><strong>Explorer / Explorer3D</strong> — 2D/3D composition exploration combining elements and temperature</li>
+      <li><strong>Datasets</strong> — Frozen snapshots (→ <a href="/en/manual/download/#mdr">Chapter 4.5</a>)</li>
+      <li><strong>Request</strong> — Window for requesting new data or features</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="section manual-next">
+  <div class="container">
+    <h2>Next steps</h2>
+    <ul class="prose">
+      <li>Found data you want → <a href="/en/manual/download/">Chapter 4: Download</a></li>
+      <li>Want to add your own data → <a href="/en/manual/register/">Chapter 3: Data Registration</a></li>
+    </ul>
+  </div>
+</section>

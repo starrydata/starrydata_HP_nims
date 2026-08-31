@@ -1,0 +1,209 @@
+---
+layout: modern.njk
+permalink: /en/manual/register/index.html
+title: Data Registration (Curation)
+lang: en
+bodyId: manual
+---
+
+{%- set L = "en" -%}
+{%- set currentChapter = 3 -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Manual / Chapter 3</span>
+    <h1>Data Registration (Curation)</h1>
+    <p class="lead">
+      This chapter explains how to extract curves from figures in published papers using
+      <strong>StarryDigitizer</strong>, attach composition and fabrication process information, and register the data.
+      Any logged-in user can participate.
+    </p>
+  </div>
+</section>
+
+{% include "manual_chapter_nav.njk" %}
+
+<section class="section section-top-tight">
+  <div class="container">
+
+    <h2 id="flow">3.1 Registration workflow overview</h2>
+    <p class="prose">Registration follows these 6 steps:</p>
+    <ol class="prose">
+      <li>Add the paper to a Database / My List (individually or in bulk by DOI)</li>
+      <li>Click <strong>Data</strong> on the paper card to open the <strong>Data page</strong></li>
+      <li>Enable <strong>Edit</strong> mode and enter the Figure name and Caption</li>
+      <li>Load the original plot image into StarryDigitizer and calibrate the axes</li>
+      <li>Create one Dataset per sample, extract points → <strong>COPY TO CLIPBOARD</strong></li>
+      <li>Paste into XY-value, enter Sample information, property, and units, then click <strong>Save</strong></li>
+    </ol>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_05_data_page.png" alt="Data page overview">
+      <figcaption>Fig. 3-1: Data page layout. Top: <strong>Editors</strong> list and <strong>Figures / Samples tables</strong>. Bottom left: input form for Figure name / Caption / Sample information. Center: XY-value. Right: visualization plot.</figcaption>
+    </figure>
+
+    <h2 id="doi-list">3.2 Adding papers</h2>
+
+    <h3>Adding individually</h3>
+    <ol class="prose">
+      <li>Select a My List and use <strong>+ Add paper</strong> or the DOI input field.</li>
+      <li>Entering a DOI automatically retrieves bibliographic information (title, authors, journal, volume, year, pages) from CrossRef.</li>
+      <li>A unique <strong>SID (Starrydata ID)</strong> is assigned to that paper at the same time. The paper can be referenced by SID thereafter.</li>
+      <li>If there are errors, manually correct them via <strong>Bibliographic information</strong> on the paper card.</li>
+    </ol>
+
+    <h3>Adding papers in bulk by DOI</h3>
+    <ol class="prose">
+      <li>Paste DOIs into the <strong>Add papers from DOIs</strong> text box in the lower part of the left sidebar, <strong>one DOI per line</strong> (you can paste directly from an Excel column).</li>
+      <li>Click <strong>Add Papers</strong>. Existing DOIs are simply added to the My List; new DOIs are looked up via CrossRef, registered, and assigned a new <strong>SID</strong>.</li>
+    </ol>
+
+    <div class="manual-callout note">
+      <strong>SID vs. sample_id:</strong> <strong>SID</strong> is a unique ID <em>per paper</em> (one assigned when a DOI is added). <code>sample_id</code> is a <em>per-sample</em> ID — many are generated within a single paper. The "SID" search field refers to the former.
+    </div>
+
+    <h2 id="data-page">3.3 Opening the Data page</h2>
+    <p class="prose">
+      Click the <strong>Data</strong> link on a paper card to open the Data page. The Data page is structured as follows (Fig. 3-1):
+    </p>
+    <ul class="prose">
+      <li><strong>Header</strong>: Paper title, SID, DOI, number of Figures and Samples, links to Original paper / Bibliographic information / Data / Sample Table / Summary, etc.</li>
+      <li><strong>Editors</strong>: List of Curator usernames who have edited this paper</li>
+      <li><strong>Figures table</strong>: Figure ID / Figure name / Property(x), (y) / Unit(x), (y)</li>
+      <li><strong>Samples table</strong>: Sample ID / Sample name / Composition</li>
+      <li><strong>Edit form (bottom left)</strong>: Figure name / Caption / Sample name / Composition / Property(x), (y) / Unit(x), (y) / Measurement conditions / Comments / <strong>Save</strong> button</li>
+      <li><strong>XY-value (center)</strong>: Area where you paste extracted numerical data</li>
+      <li><strong>Visualization plot (right)</strong>: Plotly display of registered or currently entered data</li>
+    </ul>
+
+    <h2 id="edit-mode">3.4 Edit mode and creating Figures / Samples</h2>
+    <p class="prose">
+      Toggle <strong>Edit</strong> in the upper right to ON — the form background turns blue and editing is enabled.
+    </p>
+    <ol class="prose">
+      <li><strong>Figure name</strong>: Enter the same notation as in the paper (e.g., <code>Fig 5a</code>, <code>4(a)</code>, <code>S3</code>) and press <strong>Enter to confirm</strong>. This field cannot be changed afterwards.</li>
+      <li><strong>Caption</strong>: Copy and paste the figure caption from the paper.
+        <ul>
+          <li><strong>Prohibited characters</strong>: <code>&lt;</code> <code>&gt;</code> <code>"</code> <code>'</code> <code>&amp;</code>.</li>
+          <li>Special characters such as <code>Ω</code> and <code>µ</code> cannot be registered as-is — replace them with <strong>alphabetic equivalents</strong> (e.g., <code>ommega</code>, <code>mu</code>).</li>
+        </ul>
+      </li>
+      <li><strong>Sample name</strong>: Enter the name matching the plot legend (e.g., <code>y=10%</code>, <code>1h BM-SPS</code>) and press Enter to confirm.</li>
+      <li><strong>Composition</strong>: Chemical composition formula (e.g., <code>Mg3Bi0.33</code>, <code>Bi2Te2.85Se0.15</code>).</li>
+      <li><strong>Property(x), Property(y)</strong>: Select the property from the dropdown. Toggle between <strong>Recommended</strong> (domain standard) and <strong>All</strong> (all options) using the radio buttons.</li>
+      <li><strong>Unit(x), Unit(y)</strong>: Specify units in SI base + prefix/exponent notation (e.g., <code>10^0</code> × <code>°C</code>, <code>10^0</code> × <code>VK^-1</code>).</li>
+    </ol>
+
+    <div class="manual-callout warn">
+      <strong>Note:</strong> For safety, follow the <strong>templates of the domain-specific Project (e.g., ThermoelectricMaterials)</strong> for Property / Unit. In GeneralDB the candidate list is very broad, so registration in a domain-specific DB is recommended for better analytical usability.
+    </div>
+
+    <h2 id="starrydigitizer">3.5 Extracting curves with StarryDigitizer</h2>
+    <p class="prose">
+      Launch StarryDigitizer from the right panel of the Data page (or a dedicated tab on the paper page). There are two tabs — <strong>WebPlotDigitizer</strong> and <strong>StarryDigitizer</strong> — and this manual covers the newer StarryDigitizer.
+    </p>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_07_target_plot.png" alt="Example of the source plot to extract (S vs T, y=10%–42%)">
+      <figcaption>Fig. 3-2: Example of the source plot to extract (paper Fig 5a, S vs T, 6 series: y=10%/20%/28%/38%/40%/42%). Take a screenshot in advance from the PDF or HTML (Mac: <code>cmd+shift+4</code> / Win: <code>win+shift+s</code>).</figcaption>
+    </figure>
+
+    <div class="manual-callout note">
+      <strong>Paper used in this demo:</strong><br>
+      F. Garmroudi, M. Parzer, A. Riss, N. Reumann, B. Hinterleitner, K. Tobita, Y. Katsura, K. Kimura, T. Mori, E. Bauer, <em>Solubility limit and annealing effects on the microstructure &amp; thermoelectric properties of Fe<sub>2</sub>V<sub>1−x</sub>Ta<sub>x</sub>Al<sub>1−y</sub>Si<sub>y</sub> Heusler compounds</em>, <em>Acta Materialia</em> <strong>212</strong> (2021) 116867. DOI: <a href="https://doi.org/10.1016/j.actamat.2021.116867" target="_blank" rel="noopener">10.1016/j.actamat.2021.116867</a>
+    </div>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_08_starrydigitizer_init.png" alt="StarryDigitizer immediately after launch">
+      <figcaption>Fig. 3-3: StarryDigitizer launch screen. Load an image by pasting or selecting a file via <strong>Choose an image</strong> in the upper left. <code>XY Axes 1</code> is created automatically in the XY Axes List.</figcaption>
+    </figure>
+
+    <h3>3.5.1 Axis calibration (Set Axes)</h3>
+    <ol class="prose">
+      <li>Enter the known coordinate values for two points each on the x and y axes in the <strong>x1 / x2 / y1 / y2</strong> input fields in the left sidebar (e.g., <code>x1=30</code>, <code>x2=90</code>, <code>y1=-60</code>, <code>y2=120</code>).</li>
+      <li>For logarithmic axes, enable the <strong>Log</strong> checkbox.</li>
+      <li>Choose <strong>2 Points</strong> / <strong>4 Points</strong> in Calibration mode and keep <strong>Show axis marker</strong> ON to confirm positions visually.</li>
+      <li>Click the corresponding positions on the plot, then click <strong>SET AXES</strong> to complete calibration. Click <strong>CLEAR XY AXES</strong> to start over.</li>
+    </ol>
+
+    <h3>3.5.2 Creating Datasets</h3>
+    <ol class="prose">
+      <li>In the <strong>Datasets</strong> section of the left sidebar, click <strong>+</strong> to add as many Datasets as there are samples (e.g., 6 samples → datasets 1–6).</li>
+      <li>With each Dataset selected, choose the matching series color from the <strong>Color</strong> palette on the right (match the legend colors).</li>
+    </ol>
+
+    <h3>3.5.3 Extracting data points</h3>
+    <p class="prose">
+      The basic approach is to use the <strong>Automatic Extraction</strong> section in the right panel.
+    </p>
+    <ol class="prose">
+      <li><strong>Algorithm</strong>: Choose <code>Line Extract</code> (for line plots) or <code>Averaging Window</code> (for scatter plots).</li>
+      <li><strong>ΔX / ΔY</strong>: Specify the extraction interval (px). Use smaller values for dense points, larger for sparse.</li>
+      <li>Restrict the extraction area with <code>PEN</code> / <code>BOX</code> in <strong>Selection Area</strong>, then click <strong>RUN</strong> to auto-detect points.</li>
+      <li>Remove unwanted points with <code>ERASER</code>, clear all with <code>CLEAR</code>. Use <code>ADD (A)</code> / <code>EDIT (E)</code> / <code>DELETE (D)</code> in <strong>Manual Extraction</strong> to add or correct individual points.</li>
+      <li>Extracted points are immediately reflected in the X / Y table at the bottom left.</li>
+    </ol>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_09_starrydigitizer_extracted.png" alt="StarryDigitizer with calibrated axes and extracted points">
+      <figcaption>Fig. 3-4: Extracted point cloud on the calibrated plot. Switch the Color palette for each series and repeat RUN → extract → verify for each of the 6 Datasets.</figcaption>
+    </figure>
+
+    <h3>3.5.4 Copying to clipboard</h3>
+    <p class="prose">
+      Click the <strong>COPY TO CLIPBOARD</strong> button at the bottom left to copy the (X, Y) pairs of the selected Dataset to the clipboard as tab-delimited text.
+    </p>
+
+    <h2 id="paste">3.6 Pasting into XY-value and saving</h2>
+    <ol class="prose">
+      <li>Return to the Data page and enable <strong>Edit</strong> mode for the target Sample row.</li>
+      <li>Click in the <strong>XY-value</strong> area in the center and paste with <code>Ctrl/Cmd + V</code>. The right-side plot updates immediately, allowing you to compare with the original figure.</li>
+      <li>Confirm that all required fields are filled (Figure name / Sample name / Composition / Property / Unit).</li>
+      <li>Click <strong>Save</strong> to complete registration. New rows will appear in the Figures / Samples tables.</li>
+    </ol>
+
+    <figure class="manual-figure">
+      <img src="/manual/img/new_10_form_save.png" alt="Edit form, XY-value area, visualization plot, and Save button">
+      <figcaption>Fig. 3-5: The edit mode form. Enter the figure caption in Caption, composition in Composition, properties in Property(x)/(y), units in Unit(x)/(y), and Measurement conditions (Temperature / Pressure / Other / Magnetic Field / Orientation) as needed. Confirm the right-side plot matches the original figure before clicking Save.</figcaption>
+    </figure>
+
+    <div class="manual-callout note">
+      <strong>Automatic unit conversion:</strong> All values are automatically converted to SI units (K, V/K, etc.) upon saving. The display scale may appear temporarily off right after saving, but reloading the page will show the correct scale.
+    </div>
+
+    <h2 id="edit">3.7 Editing existing data</h2>
+    <p class="prose">
+      Anyone can edit and correct data registered by other users. This is the core of Starrydata2's <strong>collaborative data curation</strong>.
+    </p>
+    <ol class="prose">
+      <li>Click a Sample row to load it into the edit form.</li>
+      <li>Enable the <strong>Edit</strong> toggle in the upper right and make changes (redo XY-value, correct composition, delete erroneous points, etc.).</li>
+      <li>Click <strong>Save</strong> to confirm. Your Username will be appended to the <strong>Editors</strong> table.</li>
+    </ol>
+
+    <h2 id="best-practices">3.8 Best practices for registration</h2>
+    <ul class="prose">
+      <li><strong>Figure name must strictly follow the paper's notation</strong> (e.g., <code>Fig 5a</code>, <code>4(a)</code>, <code>S3</code>).</li>
+      <li><strong>Sample name should match the plot legend exactly</strong> (e.g., <code>y=10%</code>, <code>1h BM-SPS</code>). This prevents the accidental loss of sample identification if the composition alone is ambiguous.</li>
+      <li>Even within the same figure, curves with different x-axis properties (e.g., temperature dependence vs. carrier concentration dependence) should be <strong>registered as separate Figures</strong>.</li>
+      <li>Be careful of prohibited characters <code>&lt; &gt; " ' &amp;</code> and special characters such as <code>Ω µ</code> (→ use <code>ommega</code> / <code>mu</code>).</li>
+      <li>If you plan to curate actively for more than a month, contact the Starrydata team to be introduced to the question channel (inquire via <a href="/contact/">Contact</a>).</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="section manual-next">
+  <div class="container">
+    <h2>Next steps</h2>
+    <ul class="prose">
+      <li>Verify the data you registered → <a href="/en/manual/search/">Chapter 2: Search &amp; Browse</a></li>
+      <li>Export registered data for analysis → <a href="/en/manual/download/">Chapter 4: Download</a></li>
+    </ul>
+
+    <h2 style="margin-top:24px;">Reference</h2>
+    <ul class="prose">
+      <li>Official tutorial: <a href="https://starrydata.org/tutorial/01.html" target="_blank" rel="noopener">https://starrydata.org/tutorial/01.html</a> (full procedure using thermoelectric materials as an example)</li>
+    </ul>
+  </div>
+</section>
