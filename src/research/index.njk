@@ -49,13 +49,13 @@ lang: ja
 (function () {
   const items = document.querySelectorAll('.research-item[data-key]');
   if (!items.length) return;
-  fetch('https://starrydata.github.io/json/counts.json', { cache: 'no-store' })
+  fetch('https://starrydata.github.io/starrydata_datasets/manifest.json', { cache: 'no-store' })
     .then(r => r.json())
     .then(d => {
       const fmt = n => (typeof n === 'number') ? n.toLocaleString('en-US') : '—';
       items.forEach(el => {
         const key = el.dataset.key;
-        const stats = (d.projects || {})[key];
+        const stats = ((d.projects || {})[key] || {}).counts;
         if (!stats) return;
         el.querySelectorAll('[data-stat]').forEach(span => {
           const k = span.dataset.stat;
