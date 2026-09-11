@@ -29,7 +29,7 @@
           "name_en": "Masaya Kumagai",
           "role": "Web開発",
           "role_en": "Web Development",
-          "photo": "/project/img/profile_kumagai.jpg",
+          "photo": "/assets/images/team/kumagai_masaya.jpg",
           "affiliation": "さくらインターネット株式会社\n研究員\n(国研)理化学研究所\n客員研究員",
           "affiliation_en": "SAKURA internet Inc.\nResearcher\nRIKEN\nVisiting Researcher",
           "links": [
@@ -42,7 +42,7 @@
           "name_en": "Tomoya Mato",
           "role": "Web開発",
           "role_en": "Web Development",
-          "photo": "/project/img/profile_mato.jpg",
+          "photo": "/assets/images/team/mato_tomoya.jpg",
           "affiliation": "NIMS 技術開発・共用部門 データ基盤ユニット\n特任エンジニア(無期労働契約転換職員)",
           "affiliation_en": "Advanced Engineering and Services Division Data Infrastructure Unit, NIMS\nProject Engineer (Indefinite Term Employee)",
           "links": []
@@ -72,7 +72,7 @@
           "name_en": "Eiji Koyama",
           "role": "データアナリスト",
           "role_en": "Data Analyst",
-          "photo": "/project/img/profile_koyama.jpg",
+          "photo": "/assets/images/team/koyama_eiji.jpg",
           "affiliation": "NIMS マテリアル基盤研究センター 材料モデリンググループ",
           "affiliation_en": "Materials Modeling Group, Center for Basic Research on Materials, NIMS",
           "links": []
