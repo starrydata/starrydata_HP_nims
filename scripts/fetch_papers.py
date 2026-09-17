@@ -340,6 +340,50 @@ def main():
             merge_paper(doi, meta, "opencitations", seed_doi)
         time.sleep(0.1)
 
+    # --- (3.5) サニティフィルタ: blocklist / 時系列矛盾を除外 ---
+    blocklist = {d.lower() for d in seeds_doc.get("blocklist", [])}
+    seed_year_by_doi = {
+        (p.get("doi") or "").lower(): p.get("year")
+        for p in project_papers if p.get("doi")
+    }
+
+    skipped_blocklist = 0
+    skipped_time_inconsistent: list[tuple[str, int, str, int]] = []
+    filtered: dict[str, dict] = {}
+    for doi_l, entry in citing_by_doi.items():
+        if doi_l in blocklist:
+            skipped_blocklist += 1
+            continue
+        citing_year = entry["paper"].get("year")
+        valid_seeds = set()
+        for seed_doi in entry["cites_seeds"]:
+            seed_year = seed_year_by_doi.get(seed_doi.lower())
+            if citing_year and seed_year and citing_year < seed_year:
+                skipped_time_inconsistent.append(
+                    (doi_l, citing_year, seed_doi, seed_year)
+                )
+                continue
+            valid_seeds.add(seed_doi)
+        if not valid_seeds:
+            continue
+        entry["cites_seeds"] = valid_seeds
+        filtered[doi_l] = entry
+    citing_by_doi = filtered
+
+    if skipped_blocklist:
+        print(f"[filter] blocklist: dropped {skipped_blocklist} paper(s)")
+    if skipped_time_inconsistent:
+        print(f"[filter] time-inconsistent: dropped {len(skipped_time_inconsistent)} (citing_year < seed_year)")
+        for doi_l, cy, sd, sy in skipped_time_inconsistent:
+            print(f"    - {doi_l} ({cy}) claims to cite {sd} ({sy})")
+
+    # 各 seed の unique 件数をフィルタ後の値で上書き
+    for project in project_papers:
+        seed_doi = project.get("doi") or ""
+        project["citation_counts"]["unique"] = sum(
+            1 for entry in citing_by_doi.values() if seed_doi in entry["cites_seeds"]
+        )
+
     # --- (4) 出力用配列に整形 ---
     citing_papers = []
     for doi_l, entry in citing_by_doi.items():
