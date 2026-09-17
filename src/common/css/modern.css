@@ -2228,6 +2228,32 @@ p { margin: 0 0 1em; }
 .type-badge.type-report     { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
 .type-badge.type-reference  { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
 
+/* ---- Citation world map ---- */
+.citation-map {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.citation-map svg { display: block; }
+.citation-map-empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 0;
+}
+.citation-map-tooltip {
+  background: rgba(17, 24, 39, 0.92);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: opacity 120ms ease;
+  z-index: 10;
+}
+.citation-map-tooltip strong { font-weight: 600; }
+
 /* ---- Year group (details/summary for citing papers) ---- */
 .year-group {
   border: 1px solid var(--line);

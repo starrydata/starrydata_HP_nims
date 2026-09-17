@@ -36,7 +36,7 @@ lang: en
         <div class="paper-year-col">{{ p.year }}</div>
         <div class="paper-body">
           <p class="paper-title">
-            {%- if p.work_type and p.work_type != "article" %}
+            {%- if p.work_type %}
             <span class="type-badge type-{{ p.work_type }}">{{ p.work_type | capitalize | replace("-", " ") }}</span>
             {%- endif %}
             {%- if p.doi_url %}
@@ -67,6 +67,20 @@ lang: en
   </div>
 </section>
 
+<section class="section section-top-tight" id="citation-map-section" style="background:#fff; border-top:1px solid var(--line);">
+  <div class="container">
+    <h2 class="papers-h2">
+      Geographic distribution of citing papers
+      <span class="count">{{ papers.citations_by_country | length }}</span>
+    </h2>
+    <p class="papers-note">
+      Aggregated from author affiliations of papers citing Starrydata. Papers with co-authors from multiple countries are counted once per country.
+      Country info available for {{ papers.citing_papers_with_country_count }} / {{ papers.citing_papers_count }} papers.
+    </p>
+    <div id="citation-map" class="citation-map"></div>
+  </div>
+</section>
+
 <section class="section" id="citing-papers" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="container">
     <h2 class="papers-h2">
@@ -91,7 +105,7 @@ lang: en
         <li class="paper-item paper-item-compact">
           <div class="paper-body">
             <p class="paper-title">
-              {%- if p.work_type and p.work_type != "article" %}
+              {%- if p.work_type %}
               <span class="type-badge type-{{ p.work_type }}">{{ p.work_type | capitalize | replace("-", " ") }}</span>
               {%- endif %}
               {%- if p.doi_url %}
@@ -118,3 +132,6 @@ lang: en
     {%- endfor %}
   </div>
 </section>
+
+<script>window.__citationMapData = {{ papers.citations_by_country | dump | safe }};</script>
+<script src="/assets/js/citation-map.js" defer></script>

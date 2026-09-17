@@ -104,6 +104,20 @@ def openalex_work_type(work: dict) -> str:
     return t
 
 
+def extract_countries(work: dict) -> list[str]:
+    """OpenAlex work から著者所属機関の country_code をユニーク抽出（大文字 ISO α-2）"""
+    seen: dict[str, None] = {}
+    for a in (work.get("authorships") or []):
+        for c in (a.get("countries") or []):
+            if c:
+                seen.setdefault(c.upper(), None)
+        for inst in (a.get("institutions") or []):
+            c = inst.get("country_code") or ""
+            if c:
+                seen.setdefault(c.upper(), None)
+    return list(seen.keys())
+
+
 def extract_paper(work: dict) -> dict:
     """OpenAlex work オブジェクトから表示用フィールドを抽出"""
     doi = (work.get("doi") or "").replace("https://doi.org/", "")
@@ -133,6 +147,7 @@ def extract_paper(work: dict) -> dict:
         "doi_url": f"https://doi.org/{doi}" if doi else "",
         "cited_by_count": work.get("cited_by_count", 0),
         "work_type": openalex_work_type(work),
+        "countries": extract_countries(work),
     }
 
 
@@ -155,7 +170,7 @@ def fetch_cited_by_openalex(work_id: str) -> list[dict]:
             "filter": f"cites:{work_id}",
             "per-page": "200",
             "cursor": cursor,
-            "select": "id,doi,title,display_name,publication_year,biblio,primary_location,authorships,cited_by_count,type,type_crossref",
+            "select": "id,doi,title,display_name,publication_year,biblio,primary_location,authorships,cited_by_count,type,type_crossref,institutions_distinct_count",
         }
         url = f"{OPENALEX}/works?" + urllib.parse.urlencode(params)
         data = get_json(url, attach_mailto=True)
@@ -256,6 +271,7 @@ def fetch_crossref_meta(doi: str) -> dict | None:
         "doi_url": f"https://doi.org/{doi}",
         "cited_by_count": msg.get("is-referenced-by-count", 0),
         "work_type": normalize_type(msg.get("type") or ""),
+        "countries": [],
     }
 
 
@@ -437,6 +453,19 @@ def main():
     # 新しい順
     citing_papers.sort(key=lambda p: (p.get("year") or 0, p.get("cited_by_count") or 0), reverse=True)
 
+    # 国別に集計（citing_paper に少なくとも 1 人の著者が所属している国をカウント）
+    citations_by_country: dict[str, int] = {}
+    for p in citing_papers:
+        for c in p.get("countries") or []:
+            citations_by_country[c] = citations_by_country.get(c, 0) + 1
+    citations_by_country_sorted = sorted(
+        citations_by_country.items(), key=lambda kv: kv[1], reverse=True
+    )
+    citations_by_country_list = [
+        {"country_code": code, "count": n} for code, n in citations_by_country_sorted
+    ]
+    citing_papers_with_country = sum(1 for p in citing_papers if p.get("countries"))
+
     # 年ごとにグループ化（テンプレートで折りたたみ表示）
     citing_papers_by_year: list[dict] = []
     seen_years: dict[int | None, list[dict]] = {}
@@ -466,6 +495,8 @@ def main():
             "opencitations_only": sum(1 for p in citing_papers if p["sources"] == ["opencitations"]),
             "both": sum(1 for p in citing_papers if len(p["sources"]) == 2),
         },
+        "citations_by_country": citations_by_country_list,
+        "citing_papers_with_country_count": citing_papers_with_country,
         "project_papers": project_papers,
         "citing_papers": citing_papers,
         "citing_papers_by_year": citing_papers_by_year,
@@ -488,6 +519,10 @@ def main():
     print(f"  {'':4} {'(unique across all seeds)':38}{'':>5}{'':>5}{len(citing_papers):>5}")
     print()
     print(f"citing_papers (unique): {len(citing_papers)}")
+    print(f"citing_papers with country info: {citing_papers_with_country} / {len(citing_papers)}")
+    print(f"countries: {len(citations_by_country_list)}")
+    for c in citations_by_country_list[:10]:
+        print(f"  {c['country_code']}: {c['count']}")
 
 
 if __name__ == "__main__":

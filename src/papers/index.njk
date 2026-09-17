@@ -38,7 +38,7 @@ lang: ja
         <div class="paper-year-col">{{ p.year }}</div>
         <div class="paper-body">
           <p class="paper-title">
-            {%- if p.work_type and p.work_type != "article" %}
+            {%- if p.work_type %}
             <span class="type-badge type-{{ p.work_type }}">{{ p.work_type | capitalize | replace("-", " ") }}</span>
             {%- endif %}
             {%- if p.doi_url %}
@@ -71,6 +71,21 @@ lang: ja
   </div>
 </section>
 
+<!-- =================== CITATION MAP =================== -->
+<section class="section section-top-tight" id="citation-map-section" style="background:#fff; border-top:1px solid var(--line);">
+  <div class="container">
+    <h2 class="papers-h2">
+      引用論文の国別分布
+      <span class="count">{{ papers.citations_by_country | length }}</span>
+    </h2>
+    <p class="papers-note">
+      Starrydata を引用している論文の著者所属機関から集計。1 論文に複数国の共著者がいる場合は各国 1 件として計上。
+      国情報あり {{ papers.citing_papers_with_country_count }} / {{ papers.citing_papers_count }} 件。
+    </p>
+    <div id="citation-map" class="citation-map"></div>
+  </div>
+</section>
+
 <!-- =================== CITING PAPERS =================== -->
 <section class="section" id="citing-papers" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
   <div class="container">
@@ -96,7 +111,7 @@ lang: ja
         <li class="paper-item paper-item-compact">
           <div class="paper-body">
             <p class="paper-title">
-              {%- if p.work_type and p.work_type != "article" %}
+              {%- if p.work_type %}
               <span class="type-badge type-{{ p.work_type }}">{{ p.work_type | capitalize | replace("-", " ") }}</span>
               {%- endif %}
               {%- if p.doi_url %}
@@ -125,3 +140,6 @@ lang: ja
     {%- endfor %}
   </div>
 </section>
+
+<script>window.__citationMapData = {{ papers.citations_by_country | dump | safe }};</script>
+<script src="/assets/js/citation-map.js" defer></script>
