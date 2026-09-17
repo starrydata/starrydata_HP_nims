@@ -64,6 +64,46 @@ def extract_doi_from_omid(s: str) -> str:
     return ""
 
 
+TYPE_MAP = {
+    # OpenAlex types
+    "article": "article",
+    "review": "review",
+    "preprint": "preprint",
+    "book-chapter": "book-chapter",
+    "editorial": "editorial",
+    "letter": "letter",
+    "dataset": "dataset",
+    "data-paper": "data-paper",
+    "conference-paper": "proceedings",
+    "book": "book",
+    "report": "report",
+    "dissertation": "dissertation",
+    "other": "",
+    # Crossref types
+    "journal-article": "article",
+    "review-article": "review",
+    "posted-content": "preprint",
+    "proceedings-article": "proceedings",
+    "reference-entry": "reference",
+    "monograph": "book",
+}
+
+
+def normalize_type(t: str) -> str:
+    return TYPE_MAP.get((t or "").lower(), (t or "").lower())
+
+
+def openalex_work_type(work: dict) -> str:
+    """OpenAlex work から type を決定。type_crossref も見て review 検出を強化"""
+    t = normalize_type(work.get("type") or "")
+    if t == "article":
+        # type_crossref が review-article なら review に昇格
+        tcr = normalize_type(work.get("type_crossref") or "")
+        if tcr == "review":
+            return "review"
+    return t
+
+
 def extract_paper(work: dict) -> dict:
     """OpenAlex work オブジェクトから表示用フィールドを抽出"""
     doi = (work.get("doi") or "").replace("https://doi.org/", "")
@@ -92,6 +132,7 @@ def extract_paper(work: dict) -> dict:
         "doi": doi,
         "doi_url": f"https://doi.org/{doi}" if doi else "",
         "cited_by_count": work.get("cited_by_count", 0),
+        "work_type": openalex_work_type(work),
     }
 
 
@@ -114,7 +155,7 @@ def fetch_cited_by_openalex(work_id: str) -> list[dict]:
             "filter": f"cites:{work_id}",
             "per-page": "200",
             "cursor": cursor,
-            "select": "id,doi,title,display_name,publication_year,biblio,primary_location,authorships,cited_by_count",
+            "select": "id,doi,title,display_name,publication_year,biblio,primary_location,authorships,cited_by_count,type,type_crossref",
         }
         url = f"{OPENALEX}/works?" + urllib.parse.urlencode(params)
         data = get_json(url, attach_mailto=True)
@@ -214,6 +255,7 @@ def fetch_crossref_meta(doi: str) -> dict | None:
         "doi": doi,
         "doi_url": f"https://doi.org/{doi}",
         "cited_by_count": msg.get("is-referenced-by-count", 0),
+        "work_type": normalize_type(msg.get("type") or ""),
     }
 
 

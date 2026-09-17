@@ -1,6 +1,6 @@
 {
   "description": "Starrydata プロジェクト関連論文（seed）と、それらを引用している外部論文",
-  "fetched_at": "2026-09-17T18:19:40+09:00",
+  "fetched_at": "2026-09-17T18:28:52+09:00",
   "data_sources": [
     "OpenAlex (https://openalex.org)",
     "OpenCitations / Crossref Open Citations (https://opencitations.net)"
@@ -27,6 +27,7 @@
       "doi": "10.1080/27660400.2025.2485018",
       "doi_url": "https://doi.org/10.1080/27660400.2025.2485018",
       "cited_by_count": 4,
+      "work_type": "article",
       "cited_by_count_openalex": 4,
       "cited_by_source": "crossref",
       "citation_counts": {
@@ -48,6 +49,7 @@
       "doi": "10.1080/27660400.2025.2506976",
       "doi_url": "https://doi.org/10.1080/27660400.2025.2506976",
       "cited_by_count": 11,
+      "work_type": "article",
       "cited_by_count_openalex": 11,
       "cited_by_source": "crossref",
       "citation_counts": {
@@ -69,6 +71,7 @@
       "doi": "10.1080/27660400.2025.2590811",
       "doi_url": "https://doi.org/10.1080/27660400.2025.2590811",
       "cited_by_count": 1,
+      "work_type": "article",
       "cited_by_count_openalex": 1,
       "cited_by_source": "crossref",
       "citation_counts": {
@@ -90,6 +93,7 @@
       "doi": "10.1038/s41597-024-04043-z",
       "doi_url": "https://doi.org/10.1038/s41597-024-04043-z",
       "cited_by_count": 11,
+      "work_type": "data-paper",
       "cited_by_count_openalex": 12,
       "cited_by_source": "crossref",
       "citation_counts": {
@@ -111,6 +115,7 @@
       "doi": "10.1016/j.isci.2023.106494",
       "doi_url": "https://doi.org/10.1016/j.isci.2023.106494",
       "cited_by_count": 51,
+      "work_type": "article",
       "cited_by_count_openalex": 56,
       "cited_by_source": "crossref",
       "citation_counts": {
@@ -132,6 +137,7 @@
       "doi": "10.1080/27660400.2022.2109447",
       "doi_url": "https://doi.org/10.1080/27660400.2022.2109447",
       "cited_by_count": 16,
+      "work_type": "article",
       "cited_by_count_openalex": 20,
       "cited_by_source": "crossref",
       "citation_counts": {
@@ -153,6 +159,7 @@
       "doi": "10.1080/14686996.2019.1603885",
       "doi_url": "https://doi.org/10.1080/14686996.2019.1603885",
       "cited_by_count": 106,
+      "work_type": "article",
       "cited_by_count_openalex": 106,
       "cited_by_source": "crossref",
       "citation_counts": {
@@ -174,6 +181,7 @@
       "doi": "10.2497/jjspm.64.467",
       "doi_url": "https://doi.org/10.2497/jjspm.64.467",
       "cited_by_count": 5,
+      "work_type": "article",
       "cited_by_count_openalex": 5,
       "cited_by_source": "crossref",
       "citation_counts": {
@@ -197,6 +205,7 @@
       "doi": "10.1002/adma.202521975",
       "doi_url": "https://doi.org/10.1002/adma.202521975",
       "cited_by_count": 24,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -218,6 +227,7 @@
       "doi": "10.1016/j.rser.2026.116937",
       "doi_url": "https://doi.org/10.1016/j.rser.2026.116937",
       "cited_by_count": 15,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -238,6 +248,7 @@
       "doi": "10.1016/j.commatsci.2026.114521",
       "doi_url": "https://doi.org/10.1016/j.commatsci.2026.114521",
       "cited_by_count": 6,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -259,6 +270,7 @@
       "doi": "10.1016/j.aichem.2026.100113",
       "doi_url": "https://doi.org/10.1016/j.aichem.2026.100113",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -280,6 +292,7 @@
       "doi": "10.1021/jacs.6c03748",
       "doi_url": "https://doi.org/10.1021/jacs.6c03748",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -301,6 +314,7 @@
       "doi": "10.1039/d6ta01460g",
       "doi_url": "https://doi.org/10.1039/d6ta01460g",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -321,6 +335,7 @@
       "doi": "10.1038/s41598-026-35799-6",
       "doi_url": "https://doi.org/10.1038/s41598-026-35799-6",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -342,6 +357,7 @@
       "doi": "10.1039/d5ta09114d",
       "doi_url": "https://doi.org/10.1039/d5ta09114d",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -363,6 +379,7 @@
       "doi": "10.3390/s26031051",
       "doi_url": "https://doi.org/10.3390/s26031051",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "opencitations"
       ],
@@ -383,6 +400,7 @@
       "doi": "10.1088/1361-648x/ae56a9",
       "doi_url": "https://doi.org/10.1088/1361-648x/ae56a9",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -404,6 +422,7 @@
       "doi": "10.1002/adfm.202518107",
       "doi_url": "https://doi.org/10.1002/adfm.202518107",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -424,6 +443,7 @@
       "doi": "10.1021/acsenergylett.5c04047",
       "doi_url": "https://doi.org/10.1021/acsenergylett.5c04047",
       "cited_by_count": 1,
+      "work_type": "",
       "sources": [
         "openalex",
         "opencitations"
@@ -445,6 +465,7 @@
       "doi": "10.1002/psp4.70228",
       "doi_url": "https://doi.org/10.1002/psp4.70228",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -465,6 +486,7 @@
       "doi": "10.1007/s40192-026-00446-5",
       "doi_url": "https://doi.org/10.1007/s40192-026-00446-5",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -485,6 +507,7 @@
       "doi": "10.1039/d6ta00722h",
       "doi_url": "https://doi.org/10.1039/d6ta00722h",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -505,6 +528,7 @@
       "doi": "10.7566/jpsj.95.042001",
       "doi_url": "https://doi.org/10.7566/jpsj.95.042001",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -526,6 +550,7 @@
       "doi": "10.12688/openreseurope.24147.1",
       "doi_url": "https://doi.org/10.12688/openreseurope.24147.1",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -546,6 +571,7 @@
       "doi": "10.20517/jmi.2026.38",
       "doi_url": "https://doi.org/10.20517/jmi.2026.38",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -567,6 +593,7 @@
       "doi": "10.1016/j.apmt.2026.103409",
       "doi_url": "https://doi.org/10.1016/j.apmt.2026.103409",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -587,6 +614,7 @@
       "doi": "10.1088/1361-648x/ae56c7",
       "doi_url": "https://doi.org/10.1088/1361-648x/ae56c7",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -607,6 +635,7 @@
       "doi": "10.1016/j.corsci.2026.113908",
       "doi_url": "https://doi.org/10.1016/j.corsci.2026.113908",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -627,6 +656,7 @@
       "doi": "10.1016/j.mtcomm.2026.115773",
       "doi_url": "https://doi.org/10.1016/j.mtcomm.2026.115773",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -647,6 +677,7 @@
       "doi": "10.1016/j.ijhydene.2026.157086",
       "doi_url": "https://doi.org/10.1016/j.ijhydene.2026.157086",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -667,6 +698,7 @@
       "doi": "10.3389/femat.2026.1769839",
       "doi_url": "https://doi.org/10.3389/femat.2026.1769839",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -687,6 +719,7 @@
       "doi": "10.1088/1742-6596/3238/1/012023",
       "doi_url": "https://doi.org/10.1088/1742-6596/3238/1/012023",
       "cited_by_count": 0,
+      "work_type": "proceedings",
       "sources": [
         "openalex"
       ],
@@ -707,6 +740,7 @@
       "doi": "10.1007/s11664-026-12980-1",
       "doi_url": "https://doi.org/10.1007/s11664-026-12980-1",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -727,6 +761,7 @@
       "doi": "10.1016/j.ijheatmasstransfer.2026.129209",
       "doi_url": "https://doi.org/10.1016/j.ijheatmasstransfer.2026.129209",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -747,6 +782,7 @@
       "doi": "10.1007/978-3-032-32104-6_1",
       "doi_url": "https://doi.org/10.1007/978-3-032-32104-6_1",
       "cited_by_count": 0,
+      "work_type": "proceedings",
       "sources": [
         "openalex"
       ],
@@ -767,6 +803,7 @@
       "doi": "10.1016/j.egyr.2026.109718",
       "doi_url": "https://doi.org/10.1016/j.egyr.2026.109718",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -787,6 +824,7 @@
       "doi": "10.1016/j.rser.2026.117459",
       "doi_url": "https://doi.org/10.1016/j.rser.2026.117459",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -808,6 +846,7 @@
       "doi": "10.1039/d6nj02300b",
       "doi_url": "https://doi.org/10.1039/d6nj02300b",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -828,6 +867,7 @@
       "doi": "10.68159/s840659201",
       "doi_url": "https://doi.org/10.68159/s840659201",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -848,6 +888,7 @@
       "doi": "10.68159/p251238849",
       "doi_url": "https://doi.org/10.68159/p251238849",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -868,6 +909,7 @@
       "doi": "10.1080/15421406.2026.2651923",
       "doi_url": "https://doi.org/10.1080/15421406.2026.2651923",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -888,6 +930,7 @@
       "doi": "10.1016/j.cocom.2026.e01342",
       "doi_url": "https://doi.org/10.1016/j.cocom.2026.e01342",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -908,6 +951,7 @@
       "doi": "10.1007/s11082-026-09017-6",
       "doi_url": "https://doi.org/10.1007/s11082-026-09017-6",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -928,6 +972,7 @@
       "doi": "10.1016/j.mtadv.2026.100896",
       "doi_url": "https://doi.org/10.1016/j.mtadv.2026.100896",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -948,6 +993,7 @@
       "doi": "10.1016/j.jnucmat.2026.156924",
       "doi_url": "https://doi.org/10.1016/j.jnucmat.2026.156924",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -968,6 +1014,7 @@
       "doi": "10.1007/s10854-026-17989-0",
       "doi_url": "https://doi.org/10.1007/s10854-026-17989-0",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -988,6 +1035,7 @@
       "doi": "10.1021/acsomega.6c01225",
       "doi_url": "https://doi.org/10.1021/acsomega.6c01225",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -1008,6 +1056,7 @@
       "doi": "10.1039/d6ra04804h",
       "doi_url": "https://doi.org/10.1039/d6ra04804h",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -1028,6 +1077,7 @@
       "doi": "10.1038/s41467-025-57250-6",
       "doi_url": "https://doi.org/10.1038/s41467-025-57250-6",
       "cited_by_count": 27,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1049,6 +1099,7 @@
       "doi": "10.1002/adfm.202513924",
       "doi_url": "https://doi.org/10.1002/adfm.202513924",
       "cited_by_count": 23,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1070,6 +1121,7 @@
       "doi": "10.1016/j.mtphys.2025.101845",
       "doi_url": "https://doi.org/10.1016/j.mtphys.2025.101845",
       "cited_by_count": 17,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1092,6 +1144,7 @@
       "doi": "10.1080/10447318.2025.2499158",
       "doi_url": "https://doi.org/10.1080/10447318.2025.2499158",
       "cited_by_count": 16,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1113,6 +1166,7 @@
       "doi": "10.1016/j.apenergy.2025.127182",
       "doi_url": "https://doi.org/10.1016/j.apenergy.2025.127182",
       "cited_by_count": 15,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1134,6 +1188,7 @@
       "doi": "10.1016/j.commatsci.2025.113855",
       "doi_url": "https://doi.org/10.1016/j.commatsci.2025.113855",
       "cited_by_count": 12,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1155,6 +1210,7 @@
       "doi": "10.1038/s41560-025-01908-4",
       "doi_url": "https://doi.org/10.1038/s41560-025-01908-4",
       "cited_by_count": 11,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1176,6 +1232,7 @@
       "doi": "10.1016/j.jallcom.2025.180661",
       "doi_url": "https://doi.org/10.1016/j.jallcom.2025.180661",
       "cited_by_count": 11,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1197,6 +1254,7 @@
       "doi": "10.1038/s41524-025-01645-y",
       "doi_url": "https://doi.org/10.1038/s41524-025-01645-y",
       "cited_by_count": 11,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1218,6 +1276,7 @@
       "doi": "10.1088/2515-7655/adba87",
       "doi_url": "https://doi.org/10.1088/2515-7655/adba87",
       "cited_by_count": 9,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1239,6 +1298,7 @@
       "doi": "10.1038/s41524-025-01606-5",
       "doi_url": "https://doi.org/10.1038/s41524-025-01606-5",
       "cited_by_count": 9,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1260,6 +1320,7 @@
       "doi": "10.1063/5.0242991",
       "doi_url": "https://doi.org/10.1063/5.0242991",
       "cited_by_count": 8,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1281,6 +1342,7 @@
       "doi": "10.1016/j.solener.2025.113594",
       "doi_url": "https://doi.org/10.1016/j.solener.2025.113594",
       "cited_by_count": 8,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1302,6 +1364,7 @@
       "doi": "10.1063/5.0241645",
       "doi_url": "https://doi.org/10.1063/5.0241645",
       "cited_by_count": 8,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1323,6 +1386,7 @@
       "doi": "10.1002/smll.202412745",
       "doi_url": "https://doi.org/10.1002/smll.202412745",
       "cited_by_count": 8,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1344,6 +1408,7 @@
       "doi": "10.3390/nano15050351",
       "doi_url": "https://doi.org/10.3390/nano15050351",
       "cited_by_count": 7,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1365,6 +1430,7 @@
       "doi": "10.20517/energymater.2024.311",
       "doi_url": "https://doi.org/10.20517/energymater.2024.311",
       "cited_by_count": 6,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1386,6 +1452,7 @@
       "doi": "10.1016/j.scriptamat.2025.116730",
       "doi_url": "https://doi.org/10.1016/j.scriptamat.2025.116730",
       "cited_by_count": 5,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1407,6 +1474,7 @@
       "doi": "10.26599/nr.2025.94907308",
       "doi_url": "https://doi.org/10.26599/nr.2025.94907308",
       "cited_by_count": 5,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1428,6 +1496,7 @@
       "doi": "10.1002/adts.202401222",
       "doi_url": "https://doi.org/10.1002/adts.202401222",
       "cited_by_count": 5,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1449,6 +1518,7 @@
       "doi": "10.1016/j.applthermaleng.2025.128045",
       "doi_url": "https://doi.org/10.1016/j.applthermaleng.2025.128045",
       "cited_by_count": 5,
+      "work_type": "article",
       "sources": [
         "opencitations"
       ],
@@ -1469,6 +1539,7 @@
       "doi": "10.1016/j.mtphys.2025.101948",
       "doi_url": "https://doi.org/10.1016/j.mtphys.2025.101948",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1491,6 +1562,7 @@
       "doi": "10.3390/ma18194575",
       "doi_url": "https://doi.org/10.3390/ma18194575",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1512,6 +1584,7 @@
       "doi": "10.1080/27660400.2024.2444866",
       "doi_url": "https://doi.org/10.1080/27660400.2024.2444866",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1534,6 +1607,7 @@
       "doi": "10.1002/adma.202515054",
       "doi_url": "https://doi.org/10.1002/adma.202515054",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1556,6 +1630,7 @@
       "doi": "10.1016/j.applthermaleng.2025.127417",
       "doi_url": "https://doi.org/10.1016/j.applthermaleng.2025.127417",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1577,6 +1652,7 @@
       "doi": "10.1016/j.actamat.2025.121290",
       "doi_url": "https://doi.org/10.1016/j.actamat.2025.121290",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -1597,6 +1673,7 @@
       "doi": "10.1016/j.jallcom.2025.182164",
       "doi_url": "https://doi.org/10.1016/j.jallcom.2025.182164",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -1617,6 +1694,7 @@
       "doi": "10.1002/aelm.202500210",
       "doi_url": "https://doi.org/10.1002/aelm.202500210",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1638,6 +1716,7 @@
       "doi": "10.1109/jsen.2025.3595487",
       "doi_url": "https://doi.org/10.1109/jsen.2025.3595487",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1659,6 +1738,7 @@
       "doi": "10.1063/5.0274812",
       "doi_url": "https://doi.org/10.1063/5.0274812",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1680,6 +1760,7 @@
       "doi": "10.1039/d5dd00010f",
       "doi_url": "https://doi.org/10.1039/d5dd00010f",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1701,6 +1782,7 @@
       "doi": "10.1039/d5dd00482a",
       "doi_url": "https://doi.org/10.1039/d5dd00482a",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1722,6 +1804,7 @@
       "doi": "10.1021/acs.jcim.4c01644",
       "doi_url": "https://doi.org/10.1021/acs.jcim.4c01644",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1743,6 +1826,7 @@
       "doi": "10.1557/s43577-025-00956-1",
       "doi_url": "https://doi.org/10.1557/s43577-025-00956-1",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1764,6 +1848,7 @@
       "doi": "10.1016/j.rineng.2025.106344",
       "doi_url": "https://doi.org/10.1016/j.rineng.2025.106344",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "opencitations"
       ],
@@ -1784,6 +1869,7 @@
       "doi": "10.3390/cryst15050390",
       "doi_url": "https://doi.org/10.3390/cryst15050390",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1805,6 +1891,7 @@
       "doi": "10.3390/ma18132923",
       "doi_url": "https://doi.org/10.3390/ma18132923",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1826,6 +1913,7 @@
       "doi": "10.1186/s11671-025-04267-x",
       "doi_url": "https://doi.org/10.1186/s11671-025-04267-x",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1847,6 +1935,7 @@
       "doi": "10.1063/5.0247466",
       "doi_url": "https://doi.org/10.1063/5.0247466",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1868,6 +1957,7 @@
       "doi": "10.1016/b978-0-443-27374-2.00002-9",
       "doi_url": "https://doi.org/10.1016/b978-0-443-27374-2.00002-9",
       "cited_by_count": 2,
+      "work_type": "book-chapter",
       "sources": [
         "openalex"
       ],
@@ -1888,6 +1978,7 @@
       "doi": "10.2139/ssrn.5242823",
       "doi_url": "https://doi.org/10.2139/ssrn.5242823",
       "cited_by_count": 2,
+      "work_type": "preprint",
       "sources": [
         "openalex"
       ],
@@ -1908,6 +1999,7 @@
       "doi": "10.1080/23746149.2025.2536269",
       "doi_url": "https://doi.org/10.1080/23746149.2025.2536269",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1929,6 +2021,7 @@
       "doi": "10.1016/j.jallcom.2025.185711",
       "doi_url": "https://doi.org/10.1016/j.jallcom.2025.185711",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1950,6 +2043,7 @@
       "doi": "10.1016/j.esr.2025.101908",
       "doi_url": "https://doi.org/10.1016/j.esr.2025.101908",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "opencitations"
       ],
@@ -1970,6 +2064,7 @@
       "doi": "10.1080/27660400.2025.2586299",
       "doi_url": "https://doi.org/10.1080/27660400.2025.2586299",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -1993,6 +2088,7 @@
       "doi": "10.1016/j.ceramint.2025.03.066",
       "doi_url": "https://doi.org/10.1016/j.ceramint.2025.03.066",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2014,6 +2110,7 @@
       "doi": "10.1016/j.physe.2025.116383",
       "doi_url": "https://doi.org/10.1016/j.physe.2025.116383",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2035,6 +2132,7 @@
       "doi": "10.1021/jacs.5c11646",
       "doi_url": "https://doi.org/10.1021/jacs.5c11646",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2056,6 +2154,7 @@
       "doi": "10.1021/acsaem.5c02609",
       "doi_url": "https://doi.org/10.1021/acsaem.5c02609",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2077,6 +2176,7 @@
       "doi": "10.1557/s43577-025-00949-0",
       "doi_url": "https://doi.org/10.1557/s43577-025-00949-0",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2098,6 +2198,7 @@
       "doi": "10.61552/jme.2025.01.002",
       "doi_url": "https://doi.org/10.61552/jme.2025.01.002",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "opencitations"
       ],
@@ -2118,6 +2219,7 @@
       "doi": "10.1016/j.ssc.2025.116306",
       "doi_url": "https://doi.org/10.1016/j.ssc.2025.116306",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2139,6 +2241,7 @@
       "doi": "10.1109/icaeccs68240.2025.11384799",
       "doi_url": "https://doi.org/10.1109/icaeccs68240.2025.11384799",
       "cited_by_count": 0,
+      "work_type": "proceedings",
       "sources": [
         "openalex",
         "opencitations"
@@ -2160,6 +2263,7 @@
       "doi": "10.1007/s12598-025-03617-z",
       "doi_url": "https://doi.org/10.1007/s12598-025-03617-z",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2181,6 +2285,7 @@
       "doi": "10.1002/aidi.202500043",
       "doi_url": "https://doi.org/10.1002/aidi.202500043",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2202,6 +2307,7 @@
       "doi": "10.1002/qute.202500187",
       "doi_url": "https://doi.org/10.1002/qute.202500187",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2223,6 +2329,7 @@
       "doi": "10.68159/n815660688",
       "doi_url": "https://doi.org/10.68159/n815660688",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -2243,6 +2350,7 @@
       "doi": "10.68159/c056158743",
       "doi_url": "https://doi.org/10.68159/c056158743",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -2263,6 +2371,7 @@
       "doi": "10.1103/lqtf-rvlm",
       "doi_url": "https://doi.org/10.1103/lqtf-rvlm",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2284,6 +2393,7 @@
       "doi": "10.1590/1980-5373-mr-2025-0069",
       "doi_url": "https://doi.org/10.1590/1980-5373-mr-2025-0069",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "opencitations"
       ],
@@ -2304,6 +2414,7 @@
       "doi": "10.1038/s41524-023-01194-2",
       "doi_url": "https://doi.org/10.1038/s41524-023-01194-2",
       "cited_by_count": 69,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -2324,6 +2435,7 @@
       "doi": "10.1039/d4ta06452f",
       "doi_url": "https://doi.org/10.1039/d4ta06452f",
       "cited_by_count": 46,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2345,6 +2457,7 @@
       "doi": "10.1039/d3dd00131h",
       "doi_url": "https://doi.org/10.1039/d3dd00131h",
       "cited_by_count": 37,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2366,6 +2479,7 @@
       "doi": "10.1021/acsami.4c19149",
       "doi_url": "https://doi.org/10.1021/acsami.4c19149",
       "cited_by_count": 33,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2387,6 +2501,7 @@
       "doi": "10.1007/s40843-023-2777-2",
       "doi_url": "https://doi.org/10.1007/s40843-023-2777-2",
       "cited_by_count": 32,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2409,6 +2524,7 @@
       "doi": "10.1039/d3mh01930f",
       "doi_url": "https://doi.org/10.1039/d3mh01930f",
       "cited_by_count": 29,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2430,6 +2546,7 @@
       "doi": "10.1021/acsomega.3c08036",
       "doi_url": "https://doi.org/10.1021/acsomega.3c08036",
       "cited_by_count": 25,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2451,6 +2568,7 @@
       "doi": "10.1016/j.cjph.2024.01.008",
       "doi_url": "https://doi.org/10.1016/j.cjph.2024.01.008",
       "cited_by_count": 18,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2472,6 +2590,7 @@
       "doi": "10.1016/j.mtener.2024.101564",
       "doi_url": "https://doi.org/10.1016/j.mtener.2024.101564",
       "cited_by_count": 17,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2493,6 +2612,7 @@
       "doi": "10.1021/acs.chemmater.4c01696",
       "doi_url": "https://doi.org/10.1021/acs.chemmater.4c01696",
       "cited_by_count": 17,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2514,6 +2634,7 @@
       "doi": "10.1038/s41427-024-00549-5",
       "doi_url": "https://doi.org/10.1038/s41427-024-00549-5",
       "cited_by_count": 16,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2535,6 +2656,7 @@
       "doi": "10.1088/2632-2153/ad9378",
       "doi_url": "https://doi.org/10.1088/2632-2153/ad9378",
       "cited_by_count": 14,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2556,6 +2678,7 @@
       "doi": "10.1002/anie.202402628",
       "doi_url": "https://doi.org/10.1002/anie.202402628",
       "cited_by_count": 13,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2577,6 +2700,7 @@
       "doi": "10.1016/j.porgcoat.2024.108612",
       "doi_url": "https://doi.org/10.1016/j.porgcoat.2024.108612",
       "cited_by_count": 13,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2598,6 +2722,7 @@
       "doi": "10.1080/14686996.2024.2436347",
       "doi_url": "https://doi.org/10.1080/14686996.2024.2436347",
       "cited_by_count": 11,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2619,6 +2744,7 @@
       "doi": "10.1016/j.mtnano.2024.100561",
       "doi_url": "https://doi.org/10.1016/j.mtnano.2024.100561",
       "cited_by_count": 10,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2640,6 +2766,7 @@
       "doi": "10.1016/j.jallcom.2024.175183",
       "doi_url": "https://doi.org/10.1016/j.jallcom.2024.175183",
       "cited_by_count": 9,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2661,6 +2788,7 @@
       "doi": "10.1016/j.apenergy.2024.123881",
       "doi_url": "https://doi.org/10.1016/j.apenergy.2024.123881",
       "cited_by_count": 9,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2682,6 +2810,7 @@
       "doi": "10.1021/acs.jcim.4c01766",
       "doi_url": "https://doi.org/10.1021/acs.jcim.4c01766",
       "cited_by_count": 9,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2703,6 +2832,7 @@
       "doi": "10.1080/14686996.2024.2428154",
       "doi_url": "https://doi.org/10.1080/14686996.2024.2428154",
       "cited_by_count": 7,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2725,6 +2855,7 @@
       "doi": "10.1016/j.chemolab.2024.105084",
       "doi_url": "https://doi.org/10.1016/j.chemolab.2024.105084",
       "cited_by_count": 7,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2746,6 +2877,7 @@
       "doi": "10.1002/adts.202400308",
       "doi_url": "https://doi.org/10.1002/adts.202400308",
       "cited_by_count": 7,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2767,6 +2899,7 @@
       "doi": "10.1039/d3dd00243h",
       "doi_url": "https://doi.org/10.1039/d3dd00243h",
       "cited_by_count": 7,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2788,6 +2921,7 @@
       "doi": "10.1016/j.csite.2024.104377",
       "doi_url": "https://doi.org/10.1016/j.csite.2024.104377",
       "cited_by_count": 6,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2809,6 +2943,7 @@
       "doi": "10.3390/act14010008",
       "doi_url": "https://doi.org/10.3390/act14010008",
       "cited_by_count": 6,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2830,6 +2965,7 @@
       "doi": "10.1016/j.jallcom.2024.173431",
       "doi_url": "https://doi.org/10.1016/j.jallcom.2024.173431",
       "cited_by_count": 6,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2851,6 +2987,7 @@
       "doi": "10.1021/jacs.3c11399",
       "doi_url": "https://doi.org/10.1021/jacs.3c11399",
       "cited_by_count": 6,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2872,6 +3009,7 @@
       "doi": "10.1063/5.0239344",
       "doi_url": "https://doi.org/10.1063/5.0239344",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2893,6 +3031,7 @@
       "doi": "10.1016/j.physb.2024.416299",
       "doi_url": "https://doi.org/10.1016/j.physb.2024.416299",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2914,6 +3053,7 @@
       "doi": "10.1039/d4tc03784g",
       "doi_url": "https://doi.org/10.1039/d4tc03784g",
       "cited_by_count": 4,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2935,6 +3075,7 @@
       "doi": "10.1016/j.jnucmat.2024.155048",
       "doi_url": "https://doi.org/10.1016/j.jnucmat.2024.155048",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -2956,6 +3097,7 @@
       "doi": "10.1051/epjconf/202429212003",
       "doi_url": "https://doi.org/10.1051/epjconf/202429212003",
       "cited_by_count": 2,
+      "work_type": "proceedings",
       "sources": [
         "openalex",
         "opencitations"
@@ -2977,6 +3119,7 @@
       "doi": "10.2139/ssrn.4838688",
       "doi_url": "https://doi.org/10.2139/ssrn.4838688",
       "cited_by_count": 1,
+      "work_type": "preprint",
       "sources": [
         "openalex"
       ],
@@ -2997,6 +3140,7 @@
       "doi": "10.1541/ieejfms.144.350",
       "doi_url": "https://doi.org/10.1541/ieejfms.144.350",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3018,6 +3162,7 @@
       "doi": "10.1002/ange.202402628",
       "doi_url": "https://doi.org/10.1002/ange.202402628",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3039,6 +3184,7 @@
       "doi": "10.1016/j.mssp.2024.109148",
       "doi_url": "https://doi.org/10.1016/j.mssp.2024.109148",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3060,6 +3206,7 @@
       "doi": "10.68159/m146031544",
       "doi_url": "https://doi.org/10.68159/m146031544",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -3080,6 +3227,7 @@
       "doi": "10.2139/ssrn.4866033",
       "doi_url": "https://doi.org/10.2139/ssrn.4866033",
       "cited_by_count": 0,
+      "work_type": "preprint",
       "sources": [
         "openalex",
         "opencitations"
@@ -3101,6 +3249,7 @@
       "doi": "10.2139/ssrn.4865107",
       "doi_url": "https://doi.org/10.2139/ssrn.4865107",
       "cited_by_count": 0,
+      "work_type": "preprint",
       "sources": [
         "openalex",
         "opencitations"
@@ -3122,6 +3271,7 @@
       "doi": "10.32657/10356/183779",
       "doi_url": "https://doi.org/10.32657/10356/183779",
       "cited_by_count": 0,
+      "work_type": "dissertation",
       "sources": [
         "openalex"
       ],
@@ -3142,6 +3292,7 @@
       "doi": "10.1038/s41524-023-01000-z",
       "doi_url": "https://doi.org/10.1038/s41524-023-01000-z",
       "cited_by_count": 844,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3163,6 +3314,7 @@
       "doi": "10.1038/s41524-023-01012-9",
       "doi_url": "https://doi.org/10.1038/s41524-023-01012-9",
       "cited_by_count": 133,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -3183,6 +3335,7 @@
       "doi": "10.1039/d2dd00113f",
       "doi_url": "https://doi.org/10.1039/d2dd00113f",
       "cited_by_count": 48,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3204,6 +3357,7 @@
       "doi": "10.1021/acsomega.3c03722",
       "doi_url": "https://doi.org/10.1021/acsomega.3c03722",
       "cited_by_count": 47,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3225,6 +3379,7 @@
       "doi": "10.1016/j.apenergy.2023.122216",
       "doi_url": "https://doi.org/10.1016/j.apenergy.2023.122216",
       "cited_by_count": 45,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3246,6 +3401,7 @@
       "doi": "10.1039/d3ta05690b",
       "doi_url": "https://doi.org/10.1039/d3ta05690b",
       "cited_by_count": 24,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3267,6 +3423,7 @@
       "doi": "10.1016/j.jmst.2022.12.021",
       "doi_url": "https://doi.org/10.1016/j.jmst.2022.12.021",
       "cited_by_count": 22,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3288,6 +3445,7 @@
       "doi": "10.1063/5.0137642",
       "doi_url": "https://doi.org/10.1063/5.0137642",
       "cited_by_count": 15,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3309,6 +3467,7 @@
       "doi": "10.1016/j.mtphys.2023.101244",
       "doi_url": "https://doi.org/10.1016/j.mtphys.2023.101244",
       "cited_by_count": 10,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3330,6 +3489,7 @@
       "doi": "10.1016/j.energy.2023.129292",
       "doi_url": "https://doi.org/10.1016/j.energy.2023.129292",
       "cited_by_count": 10,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3351,6 +3511,7 @@
       "doi": "10.1039/d3dd00207a",
       "doi_url": "https://doi.org/10.1039/d3dd00207a",
       "cited_by_count": 10,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3372,6 +3533,7 @@
       "doi": "10.1103/physrevb.107.035118",
       "doi_url": "https://doi.org/10.1103/physrevb.107.035118",
       "cited_by_count": 9,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3393,6 +3555,7 @@
       "doi": "10.1063/5.0159347",
       "doi_url": "https://doi.org/10.1063/5.0159347",
       "cited_by_count": 8,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3414,6 +3577,7 @@
       "doi": "10.1021/acs.chemmater.3c01509",
       "doi_url": "https://doi.org/10.1021/acs.chemmater.3c01509",
       "cited_by_count": 8,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3435,6 +3599,7 @@
       "doi": "10.5772/intechopen.1003210",
       "doi_url": "https://doi.org/10.5772/intechopen.1003210",
       "cited_by_count": 4,
+      "work_type": "book-chapter",
       "sources": [
         "openalex",
         "opencitations"
@@ -3456,6 +3621,7 @@
       "doi": "10.7566/jpsjnc.20.01",
       "doi_url": "https://doi.org/10.7566/jpsjnc.20.01",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3477,6 +3643,7 @@
       "doi": "10.1080/00223131.2023.2269974",
       "doi_url": "https://doi.org/10.1080/00223131.2023.2269974",
       "cited_by_count": 3,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3498,6 +3665,7 @@
       "doi": "10.26434/chemrxiv-2023-r9n12",
       "doi_url": "https://doi.org/10.26434/chemrxiv-2023-r9n12",
       "cited_by_count": 2,
+      "work_type": "preprint",
       "sources": [
         "openalex"
       ],
@@ -3518,6 +3686,7 @@
       "doi": "10.33042/2079-424x.2023.62.2.02",
       "doi_url": "https://doi.org/10.33042/2079-424x.2023.62.2.02",
       "cited_by_count": 1,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -3538,6 +3707,7 @@
       "doi": "10.2139/ssrn.4532458",
       "doi_url": "https://doi.org/10.2139/ssrn.4532458",
       "cited_by_count": 1,
+      "work_type": "preprint",
       "sources": [
         "openalex"
       ],
@@ -3558,6 +3728,7 @@
       "doi": "10.33042/2079-424x.2023.62.1.03",
       "doi_url": "https://doi.org/10.33042/2079-424x.2023.62.1.03",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3579,6 +3750,7 @@
       "doi": "10.3103/s0003701x23600753",
       "doi_url": "https://doi.org/10.3103/s0003701x23600753",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3600,6 +3772,7 @@
       "doi": "10.68159/b050829150",
       "doi_url": "https://doi.org/10.68159/b050829150",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex"
       ],
@@ -3620,6 +3793,7 @@
       "doi": "10.1002/9781394256419.ch2",
       "doi_url": "https://doi.org/10.1002/9781394256419.ch2",
       "cited_by_count": 0,
+      "work_type": "",
       "sources": [
         "openalex",
         "opencitations"
@@ -3641,6 +3815,7 @@
       "doi": "10.1002/adfm.202112772",
       "doi_url": "https://doi.org/10.1002/adfm.202112772",
       "cited_by_count": 142,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3662,6 +3837,7 @@
       "doi": "10.1038/s41524-022-00897-2",
       "doi_url": "https://doi.org/10.1038/s41524-022-00897-2",
       "cited_by_count": 61,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3683,6 +3859,7 @@
       "doi": "10.1038/s41428-022-00734-9",
       "doi_url": "https://doi.org/10.1038/s41428-022-00734-9",
       "cited_by_count": 43,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3704,6 +3881,7 @@
       "doi": "10.1016/j.matlet.2022.132299",
       "doi_url": "https://doi.org/10.1016/j.matlet.2022.132299",
       "cited_by_count": 24,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3725,6 +3903,7 @@
       "doi": "10.1021/acsami.2c12112",
       "doi_url": "https://doi.org/10.1021/acsami.2c12112",
       "cited_by_count": 15,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3746,6 +3925,7 @@
       "doi": "10.1021/bk-2022-1416.ch001",
       "doi_url": "https://doi.org/10.1021/bk-2022-1416.ch001",
       "cited_by_count": 15,
+      "work_type": "proceedings",
       "sources": [
         "openalex",
         "opencitations"
@@ -3767,6 +3947,7 @@
       "doi": "10.1038/s41597-022-01699-3",
       "doi_url": "https://doi.org/10.1038/s41597-022-01699-3",
       "cited_by_count": 12,
+      "work_type": "data-paper",
       "sources": [
         "openalex",
         "opencitations"
@@ -3788,6 +3969,7 @@
       "doi": "10.1080/27660400.2021.2024101",
       "doi_url": "https://doi.org/10.1080/27660400.2021.2024101",
       "cited_by_count": 7,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3809,6 +3991,7 @@
       "doi": "10.1016/j.chemolab.2022.104595",
       "doi_url": "https://doi.org/10.1016/j.chemolab.2022.104595",
       "cited_by_count": 2,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3830,6 +4013,7 @@
       "doi": "10.1002/aenm.202101122",
       "doi_url": "https://doi.org/10.1002/aenm.202101122",
       "cited_by_count": 99,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3851,6 +4035,7 @@
       "doi": "10.1038/s43246-021-00209-z",
       "doi_url": "https://doi.org/10.1038/s43246-021-00209-z",
       "cited_by_count": 69,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3872,6 +4057,7 @@
       "doi": "10.1063/5.0054532",
       "doi_url": "https://doi.org/10.1063/5.0054532",
       "cited_by_count": 23,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3893,6 +4079,7 @@
       "doi": "10.1016/j.chemolab.2021.104437",
       "doi_url": "https://doi.org/10.1016/j.chemolab.2021.104437",
       "cited_by_count": 6,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3914,6 +4101,7 @@
       "doi": "10.2497/jjspm.68.317",
       "doi_url": "https://doi.org/10.2497/jjspm.68.317",
       "cited_by_count": 0,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3935,6 +4123,7 @@
       "doi": "10.1002/adma.202001537",
       "doi_url": "https://doi.org/10.1002/adma.202001537",
       "cited_by_count": 991,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3956,6 +4145,7 @@
       "doi": "10.35848/1347-4065/abbfa0",
       "doi_url": "https://doi.org/10.35848/1347-4065/abbfa0",
       "cited_by_count": 134,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3977,6 +4167,7 @@
       "doi": "10.1016/j.matdes.2020.109168",
       "doi_url": "https://doi.org/10.1016/j.matdes.2020.109168",
       "cited_by_count": 36,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -3998,6 +4189,7 @@
       "doi": "10.1021/acsaem.0c01844",
       "doi_url": "https://doi.org/10.1021/acsaem.0c01844",
       "cited_by_count": 25,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -4019,6 +4211,7 @@
       "doi": "10.1002/ansa.202000114",
       "doi_url": "https://doi.org/10.1002/ansa.202000114",
       "cited_by_count": 23,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -4040,6 +4233,7 @@
       "doi": "10.1016/j.rinp.2018.10.034",
       "doi_url": "https://doi.org/10.1016/j.rinp.2018.10.034",
       "cited_by_count": 13,
+      "work_type": "article",
       "sources": [
         "openalex",
         "opencitations"
@@ -4067,6 +4261,7 @@
           "doi": "10.1002/adma.202521975",
           "doi_url": "https://doi.org/10.1002/adma.202521975",
           "cited_by_count": 24,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -4088,6 +4283,7 @@
           "doi": "10.1016/j.rser.2026.116937",
           "doi_url": "https://doi.org/10.1016/j.rser.2026.116937",
           "cited_by_count": 15,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4108,6 +4304,7 @@
           "doi": "10.1016/j.commatsci.2026.114521",
           "doi_url": "https://doi.org/10.1016/j.commatsci.2026.114521",
           "cited_by_count": 6,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -4129,6 +4326,7 @@
           "doi": "10.1016/j.aichem.2026.100113",
           "doi_url": "https://doi.org/10.1016/j.aichem.2026.100113",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4150,6 +4348,7 @@
           "doi": "10.1021/jacs.6c03748",
           "doi_url": "https://doi.org/10.1021/jacs.6c03748",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4171,6 +4370,7 @@
           "doi": "10.1039/d6ta01460g",
           "doi_url": "https://doi.org/10.1039/d6ta01460g",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4191,6 +4391,7 @@
           "doi": "10.1038/s41598-026-35799-6",
           "doi_url": "https://doi.org/10.1038/s41598-026-35799-6",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -4212,6 +4413,7 @@
           "doi": "10.1039/d5ta09114d",
           "doi_url": "https://doi.org/10.1039/d5ta09114d",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -4233,6 +4435,7 @@
           "doi": "10.3390/s26031051",
           "doi_url": "https://doi.org/10.3390/s26031051",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "opencitations"
           ],
@@ -4253,6 +4456,7 @@
           "doi": "10.1088/1361-648x/ae56a9",
           "doi_url": "https://doi.org/10.1088/1361-648x/ae56a9",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4274,6 +4478,7 @@
           "doi": "10.1002/adfm.202518107",
           "doi_url": "https://doi.org/10.1002/adfm.202518107",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4294,6 +4499,7 @@
           "doi": "10.1021/acsenergylett.5c04047",
           "doi_url": "https://doi.org/10.1021/acsenergylett.5c04047",
           "cited_by_count": 1,
+          "work_type": "",
           "sources": [
             "openalex",
             "opencitations"
@@ -4315,6 +4521,7 @@
           "doi": "10.1002/psp4.70228",
           "doi_url": "https://doi.org/10.1002/psp4.70228",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4335,6 +4542,7 @@
           "doi": "10.1007/s40192-026-00446-5",
           "doi_url": "https://doi.org/10.1007/s40192-026-00446-5",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4355,6 +4563,7 @@
           "doi": "10.1039/d6ta00722h",
           "doi_url": "https://doi.org/10.1039/d6ta00722h",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4375,6 +4584,7 @@
           "doi": "10.7566/jpsj.95.042001",
           "doi_url": "https://doi.org/10.7566/jpsj.95.042001",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4396,6 +4606,7 @@
           "doi": "10.12688/openreseurope.24147.1",
           "doi_url": "https://doi.org/10.12688/openreseurope.24147.1",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4416,6 +4627,7 @@
           "doi": "10.20517/jmi.2026.38",
           "doi_url": "https://doi.org/10.20517/jmi.2026.38",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4437,6 +4649,7 @@
           "doi": "10.1016/j.apmt.2026.103409",
           "doi_url": "https://doi.org/10.1016/j.apmt.2026.103409",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4457,6 +4670,7 @@
           "doi": "10.1088/1361-648x/ae56c7",
           "doi_url": "https://doi.org/10.1088/1361-648x/ae56c7",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4477,6 +4691,7 @@
           "doi": "10.1016/j.corsci.2026.113908",
           "doi_url": "https://doi.org/10.1016/j.corsci.2026.113908",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4497,6 +4712,7 @@
           "doi": "10.1016/j.mtcomm.2026.115773",
           "doi_url": "https://doi.org/10.1016/j.mtcomm.2026.115773",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4517,6 +4733,7 @@
           "doi": "10.1016/j.ijhydene.2026.157086",
           "doi_url": "https://doi.org/10.1016/j.ijhydene.2026.157086",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4537,6 +4754,7 @@
           "doi": "10.3389/femat.2026.1769839",
           "doi_url": "https://doi.org/10.3389/femat.2026.1769839",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4557,6 +4775,7 @@
           "doi": "10.1088/1742-6596/3238/1/012023",
           "doi_url": "https://doi.org/10.1088/1742-6596/3238/1/012023",
           "cited_by_count": 0,
+          "work_type": "proceedings",
           "sources": [
             "openalex"
           ],
@@ -4577,6 +4796,7 @@
           "doi": "10.1007/s11664-026-12980-1",
           "doi_url": "https://doi.org/10.1007/s11664-026-12980-1",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4597,6 +4817,7 @@
           "doi": "10.1016/j.ijheatmasstransfer.2026.129209",
           "doi_url": "https://doi.org/10.1016/j.ijheatmasstransfer.2026.129209",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4617,6 +4838,7 @@
           "doi": "10.1007/978-3-032-32104-6_1",
           "doi_url": "https://doi.org/10.1007/978-3-032-32104-6_1",
           "cited_by_count": 0,
+          "work_type": "proceedings",
           "sources": [
             "openalex"
           ],
@@ -4637,6 +4859,7 @@
           "doi": "10.1016/j.egyr.2026.109718",
           "doi_url": "https://doi.org/10.1016/j.egyr.2026.109718",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4657,6 +4880,7 @@
           "doi": "10.1016/j.rser.2026.117459",
           "doi_url": "https://doi.org/10.1016/j.rser.2026.117459",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4678,6 +4902,7 @@
           "doi": "10.1039/d6nj02300b",
           "doi_url": "https://doi.org/10.1039/d6nj02300b",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4698,6 +4923,7 @@
           "doi": "10.68159/s840659201",
           "doi_url": "https://doi.org/10.68159/s840659201",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4718,6 +4944,7 @@
           "doi": "10.68159/p251238849",
           "doi_url": "https://doi.org/10.68159/p251238849",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4738,6 +4965,7 @@
           "doi": "10.1080/15421406.2026.2651923",
           "doi_url": "https://doi.org/10.1080/15421406.2026.2651923",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4758,6 +4986,7 @@
           "doi": "10.1016/j.cocom.2026.e01342",
           "doi_url": "https://doi.org/10.1016/j.cocom.2026.e01342",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4778,6 +5007,7 @@
           "doi": "10.1007/s11082-026-09017-6",
           "doi_url": "https://doi.org/10.1007/s11082-026-09017-6",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4798,6 +5028,7 @@
           "doi": "10.1016/j.mtadv.2026.100896",
           "doi_url": "https://doi.org/10.1016/j.mtadv.2026.100896",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4818,6 +5049,7 @@
           "doi": "10.1016/j.jnucmat.2026.156924",
           "doi_url": "https://doi.org/10.1016/j.jnucmat.2026.156924",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4838,6 +5070,7 @@
           "doi": "10.1007/s10854-026-17989-0",
           "doi_url": "https://doi.org/10.1007/s10854-026-17989-0",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4858,6 +5091,7 @@
           "doi": "10.1021/acsomega.6c01225",
           "doi_url": "https://doi.org/10.1021/acsomega.6c01225",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4878,6 +5112,7 @@
           "doi": "10.1039/d6ra04804h",
           "doi_url": "https://doi.org/10.1039/d6ra04804h",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -4904,6 +5139,7 @@
           "doi": "10.1038/s41467-025-57250-6",
           "doi_url": "https://doi.org/10.1038/s41467-025-57250-6",
           "cited_by_count": 27,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -4925,6 +5161,7 @@
           "doi": "10.1002/adfm.202513924",
           "doi_url": "https://doi.org/10.1002/adfm.202513924",
           "cited_by_count": 23,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -4946,6 +5183,7 @@
           "doi": "10.1016/j.mtphys.2025.101845",
           "doi_url": "https://doi.org/10.1016/j.mtphys.2025.101845",
           "cited_by_count": 17,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -4968,6 +5206,7 @@
           "doi": "10.1080/10447318.2025.2499158",
           "doi_url": "https://doi.org/10.1080/10447318.2025.2499158",
           "cited_by_count": 16,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -4989,6 +5228,7 @@
           "doi": "10.1016/j.apenergy.2025.127182",
           "doi_url": "https://doi.org/10.1016/j.apenergy.2025.127182",
           "cited_by_count": 15,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5010,6 +5250,7 @@
           "doi": "10.1016/j.commatsci.2025.113855",
           "doi_url": "https://doi.org/10.1016/j.commatsci.2025.113855",
           "cited_by_count": 12,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5031,6 +5272,7 @@
           "doi": "10.1038/s41560-025-01908-4",
           "doi_url": "https://doi.org/10.1038/s41560-025-01908-4",
           "cited_by_count": 11,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5052,6 +5294,7 @@
           "doi": "10.1016/j.jallcom.2025.180661",
           "doi_url": "https://doi.org/10.1016/j.jallcom.2025.180661",
           "cited_by_count": 11,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5073,6 +5316,7 @@
           "doi": "10.1038/s41524-025-01645-y",
           "doi_url": "https://doi.org/10.1038/s41524-025-01645-y",
           "cited_by_count": 11,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5094,6 +5338,7 @@
           "doi": "10.1088/2515-7655/adba87",
           "doi_url": "https://doi.org/10.1088/2515-7655/adba87",
           "cited_by_count": 9,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5115,6 +5360,7 @@
           "doi": "10.1038/s41524-025-01606-5",
           "doi_url": "https://doi.org/10.1038/s41524-025-01606-5",
           "cited_by_count": 9,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5136,6 +5382,7 @@
           "doi": "10.1063/5.0242991",
           "doi_url": "https://doi.org/10.1063/5.0242991",
           "cited_by_count": 8,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5157,6 +5404,7 @@
           "doi": "10.1016/j.solener.2025.113594",
           "doi_url": "https://doi.org/10.1016/j.solener.2025.113594",
           "cited_by_count": 8,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5178,6 +5426,7 @@
           "doi": "10.1063/5.0241645",
           "doi_url": "https://doi.org/10.1063/5.0241645",
           "cited_by_count": 8,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5199,6 +5448,7 @@
           "doi": "10.1002/smll.202412745",
           "doi_url": "https://doi.org/10.1002/smll.202412745",
           "cited_by_count": 8,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5220,6 +5470,7 @@
           "doi": "10.3390/nano15050351",
           "doi_url": "https://doi.org/10.3390/nano15050351",
           "cited_by_count": 7,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5241,6 +5492,7 @@
           "doi": "10.20517/energymater.2024.311",
           "doi_url": "https://doi.org/10.20517/energymater.2024.311",
           "cited_by_count": 6,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5262,6 +5514,7 @@
           "doi": "10.1016/j.scriptamat.2025.116730",
           "doi_url": "https://doi.org/10.1016/j.scriptamat.2025.116730",
           "cited_by_count": 5,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5283,6 +5536,7 @@
           "doi": "10.26599/nr.2025.94907308",
           "doi_url": "https://doi.org/10.26599/nr.2025.94907308",
           "cited_by_count": 5,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5304,6 +5558,7 @@
           "doi": "10.1002/adts.202401222",
           "doi_url": "https://doi.org/10.1002/adts.202401222",
           "cited_by_count": 5,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5325,6 +5580,7 @@
           "doi": "10.1016/j.applthermaleng.2025.128045",
           "doi_url": "https://doi.org/10.1016/j.applthermaleng.2025.128045",
           "cited_by_count": 5,
+          "work_type": "article",
           "sources": [
             "opencitations"
           ],
@@ -5345,6 +5601,7 @@
           "doi": "10.1016/j.mtphys.2025.101948",
           "doi_url": "https://doi.org/10.1016/j.mtphys.2025.101948",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5367,6 +5624,7 @@
           "doi": "10.3390/ma18194575",
           "doi_url": "https://doi.org/10.3390/ma18194575",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5388,6 +5646,7 @@
           "doi": "10.1080/27660400.2024.2444866",
           "doi_url": "https://doi.org/10.1080/27660400.2024.2444866",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5410,6 +5669,7 @@
           "doi": "10.1002/adma.202515054",
           "doi_url": "https://doi.org/10.1002/adma.202515054",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5432,6 +5692,7 @@
           "doi": "10.1016/j.applthermaleng.2025.127417",
           "doi_url": "https://doi.org/10.1016/j.applthermaleng.2025.127417",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5453,6 +5714,7 @@
           "doi": "10.1016/j.actamat.2025.121290",
           "doi_url": "https://doi.org/10.1016/j.actamat.2025.121290",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -5473,6 +5735,7 @@
           "doi": "10.1016/j.jallcom.2025.182164",
           "doi_url": "https://doi.org/10.1016/j.jallcom.2025.182164",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -5493,6 +5756,7 @@
           "doi": "10.1002/aelm.202500210",
           "doi_url": "https://doi.org/10.1002/aelm.202500210",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5514,6 +5778,7 @@
           "doi": "10.1109/jsen.2025.3595487",
           "doi_url": "https://doi.org/10.1109/jsen.2025.3595487",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5535,6 +5800,7 @@
           "doi": "10.1063/5.0274812",
           "doi_url": "https://doi.org/10.1063/5.0274812",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5556,6 +5822,7 @@
           "doi": "10.1039/d5dd00010f",
           "doi_url": "https://doi.org/10.1039/d5dd00010f",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5577,6 +5844,7 @@
           "doi": "10.1039/d5dd00482a",
           "doi_url": "https://doi.org/10.1039/d5dd00482a",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5598,6 +5866,7 @@
           "doi": "10.1021/acs.jcim.4c01644",
           "doi_url": "https://doi.org/10.1021/acs.jcim.4c01644",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5619,6 +5888,7 @@
           "doi": "10.1557/s43577-025-00956-1",
           "doi_url": "https://doi.org/10.1557/s43577-025-00956-1",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5640,6 +5910,7 @@
           "doi": "10.1016/j.rineng.2025.106344",
           "doi_url": "https://doi.org/10.1016/j.rineng.2025.106344",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "opencitations"
           ],
@@ -5660,6 +5931,7 @@
           "doi": "10.3390/cryst15050390",
           "doi_url": "https://doi.org/10.3390/cryst15050390",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5681,6 +5953,7 @@
           "doi": "10.3390/ma18132923",
           "doi_url": "https://doi.org/10.3390/ma18132923",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5702,6 +5975,7 @@
           "doi": "10.1186/s11671-025-04267-x",
           "doi_url": "https://doi.org/10.1186/s11671-025-04267-x",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5723,6 +5997,7 @@
           "doi": "10.1063/5.0247466",
           "doi_url": "https://doi.org/10.1063/5.0247466",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5744,6 +6019,7 @@
           "doi": "10.1016/b978-0-443-27374-2.00002-9",
           "doi_url": "https://doi.org/10.1016/b978-0-443-27374-2.00002-9",
           "cited_by_count": 2,
+          "work_type": "book-chapter",
           "sources": [
             "openalex"
           ],
@@ -5764,6 +6040,7 @@
           "doi": "10.2139/ssrn.5242823",
           "doi_url": "https://doi.org/10.2139/ssrn.5242823",
           "cited_by_count": 2,
+          "work_type": "preprint",
           "sources": [
             "openalex"
           ],
@@ -5784,6 +6061,7 @@
           "doi": "10.1080/23746149.2025.2536269",
           "doi_url": "https://doi.org/10.1080/23746149.2025.2536269",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5805,6 +6083,7 @@
           "doi": "10.1016/j.jallcom.2025.185711",
           "doi_url": "https://doi.org/10.1016/j.jallcom.2025.185711",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5826,6 +6105,7 @@
           "doi": "10.1016/j.esr.2025.101908",
           "doi_url": "https://doi.org/10.1016/j.esr.2025.101908",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "opencitations"
           ],
@@ -5846,6 +6126,7 @@
           "doi": "10.1080/27660400.2025.2586299",
           "doi_url": "https://doi.org/10.1080/27660400.2025.2586299",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5869,6 +6150,7 @@
           "doi": "10.1016/j.ceramint.2025.03.066",
           "doi_url": "https://doi.org/10.1016/j.ceramint.2025.03.066",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5890,6 +6172,7 @@
           "doi": "10.1016/j.physe.2025.116383",
           "doi_url": "https://doi.org/10.1016/j.physe.2025.116383",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5911,6 +6194,7 @@
           "doi": "10.1021/jacs.5c11646",
           "doi_url": "https://doi.org/10.1021/jacs.5c11646",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5932,6 +6216,7 @@
           "doi": "10.1021/acsaem.5c02609",
           "doi_url": "https://doi.org/10.1021/acsaem.5c02609",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5953,6 +6238,7 @@
           "doi": "10.1557/s43577-025-00949-0",
           "doi_url": "https://doi.org/10.1557/s43577-025-00949-0",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -5974,6 +6260,7 @@
           "doi": "10.61552/jme.2025.01.002",
           "doi_url": "https://doi.org/10.61552/jme.2025.01.002",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "opencitations"
           ],
@@ -5994,6 +6281,7 @@
           "doi": "10.1016/j.ssc.2025.116306",
           "doi_url": "https://doi.org/10.1016/j.ssc.2025.116306",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6015,6 +6303,7 @@
           "doi": "10.1109/icaeccs68240.2025.11384799",
           "doi_url": "https://doi.org/10.1109/icaeccs68240.2025.11384799",
           "cited_by_count": 0,
+          "work_type": "proceedings",
           "sources": [
             "openalex",
             "opencitations"
@@ -6036,6 +6325,7 @@
           "doi": "10.1007/s12598-025-03617-z",
           "doi_url": "https://doi.org/10.1007/s12598-025-03617-z",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6057,6 +6347,7 @@
           "doi": "10.1002/aidi.202500043",
           "doi_url": "https://doi.org/10.1002/aidi.202500043",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6078,6 +6369,7 @@
           "doi": "10.1002/qute.202500187",
           "doi_url": "https://doi.org/10.1002/qute.202500187",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6099,6 +6391,7 @@
           "doi": "10.68159/n815660688",
           "doi_url": "https://doi.org/10.68159/n815660688",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -6119,6 +6412,7 @@
           "doi": "10.68159/c056158743",
           "doi_url": "https://doi.org/10.68159/c056158743",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -6139,6 +6433,7 @@
           "doi": "10.1103/lqtf-rvlm",
           "doi_url": "https://doi.org/10.1103/lqtf-rvlm",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6160,6 +6455,7 @@
           "doi": "10.1590/1980-5373-mr-2025-0069",
           "doi_url": "https://doi.org/10.1590/1980-5373-mr-2025-0069",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "opencitations"
           ],
@@ -6186,6 +6482,7 @@
           "doi": "10.1038/s41524-023-01194-2",
           "doi_url": "https://doi.org/10.1038/s41524-023-01194-2",
           "cited_by_count": 69,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -6206,6 +6503,7 @@
           "doi": "10.1039/d4ta06452f",
           "doi_url": "https://doi.org/10.1039/d4ta06452f",
           "cited_by_count": 46,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6227,6 +6525,7 @@
           "doi": "10.1039/d3dd00131h",
           "doi_url": "https://doi.org/10.1039/d3dd00131h",
           "cited_by_count": 37,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6248,6 +6547,7 @@
           "doi": "10.1021/acsami.4c19149",
           "doi_url": "https://doi.org/10.1021/acsami.4c19149",
           "cited_by_count": 33,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6269,6 +6569,7 @@
           "doi": "10.1007/s40843-023-2777-2",
           "doi_url": "https://doi.org/10.1007/s40843-023-2777-2",
           "cited_by_count": 32,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6291,6 +6592,7 @@
           "doi": "10.1039/d3mh01930f",
           "doi_url": "https://doi.org/10.1039/d3mh01930f",
           "cited_by_count": 29,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6312,6 +6614,7 @@
           "doi": "10.1021/acsomega.3c08036",
           "doi_url": "https://doi.org/10.1021/acsomega.3c08036",
           "cited_by_count": 25,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6333,6 +6636,7 @@
           "doi": "10.1016/j.cjph.2024.01.008",
           "doi_url": "https://doi.org/10.1016/j.cjph.2024.01.008",
           "cited_by_count": 18,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6354,6 +6658,7 @@
           "doi": "10.1016/j.mtener.2024.101564",
           "doi_url": "https://doi.org/10.1016/j.mtener.2024.101564",
           "cited_by_count": 17,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6375,6 +6680,7 @@
           "doi": "10.1021/acs.chemmater.4c01696",
           "doi_url": "https://doi.org/10.1021/acs.chemmater.4c01696",
           "cited_by_count": 17,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6396,6 +6702,7 @@
           "doi": "10.1038/s41427-024-00549-5",
           "doi_url": "https://doi.org/10.1038/s41427-024-00549-5",
           "cited_by_count": 16,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6417,6 +6724,7 @@
           "doi": "10.1088/2632-2153/ad9378",
           "doi_url": "https://doi.org/10.1088/2632-2153/ad9378",
           "cited_by_count": 14,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6438,6 +6746,7 @@
           "doi": "10.1002/anie.202402628",
           "doi_url": "https://doi.org/10.1002/anie.202402628",
           "cited_by_count": 13,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6459,6 +6768,7 @@
           "doi": "10.1016/j.porgcoat.2024.108612",
           "doi_url": "https://doi.org/10.1016/j.porgcoat.2024.108612",
           "cited_by_count": 13,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6480,6 +6790,7 @@
           "doi": "10.1080/14686996.2024.2436347",
           "doi_url": "https://doi.org/10.1080/14686996.2024.2436347",
           "cited_by_count": 11,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6501,6 +6812,7 @@
           "doi": "10.1016/j.mtnano.2024.100561",
           "doi_url": "https://doi.org/10.1016/j.mtnano.2024.100561",
           "cited_by_count": 10,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6522,6 +6834,7 @@
           "doi": "10.1016/j.jallcom.2024.175183",
           "doi_url": "https://doi.org/10.1016/j.jallcom.2024.175183",
           "cited_by_count": 9,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6543,6 +6856,7 @@
           "doi": "10.1016/j.apenergy.2024.123881",
           "doi_url": "https://doi.org/10.1016/j.apenergy.2024.123881",
           "cited_by_count": 9,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6564,6 +6878,7 @@
           "doi": "10.1021/acs.jcim.4c01766",
           "doi_url": "https://doi.org/10.1021/acs.jcim.4c01766",
           "cited_by_count": 9,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6585,6 +6900,7 @@
           "doi": "10.1080/14686996.2024.2428154",
           "doi_url": "https://doi.org/10.1080/14686996.2024.2428154",
           "cited_by_count": 7,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6607,6 +6923,7 @@
           "doi": "10.1016/j.chemolab.2024.105084",
           "doi_url": "https://doi.org/10.1016/j.chemolab.2024.105084",
           "cited_by_count": 7,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6628,6 +6945,7 @@
           "doi": "10.1002/adts.202400308",
           "doi_url": "https://doi.org/10.1002/adts.202400308",
           "cited_by_count": 7,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6649,6 +6967,7 @@
           "doi": "10.1039/d3dd00243h",
           "doi_url": "https://doi.org/10.1039/d3dd00243h",
           "cited_by_count": 7,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6670,6 +6989,7 @@
           "doi": "10.1016/j.csite.2024.104377",
           "doi_url": "https://doi.org/10.1016/j.csite.2024.104377",
           "cited_by_count": 6,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6691,6 +7011,7 @@
           "doi": "10.3390/act14010008",
           "doi_url": "https://doi.org/10.3390/act14010008",
           "cited_by_count": 6,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6712,6 +7033,7 @@
           "doi": "10.1016/j.jallcom.2024.173431",
           "doi_url": "https://doi.org/10.1016/j.jallcom.2024.173431",
           "cited_by_count": 6,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6733,6 +7055,7 @@
           "doi": "10.1021/jacs.3c11399",
           "doi_url": "https://doi.org/10.1021/jacs.3c11399",
           "cited_by_count": 6,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6754,6 +7077,7 @@
           "doi": "10.1063/5.0239344",
           "doi_url": "https://doi.org/10.1063/5.0239344",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6775,6 +7099,7 @@
           "doi": "10.1016/j.physb.2024.416299",
           "doi_url": "https://doi.org/10.1016/j.physb.2024.416299",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6796,6 +7121,7 @@
           "doi": "10.1039/d4tc03784g",
           "doi_url": "https://doi.org/10.1039/d4tc03784g",
           "cited_by_count": 4,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6817,6 +7143,7 @@
           "doi": "10.1016/j.jnucmat.2024.155048",
           "doi_url": "https://doi.org/10.1016/j.jnucmat.2024.155048",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6838,6 +7165,7 @@
           "doi": "10.1051/epjconf/202429212003",
           "doi_url": "https://doi.org/10.1051/epjconf/202429212003",
           "cited_by_count": 2,
+          "work_type": "proceedings",
           "sources": [
             "openalex",
             "opencitations"
@@ -6859,6 +7187,7 @@
           "doi": "10.2139/ssrn.4838688",
           "doi_url": "https://doi.org/10.2139/ssrn.4838688",
           "cited_by_count": 1,
+          "work_type": "preprint",
           "sources": [
             "openalex"
           ],
@@ -6879,6 +7208,7 @@
           "doi": "10.1541/ieejfms.144.350",
           "doi_url": "https://doi.org/10.1541/ieejfms.144.350",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6900,6 +7230,7 @@
           "doi": "10.1002/ange.202402628",
           "doi_url": "https://doi.org/10.1002/ange.202402628",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6921,6 +7252,7 @@
           "doi": "10.1016/j.mssp.2024.109148",
           "doi_url": "https://doi.org/10.1016/j.mssp.2024.109148",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -6942,6 +7274,7 @@
           "doi": "10.68159/m146031544",
           "doi_url": "https://doi.org/10.68159/m146031544",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -6962,6 +7295,7 @@
           "doi": "10.2139/ssrn.4866033",
           "doi_url": "https://doi.org/10.2139/ssrn.4866033",
           "cited_by_count": 0,
+          "work_type": "preprint",
           "sources": [
             "openalex",
             "opencitations"
@@ -6983,6 +7317,7 @@
           "doi": "10.2139/ssrn.4865107",
           "doi_url": "https://doi.org/10.2139/ssrn.4865107",
           "cited_by_count": 0,
+          "work_type": "preprint",
           "sources": [
             "openalex",
             "opencitations"
@@ -7004,6 +7339,7 @@
           "doi": "10.32657/10356/183779",
           "doi_url": "https://doi.org/10.32657/10356/183779",
           "cited_by_count": 0,
+          "work_type": "dissertation",
           "sources": [
             "openalex"
           ],
@@ -7030,6 +7366,7 @@
           "doi": "10.1038/s41524-023-01000-z",
           "doi_url": "https://doi.org/10.1038/s41524-023-01000-z",
           "cited_by_count": 844,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7051,6 +7388,7 @@
           "doi": "10.1038/s41524-023-01012-9",
           "doi_url": "https://doi.org/10.1038/s41524-023-01012-9",
           "cited_by_count": 133,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -7071,6 +7409,7 @@
           "doi": "10.1039/d2dd00113f",
           "doi_url": "https://doi.org/10.1039/d2dd00113f",
           "cited_by_count": 48,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7092,6 +7431,7 @@
           "doi": "10.1021/acsomega.3c03722",
           "doi_url": "https://doi.org/10.1021/acsomega.3c03722",
           "cited_by_count": 47,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7113,6 +7453,7 @@
           "doi": "10.1016/j.apenergy.2023.122216",
           "doi_url": "https://doi.org/10.1016/j.apenergy.2023.122216",
           "cited_by_count": 45,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7134,6 +7475,7 @@
           "doi": "10.1039/d3ta05690b",
           "doi_url": "https://doi.org/10.1039/d3ta05690b",
           "cited_by_count": 24,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7155,6 +7497,7 @@
           "doi": "10.1016/j.jmst.2022.12.021",
           "doi_url": "https://doi.org/10.1016/j.jmst.2022.12.021",
           "cited_by_count": 22,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7176,6 +7519,7 @@
           "doi": "10.1063/5.0137642",
           "doi_url": "https://doi.org/10.1063/5.0137642",
           "cited_by_count": 15,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7197,6 +7541,7 @@
           "doi": "10.1016/j.mtphys.2023.101244",
           "doi_url": "https://doi.org/10.1016/j.mtphys.2023.101244",
           "cited_by_count": 10,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7218,6 +7563,7 @@
           "doi": "10.1016/j.energy.2023.129292",
           "doi_url": "https://doi.org/10.1016/j.energy.2023.129292",
           "cited_by_count": 10,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7239,6 +7585,7 @@
           "doi": "10.1039/d3dd00207a",
           "doi_url": "https://doi.org/10.1039/d3dd00207a",
           "cited_by_count": 10,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7260,6 +7607,7 @@
           "doi": "10.1103/physrevb.107.035118",
           "doi_url": "https://doi.org/10.1103/physrevb.107.035118",
           "cited_by_count": 9,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7281,6 +7629,7 @@
           "doi": "10.1063/5.0159347",
           "doi_url": "https://doi.org/10.1063/5.0159347",
           "cited_by_count": 8,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7302,6 +7651,7 @@
           "doi": "10.1021/acs.chemmater.3c01509",
           "doi_url": "https://doi.org/10.1021/acs.chemmater.3c01509",
           "cited_by_count": 8,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7323,6 +7673,7 @@
           "doi": "10.5772/intechopen.1003210",
           "doi_url": "https://doi.org/10.5772/intechopen.1003210",
           "cited_by_count": 4,
+          "work_type": "book-chapter",
           "sources": [
             "openalex",
             "opencitations"
@@ -7344,6 +7695,7 @@
           "doi": "10.7566/jpsjnc.20.01",
           "doi_url": "https://doi.org/10.7566/jpsjnc.20.01",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7365,6 +7717,7 @@
           "doi": "10.1080/00223131.2023.2269974",
           "doi_url": "https://doi.org/10.1080/00223131.2023.2269974",
           "cited_by_count": 3,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7386,6 +7739,7 @@
           "doi": "10.26434/chemrxiv-2023-r9n12",
           "doi_url": "https://doi.org/10.26434/chemrxiv-2023-r9n12",
           "cited_by_count": 2,
+          "work_type": "preprint",
           "sources": [
             "openalex"
           ],
@@ -7406,6 +7760,7 @@
           "doi": "10.33042/2079-424x.2023.62.2.02",
           "doi_url": "https://doi.org/10.33042/2079-424x.2023.62.2.02",
           "cited_by_count": 1,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -7426,6 +7781,7 @@
           "doi": "10.2139/ssrn.4532458",
           "doi_url": "https://doi.org/10.2139/ssrn.4532458",
           "cited_by_count": 1,
+          "work_type": "preprint",
           "sources": [
             "openalex"
           ],
@@ -7446,6 +7802,7 @@
           "doi": "10.33042/2079-424x.2023.62.1.03",
           "doi_url": "https://doi.org/10.33042/2079-424x.2023.62.1.03",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7467,6 +7824,7 @@
           "doi": "10.3103/s0003701x23600753",
           "doi_url": "https://doi.org/10.3103/s0003701x23600753",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7488,6 +7846,7 @@
           "doi": "10.68159/b050829150",
           "doi_url": "https://doi.org/10.68159/b050829150",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex"
           ],
@@ -7508,6 +7867,7 @@
           "doi": "10.1002/9781394256419.ch2",
           "doi_url": "https://doi.org/10.1002/9781394256419.ch2",
           "cited_by_count": 0,
+          "work_type": "",
           "sources": [
             "openalex",
             "opencitations"
@@ -7535,6 +7895,7 @@
           "doi": "10.1002/adfm.202112772",
           "doi_url": "https://doi.org/10.1002/adfm.202112772",
           "cited_by_count": 142,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7556,6 +7917,7 @@
           "doi": "10.1038/s41524-022-00897-2",
           "doi_url": "https://doi.org/10.1038/s41524-022-00897-2",
           "cited_by_count": 61,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7577,6 +7939,7 @@
           "doi": "10.1038/s41428-022-00734-9",
           "doi_url": "https://doi.org/10.1038/s41428-022-00734-9",
           "cited_by_count": 43,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7598,6 +7961,7 @@
           "doi": "10.1016/j.matlet.2022.132299",
           "doi_url": "https://doi.org/10.1016/j.matlet.2022.132299",
           "cited_by_count": 24,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7619,6 +7983,7 @@
           "doi": "10.1021/acsami.2c12112",
           "doi_url": "https://doi.org/10.1021/acsami.2c12112",
           "cited_by_count": 15,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7640,6 +8005,7 @@
           "doi": "10.1021/bk-2022-1416.ch001",
           "doi_url": "https://doi.org/10.1021/bk-2022-1416.ch001",
           "cited_by_count": 15,
+          "work_type": "proceedings",
           "sources": [
             "openalex",
             "opencitations"
@@ -7661,6 +8027,7 @@
           "doi": "10.1038/s41597-022-01699-3",
           "doi_url": "https://doi.org/10.1038/s41597-022-01699-3",
           "cited_by_count": 12,
+          "work_type": "data-paper",
           "sources": [
             "openalex",
             "opencitations"
@@ -7682,6 +8049,7 @@
           "doi": "10.1080/27660400.2021.2024101",
           "doi_url": "https://doi.org/10.1080/27660400.2021.2024101",
           "cited_by_count": 7,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7703,6 +8071,7 @@
           "doi": "10.1016/j.chemolab.2022.104595",
           "doi_url": "https://doi.org/10.1016/j.chemolab.2022.104595",
           "cited_by_count": 2,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7730,6 +8099,7 @@
           "doi": "10.1002/aenm.202101122",
           "doi_url": "https://doi.org/10.1002/aenm.202101122",
           "cited_by_count": 99,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7751,6 +8121,7 @@
           "doi": "10.1038/s43246-021-00209-z",
           "doi_url": "https://doi.org/10.1038/s43246-021-00209-z",
           "cited_by_count": 69,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7772,6 +8143,7 @@
           "doi": "10.1063/5.0054532",
           "doi_url": "https://doi.org/10.1063/5.0054532",
           "cited_by_count": 23,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7793,6 +8165,7 @@
           "doi": "10.1016/j.chemolab.2021.104437",
           "doi_url": "https://doi.org/10.1016/j.chemolab.2021.104437",
           "cited_by_count": 6,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7814,6 +8187,7 @@
           "doi": "10.2497/jjspm.68.317",
           "doi_url": "https://doi.org/10.2497/jjspm.68.317",
           "cited_by_count": 0,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7841,6 +8215,7 @@
           "doi": "10.1002/adma.202001537",
           "doi_url": "https://doi.org/10.1002/adma.202001537",
           "cited_by_count": 991,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7862,6 +8237,7 @@
           "doi": "10.35848/1347-4065/abbfa0",
           "doi_url": "https://doi.org/10.35848/1347-4065/abbfa0",
           "cited_by_count": 134,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7883,6 +8259,7 @@
           "doi": "10.1016/j.matdes.2020.109168",
           "doi_url": "https://doi.org/10.1016/j.matdes.2020.109168",
           "cited_by_count": 36,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7904,6 +8281,7 @@
           "doi": "10.1021/acsaem.0c01844",
           "doi_url": "https://doi.org/10.1021/acsaem.0c01844",
           "cited_by_count": 25,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7925,6 +8303,7 @@
           "doi": "10.1002/ansa.202000114",
           "doi_url": "https://doi.org/10.1002/ansa.202000114",
           "cited_by_count": 23,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"
@@ -7952,6 +8331,7 @@
           "doi": "10.1016/j.rinp.2018.10.034",
           "doi_url": "https://doi.org/10.1016/j.rinp.2018.10.034",
           "cited_by_count": 13,
+          "work_type": "article",
           "sources": [
             "openalex",
             "opencitations"

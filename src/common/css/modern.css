@@ -2199,6 +2199,35 @@ p { margin: 0 0 1em; }
 }
 .citation-pill strong { color: var(--accent-2); font-weight: 700; }
 
+/* ---- Work type badge (Review / Preprint / etc.) ---- */
+.type-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  background: #eef1f5;
+  color: #4a5568;
+  border: 1px solid #d8dee6;
+}
+.type-badge.type-review     { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
+.type-badge.type-preprint   { background: #e0e7ff; color: #3730a3; border-color: #a5b4fc; }
+.type-badge.type-editorial  { background: #fce7f3; color: #9d174d; border-color: #f9a8d4; }
+.type-badge.type-letter     { background: #dcfce7; color: #166534; border-color: #86efac; }
+.type-badge.type-book-chapter { background: #fed7aa; color: #9a3412; border-color: #fdba74; }
+.type-badge.type-dataset    { background: #cffafe; color: #155e75; border-color: #67e8f9; }
+.type-badge.type-book       { background: #fecaca; color: #991b1b; border-color: #fca5a5; }
+.type-badge.type-proceedings { background: #ede9fe; color: #5b21b6; border-color: #c4b5fd; }
+.type-badge.type-data-paper { background: #d1fae5; color: #065f46; border-color: #6ee7b7; }
+.type-badge.type-dissertation { background: #fef9c3; color: #713f12; border-color: #fde047; }
+.type-badge.type-report     { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
+.type-badge.type-reference  { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
+
 /* ---- Year group (details/summary for citing papers) ---- */
 .year-group {
   border: 1px solid var(--line);

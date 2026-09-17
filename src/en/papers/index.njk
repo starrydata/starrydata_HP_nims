@@ -36,6 +36,9 @@ lang: en
         <div class="paper-year-col">{{ p.year }}</div>
         <div class="paper-body">
           <p class="paper-title">
+            {%- if p.work_type and p.work_type != "article" %}
+            <span class="type-badge type-{{ p.work_type }}">{{ p.work_type | capitalize | replace("-", " ") }}</span>
+            {%- endif %}
             {%- if p.doi_url %}
             <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.title }}</a>
             {%- else %}
@@ -88,6 +91,9 @@ lang: en
         <li class="paper-item paper-item-compact">
           <div class="paper-body">
             <p class="paper-title">
+              {%- if p.work_type and p.work_type != "article" %}
+              <span class="type-badge type-{{ p.work_type }}">{{ p.work_type | capitalize | replace("-", " ") }}</span>
+              {%- endif %}
               {%- if p.doi_url %}
               <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.title }}</a>
               {%- else %}
