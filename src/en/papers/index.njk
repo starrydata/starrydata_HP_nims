@@ -81,30 +81,11 @@ lang: en
   </div>
 </section>
 
-<section class="section" id="citing-papers" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-  <div class="container">
-    <h2 class="papers-h2">
-      Papers citing Starrydata
-      <span class="count">{{ papers.citing_papers_count }}</span>
-    </h2>
-    <p class="papers-note">
-      External publications citing the Starrydata project papers above (newest first).<br>
-      Sources: OpenAlex only {{ papers.citing_papers_by_source.openalex_only }} ／
-      OpenCitations only {{ papers.citing_papers_by_source.opencitations_only }} ／
-      both {{ papers.citing_papers_by_source.both }}
-    </p>
-
-    {%- for group in papers.citing_papers_by_year %}
-    <details class="year-group" {% if loop.first %}open{% endif %}>
-      <summary class="year-summary">
-        <span class="year-label">{{ group.year or 'Year unknown' }}</span>
-        <span class="year-count">{{ group.count }} papers</span>
-      </summary>
-      <ol class="paper-list">
-        {%- for p in group.papers %}
-        <li class="paper-item paper-item-compact">
+{%- macro renderPaperItem(p) %}
+        <li class="paper-item paper-item-compact{% if p.usage_tier == 'heavy' %} paper-item-heavy{% endif %}">
           <div class="paper-body">
             <p class="paper-title">
+              {%- if p.usage_tier == "heavy" %}<span class="starry-badge" title="Cites multiple Starrydata project papers">★</span>{% endif %}
               {%- if p.work_type %}
               <span class="type-badge type-{{ p.work_type }}">{{ p.work_type | capitalize | replace("-", " ") }}</span>
               {%- endif %}
@@ -120,13 +101,65 @@ lang: en
               {%- if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}
               {%- if p.issue %} [{{ p.issue }}]{% endif %}
               {%- if p.start_page %}, {{ p.start_page }}{% if p.end_page %}–{{ p.end_page }}{% endif %}{% endif %}
+              {%- if p.usage_tier == "heavy" and p.cites_seeds %} · <span class="cites-count">cites {{ p.cites_seeds | length }} Starrydata papers</span>{% endif %}
             </p>
             {%- if p.doi %}
             <p class="paper-doi">DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a></p>
             {%- endif %}
           </div>
         </li>
-        {%- endfor %}
+{%- endmacro %}
+
+<section class="section" id="heavy-papers" style="background:#fffbeb; border-top:1px solid var(--line);">
+  <div class="container">
+    <h2 class="papers-h2">
+      <span class="starry-badge" style="font-size:1em;">★</span>
+      Papers actively using Starrydata
+      <span class="count">{{ papers.heavy_papers_count }}</span>
+    </h2>
+    <p class="papers-note">
+      Papers citing multiple Starrydata project publications, or manually whitelisted (e.g. dataset users).
+    </p>
+
+    {%- if papers.heavy_papers_by_year %}
+    {%- for group in papers.heavy_papers_by_year %}
+    <details class="year-group" open>
+      <summary class="year-summary">
+        <span class="year-label">{{ group.year or 'Year unknown' }}</span>
+        <span class="year-count">{{ group.count }} papers</span>
+      </summary>
+      <ol class="paper-list">
+        {%- for p in group.papers %}{{ renderPaperItem(p) }}{% endfor %}
+      </ol>
+    </details>
+    {%- endfor %}
+    {%- else %}
+    <p class="papers-note">No papers in this category yet.</p>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="section" id="citing-papers" style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <h2 class="papers-h2">
+      Other citing papers
+      <span class="count">{{ papers.regular_papers_count }}</span>
+    </h2>
+    <p class="papers-note">
+      Papers citing one Starrydata project publication (newest first).<br>
+      Sources: OpenAlex only {{ papers.citing_papers_by_source.openalex_only }} ／
+      OpenCitations only {{ papers.citing_papers_by_source.opencitations_only }} ／
+      both {{ papers.citing_papers_by_source.both }}
+    </p>
+
+    {%- for group in papers.regular_papers_by_year %}
+    <details class="year-group" {% if loop.first %}open{% endif %}>
+      <summary class="year-summary">
+        <span class="year-label">{{ group.year or 'Year unknown' }}</span>
+        <span class="year-count">{{ group.count }} papers</span>
+      </summary>
+      <ol class="paper-list">
+        {%- for p in group.papers %}{{ renderPaperItem(p) }}{% endfor %}
       </ol>
     </details>
     {%- endfor %}

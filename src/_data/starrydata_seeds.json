@@ -12,5 +12,9 @@
     "10.1080/27660400.2025.2590811"
   ],
   "blocklist_description": "OpenAlex/OpenCitations の誤マッチで citing_papers に紛れ込むゴミ DOI を手動除外するリスト。時系列矛盾（citing 年 < seed 年）は fetch_papers.py が自動で除外するのでここには不要。",
-  "blocklist": []
+  "blocklist": [],
+  "featured_dois_description": "Starrydata をがっつり活用している論文（データセット利用、大規模解析など）の DOI ホワイトリスト。cites_seeds >= 2 は自動で heavy 判定されるので、それ以外を手動追加する場所。",
+  "featured_dois": [],
+  "unfeatured_dois_description": "cites_seeds >= 2 で自動 heavy 判定されたけど、実際は薄い引用に過ぎない論文を regular に降格するリスト。",
+  "unfeatured_dois": []
 }

@@ -442,12 +442,27 @@ def main():
             1 for entry in citing_by_doi.values() if seed_doi in entry["cites_seeds"]
         )
 
+    # --- (3.7) 活用度判定: featured/unfeatured リスト + cites_seeds 件数 ---
+    featured_manual = {d.lower() for d in seeds_doc.get("featured_dois", [])}
+    unfeatured_manual = {d.lower() for d in seeds_doc.get("unfeatured_dois", [])}
+
+    def compute_usage_tier(doi_l: str, entry: dict) -> str:
+        if doi_l in unfeatured_manual:
+            return "regular"
+        if doi_l in featured_manual:
+            return "heavy"
+        # 自動判定: 2 本以上の seed を引用していれば heavy
+        if len(entry["cites_seeds"]) >= 2:
+            return "heavy"
+        return "regular"
+
     # --- (4) 出力用配列に整形 ---
     citing_papers = []
     for doi_l, entry in citing_by_doi.items():
         p = entry["paper"]
         p["sources"] = sorted(entry["sources"])
         p["cites_seeds"] = sorted(entry["cites_seeds"])
+        p["usage_tier"] = compute_usage_tier(doi_l, entry)
         citing_papers.append(p)
 
     # 新しい順
@@ -466,18 +481,22 @@ def main():
     ]
     citing_papers_with_country = sum(1 for p in citing_papers if p.get("countries"))
 
-    # 年ごとにグループ化（テンプレートで折りたたみ表示）
-    citing_papers_by_year: list[dict] = []
-    seen_years: dict[int | None, list[dict]] = {}
-    for p in citing_papers:
-        y = p.get("year") or 0
-        seen_years.setdefault(y, []).append(p)
-    for y in sorted(seen_years.keys(), reverse=True):
-        citing_papers_by_year.append({
-            "year": y if y else None,
-            "count": len(seen_years[y]),
-            "papers": seen_years[y],
-        })
+    # 活用度別に分割
+    heavy_papers = [p for p in citing_papers if p.get("usage_tier") == "heavy"]
+    regular_papers = [p for p in citing_papers if p.get("usage_tier") != "heavy"]
+
+    def group_by_year(papers: list[dict]) -> list[dict]:
+        by_year: dict[int, list[dict]] = {}
+        for p in papers:
+            by_year.setdefault(p.get("year") or 0, []).append(p)
+        return [
+            {"year": y if y else None, "count": len(by_year[y]), "papers": by_year[y]}
+            for y in sorted(by_year.keys(), reverse=True)
+        ]
+
+    citing_papers_by_year = group_by_year(citing_papers)
+    heavy_papers_by_year = group_by_year(heavy_papers)
+    regular_papers_by_year = group_by_year(regular_papers)
 
     jst = timezone(timedelta(hours=9))
     out = {
@@ -497,9 +516,13 @@ def main():
         },
         "citations_by_country": citations_by_country_list,
         "citing_papers_with_country_count": citing_papers_with_country,
+        "heavy_papers_count": len(heavy_papers),
+        "regular_papers_count": len(regular_papers),
         "project_papers": project_papers,
         "citing_papers": citing_papers,
         "citing_papers_by_year": citing_papers_by_year,
+        "heavy_papers_by_year": heavy_papers_by_year,
+        "regular_papers_by_year": regular_papers_by_year,
     }
 
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)

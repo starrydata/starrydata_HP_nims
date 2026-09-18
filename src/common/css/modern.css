@@ -2228,6 +2228,28 @@ p { margin: 0 0 1em; }
 .type-badge.type-report     { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
 .type-badge.type-reference  { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
 
+/* ---- Starrydata heavy-user star ---- */
+.starry-badge {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  color: #f59e0b;
+  font-size: 1.1em;
+  line-height: 1;
+  text-shadow: 0 0 2px rgba(245, 158, 11, 0.3);
+}
+.paper-item-heavy {
+  background: linear-gradient(90deg, rgba(254, 243, 199, 0.4), transparent 60%);
+  border-left: 3px solid #f59e0b;
+  padding-left: 12px;
+  margin-left: -12px;
+}
+.cites-count {
+  color: #92400e;
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
 /* ---- Citation world map ---- */
 .citation-map {
   width: 100%;
