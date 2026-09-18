@@ -104,6 +104,29 @@ def openalex_work_type(work: dict) -> str:
     return t
 
 
+PREPRINT_HOSTS = {
+    "arxiv", "arxiv (cornell university)", "chemrxiv", "biorxiv", "medrxiv",
+    "research square", "researchsquare", "ssrn", "techrxiv",
+    "hal (le centre pour la communication scientifique directe)", "hal",
+    "figshare", "zenodo", "osf preprints",
+    "institutional repositories database",
+}
+
+
+def normalize_title(t: str) -> str:
+    """タイトルを比較用に正規化（英数字のみ、小文字、先頭 80 文字）"""
+    return re.sub(r"[^a-z0-9]", "", (t or "").lower())[:80]
+
+
+def is_preprint_host(journal: str, work_type: str) -> bool:
+    if (work_type or "").lower() == "preprint":
+        return True
+    j = (journal or "").lower()
+    # 括弧内 (e.g. "(IRDB)" や "(Cornell University)") を除去してから比較
+    j_stripped = re.sub(r"\s*\([^)]*\)", "", j).strip()
+    return j_stripped in PREPRINT_HOSTS or j.strip() in PREPRINT_HOSTS
+
+
 def extract_countries(work: dict) -> list[str]:
     """OpenAlex work から著者所属機関の country_code をユニーク抽出（大文字 ISO α-2）"""
     seen: dict[str, None] = {}
@@ -159,6 +182,36 @@ def fetch_seed(doi: str) -> dict | None:
     except Exception as e:
         print(f"WARN: seed not found for {doi}: {e}", file=sys.stderr)
         return None
+
+
+def fetch_openalex_fulltext(query: str) -> list[dict]:
+    """OpenAlex 全文検索。dataset / paratext を除外し、work を返す"""
+    out: list[dict] = []
+    cursor = "*"
+    while True:
+        params = {
+            "search": query,
+            "per-page": "200",
+            "cursor": cursor,
+            "select": "id,doi,title,display_name,publication_year,biblio,primary_location,authorships,cited_by_count,type,type_crossref",
+        }
+        url = f"{OPENALEX}/works?" + urllib.parse.urlencode(params)
+        try:
+            data = get_json(url, attach_mailto=True)
+        except Exception as e:
+            print(f"WARN: fulltext search failed for '{query}': {e}", file=sys.stderr)
+            break
+        for w in data.get("results", []):
+            t = (w.get("type") or "").lower()
+            # figshare スナップショット等の dataset や目次的な paratext は除外
+            if t in ("dataset", "paratext"):
+                continue
+            out.append(w)
+        cursor = (data.get("meta") or {}).get("next_cursor")
+        if not cursor:
+            break
+        time.sleep(0.2)
+    return out
 
 
 def fetch_cited_by_openalex(work_id: str) -> list[dict]:
@@ -398,6 +451,81 @@ def main():
             merge_paper(doi, meta, "opencitations", seed_doi)
         time.sleep(0.1)
 
+    # --- (3.3) OpenAlex 全文検索で "starrydata" を含む論文を検出 ---
+    # → figshare データセット経由で Starrydata を使っているが seed 引用が薄い/無い論文を拾う
+    print("[OpenAlex] fulltext search 'starrydata' ...")
+    mention_works = fetch_openalex_fulltext("starrydata")
+    print(f"  -> {len(mention_works)} works mention 'starrydata'")
+    n_new = 0
+    n_existing = 0
+    for w in mention_works:
+        paper = extract_paper(w)
+        doi_l = (paper["doi"] or "").lower()
+        if not doi_l or doi_l in seed_doi_set:
+            continue
+        if doi_l in citing_by_doi:
+            citing_by_doi[doi_l]["sources"].add("openalex-fulltext")
+            n_existing += 1
+        else:
+            citing_by_doi[doi_l] = {
+                "paper": paper,
+                "sources": {"openalex-fulltext"},
+                "cites_seeds": set(),
+            }
+            n_new += 1
+        citing_by_doi[doi_l]["mentions_starrydata"] = True
+    print(f"  -> {n_existing} already tracked, {n_new} newly added")
+
+    # --- (3.4) 重複除外: seed の preprint 版と、published + preprint 両方が citing_papers に居るケースをまとめる ---
+    seed_titles_norm = {
+        normalize_title(p.get("title") or ""): (p.get("doi") or "").lower()
+        for p in project_papers
+    }
+
+    # 3.4a: seed と同じタイトルの preprint/dataset を citing から除外（seed 自身の別バージョン）
+    skipped_seed_variants = 0
+    for doi_l in list(citing_by_doi.keys()):
+        entry = citing_by_doi[doi_l]
+        p = entry["paper"]
+        t_norm = normalize_title(p.get("title"))
+        if t_norm and t_norm in seed_titles_norm and is_preprint_host(p.get("journal"), p.get("work_type")):
+            del citing_by_doi[doi_l]
+            skipped_seed_variants += 1
+    if skipped_seed_variants:
+        print(f"[dedupe] seed preprint/dataset variants: dropped {skipped_seed_variants}")
+
+    # 3.4b: 正規化タイトルが同じ複数エントリで、preprint と published が両方あれば preprint を落とす。
+    #       その際、preprint 側の cites_seeds と mentions_starrydata フラグを published 側にマージ。
+    from collections import defaultdict
+    by_title: dict[str, list[str]] = defaultdict(list)
+    for doi_l, entry in citing_by_doi.items():
+        t = normalize_title(entry["paper"].get("title"))
+        if t:
+            by_title[t].append(doi_l)
+    dedup_dropped = 0
+    for t, dois in by_title.items():
+        if len(dois) < 2:
+            continue
+        preprints = [d for d in dois if is_preprint_host(
+            citing_by_doi[d]["paper"].get("journal"),
+            citing_by_doi[d]["paper"].get("work_type"),
+        )]
+        published = [d for d in dois if d not in preprints]
+        if not preprints or not published:
+            continue
+        # published 側 (最初の1件) にマージして preprint を落とす
+        keeper = citing_by_doi[published[0]]
+        for pd in preprints:
+            pe = citing_by_doi[pd]
+            keeper["cites_seeds"] |= pe.get("cites_seeds", set())
+            keeper["sources"] |= pe.get("sources", set())
+            if pe.get("mentions_starrydata"):
+                keeper["mentions_starrydata"] = True
+            del citing_by_doi[pd]
+            dedup_dropped += 1
+    if dedup_dropped:
+        print(f"[dedupe] preprint duplicates of published papers: dropped {dedup_dropped}")
+
     # --- (3.5) サニティフィルタ: blocklist / 時系列矛盾を除外 ---
     blocklist = {d.lower() for d in seeds_doc.get("blocklist", [])}
     seed_year_by_doi = {
@@ -422,7 +550,8 @@ def main():
                 )
                 continue
             valid_seeds.add(seed_doi)
-        if not valid_seeds:
+        # seed 引用が全滅した場合でも、"starrydata" fulltext hit なら残す
+        if not valid_seeds and not entry.get("mentions_starrydata"):
             continue
         entry["cites_seeds"] = valid_seeds
         filtered[doi_l] = entry
@@ -451,7 +580,10 @@ def main():
             return "regular"
         if doi_l in featured_manual:
             return "heavy"
-        # 自動判定: 2 本以上の seed を引用していれば heavy
+        # 自動判定 (a): 本文で "starrydata" を言及していれば heavy（figshare 経由ユーザー等）
+        if entry.get("mentions_starrydata"):
+            return "heavy"
+        # 自動判定 (b): 2 本以上の seed を引用していれば heavy
         if len(entry["cites_seeds"]) >= 2:
             return "heavy"
         return "regular"
@@ -462,6 +594,7 @@ def main():
         p = entry["paper"]
         p["sources"] = sorted(entry["sources"])
         p["cites_seeds"] = sorted(entry["cites_seeds"])
+        p["mentions_starrydata"] = bool(entry.get("mentions_starrydata"))
         p["usage_tier"] = compute_usage_tier(doi_l, entry)
         citing_papers.append(p)
 

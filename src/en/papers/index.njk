@@ -85,7 +85,7 @@ lang: en
         <li class="paper-item paper-item-compact{% if p.usage_tier == 'heavy' %} paper-item-heavy{% endif %}">
           <div class="paper-body">
             <p class="paper-title">
-              {%- if p.usage_tier == "heavy" %}<span class="starry-badge" title="Cites multiple Starrydata project papers">★</span>{% endif %}
+              {%- if p.usage_tier == "heavy" %}<span class="starry-badge" title="Actively using Starrydata">★</span>{% endif %}
               {%- if p.work_type %}
               <span class="type-badge type-{{ p.work_type }}">{{ p.work_type | capitalize | replace("-", " ") }}</span>
               {%- endif %}
@@ -101,7 +101,8 @@ lang: en
               {%- if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}
               {%- if p.issue %} [{{ p.issue }}]{% endif %}
               {%- if p.start_page %}, {{ p.start_page }}{% if p.end_page %}–{{ p.end_page }}{% endif %}{% endif %}
-              {%- if p.usage_tier == "heavy" and p.cites_seeds %} · <span class="cites-count">cites {{ p.cites_seeds | length }} Starrydata papers</span>{% endif %}
+              {%- if p.mentions_starrydata %} · <span class="cites-count" title="mentions &quot;starrydata&quot; in text">mentions Starrydata</span>{% endif %}
+              {%- if p.cites_seeds | length >= 2 %} · <span class="cites-count">cites {{ p.cites_seeds | length }} Starrydata papers</span>{% endif %}
             </p>
             {%- if p.doi %}
             <p class="paper-doi">DOI: <a href="{{ p.doi_url }}" target="_blank" rel="noopener">{{ p.doi }}</a></p>
@@ -118,7 +119,10 @@ lang: en
       <span class="count">{{ papers.heavy_papers_count }}</span>
     </h2>
     <p class="papers-note">
-      Papers citing multiple Starrydata project publications, or manually whitelisted (e.g. dataset users).
+      Papers matching any of:<br>
+      (a) explicitly mention "Starrydata" in the full text (figshare dataset users, system name references)<br>
+      (b) cite two or more Starrydata project publications<br>
+      (c) manually whitelisted
     </p>
 
     {%- if papers.heavy_papers_by_year %}

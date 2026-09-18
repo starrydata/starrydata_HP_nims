@@ -90,7 +90,7 @@ lang: ja
         <li class="paper-item paper-item-compact{% if p.usage_tier == 'heavy' %} paper-item-heavy{% endif %}">
           <div class="paper-body">
             <p class="paper-title">
-              {%- if p.usage_tier == "heavy" %}<span class="starry-badge" title="Starrydata プロジェクト論文を複数引用">★</span>{% endif %}
+              {%- if p.usage_tier == "heavy" %}<span class="starry-badge" title="Starrydata を活用している論文">★</span>{% endif %}
               {%- if p.work_type %}
               <span class="type-badge type-{{ p.work_type }}">{{ p.work_type | capitalize | replace("-", " ") }}</span>
               {%- endif %}
@@ -106,7 +106,8 @@ lang: ja
               {%- if p.volume %} <strong>{{ p.volume }}</strong>{% endif %}
               {%- if p.issue %} [{{ p.issue }}]{% endif %}
               {%- if p.start_page %}, {{ p.start_page }}{% if p.end_page %}–{{ p.end_page }}{% endif %}{% endif %}
-              {%- if p.usage_tier == "heavy" and p.cites_seeds %} · <span class="cites-count">Starrydata 論文を {{ p.cites_seeds | length }} 本引用</span>{% endif %}
+              {%- if p.mentions_starrydata %} · <span class="cites-count" title="本文に &quot;starrydata&quot; を含む">本文で言及</span>{% endif %}
+              {%- if p.cites_seeds | length >= 2 %} · <span class="cites-count">Starrydata 論文を {{ p.cites_seeds | length }} 本引用</span>{% endif %}
             </p>
             {%- if p.doi %}
             <p class="paper-doi">
@@ -126,7 +127,10 @@ lang: ja
       <span class="count">{{ papers.heavy_papers_count }}</span>
     </h2>
     <p class="papers-note">
-      複数の Starrydata プロジェクト論文を引用している論文、または手動でホワイトリスト登録された論文（データセット利用等）。
+      以下のいずれかに該当する論文：<br>
+      (a) 本文に "Starrydata" を明示的に含む論文（figshare データセット利用、システム名の明記など）<br>
+      (b) Starrydata プロジェクト論文を 2 本以上引用している論文<br>
+      (c) 手動でホワイトリスト登録された論文
     </p>
 
     {%- if papers.heavy_papers_by_year %}
