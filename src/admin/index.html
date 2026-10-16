@@ -20,12 +20,13 @@
 <script src="https://cdn.jsdelivr.net/npm/turndown-plugin-gfm@1.0.2/dist/turndown-plugin-gfm.js"
         integrity="sha384-2TroN1N6OfLQ+K4qttptnIfMREzUlMa3hW/nZqDZXv7Sm9BkESfGEupDEqCbzyRl"
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="stylesheet" href="https://uicdn.toast.com/editor/3.2.2/toastui-editor.min.css"
-      integrity="sha384-Uw+ry/KtbmFNRGJd+U+hpfJou1QMHCAQc8k8OdZkclgUySjn8aJJcVTkkCeSwP6H"
-      crossorigin="anonymous" referrerpolicy="no-referrer">
-<script src="https://uicdn.toast.com/editor/3.2.2/toastui-editor-all.min.js"
-        integrity="sha384-FF8a/n4tsDcp0oRDFHNNygVDoaTZfIGmaSzvbL8wMqj/8R5sD+JKKKqfQmwJQAQY"
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- toast-ui editor は uicdn.toast.com が `Access-Control-Allow-Origin` を返さないため、
+     SRI (+ crossorigin=anonymous) を付けるとブラウザが CORS 不整合で script をブロックして
+     editor が未定義になる。pin は 3.2.2 で維持しつつ SRI/CORS は外す。恒久策は、
+     @toast-ui/editor を vendor（src/common/js/ に置く）か、依存を解いて jsdelivr の
+     dist/toastui-editor.js (= 単体版) + 必要な prosemirror を組み直す。 -->
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/3.2.2/toastui-editor.min.css">
+<script src="https://uicdn.toast.com/editor/3.2.2/toastui-editor-all.min.js"></script>
 <style>
   :root {
     --bg: #f7f7fb;
