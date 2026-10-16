@@ -1,5 +1,10 @@
 <script id="topics-data" type="application/json">{{ topics.topics | dump | replace("</", "<\\/") | safe }}</script>
 
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"
+        integrity="sha384-JEyTNhjM6R1ElGoJns4U2Ln4ofPcqzSsynQkmEc/KGy6336qAZl70tDLufbkla+3"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+
 <div id="news-modal" class="news-modal" hidden aria-hidden="true">
   <div class="news-modal-backdrop" data-news-close></div>
   <div class="news-modal-panel" role="dialog" aria-modal="true" aria-labelledby="news-modal-title">
@@ -58,7 +63,12 @@
     }
     refsEl.innerHTML = refs;
     refsEl.hidden = !refs;
-    bodyEl.innerHTML = pick(t, 'body_html');
+    // body_html は admin から Markdown→HTML で生成されるが、認証突破時や過去投稿の
+    // 混入を防ぐため、表示時に DOMPurify で無害化する。
+    var rawBody = pick(t, 'body_html');
+    bodyEl.innerHTML = (window.DOMPurify && window.DOMPurify.sanitize)
+      ? window.DOMPurify.sanitize(rawBody, { USE_PROFILES: { html: true } })
+      : '';
     modal.hidden = false;
     modal.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';

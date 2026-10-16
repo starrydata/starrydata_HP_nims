@@ -225,10 +225,52 @@ function editTopic(index, entry) {
 // 画像を src/assets/images/news/<timestamp>_<filename> にコミットし、
 // プレビュー用に raw.githubusercontent の URL を返す。
 // 保存時の Markdown 上は admin 側で /assets/... の相対パスに正規化される。
+var ALLOWED_IMAGE_EXT = ["png", "jpg", "jpeg", "gif", "webp"];
+// SVG は <script> と on* 属性を含められ、同一オリジンで任意 JS が走るため許可しない。
+// HTML も不可。拡張子だけだと evil.html.png のような詐称が通るので、下でマジック
+// ナンバーと突き合わせて拡張子詐称を落とす。
+var IMAGE_MAGIC = {
+  png:  ["89504e47"],
+  gif:  ["47494638"],
+  jpg:  ["ffd8ff"],
+  jpeg: ["ffd8ff"],
+  webp: ["52494646"] // "RIFF" (WEBP は 4-7 バイト目に "WEBP" が入るが、ここは軽い篩)
+};
+
 function uploadImage(filename, contentB64) {
   if (!filename) throw new Error("filename is required");
   if (!contentB64) throw new Error("content_b64 is required");
   var safe = String(filename).replace(/[^a-zA-Z0-9._-]/g, "_");
+
+  // 二重拡張子 (evil.html.png など) 対策で、"." 区切りで全要素を見る。
+  // 全要素が英数字かつ、末尾が allowlist に合致する場合のみ許可。
+  var parts = safe.split(".");
+  if (parts.length < 2) throw new Error("Invalid filename (no extension)");
+  var ext = parts[parts.length - 1].toLowerCase();
+  if (ALLOWED_IMAGE_EXT.indexOf(ext) < 0) {
+    throw new Error("Unsupported extension: " + ext + " (allowed: " + ALLOWED_IMAGE_EXT.join(", ") + ")");
+  }
+  for (var i = 0; i < parts.length - 1; i++) {
+    if (!/^[A-Za-z0-9_-]+$/.test(parts[i])) {
+      throw new Error("Invalid filename segment: " + parts[i]);
+    }
+  }
+
+  // 中身のマジックナンバーを拡張子と突き合わせる。拡張子詐称を落とす。
+  // Utilities.base64Decode は Byte[]（Java 由来、Array メソッドは使えない）を返すので
+  // for ループで読む。先頭 24 base64 文字 = 18 バイトなら、必要な先頭 8 バイトを取れる。
+  var decoded = Utilities.base64Decode(contentB64.substring(0, 24));
+  var header = "";
+  var maxBytes = Math.min(8, decoded.length);
+  for (var j = 0; j < maxBytes; j++) {
+    header += ("0" + (decoded[j] & 0xff).toString(16)).slice(-2);
+  }
+  var allowedMagic = IMAGE_MAGIC[ext] || [];
+  var magicOk = allowedMagic.some(function (m) { return header.indexOf(m) === 0; });
+  if (!magicOk) {
+    throw new Error("Content does not match extension ." + ext);
+  }
+
   var ts = new Date().toISOString().replace(/[:.]/g, "-").substring(0, 19);
   var pathInRepo = "src/assets/images/news/" + ts + "_" + safe;
   var branch = getBranch();
