@@ -228,13 +228,16 @@
 <div class="container">
 
   <!-- ============ Login ============ -->
-  <div id="login">
+  <!-- form で囲わないと、パスワードマネージャ系拡張 (特に nims.go.jp に注入される
+       組織配布の Office/Editor 拡張) がフィールドを乗っ取り、ログインボタンの
+       click が通らなくなる場合がある。 -->
+  <form id="login" autocomplete="on">
     <h2>★ Starrydata News Admin</h2>
     <div class="field"><label for="li-id">ID</label><input type="text" id="li-id" autocomplete="username"></div>
     <div class="field"><label for="li-pw">Password</label><input type="password" id="li-pw" autocomplete="current-password"></div>
-    <button class="btn-primary" id="li-btn">Login</button>
+    <button type="submit" class="btn-primary" id="li-btn">Login</button>
     <div class="error hidden" id="li-error"></div>
-  </div>
+  </form>
 
   <!-- ============ App ============ -->
   <div id="app">
@@ -567,9 +570,11 @@ $("#f-date").addEventListener("click", function () {
 });
 
 // ───── ログイン ─────
-$("#li-btn").addEventListener("click", login);
-$("#li-pw").addEventListener("keydown", e => { if (e.key === "Enter") login(); });
-$("#li-id").addEventListener("keydown", e => { if (e.key === "Enter") $("#li-pw").focus(); });
+// form の submit を使うことで、Enter キー送信とボタンクリックの両方を一本化できる。
+// 従来 click + keydown(Enter) の 2 本立てだったが、拡張機能が click を妨害しても
+// submit (Enter / ボタン両方で発火) は走るので耐性も上がる。
+$("#login").addEventListener("submit", e => { e.preventDefault(); login(); });
+$("#li-id").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); $("#li-pw").focus(); } });
 
 async function login() {
   const id = $("#li-id").value.trim();
