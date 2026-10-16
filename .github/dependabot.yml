@@ -1,0 +1,9 @@
+version: 2
+updates:
+  # Actions を SHA pin している (タグ付け替えによる lift-and-shift を防ぐため)。
+  # Dependabot が SHA 更新 PR を自動で出してくれる。
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5

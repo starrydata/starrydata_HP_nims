@@ -26,11 +26,39 @@ const DEFAULT_BRANCH = "main";
 const DEFAULT_PATH = "src/_data/topics.json";
 
 // ── 認証 ──
+// GAS 側は共有 ID/パスワードの SHA-256 を預かる軽量な作りだが、公開 URL なので
+// 総当たりを現実的な時間で止めるためのレート制限と、ハッシュ比較の定数時間化を入れる。
+var AUTH_FAIL_WINDOW_SEC = 15 * 60; // 15 分
+var AUTH_FAIL_THRESHOLD = 10;        // 15 分で 10 回失敗したら以後拒否
+
+function constantTimeEqual(a, b) {
+  if (typeof a !== "string" || typeof b !== "string") return false;
+  // SHA-256 hex は常に 64 文字なので長さ差は本来発生しない。長さが違う入力は
+  // そのまま弾くが、同じ長さでも必ず全文字を XOR してからビットを集めることで、
+  // 文字一致位置の情報が応答時間に乗らないようにする。
+  if (a.length !== b.length) return false;
+  var diff = 0;
+  for (var i = 0; i < a.length; i++) {
+    diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return diff === 0;
+}
+
 function verifyAuth(authHash) {
+  var cache = CacheService.getScriptCache();
+  var failCount = parseInt(cache.get("auth_fail_count") || "0", 10) || 0;
+  if (failCount >= AUTH_FAIL_THRESHOLD) {
+    throw new Error("Too many failed attempts. Try again later.");
+  }
   var props = PropertiesService.getScriptProperties();
   var expected = props.getProperty("ADMIN_AUTH_HASH");
   if (!expected) throw new Error("Server is not configured: ADMIN_AUTH_HASH is missing");
-  if (!authHash || authHash !== expected) throw new Error("Unauthorized");
+  if (!authHash || !constantTimeEqual(authHash, expected)) {
+    cache.put("auth_fail_count", String(failCount + 1), AUTH_FAIL_WINDOW_SEC);
+    throw new Error("Unauthorized");
+  }
+  // 成功したらカウンタをリセット
+  cache.remove("auth_fail_count");
 }
 
 // ── GET / POST ──
