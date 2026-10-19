@@ -393,7 +393,21 @@ const $ = (s) => document.querySelector(s);
 const $$ = (s) => document.querySelectorAll(s);
 const LS_KEY = "starrydata_admin_auth";
 
-let state = { topics: [], editingIndex: -1 };
+// 認証ハッシュはメモリ側 (state.authHash) を正とし、localStorage はあくまでリロード跨ぎの
+// 自動ログイン用キャッシュとして扱う。*.nims.go.jp の localStorage が組織配布の拡張
+// (local-storage.js など) で埋まっていると setItem が QuotaExceededError を投げるので、
+// その場合でも現セッションのログインは成立するようにしてある。
+let state = { topics: [], editingIndex: -1, authHash: "" };
+
+function safeLsGet(key) {
+  try { return localStorage.getItem(key); } catch (e) { return null; }
+}
+function safeLsSet(key, value) {
+  try { localStorage.setItem(key, value); return true; } catch (e) { return false; }
+}
+function safeLsRemove(key) {
+  try { localStorage.removeItem(key); } catch (e) { /* ignore */ }
+}
 
 // SHA-256
 async function sha256(str) {
@@ -532,7 +546,7 @@ async function callGas(action, payload = {}) {
     $("#config-hint").classList.remove("hidden");
     throw new Error("GAS_URL is not configured");
   }
-  const auth = localStorage.getItem(LS_KEY) || "";
+  const auth = state.authHash || safeLsGet(LS_KEY) || "";
   const res = await fetch(GAS_URL, {
     method: "POST",
     body: JSON.stringify({ action, auth, ...payload }),
@@ -581,14 +595,16 @@ async function login() {
   const pw = $("#li-pw").value;
   if (!id || !pw) return;
   const hash = await sha256(`${id}:${pw}`);
-  localStorage.setItem(LS_KEY, hash);
+  state.authHash = hash;
+  safeLsSet(LS_KEY, hash); // 失敗しても現セッションは成立する
   try {
     await loadList();
     $("#login").style.display = "none";
     $("#app").classList.add("show");
     if (!editorJa) initEditor();
   } catch (e) {
-    localStorage.removeItem(LS_KEY);
+    state.authHash = "";
+    safeLsRemove(LS_KEY);
     const err = $("#li-error");
     err.textContent = "ログインに失敗しました: " + e.message;
     err.classList.remove("hidden");
@@ -596,7 +612,8 @@ async function login() {
 }
 
 $("#logout-btn").addEventListener("click", () => {
-  localStorage.removeItem(LS_KEY);
+  state.authHash = "";
+  safeLsRemove(LS_KEY);
   location.reload();
 });
 
@@ -740,14 +757,17 @@ $("#reload-btn").addEventListener("click", async () => {
   if (!GAS_URL) {
     $("#config-hint").classList.remove("hidden");
   }
-  if (localStorage.getItem(LS_KEY)) {
+  const cached = safeLsGet(LS_KEY);
+  if (cached) {
+    state.authHash = cached;
     try {
       await loadList();
       $("#login").style.display = "none";
       $("#app").classList.add("show");
       if (!editorJa) initEditor();
     } catch (e) {
-      localStorage.removeItem(LS_KEY);
+      state.authHash = "";
+      safeLsRemove(LS_KEY);
     }
   }
 })();
