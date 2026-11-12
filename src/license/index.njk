@@ -1,0 +1,69 @@
+---
+layout: modern.njk
+permalink: /ja/license/index.html
+title: ライセンス
+lang: ja
+bodyId: license
+---
+
+{%- set L = "ja" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Documentation</span>
+    <h1 data-echo="{{ i18n.license_page.title[L] }}">{{ i18n.license_page.title[L] }}</h1>
+    <p class="lead">{{ i18n.license_page.lead[L] }}</p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container">
+
+    <div class="cite-notes">
+      <h3 id="data">1. データ本体</h3>
+      <p>Starrydata に登録されている測定データおよびメタデータ (論文情報、試料情報、カーブデータ) は、<strong><a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International (CC BY 4.0)</a></strong> ライセンスの下で公開されています。</p>
+      <ul class="cite-links">
+        <li>商用・非商用を問わず無償で利用、改変、再配布が可能です</li>
+        <li>利用する際は、<strong>出典 (Starrydata プロジェクトと該当する引用論文)</strong> を明記してください</li>
+        <li>個別のカーブを論文中で参照する場合は、<strong>元論文 (CrossRef DOI)</strong> も併せて引用してください</li>
+      </ul>
+      <p>引用すべき論文の一覧は <a href="/ja/cite/">「引用について」ページ</a>にまとめています。</p>
+
+      <h3 id="distributions">2. データの配布チャネル</h3>
+      <p>以下のいずれのチャネルから取得したデータも CC BY 4.0 に準拠します。研究の再現性を確保したい場合は、DOI 付きのスナップショット (Figshare / MDR) の利用を推奨します。</p>
+      <ul class="cite-links">
+        <li><a href="https://github.com/starrydata/starrydata_datasets" target="_blank" rel="noopener">GitHub — starrydata_datasets</a> (日次更新 CSV、CC BY 4.0 明示)</li>
+        <li><a href="https://figshare.com/projects/Starrydata_datasets/155129" target="_blank" rel="noopener">Figshare — Starrydata datasets</a> (バージョン固定スナップショット、DOI 付き)</li>
+        <li><a href="https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=ja" target="_blank" rel="noopener">NIMS MDR — Starrydata</a> (論文の永続 URL アーカイブ)</li>
+      </ul>
+
+      <h3 id="site">3. 本ウェブサイトのコンテンツ</h3>
+      <p>本サイト (starrydata.nims.go.jp/hp/) に掲載されている文章・図・スクリーンショットは、特記のない限り <strong>CC BY 4.0</strong> の下で公開されています。再利用の際は Starrydata プロジェクトを出典として明記してください。</p>
+      <p>ただし以下は対象外です:</p>
+      <ul class="cite-links">
+        <li>Starrydata ロゴ、および NIMS ロゴ (商標として保護)</li>
+        <li>第三者が著作権を持つ論文図版・写真 (各素材のライセンスに従う)</li>
+      </ul>
+
+      <h3 id="software">4. ソフトウェア / ソースコード</h3>
+      <p>Starrydata プロジェクトから公開しているソフトウェアは、リポジトリごとに個別のライセンスが設定されています。利用の際は各リポジトリの <code>LICENSE</code> ファイルを参照してください。</p>
+      <ul class="cite-links">
+        <li><a href="https://github.com/starrydata/starrydata-python-library" target="_blank" rel="noopener">starrydata-python-library</a> — MIT License</li>
+        <li><a href="https://github.com/starrydata/starrydata-polymertool" target="_blank" rel="noopener">starrydata-polymertool</a> — MIT License</li>
+        <li><a href="https://github.com/starrydata" target="_blank" rel="noopener">その他のリポジトリ</a> — 各リポジトリの LICENSE を参照</li>
+      </ul>
+
+      <h3 id="attribution">5. 推奨する出典表記</h3>
+      <p>論文・資料・Web ページ等で Starrydata のデータを利用する場合は、以下のような表記を推奨します。</p>
+      <div style="background:#f6f8fa;border-radius:8px;padding:1em 1.2em;margin:0.6em 0 1em;">
+        <p style="margin:0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.92em;line-height:1.6;">Data from the Starrydata project, licensed under CC BY 4.0.<br>
+        Katsura, Y. <em>et al.</em>, <em>STAM: Methods</em> <strong>5</strong>, 2506976 (2025).<br>
+        DOI: 10.1080/27660400.2025.2506976</p>
+      </div>
+
+      <h3 id="contact">6. お問い合わせ</h3>
+      <p>ライセンスに関するご質問や、本ライセンスで対応できない利用形態 (例: 大規模な再配布、特定の商用利用) については <a href="/ja/contact/">お問い合わせページ</a>からご連絡ください。</p>
+    </div>
+
+  </div>
+</section>

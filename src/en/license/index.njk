@@ -1,0 +1,69 @@
+---
+layout: modern.njk
+permalink: /license/index.html
+title: License
+lang: en
+bodyId: license
+---
+
+{%- set L = "en" -%}
+
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Documentation</span>
+    <h1 data-echo="{{ i18n.license_page.title[L] }}">{{ i18n.license_page.title[L] }}</h1>
+    <p class="lead">{{ i18n.license_page.lead[L] }}</p>
+  </div>
+</section>
+
+<section class="section section-top-tight">
+  <div class="container">
+
+    <div class="cite-notes">
+      <h3 id="data">1. Dataset</h3>
+      <p>Measurement data and metadata registered in Starrydata (paper information, sample information, and curve data) are released under the <strong><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a></strong>.</p>
+      <ul class="cite-links">
+        <li>Free to use, modify, and redistribute for both commercial and non-commercial purposes</li>
+        <li><strong>Attribution</strong> to the Starrydata project (and applicable reference papers) is required</li>
+        <li>When referencing individual curves in your paper, please also cite the <strong>original source paper (CrossRef DOI)</strong></li>
+      </ul>
+      <p>See the <a href="/cite/">How to cite</a> page for the list of papers to cite.</p>
+
+      <h3 id="distributions">2. Distribution channels</h3>
+      <p>Data obtained from any of the following channels is governed by CC BY 4.0. For reproducibility, we recommend using the version-fixed snapshots on Figshare or MDR.</p>
+      <ul class="cite-links">
+        <li><a href="https://github.com/starrydata/starrydata_datasets" target="_blank" rel="noopener">GitHub — starrydata_datasets</a> (daily CSV, licensed under CC BY 4.0)</li>
+        <li><a href="https://figshare.com/projects/Starrydata_datasets/155129" target="_blank" rel="noopener">Figshare — Starrydata datasets</a> (version-fixed snapshots with DOI)</li>
+        <li><a href="https://mdr.nims.go.jp/datasets/be1aaf76-761d-4b73-8ba4-f958348efade?locale=en" target="_blank" rel="noopener">NIMS MDR — Starrydata</a> (permanent URL archive of the paper)</li>
+      </ul>
+
+      <h3 id="site">3. Website content</h3>
+      <p>Unless otherwise noted, text, figures, and screenshots on this website (starrydata.nims.go.jp/hp/) are released under <strong>CC BY 4.0</strong>. When reusing content, please credit the Starrydata project as the source.</p>
+      <p>The following are excluded from CC BY 4.0:</p>
+      <ul class="cite-links">
+        <li>The Starrydata logo and the NIMS logo (protected as trademarks)</li>
+        <li>Third-party figures or photographs (subject to their individual licenses)</li>
+      </ul>
+
+      <h3 id="software">4. Software and source code</h3>
+      <p>Software released by the Starrydata project is licensed on a per-repository basis. Please refer to the <code>LICENSE</code> file in each repository.</p>
+      <ul class="cite-links">
+        <li><a href="https://github.com/starrydata/starrydata-python-library" target="_blank" rel="noopener">starrydata-python-library</a> — MIT License</li>
+        <li><a href="https://github.com/starrydata/starrydata-polymertool" target="_blank" rel="noopener">starrydata-polymertool</a> — MIT License</li>
+        <li><a href="https://github.com/starrydata" target="_blank" rel="noopener">Other repositories</a> — see the LICENSE file in each repository</li>
+      </ul>
+
+      <h3 id="attribution">5. Recommended attribution</h3>
+      <p>When citing Starrydata data in papers, reports, or on the web, the following attribution format is recommended:</p>
+      <div style="background:#f6f8fa;border-radius:8px;padding:1em 1.2em;margin:0.6em 0 1em;">
+        <p style="margin:0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.92em;line-height:1.6;">Data from the Starrydata project, licensed under CC BY 4.0.<br>
+        Katsura, Y. <em>et al.</em>, <em>STAM: Methods</em> <strong>5</strong>, 2506976 (2025).<br>
+        DOI: 10.1080/27660400.2025.2506976</p>
+      </div>
+
+      <h3 id="contact">6. Contact</h3>
+      <p>For any license-related questions, or for use cases that cannot be covered by this license (e.g., large-scale redistribution or specific commercial uses), please reach out via the <a href="/contact/">Contact</a> page.</p>
+    </div>
+
+  </div>
+</section>
